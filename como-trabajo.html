@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo trabajo — José Javier Aznárez | Psicólogo Contextual Online</title>
+    <meta name="description" content="Conoce el enfoque de José Javier Aznárez: terapias contextuales basadas en evidencia (ACT, CFT, FAP, DBT). Acompañamiento personalizado, sin diagnósticos ni protocolos rígidos.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cómo trabajo — José Javier Aznárez">
+    <meta property="og:description" content="Un acompañamiento contextual, personalizado y basado en evidencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/como-trabajo.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--sage-dark); }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .content-block {
+            margin-bottom: 4.5rem;
+        }
+
+        .content-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .content-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-block p:last-child { margin-bottom: 0; }
+
+        /* ==================== H3 AREAS ==================== */
+        .area-item {
+            margin-bottom: 1.8rem;
+            padding-left: 1.2rem;
+            border-left: 2px solid var(--cream-dark);
+            transition: border-color 0.3s;
+        }
+
+        .area-item:hover {
+            border-left-color: var(--sage-light);
+        }
+
+        .area-item h3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .area-item p {
+            font-size: 0.97rem;
+            margin-bottom: 0;
+        }
+
+        /* ==================== SESIONES PRINCIPIOS ==================== */
+        .principios {
+            margin: 1.5rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .principio-item {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.3rem 1.5rem;
+        }
+
+        .principio-item strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .principio-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .sesion-practica {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0 1.2rem;
+        }
+
+        .sesion-practica strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 0.7rem;
+        }
+
+        .sesion-practica p {
+            font-size: 0.97rem;
+            margin-bottom: 0;
+        }
+
+        /* ==================== BLOCKQUOTES ==================== */
+        .blockquote-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 0.5rem 0 1.8rem;
+        }
+
+        .content-block blockquote {
+            padding: 1.8rem 2rem;
+            background: var(--cream);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .content-block blockquote strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--sage-dark);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-block blockquote p {
+            font-size: 0.97rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* ==================== QUÉ NO ES ==================== */
+        .no-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .no-list li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .no-list li strong {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* ==================== HERRAMIENTAS ==================== */
+        .herramientas-section {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 3rem 3rem 2.5rem;
+            margin-bottom: 4.5rem;
+        }
+
+        .herramientas-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.8rem;
+        }
+
+        .herramientas-intro {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .herramientas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .herramienta-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.2rem 1.3rem;
+            border: 1px solid rgba(107,127,94,0.12);
+        }
+
+        .herramienta-card .acronimo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--sage);
+            margin-bottom: 0.2rem;
+        }
+
+        .herramienta-card .nombre-completo {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .herramienta-card .descripcion {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .herramientas-nota {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 7rem 2rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .cta-inner { max-width: 650px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        .cta-section .note {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            transition: all 0.3s;
+        }
+
+        .btn-email:hover {
+            border-color: var(--sage);
+            color: var(--sage-dark);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links { display: flex; gap: 2rem; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .hamburger { display: flex; }
+
+            .blockquote-pair { grid-template-columns: 1fr; }
+
+            .herramientas-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .herramientas-section { padding: 2rem 1.8rem; }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper { padding: 3rem 1.25rem 3rem; }
+
+            .herramientas-grid { grid-template-columns: 1fr; }
+
+            .footer-inner { flex-direction: column; text-align: center; }
+
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="como-trabajo.html" class="active">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Cómo trabajo</div>
+            <h1>Cómo trabajo</h1>
+            <p class="subtitle">Un acompañamiento contextual, personalizado y basado en evidencia</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- Bloque 1: Mi enfoque -->
+        <div class="content-block reveal">
+            <h2>Mi enfoque</h2>
+            <p>Soy psicólogo consultor especializado en terapias contextuales, un conjunto de enfoques con sólido respaldo científico que parten de una idea fundamental: los problemas psicológicos no existen aislados en la persona, sino que están profundamente ligados al contexto en el que vive — sus relaciones, su entorno social, su historia y sus experiencias.</p>
+            <p>Mi trabajo no consiste en diagnosticar, etiquetar ni tratar enfermedades. Consiste en acompañarte a comprender qué función cumplen tus reacciones actuales, por qué algunas te alejan de la vida que quieres vivir, y cómo puedes aprender a responder de forma diferente.</p>
+            <p>No trabajo con pacientes, trabajo con personas. Personas que están sanas pero atraviesan dificultades: momentos en los que el estrés, el miedo, la inseguridad, la tristeza o la autocrítica interfieren con su capacidad de vivir plenamente.</p>
+            <p>A través de la conversación, ejercicios experienciales, metáforas y dinámicas meditativas, exploramos juntos tus patrones de conducta. No para juzgarlos ni para corregirlos desde fuera, sino para que tú descubras qué te funciona, qué ya no te sirve y qué puedes hacer de forma diferente.</p>
+        </div>
+
+        <!-- Bloque 2: En qué puedo ayudarte -->
+        <div class="content-block reveal">
+            <h2>En qué puedo ayudarte</h2>
+            <p>Mi intervención se centra en situaciones donde el malestar emocional afecta tu desempeño y tu día a día. Estas son algunas de las áreas en las que trabajo:</p>
+
+            <div style="margin-top: 1.8rem;">
+                <div class="area-item">
+                    <h3>Ansiedad y estrés que limitan tu vida</h3>
+                    <p>Cuando las preocupaciones, el miedo o la sensación de amenaza constante te impiden actuar con libertad. No busco que dejes de sentir ansiedad — busco que deje de dirigir tus decisiones.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Autocrítica, inseguridad y vergüenza</h3>
+                    <p>Patrones de autoevaluación rígidos que erosionan tu confianza. Trabajamos para construir una relación más compasiva contigo mismo, desvinculando tu valía personal de tus resultados.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Bloqueo emocional y evitación</h3>
+                    <p>Cuando intentas controlar, evitar o suprimir lo que sientes y eso te atrapa en un ciclo que genera más malestar. La salida no es luchar contra lo que sientes, sino cambiar cómo te relacionas con ello.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Tristeza e inactividad</h3>
+                    <p>Momentos en los que el desánimo te paraliza y te desconectas de lo que te importa. Recuperamos la dirección paso a paso, desde la aceptación y sin forzar.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Dificultades en las relaciones</h3>
+                    <p>Cuando los marcos relacionales de quienes te rodean no coinciden con los tuyos y la comunicación se deteriora. En pareja, en familia, en el trabajo o en el entorno social.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Crianza consciente</h3>
+                    <p>Acompañamiento para madres y padres que quieren criar desde la presencia, la validación emocional y los límites funcionales, rompiendo patrones generacionales que ya no sirven.</p>
+                </div>
+
+                <div class="area-item">
+                    <h3>Miedo escénico y ansiedad de rendimiento (MPA)</h3>
+                    <p>Especialmente dirigido a músicos y artistas. Un abordaje contextual que va más allá de las técnicas de relajación, para que puedas tocar, actuar o presentarte con mayor autenticidad y aceptación emocional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 3: Cómo son las sesiones -->
+        <div class="content-block reveal">
+            <h2>Cómo son las sesiones</h2>
+            <p>Cada persona es única, con un ritmo propio y un modo singular de estar en el mundo. Por eso la intervención es siempre individualizada: no hay recetas, no hay protocolos rígidos, no hay «deberías».</p>
+            <p>El trabajo se organiza en torno a tres principios:</p>
+
+            <div class="principios">
+                <div class="principio-item">
+                    <strong>Todos compartimos una experiencia humana común.</strong>
+                    <p>Las emociones difíciles — el miedo, la tristeza, la inseguridad, la incertidumbre — son universales. No son fallos internos ni señales de que algo está roto en ti. Son respuestas naturales que tienen sentido en tu historia. Reconocer esto es el primer paso para dejar de luchar contra lo que sientes.</p>
+                </div>
+
+                <div class="principio-item">
+                    <strong>Cada conducta tiene sentido en su contexto.</strong>
+                    <p>Tus patrones de comportamiento son producto de miles de interacciones desde los primeros años de vida. Algunas respuestas que fueron útiles en su momento hoy te generan sufrimiento. No se trata de corregirlas, sino de entender su función y construir alternativas que estén alineadas con tus valores.</p>
+                </div>
+
+                <div class="principio-item">
+                    <strong>El cambio se orienta hacia lo que realmente te importa.</strong>
+                    <p>El objetivo no es eliminar síntomas ni alcanzar un estado de «normalidad». Es ayudarte a clarificar qué es verdaderamente importante para ti y a actuar en coherencia con ello, incluso cuando el malestar esté presente. Los valores que eliges libremente actúan como brújula en medio de la complejidad.</p>
+                </div>
+            </div>
+
+            <div class="sesion-practica">
+                <strong>En la práctica, cada sesión es un espacio vivo:</strong>
+                <p>Conversamos con naturalidad y profundidad sobre lo que te ocurre. Exploramos tus antecedentes, tus reglas y tus patrones de conducta actuales. Analizamos las consecuencias de tus respuestas a corto y a largo plazo. Practicamos nuevas formas de responder mediante ejercicios experienciales. Y siempre — sin sermoneos, sin imposiciones, respetando tu libertad de elección y tu ritmo.</p>
+            </div>
+
+            <div class="sesion-practica">
+                <strong>Sobre la duración:</strong>
+                <p>El proceso tiene un propósito claro y no busca generar dependencia. Para algunas personas el camino es breve; para otras, más largo. Tú eres el protagonista y el plan se adapta a medida que surjan nuevas necesidades. El objetivo es que llegues a un punto en el que te sientas preparado para enfrentar tus desafíos con tus propias herramientas.</p>
+            </div>
+        </div>
+
+        <!-- Bloque 4: Bienestar y malestar -->
+        <div class="content-block reveal">
+            <h2>Bienestar y malestar — una forma diferente de entenderlos</h2>
+
+            <div class="blockquote-pair">
+                <blockquote>
+                    <strong>Bienestar</strong>
+                    <p>No significa ausencia de dolor. Significa la capacidad de vivir una vida significativa en armonía con tus valores, a pesar de la presencia inevitable de pensamientos dolorosos, emociones difíciles y circunstancias adversas. Implica aceptar plenamente tus experiencias internas y comprometerte con acciones que reflejen lo que es realmente importante para ti.</p>
+                </blockquote>
+
+                <blockquote>
+                    <strong>Malestar</strong>
+                    <p>No es lo que sientes, sino lo que ocurre cuando luchas contra lo que sientes. Cuando intentas controlar, evitar o suprimir el dolor, el miedo o la incertidumbre, esa resistencia consume energía y te aleja de la vida que quieres vivir. El sufrimiento no viene del dolor en sí — viene de la lucha inútil contra él.</p>
+                </blockquote>
+            </div>
+
+            <p>Esta distinción es clave en mi trabajo. No te pido que dejes de sentir malestar. Te acompaño a cambiar tu relación con él, para que puedas actuar en la dirección que eliges, incluso cuando las emociones difíciles estén presentes.</p>
+        </div>
+
+        <!-- Bloque 5: Qué NO es esta terapia -->
+        <div class="content-block reveal">
+            <h2>Qué NO es esta terapia</h2>
+            <p>Quiero ser claro sobre lo que ofrezco y lo que no:</p>
+
+            <ul class="no-list" style="margin-top: 1.2rem;">
+                <li><strong>No es atención clínica ni sanitaria.</strong> No diagnostico ni trato trastornos o patologías psicológicas. Mi trabajo se enmarca en la consultoría y el acompañamiento psicológico, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias.</li>
+                <li><strong>No es lo mismo que ir al psiquiatra o al psicólogo clínico.</strong> Estos profesionales se encargan de diagnosticar y tratar enfermedades mentales, a menudo con intervenciones farmacológicas. Mi enfoque es diferente y complementario.</li>
+                <li><strong>No es una terapia indefinida.</strong> Está orientada a resolver dificultades y superar barreras en un tiempo razonable, evitando la dependencia de procesos prolongados.</li>
+                <li><strong>No es una charla motivacional ni una sesión de consejos.</strong> Es un proceso estructurado de enseñanza y aprendizaje, basado en evidencia científica, donde tú practicas nuevas conductas y yo te guío en ese proceso.</li>
+            </ul>
+
+            <p>Si tu situación requiere atención clínica o sanitaria, te lo diré con honestidad y te orientaré hacia el profesional adecuado.</p>
+        </div>
+
+    </main>
+
+    <!-- HERRAMIENTAS -->
+    <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem 2rem;">
+        <div class="herramientas-section reveal">
+            <h2>Herramientas que utilizo</h2>
+            <p class="herramientas-intro">Trabajo con las herramientas más avanzadas de la ciencia contextual, seleccionando y combinando las más adecuadas para cada persona y situación:</p>
+
+            <div class="herramientas-grid">
+                <div class="herramienta-card">
+                    <div class="acronimo">ACT</div>
+                    <div class="nombre-completo">Terapia de Aceptación y Compromiso</div>
+                    <div class="descripcion">Aceptar lo que no puedes cambiar y comprometerte con lo que sí.</div>
+                </div>
+                <div class="herramienta-card">
+                    <div class="acronimo">CFT</div>
+                    <div class="nombre-completo">Terapia Centrada en la Compasión</div>
+                    <div class="descripcion">Cultivar una relación amable contigo mismo frente a la autocrítica.</div>
+                </div>
+                <div class="herramienta-card">
+                    <div class="acronimo">FAP</div>
+                    <div class="nombre-completo">Psicoterapia Analítico Funcional</div>
+                    <div class="descripcion">Transformar patrones relacionales en el propio espacio terapéutico.</div>
+                </div>
+                <div class="herramienta-card">
+                    <div class="acronimo">DBT</div>
+                    <div class="nombre-completo">Terapia Dialéctico Conductual</div>
+                    <div class="descripcion">Regular emociones intensas y mejorar relaciones interpersonales.</div>
+                </div>
+                <div class="herramienta-card">
+                    <div class="acronimo">TIP</div>
+                    <div class="nombre-completo">Terapia Integral de Parejas</div>
+                    <div class="descripcion">Mejorar la comunicación y reconectar con los valores compartidos.</div>
+                </div>
+                <div class="herramienta-card">
+                    <div class="acronimo">MSC</div>
+                    <div class="nombre-completo">Mindfulness y Autocompasión</div>
+                    <div class="descripcion">Presencia plena y amabilidad hacia uno mismo.</div>
+                </div>
+            </div>
+
+            <p class="herramientas-nota">No necesitas saber qué terapia es para ti. Mi trabajo es diseñar un proceso personalizado con las herramientas más adecuadas para tu situación específica.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner reveal">
+            <span class="section-label">Da el primer paso</span>
+            <h2>¿Tienes dudas sobre si este enfoque es para ti?</h2>
+            <p>Escríbeme y lo hablamos. Un mensaje corto es suficiente para empezar a explorar si este tipo de acompañamiento encaja con lo que necesitas.</p>
+            <p class="note">Escribir no implica iniciar terapia. Es solo una primera conversación.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Escríbeme por WhatsApp
+                </a>
+                <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">
+                    ✉ Enviar email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Consentimiento y Tarifas</a>
+                <a href="#">Protocolo</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
