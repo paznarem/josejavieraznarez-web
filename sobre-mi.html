@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi historia — José Javier Aznárez | Psicólogo Contextual Online</title>
+    <meta name="description" content="Conoce la historia de José Javier Aznárez: psicólogo contextual, padre, músico y abuelo. 35 años de experiencia acompañando personas en procesos de cambio.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mi historia — José Javier Aznárez">
+    <meta property="og:description" content="Un ser humano que comparte camino con otros seres humanos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/sobre-mi.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .content-block {
+            margin-bottom: 4.5rem;
+        }
+
+        .content-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .content-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==================== BLOCKQUOTE ==================== */
+        .content-block blockquote {
+            margin: 2rem 0;
+            padding: 2rem 2.5rem;
+            background: var(--cream);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .content-block blockquote p {
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .content-block blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block blockquote strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--sage-dark);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        /* ==================== FORMACIÓN ==================== */
+        .formacion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .formacion-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .formacion-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .formacion-col ul li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            line-height: 1.5;
+        }
+
+        .formacion-col ul li:last-child {
+            border-bottom: none;
+        }
+
+        .trayectoria {
+            margin-top: 2rem;
+        }
+
+        .trayectoria h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .trayectoria ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 2.5rem;
+        }
+
+        .trayectoria ul li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            line-height: 1.5;
+        }
+
+        /* ==================== NOTA LEGAL ==================== */
+        .nota-legal {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 3rem 0 0;
+        }
+
+        .nota-legal p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.75;
+            font-style: italic;
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 7rem 2rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        .cta-section .note {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            transition: all 0.3s;
+        }
+
+        .btn-email:hover {
+            border-color: var(--sage);
+            color: var(--sage-dark);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .formacion-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trayectoria ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 3rem 1.25rem 3rem;
+            }
+
+            .content-block blockquote {
+                padding: 1.5rem 1.5rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="index.html#como-trabajo">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Sobre mí</div>
+            <h1>Mi historia</h1>
+            <p class="subtitle">Un ser humano que comparte camino con otros seres humanos</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- Bloque 1 -->
+        <div class="content-block reveal">
+            <h2>Mi camino</h2>
+            <p>A lo largo de mi vida he construido mis reglas y patrones de conducta a través de aprendizajes en contextos muy diversos. He tenido el privilegio de ser hijo, hermano en una familia numerosa, esposo, padre de tres hijos y, recientemente, abuelo.</p>
+            <p>Cada uno de estos roles me ha permitido vivir experiencias que han moldeado mi capacidad de amar, sufrir, escuchar, comprender y acompañar — no solo a nivel personal, sino también en mi trabajo como psicólogo.</p>
+            <p>Mi camino comenzó como músico profesional durante la adolescencia. Compatibilizar la música con los estudios de Secundaria, Bachillerato y Universidad me enseñó la importancia de la responsabilidad, la perseverancia, la tolerancia a la frustración y el sentido del humor. Habilidades que hoy traslado a mi práctica profesional.</p>
+            <p>Durante mi larga etapa como estudiante — que todavía no ha acabado — forjé mi curiosidad intelectual y mi pasión por el conocimiento, lo que me ha llevado a una búsqueda constante de aprendizaje.</p>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="content-block reveal">
+            <h2>Mis errores, mi fortaleza</h2>
+            <p>He cometido errores y he tomado decisiones con resultados no esperados, algunos dolorosos. Quizás más que aciertos y éxitos. He aprendido, poco a poco, a aceptar y validar cada uno de esos momentos como parte esencial de mi crecimiento.</p>
+            <p>Hoy procuro vivir con atención al presente, reconociendo mis preocupaciones, miedos y momentos de tristeza como partes integrales de mi experiencia humana. Es en los desafíos donde encuentro la oportunidad de vivir conforme a mis valores personales.</p>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="content-block reveal">
+            <h2>Mi trabajo como psicólogo</h2>
+            <p>Como psicólogo contextual, mi enfoque se aleja de la conceptualización tradicional de «enfermedad». No me dedico a diagnosticar, tratar ni curar. Mi labor consiste en acompañar a las personas en un proceso de autodescubrimiento, ayudándoles a comprender las razones profundas de sus respuestas automáticas.</p>
+            <p>Mi trabajo consiste en explorar las conductas, experiencias, pensamientos, emociones y valores de cada persona dentro del contexto de su vida. Busco que cada cliente identifique los patrones y reglas recurrentes cuyas respuestas puedan estar contribuyendo a su malestar.</p>
+            <p>A través de diferentes técnicas terapéuticas contextuales, ayudo a desarrollar una mayor conciencia de uno mismo y del entorno, fomentando una relación más saludable consigo mismo y con los demás.</p>
+            <p>En lugar de centrarme en los síntomas, mi objetivo es equipar a cada persona con las herramientas necesarias para aprender a cambiar sus patrones de comportamiento y afrontar los desafíos de manera más flexible, caminando — incluso con el dolor — hacia una vida más plena y satisfactoria.</p>
+        </div>
+
+        <!-- Bloque 4 -->
+        <div class="content-block reveal">
+            <h2>Mi compromiso contigo</h2>
+            <blockquote>
+                <strong>Tu montaña. Tu viaje.</strong>
+                <p>Imagina que tu vida es una montaña que estás escalando. Cada camino, cada obstáculo y cada vista desde la cima son exclusivamente tuyos. Estoy aquí para ayudarte a reconocer y aceptar los desafíos que encuentres en tu ruta, manteniéndote enfocado en alcanzar tus metas en consonancia con tus valores más profundos.</p>
+                <p>Yo también estoy en mi propio viaje, escalando mi propia montaña. Desde mi posición — a la que he llegado después de treinta y cinco años como educador, psicólogo y músico, y mi experiencia como hijo, hermano, esposo, padre y abuelo — puedo ofrecerte una perspectiva diferente.</p>
+                <p>No estoy aquí para juzgar, ni para decirte lo que «deberías» hacer. Estoy aquí para compartir mi visión y ayudarte a conectar con el presente, con tus acciones y con tus valores.</p>
+            </blockquote>
+            <p>Cada persona sigue un camino y ritmo únicos en su proceso de aprendizaje. Tú eres el protagonista, con un tiempo y número de sesiones que reflejan tus necesidades individuales.</p>
+            <p>El objetivo no es prolongar indefinidamente la intervención ni generar dependencia, sino ayudarte a avanzar hacia una vida en la que te sientas preparado para enfrentar tus desafíos. Mi papel es acompañarte y guiarte, pero el cambio real depende de tu compromiso y disposición.</p>
+        </div>
+
+        <!-- Bloque 5 -->
+        <div class="content-block reveal">
+            <h2>Mi experiencia como padre</h2>
+            <p>Criar a un hijo es una de las tareas más ilusionantes y a la vez más desafiantes. El desempeño para el que menos nos preparan y más nos evalúan a lo largo de nuestra vida.</p>
+            <p>Yo mismo viví esa realidad: creí que bastaba con el amor, la dedicación y la responsabilidad. Con el tiempo comprendí que, a pesar de mis mejores intenciones, hubiera necesitado un acompañamiento profesional en algunos momentos.</p>
+            <p>Cometí errores — algunos evitables, otros no — desde el amor y el compromiso. Si hubiera sabido entonces lo que sé hoy, me habría ahorrado muchas dudas, dificultades y sentimientos de culpa.</p>
+            <p>Mi vulnerabilidad y mi perspectiva son precisamente mi fortaleza, con la que ahora puedo acompañar a otras madres y padres con conocimiento, comprensión y empatía real.</p>
+        </div>
+
+        <!-- Bloque 6 -->
+        <div class="content-block reveal">
+            <h2>Formación</h2>
+            <div class="formacion-grid">
+                <div class="formacion-col">
+                    <h3>Psicología</h3>
+                    <ul>
+                        <li>Máster en Terapias Contextuales — Universidad de Almería</li>
+                        <li>Licenciado en Psicología (Educación y Aprendizaje) — UNED</li>
+                        <li>Especialista en Terapias Contextuales (Tercera Generación) — UAL</li>
+                        <li>Formación clínica en técnicas cognitivo-conductuales — UNED</li>
+                        <li>Colegiado: COP-N-02089 (Colegio Oficial de Psicólogos de Navarra)</li>
+                        <li>Miembro de la ACBS (Association for Contextual Behavioral Science)</li>
+                    </ul>
+                </div>
+                <div class="formacion-col">
+                    <h3>Música y educación</h3>
+                    <ul>
+                        <li>Licenciado en Historia y Ciencias de la Música — Universidad de Salamanca</li>
+                        <li>Máster en Psicología y Didáctica de la Música — UNED</li>
+                        <li>Diplomado en E.G.B. (Ciencias Naturales, Matemáticas y Música)</li>
+                        <li>Autor del proyecto educativo «Música Para Todos»</li>
+                        <li>Publicaciones en psicología y pedagogía musical en castellano, euskera y gallego</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="trayectoria">
+                <h3>Trayectoria destacada</h3>
+                <ul>
+                    <li>Asesor técnico de Enseñanzas Musicales del Gobierno de Navarra</li>
+                    <li>Fundador y director de la Orquesta Irubide de Pamplona (1995–2021), Premio Acción Magistral 2014</li>
+                    <li>Director del coro Escolanía Loyola de Pamplona (2012–2020)</li>
+                    <li>Docente en programas de competencias musicales para niños con Síndrome de Down</li>
+                    <li>Ponente en cursos de postgrado en distintas universidades</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nota legal -->
+        <div class="nota-legal reveal">
+            <p>Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.</p>
+        </div>
+
+    </main>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner reveal">
+            <span class="section-label">Hablemos</span>
+            <h2>¿Te resuena lo que has leído?</h2>
+            <p>Si sientes que este tipo de acompañamiento puede ser lo que necesitas, escríbeme. Un mensaje corto es suficiente para empezar.</p>
+            <p class="note">Escribir no implica iniciar terapia. Es solo una primera conversación.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Escríbeme por WhatsApp
+                </a>
+                <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">
+                    ✉ Enviar email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Consentimiento y Tarifas</a>
+                <a href="#">Protocolo</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Nav scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
