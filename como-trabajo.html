@@ -425,6 +425,89 @@
             line-height: 1.7;
         }
 
+        /* ==================== EXPANDIBLE SESIÓN ==================== */
+        .sesion-expand {
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .sesion-expand-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.3rem 1.8rem;
+            background: var(--cream);
+            border: none;
+            cursor: pointer;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            text-align: left;
+            transition: background 0.3s;
+        }
+
+        .sesion-expand-btn:hover {
+            background: var(--cream-dark);
+        }
+
+        .sesion-arrow {
+            flex-shrink: 0;
+            transition: transform 0.35s ease;
+            color: var(--sage);
+        }
+
+        .sesion-expand-btn[aria-expanded="true"] .sesion-arrow {
+            transform: rotate(180deg);
+        }
+
+        .sesion-expand-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding 0.35s ease;
+            padding: 0 1.8rem;
+            background: var(--white);
+        }
+
+        .sesion-expand-body.open {
+            max-height: 600px;
+            padding: 1.8rem;
+        }
+
+        .sesion-expand-body p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1.1rem;
+        }
+
+        .sesion-expand-body p:last-of-type {
+            margin-bottom: 1.3rem;
+        }
+
+        .sesion-expand-body strong {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .sesion-expand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: gap 0.25s;
+        }
+
+        .sesion-expand-link:hover {
+            gap: 0.6rem;
+        }
+
         /* ==================== CTA ==================== */
         .cta-section {
             padding: 7rem 2rem;
@@ -825,6 +908,23 @@
         </div>
     </div>
 
+    <!-- EXPANDIBLE: QUÉ OCURRE EN SESIÓN -->
+    <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem 3rem;">
+        <div class="sesion-expand reveal">
+            <button class="sesion-expand-btn" onclick="toggleSesion(this)" aria-expanded="false">
+                Ver en detalle qué ocurre en cada sesión
+                <svg class="sesion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sesion-expand-body" id="sesion-detail">
+                <p>En cada sesión exploramos juntos los <strong>eventos privados</strong> que experimentas: pensamientos intrusivos, emociones intensas, impulsos y sensaciones físicas. En lugar de luchar contra ellos o intentar suprimirlos, aprendemos a darles espacio y a comprender la función que cumplen en tu vida cotidiana.</p>
+                <p>Trabajamos el <strong>autoconocimiento en acción</strong>: observar con curiosidad y sin juicio cómo se relacionan tu lenguaje interno, tus creencias y tus patrones de conducta con lo que ocurre a tu alrededor. Exploramos también las sensaciones corporales — tensión, fatiga, palpitaciones — como información valiosa conectada con tus emociones, no como enemigos a eliminar.</p>
+                <p>Identificamos tus <strong>fortalezas, valores y deseos</strong> reales — no los que el entorno espera de ti — y los usamos como brújula. Analizamos el <strong>sentido funcional de cada comportamiento</strong>: qué patrones siguen funcionando, cuáles te alejan de la vida que quieres, y qué alternativas puedes construir paso a paso.</p>
+                <p>El resultado no es una lista de tareas, sino un repertorio propio de herramientas para responder con mayor flexibilidad y coherencia, sesión a sesión, a tu propio ritmo.</p>
+                <a href="blog/que-ocurre-en-cada-sesion.html" class="sesion-expand-link">Lee el artículo completo →</a>
+            </div>
+        </div>
+    </div>
+
     <!-- CTA -->
     <section class="cta-section">
         <div class="cta-inner reveal">
@@ -878,6 +978,13 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function toggleSesion(btn) {
+            const body = document.getElementById('sesion-detail');
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !expanded);
+            body.classList.toggle('open', !expanded);
+        }
     </script>
 </body>
 </html>
