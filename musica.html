@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres aprender música? — José Javier Aznárez | Educación Musical</title>
+    <meta name="description" content="35 años universalizando el lenguaje musical. Consultoría psicopedagógica, mentorías para oposiciones, recursos didácticos gratuitos y academia online de crianza con música.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="¿Quieres aprender música? — José Javier Aznárez">
+    <meta property="og:description" content="35 años universalizando el lenguaje musical. Consultoría, mentorías y recursos didácticos gratuitos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/musica.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--sage-dark); }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        /* ==================== INTRO ==================== */
+        .intro-block {
+            margin-bottom: 4rem;
+        }
+
+        .intro-block blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--sage-dark);
+            border-left: 3px solid var(--sage);
+            padding: 1.2rem 1.8rem;
+            background: var(--cream);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .intro-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* ==================== TRAYECTORIA ==================== */
+        .trayectoria-block {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .trayectoria-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--sage-dark);
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .trayectoria-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .trayectoria-block ul li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            line-height: 1.5;
+        }
+
+        .trayectoria-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* ==================== SERVICIOS ==================== */
+        .servicios-block {
+            margin-bottom: 4rem;
+        }
+
+        .servicios-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .servicio-card {
+            background: var(--cream);
+            border-radius: 10px;
+            padding: 1.5rem 1.6rem;
+            border: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .servicio-card:hover {
+            border-color: rgba(107,127,94,0.2);
+        }
+
+        .servicio-card h3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .servicio-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.65;
+        }
+
+        /* ==================== CONTACTO ==================== */
+        .contacto-block {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contacto-block p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-email-musica {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--sage);
+            color: var(--white);
+            padding: 0.9rem 1.8rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-email-musica:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper { padding: 3rem 1.25rem 3rem; }
+            .servicios-grid { grid-template-columns: 1fr; }
+            .trayectoria-block { padding: 1.5rem 1.5rem; }
+            .contacto-block { flex-direction: column; align-items: flex-start; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Educación Musical</div>
+            <h1>¿Quieres aprender música?</h1>
+            <p class="subtitle">35 años universalizando el lenguaje musical</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- Introducción -->
+        <div class="intro-block reveal">
+            <blockquote>«Todos poseemos un talento musical que nos permite aprender a percibir, comprender, sentir y expresarnos a través del lenguaje de la música, a cualquier edad, en cualquier circunstancia.»</blockquote>
+            <p>Además de mi trabajo como psicólogo, soy educador musical con más de treinta y cinco años de experiencia acompañando el desarrollo musical de niños, jóvenes y adultos. Mi misión es la universalización del lenguaje musical: que todas las personas puedan acceder a la música como forma de expresión, comprensión y conexión.</p>
+            <p>Soy autor del proyecto educativo <strong>«Música Para Todos»</strong> y tengo publicaciones en el campo de la psicología y pedagogía musical en castellano, euskera y gallego.</p>
+            <p>Fundé y dirigí la <strong>Orquesta Irubide de Pamplona</strong> (1995–2021), reconocida con el Premio Acción Magistral 2014, y dirigí el coro <strong>Escolanía Loyola de Pamplona</strong> (2012–2020). También he trabajado como docente en programas de competencias musicales para niños con Síndrome de Down en Aragón y Navarra.</p>
+        </div>
+
+        <!-- Trayectoria -->
+        <div class="trayectoria-block reveal">
+            <h2>Trayectoria destacada</h2>
+            <ul>
+                <li>Autor del proyecto educativo «Música Para Todos»</li>
+                <li>Licenciado en Historia y Ciencias de la Música — Universidad de Salamanca</li>
+                <li>Máster en Psicología y Didáctica de la Música — UNED</li>
+                <li>Asesor técnico de Enseñanzas Musicales del Gobierno de Navarra</li>
+                <li>Fundador y director de la Orquesta Irubide de Pamplona (1995–2021), Premio Acción Magistral 2014</li>
+                <li>Director del coro Escolanía Loyola de Pamplona (2012–2020)</li>
+                <li>Docente en programas de competencias musicales para niños con Síndrome de Down (Aragón y Navarra)</li>
+                <li>Ponente en cursos de postgrado en distintas universidades</li>
+                <li>Publicaciones en psicología y pedagogía musical en castellano, euskera y gallego</li>
+            </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="servicios-block reveal">
+            <h2>Recursos y servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3>Consultoría psicopedagógica musical</h3>
+                    <p>Asesoramiento a centros educativos, entidades de formación, familias y estudiantes en la implementación de procesos de enseñanza y aprendizaje musical.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Mentorías para oposiciones</h3>
+                    <p>Mentorías individualizadas para opositores de Enseñanzas Profesionales de Música: programaciones didácticas, unidades didácticas y preparación de la defensa.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Recursos didácticos gratuitos</h3>
+                    <p>Tutoriales, videopartituras, herramientas visuales y auditivas, partituras y textos para educación obligatoria y no obligatoria. Actividades para todas las edades y niveles.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Crianza con música — Academia online</h3>
+                    <p>Para madres y padres de bebés y niños pequeños. Estimula el desarrollo cognitivo y emocional de tu hijo a través de juegos musicales diseñados y adaptados por niveles.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacto -->
+        <div class="contacto-block reveal">
+            <p>Para consultas relacionadas con educación musical, mentorías u oposiciones, escríbeme directamente al email de educación musical:</p>
+            <a href="mailto:josejavieraznarez@gmail.com" class="btn-email-musica">
+                ✉ josejavieraznarez@gmail.com
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Consentimiento y Tarifas</a>
+                <a href="#">Protocolo</a>
+                <a href="musica.html">¿Quieres aprender música?</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
