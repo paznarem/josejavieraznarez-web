@@ -522,26 +522,31 @@
             fill: white;
         }
 
-        /* ==================== PADRE GRID ==================== */
-        .padre-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1.5rem 0;
+        /* ==================== FLOAT IMAGES ==================== */
+        .content-block::after {
+            content: '';
+            display: table;
+            clear: both;
         }
 
-        .padre-grid img {
-            width: 100%;
+        .img-float-right {
+            float: right;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
             border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             display: block;
             object-fit: cover;
-            aspect-ratio: 4/3;
         }
 
-        @media (max-width: 600px) {
-            .padre-grid {
-                grid-template-columns: 1fr;
-            }
+        .img-float-left {
+            float: left;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: block;
+            object-fit: cover;
         }
 
         /* ==================== ANIMATIONS ==================== */
@@ -598,6 +603,16 @@
                 padding: 1.5rem 1.5rem;
             }
 
+            .img-float-right,
+            .img-float-left {
+                float: none;
+                max-width: 100% !important;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
@@ -648,7 +663,7 @@
             <h2>Mi camino</h2>
             <p>A lo largo de mi vida he construido mis reglas y patrones de conducta a través de aprendizajes en contextos muy diversos. He tenido el privilegio de ser hijo, hermano en una familia numerosa, esposo, padre de tres hijos y, recientemente, abuelo.</p>
             <p>Cada uno de estos roles me ha permitido vivir experiencias que han moldeado mi capacidad de amar, sufrir, escuchar, comprender y acompañar — no solo a nivel personal, sino también en mi trabajo como psicólogo.</p>
-            <img src="familia.jpg" alt="José Javier Aznárez con su familia" style="width:100%;max-width:100%;border-radius:12px;margin:1.5rem 0;display:block;">
+            <img src="familia.jpg" alt="José Javier Aznárez con su familia" class="img-float-right" style="max-width:45%;">
             <p>Mi camino comenzó como músico profesional durante la adolescencia. Compatibilizar la música con los estudios de Secundaria, Bachillerato y Universidad me enseñó la importancia de la responsabilidad, la perseverancia, la tolerancia a la frustración y el sentido del humor. Habilidades que hoy traslado a mi práctica profesional.</p>
             <p>Durante mi larga etapa como estudiante — que todavía no ha acabado — forjé mi curiosidad intelectual y mi pasión por el conocimiento, lo que me ha llevado a una búsqueda constante de aprendizaje.</p>
         </div>
@@ -656,6 +671,7 @@
         <!-- Bloque 2 -->
         <div class="content-block reveal">
             <h2>Mis errores, mi fortaleza</h2>
+            <img src="padre-joven-1.jpg" alt="José Javier con sus hijos" class="img-float-right" style="max-width:35%;">
             <p>He cometido errores y he tomado decisiones con resultados no esperados, algunos dolorosos. Quizás más que aciertos y éxitos. He aprendido, poco a poco, a aceptar y validar cada uno de esos momentos como parte esencial de mi crecimiento.</p>
             <p>Hoy procuro vivir con atención al presente, reconociendo mis preocupaciones, miedos y momentos de tristeza como partes integrales de mi experiencia humana. Es en los desafíos donde encuentro la oportunidad de vivir conforme a mis valores personales.</p>
         </div>
@@ -672,6 +688,7 @@
         <!-- Bloque 4 -->
         <div class="content-block reveal">
             <h2>Mi compromiso contigo</h2>
+            <img src="padre-joven-2.jpg" alt="José Javier con sus hijos" class="img-float-left" style="max-width:35%;">
             <blockquote>
                 <strong>Tu montaña. Tu viaje.</strong>
                 <p>Imagina que tu vida es una montaña que estás escalando. Cada camino, cada obstáculo y cada vista desde la cima son exclusivamente tuyos. Estoy aquí para ayudarte a reconocer y aceptar los desafíos que encuentres en tu ruta, manteniéndote enfocado en alcanzar tus metas en consonancia con tus valores más profundos.</p>
@@ -686,14 +703,10 @@
         <div class="content-block reveal">
             <h2>Mi experiencia como padre</h2>
             <p>Criar a un hijo es una de las tareas más ilusionantes y a la vez más desafiantes. El desempeño para el que menos nos preparan y más nos evalúan a lo largo de nuestra vida.</p>
-            <img src="crianza.jpg" alt="José Javier Aznárez con sus hijos" style="width:100%;max-width:100%;border-radius:12px;margin:0 0 1.5rem;display:block;">
+            <img src="crianza.jpg" alt="José Javier Aznárez con sus hijos" class="img-float-left" style="max-width:40%;">
             <p>Yo mismo viví esa realidad: creí que bastaba con el amor, la dedicación y la responsabilidad. Con el tiempo comprendí que, a pesar de mis mejores intenciones, hubiera necesitado un acompañamiento profesional en algunos momentos.</p>
             <p>Cometí errores — algunos evitables, otros no — desde el amor y el compromiso. Si hubiera sabido entonces lo que sé hoy, me habría ahorrado muchas dudas, dificultades y sentimientos de culpa.</p>
             <p>Mi vulnerabilidad y mi perspectiva son precisamente mi fortaleza, con la que ahora puedo acompañar a otras madres y padres con conocimiento, comprensión y empatía real.</p>
-            <div class="padre-grid">
-                <img src="padre-joven-1.jpg" alt="José Javier con sus hijos">
-                <img src="padre-joven-2.jpg" alt="José Javier con sus hijos">
-            </div>
         </div>
 
         <!-- Bloque 6 -->
