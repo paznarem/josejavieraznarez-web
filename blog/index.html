@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Aprender a comprendernos | José Javier Aznárez</title>
+    <meta name="description" content="Más de 30 artículos de libre acceso sobre ansiedad, crianza consciente, autocompasión y psicología contextual. Psicoeducación práctica para vivir mejor.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog — Aprender a comprendernos para vivir mejor">
+    <meta property="og:description" content="Artículos de psicoeducación sobre ansiedad, autoestima, crianza consciente y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/blog/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--sage-dark); }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 2.5rem;
+            color: var(--text-primary);
+        }
+
+        /* ==================== INTRO ==================== */
+        .intro-text {
+            text-align: left;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+        }
+
+        .intro-text p:last-child { margin-bottom: 0; }
+
+        .intro-text p em {
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        /* ==================== CATEGORY SECTIONS ==================== */
+        .category-section {
+            padding: 5rem 2rem;
+        }
+
+        .category-section:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .category-section:nth-child(odd) {
+            background: var(--white);
+        }
+
+        .category-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .category-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.7rem;
+        }
+
+        .category-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 300;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.8rem;
+        }
+
+        .category-desc {
+            font-size: 0.97rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            max-width: 680px;
+            line-height: 1.75;
+        }
+
+        /* ==================== BLOG GRID ==================== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 1.2rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid transparent;
+        }
+
+        .category-section:nth-child(odd) .blog-card {
+            background: var(--cream);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            border-color: rgba(107,127,94,0.15);
+        }
+
+        .blog-card-category {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.45;
+            color: var(--text-primary);
+        }
+
+        .blog-card-arrow {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.82rem;
+            color: var(--sage);
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .blog-card:hover .blog-card-arrow {
+            transform: translateX(4px);
+        }
+
+        /* ==================== CARD NUMBER (for numbered series) ==================== */
+        .card-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--cream-dark);
+            line-height: 1;
+            margin-bottom: 0.6rem;
+        }
+
+        .category-section:nth-child(odd) .card-number {
+            color: var(--warm-light);
+        }
+
+        /* ==================== ESCENAS SECTION ==================== */
+        .escenas-section {
+            padding: 5rem 2rem;
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.85);
+        }
+
+        .escenas-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .escenas-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage-light);
+            margin-bottom: 0.7rem;
+        }
+
+        .escenas-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 300;
+            color: rgba(255,255,255,0.95);
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .escenas-desc {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 300;
+            max-width: 600px;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+        }
+
+        .escenas-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.6);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 400;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 7rem 2rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .cta-inner { max-width: 650px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        .cta-section .note {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            transition: all 0.3s;
+        }
+
+        .btn-email:hover {
+            border-color: var(--sage);
+            color: var(--sage-dark);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links { display: flex; gap: 2rem; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-header { padding: 8rem 1.25rem 4rem; }
+
+            .category-section { padding: 3.5rem 1.25rem; }
+
+            .blog-grid { grid-template-columns: 1fr; }
+
+            .footer-inner { flex-direction: column; text-align: center; }
+
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="../como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="../sobre-mi.html">Sobre mí</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Psicoeducación</div>
+            <h1>Aprender a comprendernos<br>para vivir mejor</h1>
+            <div class="intro-text reveal">
+                <p>La psicoeducación no consiste en recibir clases de psicología ni en llenarte de teoría. Se trata de aprender a observar cómo funcionan tus emociones, pensamientos y conductas en la vida cotidiana, para que puedas comprenderte mejor y orientarte hacia lo que realmente da sentido a tu vida.</p>
+                <p>Aquí encontrarás más de 30 artículos de libre acceso sobre temas como la ansiedad, la autoestima, la crianza consciente, la autocompasión, el miedo escénico y muchos más. Cada uno incluye ejemplos prácticos, metáforas y ejercicios que puedes empezar a aplicar desde ya.</p>
+                <p>La clave no es tanto lo que sientes, sino <em>cómo te relacionas con lo que sientes</em>. Validar la emoción, reconocer su función y acercarte a ella con compasión te permite responder de otra manera — no desde el impulso, sino desde tus valores.</p>
+                <p>Leer estos contenidos y reconocerte en ellos ya es un primer paso. Si algo conecta con lo que estás viviendo, puedes escribirme sin compromiso.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- CATEGORÍA 1 -->
+    <section class="category-section reveal">
+        <div class="category-inner">
+            <div class="category-header">
+                <div class="category-label">Categoría 1</div>
+                <h2>Estar presente, vivir lo que vale</h2>
+                <p class="category-desc">Claves para aprender a vivir la vida que deseamos vivir. Artículos sobre autocompasión, autoestima, procrastinación, la comparación social, el orgullo, la humildad, la desesperanza y cómo relacionarnos con nuestros pensamientos y emociones difíciles.</p>
+            </div>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="card-number">01</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>La autocompasión nos ofrece un camino hacia la calma y la plenitud</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">02</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Aceptamos y no nos resignamos</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">03</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>La autoestima dependiente, una conducta aprendida</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">04</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>De una autoestima dependiente e incapacitante a una autoestima genuina</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">05</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Nuestra procrastinación, nuestra compañera</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">06</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Historia vital negativa</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">07</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>El orgullo, una moneda con dos caras</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">08</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Mi humildad, ¿barrera para mi autoestima?</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">09</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Vivir con el dolor de la traición</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">10</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>La comparación social, una realidad que no tiene por qué definirnos</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">11</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>El maratón de nuestra vida</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">12</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Autocuidado</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">13</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>¿La desesperanza condiciona nuestra vida?</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">14</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Vivo en mi mente</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">15</div>
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Tristeza e inactividad</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍA 2 -->
+    <section class="category-section reveal">
+        <div class="category-inner">
+            <div class="category-header">
+                <div class="category-label">Categoría 2</div>
+                <h2>Acompañar con amor, criar lo que importa</h2>
+                <p class="category-desc">Claves para un acompañamiento responsable, comprometido y consciente en la crianza. Artículos sobre vínculos seguros, límites funcionales, crianza sin traumas generacionales y el equilibrio entre dar y recibir.</p>
+            </div>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="card-number">01</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Contexto de crianza para aprender y desarrollar</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">02</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">03</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>La familia perfecta: un mito</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">04</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Un bebé en casa</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">05</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Una crianza saludable: el equilibrio compasivo entre dar y recibir</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">06</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Una crianza sin traumas generacionales</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">07</div>
+                    <div class="blog-card-category">Crianza consciente</div>
+                    <h3>Criar desde el ser y el estar</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍA 3 -->
+    <section class="category-section reveal">
+        <div class="category-inner">
+            <div class="category-header">
+                <div class="category-label">Categoría 3</div>
+                <h2>Estrés y ansiedad: lucha que limita o energía que orienta</h2>
+                <p class="category-desc">Artículos sobre el estrés y la ansiedad como respuestas, no como enemigos. Incluye una serie especial sobre ansiedad escénica (MPA) para músicos y artistas.</p>
+            </div>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="card-number">01</div>
+                    <div class="blog-card-category">Estrés y ansiedad</div>
+                    <h3>El estrés y la ansiedad como respuestas</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">02</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>MPA / Ansiedad escénica — Introducción</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">03</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>Vivencias en las audiciones: cuando la ansiedad silencia las competencias</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">04</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>Aproximación crítica a la definición de la MPA como trastorno</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">05</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>Estrategias e intervenciones para solucionar los problemas de rendimiento</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">06</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>MPA: abordaje desde un marco contextual</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">07</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>Propuesta de ayuda enfocada desde la RFT</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="card-number">08</div>
+                    <div class="blog-card-category">Ansiedad escénica · MPA</div>
+                    <h3>Líneas de actuación desde la terapia ACT</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESCENAS DE ACOMPAÑAMIENTO -->
+    <section class="escenas-section reveal">
+        <div class="escenas-inner">
+            <div class="escenas-label">Categoría especial</div>
+            <h2>Escenas de acompañamiento psicológico</h2>
+            <p class="escenas-desc">Casos detallados que describen cómo es mi acompañamiento en la práctica. Situaciones reales (anonimizadas) que te ayudan a entender qué ocurre en una sesión conmigo.</p>
+            <span class="escenas-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Próximamente
+            </span>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner reveal">
+            <span class="section-label">¿Algo ha resonado?</span>
+            <h2>Si algo conecta con lo que estás viviendo, escríbeme</h2>
+            <p>Leer y reconocerte ya es un primer paso. Un mensaje corto es suficiente para empezar una conversación sin compromiso.</p>
+            <p class="note">Escribir no implica iniciar terapia. Es solo una primera conversación.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Escríbeme por WhatsApp
+                </a>
+                <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">
+                    ✉ Enviar email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Consentimiento y Tarifas</a>
+                <a href="#">Protocolo</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
