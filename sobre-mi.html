@@ -522,6 +522,28 @@
             fill: white;
         }
 
+        /* ==================== PADRE GRID ==================== */
+        .padre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .padre-grid img {
+            width: 100%;
+            border-radius: 1rem;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+        }
+
+        @media (max-width: 600px) {
+            .padre-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ==================== ANIMATIONS ==================== */
         .reveal {
             opacity: 0;
@@ -668,6 +690,10 @@
             <p>Yo mismo viví esa realidad: creí que bastaba con el amor, la dedicación y la responsabilidad. Con el tiempo comprendí que, a pesar de mis mejores intenciones, hubiera necesitado un acompañamiento profesional en algunos momentos.</p>
             <p>Cometí errores — algunos evitables, otros no — desde el amor y el compromiso. Si hubiera sabido entonces lo que sé hoy, me habría ahorrado muchas dudas, dificultades y sentimientos de culpa.</p>
             <p>Mi vulnerabilidad y mi perspectiva son precisamente mi fortaleza, con la que ahora puedo acompañar a otras madres y padres con conocimiento, comprensión y empatía real.</p>
+            <div class="padre-grid">
+                <img src="padre-joven-1.jpg" alt="José Javier con sus hijos">
+                <img src="padre-joven-2.jpg" alt="José Javier con sus hijos">
+            </div>
         </div>
 
         <!-- Bloque 6 -->
