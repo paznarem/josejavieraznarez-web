@@ -439,6 +439,7 @@
             padding: 1.3rem 1.8rem;
             background: var(--cream);
             border: none;
+            border-radius: 12px;
             cursor: pointer;
             font-family: 'Work Sans', sans-serif;
             font-size: 1rem;
@@ -454,7 +455,7 @@
 
         .sesion-arrow {
             flex-shrink: 0;
-            transition: transform 0.35s ease;
+            transition: transform 0.3s ease;
             color: var(--sage);
         }
 
@@ -462,20 +463,15 @@
             transform: rotate(180deg);
         }
 
-        .sesion-expand-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.45s ease, padding 0.35s ease, opacity 0.35s ease;
-            padding: 0 1.8rem;
-            background: var(--white);
-            border-radius: 0 0 12px 12px;
-            opacity: 0;
+        .sesion-expand-btn[aria-expanded="true"] {
+            border-radius: 12px 12px 0 0;
         }
 
-        .sesion-expand-body.open {
-            overflow: visible;
+        .sesion-expand-body {
+            display: none;
             padding: 1.8rem;
-            opacity: 1;
+            background: var(--white);
+            border-radius: 0 0 12px 12px;
         }
 
         .sesion-expand-body p {
@@ -986,23 +982,7 @@
             const body = document.getElementById('sesion-detail');
             const expanded = btn.getAttribute('aria-expanded') === 'true';
             btn.setAttribute('aria-expanded', String(!expanded));
-
-            if (!expanded) {
-                // Opening: animate to exact content height, then free it
-                body.style.maxHeight = body.scrollHeight + 'px';
-                body.classList.add('open');
-                body.addEventListener('transitionend', function release() {
-                    body.style.maxHeight = 'none';
-                    body.removeEventListener('transitionend', release);
-                }, { once: true });
-            } else {
-                // Closing: pin height first so CSS transition has a start value
-                body.style.maxHeight = body.scrollHeight + 'px';
-                body.classList.remove('open');
-                requestAnimationFrame(() => requestAnimationFrame(() => {
-                    body.style.maxHeight = '0';
-                }));
-            }
+            body.style.display = expanded ? 'none' : 'block';
         }
     </script>
 </body>
