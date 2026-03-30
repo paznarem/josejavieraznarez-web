@@ -287,17 +287,17 @@
         .btn-secondary {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
+            gap: 0.4rem;
+            color: var(--sage);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
+            font-size: 0.95rem;
+            font-weight: 500;
             padding: 1rem 0.5rem;
-            transition: color 0.3s;
+            transition: gap 0.2s;
         }
 
         .btn-secondary:hover {
-            color: var(--sage-dark);
+            gap: 0.7rem;
         }
 
         .hero-visual {
@@ -755,6 +755,63 @@
             font-weight: 500;
         }
 
+        /* ==================== LIBRO ==================== */
+        .libro-section {
+            background: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .libro-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .libro-badge {
+            display: inline-block;
+            background: var(--terracotta);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.2rem;
+        }
+
+        .libro-section .section-label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .libro-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .libro-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .libro-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-weight: 300;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
         /* ==================== BLOG PREVIEW ==================== */
         .blog-preview {
             padding: 7rem 2rem;
@@ -782,17 +839,17 @@
 
         .blog-link {
             color: var(--sage);
-            text-decoration: none;
-            font-size: 0.9rem;
             font-weight: 500;
-            display: flex;
+            font-size: 0.95rem;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            transition: gap 0.3s;
+            transition: gap 0.2s;
         }
 
         .blog-link:hover {
-            gap: 0.8rem;
+            gap: 0.7rem;
         }
 
         .blog-grid {
@@ -923,6 +980,26 @@
             color: var(--sage-dark);
         }
 
+        .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(188,24,136,0.25);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(188,24,136,0.4);
+        }
+
         /* ==================== FOOTER ==================== */
         footer {
             background: var(--sage-dark);
@@ -974,6 +1051,35 @@
         }
 
         /* ==================== FLOATING WHATSAPP ==================== */
+        .instagram-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .instagram-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
+        }
+
+        .instagram-float svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            fill: none;
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -1133,6 +1239,47 @@
                 align-items: center;
             }
         }
+
+        /* ==================== MOBILE READ MORE ==================== */
+        @media (max-width: 640px) {
+            .mobile-collapsible .mobile-hidden {
+                display: none;
+            }
+            .mobile-collapsible.expanded .mobile-hidden {
+                display: block;
+            }
+            .mobile-collapsible.expanded .mobile-hidden-flex {
+                display: flex;
+            }
+            .mobile-collapsible .mobile-hidden-flex {
+                display: none;
+            }
+            .btn-read-more {
+                display: block;
+                width: 100%;
+                margin-top: 1.2rem;
+                padding: 0.75rem 1.5rem;
+                background: transparent;
+                border: 1px solid var(--cream-dark);
+                border-radius: 100px;
+                color: var(--text-secondary);
+                font-size: 0.9rem;
+                font-family: 'Work Sans', sans-serif;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .btn-read-more:hover {
+                border-color: var(--sage);
+                color: var(--sage-dark);
+            }
+            .mobile-collapsible.expanded .btn-read-more {
+                display: none;
+            }
+        }
+        @media (min-width: 641px) {
+            .btn-read-more { display: none; }
+            .mobile-hidden, .mobile-hidden-flex { display: revert !important; }
+        }
     </style>
 </head>
 <body>
@@ -1148,6 +1295,7 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
                 <li><a href="musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="#contacto" class="nav-cta">Contactar</a></li>
             </ul>
             <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
@@ -1160,7 +1308,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <div class="hero-tag">Sesiones online · Toda España</div>
+                <div class="hero-tag">Sesiones online · En español · Sin fronteras</div>
                 <h1>Cuando comprender no basta, hace falta <em>acompañamiento</em></h1>
                 <p class="hero-subtitle">
                     Soy psicólogo contextual. Acompaño a personas y familias a reconocer qué mantiene su malestar y a recuperar el rumbo hacia una vida con sentido.
@@ -1221,7 +1369,7 @@
             <h2>A veces el malestar no se mantiene<br>por falta de esfuerzo</h2>
             <p>Sino porque las estrategias que usamos ya no funcionan en nuestro contexto actual. Si algo de esto te suena, quizá es momento de explorar otra manera.</p>
             
-            <div class="identify-cards">
+            <div class="identify-cards mobile-collapsible">
                 <div class="identify-card">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
@@ -1236,13 +1384,14 @@
                     <h3>El estrés o la ansiedad están dirigiendo tu vida</h3>
                     <p>Las preocupaciones, el miedo, la inquietud constante... has probado muchas cosas y nada ofrece alivio duradero.</p>
                 </div>
-                <div class="identify-card">
+                <div class="identify-card mobile-hidden">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h3>Quieres criar mejor, pero no sabes cómo</h3>
                     <p>Amas a tus hijos y sin embargo la crianza se siente abrumadora. Buscas un acompañamiento consciente, no más recetas.</p>
                 </div>
+                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Leer más ↓</button>
             </div>
         </div>
     </section>
@@ -1280,7 +1429,7 @@
             <p class="method-note">
                 No necesitas saber qué terapia es para ti. Mi trabajo es diseñar un proceso personalizado con las herramientas contextuales más adecuadas para tu situación.
             </p>
-            <a href="como-trabajo.html" class="blog-link" style="display:inline-flex;margin-top:1.5rem;">Conoce mi metodología en detalle →</a>
+            <a href="como-trabajo.html" class="blog-link" style="display:inline-flex;margin-top:1.5rem;color:rgba(255,255,255,0.85);" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Conoce mi metodología en detalle →</a>
         </div>
     </section>
 
@@ -1320,7 +1469,7 @@
             <span class="section-label">Servicios</span>
             <h2>¿En qué puedo acompañarte?</h2>
             
-            <div class="services-grid">
+            <div class="services-grid mobile-collapsible">
                 <div class="service-card">
                     <span class="service-emoji">🧭</span>
                     <h3>Psicoterapia contextual individual</h3>
@@ -1342,7 +1491,7 @@
                         <span>Límites sanos</span>
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card mobile-hidden">
                     <span class="service-emoji">💞</span>
                     <h3>Consultoría de pareja</h3>
                     <p>Para parejas que quieren mejorar su comunicación, resolver conflictos recurrentes y reconectar con los valores compartidos que les unen.</p>
@@ -1352,7 +1501,7 @@
                         <span>Reconexión</span>
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card mobile-hidden">
                     <span class="service-emoji">🎵</span>
                     <h3>Ansiedad escénica (MPA)</h3>
                     <p>Para músicos y artistas que sufren miedo escénico o ansiedad de rendimiento. Un abordaje contextual que va más allá de las técnicas de relajación.</p>
@@ -1362,7 +1511,19 @@
                         <span>Rendimiento</span>
                     </div>
                 </div>
+                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Leer más ↓</button>
             </div>
+        </div>
+    </section>
+
+    <!-- LIBRO -->
+    <section class="libro-section">
+        <div class="libro-inner">
+            <div class="libro-badge">Nuevo libro</div>
+            <span class="section-label">Próximamente</span>
+            <h2>Desarrollo socioemocional en la infancia y adolescencia</h2>
+            <p class="libro-subtitle"><em>Enseñar y aprender para que sentir, hoy, sea seguro, incluso frente a la ansiedad y el bullying</em></p>
+            <p class="libro-desc">Un nuevo libro de José Javier Aznárez donde la ciencia contextual se convierte en herramienta práctica para familias, educadores y profesionales. Disponible próximamente.</p>
         </div>
     </section>
 
@@ -1377,7 +1538,7 @@
                 <a href="blog/index.html" class="blog-link">Ver todos los artículos →</a>
             </div>
             
-            <div class="blog-grid">
+            <div class="blog-grid mobile-collapsible">
                 <a href="blog/index.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La autocompasión nos ofrece un camino hacia la calma y la plenitud</h3>
@@ -1388,11 +1549,12 @@
                     <h3>La familia perfecta: un mito que nos atrapa</h3>
                     <p>Por qué perseguir la perfección en la crianza genera más sufrimiento del que evita.</p>
                 </a>
-                <a href="blog/index.html" class="blog-card">
+                <a href="blog/index.html" class="blog-card mobile-hidden">
                     <div class="blog-card-category">Estrés y ansiedad</div>
                     <h3>El estrés y la ansiedad como respuestas, no como enemigos</h3>
                     <p>Un enfoque diferente para relacionarte con la ansiedad sin luchar contra ella.</p>
                 </a>
+                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Leer más ↓</button>
             </div>
         </div>
     </section>
@@ -1413,6 +1575,10 @@
                 <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">
                     ✉ Enviar email
                 </a>
+                <a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" class="btn-instagram" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                    Seguir en Instagram
+                </a>
             </div>
         </div>
     </section>
@@ -1432,6 +1598,10 @@
         </div>
     </footer>
 
+    <!-- FLOATING INSTAGRAM -->
+    <a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
+        <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    </a>
     <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
