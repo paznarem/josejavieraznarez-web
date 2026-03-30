@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado y Tarifas — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="Consentimiento informado para servicios de consultoría psicológica online de José Javier Aznárez. Honorarios 2025, derechos del consultante y proceso de trabajo.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Consentimiento Informado y Tarifas — José Javier Aznárez | Psicólogo Contextual">
+    <meta property="og:description" content="Consentimiento informado para servicios de consultoría psicológica online de José Javier Aznárez. Honorarios 2025, derechos del consultante y proceso de trabajo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/consentimiento-tarifas.html">
+
+    <link rel="icon" type="image/png" href="logo-sage.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .content-block {
+            margin-bottom: 4.5rem;
+        }
+
+        .content-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .content-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin: 2rem 0 0.8rem;
+            letter-spacing: -0.01em;
+        }
+
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 1.2rem;
+        }
+
+        .content-block ul li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.8;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            border-bottom: 1px solid var(--cream-dark);
+            position: relative;
+        }
+
+        .content-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        .content-block ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+        }
+
+        .content-block a {
+            color: var(--sage-dark);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .legal-meta {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Tariff cards */
+        .tariff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        .tariff-card {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.5rem 1.2rem;
+            text-align: center;
+            border: 1px solid var(--cream-dark);
+        }
+
+        .tariff-card .tariff-name {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .tariff-card .tariff-duration {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .tariff-card .tariff-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .tariff-card .tariff-price span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        .tariff-note {
+            background: var(--cream);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-top: 1rem;
+        }
+
+        .consent-list {
+            counter-reset: consent-counter;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .consent-list li {
+            counter-increment: consent-counter;
+            padding: 0.8rem 0 0.8rem 2.5rem;
+            border-bottom: 1px solid var(--cream-dark);
+            position: relative;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .consent-list li:last-child {
+            border-bottom: none;
+        }
+
+        .consent-list li::before {
+            content: counter(consent-counter) '.';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+        }
+
+        @media (max-width: 600px) {
+            .tariff-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 3rem 1.25rem 3rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand"><img src="logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="index.html#como-trabajo">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Legal</div>
+            <h1>Consentimiento Informado y Tarifas</h1>
+            <p class="subtitle">Servicios online de consultoría y asesoría psicológica no sanitaria</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- Sección 1 -->
+        <div class="content-block reveal">
+            <h2>Área de intervención</h2>
+            <p>José Javier es psicólogo consultor especializado en terapias contextuales y procesos de enseñanza y aprendizaje conductuales en desempeños cotidianos disfuncionales de la vida por estrés, ansiedad, tristeza, inquietud, miedo, desánimo… en ámbitos de relaciones y en situaciones familiares, sociales, profesionales, de crianza y específicamente artísticos.</p>
+            <p>Los servicios que ofrece como psicólogo y educador, tal y como se especifican en la web <a href="index.html">www.josejavieraznarez.com</a>, abarcan una amplia área de intervención en forma de consultoría y asesoramiento que <strong>en ningún caso tiene el cariz de una intervención sanitaria ni clínica</strong>.</p>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="content-block reveal">
+            <h2>Formación de José Javier Aznárez</h2>
+            <ul>
+                <li>Máster en Terapias Contextuales (Terapias de Tercera Generación) por la Universidad de Almería</li>
+                <li>Licenciado en Psicología en la especialidad de Educación por la Universidad Nacional de Educación a Distancia (UNED)</li>
+                <li>Formación clínica en técnicas cognitivo-conductuales e intervención en la salud y el deporte por la UNED</li>
+                <li>Máster en Psicología y Didáctica de la Música por la UNED</li>
+                <li>Licenciado en Historia y Ciencias de la Música por la Universidad de Salamanca</li>
+                <li>Diplomado Profesor EGB especialista en Matemáticas, Ciencias Naturales y Música por la Universidad de Zaragoza</li>
+            </ul>
+            <p>Gran cantidad de investigaciones han puesto en evidencia la eficiencia del modelo contextual, en el que se aprenden nuevas conductas que producen cambios profundos y duraderos en la persona.</p>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="content-block reveal">
+            <h2>Objetivos de la psicoterapia</h2>
+            <p>En el ámbito de la alianza terapéutica, José Javier, desde el paradigma de las terapias contextuales (tercera generación), ejerce como guía en el proceso psicológico de cada cliente, centrando sus esfuerzos en la exploración, comprensión, aceptación, validación y cambio de la conducta desde la libertad y la creatividad.</p>
+            <p>Su intervención se inserta en un proceso de enseñanza y aprendizaje conductual, focalizándose en el desarrollo de conductas alternativas a comportamientos de lucha, control, evitativos y de escape, con el objetivo primordial de mejorar el desempeño profesional, social y familiar, alineado con la vida que cada cliente desea vivir.</p>
+            <p>Particularmente, José Javier aborda la mitigación y aceptación de la autocrítica, culpabilidad, inseguridad y vergüenza, así como del control inútil en la gestión de recuerdos evaluativos y preocupaciones persistentes sobre el futuro que contribuyen al desasosiego, a la intranquilidad, a la tristeza, a la tensión emocional y a la ansiedad en el desempeño social.</p>
+            <p>Además, busca desactivar las respuestas de lucha y control contra pensamientos, recuerdos, emociones y sensaciones, creando así un espacio propicio para vivir la vida de acuerdo con metas y objetivos que reflejen los verdaderos valores individuales. Este proceso incluye la construcción de una autoevaluación funcional, contextual y perspicaz, promoviendo una perspectiva autocompasiva y desvinculando la valía personal del rendimiento y la valoración externa.</p>
+            <p>Específicamente en el ámbito de la interpretación musical, José Javier trabaja para permitir que cada músico acoja las audiciones con atención plena a sus acciones, con mayor autenticidad y disposición emocional, contribuyendo así a un desenvolvimiento más genuino y pleno en su expresión artística.</p>
+        </div>
+
+        <!-- Sección 4 -->
+        <div class="content-block reveal">
+            <h2>Proceso de contacto y primeras sesiones</h2>
+            <p>Antes de contactar con José Javier, puedes explorar las características de su propuesta de abordaje psicológico y educativo en la información disponible en su página web. Si consideras que los procesos propuestos pueden ser adecuados para abordar tus dificultades, puedes enviar un correo electrónico para establecer un primer contacto sin compromiso.</p>
+            <p>En dicho correo, se sugiere incluir:</p>
+            <ul>
+                <li>Datos personales</li>
+                <li>Motivos de consulta</li>
+                <li>Disponibilidad horaria</li>
+                <li>Dudas y preguntas</li>
+            </ul>
+            <p>José Javier te responderá a la mayor brevedad posible y te adjuntará este consentimiento para que lo estudies. Una vez firmado el consentimiento informado, se iniciará el proceso formal, con sesiones semanales (una o dos) de aproximadamente 50 minutos de duración cada una.</p>
+        </div>
+
+        <!-- Sección 5 -->
+        <div class="content-block reveal">
+            <h2>Honorarios 2025</h2>
+            <div class="tariff-grid">
+                <div class="tariff-card">
+                    <div class="tariff-name">Primera sesión</div>
+                    <div class="tariff-duration">60 minutos</div>
+                    <div class="tariff-price">45€ <span>+ impuestos</span></div>
+                </div>
+                <div class="tariff-card">
+                    <div class="tariff-name">Sesión individual</div>
+                    <div class="tariff-duration">50 minutos</div>
+                    <div class="tariff-price">45€ <span>+ impuestos</span></div>
+                </div>
+                <div class="tariff-card">
+                    <div class="tariff-name">Sesión de pareja</div>
+                    <div class="tariff-duration">50 minutos</div>
+                    <div class="tariff-price">65€ <span>+ impuestos</span></div>
+                </div>
+            </div>
+            <div class="tariff-note">El pago siempre se realizará antes de la sesión, enviando el justificante con el nombre del consultante y la fecha de la consulta. Cuando se le asigna una cita, se reserva ese tiempo exclusivamente para usted: si no acude sin haberla cancelado con al menos <strong>48 horas de antelación</strong>, se cobrará el 100% de la sesión, salvo justificación de causa mayor.</div>
+        </div>
+
+        <!-- Sección 6 -->
+        <div class="content-block reveal">
+            <h2>Confidencialidad y protección de datos</h2>
+            <p>Toda la información compartida durante las sesiones será tratada con la máxima confidencialidad, en cumplimiento con lo establecido por la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), y el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD).</p>
+            <p>Todos los datos de carácter personal solicitados y facilitados son incorporados a un fichero de titularidad privada cuyo responsable y único destinatario es José Javier Aznárez Barrio. Solo serán solicitados aquellos datos estrictamente necesarios para prestar adecuadamente el servicio de consultoría y asesoramiento, y serán conservados durante no más tiempo que el necesario para la finalidad del proceso o mientras existan prescripciones legales que dictaminen su custodia.</p>
+            <p>Todos los datos recogidos cuentan con el compromiso de confidencialidad como profesional psicólogo y educador, con las medidas de seguridad establecidas legalmente, y bajo ningún concepto son cedidos o tratados por terceras personas, físicas o jurídicas, sin el previo consentimiento del cliente, tutor o representante legal, salvo en aquellos casos en los que fuere imprescindible para la correcta prestación del servicio u obligación legal.</p>
+            <p>Existen ciertas excepciones a la confidencialidad, entre las que se incluyen: situaciones donde se identifique un riesgo grave e inminente para usted o para terceros; obligaciones legales, como la notificación a las autoridades en caso de una orden judicial; información compartida en supervisión profesional, donde se protege la identidad del cliente.</p>
+            <p>Puede consultar el <a href="aviso-legal.html#politica-privacidad">aviso legal y política de privacidad completa</a> en este sitio web.</p>
+        </div>
+
+        <!-- Sección 7 -->
+        <div class="content-block reveal">
+            <h2>Derechos del consultante</h2>
+            <ul>
+                <li><strong>Participación voluntaria:</strong> su participación en estos servicios es voluntaria, y puede decidir interrumpirla en cualquier momento sin repercusiones negativas. En ningún caso son servicios sanitarios ni clínicos.</li>
+                <li><strong>Acceso a la información:</strong> tiene derecho a recibir información clara y comprensible sobre la evaluación y el plan del proceso de abordaje de las barreras y dificultades en su desempeño.</li>
+                <li><strong>Consulta de otros profesionales:</strong> puede buscar una segunda opinión de otro profesional si lo considera necesario.</li>
+                <li><strong>Preguntas y comentarios:</strong> puede plantear preguntas en cualquier momento y expresar cualquier duda o preocupación sobre los servicios recibidos.</li>
+            </ul>
+        </div>
+
+        <!-- Sección 8 -->
+        <div class="content-block reveal">
+            <h2>Riesgos y beneficios</h2>
+            <p>La participación en procesos de aceptación y cambio contextuales y procesos de enseñanza y aprendizaje conductuales puede implicar algunos riesgos:</p>
+            <ul>
+                <li><strong>Malestar emocional:</strong> algunas intervenciones que implementen comportamientos y respuestas antes evitados pueden provocar a corto plazo emociones difíciles o incómodas.</li>
+                <li><strong>Cambios en relaciones interpersonales:</strong> pueden surgir inicialmente incomprensiones, e incluso tensiones en las relaciones debido a cambios en la conducta del cliente, aprendizaje e implementación de nuevas habilidades o perspectivas personales enfocadas en sus valores.</li>
+            </ul>
+            <p>Existe evidencia de los beneficios que incluyen el vivir progresivamente la vida que se desea vivir, cambiando lo que es susceptible de cambio y aceptando aquello que sucedió y lo que no se puede cambiar.</p>
+        </div>
+
+        <!-- Sección 9 -->
+        <div class="content-block reveal">
+            <h2>Consentimiento explícito</h2>
+            <p>Con mi firma, doy mi consentimiento para participar en los servicios ofrecidos por el psicólogo consultor, asesor y educador José Javier Aznárez Barrio.</p>
+            <ol class="consent-list">
+                <li>Declaro haber leído y comprendido la información proporcionada en este documento.</li>
+                <li>He revisado y entendido la información disponible en la página web <a href="index.html">www.josejavieraznarez.com</a>.</li>
+                <li>Entiendo que los procesos implementados no tienen ni cariz sanitario ni clínico, sino de aprendizaje de nuevas conductas que faciliten progresivamente y de forma autónoma alcanzar objetivos vitales y profesionales en consonancia con mis valores personales.</li>
+                <li>He tenido la oportunidad de realizar preguntas y comprendo mis derechos y obligaciones como cliente.</li>
+                <li>Entiendo que la ausencia a dos sesiones seguidas sin aviso previo será interpretada como abandono del proceso, dándose por finalizado el mismo, sin que exista ninguna posibilidad de reembolso en el caso de haber contratado un bono multisesión.</li>
+                <li>Tengo, como cliente, el derecho de interrumpir el proceso cuando desee, sin que exista ninguna posibilidad de reembolso en el caso de haber contratado un bono multisesión. El presente consentimiento podrá ser revocado libremente y por escrito en cualquier momento, y sin expresión de la causa.</li>
+            </ol>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="consentimiento-tarifas.html">Consentimiento y Tarifas</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Nav scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
