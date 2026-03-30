@@ -1233,6 +1233,33 @@
             }
         }
 
+        @media (min-width: 641px) and (max-width: 1024px) and (orientation: portrait) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-visual {
+                max-width: 560px;
+                margin: 0 auto;
+            }
+            .hero-image-frame img {
+                height: 460px;
+            }
+            .hero-float-card {
+                top: -1.5rem;
+                right: -0.5rem;
+                bottom: auto;
+                left: auto;
+            }
+        }
+
         @media (max-width: 500px) {
             .cta-buttons {
                 flex-direction: column;
