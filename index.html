@@ -1249,8 +1249,14 @@
                 max-width: 560px;
                 margin: 0 auto;
             }
+            .hero-image-frame {
+                aspect-ratio: 3 / 4;
+            }
             .hero-image-frame img {
-                height: 460px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
             }
             .hero-float-card {
                 top: -1.5rem;
