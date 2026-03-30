@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal y Política de Privacidad — José Javier Aznárez</title>
+    <meta name="description" content="Aviso legal, política de privacidad y política de cookies del sitio web de José Javier Aznárez, psicólogo contextual.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aviso Legal y Política de Privacidad — José Javier Aznárez">
+    <meta property="og:description" content="Aviso legal, política de privacidad y política de cookies del sitio web de José Javier Aznárez, psicólogo contextual.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/aviso-legal.html">
+
+    <link rel="icon" type="image/png" href="logo-sage.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .content-block {
+            margin-bottom: 4.5rem;
+        }
+
+        .content-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .content-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin: 2rem 0 0.8rem;
+            letter-spacing: -0.01em;
+        }
+
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 1.2rem;
+        }
+
+        .content-block ul li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.8;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            border-bottom: 1px solid var(--cream-dark);
+            position: relative;
+        }
+
+        .content-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        .content-block ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+        }
+
+        .content-block a {
+            color: var(--sage-dark);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .legal-meta {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 3rem 1.25rem 3rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand"><img src="logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="index.html#como-trabajo">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">Legal</div>
+            <h1>Aviso Legal y Política de Privacidad</h1>
+            <p class="subtitle">Última modificación: 30 de julio de 2024</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- I -->
+        <div class="content-block reveal">
+            <h2>I. Información general</h2>
+            <p>En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y el Comercio Electrónico (LSSI-CE) de 11 de julio, se facilitan a continuación los siguientes datos de información general de este sitio web:</p>
+            <p>La titularidad de este sitio web <strong>josejavieraznarez.com</strong> la ostenta: <strong>José Javier Aznárez</strong>. Email de contacto: <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com">psicologo_terapiacontextual@josejavieraznarez.com</a></p>
+            <p>La actividad ejercida por José Javier Aznárez es la de Psicólogo Consultor en Terapias Contextuales y Procesos de Enseñanza y Aprendizaje. Como tal, está en posesión de: Licenciado en Psicología por la Universidad Nacional a Distancia UNED en la especialidad de Educación; Máster en Terapias Contextuales por la Universidad de Almería, con número de colegiado N02089.</p>
+        </div>
+
+        <!-- II -->
+        <div class="content-block reveal">
+            <h2>II. Términos y condiciones generales de uso</h2>
+            <h3>El objeto de las condiciones: el Sitio Web</h3>
+            <p>El objeto de las presentes Condiciones Generales de Uso (en adelante, Condiciones) es regular el acceso y la utilización del Sitio Web. A los efectos de las presentes Condiciones se entenderá como Sitio Web: la apariencia externa de los interfaces de pantalla, tanto de forma estática como de forma dinámica, es decir, el árbol de navegación; y todos los elementos integrados tanto en los interfaces de pantalla como en el árbol de navegación (en adelante, Contenidos) y todos aquellos servicios o recursos en línea que en su caso ofrezca a los Usuarios (en adelante, Servicios).</p>
+            <p>José Javier Aznárez Psicólogo Consultor se reserva la facultad de modificar, en cualquier momento, y sin aviso previo, la presentación y configuración del Sitio Web y de los Contenidos y Servicios que en él pudieran estar incorporados. El Usuario reconoce y acepta que en cualquier momento José Javier Aznárez Psicólogo Consultor pueda interrumpir, desactivar y/o cancelar cualquiera de estos elementos que se integran en el Sitio Web o el acceso a los mismos.</p>
+            <p>El acceso al Sitio Web por el Usuario tiene carácter libre y, por regla general, es gratuito sin que el Usuario tenga que proporcionar una contraprestación para poder disfrutar de ello, salvo en lo relativo al coste de conexión a través de la red de telecomunicaciones suministrada por el proveedor de acceso que hubiere contratado el Usuario.</p>
+            <p>La utilización de alguno de los Contenidos o Servicios del Sitio Web podrá hacerse mediante la suscripción o registro previo del Usuario.</p>
+            <h3>El Usuario</h3>
+            <p>El acceso, la navegación y uso del Sitio Web, confiere la condición de Usuario, por lo que se aceptan, desde que se inicia la navegación por el Sitio Web, todas las Condiciones aquí establecidas, así como sus ulteriores modificaciones, sin perjuicio de la aplicación de la correspondiente normativa legal de obligado cumplimiento según el caso. Dada la relevancia de lo anterior, se recomienda al Usuario leerlas cada vez que visite el Sitio Web.</p>
+            <p>El Sitio Web de José Javier Aznárez Psicólogo Consultor proporciona gran diversidad de información, servicios y datos. El Usuario asume su responsabilidad para realizar un uso correcto del Sitio Web. Esta responsabilidad se extenderá a:</p>
+            <ul>
+                <li>Un uso de la información, Contenidos y/o Servicios y datos ofrecidos por José Javier Aznárez Psicólogo Consultor sin que sea contrario a lo dispuesto por las presentes Condiciones, la Ley, la moral o el orden público, o que de cualquier otro modo puedan suponer lesión de los derechos de terceros o del mismo funcionamiento del Sitio Web.</li>
+                <li>La veracidad y licitud de las informaciones aportadas por el Usuario en los formularios extendidos por José Javier Aznárez Psicólogo Consultor para el acceso a ciertos Contenidos o Servicios ofrecidos por el Sitio Web. En todo caso, el Usuario notificará de forma inmediata a José Javier Aznárez Psicólogo Consultor acerca de cualquier hecho que permita el uso indebido de la información registrada en dichos formularios, tales como, pero no sólo, el robo, extravío, o el acceso no autorizado a identificadores y/o contraseñas, con el fin de proceder a su inmediata cancelación.</li>
+            </ul>
+            <p>El mero acceso a este Sitio Web no supone entablar ningún tipo de relación de carácter comercial entre José Javier Aznárez Psicólogo Consultor y el Usuario.</p>
+            <p>Siempre en el respeto de la legislación vigente, este Sitio Web de José Javier Aznárez Psicólogo Consultor se dirige a todas las personas, sin importar su edad, que puedan acceder y/o navegar por las páginas del Sitio Web.</p>
+        </div>
+
+        <!-- III -->
+        <div class="content-block reveal">
+            <h2>III. Acceso y navegación: exclusión de garantías y responsabilidad</h2>
+            <p>José Javier Aznárez Psicólogo Consultor no garantiza la continuidad, disponibilidad y utilidad del Sitio Web, ni de los Contenidos o Servicios. José Javier Aznárez Psicólogo Consultor hará todo lo posible por el buen funcionamiento del Sitio Web, sin embargo, no se responsabiliza ni garantiza que el acceso a este Sitio Web no vaya a ser ininterrumpido o que esté libre de error.</p>
+            <p>Tampoco se responsabiliza o garantiza que el contenido o software al que pueda accederse a través de este Sitio Web, esté libre de error o cause un daño al sistema informático (software y hardware) del Usuario. En ningún caso José Javier Aznárez Psicólogo Consultor será responsable por las pérdidas, daños o perjuicios de cualquier tipo que surjan por el acceso, navegación y el uso del Sitio Web, incluyéndose, pero no limitándose, a los ocasionados a los sistemas informáticos o los provocados por la introducción de virus.</p>
+            <p>José Javier Aznárez Psicólogo Consultor tampoco se hace responsable de los daños que pudiesen ocasionarse a los usuarios por un uso inadecuado de este Sitio Web. En particular, no se hace responsable en modo alguno de las caídas, interrupciones, falta o defecto de las telecomunicaciones que pudieran ocurrir.</p>
+        </div>
+
+        <!-- IV -->
+        <div class="content-block reveal" id="privacidad">
+            <h2>IV. Política de privacidad y protección de datos</h2>
+            <p>Respetando lo establecido en la legislación vigente, José Javier Aznárez Psicólogo Consultor se compromete a adoptar las medidas técnicas y organizativas necesarias, según el nivel de seguridad adecuado al riesgo de los datos recogidos.</p>
+            <h3>Leyes que incorpora esta política de privacidad</h3>
+            <p>Esta política de privacidad está adaptada a la normativa española y europea vigente en materia de protección de datos personales en internet. En concreto, la misma respeta las siguientes normas:</p>
+            <ul>
+                <li>El Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD).</li>
+                <li>La Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD).</li>
+                <li>El Real Decreto 1720/2007, de 21 de diciembre, por el que se aprueba el Reglamento de desarrollo de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (RDLOPD).</li>
+                <li>La Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE).</li>
+            </ul>
+            <h3>Identidad del responsable del tratamiento</h3>
+            <p>El responsable del tratamiento de los datos personales recogidos es: <strong>José Javier Aznárez</strong>. Email de contacto: <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com">psicologo_terapiacontextual@josejavieraznarez.com</a></p>
+            <h3>Registro de datos de carácter personal</h3>
+            <p>En cumplimiento de lo establecido en el RGPD y la LOPD-GDD, le informamos que los datos personales recabados por José Javier Aznárez Psicólogo Consultor quedarán incorporados y serán tratados en nuestros ficheros con el fin de poder facilitar, agilizar y cumplir los compromisos establecidos entre José Javier Aznárez Psicólogo Consultor y el Usuario o el mantenimiento de la relación que se establezca en los formularios que este rellene, o para atender una solicitud o consulta del mismo.</p>
+            <h3>Principios aplicables al tratamiento de los datos personales</h3>
+            <p>El tratamiento de los datos personales del Usuario se someterá a los siguientes principios recogidos en el artículo 5 del RGPD:</p>
+            <ul>
+                <li><strong>Principio de licitud, lealtad y transparencia:</strong> se requerirá en todo momento el consentimiento del Usuario previa información completamente transparente de los fines para los cuales se recogen los datos personales.</li>
+                <li><strong>Principio de limitación de la finalidad:</strong> los datos personales serán recogidos con fines determinados, explícitos y legítimos.</li>
+                <li><strong>Principio de minimización de datos:</strong> los datos personales recogidos serán únicamente los estrictamente necesarios en relación con los fines para los que son tratados.</li>
+                <li><strong>Principio de exactitud:</strong> los datos personales deben ser exactos y estar siempre actualizados.</li>
+                <li><strong>Principio de limitación del plazo de conservación:</strong> los datos personales solo serán mantenidos de forma que se permita la identificación del Usuario durante el tiempo necesario para los fines de su consultoría.</li>
+                <li><strong>Principio de integridad y confidencialidad:</strong> los datos personales serán tratados de manera que se garantice su seguridad y confidencialidad.</li>
+                <li><strong>Principio de responsabilidad proactiva:</strong> el Responsable del tratamiento será responsable de asegurar que los principios anteriores se cumplen.</li>
+            </ul>
+            <h3>Categorías de datos personales</h3>
+            <p>Las categorías de datos que se tratan en José Javier Aznárez Psicólogo Consultor son únicamente datos identificativos. En ningún caso, se tratan categorías especiales de datos personales en el sentido del artículo 9 del RGPD.</p>
+            <h3>Base legal para el tratamiento de los datos personales</h3>
+            <p>La base legal para el tratamiento de los datos personales es el consentimiento. José Javier Aznárez Psicólogo Consultor se compromete a recabar el consentimiento expreso y verificable del Usuario para el tratamiento de sus datos personales para uno o varios fines específicos.</p>
+            <p>El Usuario tendrá derecho a retirar su consentimiento en cualquier momento. Será tan fácil retirar el consentimiento como darlo. Como regla general, la retirada del consentimiento no condicionará el uso del Sitio Web.</p>
+            <h3>Fines del tratamiento a que se destinan los datos personales</h3>
+            <p>Los datos personales son recabados y gestionados por José Javier Aznárez Psicólogo Consultor con la finalidad de poder facilitar, agilizar y cumplir los compromisos establecidos entre el Sitio Web y el Usuario o el mantenimiento de la relación que se establezca en los formularios que este último rellene o para atender una solicitud o consulta.</p>
+            <p>Igualmente, los datos podrán ser utilizados con una finalidad comercial de personalización, operativa y estadística, y actividades propias del objeto social de José Javier Aznárez Psicólogo Consultor, así como para la extracción, almacenamiento de datos y estudios de marketing para adecuar el Contenido ofertado al Usuario, así como mejorar la calidad, funcionamiento y navegación por el Sitio Web.</p>
+            <h3>Períodos de retención de los datos personales</h3>
+            <p>Los datos personales solo serán retenidos durante el tiempo mínimo necesario para los fines de la consultoría y, en todo caso, únicamente durante el siguiente plazo: 12 meses, o hasta que el Usuario solicite su supresión.</p>
+            <h3>Destinatarios de los datos personales</h3>
+            <p>Los datos personales del Usuario no serán compartidos con terceros.</p>
+            <h3>Datos personales de menores de edad</h3>
+            <p>Respetando lo establecido en los artículos 8 del RGPD y 13 del RDLOPD, solo los mayores de 14 años podrán otorgar su consentimiento para el tratamiento de sus datos personales de forma lícita por José Javier Aznárez Psicólogo Consultor. Si se trata de un menor de 14 años, será necesario el consentimiento de los padres o tutores para la consultoría.</p>
+            <h3>Secreto y seguridad de los datos personales</h3>
+            <p>José Javier Aznárez Psicólogo Consultor se compromete a adoptar las medidas técnicas y organizativas necesarias, según el nivel de seguridad adecuado al riesgo de los datos recogidos, de forma que se garantice la seguridad de los datos de carácter personal y se evite la destrucción, pérdida o alteración accidental o ilícita de datos personales transmitidos, conservados o tratados de otra forma, o la comunicación o acceso no autorizados a dichos datos.</p>
+            <p>El Sitio Web cuenta con un certificado SSL (Secure Socket Layer), que asegura que los datos personales se transmiten de forma segura y confidencial, al ser la transmisión de los datos entre el servidor y el Usuario, y en retroalimentación, totalmente cifrada o encriptada.</p>
+            <p>Sin embargo, debido a que José Javier Aznárez Psicólogo Consultor no puede garantizar la inexpugnabilidad de internet ni la ausencia total de hackers u otros que accedan de modo fraudulento a los datos personales, el Responsable del tratamiento se compromete a comunicar al Usuario sin dilación indebida cuando ocurra una violación de la seguridad de los datos personales que sea probable que entrañe un alto riesgo para los derechos y libertades de las personas físicas.</p>
+            <h3>Derechos derivados del tratamiento de los datos personales</h3>
+            <p>El Usuario tiene sobre José Javier Aznárez Psicólogo Consultor y podrá, por tanto, ejercer frente al Responsable del tratamiento los siguientes derechos reconocidos en el RGPD:</p>
+            <ul>
+                <li><strong>Derecho de acceso:</strong> Es el derecho del Usuario a obtener confirmación de si está tratando o no sus datos personales y, en caso afirmativo, obtener información sobre sus datos concretos de carácter personal y del tratamiento que José Javier Aznárez Psicólogo Consultor haya realizado o realice.</li>
+                <li><strong>Derecho de rectificación:</strong> Es el derecho del Usuario a que se modifiquen sus datos personales que resulten ser inexactos o, teniendo en cuenta los fines de la consultoría, incompletos.</li>
+                <li><strong>Derecho de supresión («el derecho al olvido»):</strong> Es el derecho del Usuario, siempre que la legislación vigente no establezca lo contrario, a obtener la supresión de sus datos personales cuando estos ya no sean necesarios para los fines para los cuales fueron recogidos o tratados.</li>
+                <li><strong>Derecho a la limitación del tratamiento:</strong> Es el derecho del Usuario a limitar el tratamiento de sus datos personales cuando impugne la exactitud de sus datos personales; el tratamiento sea ilícito; el Responsable del tratamiento ya no necesite los datos personales; o cuando el Usuario se haya opuesto al tratamiento.</li>
+                <li><strong>Derecho a la portabilidad de los datos:</strong> En caso de que el tratamiento se efectúe por medios automatizados, el Usuario tendrá derecho a recibir del Responsable del tratamiento sus datos personales en un formato estructurado, de uso común y lectura mecánica.</li>
+                <li><strong>Derecho de oposición:</strong> Es el derecho del Usuario a que no se lleve a cabo el tratamiento de sus datos de carácter personal o se cese el tratamiento de los mismos por parte de José Javier Aznárez Psicólogo Consultor.</li>
+                <li><strong>Derecho a no ser objeto de una decisión basada únicamente en el tratamiento automatizado:</strong> Es el derecho del Usuario a no ser objeto de una decisión individualizada basada únicamente en el tratamiento automatizado de sus datos personales, incluida la elaboración de perfiles.</li>
+            </ul>
+            <p>Así pues, el Usuario podrá ejercitar sus derechos mediante comunicación escrita dirigida al Responsable del tratamiento con la referencia "RGPD-www.josejavieraznarez.com", especificando: nombre y apellidos del Usuario con copia del DNI; petición con los motivos específicos de la solicitud; domicilio a efecto de notificaciones; y fecha y firma del solicitante.</p>
+            <p>Esta solicitud podrá enviarse al siguiente correo electrónico: <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com">psicologo_terapiacontextual@josejavieraznarez.com</a></p>
+            <h3>Enlaces a sitios web de terceros</h3>
+            <p>El Sitio Web puede incluir hipervínculos o enlaces que permiten acceder a páginas web de terceros distintos de José Javier Aznárez Psicólogo Consultor, y que por tanto no son operados por José Javier Aznárez Psicólogo Consultor. Los titulares de dichos sitios web dispondrán de sus propias políticas de protección de datos, siendo ellos mismos, en cada caso, responsables de sus propios ficheros y de sus propias prácticas de privacidad.</p>
+            <h3>Reclamaciones ante la autoridad de control</h3>
+            <p>En caso de que el Usuario considere que existe un problema o infracción de la normativa vigente en la forma en la que se están tratando sus datos personales, tendrá derecho a la tutela judicial efectiva y a presentar una reclamación ante una autoridad de control. En el caso de España, la autoridad de control es la <strong>Agencia Española de Protección de Datos (AEPD)</strong>.</p>
+            <h3>Aceptación y cambios en esta política de privacidad</h3>
+            <p>Es necesario que el Usuario haya leído y esté conforme con las condiciones sobre la protección de datos de carácter personal contenidas en esta Política de Privacidad, así como que acepte el tratamiento de sus datos personales para que el Responsable del tratamiento pueda proceder al mismo en la forma, durante los plazos y para las finalidades indicadas. El uso del Sitio Web implicará la aceptación de la Política de Privacidad del mismo.</p>
+            <p>José Javier Aznárez Psicólogo Consultor se reserva el derecho a modificar su Política de Privacidad, de acuerdo a su propio criterio, o motivado por un cambio legislativo, jurisprudencial o doctrinal de la Agencia Española de Protección de Datos. Los cambios o actualizaciones de esta Política de Privacidad serán notificados de forma explícita al Usuario.</p>
+            <p>Esta Política de Privacidad fue actualizada el día 30 de septiembre de 2023 para adaptarse al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD) y a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD).</p>
+        </div>
+
+        <!-- V -->
+        <div class="content-block reveal">
+            <h2>V. Política de cookies</h2>
+            <p>El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada Usuario para que el servidor recuerde cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de navegación.</p>
+            <p>La información recabada a través de las cookies puede incluir la fecha y hora de visitas al Sitio Web, las páginas visionadas, el tiempo que ha estado en el Sitio Web y los sitios visitados justo antes y después del mismo. Sin embargo, ninguna cookie permite que esta misma pueda contactarse con el número de teléfono del Usuario o con cualquier otro medio de contacto personal. Ninguna cookie puede extraer información del disco duro del Usuario o robar información personal.</p>
+            <h3>Cookies propias</h3>
+            <p>Son aquellas cookies que son enviadas al ordenador o dispositivo del Usuario y gestionadas exclusivamente por José Javier Aznárez Psicólogo Consultor para el mejor funcionamiento del Sitio Web. La información que se recaba se emplea para mejorar la calidad del Sitio Web y su Contenido y su experiencia como Usuario.</p>
+            <h3>Cookies de redes sociales</h3>
+            <p>José Javier Aznárez Psicólogo Consultor incorpora plugins de redes sociales, que permiten acceder a las mismas a partir del Sitio Web. Por esta razón, las cookies de redes sociales pueden almacenarse en el navegador del Usuario. Los titulares de dichas redes sociales disponen de sus propias políticas de protección de datos y de cookies, siendo ellos mismos, en cada caso, responsables de sus propios ficheros y de sus propias prácticas de privacidad.</p>
+            <h3>Deshabilitar, rechazar y eliminar cookies</h3>
+            <p>El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcialmente— instaladas en su dispositivo mediante la configuración de su navegador (entre los que se encuentran, por ejemplo, Chrome, Firefox, Safari, Explorer). En este sentido, los procedimientos para rechazar y eliminar las cookies pueden diferir de un navegador de Internet a otro. En consecuencia, el Usuario debe acudir a las instrucciones facilitadas por el propio navegador de Internet que esté utilizando. En el supuesto de que rechace el uso de cookies —total o parcialmente— podrá seguir usando el Sitio Web, si bien podrá tener limitada la utilización de algunas de las prestaciones del mismo.</p>
+            <h3>Cambios en la Política de Cookies</h3>
+            <p>Es posible que la Política de Cookies del Sitio Web cambie o se actualice, por ello es recomendable que el Usuario revise esta política cada vez que acceda al Sitio Web con el objetivo de estar adecuadamente informado sobre cómo y para qué usamos las cookies.</p>
+        </div>
+
+        <!-- VI -->
+        <div class="content-block reveal">
+            <h2>VI. Política de enlaces</h2>
+            <p>Se informa que el Sitio Web de José Javier Aznárez Psicólogo Consultor pone o puede poner a disposición de los Usuarios medios de enlace (como, entre otros, links, banners, botones), directorios y motores de búsqueda que permiten a los Usuarios acceder a sitios web pertenecientes y/o gestionados por terceros.</p>
+            <p>La instalación de estos enlaces, directorios y motores de búsqueda en el Sitio Web tiene por objeto facilitar a los Usuarios la búsqueda de y acceso a la información disponible en Internet, sin que pueda considerarse una sugerencia, recomendación o invitación para la visita de los mismos.</p>
+            <p>José Javier Aznárez Psicólogo Consultor no ofrece ni comercializa por sí ni por medio de terceros los productos y/o servicios disponibles en dichos sitios enlazados. Asimismo, tampoco garantizará la disponibilidad técnica, exactitud, veracidad, validez o legalidad de sitios ajenos a su propiedad a los que se pueda acceder por medio de los enlaces.</p>
+            <p>José Javier Aznárez Psicólogo Consultor en ningún caso revisará o controlará el contenido de otros sitios web, así como tampoco aprueba, examina ni hace propios los productos y servicios, contenidos, archivos y cualquier otro material existente en los referidos sitios enlazados. José Javier Aznárez Psicólogo Consultor no asume ninguna responsabilidad por los daños y perjuicios que pudieran producirse por el acceso, uso, calidad o licitud de los contenidos, comunicaciones, opiniones, productos y servicios de los sitios web no gestionados por José Javier Aznárez Psicólogo Consultor y que sean enlazados en este Sitio Web.</p>
+            <p>El Usuario o tercero que realice un hipervínculo desde una página web de otro sitio web al Sitio Web de José Javier Aznárez Psicólogo Consultor deberá saber que:</p>
+            <ul>
+                <li>No se permite la reproducción —total o parcialmente— de ninguno de los Contenidos y/o Servicios del Sitio Web sin autorización expresa de José Javier Aznárez Psicólogo Consultor.</li>
+                <li>No se permite tampoco ninguna manifestación falsa, inexacta o incorrecta sobre el Sitio Web de José Javier Aznárez Psicólogo Consultor, ni sobre los Contenidos y/o Servicios del mismo.</li>
+                <li>A excepción del hipervínculo, el sitio web en el que se establezca dicho hiperenlace no contendrá ningún elemento, de este Sitio Web, protegido como propiedad intelectual por el ordenamiento jurídico español, salvo autorización expresa de José Javier Aznárez Psicólogo Consultor.</li>
+                <li>El establecimiento del hipervínculo no implicará la existencia de relaciones entre José Javier Aznárez Psicólogo Consultor y el titular del sitio web desde el cual se realice, ni el conocimiento y aceptación de José Javier Aznárez Psicólogo Consultor de los contenidos, servicios y/o actividades ofrecidos en dicho sitio web, y viceversa.</li>
+            </ul>
+        </div>
+
+        <!-- VII -->
+        <div class="content-block reveal">
+            <h2>VII. Propiedad intelectual e industrial</h2>
+            <p>José Javier Aznárez Psicólogo Consultor por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el mismo (a título enunciativo y no exhaustivo, imágenes, sonido, audio, vídeo, software o textos, marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.).</p>
+            <p>Todos los derechos reservados. En virtud de lo dispuesto en la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de José Javier Aznárez Psicólogo Consultor.</p>
+            <p>El Usuario se compromete a respetar los derechos de propiedad intelectual e industrial de José Javier Aznárez Psicólogo Consultor. Podrá visualizar los elementos del Sitio Web o incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, exclusivamente, para su uso personal.</p>
+            <p>En caso de que el Usuario o tercero considere que cualquiera de los Contenidos del Sitio Web suponga una violación de los derechos de protección de la propiedad intelectual, deberá comunicarlo inmediatamente a José Javier Aznárez Psicólogo Consultor a través de los datos de contacto del apartado de INFORMACIÓN GENERAL de este Aviso Legal.</p>
+        </div>
+
+        <!-- VIII -->
+        <div class="content-block reveal">
+            <h2>VIII. Acciones legales, legislación aplicable y jurisdicción</h2>
+            <p>José Javier Aznárez Psicólogo Consultor se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones.</p>
+            <p>La relación entre el Usuario y José Javier Aznárez Psicólogo Consultor se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación a la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho.</p>
+            <p>En la consultoría no se incluyen la prestación de servicios clínico-sanitarios que atienden patologías/trastornos.</p>
+            <p class="legal-meta">Última modificación: 30 de julio de 2024</p>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="aviso-legal.html#privacidad">Política de Privacidad</a>
+                <a href="#">Consentimiento y Tarifas</a>
+                <a href="#">Protocolo</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Nav scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
