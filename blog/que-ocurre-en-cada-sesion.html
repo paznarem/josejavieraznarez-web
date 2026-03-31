@@ -333,6 +333,56 @@
 
         .back-to-blog a:hover { gap: 0.8rem; }
 
+        /* ==================== ARTICLE NAVIGATION ==================== */
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 0;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .article-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .article-nav-prev,
+        .article-nav-next {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            text-decoration: none;
+            max-width: 46%;
+        }
+
+        .article-nav-next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .article-nav-label {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            color: var(--sage);
+            text-transform: uppercase;
+        }
+
+        .article-nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 0.98rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+
+        .article-nav-prev:hover .article-nav-title,
+        .article-nav-next:hover .article-nav-title {
+            color: var(--sage-dark);
+        }
+
         /* ==================== RELATED ARTICLES ==================== */
         .related {
             padding: 4rem 2rem;
@@ -634,6 +684,16 @@
         <p>Se cultiva la voluntad y la disposición para abordar nuevas experiencias con alegría y compasión. José Javier guía a la persona a tomar decisiones conscientes, establecer rutinas y objetivos comprometidos, y gestionar patrones de conducta improductivos. Se fomenta la experiencia plena de emociones difíciles como ansiedad, tristeza o miedo, aprendiendo de ellas y viviendo mejor, siempre alineado con los valores personales y con una identidad elegida, libre y en constante evolución.</p>
 
     </article>
+
+    <!-- ARTICLE NAVIGATION -->
+    <nav class="article-nav">
+        <div class="article-nav-inner">
+            <a href="autocompasion-autoestima-genuina.html" class="article-nav-prev">
+                <span class="article-nav-label">← Anterior</span>
+                <span class="article-nav-title">La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud</span>
+            </a>
+        </div>
+    </nav>
 
     <!-- CTA BOX -->
     <div class="article-cta">

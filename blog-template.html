@@ -364,6 +364,56 @@
             gap: 0.8rem;
         }
 
+        /* ==================== ARTICLE NAVIGATION ==================== */
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 0;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .article-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .article-nav-prev,
+        .article-nav-next {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            text-decoration: none;
+            max-width: 46%;
+        }
+
+        .article-nav-next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .article-nav-label {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            color: var(--sage);
+            text-transform: uppercase;
+        }
+
+        .article-nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: 0.98rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+
+        .article-nav-prev:hover .article-nav-title,
+        .article-nav-next:hover .article-nav-title {
+            color: var(--sage-dark);
+        }
+
         /* ==================== RELATED ARTICLES ==================== */
         .related {
             padding: 4rem 2rem;
@@ -579,6 +629,21 @@
         -->
 
     </article>
+
+    <!-- ARTICLE NAVIGATION -->
+    <!-- Elimina el bloque .article-nav-prev si es el primer artículo, o .article-nav-next si es el último -->
+    <nav class="article-nav">
+        <div class="article-nav-inner">
+            <a href="{{ANTERIOR_URL}}" class="article-nav-prev">
+                <span class="article-nav-label">← Anterior</span>
+                <span class="article-nav-title">{{ANTERIOR_TITULO}}</span>
+            </a>
+            <a href="{{SIGUIENTE_URL}}" class="article-nav-next">
+                <span class="article-nav-label">Siguiente →</span>
+                <span class="article-nav-title">{{SIGUIENTE_TITULO}}</span>
+            </a>
+        </div>
+    </nav>
 
     <!-- CTA BOX -->
     <div class="article-cta">
