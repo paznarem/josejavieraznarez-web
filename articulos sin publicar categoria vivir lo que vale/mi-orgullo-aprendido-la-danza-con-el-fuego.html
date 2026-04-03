@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi orgullo aprendido, la danza con el fuego — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="El orgullo puede ser constructivo o destructivo. Aprende a transformar el orgullo negativo aprendido y a protegerte de quienes lo ejercen.">
+    <meta property="og:title" content="Mi orgullo aprendido, la danza con el fuego — José Javier Aznárez">
+    <meta property="og:description" content="El orgullo puede ser constructivo o destructivo. Aprende a transformar el orgullo negativo aprendido y a protegerte de quienes lo ejercen.">
+    <meta property="og:type" content="article">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mi orgullo aprendido, la danza con el fuego",
+      "description": "El orgullo puede ser constructivo o destructivo. Aprende a transformar el orgullo negativo aprendido y a protegerte de quienes lo ejercen.",
+      "author": {
+        "@type": "Person",
+        "name": "José Javier Aznárez Barrio",
+        "jobTitle": "Psicólogo Contextual"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "José Javier Aznárez Barrio"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="../logo-sage.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==================== VARIABLES (same as landing) ==================== */
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        /* ==================== NAV (identical to landing) ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.7rem 2rem;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--sage-dark); }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+        }
+
+        /* ==================== ARTICLE HEADER ==================== */
+        .article-header {
+            background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, var(--sage-light) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-header-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: var(--cream);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--white);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-meta {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.9rem;
+        }
+
+        .article-meta a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* ==================== BACK LINK ==================== */
+        .back-to-blog {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0;
+        }
+
+        .back-to-blog a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+
+        .back-to-blog a:hover { color: var(--sage); }
+
+        /* ==================== ARTICLE BODY ==================== */
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.7rem;
+            color: var(--sage-dark);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .article-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin: 2rem 0 0.8rem;
+        }
+
+        .article-body blockquote {
+            border-left: 3px solid var(--warm);
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background: var(--cream);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+            line-height: 1.75;
+        }
+
+        .article-body strong { font-weight: 500; }
+        .article-body em { font-style: italic; }
+
+        .article-body hr {
+            border: none;
+            border-top: 1px solid var(--cream-dark);
+            margin: 3rem 0;
+        }
+
+        /* ==================== ARTICLE NAV ==================== */
+        .article-nav {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .article-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .article-nav-prev, .article-nav-next {
+            text-decoration: none;
+            color: var(--text-secondary);
+            max-width: 45%;
+            transition: color 0.3s;
+        }
+
+        .article-nav-prev:hover, .article-nav-next:hover { color: var(--sage); }
+
+        .article-nav-next { text-align: right; margin-left: auto; }
+
+        .article-nav-label {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .article-nav-title {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* ==================== CTA BOX ==================== */
+        .article-cta {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .article-cta-box {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .article-cta-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: var(--sage-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .article-cta-box p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.8rem;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.35);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+        }
+
+        /* ==================== RELATED ==================== */
+        .related {
+            background: var(--cream);
+            padding: 4rem 2rem;
+        }
+
+        .related-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .related h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .related-card-category {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.7rem;
+        }
+
+        .related-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.75);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--white);
+            letter-spacing: -0.01em;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--white); }
+
+        .footer-legal {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* ==================== FLOATING INSTAGRAM ==================== */
+        .instagram-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        .instagram-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
+        }
+        .instagram-float svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            fill: none;
+        }
+
+        /* ==================== WHATSAPP FLOAT ====================
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        }
+
+        @media (max-width: 600px) {
+            .article-body { padding: 2rem 1.5rem 4rem; }
+            .article-cta { padding: 0 1.5rem 4rem; }
+            .back-to-blog { padding: 0 1.5rem 2rem; }
+            .article-nav { padding: 2rem 1.5rem 0; }
+            .article-nav-prev,
+            .article-nav-next { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="../como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="../sobre-mi.html">Sobre mí</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER -->
+    <header class="article-header">
+        <div class="article-header-inner">
+            <span class="article-category">Vivir lo que vale</span>
+            <h1>Mi orgullo aprendido, la danza con el fuego</h1>
+            <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
+        </div>
+    </header>
+
+    <!-- BACK LINK -->
+    <div class="back-to-blog">
+        <a href="index.html">← Volver al blog</a>
+    </div>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+
+        <p>El orgullo auténtico es constructivo y siempre es saludable, positivo. Es una emoción poderosa que necesitamos experimentar para acercarnos a una vida plena, con sentido y, consecuentemente, satisfactoria.</p>
+
+        <p>Al conectarnos con esta emoción, podemos experimentar otras emociones constructivas como alegría, gratitud, amabilidad, esperanza, empatía, serenidad, confianza, amor, autocompasión… lo que contribuye a sentir un mayor bienestar emocional en muchos momentos del día a día, a motivarnos en nuestro desarrollo personal y, progresivamente, a sentir una mayor satisfacción con nuestra vida.</p>
+
+        <blockquote>El orgullo constructivo, edificante y empoderante, es una luz que ilumina nuestro interior y nos permite reconocer nuestro valor como seres humanos.</blockquote>
+
+        <p>Desde el enfoque de una autoestima genuina y autocompasiva, nos permite sentirnos satisfechos de quiénes somos, sin caer en la arrogancia o la vanidad. Nuestro orgullo auténtico, amable y sincero es una emoción constructiva que experimentamos cuando hemos avanzado, mejorado o alcanzado nuestros objetivos, enfocados en nuestros valores. O cuando alguien cercano a nosotros lo ha hecho.</p>
+
+        <p>A diferencia del orgullo destructivo y poco saludable, egocéntrico y desinteresado por los demás, el orgullo constructivo se distingue por la autoconciencia, por la capacidad de reconocer y valorar tanto los propios méritos y éxitos pasados así como los logros cotidianos y los de los demás, cultivando una actitud de apertura y gratitud hacia las personas que nos rodean y fomentando un sentido de respeto y aprecio hacia uno mismo y hacia el resto de la humanidad.</p>
+
+        <p>El orgullo saludable y recomendable lo asociamos con nuestra capacidad de autocontrol de nuestras acciones sin estar condicionados a los pensamientos que nuestra mente nos manda continuamente, tanto en público como en privado.</p>
+
+        <p>También nuestro orgullo auténtico lo podemos identificar si nuestras acciones son comprometidas conforme nuestros objetivos en dirección a nuestros valores y no sobre las imposiciones de los demás, el compromiso con los objetivos y el logro. Por otro lado, el orgullo negativo se asocia con una necesidad limitante de dominio social y el constante reconocimiento público.</p>
+
+        <p>Cuando somos capaces de cultivar este tipo de orgullo, tenemos una mayor confianza en nuestras habilidades y capacidades, lo que nos permite enfrentar nuestros retos y desafíos con determinación y perseverancia, esforzándonos con ahínco, pero sin dejar de ser compasivos y amables con los demás. Estar orgullosos de nosotros mismos es el oxígeno de nuestra motivación, que enfoca el trabajo en nuestra mejora, nuestro progreso y el crecimiento, no solo en el resultado, y cultiva la humildad, al reconocer nuestras limitaciones y errores.</p>
+
+        <p>Además, el orgullo positivo implica una validación de nuestro yo que va más allá de la simple autoafirmación. Se trata de tomar conciencia de nuestro potencial y nuestras capacidades sin dañar a los demás, lo que contribuye a un progresivo desarrollo personal saludable y equilibrado. Esta validación del yo nos permite reconocer nuestras fortalezas y limitaciones de manera objetiva, lo que a su vez nos ayuda a establecer metas realistas y comprometidas y a trabajar activamente hacia su consecución de manera efectiva.</p>
+
+        <p>El orgullo positivo no se trata solo de sentirnos bien con nosotros mismos por nuestros logros alcanzados, ni de vivir en una continua competición con el mundo, sino también de aceptar y abrazar todas nuestras experiencias, tanto positivas como negativas, que forman parte de nuestra vida. En este sentido, el orgullo positivo se convierte en una forma de aceptación de uno mismo y de nuestra vida en su totalidad, lo que contribuye a una mayor flexibilidad psicológica y bienestar emocional.</p>
+
+        <p>El orgullo positivo nos permite sentirnos seguros de nosotros mismos. Confiamos en nosotros mismos y nos sentimos cómodos en nuestra propia piel, sin compararnos con los demás ni buscar siempre la aprobación externa. Aceptamos, con orgullo y sin resignación, nuestras debilidades, reconociendo las limitaciones como oportunidades verdaderas de crecimiento personal que nos invitan a hacer, a actuar, a vivir en un constante cambio. Al estar confiados, creemos en nuestra capacidad para afrontar nuestras dificultades sin miedo, ya que el posible resultado no nos condiciona.</p>
+
+        <p>Y así, nuestro rendimiento se separa de un resultado, público o no, asumiendo las consecuencias de los actos y aprendiendo de las insuficiencias, de los errores cometidos e incluso de los fracasos. Los resultados siempre son susceptibles de mejorar, completar, reenfocar, adecuar, redefinir… y nosotros, con nuestro orgullo, somos capaces de replantearnos creativamente objetivos con sus procesos de enseñanza y aprendizaje, con nuevos parámetros de autoevaluación, con un nuevo dibujo de competencias para aprender y desarrollar.</p>
+
+        <p>La autosinceridad y amabilidad que conlleva nuestro orgullo conduce a la admiración de lo que somos capaces de hacer siguiendo la línea de nuestros valores, y nos ayuda progresivamente a vivir con autenticidad, sin mentiras ni engaños. Vivir con integridad y congruencia implica no pretender ser alguien que no somos, ni tampoco ser lo que los demás, incluyendo las redes sociales, quieren que seamos.</p>
+
+        <p>Estar orgullosos por ser capaces de iluminarnos en la vida, viviendo como queremos vivir, nos lleva a dar gracias por cómo somos, cómo estamos en el mundo, valorando cada paso, cada mirada, cada olor, cada sabor, cada abrazo… Las cosas buenas de la vida, tanto las que consideramos grandes e importantes como las pequeñas y fundamentales por su cotidianidad e inmediatez.</p>
+
+        <p>Por todo ello, el orgullo positivo no implica ser duro o crítico con uno mismo por no alcanzar ciertos estándares o expectativas, sino todo lo contrario. Significa saber que cada uno de nosotros es único e irrepetible, en constante crecimiento y progresiva mejora, en movimiento hacia nuevas metas. Somos libres y responsables, comprometidos con nuestros valores, compartiendo humanidad dondequiera que vayamos, cultivando una relación cálida, de apoyo, validante y amorosa con uno mismo, independientemente de los resultados o logros externos. Ser orgullosos se entiende como una experiencia multidimensional que implica aceptación, conexión con los demás y autocompasión.</p>
+
+        <p>Sentirnos orgullosos de este modo trae consigo reconocer la realidad de nuestro presente. Hoy, ahora, en este momento todo lo que hacemos, sabemos, somos o tenemos no es del todo nuestro. Todo ha sido posible debido a los esfuerzos y la bondad de otras personas imperfectas como nosotros.</p>
+
+        <p>¿Nos sentimos orgullosos de nuestro cuerpo? Nuestros padres nos lo dieron y a ellos nuestros abuelos. ¿Estás orgulloso de tu bicicleta, de tu patinete, de tu ordenador, de tu teléfono, de tu automóvil? Podemos reflexionar sobre todas las personas que han sido partícipes e involucradas en el diseño, construcción y distribución. Nosotros, aunque lo tengamos en nuestra mano, no lo hemos creado, ni siquiera hemos participado en el proceso. Nuestra sabiduría, nuestros conocimientos, nuestras competencias no son solo nuestras. Nuestros padres, abuelos, maestros de infantil y primaria y resto de profesores de actividades formativas formales o extraescolares, entrenadores deportivos y artísticos… hicieron posible saber lo que sabes.</p>
+
+        <h2>El orgullo que aprendimos</h2>
+
+        <p>Uno de los monstruos con el que convivimos, que todos tenemos en alguna ocasión (o habitualmente), y que hemos aprendido desde nuestra infancia, es el orgullo destructivo, negativo y limitante. Cuando nos dirige con su arrogancia, narcisismo, vanidad y egocentrismo es una barrera indiscutible, aunque no lo percibamos así, para nuestro crecimiento. Nubla nuestros verdaderos valores y envenena nuestras relaciones en pos de recibir la máxima atención de los demás, un reconocimiento público inquebrantable y una sensación de poder y prestigio.</p>
+
+        <p>En distintos momentos, podemos sucumbir, sin darnos cuenta, inconscientemente, sin notarlo, cuando nuestra mente pone en acción al orgullo negativo. Desarrollamos una forma de ser y estar en nuestros contextos cotidianos rígida, deshonesta y susceptible, que poco a poco nos causará dolor y nos impedirá vivir la vida que verdaderamente desearíamos vivir.</p>
+
+        <p>El orgullo destructivo lo aprendimos como una forma de sobrevivir en nuestra familia, en el colegio, con los amigos, con los "enemigos", con quienes nos acosaban física o psicológicamente, con nuestros competidores, con nuestros profesores, con nuestros jefes…</p>
+
+        <p>Respondía a una necesidad que sentíamos, que observábamos, que nos decían, que nos requería para tener una relación segura y no perder el apoyo de hacer siempre todo perfecto, alcanzar ante los demás un estatus superior y siempre tener éxito y acumular logros.</p>
+
+        <p>Aprendimos que para sentirnos queridos, reconocidos, atendidos y apoyados deberíamos presionarnos, estar continuamente compitiendo, para alcanzar los objetivos que las personas que apreciábamos nos requerían.</p>
+
+        <p>Y llegamos a descubrir que no importaba el modo en que lo lográramos, que lo importante era el resultado final, la medalla que nos colocábamos, nuestra imagen. Aprendimos que los ganadores se lo llevan todo, afectiva y materialmente, y que las reglas para ganar podrían requerir imponerse, derrotar, e incluso menospreciar y humillar.</p>
+
+        <p>Nuestras debilidades, nuestros fallos, nuestros errores, nuestras imperfecciones… los teníamos que tapar, controlar, disimular… que nadie nos los viera porque entonces nos considerarían defectuosos, y perderíamos la atención, el apoyo, la seguridad. Necesitábamos ser y estar permanentemente perfectos para ser considerados.</p>
+
+        <p>Una de las características principales que aprendimos es la predisposición a la hipersensibilidad, producida por experiencias pasadas de competitividad y contingencias negativas de no ser mejores, de vivencias de envidias, de miedo a perder el estatus, de humillación y comparación ante personas de nuestro entorno, de rechazo afectivo psicológico, incluso con repercusiones materiales, de invalidación y crítica externa…</p>
+
+        <blockquote>Cualquier comentario o acción, real o imaginaria, no lo reflexionamos o contrastamos, lo interpretamos como un ataque personal, generándonos una constante sensación de vulnerabilidad y resentimiento.</blockquote>
+
+        <p>Un comentario casual sobre un error en casa, en el contexto familiar, o en el trabajo lo interpretamos como una crítica personal. Una broma entre amigos la tomamos como un ataque a nuestra inteligencia. Un gesto de desatención lo vemos como un desprecio intencional. Las palabras de los demás las tomamos literalmente, fuera de contexto. No perdonamos los deslices de los demás.</p>
+
+        <p>Esta hipersensibilidad la aprendimos desde pequeños para defendernos y sobrevivir, y está integrada en nuestra manera de ser y estar en el mundo. Salta de nuestra mente automáticamente cuando nos interrelacionamos con los demás, aún cuando no hay amenazas ni agresiones ni humillaciones reales, y nos causa ira, tristeza, vergüenza, culpa e incluso aislamiento social.</p>
+
+        <p>Nuestro orgullo destructivo también nos lleva a aislarnos, independizarnos, sin capacidad para reconocer a las personas que nos echan una mano en cualquier actividad cotidiana, y terminamos atrincherándonos en nuestras convicciones, nuestras reglas y normas aprendidas, porque tenemos miedo a lo desconocido.</p>
+
+        <p>Necesitamos controlar todo para no sentirnos amenazados, agredidos y humillados, aunque no haya un riesgo real. Hemos aprendido a ser rígidos con los pensamientos que nos envía nuestra mente, mostrándonos muy dogmáticos.</p>
+
+        <p>Como consecuencia, tenemos baja tolerancia a la incertidumbre y a la inestabilidad. Sentimos, porque así lo aprendimos, que cambiar de opinión es visto por los demás como una señal de debilidad, por lo que nos aferramos a nuestras creencias. Aceptar puntos de vista distintos está fuera del repertorio de conductas aprendido para manejarnos con nuestra vida.</p>
+
+        <p>Esto nos conduce a un rechazo reiterado a nuevas ideas o información que contradice nuestras creencias. Mostramos inamovilidad en debates, provocamos discusiones acaloradas, nos negamos a escuchar argumentos contrarios y desvalorizamos las opiniones diferentes. Incluso nuestra mente ve a todas las personas como competidoras, tiene miedo por perder el poder y nos dirige a adoptar, sin darnos cuenta, el papel de líder arrogante, exagerando nuestros logros para menospreciar e invalidar a nuestros supuestos rivales.</p>
+
+        <p>Cuando nuestra mente activa el piloto del orgullo por miedo al fracaso, a que nos descubran nuestras imperfecciones y por la necesidad de mantener una imagen, llegamos incluso a sentirnos inmunes a las críticas. Cualquier señalamiento de errores o defectos lo recibimos con hostilidad y respondemos con negación o justificaciones defensivas, lo que impide nuestro aprendizaje y evolución personal.</p>
+
+        <p>La crítica razonada y argumentada desde la amabilidad, en lugar de ser vista como una oportunidad de mejora, la consideramos un ataque a nuestra persona, a nuestra identidad, a la imagen que queremos dar a los demás, lo que desencadena nuestras respuestas sarcásticas, agresivas o evasivas, habilidades que aprendimos desde pequeños. Todo ello nos lleva a buscar excusas para justificar nuestros errores y a culpar a otros por nuestros propios fallos.</p>
+
+        <p>Una de las peculiaridades de nuestro orgullo destructivo es la sed de control en nuestra presencia pública. Esta necesidad de control a todo y a todos nos hace difícil escuchar e integrarnos en las conversaciones de otros. En las interacciones sociales, buscamos mantener el control de la conversación y la dinámica, anulando las opiniones y aportes de los demás.</p>
+
+        <p>Si notamos, si nos escuchamos cómo nos relacionamos con los demás, identificamos o somos conscientes de que nuestra mente nos envía señales que nos impulsan a ponernos una coraza y actuar automáticamente con nuestro orgullo negativo, y que las consecuencias nos causan dolor e insatisfacción, podemos empezar a considerar que puede ser una fuerza destructiva en nuestras vidas. Esta toma de conciencia es el primer paso crucial hacia el cambio positivo.</p>
+
+        <p>Es importante comprender que el orgullo negativo no es intrínsecamente malo en todas las circunstancias, sino que se ha convertido en un patrón de comportamiento aprendido a lo largo del tiempo que responde a amenazas, miedos, sentimientos de inferioridad, humillaciones… que en la realidad no siempre están presentes.</p>
+
+        <p>Una forma de abordar el orgullo negativo es cambiar nuestra relación con él. En lugar de luchar contra él o tratar de controlarlo de manera directa, podemos adoptar una postura más compasiva y observadora hacia esta parte de nosotros mismos. Reconocer que el orgullo negativo, aunque a veces nos cause problemas, también puede haber sido útil en ciertas situaciones, cuando éramos pequeños o en nuestra adolescencia, nos permite acercarnos a él con una actitud de aceptación y curiosidad en lugar de resistencia.</p>
+
+        <p>Al mismo tiempo, es fundamental aprender nuevas formas creativas de responder a las señales que nuestra mente nos envía. Esto implica aprender nuevas conductas para desarrollar habilidades y estrategias que nos permitan reconocer nuestra imperfección y afrontar el día a día desde un enfoque más constructivo y orientado hacia el orgullo positivo. En lugar de dejar que los pensamientos de amenaza y humillación constante dicten nuestras acciones, podemos cultivar una mentalidad de apertura, aceptación y gratitud.</p>
+
+        <p>Cambiar nuestra relación con el orgullo también implica abandonar la necesidad de demostrar que somos los mejores en todo y en todo momento. Reconocer y aceptar tanto nuestras fortalezas y debilidades, así como nuestros logros y fracasos, nuestros aciertos y errores, como los de quienes nos rodean. Así progresivamente nos permitiremos abrazar una imagen más completa y auténtica de nosotros mismos.</p>
+
+        <p>En lugar de juzgarnos a nosotros mismos y a los demás, podemos adoptar una actitud más comprensiva y compasiva, reconociendo la ayuda y las aportaciones de los demás tanto en el logro de nuestros objetivos como en la vida cotidiana con la familia, con los vecinos, con los dependientes de nuestros comercios habituales…</p>
+
+        <p>En resumen, trabajar la autoestima genuina y autocompasiva y consecuentemente el orgullo constructivo, positivo, nos brindará procesos de aprendizaje de conductas poderosas para debilitar y transformar nuestro orgullo negativo. Al aprender a relacionarnos de manera más observadora, compasiva y flexible con esta parte de nosotros mismos, nos abriremos a nuevas posibilidades de crecimiento y desarrollo personal en el presente para vivir la vida que deseamos vivir.</p>
+
+        <h2>La danza con el fuego</h2>
+
+        <p>Tratar con una persona orgullosa, negativa, no saludable, narcisista y manipuladora es difícil y emocionalmente agotador, además de desafiante y doloroso. Si tenemos que relacionarnos "obligatoriamente" con individuos con un orgullo destructivo, con un narcisismo desmedido, que tienen un profundo temor a perder su prestigio y su poder, y una predisposición a la manipulación y el maltrato psicológico, necesitamos aprender a protegernos, ya que pueden convertir la interacción con nosotros en una experiencia tortuosa si no nos plegamos a sus deseos.</p>
+
+        <p>La buena noticia es que existen algunas conductas que podemos aprender para responder en este contexto y minimizar el daño que nos puedan causar.</p>
+
+        <p>En el intrincado baile de las relaciones humanas, algunos personajes que podemos tener muy cercanos —como el colega del trabajo, el compañero de equipo deportivo, el vecino con el que te encuentras todos los días rodeado de otros vecinos, nuestro jefe inmediato, nuestro compañero de piso de estudiante, un pariente muy cercano e influyente, incluso nuestro hermano, nuestro padre o madre o abuelos— desafían nuestra capacidad de mantener el equilibrio.</p>
+
+        <p>Personas de nuestro entorno conviviente, muy cercano, con un orgullo desmedido, una actitud negativa y una tendencia a la manipulación pueden convertir la interacción en un dolor constante, donde nuestro bienestar mental y emocional se ve amenazado.</p>
+
+        <blockquote>En la danza con el fuego en la que, sin desearlo y sin darnos cuenta, nos hemos convertido en protagonistas, la clave está en aprender conductas para protegernos sin perder nuestra propia luz, nuestra brújula y nuestros valores.</blockquote>
+
+        <p>El primer paso es analizar si, obligatoriamente, nuestra danza, quemándonos cerca de las llamas, es inevitable.</p>
+
+        <p>Si es así, comenzaremos por identificar los patrones y rasgos que caracterizan a esta persona. Si observamos que su modo de relacionarse con nosotros se asemeja, en la mayor parte de las ocasiones, al de una persona orgullosa, destructiva y narcisista, nuestra primera acción irá encaminada a establecer límites claros y firmes.</p>
+
+        <p>La comunicación asertiva es una conducta que, si no la aprendimos en nuestra infancia y adolescencia, ahora es el momento de desarrollar. Fundamentar nuestra relación con esta persona respondiendo de manera contingente, expresando nuestras necesidades, deseos y opiniones con respeto, sin dejar espacio para la ambigüedad, implica, en ocasiones, decir "no" para evitar convertirnos, sin darnos cuenta, en víctimas de comportamientos abusivos, culpabilizaciones, chantajes emocionales, amenazas veladas, manipulaciones hacia las personas que nos rodean, rumores maledicentes, y más.</p>
+
+        <p>En esta danza con el fuego, nuestra prioridad es nuestro bienestar emocional, vivir nuestra vida conforme nuestros valores, no la sumisión, aunque nuestra mente nos invite a un papel de súbdito por haber aprendido a actuar así en situaciones semejantes durante nuestra infancia y adolescencia. Sin nuestro bienestar, tenemos muchas dificultades para vivir la vida que deseamos vivir. Por eso, con tranquilidad, aunque nuestra mente nos mande pensamientos en otra dirección, estableceremos nuestros límites muy nítidos, claros, sin ambigüedad ni paños calientes.</p>
+
+        <p>De esta manera, poco a poco, con esfuerzo y tenacidad, protegeremos nuestro espacio personal. Nunca permitiremos que la persona orgullosa, arrogante, vanidosa, narcisista invada nuestro espacio emocional o físico.</p>
+
+        <p>El dolor es inevitable y nuestra mente podrá mandarnos pensamientos para doblegarnos, ya que no le gustan las situaciones difíciles y está preparada para sobrevivir y actuar, y también para evitar, escapar, e incluso para escondernos y diluirnos en la masa.</p>
+
+        <p>El "notar" siempre es una premisa: nuestra mente intentará justificar, pero nuestro yo observador puede reconocer las tácticas utilizadas, como la culpabilización, el chantaje emocional o las amenazas veladas. Y nuestro yo observador es libre; escucha el pensamiento que nos manda nuestra mente, y es capaz de mantener una posición firme.</p>
+
+        <p>Ante la amenaza psicológica, nuestra mente también puede recurrir a las armas más extremas que todo ser humano hemos aprendido a utilizar para sobrevivir, como la ira o la agresión física o psicológica, pero esto solo avivaría el fuego. Lo mejor que podemos hacer es darle las gracias a nuestra mente por mantenernos alerta y estar dispuesta a lanzarnos instrucciones extremas, pero ante un narcisista orgulloso y manipulador, es precisamente lo que quiere. Se suelen crecer en conflictos, por lo que es mejor no asentir, mostrar nuestra discrepancia ni esperar su respuesta, y sin agresividad alejarnos y seguir adelante con nuestra vida sin entrar en confrontaciones.</p>
+
+        <p>Mantendremos a nuestra mente a raya, sintiendo y experimentando sus voces, y sin permitir que su comportamiento nos haga perder el equilibrio, nos saque de nuestras casillas. Poco a poco aprenderemos que nuestro yo observador y procesual mantenga activamente la calma y responda de manera serena, con perspectiva y asertiva, sin buscar su aprobación, en lugar de dejarnos llevar por sus provocaciones y sus juegos de manipuladores. Bailamos, pero no nos quemamos. Incluso podemos aprender a ser compasivos con ellos y en nuestras meditaciones autocompasivas practicar el perdón, aliviando nuestro dolor y al mismo tiempo evitar mostrarnos con intimidad y confianza, revelando nuestros secretos o informaciones personales.</p>
+
+        <p>Nuestra mente igualmente aprendió a manejarse en situaciones complicadas con el lenguaje. Interiorizó cómo nuestros padres, tíos, abuelos, profesores utilizaban el lenguaje, los consejos de lo que ellos consideraban una buena educación. Aunque los pensamientos que nuestra mente en estas situaciones tan complicadas nos inviten a ello con nuestro narcisista, vamos a aprender a evitar discutir.</p>
+
+        <p>Poco a poco, nuestras capacidades como ser humano tienen que interactuar para ser lo suficientemente competentes como para no intentar en ningún momento razonar con alguien que no está dispuesto a escuchar. Además de ser una batalla infructuosa, alimentaría su fuego. A nuestra mente le podemos decir una y otra vez, con calma y firmeza, incluso con una sonrisa y siempre amablemente, que le entendemos, que aprendimos a actuar así en otras situaciones, pero ahora, ante esta persona, no vamos a entrar en discusiones o justificaciones innecesarias.</p>
+
+        <p>Nuestro yo, al contrario que nuestra mente cuando salta ante cualquier amenaza, puede establecer expectativas realistas. Podemos aprender que es poco probable que, aunque nos gustaría, por ser una persona cercana, incluso conviviente, sea posible cambiar el comportamiento narcisista de la persona.</p>
+
+        <p>Es difícil bailar sin quemarte cuando además ves el riesgo de que tus derechos, aquello que has construido con tu esfuerzo, sean laminados, lesionados por el ansia de poder y dominación de la persona orgullosa y narcisista con la que te ha tocado bailar. Tu mente te puede mandar pensamientos para involucrarte en juegos de poder. Las personas narcisistas llevan mucha práctica, toda su vida aprendiendo a esclavizar, a empoderarse, a utilizar inmoralmente cualquier estrategia, y si entramos en ese juego abriríamos el camino para que nos controlen y dominen. A nuestra mente le indicaremos que vamos a evitar gastar nuestras energías, nuestra vida, entrando en juegos de poder y que vamos a ser dueños de nuestras propias decisiones y acciones comprometidas hacia lo que verdaderamente queremos.</p>
+
+        <p>Los humanos necesitamos sentir apego, seguridad, apoyo, validación, intimidad, confianza y también necesitamos aprender el desapego emocional en muchas situaciones que, por ser asumidas por nuestra mente, no son saludables, son barreras.</p>
+
+        <p>Y una de ellas es la necesidad de nuestra mente de defendernos cuando nos sentimos vulnerables. En este arte, el orgulloso y narcisista manipulador intentará fusionar sus juicios y "opiniones espontáneas y sin filtro" con nuestras vulnerabilidades para que las internalicemos y nos tomemos de manera personal sus críticas veladas o públicas. El desapego emocional nos ayudará a no "entrar a trapo" a defendernos y perder el control, manteniendo una perspectiva objetiva, ya que su comportamiento siempre es más un reflejo de ellos mismos que de nosotros. <em>Dime de qué presumes y te diré de qué cojeas.</em> El comportamiento narcisista de la persona no tiene que ver con nosotros, sino más bien con sus propias inseguridades y necesidades.</p>
+
+        <p>Progresivamente iremos aceptando —que no resignándonos— la realidad. El dolor que tenemos al reconocer que no podemos cambiar a la otra persona ni controlar sus acciones nos acompaña, le damos la mano y lo debilitamos al enfocarnos en lo que podemos controlar, que son nuestras reacciones, emociones y comportamientos, sin dejarnos atrapar por nuestros pensamientos y emociones.</p>
+
+        <p>Progresivamente lograremos aceptar las emociones difíciles que nos envía nuestra mente y las sensaciones de nuestro cuerpo al interactuar con la persona con orgullo destructivo y narcisista, en lugar de intentar suprimirlas o evitarlas. La aceptación de la realidad de la situación nos ayudará por una parte a que el dolor normal no nos conduzca a un sufrimiento emocional que limite nuestro desempeño cotidiano y por otra a conseguir una mayor claridad para tomar decisiones saludables sin depender de los mensajes de nuestra mente.</p>
+
+        <p>Y a nuestra mente le vamos a mostrar que no vamos a ser pasivos. Además de expresar nuestras necesidades de manera clara, tranquila y respetuosa, vamos a actuar tajantemente, sin ninguna concesión para protegernos siempre, inexcusablemente, si nuestro recorrido vital, en el camino que nos lleva a la vida que queremos vivir, se ve obstaculizado.</p>
+
+        <p>Si la interrelación es inevitable, vamos a documentar con objetividad los intentos o más que intentos de abuso y maltrato, porque puede ser útil para protegernos en el futuro, especialmente si la situación se nos vuelve insostenible.</p>
+
+        <p>Si la relación continúa siendo dañina a pesar de nuestros esfuerzos por establecer límites saludables, puede ser necesario considerar debilitarla distanciándonos de la relación. No nos vamos a fusionar con pensamientos de nuestra mente de culpabilidad, y con determinación limitaremos con eficiencia y sin aspavientos el contacto. Reduciremos la frecuencia y la duración y la calidad de las interacciones. Y por supuesto, progresivamente aprenderemos a no hablar de ellos cuando no estén presentes. Conforme reduzcamos la atención que les damos, debilitaremos y disminuiremos su influencia en nuestra vida.</p>
+
+        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+
+    </article>
+
+    <!-- ARTICLE NAVIGATION -->
+    <div class="article-nav">
+        <div class="article-nav-inner">
+            <a href="mi-humildad-barrera-autoestima.html" class="article-nav-prev">
+                <span class="article-nav-label">← Anterior</span>
+                <span class="article-nav-title">Mi humildad, ¿barrera para mi autoestima genuina y autocompasiva?</span>
+            </a>
+            <a href="nuestra-procrastinacion-nuestra-companera.html" class="article-nav-next">
+                <span class="article-nav-label">Siguiente →</span>
+                <span class="article-nav-title">Nuestra procrastinación, nuestra compañera</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- CTA BOX -->
+    <div class="article-cta">
+        <div class="article-cta-box">
+            <h3>¿Te ha resonado este artículo?</h3>
+            <p>Si algo de lo que has leído conecta con lo que estás viviendo, puedes escribirme sin compromiso. Un mensaje corto es suficiente.</p>
+            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escríbeme por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related">
+        <div class="related-inner">
+            <h2>Sigue leyendo</h2>
+            <div class="related-grid">
+                <a href="mi-humildad-barrera-autoestima.html" class="related-card">
+                    <div class="related-card-category">Vivir lo que vale</div>
+                    <h3>Mi humildad, ¿barrera para mi autoestima genuina y autocompasiva?</h3>
+                </a>
+                <a href="nuestra-procrastinacion-nuestra-companera.html" class="related-card">
+                    <div class="related-card-category">Vivir lo que vale</div>
+                    <h3>Nuestra procrastinación, nuestra compañera</h3>
+                </a>
+                <a href="una-crianza-sin-traumas-generacionales.html" class="related-card">
+                    <div class="related-card-category">Crianza consciente</div>
+                    <h3>Una crianza sin traumas generacionales</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="../aviso-legal.html">Aviso Legal</a>
+                <a href="../aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="../consentimiento-tarifas.html">Consentimiento y Tarifas</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+</body>
+</html>
