@@ -599,17 +599,23 @@
         }
 
         /* ==================== EXPAND BUTTON ==================== */
-        .blog-grid .blog-card:nth-child(n+5) {
-            display: none;
+        /* Tablet + mobile: hide from card 5+ */
+        .blog-grid .blog-card:nth-child(n+5) { display: none; }
+
+        /* Desktop (3 cols): show 5th card, button fills slot 3 of row 2 */
+        @media (min-width: 901px) {
+            .blog-grid .blog-card:nth-child(5) { display: block; }
         }
-        .blog-grid.expanded .blog-card:nth-child(n+5) {
-            display: flex;
-        }
+
+        /* Expanded: show all */
+        .blog-grid.expanded .blog-card { display: block; }
+
+        /* Button lives inside .blog-grid as a grid item */
         .expand-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
-            margin-top: 1.25rem;
             padding: 0.65rem 1.25rem;
             background: transparent;
             border: 1.5px solid var(--sage);
@@ -620,6 +626,9 @@
             font-weight: 500;
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
+            align-self: center;
+            justify-self: start;
+            width: fit-content;
         }
         .expand-btn:hover {
             background: var(--sage);
@@ -641,7 +650,7 @@
 
     <script>
         function toggleBlogSection(btn) {
-            var grid = btn.previousElementSibling;
+            var grid = btn.closest('.blog-grid');
             var expanded = grid.classList.toggle('expanded');
             btn.textContent = expanded ? 'Ver menos ↑' : 'Ver todos los artículos →';
         }
@@ -781,8 +790,8 @@
                     <h3>Sanar la traición. Guía de autocompasión</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
+                <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
             </div>
-            <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
         </div>
     </section>
 
@@ -825,8 +834,8 @@
                     <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
+                <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
             </div>
-            <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
         </div>
     </section>
 
