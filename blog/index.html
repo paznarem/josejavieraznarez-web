@@ -598,6 +598,11 @@
             }
         }
 
+        /* ==================== EXPAND BUTTON (mobile) ==================== */
+        .expand-btn {
+            display: none;
+        }
+
         @media (max-width: 600px) {
             .page-header { padding: 8rem 1.25rem 4rem; }
 
@@ -608,8 +613,46 @@
             .footer-inner { flex-direction: column; text-align: center; }
 
             .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+
+            .blog-grid .blog-card:nth-child(n+5) {
+                display: none;
+            }
+            .blog-grid.expanded .blog-card:nth-child(n+5) {
+                display: flex;
+            }
+            .expand-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1.25rem;
+                padding: 0.65rem 1.25rem;
+                background: transparent;
+                border: 1.5px solid var(--sage);
+                border-radius: 2rem;
+                color: var(--sage-dark);
+                font-family: 'Work Sans', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+            }
+            .expand-btn:hover {
+                background: var(--sage);
+                color: var(--white);
+            }
+            .expand-btn.hidden {
+                display: none;
+            }
         }
     </style>
+
+    <script>
+        function toggleBlogSection(btn) {
+            var grid = btn.previousElementSibling;
+            var expanded = grid.classList.toggle('expanded');
+            btn.textContent = expanded ? 'Ver menos ↑' : 'Ver todos los artículos →';
+        }
+    </script>
 </head>
 <body>
 
@@ -746,6 +789,7 @@
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
             </div>
+            <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
         </div>
     </section>
 
@@ -789,6 +833,7 @@
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
             </div>
+            <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
         </div>
     </section>
 
