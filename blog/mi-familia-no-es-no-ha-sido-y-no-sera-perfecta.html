@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi familia no es, no ha sido y no será perfecta — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="La familia perfecta no existe. Descubre cómo las historias que aprendemos en la infancia moldean nuestra autoestima y cómo liberarnos de ellas.">
+    <meta property="og:title" content="Mi familia no es, no ha sido y no será perfecta — José Javier Aznárez">
+    <meta property="og:description" content="La familia perfecta no existe. Descubre cómo las historias que aprendemos en la infancia moldean nuestra autoestima y cómo liberarnos de ellas.">
+    <meta property="og:type" content="article">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mi familia no es, no ha sido y no será perfecta",
+      "description": "La familia perfecta no existe. Descubre cómo las historias que aprendemos en la infancia moldean nuestra autoestima y cómo liberarnos de ellas.",
+      "author": {
+        "@type": "Person",
+        "name": "José Javier Aznárez Barrio",
+        "jobTitle": "Psicólogo Contextual"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "José Javier Aznárez Barrio"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="../logo-sage.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==================== VARIABLES (same as landing) ==================== */
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        /* ==================== NAV (identical to landing) ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.7rem 2rem;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--sage-dark); }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+        }
+
+        /* ==================== ARTICLE HEADER ==================== */
+        .article-header {
+            background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, var(--sage-light) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .article-header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .article-meta a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* ==================== BACK LINK ==================== */
+        .back-to-blog {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+        }
+
+        .back-to-blog a {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-to-blog a:hover { color: var(--sage-dark); }
+
+        /* ==================== ARTICLE BODY ==================== */
+        .article-body {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            margin-bottom: 1.6rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .article-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: var(--sage-dark);
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .article-body blockquote {
+            border-left: 3px solid var(--warm);
+            padding: 1rem 1.5rem;
+            margin: 2.5rem 0;
+            background: var(--cream);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .article-body blockquote p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 0;
+        }
+
+        .article-body ul, .article-body ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .article-body li {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-body strong { color: var(--text-primary); font-weight: 500; }
+        .article-body em { font-style: italic; }
+
+        .article-body hr {
+            border: none;
+            border-top: 1px solid var(--cream-dark);
+            margin: 3rem 0;
+        }
+
+        /* ==================== ARTICLE NAV ==================== */
+        .article-nav {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 3rem 2rem 0;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .article-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .article-nav-prev, .article-nav-next {
+            text-decoration: none;
+            color: var(--text-secondary);
+            max-width: 45%;
+            transition: color 0.3s;
+        }
+
+        .article-nav-prev:hover, .article-nav-next:hover { color: var(--sage-dark); }
+
+        .article-nav-next { text-align: right; margin-left: auto; }
+
+        .article-nav-label {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .article-nav-title {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* ==================== CTA BOX ==================== */
+        .article-cta {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .article-cta-box {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .article-cta-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .article-cta-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            padding: 0.85rem 1.8rem;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37,211,102,0.4);
+        }
+
+        /* ==================== RELATED ==================== */
+        .related {
+            background: var(--cream);
+            padding: 4rem 2rem;
+        }
+
+        .related-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .related h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .related-card-category {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.6rem;
+        }
+
+        .related-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--white); }
+
+        .footer-legal {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            background: var(--whatsapp);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        }
+
+        @media (max-width: 600px) {
+            .article-body { padding: 2rem 1.5rem 4rem; }
+            .article-cta { padding: 0 1.5rem 4rem; }
+            .back-to-blog { padding: 0 1.5rem 2rem; }
+            .article-nav { padding: 2rem 1.5rem 0; }
+            .article-nav-prev,
+            .article-nav-next { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="../como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="../sobre-mi.html">Sobre mí</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER -->
+    <header class="article-header">
+        <div class="article-header-inner">
+            <span class="article-category">Vivir lo que vale</span>
+            <h1>Mi familia no es, no ha sido y no será perfecta</h1>
+            <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
+        </div>
+    </header>
+
+    <!-- BACK LINK -->
+    <div class="back-to-blog">
+        <a href="index.html">← Volver al blog</a>
+    </div>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+
+        <p>Si alguna vez soñaste con la familia ideal, donde los padres son impecables e infalibles, y sus hijos crecen en un equilibrio perfecto de bienestar, independencia y fuerza, permíteme decirte que esa imagen es solo una ilusión.</p>
+
+        <p>La realidad es que la familia perfecta es un contexto que no existe, como tampoco existe un ser humano perfecto (todos tenemos nuestros monstruos, aunque los ocultemos muy bien a los demás).</p>
+
+        <p>Incluso los padres democráticos, los más amorosos, dedicados, cuidadosos, ecuánimes, amables, tolerantes, responsables, atentos, que respetan las opiniones y las diferencias, pueden tener miedo, cometer errores, mantener discusiones, sentirse inseguros… en algún momento.</p>
+
+        <p>Sin querer, sin ser conscientes en sus interrelaciones tanto formales como informales, en su "educación", pueden influir en sus hijos con enseñanzas que contienen creencias y reglas limitantes e inútiles sobre sí mismos. Los hijos aprenden, en consecuencia, patrones sobre lo que pueden ser y hacer en la vida, y cómo estar correctamente en la sociedad, en la relación con los demás, lo que les puede conducir a una <strong>autoestima contingente y dependiente</strong>.</p>
+
+        <blockquote>
+            <p>Lo que realmente importa es el amor, la comunicación, la comprensión, la validación, el apoyo y el respeto. Con estos ingredientes, podemos construir familias imperfectas pero llenas de vida y significado.</p>
+        </blockquote>
+
+        <h2>Las historias que nos contamos sobre nosotros mismos</h2>
+
+        <p>No solo son los padres quienes influyen en la imagen y en las historias vitales que cada uno aprendemos y construimos de nosotros mismos. También aprendemos durante la infancia y adolescencia en nuestras relaciones con familiares (tíos, abuelos, primos…), profesores, amigos y compañeros.</p>
+
+        <p>Todos contribuyen a una narrativa selectiva, subjetiva, irracional y no real que nos la creemos como única y cierta. Una historia que nos contamos, a veces saboteándonos, que define supuestamente quiénes somos, limitándonos, encadenándonos y haciéndonos, en ocasiones, la vida más difícil y más alejada de lo que deseamos.</p>
+
+        <p>Nuestra autoestima dependiente se ha construido a base de nuestras historias personales, poco a poco desde que nacemos, desde que afrontamos salir de la comodidad del cuerpo de nuestra mamá.</p>
+
+        <p>Y estas historias, que son un repertorio de conductas que nuestra mente ha ido aprendiendo en distintos marcos relacionales, tienen sentido para nosotros, pero <strong>no son absolutamente reales</strong>. Nuestra memoria no es tan potente como para construir una única historia verdadera.</p>
+
+        <h2>¿Por qué nuestra mente nos trae esas historias al presente?</h2>
+
+        <p>Nuestra mente siempre nos las trae al presente, sobre todo ante un reto, un desafío, cuando salimos de nuestro sillón. Está claro que nos pueden causar —y nos causan en ocasiones— mucho daño, tristeza, inseguridad, rabia, culpa y desesperanza, y pueden ser extremadamente autolimitantes. Pero se desarrollaron en nuestra infancia por razones muy importantes: <strong>para ayudarnos a sobrevivir, a mantenernos seguros, protegidos y vivos</strong> en los contextos en los que a cada uno de nosotros "nos tocó por suerte" crecer.</p>
+
+        <p>Es por eso que a menudo resulta valioso, para autopercibirse, autocomprenderse, para sentirse, para autoaceptarse y ser amable con uno mismo, volver a visitar la infancia, preguntarse por esas historias propias, a su vez totalmente originales y a su vez compartidas por muchísimos seres humanos.</p>
+
+        <p>Revivir nuestras historias voluntariamente, siendo conscientes de nuestra limitada memoria, nos ayuda a entender mejor lo que está pasando ahora, por qué nuestra mente nos engaña al enviarnos de forma automática esos pensamientos.</p>
+
+        <blockquote>
+            <p>Sin este conocimiento de los orígenes de nuestras historias personales, puede resultar extremadamente difícil tomar distancia y separarnos de ellas para vivir la vida real que queremos vivir, aquí, en el presente.</p>
+        </blockquote>
+
+        <h2>Cuando la autoestima está "baja": algunas voces conocidas</h2>
+
+        <p>Nuestra autoestima dependiente aprendida es muy eficiente para llamar nuestra atención, sobre todo cuando cometemos errores o nos sentimos vulnerables. Ve continuamente amenazas en el futuro mientras ignora todas las ocasiones en las que las cosas están progresando. Algunas de esas voces internas que quizás reconoces:</p>
+
+        <ul>
+            <li><em>"Siempre me toca lo peor"</em>, <em>"Las desgracias me persiguen como una sombra"</em></li>
+            <li><em>"Nadie me aprecia de verdad, solo buscan algo a cambio"</em></li>
+            <li><em>"Soy una carga para los demás"</em>, <em>"Nadie disfruta realmente de mi presencia"</em></li>
+            <li><em>"Si me conocieran como realmente soy, me rechazarían"</em></li>
+            <li><em>"No valgo para nada"</em>, <em>"Soy un desastre"</em>, <em>"No puedo hacer nada bien"</em></li>
+            <li><em>"Tengo miedo de intentarlo, porque sé que voy a fallar"</em></li>
+            <li><em>"No merezco ser amado"</em></li>
+            <li><em>"En cualquier momento se darán cuenta de que no soy tan bueno como creen"</em></li>
+            <li><em>"El futuro solo me depara desgracias"</em>, <em>"No tengo esperanza de ser feliz"</em></li>
+        </ul>
+
+        <h2>Cuando la autoestima está "alta": otras trampas igualmente limitantes</h2>
+
+        <p>Y si nuestra mente ha construido nuestras historias sobre todo en base a una autoestima "alta", cuando nos relacionemos con nuestro entorno, nos podrá enviar pensamientos y sentimientos igualmente alejados de la realidad:</p>
+
+        <ul>
+            <li><em>"Todos giran a mi alrededor"</em>, <em>"Mi bienestar es lo único que importa"</em></li>
+            <li><em>"Necesito que me admiren constantemente"</em>, <em>"Las críticas son un ataque personal"</em></li>
+            <li><em>"Soy superior a los demás"</em>, <em>"Nadie puede alcanzar mi nivel"</em></li>
+            <li><em>"Estoy por encima de las normas cuando lo necesito"</em></li>
+            <li><em>"Puedo usar a los demás para lograr mis objetivos"</em></li>
+            <li><em>"Merezco todo lo bueno con y sin esfuerzo"</em></li>
+            <li><em>"Jamás me equivoco; cualquier error es culpa de otros"</em></li>
+            <li><em>"Las críticas son envidia"</em></li>
+            <li><em>"Solo me rodeo de quienes me aportan admiración o beneficios"</em></li>
+        </ul>
+
+        <h2>Autoaceptación y autocompasión: el camino de vuelta a uno mismo</h2>
+
+        <p>La <strong>autoaceptación</strong> nos invita a desafiar esa narrativa aprendida e impuesta, y a reconocer que somos estupendos con nuestra humanidad, con sus luces y sombras. Aceptar que la familia, los amigos, los profesores perfectos no existen nos libera de una presión innecesaria y nos abre las puertas a la compasión, al perdón, y nos dota de responsabilidad para el cambio.</p>
+
+        <p>La <strong>autocompasión</strong> nos permite abrazar nuestros errores como nuestra riqueza y parte natural del aprendizaje: perdonándonos, dándonos ánimo, apoyándonos, sin flagelarnos, siendo nuestro mejor entrenador. Nos permite enfocarnos en construir relaciones sanas y positivas, basadas en la comprensión. En este camino, aprenderemos a aceptarnos y valorarnos tal y como somos, sin importar las expectativas de los demás.</p>
+
+        <p>La familia es un espacio de aprendizaje y crecimiento, donde todos somos vulnerables y cometemos errores. Aceptando esta realidad, podemos construir relaciones más auténticas y enriquecedoras, convirtiendo nuestra familia en un trampolín hacia la autoaceptación y la autocompasión.</p>
+
+        <blockquote>
+            <p>Los errores son inevitables, pero no tienen por qué definirnos negativamente. Somos únicos, mucho más que las opiniones de los demás, y está en nuestras manos creer en nuestro propio potencial.</p>
+        </blockquote>
+
+        <p>Podemos desafiar las creencias limitantes que heredamos de nuestra familia y nuestro entorno próximo en la infancia y adolescencia, y construir día a día una vida adulta basada en nuestros valores, desentrañando las trampas del lenguaje de nuestra mente que nos mantienen atrapados en la narrativa familiar y social.</p>
+
+        <p>Además, si nos rodeamos de personas que nos comprendan, nos apoyen y nos acepten tal como somos, con las que tengamos confianza e intimidad, podemos flexibilizar nuestra mente y crear, en este momento, un entorno propicio para nuestro crecimiento y desarrollo personal.</p>
+
+        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+
+    </article>
+
+    <!-- ARTICLE NAVIGATION -->
+    <div class="article-nav">
+        <div class="article-nav-inner">
+            <a href="el-maraton-de-nuestra-vida.html" class="article-nav-prev">
+                <span class="article-nav-label">← Anterior</span>
+                <span class="article-nav-title">El maratón de nuestra vida</span>
+            </a>
+            <a href="sanar-la-traicion.html" class="article-nav-next">
+                <span class="article-nav-label">Siguiente →</span>
+                <span class="article-nav-title">Sanar la traición. Guía de autocompasión</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- CTA BOX -->
+    <div class="article-cta">
+        <div class="article-cta-box">
+            <h3>¿Te ha resonado este artículo?</h3>
+            <p>Si algo de lo que has leído conecta con lo que estás viviendo, puedes escribirme sin compromiso. Un mensaje corto es suficiente.</p>
+            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escríbeme por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related">
+        <div class="related-inner">
+            <h2>Sigue leyendo</h2>
+            <div class="related-grid">
+                <a href="el-maraton-de-nuestra-vida.html" class="related-card">
+                    <div class="related-card-category">Vivir lo que vale</div>
+                    <h3>El maratón de nuestra vida</h3>
+                </a>
+                <a href="sanar-la-traicion.html" class="related-card">
+                    <div class="related-card-category">Vivir lo que vale</div>
+                    <h3>Sanar la traición. Guía de autocompasión</h3>
+                </a>
+                <a href="una-crianza-sin-traumas-generacionales.html" class="related-card">
+                    <div class="related-card-category">Crianza consciente</div>
+                    <h3>Una crianza sin traumas generacionales</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="../aviso-legal.html">Aviso Legal</a>
+                <a href="../aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="../consentimiento-tarifas.html">Consentimiento y Tarifas</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING INSTAGRAM -->
+    <a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
+        <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    </a>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+</body>
+</html>

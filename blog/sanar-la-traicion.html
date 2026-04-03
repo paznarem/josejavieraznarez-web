@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El sesgo de negatividad y la historia que nos contamos — José Javier Aznárez | Psicólogo Contextual</title>
-    <meta name="description" content="Centrarnos en el sufrimiento pasado refuerza creencias negativas y perpetúa patrones desadaptativos. Cómo ACT, RFT y la autocompasión nos ayudan a flexibilizar esa narrativa.">
-    <meta property="og:title" content="El sesgo de negatividad y la historia que nos contamos — José Javier Aznárez">
-    <meta property="og:description" content="Centrarnos en el sufrimiento pasado refuerza creencias negativas y perpetúa patrones desadaptativos. Cómo ACT, RFT y la autocompasión nos ayudan a flexibilizar esa narrativa.">
+    
+    <title>Sanar la traición. Guía de autocompasión — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="Cuando alguien cercano te traiciona, el dolor es profundo. Aprende a sanar con autocompasión, aceptación y respeto hacia ti mismo.">
+    <meta property="og:title" content="Sanar la traición. Guía de autocompasión — José Javier Aznárez">
+    <meta property="og:description" content="Cuando alguien cercano te traiciona, el dolor es profundo. Aprende a sanar con autocompasión, aceptación y respeto hacia ti mismo.">
     <meta property="og:type" content="article">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "El sesgo de negatividad y la historia que nos contamos",
-      "description": "Centrarnos en el sufrimiento pasado refuerza creencias negativas y perpetúa patrones desadaptativos. Cómo ACT, RFT y la autocompasión nos ayudan a flexibilizar esa narrativa.",
+      "headline": "Sanar la traición. Guía de autocompasión",
+      "description": "Cuando alguien cercano te traiciona, el dolor es profundo. Aprende a sanar con autocompasión, aceptación y respeto hacia ti mismo.",
       "author": {
         "@type": "Person",
         "name": "José Javier Aznárez Barrio",
@@ -27,12 +28,13 @@
     }
     </script>
 
-    <link rel="icon" type="image/png" href="../logo-sage.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="../logo-sage.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
+        /* ==================== VARIABLES (same as landing) ==================== */
         :root {
             --sage: #6B7F5E;
             --sage-light: #8A9E7C;
@@ -51,7 +53,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-
+        
         body {
             font-family: 'Work Sans', sans-serif;
             color: var(--text-primary);
@@ -59,6 +61,7 @@
             line-height: 1.7;
         }
 
+        /* ==================== NAV (identical to landing) ==================== */
         nav {
             position: fixed;
             top: 0;
@@ -104,11 +107,6 @@
 
         .nav-links a:hover { color: var(--sage-dark); }
 
-        .nav-links a.active {
-            color: var(--sage-dark);
-            font-weight: 500;
-        }
-
         .nav-cta {
             background: var(--sage);
             color: var(--white) !important;
@@ -136,6 +134,7 @@
             transition: 0.3s;
         }
 
+        /* ==================== ARTICLE LAYOUT ==================== */
         .article-header {
             padding: 8rem 2rem 3rem;
             background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%);
@@ -180,6 +179,7 @@
             text-decoration: none;
         }
 
+        /* ==================== ARTICLE BODY ==================== */
         .article-body {
             max-width: 720px;
             margin: 0 auto;
@@ -243,7 +243,9 @@
             color: var(--text-primary);
         }
 
-        .article-body em { color: var(--sage-dark); }
+        .article-body em {
+            color: var(--sage-dark);
+        }
 
         .article-body a {
             color: var(--sage);
@@ -253,7 +255,15 @@
             transition: text-decoration-color 0.3s;
         }
 
-        .article-body a:hover { text-decoration-color: var(--sage); }
+        .article-body a:hover {
+            text-decoration-color: var(--sage);
+        }
+
+        .article-body img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
 
         .article-body hr {
             border: none;
@@ -261,6 +271,7 @@
             margin: 3rem 0;
         }
 
+        /* ==================== ARTICLE FOOTER / CTA ==================== */
         .article-cta {
             max-width: 720px;
             margin: 0 auto;
@@ -309,6 +320,7 @@
             box-shadow: 0 8px 30px rgba(37,211,102,0.4);
         }
 
+        /* ==================== BACK LINK ==================== */
         .back-to-blog {
             max-width: 720px;
             margin: 0 auto;
@@ -326,8 +338,11 @@
             transition: gap 0.3s;
         }
 
-        .back-to-blog a:hover { gap: 0.8rem; }
+        .back-to-blog a:hover {
+            gap: 0.8rem;
+        }
 
+        /* ==================== ARTICLE NAVIGATION ==================== */
         .article-nav {
             max-width: 720px;
             margin: 0 auto;
@@ -350,7 +365,9 @@
             max-width: 46%;
         }
 
-        .article-nav-next { text-align: right; }
+        .article-nav-next {
+            text-align: right;
+        }
 
         .article-nav-label {
             font-size: 0.78rem;
@@ -374,6 +391,7 @@
             color: var(--sage-dark);
         }
 
+        /* ==================== RELATED ARTICLES ==================== */
         .related {
             padding: 4rem 2rem;
             background: var(--cream);
@@ -431,6 +449,7 @@
             line-height: 1.4;
         }
 
+        /* ==================== FOOTER (identical to landing) ==================== */
         footer {
             background: var(--sage-dark);
             color: rgba(255,255,255,0.6);
@@ -453,7 +472,10 @@
             color: rgba(255,255,255,0.85);
         }
 
-        .footer-links { display: flex; gap: 2rem; }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
 
         .footer-links a {
             color: rgba(255,255,255,0.5);
@@ -475,33 +497,7 @@
             line-height: 1.7;
         }
 
-        .instagram-float {
-            position: fixed;
-            bottom: 2rem;
-            left: 2rem;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-        .instagram-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
-        }
-        .instagram-float svg {
-            width: 28px;
-            height: 28px;
-            stroke: white;
-            fill: none;
-        }
-
+        /* ==================== FLOATING WHATSAPP ==================== */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -524,8 +520,13 @@
             box-shadow: 0 6px 30px rgba(37,211,102,0.5);
         }
 
-        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
 
+        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
@@ -578,7 +579,7 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="article-category">Vivir lo que vale</span>
-            <h1>El sesgo de negatividad y la historia que nos contamos</h1>
+            <h1>Sanar la traición. Guía de autocompasión</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
         </div>
     </header>
@@ -591,69 +592,33 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>Cuando nuestro recuerdo de la historia vital está anclado en experiencias percibidas como negativas, olvidando las positivas, estamos construyendo una narrativa personal sesgada. Esta visión de nuestra vida, donde los recuerdos de sucesos percibidos y sentidos como dolorosos eclipsan los momentos de alegría y crecimiento, puede tener un impacto significativo en nuestro bienestar emocional y en nuestro desempeño.</p>
+        <p>El dolor que surge cuando alguien cercano, con quien tienes un vínculo emocional fuerte, te traiciona, ofende o calumnia, puede ser profundamente perturbador, incluso devastador. Este tipo de sufrimiento no solo está relacionado con la herida emocional inmediata, sino también con cómo tu mente procesa y conecta esta experiencia con pensamientos, recuerdos y emociones pasadas, a menudo acompañadas de un sentimiento de culpa.</p>
 
-        <p>Al centrarnos exclusivamente en el sufrimiento pasado, reforzamos creencias negativas sobre nosotros mismos y sobre el mundo que nos rodea, lo que a su vez puede perpetuar patrones, reglas de pensamiento y comportamiento desadaptativas.</p>
+        <p>Es natural que sientas una mezcla de emociones intensas, y enfrentarlas requiere un enfoque que combine reconocimiento, aceptación y amabilidad hacia ti mismo.</p>
 
-        <blockquote>
-            Este fenómeno se ve exacerbado cuando las terapias, en un intento por validar nuestras experiencias, se centran de manera exclusiva en los aspectos negativos, sin reconocer la complejidad y la riqueza de la experiencia humana.
-        </blockquote>
+        <h2>Reconocer y validar la culpa sin juzgarte</h2>
 
-        <p>Al hacerlo, se corre el riesgo de confundir la validación de estos recuerdos dolorosos con una representación objetiva de la realidad, lo que puede llevar a aumentar la percepción negativa de la infancia y la adolescencia, excluyendo las experiencias positivas y construyendo una visión limitada y pesimista de nuestra vida.</p>
-
-        <hr>
-
-        <h2>El sesgo de negatividad: un mecanismo protector que se vuelve contra nosotros</h2>
-
-        <p>Las terapias contextuales buscan flexibilizar la tendencia natural de la mente a priorizar lo negativo, un fenómeno conocido como <strong>sesgo de negatividad</strong>. Nuestra mente actúa, en un intento de protegernos, prestando más atención a las amenazas y experiencias dolorosas, ya que en el pasado esto era fundamental para nuestra supervivencia.</p>
-
-        <p>En el contexto actual, el dolor de este sesgo puede generar sufrimiento innecesario al mantenernos atrapados en el pasado y dificultar la construcción de un futuro acorde con nuestros anhelos. Estas terapias buscan ayudar a las personas a flexibilizar este patrón mental desadaptativo y a cultivar una relación más saludable con sus pensamientos y emociones.</p>
-
-        <hr>
-
-        <h2>ACT: aceptación y defusión cognitiva</h2>
-
-        <p>Desde la <strong>Terapia de Aceptación y Compromiso (ACT)</strong> se enfatiza la aceptación de todas las experiencias —incluidas las negativas— mientras se promueve un compromiso con acciones basadas en valores personales.</p>
-
-        <p>ACT nos invita a ver nuestros pensamientos y emociones como invitados indeseados en nuestra mente, pero que no tienen por qué definirnos ni controlarnos. En lugar de reflexionar y analizarlos para luchar contra ellos, ACT propone una actitud de <em>aceptación radical</em>: reconocer la presencia de estos pensamientos y sentimientos sin juzgarlos ni intentar cambiarlos.</p>
-
-        <p>Al aceptar nuestras experiencias tal y como son, sin resistencia, liberamos la energía mental que antes invertíamos en la lucha contra ellas y podemos centrarnos en lo que realmente importa: vivir una vida coherente con nuestros valores.</p>
-
-        <p>Si una terapia refuerza la idea de que el pasado debe ser combatido, rechazado u olvidado, puede llevar a una lucha interna que refuerza la <em>fusión cognitiva</em>, donde los pensamientos negativos son vistos como realidades absolutas. ACT propone la <strong>defusión cognitiva</strong> para ayudar a las personas a ver sus recuerdos negativos como solo pensamientos —y no como verdades inalterables—, fomentando una aceptación radical que incluye tanto lo negativo como lo positivo.</p>
-
-        <hr>
-
-        <h2>RFT: marcos relacionales y recontextualización</h2>
-
-        <p>Desde la <strong>Teoría de los Marcos Relacionales (RFT)</strong>, el lenguaje y las relaciones entre marcos relacionales juegan un papel clave en cómo una persona estructura su experiencia de vida. Nuestra mente crea relaciones arbitrarias entre diferentes estímulos y eventos, formando lo que llamamos «marcos relacionales». Estos marcos nos permiten categorizar, comparar y evaluar el mundo que nos rodea, pero también pueden llevar a una visión rígida de la realidad.</p>
-
-        <p>En el caso de las personas que se centran sobre todo en los aspectos negativos de su vida, sus marcos relacionales tienden a enfatizar las experiencias dolorosas y a minimizar las positivas. Una intervención efectiva desde esta teoría implica <strong>recontextualizar las experiencias pasadas</strong>, ayudando a la persona a desarrollar nuevas conexiones que incluyan tanto los aspectos positivos como los negativos de su historia.</p>
-
-        <p>La RFT propone que al flexibilizar estos marcos relacionales es posible cambiar la forma en que una persona experimenta el mundo y a sí misma, a través de diversas técnicas como la defusión contextual y la perspectivación.</p>
-
-        <hr>
-
-        <h2>Autocompasión: amabilidad ante la vergüenza y la culpa</h2>
-
-        <p>La autocompasión fomenta el reconocimiento de que es normal tener una mezcla de experiencias en la vida, y que tanto las positivas como las negativas deben ser validadas. Nos invita a reconocer que somos seres humanos imperfectos y que cometer errores es parte fundamental y esencial de la vida. Se centra en tratarse a uno mismo con amabilidad y comprensión, lo que es esencial cuando una persona se ve atrapada en una narrativa negativa, a menudo teñida de vergüenza o culpa.</p>
-
-        <p>La vergüenza surge cuando nos comparamos desfavorablemente con un ideal, mientras que la culpa está ligada a acciones que percibimos como dañinas. Ambas emociones pueden generar sufrimiento y dificultar el crecimiento personal.</p>
+        <p>Es importante reconocer y validar ese sentimiento de culpa sin juzgarte por ello; sentirlo es una respuesta humana natural ante el daño en una relación significativa.</p>
 
         <blockquote>
-            Al cultivar la autocompasión, podemos romper los ciclos de autocrítica y vergüenza, y abordar la culpa de una manera más constructiva. En lugar de castigarnos por nuestros errores, la autocompasión nos permite aprender de nuestras experiencias y crecer a partir de ellas.
+            Aceptar estas emociones no significa aprobar lo que sucedió, sino permitirte sentirlas sin juzgarte por ello.
         </blockquote>
 
-        <hr>
+        <p>Validar este sentimiento no significa que debas resignarte a que la otra persona continúe ofendiéndote.</p>
 
-        <h2>Hacia una visión equilibrada de nuestra historia</h2>
+        <h2>Acoger la culpa con autocompasión</h2>
 
-        <p>Nuestro lenguaje, la mente humana, debido al sesgo de negatividad y a la rumiación, tiende a dar más peso a las experiencias negativas. Este mecanismo, aunque originalmente adaptativo para protegernos de peligros, genera una visión sesgada de nuestra historia personal, favoreciendo la aparición de pensamientos negativos recurrentes y emociones desadaptativas.</p>
+        <p>Aceptar y acoger tu culpa con autocompasión implica reconocer que eres digno de respeto y cuidado, sin justificar el comportamiento dañino del otro. Al ser amable contigo mismo, puedes liberar el peso de la culpa mientras mantienes la claridad necesaria para establecer límites.</p>
 
-        <p>Las terapias que solo se enfocan en lo negativo pueden inadvertidamente reforzar esta tendencia, aumentando el sufrimiento en lugar de aliviarlo. Por lo tanto, desde los enfoques contextuales es crucial promover una visión más equilibrada y flexible de la historia personal —que incluya tanto lo positivo como lo negativo— para favorecer una vida más plena y alineada con los propios valores y aspiraciones.</p>
+        <p>Esto es un acto de autocompasión: tratarte con la misma comprensión y amabilidad que ofrecerías a un ser querido en una situación similar. Al reconocer y acoger tu propio dolor, puedes evitar quedar atrapado en él o en las historias que la mente pueda construir.</p>
 
-        <p>Al cultivar la atención plena, podemos observar nuestros pensamientos y emociones sin juzgarlos. Nuestros pensamientos son solo conductas mentales y no necesariamente reflejan la realidad. Al tomar perspectiva de nuestros pensamientos negativos y al flexibilizar nuestros marcos relacionales, podemos reducir su impacto en nuestras vidas, tratarnos a nosotros mismos con amabilidad y comprensión, aprender del pasado sin quedarnos atrapados en él, y orientarnos hacia un futuro más esperanzador.</p>
+        <h2>Elegir quién quieres ser</h2>
 
-        <p>Al reconocer que el pasado ya ha ocurrido y que no podemos cambiarlo, podemos enfocar nuestra energía en el presente y en construir un futuro más positivo.</p>
+        <p>Desde este lugar de aceptación y autocuidado, puedes tomar decisiones que reflejen tus valores y que te permitan actuar en tu propio bienestar, eligiendo una respuesta que te empodere y proteja, sin dejar de lado tu dignidad ni tu integridad.</p>
+
+        <blockquote>
+            Elegir el tipo de persona que quieres ser, incluso en medio de la adversidad.
+        </blockquote>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
 
@@ -662,13 +627,9 @@
     <!-- ARTICLE NAVIGATION -->
     <div class="article-nav">
         <div class="article-nav-inner">
-            <a href="aceptamos-y-no-nos-resignamos.html" class="article-nav-prev">
+            <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="article-nav-prev">
                 <span class="article-nav-label">← Anterior</span>
-                <span class="article-nav-title">Aceptamos y no nos resignamos</span>
-            </a>
-            <a href="la-autoestima-dependiente-una-conducta-aprendida.html" class="article-nav-next">
-                <span class="article-nav-label">Siguiente →</span>
-                <span class="article-nav-title">La autoestima dependiente, una conducta aprendida</span>
+                <span class="article-nav-title">Mi familia no es, no ha sido y no será perfecta</span>
             </a>
         </div>
     </div>
@@ -690,17 +651,17 @@
         <div class="related-inner">
             <h2>Sigue leyendo</h2>
             <div class="related-grid">
-                <a href="autocompasion-autoestima-genuina.html" class="related-card">
+                <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="related-card">
                     <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud</h3>
+                    <h3>Mi familia no es, no ha sido y no será perfecta</h3>
                 </a>
-                <a href="humanidad-compartida.html" class="related-card">
+                <a href="el-maraton-de-nuestra-vida.html" class="related-card">
                     <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>Humanidad compartida</h3>
+                    <h3>El maratón de nuestra vida</h3>
                 </a>
-                <a href="aceptamos-y-no-nos-resignamos.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>Aceptamos y no nos resignamos</h3>
+                <a href="una-crianza-sin-traumas-generacionales.html" class="related-card">
+                    <div class="related-card-category">Crianza consciente</div>
+                    <h3>Una crianza sin traumas generacionales</h3>
                 </a>
             </div>
         </div>
