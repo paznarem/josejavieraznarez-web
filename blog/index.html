@@ -598,9 +598,32 @@
             }
         }
 
-        /* ==================== EXPAND BUTTON (mobile) ==================== */
-        .expand-btn {
+        /* ==================== EXPAND BUTTON ==================== */
+        .blog-grid .blog-card:nth-child(n+5) {
             display: none;
+        }
+        .blog-grid.expanded .blog-card:nth-child(n+5) {
+            display: flex;
+        }
+        .expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            padding: 0.65rem 1.25rem;
+            background: transparent;
+            border: 1.5px solid var(--sage);
+            border-radius: 2rem;
+            color: var(--sage-dark);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .expand-btn:hover {
+            background: var(--sage);
+            color: var(--white);
         }
 
         @media (max-width: 600px) {
@@ -613,36 +636,6 @@
             .footer-inner { flex-direction: column; text-align: center; }
 
             .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
-
-            .blog-grid .blog-card:nth-child(n+5) {
-                display: none;
-            }
-            .blog-grid.expanded .blog-card:nth-child(n+5) {
-                display: flex;
-            }
-            .expand-btn {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                margin-top: 1.25rem;
-                padding: 0.65rem 1.25rem;
-                background: transparent;
-                border: 1.5px solid var(--sage);
-                border-radius: 2rem;
-                color: var(--sage-dark);
-                font-family: 'Work Sans', sans-serif;
-                font-size: 0.85rem;
-                font-weight: 500;
-                cursor: pointer;
-                transition: background 0.2s, color 0.2s;
-            }
-            .expand-btn:hover {
-                background: var(--sage);
-                color: var(--white);
-            }
-            .expand-btn.hidden {
-                display: none;
-            }
         }
     </style>
 

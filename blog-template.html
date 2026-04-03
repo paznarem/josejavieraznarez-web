@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- ============================================
          INSTRUCCIONES PARA CLAUDE CODE:
-         
+
          Para crear un artículo nuevo a partir de esta plantilla:
          1. Copia este archivo y renómbralo (ej: autocompasion.html)
          2. Sustituye los textos marcados con {{PLACEHOLDER}}:
@@ -14,11 +14,11 @@
             - {{DESCRIPCION}} → 1-2 frases resumen para SEO (max 155 caracteres)
             - {{CATEGORIA}} → Una de: "Vivir lo que vale" / "Crianza consciente" / "Estrés y ansiedad"
             - {{CATEGORIA_SLUG}} → Una de: "vivir-lo-que-vale" / "crianza-consciente" / "estres-y-ansiedad"
-            - {{CONTENIDO}} → El cuerpo del artículo en HTML (párrafos con <p>, subtítulos con <h2>, listas con <ul>, citas con <blockquote>)
+            - {{CONTENIDO}} → El cuerpo del artículo en HTML (párrafos con <p>, subtítulos con <h2>/<h3>, listas con <ul>, citas con <blockquote>)
             - {{SLUG}} → URL-friendly del título (ej: "la-autocompasion-un-camino")
          3. Guarda en la carpeta /blog/
          4. Actualiza el listado del blog (blog/index.html) con el nuevo artículo
-         
+
          Estructura de carpetas:
          /index.html (landing page)
          /blog/index.html (listado de artículos)
@@ -26,7 +26,7 @@
          /blog/procrastinacion.html
          /blog/...
          ============================================ -->
-    
+
     <title>{{TITULO}} — José Javier Aznárez | Psicólogo Contextual</title>
     <meta name="description" content="{{DESCRIPCION}}">
     <meta property="og:title" content="{{TITULO}} — José Javier Aznárez">
@@ -53,7 +53,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* ==================== VARIABLES (same as landing) ==================== */
@@ -75,9 +75,9 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        
+
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Work Sans', sans-serif;
             color: var(--text-primary);
             background: var(--white);
             line-height: 1.7;
@@ -104,7 +104,7 @@
         }
 
         .nav-brand {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 400;
             font-size: 1.1rem;
             color: var(--sage-dark);
@@ -127,7 +127,8 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--sage-dark); }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--sage-dark); }
 
         .nav-cta {
             background: var(--sage);
@@ -182,7 +183,7 @@
         }
 
         .article-header h1 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 300;
             line-height: 1.3;
@@ -217,7 +218,7 @@
         }
 
         .article-body h2 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 400;
             color: var(--text-primary);
@@ -227,7 +228,7 @@
         }
 
         .article-body h3 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
             font-weight: 400;
             color: var(--text-primary);
@@ -308,7 +309,7 @@
         }
 
         .article-cta-box h3 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
             font-weight: 400;
             margin-bottom: 0.8rem;
@@ -389,6 +390,7 @@
 
         .article-nav-next {
             text-align: right;
+            margin-left: auto;
         }
 
         .article-nav-label {
@@ -400,7 +402,7 @@
         }
 
         .article-nav-title {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 0.98rem;
             font-weight: 400;
             color: var(--text-secondary);
@@ -425,7 +427,7 @@
         }
 
         .related h2 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 300;
             margin-bottom: 2rem;
@@ -465,7 +467,7 @@
         }
 
         .related-card h3 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.05rem;
             font-weight: 400;
             line-height: 1.4;
@@ -489,7 +491,7 @@
         }
 
         .footer-brand {
-            font-family: 'Fraunces', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1rem;
             color: rgba(255,255,255,0.85);
         }
@@ -517,6 +519,35 @@
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.06);
             line-height: 1.7;
+        }
+
+        /* ==================== FLOATING INSTAGRAM ==================== */
+        .instagram-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(107,127,94,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .instagram-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(107,127,94,0.5);
+        }
+
+        .instagram-float svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
         }
 
         /* ==================== FLOATING WHATSAPP ==================== */
@@ -550,7 +581,19 @@
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
             .hamburger { display: flex; }
             .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
@@ -568,14 +611,16 @@
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
-            <a href="../index.html" class="nav-brand">José Javier Aznárez</a>
+            <a href="../index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links">
-                <li><a href="../index.html#como-trabajo">Cómo trabajo</a></li>
-                <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="../como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="../sobre-mi.html">Sobre mí</a></li>
                 <li><a href="../index.html#servicios">Servicios</a></li>
                 <li><a href="index.html">Blog</a></li>
+                <li><a href="../musica.html">¿Quieres aprender música?</a></li>
+                <li><a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
             <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
@@ -589,7 +634,7 @@
         <div class="article-header-inner">
             <span class="article-category">{{CATEGORIA}}</span>
             <h1>{{TITULO}}</h1>
-            <p class="article-meta">Por <a href="../index.html#sobre-mi">José Javier Aznárez Barrio</a></p>
+            <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
         </div>
     </header>
 
@@ -600,31 +645,31 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
-        
+
         {{CONTENIDO}}
 
-        <!-- 
+        <!--
         EJEMPLO DE FORMATO DEL CONTENIDO:
-        
+
         <p>Primer párrafo del artículo. El texto va directamente aquí, sin contenedores extra.</p>
-        
+
         <p>Segundo párrafo con <strong>texto en negrita</strong> y <em>texto en cursiva</em>.</p>
-        
+
         <h2>Subtítulo de sección</h2>
-        
+
         <p>Texto de la sección...</p>
-        
+
         <blockquote>
             Una cita o reflexión destacada del artículo.
         </blockquote>
-        
+
         <h3>Sub-subtítulo</h3>
-        
+
         <ul>
             <li>Punto uno de una lista</li>
             <li>Punto dos de una lista</li>
         </ul>
-        
+
         <hr>
 
         <p>Texto después de un separador...</p>
@@ -636,6 +681,7 @@
 
     <!-- ARTICLE NAVIGATION -->
     <!-- Elimina el bloque .article-nav-prev si es el primer artículo, o .article-nav-next si es el último -->
+    <!-- Para el último artículo de una categoría, usa "Siguiente → [Nombre categoría]" como label -->
     <div class="article-nav">
         <div class="article-nav-inner">
             <a href="{{ANTERIOR_URL}}" class="article-nav-prev">
@@ -662,22 +708,25 @@
     </div>
 
     <!-- RELATED ARTICLES -->
+    <!-- Criterio: 2 artículos de la misma categoría (preferiblemente los más cercanos en la serie) + 1 de otra categoría -->
     <section class="related">
         <div class="related-inner">
             <h2>Sigue leyendo</h2>
             <div class="related-grid">
-                <!-- Sustituir con 3 artículos relacionados -->
-                <a href="#" class="related-card">
+                <!-- Artículo relacionado 1 — misma categoría -->
+                <a href="{{RELACIONADO_1_URL}}" class="related-card">
                     <div class="related-card-category">{{CATEGORIA}}</div>
-                    <h3>Título del artículo relacionado 1</h3>
+                    <h3>{{RELACIONADO_1_TITULO}}</h3>
                 </a>
-                <a href="#" class="related-card">
+                <!-- Artículo relacionado 2 — misma categoría -->
+                <a href="{{RELACIONADO_2_URL}}" class="related-card">
                     <div class="related-card-category">{{CATEGORIA}}</div>
-                    <h3>Título del artículo relacionado 2</h3>
+                    <h3>{{RELACIONADO_2_TITULO}}</h3>
                 </a>
-                <a href="#" class="related-card">
-                    <div class="related-card-category">{{CATEGORIA}}</div>
-                    <h3>Título del artículo relacionado 3</h3>
+                <!-- Artículo relacionado 3 — otra categoría -->
+                <a href="{{RELACIONADO_3_URL}}" class="related-card">
+                    <div class="related-card-category">{{OTRA_CATEGORIA}}</div>
+                    <h3>{{RELACIONADO_3_TITULO}}</h3>
                 </a>
             </div>
         </div>
@@ -688,16 +737,20 @@
         <div class="footer-inner">
             <div class="footer-brand">José Javier Aznárez Barrio</div>
             <div class="footer-links">
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Consentimiento y Tarifas</a>
-                <a href="#">Protocolo</a>
+                <a href="../aviso-legal.html">Aviso Legal</a>
+                <a href="../aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="../consentimiento-tarifas.html">Consentimiento y Tarifas</a>
             </div>
             <div class="footer-legal">
                 Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
             </div>
         </div>
     </footer>
+
+    <!-- FLOATING INSTAGRAM -->
+    <a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    </a>
 
     <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
