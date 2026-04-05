@@ -272,16 +272,38 @@
         }
 
         /* ==================== ARTICLE IMAGES ==================== */
-        .article-img-wrap {
-            margin: 3rem 0;
-        }
-
-        .article-img-wrap img {
-            width: 100%;
-            border-radius: 12px;
+        .img-float-right {
+            float: right;
+            clear: both;
+            width: 38%;
+            border-radius: 10px;
+            margin: 0.3rem 0 1.5rem 2rem;
             display: block;
             object-fit: cover;
-            max-height: 520px;
+        }
+
+        .img-float-left {
+            float: left;
+            clear: both;
+            width: 38%;
+            border-radius: 10px;
+            margin: 0.3rem 2rem 1.5rem 0;
+            display: block;
+            object-fit: cover;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 600px) {
+            .img-float-right, .img-float-left {
+                float: none;
+                width: 100%;
+                margin: 1.5rem 0;
+            }
         }
 
         /* ==================== ARTICLE NAV ==================== */
@@ -710,15 +732,6 @@
 
         <p>Al invitarte a visualizar tu vida como un rosal en constante evolución, facilito la comprensión de tus procesos y comportamientos internos — pensamientos, emociones, sensaciones, recuerdos — y la aceptación de tus diversas experiencias.</p>
 
-    </article>
-
-    <!-- IMAGEN 1 -->
-    <div class="article-img-wrap" style="max-width:760px;margin:0 auto;padding:0 2rem;">
-        <img src="../rosa1.jpg" alt="El rosal de la huerta familiar">
-    </div>
-
-    <article class="article-body" style="padding-top:2rem;">
-
         <h2>El ejercicio</h2>
 
         <p><em>Cierra los ojos.</em></p>
@@ -747,16 +760,10 @@
 
         <p><em>Observa el rosal con distancia. De abajo a arriba, de arriba a abajo, de un lado a otro... siempre es el mismo rosal, siempre eres tú.</em></p>
 
-    </article>
-
-    <!-- IMAGEN 2 -->
-    <div class="article-img-wrap" style="max-width:760px;margin:0 auto;padding:0 2rem;">
-        <img src="../rosa2.jpg" alt="Rosas en distintas etapas de floración">
-    </div>
-
-    <article class="article-body" style="padding-top:2rem;">
-
+        <!-- rosa4: rosal entero (capullos + rosas florecidas + rosas secas) → "Todo convive en tu rosal" -->
         <h2>Todo convive en tu rosal</h2>
+
+        <img src="../rosa4.jpg" alt="El rosal entero: capullos, rosas florecidas y ramas secas conviviendo" class="img-float-right">
 
         <p>En tu rosal, en ti, más allá de los cambios de clima o las plagas de pulgones, conviven capullos que están a punto de abrirse, rosas en su máximo esplendor y fragancia, y rosas que van perdiendo sus pétalos.</p>
 
@@ -772,6 +779,8 @@
 
         <p>Igual que no podemos cambiar el clima, la intencionalidad de las abejas que se posan en nuestras flores, los insectos o animales que quieren comerse nuestras hojas.</p>
 
+        <div class="clearfix"></div>
+
         <h2>Las ramas secas</h2>
 
         <p>Tus reglas limitantes son las ramas secas en un rosal hermoso.</p>
@@ -782,11 +791,19 @@
 
         <p>Todas las partes del rosal han tenido y tienen su función.</p>
 
+        <!-- rosa1: capullo → "Los capullos" -->
         <h2>Cada parte tiene su significado</h2>
+
+        <img src="../rosa1.jpg" alt="Capullo de rosa, lleno de potencial por desarrollarse" class="img-float-left">
 
         <p><strong>Los capullos</strong> representan las potencialidades y esperanzas que aún no se han desarrollado completamente. Son las partes de nosotros mismos y de nuestras vidas que están en proceso de crecimiento y evolución: nuevos intereses, nuevas habilidades, nuevas relaciones.</p>
 
         <p><strong>Los tallos, las ramas vigorosas,</strong> son las reglas flexibles, facilitadoras que continúan creciendo poco a poco, llevando nutrientes a los capullos y a las rosas... y a toda la planta. Siempre estamos creciendo; siempre aprendiendo. Siempre puedes aprender nuevas conductas para cambiar.</p>
+
+        <div class="clearfix"></div>
+
+        <!-- rosa2: rosa abierta y bonita → "Las rosas en pleno esplendor" -->
+        <img src="../rosa2.jpg" alt="Rosa abierta en pleno esplendor y fragancia" class="img-float-right">
 
         <p><strong>Las rosas en pleno esplendor</strong> simbolizan tus momentos de plenitud y éxito, las experiencias y aspectos de tu vida que están en su mejor momento. Estas rosas son tus fortalezas, logros y momentos en los que sientes que caminas con la brújula de tus valores, de lo que verdaderamente te importa.</p>
 
@@ -796,20 +813,18 @@
 
         <p>Un exceso de espinas, o unas espinas demasiado pronunciadas, también dificultarían el crecimiento y desarrollo de capullos. En el contexto actual, nuestras respuestas automáticas de miedo y ansiedad pueden convertirse en este exceso de espinas, que limitan nuestro crecimiento y disfrute de la vida. Estas espinas adicionales representan nuestros bucles de pensamientos y emociones que nos mantienen enfocados en amenazas potenciales, impidiendo que florezcan nuestros capullos de potencialidades y esperanzas.</p>
 
+        <div class="clearfix"></div>
+
+        <!-- rosa3: rosa marchitándose → "Las rosas marchitas" -->
+        <img src="../rosa3.jpg" alt="Rosa marchitándose, dejando caer sus pétalos" class="img-float-left">
+
         <p><strong>Las rosas marchitas</strong> son tus experiencias de dolor, de desapego, los aspectos de nosotros mismos que estamos dejando atrás y las transformaciones que atravesamos mientras continuamos caminando día a día. Sus pétalos caerán solos, pasarán. Tu crecimiento no se detiene y tus capullos necesitan toda tu concentración y dedicación.</p>
-
-    </article>
-
-    <!-- IMAGEN 3 -->
-    <div class="article-img-wrap" style="max-width:760px;margin:0 auto;padding:0 2rem;">
-        <img src="../rosa3.jpg" alt="Detalle del rosal: espinas, tallos y capullos">
-    </div>
-
-    <article class="article-body" style="padding-top:2rem;">
 
         <h2>Nutrir los capullos</h2>
 
         <p>Podemos centrar nuestra atención en nutrir los capullos y las rosas en pleno esplendor, a través de nuestros tallos verdes, simbolizando nuestras fortalezas, logros y momentos de plenitud, mientras reconocemos que las ramas secas, las rosas marchitas, las hojas secas, forman parte de nuestra historia y evolución, y no deben definir nuestro presente ni limitar nuestro futuro.</p>
+
+        <div class="clearfix"></div>
 
         <h2>Lo que trabajamos juntos a partir de aquí</h2>
 
@@ -842,15 +857,6 @@
         <p><em>Tus hojas, tus tallos, tus espinas y tus raíces tienen su función, sus objetivos y sus valores, en la perspectiva del crecimiento de toda la planta, más allá de las propias rosas.</em></p>
 
         <p><em>Al hacerlo, desarrollas una mayor compasión hacia ti mismo y hacia los demás, y encontrarás progresivamente un equilibrio entre apreciar lo que es hermoso y aceptar lo que se desvanece, discerniendo las consecuencias de tus conductas a corto y a largo plazo, con la brújula de tus valores, del crecimiento de tu rosal.</em></p>
-
-    </article>
-
-    <!-- IMAGEN 4 -->
-    <div class="article-img-wrap" style="max-width:760px;margin:0 auto;padding:0 2rem;">
-        <img src="../rosa4.jpg" alt="El rosal en su conjunto, perspectiva de crecimiento">
-    </div>
-
-    <article class="article-body" style="padding-top:2rem;">
 
         <h2>Cuando la lucha te aleja del crecimiento</h2>
 
