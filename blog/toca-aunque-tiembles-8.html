@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 8 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li class="series-index-current">8. Autocompasión, valores y acción comprometida</li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Autocompasión, valores y acción comprometida</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,7 +421,8 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
-<h2>4.7. Autocompasión tierna y feroz: reconstruir la autoestima desde dentro</h2>
+<p><em>En este artículo trabajamos la autocompasión — tierna y feroz —, la reconexión con los valores auténticos que la MPA ha enterrado, y la acción comprometida: donde todo lo anterior se convierte en conducta real en el escenario.</em></p>
+<h2>Autocompasión tierna y feroz: reconstruir la autoestima desde dentro</h2>
 <p>La autoestima dependiente, en términos funcionales, es aquella cuyo nivel está condicionado por contingencias externas: la nota del jurado, el aplauso del público, la aprobación del profesor. Produce refuerzo positivo intenso cuando el resultado es bueno —lo que hace que el músico la confunda con autoconfianza real— pero su arquitectura interna es radicalmente frágil: un resultado negativo produce una caída tan abrupta que el músico experimenta no decepción profesional sino colapso identitario.</p>
 <p>Desactivar los patrones de autoestima dependiente se trabaja mediante tres desconexiones relacionales específicas:</p>
 <p><strong>Desconexión 1:</strong> «Puedo haber tocado mal hoy y seguir siendo una persona valiosa.»</p>
@@ -481,7 +509,7 @@
 <hr>
 <p><em>Nota de la secuencia de la intervención psicológica.</em> El trabajo hasta aquí ha creado las condiciones para algo que al principio del programa era prácticamente imposible: clarificar qué quiere realmente este músico, independientemente del miedo, de la aprobación externa y de las reglas que han colonizado su motivación. La defusión separó al músico de su contenido verbal. La aceptación cambió su relación con el cuerpo activado. La presencia lo devolvió al sonido. El observador le dio una perspectiva estable. Y la autocompasión —tierna, feroz, y cuando fue necesario, dirigida a modificar el contexto externo— ha instalado el suelo desde el que esa perspectiva puede mirar hacia adelante. Todo esto ha sido preparación. Lo que viene ahora es la dirección.</p>
 <hr>
-<h2>4.8. Valores auténticos en acción: del ensayo al escenario</h2>
+<h2>Valores auténticos en acción: del ensayo al escenario</h2>
 <p>Hay una pregunta que la MPA crónica termina haciendo casi imposible de responder: ¿por qué empezaste a tocar?</p>
 <p>No la versión para el jurado. No la versión que da sentido a los años de sacrificio y a las horas de práctica. La versión verdadera: qué producía la música en ti antes de que producir música se convirtiera en algo que había que hacer bien, que había que demostrar, que había que defender. El momento en que el sonido del instrumento era simplemente suficiente.</p>
 <p>Reconectar con esa respuesta —aunque llegue como un destello de algo muy lejano, aunque dure solo un instante— es lo que hace que la acción comprometida tenga una dirección real. Sin esa conexión, los ejercicios de exposición son solo más situaciones en las que medir el nivel de ansiedad. Con ella, son pasos en una dirección que vale el esfuerzo de recorrerlos, incluso con ansiedad presente.</p>
@@ -513,7 +541,7 @@
 <p><strong>Primera parte — inventario de eventos internos:</strong> ¿Qué pensamientos, emociones y sensaciones surgieron, y en qué momentos? Se redacta con la fórmula del observador: «Noté el pensamiento de que...», «Observé tensión en...»</p>
 <p><strong>Segunda parte — evaluación de valores:</strong> ¿En qué momentos la actuación estuvo guiada por el valor elegido? ¿Hubo momentos de conexión real, aunque breves, con la expresión auténtica o con el público?</p>
 <p><strong>Tercera parte — autocompasión feroz:</strong> ¿Qué le diría al músico que estuvo ahí —que salió aunque tuviese miedo, que tocó aunque temblase— un amigo que le conoce bien y le quiere profundamente? Esta última parte, que muchos músicos realizan con dificultad al principio y con fluidez creciente con la práctica, es el antídoto específico para la autocrítica postactuación.</p>
-<h2>4.9. Acción comprometida: el escenario como práctica de valores</h2>
+<h2>Acción comprometida: el escenario como práctica de valores</h2>
 <div class="dialog-block">
 <p class="dialog-line"><strong>M:</strong> Hoy no estoy preparado.</p>
 <p class="dialog-line"><strong>JJ:</strong> ¿Por qué?</p>
@@ -540,9 +568,6 @@
 <p>«Sigo sintiendo miedo. Pero ya no dejo que decida por mí.»</p>
 <p>Eso es flexibilidad psicológica. Eso es lo que significa tocar aunque tiembles.</p>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [Conclusiones, checklist de camerino y guía práctica →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

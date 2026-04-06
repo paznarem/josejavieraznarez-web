@@ -594,12 +594,12 @@
         }
 
         /* ==================== EXPAND BUTTON ==================== */
-        /* Tablet + mobile: hide from card 5+ */
-        .blog-grid .blog-card:nth-child(n+5) { display: none; }
+        /* Tablet + mobile: hide from card 5+ (not in series grids) */
+        .blog-grid:not(.series-grid) .blog-card:nth-child(n+5) { display: none; }
 
         /* Desktop (3 cols): show 5th card, button fills slot 3 of row 2 */
         @media (min-width: 901px) {
-            .blog-grid .blog-card:nth-child(5) { display: block; }
+            .blog-grid:not(.series-grid) .blog-card:nth-child(5) { display: block; }
         }
 
         /* Expanded: show all */

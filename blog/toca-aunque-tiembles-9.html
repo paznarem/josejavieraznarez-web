@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 9 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li class="series-index-current">9. Conclusiones, checklist de camerino y guía práctica</li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Conclusiones, checklist de camerino y guía práctica</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,6 +421,7 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
+<p><em>Este es el artículo final de la serie. Si llegaste aquí desde el principio, tienes el mapa completo. Si llegaste aquí primero — bienvenido: aquí están las conclusiones, la práctica final, el checklist operativo y la tarjeta de camerino. Aquí termina la teoría y empieza lo que puedes hacer mañana.</em></p>
 <h2>Conclusiones</h2>
 <p>El músico que llega al final de este programa rara vez ha dejado de temblar. Ha aprendido algo más valioso: que puede tocar aunque tiemble. Y esa diferencia, que desde fuera puede parecer pequeña, es desde dentro la diferencia entre una vida musical organizada por el miedo y una vida musical organizada por lo que realmente importa.</p>
 <p>El escenario sigue siendo el mismo. El jurado sigue siendo subjetivo. El instrumento sigue respondiendo a la tensión. Pero la función que todo eso tiene en el control del comportamiento del músico ha cambiado. Eso es lo que la Ciencia Contextual del Comportamiento puede ofrecer.</p>
@@ -792,9 +820,6 @@
 <p><strong>REGLA CLAVE:</strong> No controlar → actuar</p>
 <p><strong>FRASE:</strong> <em>Sigo sintiendo miedo, pero ya no decide por mí.</em></p>
 <hr>
-<p class="article-intro"><em>← Artículo anterior: [Autocompasión, valores y acción comprometida]</em></p>
-<hr>
-<p class="article-intro"><em>Si este programa ha sido útil, escríbeme. Si hay algo que no ha funcionado, también. Este trabajo se construye desde la experiencia real de músicos reales.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 7 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li class="series-index-current">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Aceptar el cuerpo, estar presente, observar sin reaccionar</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,7 +421,8 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
-<h2>4.4. Aceptación: dejar de pelear con el cuerpo</h2>
+<p><em>Continuamos con el programa. Este artículo aborda tres procesos centrales en la sesión: aceptar el cuerpo sin luchar contra él, anclar la atención en el sonido y la respiración, y entrenar el yo observador en el escenario.</em></p>
+<h2>Aceptación: dejar de pelear con el cuerpo</h2>
 <p>Cuando la ansiedad escénica aparece, el cuerpo se convierte en el primer campo de batalla: el corazón late como si fueras a correr una maratón, las manos tiemblan, el arco pesa el doble, el diafragma se cierra, los músculos se tensan hasta el punto de la rigidez. Y la reacción más natural es luchar: controlar la respiración, apretar los músculos para detener el temblor, repetirse mentalmente «cálmate», «no sientas esto».</p>
 <p>Pero cuanto más se lucha contra esas sensaciones, más se intensifican. No es debilidad ni falta de voluntad: es la paradoja central de la ansiedad. No son las respuestas de ansiedad las que bloquean las competencias técnicas del músico. Es la lucha contra esas respuestas.</p>
 <p>La aceptación, en el sentido técnico que se describe a continuación, no es resignación ni rendición. Es la decisión activa de dejar de gastar los recursos del sistema nervioso en combatir lo que no puede combatirse, para poder dirigir esos recursos a lo único que importa en ese momento: la música.</p>
@@ -429,7 +457,7 @@
 <hr>
 <p><em>Nota de la secuencia de la intervención psicológica.</em> La defusión ha separado al músico de sus pensamientos; la aceptación ha cambiado su relación con las sensaciones físicas. Ambos procesos operan sobre el contenido de la experiencia. Pero hay un tercer mecanismo de inflexibilidad que ninguno de los dos aborda directamente: la pérdida de contacto con el momento presente. Recuperar el presente —el sonido que ocurre ahora, la respiración que sostiene el fraseo ahora, el contacto con el instrumento ahora— es lo que hace que la defusión y la aceptación se anclen en la conducta real de tocar.</p>
 <hr>
-<h2>4.5. Atención al momento presente: el sonido como ancla</h2>
+<h2>Atención al momento presente: el sonido como ancla</h2>
 <p>El músico fusionado no vive en el escenario. Vive en su cabeza sobre el escenario: en el error que cometió dos compases antes, en el pasaje difícil que viene dentro de dieciséis tiempos, en la cara del jurado mientras monitoriza si su sonido es suficientemente bueno. Ninguno de esos lugares es donde ocurre la música. La música ocurre ahora.</p>
 <p>El músico con MPA tiene una ventaja singular en este trabajo: en todo momento, tiene disponible un ancla extraordinaria para el presente. Tiene el sonido.</p>
 <div class="dialog-block">
@@ -468,7 +496,7 @@
 <hr>
 <p><em>Nota de la secuencia de la intervención psicológica.</em> Con la defusión, la aceptación y la presencia trabajadas de manera integrada, el músico ha comenzado a soltar el yo-como-contenido: ya no se identifica completamente con los pensamientos que tiene, las sensaciones que siente ni los errores que comete. Es precisamente en este punto —y no antes— cuando el entrenamiento del yo observador puede producir su efecto pleno.</p>
 <hr>
-<h2>4.6. El yo como contexto: tres niveles de entrenamiento</h2>
+<h2>El yo como contexto: tres niveles de entrenamiento</h2>
 <p>«Soy ansioso.» «Soy insuficiente.» «Soy alguien que se bloquea en los escenarios.» Mientras estas afirmaciones funcionen como identidad —como descripción de lo que el músico es, no de lo que el músico experimenta—, ningún proceso de defusión ni de aceptación producirá un cambio genuino. El problema no está en los pensamientos. Está en el punto desde el que el músico se relaciona con ellos.</p>
 <p>El yo como contexto es ese punto. No un estado que se alcanza. Una perspectiva que permanece constante a través de todos los contenidos cambiantes de la experiencia y que, por esa razón, no puede ser dañada por los pensamientos que observa, ni definida de manera exhaustiva por ninguna historia que se cuente sobre ella.</p>
 <div class="dialog-block">
@@ -533,9 +561,6 @@
 <h3>Nivel 3: La integración — el observador como base estable</h3>
 <p>El tercer nivel no es un ejercicio específico: es la consolidación de los dos anteriores en una actitud de base que el músico lleva al escenario. El yo observador, cuando está suficientemente entrenado, no requiere un procedimiento de cinco minutos para activarse: está disponible como perspectiva de fondo, como el cielo que sigue siendo cielo aunque estén pasando tormentas.</p>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [Autocompasión, valores y acción comprometida →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 5 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li class="series-index-current">5. Los seis procesos del cambio para músicos</li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Los seis procesos del cambio para músicos</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,7 +421,8 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
-<h2>3.3. Los seis procesos del cambio</h2>
+<p><em>Ya conoces la arquitectura del bloqueo. Ahora describimos la arquitectura del cambio: los seis procesos del hexaflex, el flow como referencia experiencial, y la autocompasión como proceso transversal que potencia todo lo demás.</em></p>
+<h2>Los seis procesos del cambio</h2>
 <p>Hay un momento en que el músico que lleva años en el ciclo de control puede reconocer, con cierta distancia, que todos sus intentos de mejorar han compartido la misma lógica subyacente: reducir la ansiedad primero, actuar después. El hexaflex describe con precisión los seis procesos que mantienen esa lógica y que, cuando se trabajan de manera integrada, producen algo cualitativamente diferente: la posibilidad de actuar mientras la ansiedad está presente, sin que su presencia determine el resultado.</p>
 <p>Estos procesos no son pasos secuenciales. Son interdependientes, y en la experiencia real del músico se activan y se retroalimentan de manera simultánea.</p>
 <h3>Fusión cognitiva y defusión: cuando el pensamiento deja de ser el director de orquesta</h3>
@@ -443,15 +471,12 @@
 <p>La desconexión de los valores auténticos es uno de los procesos más dolorosos que produce la MPA crónica y también uno de los más invisibles, porque ocurre gradualmente. Lo que empezó siendo pasión —tocar porque el sonido del instrumento producía algo que no podía producir ninguna otra experiencia— se convierte en compulsión guiada por el miedo: practicar para no sentir la ansiedad de no haber practicado suficiente, presentarse a audiciones para no enfrentarse a la vergüenza de haberlas evitado. Esta sustitución de valores por reglas de miedo es, desde la perspectiva CBS, el daño más profundo que produce la MPA, porque no afecta al rendimiento técnico sino a la razón misma por la que tocar tiene sentido.</p>
 <h3>Ausencia de acción comprometida: cuando saber no es suficiente</h3>
 <p>La <strong>acción comprometida</strong> es el proceso donde toda la arquitectura interior se convierte en conducta real, observable y verificable en el mundo. Sin ella, la defusión, la aceptación, el yo observador y los valores son procesos internos sin expresión conductual, y el músico puede volverse muy hábil en manejar su experiencia interna sin que eso se traduzca en ningún cambio en su vida musical. La acción comprometida cierra el hexaflex porque es donde el músico demuestra, en la práctica y con el cuerpo, que ha elegido una dirección diferente.</p>
-<h2>3.4. La autocompasión: proceso transversal, no séptimo vértice</h2>
+<h2>La autocompasión: proceso transversal, no séptimo vértice</h2>
 <p>En la cultura musical clásica, la dureza hacia uno mismo se confunde sistemáticamente con rigor artístico. El músico que no se exige es el músico que no crece. El que se permite fallar es el que nunca llegará. Esta confusión tiene consecuencias clínicas concretas: la autocrítica feroz y crónica que caracteriza los casos más graves de MPA no es un subproducto del ciclo. Es un proceso activo de mantenimiento que opera en paralelo a la fusión y la evitación, y reconstruye con la mano derecha lo que la intervención intenta desmantelar con la izquierda.</p>
 <p>La autocompasión no es blandura. No reduce el estándar artístico ni niega la dificultad real del contexto. Es la disposición a tratarse con la misma amabilidad que se ofrecería a un colega que está pasando exactamente por lo mismo —no para que deje de esforzarse, sino para que el esfuerzo no se convierta en autodestrucción.</p>
 <p>La autocompasión no es uno de los seis procesos canónicos del hexaflex ACT. Es un proceso transversal que potencia todos los demás y que en el contexto de la MPA adquiere relevancia que justifica su tratamiento autónomo por tres razones. La primera: la autocrítica feroz y crónica que caracteriza la MPA avanzada no desaparece cuando mejoran los demás procesos; el músico que trabaja la defusión con disciplina pero se machaca durante dos horas después de cada exposición imperfecta reconstruye con la mano derecha lo que destruye con la izquierda. La segunda: la autocompasión es el puente entre la desesperanza creativa y la apertura al cambio —sin ella, la desesperanza no es creativa sino simplemente desesperanza. La tercera: la investigación más reciente confirma que la autocompasión media parcialmente el efecto de las intervenciones CBS sobre la MPA —los músicos con mayor autocompasión post-intervención muestran mayor persistencia en la acción comprometida y menor reactividad del sistema de amenaza en actuaciones posteriores.</p>
 <p>Sus dos dimensiones —<strong>autocompasión tierna</strong> y <strong>autocompasión feroz</strong>— se describen en detalle, con ejercicios específicos, en el artículo 9.</p>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [El programa en acción: desesperanza creativa y defusión →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

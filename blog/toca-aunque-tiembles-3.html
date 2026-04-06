@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 3 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li class="series-index-current">3. Las tres reglas que organizan tu miedo escénico</li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Las tres reglas que organizan tu miedo escénico</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,7 +421,8 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
-<h2>2.3. Las tres reglas que organizan tu miedo escénico</h2>
+<p><em>Ya sabes cómo el lenguaje crea el sufrimiento escénico. Ahora vamos a nombrar con precisión las tres reglas verbales que organizan toda la vida escénica de los músicos más afectados — y el contexto institucional que las mantiene activas.</em></p>
+<h2>Las tres reglas que organizan tu miedo escénico</h2>
 <blockquote class="infobox">
 <p><em>Para qué sirve esta sección: aquí es donde muchos músicos reconocen, por primera vez, la estructura exacta de lo que les ocurre. Léela despacio.</em></p>
 </blockquote>
@@ -418,7 +446,7 @@
 <p>La <strong>Regla 3</strong> —la subjetividad como impotencia— tiene su origen en <em>tracking</em>: el músico efectivamente observó contingencias reales (la subjetividad del jurado existe, los resultados no siempre corresponden al nivel de preparación) y generalizó esa observación hasta convertirla en regla total. El problema no es que la regla sea inventada, sino que ha sido sobrextendida hasta organizar como control completo toda la motivación musical. La intervención prioritaria sobre el tracking distorsionado no es cuestionar la evidencia —hacerlo reproduce el modelo de reestructuración cognitiva que la CBS identifica como parte del problema— sino clarificar qué consecuencias sí están bajo control del músico: el proceso, el crecimiento, la conexión con los valores.</p>
 <p>La <strong>Regla 2</strong> —la evitación como protección— no es en su núcleo una regla verbal sino un patrón de conducta mantenido por refuerzo negativo directo que el lenguaje ha articulado después. Su modificación requiere contacto experiencial con contingencias que la debiliten —exposición gradual informada por valores— antes que cualquier forma de intervención puramente verbal. El trabajo de defusión aplicado a la Regla 2 sin exposición produce insight sin cambio conductual.</p>
 <p>Esta diferenciación tiene una implicación práctica directa para la personalización del programa: un músico en el que domina la Regla 1 necesita más trabajo de valores y desconexión de la aprobación externa antes de que la exposición sea productiva. Un músico en el que domina la Regla 3 necesita primero el contacto con lo que sí puede controlar —la acción desde valores como augmental— antes de que la desesperanza creativa pueda abrirse en dirección genuina en lugar de hundimiento adicional. Un músico en el que domina la Regla 2 necesita exposición con disposición explícita, aunque los otros dos procesos también estén presentes y requieran atención paralela.</p>
-<h2>2.4. El contexto institucional como mantenedor activo de las tres reglas</h2>
+<h2>El contexto institucional como mantenedor activo de las tres reglas</h2>
 <p>Las tres reglas descritas no son solo el sedimento de una historia de aprendizaje pasada. Son mantenidas activamente, en el presente, por las contingencias institucionales de la cultura musical clásica occidental. Esta distinción tiene consecuencias de intervención directas: no es suficiente con modificar la relación del músico con las reglas si los contextos que las reinstalan operan con la misma intensidad cada semana.</p>
 <p>El conservatorio superior como contexto activo de la Regla 1: el sistema de evaluación por obras, la masterclass como exposición pública al juicio del experto, la organización del recital de fin de grado como demostración de dominio técnico —todo esto refuerza consistente e inevitablemente la regla de que el error es inaceptable y la perfección es el precio de la pertenencia. No porque los profesores sean malos pedagogos, sino porque el sistema en su conjunto está diseñado para seleccionar y exhibir competencia, no para entrenar la relación con la imperfección.</p>
 <p>El sistema de audiciones como contexto activo de la Regla 3: la opacidad de los criterios de selección en las pruebas de orquesta, la variabilidad real de los resultados ante el mismo nivel de preparación, la ausencia de feedback funcional después del rechazo —todo esto refuerza en tiempo real la creencia de que el esfuerzo del músico y el resultado están desconectados. El músico que ha perdido tres pruebas sin entender por qué no está distorsionando la realidad: está respondiendo a contingencias reales que desde la CBS generan exactamente la desesperanza que la Regla 3 articula verbalmente. Negarle esa realidad sería clínicamente deshonesto.</p>
@@ -459,9 +487,6 @@
 <p>Lo que este diálogo ilustra es la estructura específica de la ansiedad de conjunto: en el contexto de orquesta o música de cámara, la red de estímulos aversivos se amplía de manera sistemática. Al jurado o al público como fuentes de evaluación se añaden los propios compañeros como estímulos discriminativos. Y las tres reglas adoptan formas características del contexto grupal: la Regla 1 opera no solo frente a la autoridad externa sino frente a los iguales; la Regla 2 toma formas de evitación dentro del grupo —llegar al ensayo con el pasaje memorizado para no tener que leer, sentarse al final de la sección—; la Regla 3 adquiere el matiz específico de «aunque yo toque bien, si los demás no tocan bien el resultado será malo de todas formas».</p>
 <p>Tanto en el contexto solista como en el de conjunto, lo que el análisis anterior pone de manifiesto es que las contingencias institucionales no son el trasfondo de la MPA: son su mantenimiento activo en tiempo real. Nombrar esto no es una crítica al sistema pedagógico musical ni una excusa para el músico. Es el análisis funcional honesto sin el que cualquier intervención sobre el músico individual opera parcialmente en el vacío.</p>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [La inflexibilidad psicológica y la puerta del cambio →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 6 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="toca-aunque-tiembles-1.html">1. Toca aunque tiembles: por qué este programa es diferente</a></li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li class="series-index-current">6. El programa en acción: desesperanza creativa y defusión</li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>El programa en acción: desesperanza creativa y defusión</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -394,10 +421,11 @@
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
+<p><em>Con el marco teórico completo, entramos en el programa de intervención. Este artículo cubre la evaluación inicial, el formato grupal, la desesperanza creativa en la práctica y la defusión cognitiva — los primeros movimientos del cambio.</em></p>
 <h2>Llegamos a lo que el marco teórico ha estado preparando</h2>
 <p>Lo que viene ahora es el programa. No el marco teórico —eso están en los artículos anteriores—. El programa: lo que se hace, cómo se hace, con qué ejercicios, con qué palabras, en qué orden, y con qué criterio se sabe si está funcionando. Está escrito para el músico que llega roto, y para el psicólogo que trabaja con él.</p>
 <p>Conviene llegar aquí habiendo entendido algo fundamental: este programa no ofrece una técnica que finalmente logrará lo que las anteriores no pudieron. Ofrece una dirección diferente. No reducir las respuestas de ansiedad para poder tocar: tocar, con esas respuestas presentes, desde lo que realmente importa.</p>
-<h2>4.0. Cómo personalizar el programa</h2>
+<h2>Cómo personalizar el programa</h2>
 <p>La Terapia Basada en Procesos (PBT) no evalúa la presencia o ausencia de un síndrome diagnóstico para seleccionar el protocolo correspondiente. Evalúa qué procesos específicos de inflexibilidad son dominantes en este músico concreto, en este momento concreto, y diseña la intervención para actuar sobre esos procesos con la mayor precisión posible.</p>
 <p>La evaluación funcional de procesos responde a las siguientes preguntas: ¿Cuál de las tres reglas verbales rígidas es dominante? ¿Es predominantemente la fusión con la perfección, la conducta de evitación, o la fusión con la impotencia? ¿En qué dominio es mayor la pérdida de contacto con el presente —en la práctica, en la actuación pública, en ambas? ¿Hay acceso a valores musicales auténticos, o la desconexión es tan profunda que requiere trabajo previo de reconstrucción? ¿Cuál es el nivel de autocompasión de base? ¿Hay depresión comórbida que requiera las adaptaciones descritas en el artículo 4?</p>
 <p>Un músico con alta fusión y baja evitación necesita más defusión y entrenamiento del yo observador antes de la exposición gradual. Un músico con alta evitación y baja fusión puede comenzar antes la jerarquía de exposición pero necesita más trabajo de valores para que las acciones comprometidas tengan dirección genuina. Esta personalización no es improvisación: es la práctica basada en procesos aplicada sistemáticamente.</p>
@@ -416,7 +444,7 @@
 <p class="dialog-line"><strong>M:</strong> Nunca lo había tratado como parte de la preparación.</p>
 <p class="dialog-line"><strong>JJ:</strong> Lo es. Igual que practicar. Igual que exponerte.</p>
 </div>
-<h2>4.2. La desesperanza creativa en la práctica: soltar la pala</h2>
+<h2>La desesperanza creativa en la práctica: soltar la pala</h2>
 <p>Pregúntate —con honestidad, no con el objetivo de producir culpa sino de producir claridad— qué pasa a corto plazo cuando te fusionas con la regla de que si no tocas perfecto, no vales. ¿Alivio momentáneo por practicar más? ¿O más ansiedad, más rigidez corporal, menos disfrute? Pregúntate qué ha pasado a largo plazo al evitar audiciones por miedo al fracaso. Menos oportunidades. Estancamiento. Una sensación creciente de que la música ya no es tuya.</p>
 <p>Contactar con el coste real de seguir como se ha venido haciendo no es un ejercicio de culpabilización. Es el único movimiento que abre genuinamente una dirección diferente. No porque alguien haya argumentado de manera convincente que hay que cambiar —el sistema de control verbal tiene una capacidad extraordinaria para rebatir argumentos—, sino porque el músico ha contactado de manera experiencial, sentida y encarnada, con lo que ha perdido.</p>
 <h3>Primer movimiento: el inventario honesto</h3>
@@ -445,7 +473,7 @@
 <hr>
 <p><em>Nota de la secuencia de la intervención psicológica.</em> La desesperanza creativa ha abierto la puerta: el músico ha contactado con el coste del control y ha vislumbrado una dirección diferente. Pero en este punto el sistema verbal sigue activo con toda su fuerza. Las reglas rígidas —debo tocar perfecto, la ansiedad me impide tocar, nunca estaré a la altura— continúan operando como marcos relacionales si-entonces que organizan la experiencia. Si en este momento se pidiera al músico que accediera a su observador o que clarificara sus valores auténticos, ambos procesos estarían contaminados por esa fusión. El trabajo que viene a continuación —defusión primero, aceptación después, presencia en tercer lugar— no es un rodeo: es la condición de posibilidad de todo lo que sigue.</p>
 <hr>
-<h2>4.3. Defusión cognitiva: cuando el pensamiento deja de ser el director de orquesta</h2>
+<h2>Defusión cognitiva: cuando el pensamiento deja de ser el director de orquesta</h2>
 <p>Imagina que tu mente es un director de orquesta muy estricto. Cada vez que te acercas al escenario, empieza a tocar una sinfonía de pensamientos críticos: «Vas a fallar en ese pasaje.» «Todos van a notar que no estás a la altura.» «Si no tocas perfecto, no vales nada como músico... ni como persona.»</p>
 <p>La mayoría de las estrategias que se han intentado buscan callar a ese director: discutir con él, ignorarlo, combatirlo con fuerza de voluntad. Pero cuanto más se lucha, más fuerte suena la música. El director no se calla: se vuelve más insistente.</p>
 <p>La defusión cognitiva no intenta silenciar al director. Cambia la relación con él: de verdad absoluta que controla el comportamiento a evento mental observable que puede coexistir con la acción. El pensamiento sigue ahí, pero ya no pilota.</p>
@@ -481,9 +509,6 @@
 <hr>
 <p><em>Nota de la secuencia de la intervención psicológica.</em> La defusión ha comenzado a aflojar el control del contenido verbal sobre la conducta: el músico puede ver sus pensamientos como eventos mentales en lugar de órdenes que obedecer. Pero la fusión cognitiva no es el único mecanismo que mantiene la inflexibilidad. Junto a ella opera la evitación experiencial: la lucha activa contra las sensaciones físicas y emocionales de la ansiedad que, paradójicamente, las amplifica y las convierte en el eje de toda la vida escénica. Mientras esa lucha continúe, la defusión tiene un alcance limitado —el músico puede ver el pensamiento desde lejos, pero el cuerpo sigue señalando alarma. El siguiente trabajo es precisamente ese: aprender a dejar de pelear con el cuerpo.</p>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [Aceptar el cuerpo, estar presente, observar sin reaccionar →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>

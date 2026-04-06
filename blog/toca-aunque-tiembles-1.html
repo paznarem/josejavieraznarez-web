@@ -195,6 +195,19 @@
             opacity: 0.7;
         }
 
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
         /* ==================== DIALOG ==================== */
         .dialog-block {
             background: var(--cream);
@@ -381,6 +394,20 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="series-badge">Serie: Toca aunque tiembles &middot; Artículo 1 de 9</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li class="series-index-current">1. Toca aunque tiembles: por qué este programa es diferente</li>
+                    <li><a href="toca-aunque-tiembles-2.html">2. El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-3.html">3. Las tres reglas que organizan tu miedo escénico</a></li>
+                    <li><a href="toca-aunque-tiembles-4.html">4. La inflexibilidad psicológica y la puerta del cambio</a></li>
+                    <li><a href="toca-aunque-tiembles-5.html">5. Los seis procesos del cambio para músicos</a></li>
+                    <li><a href="toca-aunque-tiembles-6.html">6. El programa en acción: desesperanza creativa y defusión</a></li>
+                    <li><a href="toca-aunque-tiembles-7.html">7. Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                    <li><a href="toca-aunque-tiembles-8.html">8. Autocompasión, valores y acción comprometida</a></li>
+                    <li><a href="toca-aunque-tiembles-9.html">9. Conclusiones, checklist de camerino y guía práctica</a></li>
+                </ul>
+            </div>
             <span class="article-category">Estrés y ansiedad</span>
             <h1>Toca aunque tiembles: por qué este programa es diferente</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
@@ -450,9 +477,6 @@
 <p class="dialog-line"><strong>JJ:</strong> Exacto. No tocar porque lo has tomado… sino tocar con lo que haya, lo hayas tomado o no. El cambio no es químico. Es quién está al mando cuando aparece la activación.</p>
 </div>
 <hr>
-<p class="article-intro"><em>Siguiente artículo: [El escenario como laboratorio: cómo el lenguaje crea el miedo escénico →]</em></p>
-<hr>
-<p class="article-intro"><em>Si algo de lo que has leído conecta con tu experiencia, escríbeme. Este programa no es un recurso más. Es una dirección diferente.</em></p>
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
     </article>
@@ -460,7 +484,10 @@
     <!-- ARTICLE NAVIGATION -->
     <div class="article-nav">
         <div class="article-nav-inner">
-
+            <a href="cuando-el-estres-se-convierte-en-barrera.html" class="article-nav-prev">
+                <span class="article-nav-label">← Anterior</span>
+                <span class="article-nav-title">Cuando el estrés y la ansiedad se convierten en una barrera</span>
+            </a>
             <a href="toca-aunque-tiembles-2.html" class="article-nav-next">
                 <span class="article-nav-label">Siguiente →</span>
                 <span class="article-nav-title">El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</span>
@@ -470,6 +497,10 @@
 
     <!-- SERIES NAVIGATION -->
     <div class="series-nav-bar">
+        <a href="cuando-el-estres-se-convierte-en-barrera.html" class="series-nav-link series-nav-prev">
+            <span class="series-nav-label">← Artículo anterior</span>
+            <span class="series-nav-title">Cuando el estrés y la ansiedad se convierten en una barrera</span>
+        </a>
         <a href="toca-aunque-tiembles-2.html" class="series-nav-link series-nav-next">
             <span class="series-nav-label">Siguiente artículo →</span>
             <span class="series-nav-title">El escenario como laboratorio: cómo el lenguaje crea el miedo escénico</span>
