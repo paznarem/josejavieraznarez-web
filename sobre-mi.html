@@ -92,6 +92,7 @@
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -558,6 +559,8 @@
 
         .img-float-right {
             float: right;
+            max-width: 340px;
+            width: 100%;
             margin-left: 2rem;
             margin-bottom: 1rem;
             border-radius: 1rem;
@@ -568,6 +571,8 @@
 
         .img-float-left {
             float: left;
+            max-width: 340px;
+            width: 100%;
             margin-right: 2rem;
             margin-bottom: 1rem;
             border-radius: 1rem;
@@ -621,15 +626,7 @@
             }
         }
 
-        @media (max-width: 600px) {
-            .content-wrapper {
-                padding: 3rem 1.25rem 3rem;
-            }
-
-            .content-block blockquote {
-                padding: 1.5rem 1.5rem;
-            }
-
+        @media (max-width: 640px) {
             .img-float-right,
             .img-float-left {
                 float: none;
@@ -638,6 +635,16 @@
                 margin-left: 0;
                 margin-right: 0;
                 margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 3rem 1.25rem 3rem;
+            }
+
+            .content-block blockquote {
+                padding: 1.5rem 1.5rem;
             }
 
             .footer-inner {
@@ -663,7 +670,7 @@
                 <li><a href="como-trabajo.html">Cómo trabajo</a></li>
                 <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
                 <li><a href="index.html#servicios">Servicios</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
                 <li><a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
@@ -697,6 +704,7 @@
             <p>Compatibilizar la música con los estudios me colocó desde muy pronto en una situación que hoy reconozco como central en mi trabajo: hacer lo que era importante mientras aparecían errores, dudas, activación y momentos de bloqueo.</p>
             <p>Ese proceso me fue entrenando —sin saberlo entonces— en una dirección muy específica: no depender de cómo me sentía para poder actuar, y sostener la conducta incluso cuando la experiencia interna empujaba en otra dirección.</p>
             <p>Ahí no aprendí solo responsabilidad o perseverancia. Aprendí algo más preciso: a seguir actuando aunque no me sintiera preparado, a sostener la frustración sin abandonar lo que estaba haciendo y a no esperar a que todo estuviera en orden por dentro para dar el siguiente paso.</p>
+            <img src="camino.jpg" alt="Camino entre árboles" class="img-float-right">
             <p>Con el tiempo he reconocido ese mismo patrón en muchas de las personas a las que acompaño: momentos en los que la ansiedad, la inseguridad o la autocrítica empiezan a organizar lo que hacen y limitan su vida.</p>
             <p>Y es precisamente ahí donde trabajo hoy: no en eliminar esa experiencia interna, sino en que la persona pueda responder de otra manera cuando aparece, ampliando su margen de acción a situaciones que le importan.</p>
             <p>Ese aprendizaje —avanzar con dificultad presente sin que lo interno marque el límite de la acción— sigue siendo hoy el núcleo de mi trabajo.</p>
@@ -723,6 +731,7 @@
 
         <!-- Bloque 4 -->
         <div class="content-block reveal">
+            <img src="lago.jpg" alt="Lago entre montañas" class="img-float-left">
             <h2>Mi trabajo como psicólogo</h2>
             <p>Como psicólogo contextual, mi enfoque se aleja de la idea de que haya algo que «arreglar» o «curar» en la persona.</p>
             <p>No trabajo desde etiquetas, sino desde el análisis de lo que está ocurriendo en tu vida.</p>
@@ -755,6 +764,7 @@
 
         <!-- Bloque 6 (ex Bloque 5) -->
         <div class="content-block reveal">
+            <img src="montañaslago.jpg" alt="Montañas y lago" class="img-float-right">
             <h2>Mi experiencia como padre</h2>
             <p>Criar a un hijo es una de las tareas más ilusionantes y, a la vez, más exigentes.</p>
             <p>Yo también he estado ahí.</p>
