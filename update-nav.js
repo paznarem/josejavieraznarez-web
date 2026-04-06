@@ -30,7 +30,7 @@ function getArticleCategory(html) {
 function parseArticleOrder() {
   const html = fs.readFileSync(INDEX_PATH, 'utf8');
   const hrefs = [];
-  const re = /href="([a-z0-9\-]+\.html)" class="blog-card"/g;
+  const re = /href="([a-z0-9\-]+\.html)" class="blog-card[^"]*"/g;
   let m;
   while ((m = re.exec(html)) !== null) {
     if (!hrefs.includes(m[1])) hrefs.push(m[1]);
