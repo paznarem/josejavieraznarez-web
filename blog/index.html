@@ -11,11 +11,11 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Aprender a comprendernos | José Javier Aznárez</title>
+    <title>Blog de Psicología Contextual — Artículos sobre ACT, Crianza y Autoestima | José Javier Aznárez</title>
     <meta name="description" content="Más de 30 artículos de libre acceso sobre ansiedad, crianza consciente, autocompasión y psicología contextual. Psicoeducación práctica para vivir mejor.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Blog — Aprender a comprendernos para vivir mejor">
+    <meta property="og:title" content="Blog de Psicología Contextual — Artículos sobre ACT, Crianza y Autoestima">
     <meta property="og:description" content="Artículos de psicoeducación sobre ansiedad, autoestima, crianza consciente y más.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.josejavieraznarez.com/blog/">
@@ -616,8 +616,8 @@
             .blog-grid:not(.series-grid) .blog-card:nth-child(5) { display: block; }
         }
 
-        /* Expanded: show all */
-        .blog-grid.expanded .blog-card { display: block; }
+        /* Expanded: show all — !important needed to override the nth-child specificity */
+        .blog-grid.expanded .blog-card { display: block !important; }
 
         /* Button lives inside .blog-grid as a grid item */
         .expand-btn {
