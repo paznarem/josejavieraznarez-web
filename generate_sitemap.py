@@ -122,13 +122,7 @@ ET.register_namespace("xhtml", XHTML_NS)
 
 
 def build_sitemap(files: list[pathlib.Path]) -> ET.Element:
-    urlset = ET.Element(
-        "urlset",
-        {
-            "xmlns": SITEMAP_NS,
-            "xmlns:xhtml": XHTML_NS,
-        },
-    )
+    urlset = ET.Element(f"{{{SITEMAP_NS}}}urlset")
 
     for path in files:
         url_str = path_to_url(path)
@@ -137,11 +131,11 @@ def build_sitemap(files: list[pathlib.Path]) -> ET.Element:
 
         rel_path = "/" + path.relative_to(ROOT).as_posix()
 
-        url_el = ET.SubElement(urlset, "url")
-        ET.SubElement(url_el, "loc").text = url_str
-        ET.SubElement(url_el, "lastmod").text = lastmod
-        ET.SubElement(url_el, "changefreq").text = freq
-        ET.SubElement(url_el, "priority").text = priority
+        url_el = ET.SubElement(urlset, f"{{{SITEMAP_NS}}}url")
+        ET.SubElement(url_el, f"{{{SITEMAP_NS}}}loc").text = url_str
+        ET.SubElement(url_el, f"{{{SITEMAP_NS}}}lastmod").text = lastmod
+        ET.SubElement(url_el, f"{{{SITEMAP_NS}}}changefreq").text = freq
+        ET.SubElement(url_el, f"{{{SITEMAP_NS}}}priority").text = priority
 
         # hreflang alternates (multi-language support)
         alternates = LANGUAGE_ALTERNATES.get(rel_path)
