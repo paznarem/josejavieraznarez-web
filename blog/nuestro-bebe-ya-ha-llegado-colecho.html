@@ -69,13 +69,9 @@
         }
 
         nav {
-            position: fixed;
-            top: 0;
             width: 100%;
-            z-index: 1000;
             padding: 0.7rem 2rem;
             background: rgba(254, 253, 251, 0.95);
-            backdrop-filter: blur(20px);
             box-shadow: 0 1px 20px rgba(0,0,0,0.06);
         }
 
@@ -146,7 +142,7 @@
 
         /* ==================== HEADER ==================== */
         .article-header {
-            padding-top: 7rem;
+            padding-top: 3rem;
             padding-bottom: 3rem;
             background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
             text-align: center;
@@ -342,26 +338,10 @@
         .article-body strong { color: var(--text-primary); font-weight: 500; }
         .article-body em { font-style: italic; }
 
-        /* Divisor de secciones — reemplaza hr */
-        .section-break {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin: 3rem 0 0;
-        }
-
-        .section-break::before,
-        .section-break::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--cream-dark);
-        }
-
-        .section-break span {
-            color: var(--sage-light);
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
+        .article-body hr {
+            border: none;
+            border-top: 1px solid var(--cream-dark);
+            margin: 2.5rem 0;
         }
 
         /* ==================== BLOQUES EMOCIONALES ==================== */
@@ -942,7 +922,7 @@
 
         <p>Analizado a través de las dimensiones del EEMM, el colecho opera simultáneamente en el cuerpo del bebé —regulación de temperatura, ritmo cardíaco y respiración—, en su desarrollo emocional y relacional —la construcción progresiva de la capacidad de regularse y de confiar—, y en la cultura de cuidado que cada familia construye y transmite. Tres niveles que no se suceden, sino que ocurren a la vez, cada noche, en la misma cama.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="colecho-consciente">Colecho físico y emocional consciente</h2>
 
@@ -954,7 +934,7 @@
 
         <p>La Teoría del Marco Relacional (RFT) ofrece una explicación precisa del mecanismo por el que esto ocurre. El bebé, a través de la respuesta verbal contingente del cuidador, comienza a desarrollar marcos relacionales deícticos (YO/TÚ, AQUÍ/ALLÍ, AHORA/ENTONCES): la distinción entre la experiencia propia y la del otro, entre la seguridad presente y su disponibilidad futura. Esta red relacional incipiente constituye el andamiaje funcional del yo como contexto, que permite al niño observar su experiencia sin fusionarse con ella. En última instancia, este proceso produce un repertorio de autorregulación autónomo, capaz de manejar las emociones de manera saludable y resiliente.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="evolucion">La evolución del colecho en los tres primeros años</h2>
 
@@ -1009,7 +989,7 @@
 
         <p>Esta transición funcional implica que el niño ha desarrollado un repertorio suficiente de regulación verbalmente mediada: la capacidad de derivar la disponibilidad del cuidador —y por tanto la reducción de la función aversiva de la separación— a partir de la red de marcos relacionales construida durante la historia de contingencias compartidas, sin necesidad de la co-presencia física. Esto equivale a la consolidación de un marco jerárquico estable: el yo del niño comienza a organizarse como contexto que contiene experiencias —incluidas las de malestar— sin que estas definan su valía ni su seguridad.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="vinculo">Vínculo, historia funcional y autonomía</h2>
 
@@ -1029,7 +1009,7 @@
             <p>Si en algún momento de estas páginas has sentido que esto te supera, detente un momento aquí. El hecho de que te importe tanto —de que estés buscando, leyendo, preguntándote— ya dice algo muy concreto sobre quién eres como madre. No una madre perfecta. Algo más útil que eso: una madre que no ha dejado de importarle.</p>
         </div>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="entorno">El entorno: un factor decisivo</h2>
 
@@ -1043,7 +1023,7 @@
 
         <p>Desde PBT, la evaluación basada en procesos del entorno familiar no busca identificar déficits parentales ni construir narrativas de daño, sino detectar los procesos que, de forma consistente y sostenida, pueden estar reduciendo la flexibilidad de la díada: fusión cognitiva del cuidador con reglas rígidas sobre el "deber ser" de la crianza —que paradójicamente aumentan la desregulación al generar culpa y autocrítica—, pérdida de contacto con los valores parentales en momentos de alta demanda, o evitación de situaciones de malestar del niño que le privarían de oportunidades de regulación progresiva. La sobrecarga emocional en bebés ocurre cuando están expuestos de forma sostenida a estímulos que superan su capacidad de procesamiento: ambientes con estimulación muy intensa sin periodos de descanso, cambios bruscos e impredecibles de rutina. Ofrecer un ambiente suficientemente predecible y respetar los ritmos del bebé no exige perfección; exige una tendencia general hacia la consistencia, compatible con toda la variabilidad y la imperfección que forman parte de cualquier familia real.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="nadie-pregunta">Lo que nadie suele preguntar</h2>
 
@@ -1051,7 +1031,7 @@
 
         <p>Desde la psicología contextual, ese contexto importa —no para juzgarlo, sino porque forma parte del entorno en el que el niño crece y en el que tú cuidas. Una madre que está atravesando una depresión, o un duelo, o una crisis de pareja, no está fallando en su rol: está siendo un ser humano completo en un momento muy duro. Y esa madre —precisamente esa— merece que alguien le pregunte cómo está ella, no solo cómo duerme el bebé.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="malestar">El malestar del niño: preocupación u oportunidad</h2>
 
@@ -1065,7 +1045,7 @@
             <p>Y también tú mereces eso: no eliminar tu propio malestar de inmediato, sino aprender a sostenerlo. La madre que tolera su propia incertidumbre sin rendirse es, sin saberlo, la que más está enseñando.</p>
         </div>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="validacion">Validación emocional compasiva</h2>
 
@@ -1077,7 +1057,7 @@
 
         <p>Al optar por una respuesta verbal en lugar de una intervención física, los cuidadores permiten que el niño empiece a desarrollar su capacidad para calmarse a través de la regulación verbalmente mediada. A medida que crece, se pueden introducir técnicas simples de manejo del malestar —como la respiración profunda o la identificación de emociones— que no tienen como objetivo eliminar el malestar sino ampliar el repertorio del niño para relacionarse con él con mayor flexibilidad psicológica.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="perfeccionismo">Perfeccionismo y sobreprotección: cuando querer hacerlo bien se vuelve rígido</h2>
 
@@ -1093,7 +1073,7 @@
 
         <p>Lo mismo ocurre cuando ese patrón se extiende al niño. Protegerle del error o acompañarle para hacerlo todo bien no nace del desamor, sino del mismo impulso de cuidado que sostiene el colecho. Y sin embargo, cuando ese impulso se vuelve rígido, priva al niño de las oportunidades de frustración manejable que son, precisamente, el contexto en el que se desarrollan los repertorios conductuales más flexibles y duraderos. Permitir que el niño intente, se equivoque y vuelva a intentar; asignarle pequeñas responsabilidades en la vida cotidiana de la familia; <strong>celebrar el esfuerzo con independencia del resultado</strong>: ninguna de estas cosas requiere que el cuidador se diagnostique a sí mismo. Requiere únicamente un poco más de contacto con lo que realmente le importa y un poco menos de fusión con lo que cree que se espera de él.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="empatia">Empatía, compasión y reciprocidad</h2>
 
@@ -1115,7 +1095,7 @@
 
         <p>Esto conecta directamente con la autocompasión del cuidador: la capacidad de relacionarse con la propia imperfección y el propio malestar con la misma amabilidad que se ofrece al hijo, y de hacerlo de forma visible para el niño, no como queja sino como modelado. Aceptar que no se puede proteger siempre al hijo de todas las dificultades, pero que se le puede enseñar a ser compasivo también hacia quienes le cuidan, es un acto de amor que requiere defusión de los estándares de crianza perfecta y contacto con lo que realmente se quiere construir. El colecho consciente, en última instancia, es una oportunidad para edificar una historia funcional sólida —de contingencias consistentes, validación y marcos deícticos entrenados en ambas direcciones— desde la que el niño pueda crecer hacia una reciprocidad cada vez más simétrica, con la certeza de que no está solo y con los recursos relacionales para, a su vez, acompañar a otros.</p>
 
-        <div class="section-break"><span>✦</span></div>
+        <hr>
 
         <h2 id="tiranos">El colecho no crea niños tiranos: una respuesta desde el análisis funcional</h2>
 
