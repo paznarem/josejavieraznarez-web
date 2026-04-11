@@ -416,6 +416,20 @@
             color: var(--sage-light);
         }
 
+        .trust-link {
+            color: inherit;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: var(--sage-light);
+            text-underline-offset: 3px;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .trust-link:hover {
+            color: var(--sage-light);
+            text-decoration-color: currentColor;
+        }
+
         /* ==================== IDENTIFY ==================== */
         .identify {
             padding: 7rem 2rem;
@@ -1401,7 +1415,7 @@
             </div>
             <div class="trust-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                20+ artículos de libre acceso
+                <a href="blog/index.html" class="trust-link">35+ artículos de libre acceso</a>
             </div>
         </div>
     </div>
