@@ -202,63 +202,6 @@
             color: var(--warm);
         }
 
-        /* ==================== TOC ==================== */
-        .toc-wrapper {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .toc {
-            background: var(--cream);
-            border-radius: 12px;
-            padding: 1.5rem 1.8rem;
-            margin: 1.5rem 0 0;
-            border-left: 3px solid var(--sage-light);
-        }
-
-        .toc-title {
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--sage);
-            margin-bottom: 0.9rem;
-        }
-
-        .toc ol {
-            list-style: none;
-            counter-reset: toc-counter;
-            margin: 0;
-        }
-
-        .toc li {
-            counter-increment: toc-counter;
-            margin-bottom: 0.45rem;
-            display: flex;
-            align-items: baseline;
-            gap: 0.6rem;
-        }
-
-        .toc li::before {
-            content: counter(toc-counter, decimal-leading-zero);
-            font-size: 0.68rem;
-            color: var(--sage-light);
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            flex-shrink: 0;
-        }
-
-        .toc a {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            line-height: 1.4;
-            transition: color 0.2s;
-        }
-
-        .toc a:hover { color: var(--sage-dark); }
-
         /* ==================== BACK LINK ==================== */
         .back-to-blog {
             max-width: 760px;
@@ -823,7 +766,6 @@
             .back-to-blog { padding: 0 1.5rem 2rem; }
             .article-nav { padding: 2rem 1.5rem 0; }
             .article-nav-prev, .article-nav-next { max-width: 100%; }
-            .toc-wrapper { padding: 0 1.5rem; }
             .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
             .epist-note-title { font-size: 0.9rem; }
         }
@@ -831,8 +773,7 @@
         /* ==================== PRINT ==================== */
         @media print {
             nav, footer, .share-bar, .whatsapp-float, .instagram-float,
-            .article-cta, .related, .back-to-blog, .article-nav,
-            .toc-wrapper { display: none !important; }
+            .article-cta, .related, .back-to-blog, .article-nav { display: none !important; }
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
@@ -883,24 +824,6 @@
         <a href="index.html">← Volver al blog</a>
     </div>
 
-    <!-- ÍNDICE -->
-    <div class="toc-wrapper">
-        <nav class="toc" aria-label="Índice del artículo">
-            <div class="toc-title">En este artículo</div>
-            <ol>
-                <li><a href="#colecho-consciente">Colecho físico y emocional consciente</a></li>
-                <li><a href="#evolucion">La evolución del colecho en los tres primeros años</a></li>
-                <li><a href="#vinculo">Vínculo, historia funcional y autonomía</a></li>
-                <li><a href="#entorno">El entorno: un factor decisivo</a></li>
-                <li><a href="#nadie-pregunta">Lo que nadie suele preguntar</a></li>
-                <li><a href="#malestar">El malestar del niño: preocupación u oportunidad</a></li>
-                <li><a href="#validacion">Validación emocional compasiva</a></li>
-                <li><a href="#perfeccionismo">Perfeccionismo y sobreprotección</a></li>
-                <li><a href="#empatia">Empatía, compasión y reciprocidad</a></li>
-                <li><a href="#tiranos">El colecho no crea niños tiranos</a></li>
-            </ol>
-        </nav>
-    </div>
 
     <!-- ARTICLE BODY -->
     <article class="article-body">
