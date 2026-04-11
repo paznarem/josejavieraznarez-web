@@ -677,6 +677,69 @@
 
             .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
         }
+
+        /* ==================== CATEGORY NAV ==================== */
+        .category-nav {
+            position: sticky;
+            top: 60px;
+            z-index: 100;
+            background: var(--white);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 0.8rem 2rem;
+        }
+
+        .category-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .category-nav ul::-webkit-scrollbar { display: none; }
+
+        .category-nav a {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .category-nav a:hover {
+            color: var(--sage-dark);
+        }
+
+        .category-nav a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+            border-bottom-color: var(--sage);
+        }
+
+        .category-section {
+            scroll-margin-top: 120px;
+        }
+
+        @media (max-width: 600px) {
+            .category-nav {
+                top: 52px;
+                padding: 0.6rem 1rem;
+            }
+            .category-nav ul {
+                gap: 1rem;
+            }
+            .category-nav a {
+                font-size: 0.78rem;
+            }
+        }
     </style>
 
     <script>
@@ -698,7 +761,7 @@
                 <li><a href="../sobre-mi.html">Sobre mí</a></li>
                 <li><a href="../index.html#servicios">Servicios</a></li>
                 <li><a href="index.html" class="active">Blog</a></li>
-                <li><a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="https://www.instagram.com/jjaznarez.psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
             <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
@@ -720,6 +783,15 @@
             </div>
         </div>
     </header>
+
+    <!-- CATEGORY NAV -->
+    <nav class="category-nav" id="category-nav">
+        <ul>
+            <li><a href="#vivir-lo-que-vale" data-section="vivir-lo-que-vale">Vivir lo que vale</a></li>
+            <li><a href="#crianza-consciente" data-section="crianza-consciente">Crianza consciente</a></li>
+            <li><a href="#estres-y-ansiedad" data-section="estres-y-ansiedad">Estrés y ansiedad</a></li>
+        </ul>
+    </nav>
 
     <!-- CATEGORÍA 1 -->
     <section class="category-section reveal" id="vivir-lo-que-vale">
@@ -1051,7 +1123,7 @@
     </footer>
 
     <!-- FLOATING INSTAGRAM -->
-    <a href="https://www.instagram.com/jose_javier_aznarez_psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
+    <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
     <!-- FLOATING WHATSAPP -->
@@ -1079,6 +1151,22 @@
             extra.style.display = expanded ? 'none' : 'grid';
             btn.textContent = expanded ? 'Ver todos los artículos de la serie ↓' : 'Ocultar artículos ↑';
         }
+
+        // Category nav active state
+        const categoryLinks = document.querySelectorAll('.category-nav a[data-section]');
+        const categorySections = document.querySelectorAll('.category-section[id]');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    categoryLinks.forEach(link => {
+                        link.classList.toggle('active', link.dataset.section === entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+
+        categorySections.forEach(section => sectionObserver.observe(section));
     </script>
 </body>
 </html>
