@@ -644,6 +644,28 @@
             color: var(--white);
         }
 
+        .series-show-more {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.25rem;
+        }
+        .btn-show-more {
+            padding: 0.65rem 1.5rem;
+            background: transparent;
+            border: 1.5px solid var(--sage);
+            border-radius: 2rem;
+            color: var(--sage-dark);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-show-more:hover {
+            background: var(--sage);
+            color: var(--white);
+        }
+
         @media (max-width: 600px) {
             .page-header { padding: 8rem 1.25rem 4rem; }
 
@@ -896,6 +918,8 @@
                         <h3>Las tres reglas que organizan tu miedo escénico</h3>
                         <span class="blog-card-arrow">Leer →</span>
                     </a>
+                </div>
+                <div class="blog-grid series-grid series-extra" id="toca-extra" style="display:none">
                     <a href="toca-aunque-tiembles-4.html" class="blog-card series-card">
                         <div class="card-number series-num">04</div>
                         <div class="blog-card-category">Estrés y ansiedad</div>
@@ -933,6 +957,9 @@
                         <span class="blog-card-arrow">Leer →</span>
                     </a>
                 </div>
+                <div class="series-show-more">
+                    <button class="btn-show-more" onclick="toggleSerie('toca-extra', this)">Ver todos los artículos de la serie ↓</button>
+                </div>
             </div>
 
             <!-- SERIE: CUANDO LA ANSIEDAD Y EL ESTRÉS ACOMPAÑAN -->
@@ -961,6 +988,8 @@
                         <h3>DAFO funcional: de la amenaza a la dirección</h3>
                         <span class="blog-card-arrow">Leer →</span>
                     </a>
+                </div>
+                <div class="blog-grid series-grid series-extra" id="ansiedad-extra" style="display:none">
                     <a href="ansiedad-audicion-4.html" class="blog-card series-card">
                         <div class="card-number series-num">04</div>
                         <div class="blog-card-category">Estrés y ansiedad</div>
@@ -979,6 +1008,9 @@
                         <h3>El ensayo como laboratorio y cierre operativo</h3>
                         <span class="blog-card-arrow">Leer →</span>
                     </a>
+                </div>
+                <div class="series-show-more">
+                    <button class="btn-show-more" onclick="toggleSerie('ansiedad-extra', this)">Ver todos los artículos de la serie ↓</button>
                 </div>
             </div>
         </div>
@@ -1040,6 +1072,13 @@
         }, { threshold: 0.08 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function toggleSerie(id, btn) {
+            const extra = document.getElementById(id);
+            const expanded = extra.style.display !== 'none';
+            extra.style.display = expanded ? 'none' : 'grid';
+            btn.textContent = expanded ? 'Ver todos los artículos de la serie ↓' : 'Ocultar artículos ↑';
+        }
     </script>
 </body>
 </html>
