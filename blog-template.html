@@ -24,6 +24,7 @@
             - {{CATEGORIA_SLUG}} → Una de: "vivir-lo-que-vale" / "crianza-consciente" / "estres-y-ansiedad"
             - {{CONTENIDO}} → El cuerpo del artículo en HTML (párrafos con <p>, subtítulos con <h2>/<h3>, listas con <ul>, citas con <blockquote>)
             - {{SLUG}} → URL-friendly del título (ej: "la-autocompasion-un-camino")
+            - {{TIEMPO_LECTURA}} → Minutos de lectura estimados (aprox. palabras / 150)
          3. Guarda en la carpeta /blog/
          4. Actualiza el listado del blog (blog/index.html) con el nuevo artículo
 
@@ -209,12 +210,139 @@
         .article-meta {
             font-size: 0.88rem;
             color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
             color: var(--sage);
             text-decoration: none;
         }
+
+        .reading-time {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .reading-time::before {
+            content: '·';
+            color: var(--warm);
+        }
+
+        /* ==================== BLOQUES EMOCIONALES ==================== */
+        /* Usar para párrafos dirigidos directamente al lector, momentos de conexión personal */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+
+        .emotional-block p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        /* ==================== CIERRE DESTACADO ==================== */
+        /* Usar para el párrafo final de cierre cuando tenga un tono especial */
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ==================== NOTA COLAPSABLE ==================== */
+        /* Usar para notas técnicas, epistemológicas o contenido secundario */
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+
+        .collapsible-note-label {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .collapsible-tag {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            background: rgba(107,127,94,0.12);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+        }
+
+        .collapsible-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-primary);
+        }
+
+        .collapsible-chevron {
+            color: var(--text-light);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+
+        .collapsible-content {
+            padding: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .collapsible-content p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+
+        .collapsible-content p:last-child { margin-bottom: 0; }
 
         /* ==================== ARTICLE BODY ==================== */
         .article-body {
@@ -749,7 +877,10 @@
         <div class="article-header-inner">
             <span class="article-category">{{CATEGORIA}}</span>
             <h1>{{TITULO}}</h1>
-            <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a></p>
+            <p class="article-meta">
+                Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
+                <span class="reading-time">{{TIEMPO_LECTURA}} min de lectura</span>
+            </p>
         </div>
     </header>
 
@@ -788,6 +919,30 @@
         <hr>
 
         <p>Texto después de un separador...</p>
+
+        <!-- BLOQUE EMOCIONAL (dirigido directamente al lector): -->
+        <div class="emotional-block">
+            <p>Si estás leyendo esto en un momento difícil, este párrafo es para ti.</p>
+        </div>
+
+        <!-- CIERRE DESTACADO (párrafo final especial): -->
+        <div class="closing-block">
+            <p>Frase de cierre con tono cálido y personal, en estilo Playfair cursiva.</p>
+        </div>
+
+        <!-- NOTA COLAPSABLE (contenido técnico o secundario): -->
+        <details class="collapsible-note">
+            <summary>
+                <div class="collapsible-note-label">
+                    <span class="collapsible-tag">Nota técnica</span>
+                    <span class="collapsible-title">Título de la nota colapsable</span>
+                </div>
+                <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="collapsible-content">
+                <p>Contenido de la nota técnica o epistemológica...</p>
+            </div>
+        </details>
         -->
 
         <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
