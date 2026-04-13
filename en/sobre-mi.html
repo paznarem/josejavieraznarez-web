@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B6YNTT8HL4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Contextual Psychologist — About Me | José Javier Aznárez</title>
+    <meta name="description" content="Contextual psychologist with over 35 years of experience. I work online with adults in change processes, anxiety, self-compassion and conscious parenting from an ACT and CFT approach.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Online Contextual Psychologist — About Me | José Javier Aznárez">
+    <meta property="og:description" content="Contextual psychologist with over 35 years of experience supporting people in change processes, anxiety, self-compassion and conscious parenting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com/en/sobre-mi.html">
+
+    <link rel="icon" type="image/png" href="../logo-sage.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-light: #8A9E7C;
+            --sage-dark: #4A5B3F;
+            --cream: #F7F3ED;
+            --cream-dark: #EDE7DD;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #B8705A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+            --white: #FEFDFB;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-links a.active {
+            color: var(--sage-dark);
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: var(--white) !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* ==================== PAGE HEADER ==================== */
+        .page-header {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(107,127,94,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,127,94,0.1);
+            color: var(--sage-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ==================== CONTENT ==================== */
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .content-block {
+            margin-bottom: 4.5rem;
+        }
+
+        .content-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .content-block p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==================== BLOCKQUOTE ==================== */
+        .content-block blockquote {
+            margin: 2rem 0;
+            padding: 2rem 2.5rem;
+            background: var(--cream);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .content-block blockquote p {
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .content-block blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block blockquote strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--sage-dark);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        /* ==================== FORMACIÓN ==================== */
+        .formacion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .formacion-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .formacion-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .formacion-col ul li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            line-height: 1.5;
+        }
+
+        .formacion-col ul li:last-child {
+            border-bottom: none;
+        }
+
+        .trayectoria {
+            margin-top: 2rem;
+        }
+
+        .trayectoria h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .trayectoria ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 2.5rem;
+        }
+
+        .trayectoria ul li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            line-height: 1.5;
+        }
+
+        /* ==================== NOTA LEGAL ==================== */
+        .nota-legal {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 3rem 0 0;
+        }
+
+        .nota-legal p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.75;
+            font-style: italic;
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 7rem 2rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        .cta-section .note {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 1.1rem 2.2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            transition: all 0.3s;
+        }
+
+        .btn-email:hover {
+            border-color: var(--sage);
+            color: var(--sage-dark);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--sage-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .instagram-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        .instagram-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
+        }
+        .instagram-float svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            fill: none;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ==================== FLOAT IMAGES ==================== */
+        .content-block::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .img-float-right {
+            float: right;
+            max-width: 340px;
+            width: 100%;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-float-left {
+            float: left;
+            max-width: 340px;
+            width: 100%;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: block;
+            object-fit: cover;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(254, 253, 251, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .formacion-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trayectoria ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .img-float-right,
+            .img-float-left {
+                float: none;
+                max-width: 100% !important;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 3rem 1.25rem 3rem;
+            }
+
+            .content-block blockquote {
+                padding: 1.5rem 1.5rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <ul class="nav-links">
+                <li><a href="como-trabajo.html">How I Work</a></li>
+                <li><a href="sobre-mi.html" class="active">About Me</a></li>
+                <li><a href="../index.html#servicios">Services</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="https://www.instagram.com/jjaznarez.psychologist/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="../index.html#contacto" class="nav-cta">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <div class="page-tag">About Me</div>
+            <h1>My story</h1>
+            <p class="subtitle">A human being walking alongside other human beings</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- Block 1 -->
+        <div class="content-block reveal">
+            <h2>My path: learning to move forward in difficult moments</h2>
+            <p>For over thirty-five years, I have supported people in moments when moving forward was far from obvious. Along this journey — supporting, guiding, and mentoring families, children, and adolescents through their development, growth, and everyday difficulties — I have learned to observe what helps people keep going when everything gets complicated.</p>
+            <p>This is not just about accumulated experience, but about the context in which I have been able to see, first-hand, how human responses are shaped in real life.</p>
+            <p>Throughout my life, I have built my own rules and behavioural patterns through learning in very diverse contexts. I have had the privilege of being a son, a brother in a large family, a husband, a father of three children, and recently, a grandfather.</p>
+            <p>Each of these roles has given me experiences that have shaped my capacity to love, hold, listen, understand, and support — not only on a personal level, but also in my work as a psychologist.</p>
+            <p>There was a key moment in my story that still directly influences how I work today:</p>
+            <p>My path began as a professional musician during adolescence. It was not just an artistic journey, but ongoing training in something very specific: continuing to move forward in what mattered to me amid pressure, evaluation, and difficulty.</p>
+            <p>Balancing music with academic studies placed me, from an early age, in a situation I now recognise as central to my work: doing what mattered while errors, doubts, arousal, and moments of paralysis kept appearing.</p>
+            <p>That process was training me — without my realising it at the time — in a very specific direction: not depending on how I felt in order to act, and sustaining my behaviour even when my inner experience was pushing in the opposite direction.</p>
+            <p>I did not just learn responsibility or perseverance there. I learned something more precise: to keep acting even when I did not feel ready, to sit with frustration without abandoning what I was doing, and not to wait until everything felt right inside before taking the next step.</p>
+            <img src="../camino.jpg" alt="Path between trees" class="img-float-right">
+            <p>Over time, I have recognised that same pattern in many of the people I support: moments when anxiety, insecurity, or self-criticism begin to organise what they do and limit their lives.</p>
+            <p>And that is precisely where I work today: not in eliminating that inner experience, but in helping the person respond differently when it appears, expanding their room for action in the areas that matter to them.</p>
+            <p>That learning — moving forward with difficulty present, without letting what is inside set the limits of action — remains the core of my work today.</p>
+            <p>And, at the same time, that journey has not stopped there.</p>
+            <p>Alongside the accumulated experience, I have maintained a rigorous and demanding continuing education, not focused on adding techniques, but on understanding precisely which processes are at play when a person gets stuck, and what conditions allow those patterns to change.</p>
+            <p>During my long years as a student — which are still not over — I have developed a way of understanding human behaviour based on functional analysis: what happens, in what context, with what function, and what consequences maintain what is currently limiting you.</p>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="content-block reveal">
+            <h2>Why this matters in my work as a psychologist</h2>
+            <p>I do not start only from theoretical training, but from having spent decades in direct contact with people in real situations: in the classroom, in the family, at work, in relationships, on stage, in moments of conflict, growth, and difficulty.</p>
+            <p>This allows me to go beyond general explanations and understand how what is happening to you takes shape in your everyday life: what triggers it, what maintains it, and why, despite your efforts, it keeps repeating itself.</p>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="content-block reveal">
+            <h2>My mistakes, my strength</h2>
+            <p>I have made mistakes and taken decisions with unexpected outcomes, some of them painful. Perhaps more than successes.</p>
+            <p>I have learned, gradually, to recognise those moments as part of my story — without needing to erase them or fight against them, but understanding them as part of a process from which one also learns.</p>
+            <p>Today I try to live with attention to the present, acknowledging my worries, fears, and moments of sadness as part of the human experience. Not so they disappear, but so they do not automatically drive what I do.</p>
+            <p>It is in challenges that I find the opportunity to act in line with what matters to me.</p>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="content-block reveal">
+            <img src="../lago.jpg" alt="Lake among mountains" class="img-float-left">
+            <h2>My work as a psychologist</h2>
+            <p>As a contextual psychologist, my approach moves away from the idea that there is something to "fix" or "cure" in the person.</p>
+            <p>I do not work from labels, but from the analysis of what is happening in your life.</p>
+            <p>My work focuses on understanding how your responses are organised in specific situations: what happens before, what you do, and what short- and long-term consequences it carries.</p>
+            <p>Not as isolated elements, but as patterns that have been built throughout your history and that still operate today, even though sometimes at a high cost.</p>
+            <p>I aim to help you identify those patterns and, above all, open up alternatives when those ways of responding no longer bring you closer to the life you want to live.</p>
+            <p>It is not about applying techniques or changing what you feel.</p>
+            <p>It is about no longer getting trapped in those automatic responses and regaining the capacity to choose what you do, even when distress is present.</p>
+            <p>Rather than focusing on symptoms, the goal is for you to respond more flexibly to what is happening, moving forward — with everything that shows up — toward a life more consistent with what matters to you.</p>
+            <p>This is what I offer: a space to understand precisely what is happening to you and to open up real alternatives for responding differently.</p>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="content-block reveal">
+            <h2>My commitment to you</h2>
+            <blockquote>
+                <strong>Your mountain. Your journey.</strong>
+                <p>Your life is a journey of your own, with obstacles, decisions, and moments when moving forward is far from obvious.</p>
+                <p>My role is not to set the path or tell you what you should do.</p>
+                <p>It is to help you see more clearly where you are, what is influencing how you move forward, and what options are available to you at each moment.</p>
+                <p>From my experience — after more than thirty-five years supporting people in real-life contexts — I can offer you a perspective grounded in observation, analysis, and direct work.</p>
+            </blockquote>
+            <p>I am not here to judge you.</p>
+            <p>I am here to help you understand and to act.</p>
+            <p>The goal is not to create dependence or to extend the process unnecessarily.</p>
+            <p>It is for you to regain the autonomy to respond to what is happening with greater flexibility and direction.</p>
+            <p>My role is to walk alongside you.</p>
+            <p>Change is built in what you do with what happens to you.</p>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="content-block reveal">
+            <img src="../montañaslago.jpg" alt="Mountains and lake" class="img-float-right">
+            <h2>My experience as a father</h2>
+            <p>Raising a child is one of the most exciting and, at the same time, most demanding tasks there is.</p>
+            <p>I have been there too.</p>
+            <p>I believed that love, dedication, and responsibility would be enough. And yet, there were moments when I did not understand what was happening or how to respond differently.</p>
+            <p>I made mistakes — some avoidable, others not — always from a place of commitment.</p>
+            <p>Over time, I came to understand something important: we do not always need to do better; sometimes we need to better understand what is happening and what function our actions serve.</p>
+            <p>If I had had that framework earlier, it would have spared me many doubts and moments of guilt.</p>
+            <p>That experience is not a limitation in my work.</p>
+            <p>It is part of its foundation.</p>
+            <p>Today I support mothers and fathers not from theory, but from having been there myself — and from understanding, with greater precision, what happens in the relationship when things get complicated.</p>
+        </div>
+
+        <!-- Block 7 -->
+        <div class="content-block reveal">
+            <h2>Education and training</h2>
+            <div class="formacion-grid">
+                <div class="formacion-col">
+                    <h3>Psychology</h3>
+                    <ul>
+                        <li>Master's in Contextual Therapies — Universidad de Almería</li>
+                        <li>Degree in Psychology (Education and Learning) — UNED</li>
+                        <li>Specialist in Contextual Therapies (Third Generation) — UAL</li>
+                        <li>Clinical training in cognitive-behavioural techniques — UNED</li>
+                        <li>Registered psychologist: COP-N-02089 (Official College of Psychologists of Navarra)</li>
+                        <li>Member of the ACBS (Association for Contextual Behavioral Science)</li>
+                    </ul>
+                </div>
+                <div class="formacion-col">
+                    <h3>Music and education</h3>
+                    <ul>
+                        <li>Degree in History and Music Sciences — Universidad de Salamanca</li>
+                        <li>Master's in Psychology and Music Education — UNED</li>
+                        <li>Teaching Diploma in Primary Education (Natural Sciences, Mathematics, and Music)</li>
+                        <li>Author of the educational project Música Para Todos (Music For All)</li>
+                        <li>Publications in psychology and music pedagogy in Spanish, Basque, and Galician</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming book -->
+        <div class="content-block reveal">
+            <div style="display:inline-block;background:var(--terracotta);color:white;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:100px;margin-bottom:1rem;">New book</div>
+            <h2>What your child feels: how to be there in the moment they need you most</h2>
+            <p><em>A practical guide to emotional education for parents and grandparents, grounded in Contextual Behavioral Science</em></p>
+            <p>A new book by José Javier Aznárez where contextual science becomes a practical tool for families, educators, and professionals. Coming soon.</p>
+        </div>
+
+        <!-- Legal note -->
+        <div class="nota-legal reveal">
+            <p>My services do not constitute clinical or healthcare attention, and do not include the diagnosis or treatment of psychological disorders or pathologies, in accordance with Spanish Law 44/2003 on the Regulation of Health Professions and the Code of Ethics of the Psychologist in Spain.</p>
+        </div>
+
+    </main>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner reveal">
+            <span class="section-label">Let's talk</span>
+            <h2>Does what you have read resonate with you?</h2>
+            <p>If you feel this kind of support might be what you need, write me. A short message is enough to get started.</p>
+            <p class="note">Writing does not mean starting therapy. It is just a first conversation.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Write me on WhatsApp
+                </a>
+                <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">
+                    ✉ Send email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Legal Notice</a>
+                <a href="aviso-legal.html#politica-privacidad">Privacy Policy</a>
+                <a href="consentimiento-tarifas.html">Consent & Fees</a>
+            </div>
+            <div class="footer-legal">
+                My services do not constitute clinical or healthcare attention, and do not include the diagnosis or treatment of psychological disorders or pathologies, in accordance with Spanish Law 44/2003 on the Regulation of Health Professions and the Code of Ethics of the Psychologist in Spain.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING INSTAGRAM -->
+    <a href="https://www.instagram.com/jjaznarez.psychologist/" class="instagram-float" target="_blank" aria-label="Follow on Instagram">
+        <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    </a>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Nav scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
