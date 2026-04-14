@@ -450,7 +450,13 @@
         }
         /* Ambas tarjetas tienen la misma altura mínima (la del contenido mayor) */
         .series-showcase-grid .series-showcase {
-            min-height: 220px;
+            min-height: 340px;
+        }
+        @media (max-width: 1100px) {
+            .series-showcase-grid .series-showcase { min-height: 380px; }
+        }
+        @media (max-width: 860px) {
+            .series-showcase-grid .series-showcase { min-height: 0; }
         }
         @media (max-width: 860px) {
             .series-showcase-grid { grid-template-columns: 1fr; }
