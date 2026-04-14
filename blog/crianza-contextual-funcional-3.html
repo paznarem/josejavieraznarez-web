@@ -110,6 +110,33 @@
         .series-nav-label{font-size:.72rem;color:var(--text-light);letter-spacing:.05em;text-transform:uppercase;}
         .series-nav-title{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);line-height:1.3;}
         .reading-time{font-size:.82rem;color:var(--text-light);display:inline-flex;align-items:center;gap:.35rem;}.reading-time::before{content:'·';color:var(--warm);}
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block { background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%); border-radius: 12px; padding: 1.5rem 1.8rem; margin: 1.5rem 0; border-left: 3px solid var(--warm); }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+        .closing-block { text-align: center; padding: 2.5rem 2rem; margin: 2rem 0; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 16px; }
+        .closing-block p { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--text-primary); line-height: 1.75; max-width: 560px; margin: 0 auto; }
+        .collapsible-note { margin: 2.5rem 0; border: 1px solid var(--cream-dark); border-radius: 12px; overflow: hidden; }
+        .collapsible-note summary { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.5rem; cursor: pointer; background: var(--cream); list-style: none; user-select: none; transition: background 0.2s; }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px; }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+        .infobox { border-left: 3px solid var(--warm); background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%); border-radius: 0 12px 12px 0; padding: 1.2rem 1.6rem; margin: 2rem 0; }
+        .infobox-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.5rem; }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+        .scenario-block { background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%); border-left: 3px solid var(--warm-light); border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .scenario-block p { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.6rem; display: block; }
     </style>
 </head>
 <body>
@@ -163,11 +190,32 @@
 
 <p>Los marcos deícticos —YO-TÚ, AQUÍ-ALLÍ, AHORA-ENTONCES— son la base lingüística de la perspectiva psicológica y de la distinción entre el Yo como observador y el contenido de la experiencia. El desarrollo de estos marcos en la infancia temprana ocurre en las interacciones con adultos que sistemáticamente preguntan, nombran perspectivas y señalan diferencias entre puntos de vista.</p>
 
-<p>En términos cotidianos: cada vez que un adulto dice «yo veo que estás triste» en lugar de «eres un niño llorón», está enseñando algo que no parece enseñanza. Está instalando la diferencia entre el yo que siente y lo que se siente. Entre «soy mi tristeza» y «ahora estoy sintiendo tristeza». Está aprendiendo que hay un Yo que observa la tristeza y una tristeza que puede ser observada. Esta distinción produce un niño que con el tiempo puede decirse a sí mismo «estoy muy enfadado» sin que ese enfado tome el control por completo. Esta distinción —entre el Yo que observa y el contenido que se observa— es la base funcional del Yo como Contexto en ACT y del desarrollo de la flexibilidad psicológica. No es un logro abstracto: se construye en interacciones concretas y repetidas con adultos que mantienen la distinción consistentemente. Es la semilla de lo que más adelante llamamos regulación emocional.</p>
+<div class="infobox">
+<div class="infobox-label">Concepto clave: marcos deícticos</div>
+<p>Los marcos deícticos —YO-TÚ, AQUÍ-ALLÍ, AHORA-ENTONCES— son la base lingüística de la perspectiva psicológica. Se desarrollan en las interacciones con adultos que preguntan, nombran perspectivas y señalan diferencias entre puntos de vista. Son la semilla de lo que más adelante llamamos regulación emocional.</p>
+</div>
 
-<p>Cuando el entorno relacional del niño no diferencia entre el Yo y sus estados internos —cuando el enfado se trata como señal de que «eres un niño malo» o cuando el miedo se trata como evidencia de «debilidad»— la fusión cognitiva entre identidad y contenido mental queda instalada como patrón por defecto. Desde RFT, esto ocurre porque el marco de coordinación (A equivale a B) se aplica indiscriminadamente: «yo soy mi enfado», «yo soy mi miedo». Las funciones aversivas del enfado o del miedo se transfieren a la identidad, y el resultado es la evitación experiencial de la propia experiencia interna.</p>
+<p>En términos cotidianos: cada vez que un adulto dice «yo veo que estás triste» en lugar de «eres un niño llorón», está enseñando algo que no parece enseñanza. Está instalando la diferencia entre el yo que siente y lo que se siente. Esta distinción produce un niño que con el tiempo puede decirse a sí mismo «estoy muy enfadado» sin que ese enfado tome el control por completo.</p>
 
-<p>La diferencia entre «eres un desastre» y «has dejado la habitación sin recoger» no es de educación ni de tono: son dos afirmaciones que operan en niveles completamente distintos. La primera instala una identidad («soy lo que hago mal»). La segunda describe una conducta que puede cambiar. Un niño que crece escuchando la primera versión aprende que sus errores lo definen. El que crece escuchando la segunda aprende que los errores son información, no veredictos sobre personas. Esta diferencia, repetida miles de veces a lo largo del desarrollo, produce repertorios psicológicos cualitativamente distintos.</p>
+<blockquote>
+<p>La diferencia entre «eres un desastre» y «has dejado la habitación sin recoger» no es de tono: son dos afirmaciones que operan en niveles completamente distintos. La primera instala una identidad. La segunda describe una conducta que puede cambiar.</p>
+</blockquote>
+
+<p>Un niño que crece escuchando la primera versión aprende que sus errores lo definen. El que crece escuchando la segunda aprende que los errores son información, no veredictos sobre personas. Esta diferencia, repetida miles de veces a lo largo del desarrollo, produce repertorios psicológicos cualitativamente distintos.</p>
+
+<details class="collapsible-note">
+    <summary>
+        <div class="collapsible-note-label">
+            <span class="collapsible-tag">Nota técnica</span>
+            <span class="collapsible-title">Fusión cognitiva e identidad: la perspectiva de RFT</span>
+        </div>
+        <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="collapsible-content">
+        <p>Cuando el entorno relacional del niño no diferencia entre el Yo y sus estados internos —cuando el enfado se trata como señal de «eres un niño malo» o el miedo como evidencia de «debilidad»— la fusión cognitiva entre identidad y contenido mental queda instalada como patrón por defecto.</p>
+        <p>Desde RFT, esto ocurre porque el marco de coordinación (A equivale a B) se aplica indiscriminadamente: «yo soy mi enfado», «yo soy mi miedo». Las funciones aversivas del estado interno se transfieren a la identidad, y el resultado es la evitación experiencial de la propia experiencia.</p>
+    </div>
+</details>
 
 <h3>La transformación de funciones y el contexto familiar</h3>
 
@@ -177,19 +225,43 @@
 
 <p>Esta perspectiva tiene consecuencias psicológicas directas. Las intervenciones que buscan modificar la «sensibilidad» del niño a ciertas señales parentales sin analizar la historia de marcos que produjo esa función pueden resultar superficiales o incluso contraproducentes. La transformación de funciones ocurre a través del lenguaje y de las contingencias relacionales, y es en ese nivel donde la intervención debe operar.</p>
 
-<p>Un ejemplo que ilustra este mecanismo con precisión: un niño de diez años que, cada vez que su padre le pregunta cómo le ha ido en el colegio, se cierra y responde con monosílabos. Los padres lo interpretan como «no quiere contarnos nada.» El análisis funcional revela otra historia: durante años, cuando el niño contaba algo difícil —una pelea con un amigo, una mala nota— la respuesta del padre era inmediatamente evaluativa y correctiva. La pregunta «¿cómo te ha ido?» ha heredado, por co-ocurrencia repetida, las funciones de la evaluación que seguía. No es que el niño no quiera hablar con su padre: es que esa pregunta específica, en ese contexto específico, activa una historia de consecuencias que organizan el cierre antes de que el niño tome ninguna decisión consciente. Cambiar la pregunta, o cambiar la respuesta que sigue a la apertura del niño, son dos intervenciones funcionalmente distintas. Saber cuál tiene mayor peso requiere el análisis que la categoría «hijo hermético» no puede proporcionar.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ En consulta</span>
+<p>Un niño de diez años que, cada vez que su padre le pregunta cómo le ha ido en el colegio, se cierra y responde con monosílabos. Los padres lo interpretan como «no quiere contarnos nada.»</p>
+<p>El análisis funcional revela otra historia: durante años, cuando el niño contaba algo difícil —una pelea con un amigo, una mala nota— la respuesta del padre era inmediatamente evaluativa y correctiva. La pregunta «¿cómo te ha ido?» ha heredado, por co-ocurrencia repetida, las funciones de la evaluación que seguía.</p>
+<p>No es que el niño no quiera hablar con su padre: es que esa pregunta específica, en ese contexto específico, activa una historia de consecuencias que organizan el cierre antes de que el niño tome ninguna decisión consciente. Cambiar la pregunta, o cambiar la respuesta que sigue a la apertura del niño, son dos intervenciones funcionalmente distintas. Saber cuál tiene mayor peso requiere el análisis que la categoría «hijo hermético» no puede proporcionar.</p>
+</div>
 
 <h3>Las redes verbales rígidas y la crianza bajo presión cultural</h3>
 
 <p>La sociedad contemporánea produce, a través de redes sociales, plataformas digitales y divulgación científica de baja precisión, una cantidad sin precedentes de reglas verbales sobre crianza a las que los padres quedan expuestos de forma continua. Desde RFT, estas reglas no son inocuas: instalan marcos relacionales que transforman la función de la propia conducta parental.</p>
 
-<p>Considérese una situación cotidiana: un niño de cuatro años tiene un berrinche en el supermercado porque no le compran lo que pide. El padre siente la mirada de otros adultos alrededor. En ese momento, ceder no tiene la función de atender una necesidad real del hijo: tiene la función de reducir la vergüenza del adulto ante el juicio social percibido. El comportamiento parece sensible —el niño para de llorar— pero está organizado por la evitación del malestar del adulto, no por el bienestar del hijo. Con suficiente repetición, este patrón enseña al niño que el berrinche es una palanca eficaz. Este mecanismo —la conducta parental organizada por el impulso de eliminar la activación propia más que por las necesidades reales del hijo— es uno de los procesos más frecuentes que la CCF identifica en las dificultades de crianza. Se analiza en detalle en el próximo artículo.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Escena cotidiana: el berrinche en el supermercado</span>
+<p>Un niño de cuatro años tiene un berrinche en el supermercado porque no le compran lo que pide. El padre siente la mirada de otros adultos alrededor. En ese momento, ceder no tiene la función de atender una necesidad real del hijo: tiene la función de reducir la vergüenza del adulto ante el juicio social percibido.</p>
+<p>El comportamiento parece sensible —el niño para de llorar— pero está organizado por la evitación del malestar del adulto, no por el bienestar del hijo. Con suficiente repetición, este patrón enseña al niño que el berrinche es una palanca eficaz.</p>
+</div>
 
-<p>El análisis de las redes verbales rígidas sobre crianza es, desde RFT, un componente esencial del trabajo psicológico con padres. No se trata de reemplazar unas reglas por otras, sino de desarrollar sensibilidad a las contingencias reales del entorno (tracking) en lugar de operar bajo control verbal rígido (pliance) que puede desconectarse de lo que realmente está ocurriendo en la relación.</p>
+<p>Este mecanismo —la conducta parental organizada por el impulso de eliminar la activación propia más que por las necesidades reales del hijo— es uno de los procesos más frecuentes que la CCF identifica. Se analiza en detalle en el próximo artículo.</p>
+
+<details class="collapsible-note">
+    <summary>
+        <div class="collapsible-note-label">
+            <span class="collapsible-tag">Nota técnica</span>
+            <span class="collapsible-title">Tracking vs. pliance: sensibilidad a contingencias reales</span>
+        </div>
+        <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="collapsible-content">
+        <p>El análisis de las redes verbales rígidas sobre crianza es, desde RFT, un componente esencial del trabajo psicológico con padres. No se trata de reemplazar unas reglas por otras, sino de desarrollar sensibilidad a las contingencias reales del entorno (<em>tracking</em>) en lugar de operar bajo control verbal rígido (<em>pliance</em>) que puede desconectarse de lo que realmente está ocurriendo en la relación.</p>
+    </div>
+</details>
 
 <hr>
 
-<p><em>En el próximo artículo se analizan los seis procesos psicológicos que organizan la conducta del adulto cuidador —contacto con el momento presente, defusión, aceptación, perspectiva del observador, valores y acción comprometida— y cómo la autocompasión del adulto es condición necesaria para que todos ellos sean sostenibles en la crianza real.</em></p>
+<div class="closing-block">
+<p>En el próximo artículo se analizan los seis procesos psicológicos que organizan la conducta del adulto cuidador —contacto con el momento presente, defusión, aceptación, perspectiva del observador, valores y acción comprometida— y cómo la autocompasión del adulto es condición necesaria para que todos ellos sean sostenibles en la crianza real.</p>
+</div>
 
     </article>
 

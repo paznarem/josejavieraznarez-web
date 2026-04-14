@@ -174,6 +174,33 @@
         .series-nav-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--text-primary); line-height: 1.3; }
         .reading-time { font-size: 0.82rem; color: var(--text-light); display: inline-flex; align-items: center; gap: 0.35rem; }
         .reading-time::before { content: '·'; color: var(--warm); }
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block { background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%); border-radius: 12px; padding: 1.5rem 1.8rem; margin: 1.5rem 0; border-left: 3px solid var(--warm); }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+        .closing-block { text-align: center; padding: 2.5rem 2rem; margin: 2rem 0; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 16px; }
+        .closing-block p { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--text-primary); line-height: 1.75; max-width: 560px; margin: 0 auto; }
+        .collapsible-note { margin: 2.5rem 0; border: 1px solid var(--cream-dark); border-radius: 12px; overflow: hidden; }
+        .collapsible-note summary { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.5rem; cursor: pointer; background: var(--cream); list-style: none; user-select: none; transition: background 0.2s; }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px; }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+        .infobox { border-left: 3px solid var(--warm); background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%); border-radius: 0 12px 12px 0; padding: 1.2rem 1.6rem; margin: 2rem 0; }
+        .infobox-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.5rem; }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+        .scenario-block { background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%); border-left: 3px solid var(--warm-light); border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .scenario-block p { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.6rem; display: block; }
     </style>
 </head>
 <body>
@@ -230,17 +257,24 @@
 
 <p>El punto de partida de este marco es una idea que parece obvia pero que tiene consecuencias enormes: ninguna conducta existe sola. Ningún grito, ningún límite, ninguna disculpa puede evaluarse arrancado del momento en que ocurrió, de la historia que lo produjo y de lo que significa en esa relación concreta.</p>
 
-<p>Esta postura adopta el acto-en-contexto como unidad de análisis irreducible. No hay conducta sin contexto, y el contexto no puede comprenderse sin la conducta que organiza. Esta reciprocidad no es un detalle metodológico: es la estructura misma de la realidad que el contextualismo funcional describe.</p>
+<div class="infobox">
+<div class="infobox-label">Principio central</div>
+<p>Esta postura adopta el <strong>acto-en-contexto</strong> como unidad de análisis irreducible. No hay conducta sin contexto, y el contexto no puede comprenderse sin la conducta que organiza. Esta reciprocidad no es un detalle metodológico: es la estructura misma de la realidad que el contextualismo funcional describe.</p>
+<p>Aplicado a la crianza: ninguna conducta —un límite, una validación, una disculpa, un grito— puede evaluarse en abstracción del contexto en que ocurre, de la historia que la produjo y de la función que cumple en el sistema relacional.</p>
+</div>
 
-<p>Aplicado a la crianza, esto significa que ninguna conducta maternal/parental —un límite, una validación, una restauración vincular, una disculpa, un grito— puede evaluarse en abstracción del contexto en que ocurre, de la historia de contingencias que la produjo y de la función que cumple en el sistema relacional.</p>
+<blockquote>
+<p>La pregunta no es «¿fue un grito?» sino «¿qué función cumplió ese grito en ese momento?». Dos padres que gritan exactamente lo mismo pueden estar haciendo cosas funcionalmente opuestas.</p>
+</blockquote>
 
-<p>Esto significa que la pregunta no es «¿fue un grito?» sino «¿qué función cumplió ese grito en ese momento?». Dos padres que gritan exactamente lo mismo pueden estar haciendo cosas funcionalmente opuestas. Uno grita porque ha perdido el control y el hijo recibe señal de peligro. El otro eleva el tono desde la firmeza y el hijo recibe señal de límite real. La palabra es idéntica. Lo que llega al hijo, no.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Mismo gesto, distinto significado</span>
+<p>Uno grita porque ha perdido el control y el hijo recibe señal de peligro. El otro eleva el tono desde la firmeza y el hijo recibe señal de límite real. La palabra es idéntica. Lo que llega al hijo, no.</p>
+<p>Un «no» firme puede ser, según el contexto y la historia, una intervención protectora o una forma de control coercitivo. Una disculpa puede ser una acción comprometida con el vínculo o una estrategia de regulación emocional del adulto que usa al hijo como vehículo de alivio.</p>
+<p>Dos padres que dicen «no» ante la petición de su hijo pueden estar haciendo cosas funcionalmente opuestas. Uno lo dice después de escuchar, y el tono comunica firmeza y presencia. El otro lo dice desde el agotamiento, sin mirar al hijo, y el mismo «no» comunica ausencia. El hijo recibe cosas distintas aunque la palabra sea idéntica.</p>
+</div>
 
-<p>Un «no» firme puede ser, según el contexto y la historia, una intervención protectora o una forma de control coercitivo. Una disculpa puede ser una acción comprometida con el vínculo o una estrategia de regulación emocional del adulto que usa al hijo como vehículo de alivio. La CCF no pregunta qué conducta ocurrió, sino qué función cumple en este contexto con esta historia.</p>
-
-<p>Dos padres que hacen exactamente lo mismo —decir «no» ante la petición de su hijo— pueden estar haciendo cosas funcionalmente opuestas. Uno lo dice después de escuchar, habiendo considerado lo que su hijo necesita, y el tono y el momento comunican firmeza y presencia. El otro lo dice desde el agotamiento, sin mirar al hijo, con la mente en otra parte, y el mismo «no» comunica ausencia. El hijo recibe cosas distintas aunque la palabra sea idéntica. Esta es la razón por la que la CCF no evalúa conductas aisladas sino procesos que las organizan.</p>
-
-<p>El criterio de verdad del contextualismo funcional es pragmático: una descripción es adecuada en la medida en que ayuda a predecir e influir sobre los eventos de interés. En el caso de la CCF, los eventos de interés son los procesos psicológicos que organizan la conducta parental y el desarrollo socioemocional del hijo. La adecuación del marco se evalúa por su utilidad para identificar qué cambiar, cuándo y cómo, en cada sistema familiar concreto.</p>
+<p>El criterio de verdad del contextualismo funcional es pragmático: una descripción es adecuada en la medida en que ayuda a predecir e influir sobre los eventos de interés. La adecuación del marco se evalúa por su utilidad para identificar qué cambiar, cuándo y cómo, en cada sistema familiar concreto.</p>
 
 <h2>La relación como sistema: lo que hace uno cambia lo que hace el otro</h2>
 
@@ -248,7 +282,13 @@
 
 <p>El llanto del bebé modifica la conducta del padre; la respuesta del padre modifica la frecuencia e intensidad del llanto; la historia de esas interacciones crea un patrón que condiciona las respuestas futuras de ambos en situaciones similares. Con la llegada del lenguaje, las contingencias directas se complementan con contingencias verbalmente mediadas: el niño aprende reglas sobre cómo comportarse basadas no solo en lo que ha experimentado directamente sino en lo que se le dice, en lo que observa en otros y en los marcos relacionales que su historia verbal le ha enseñado a aplicar.</p>
 
-<p>Este nivel de análisis tiene consecuencias importantes para la comprensión de la transmisión intergeneracional. Lo que se transmite de padres a hijos no son rasgos ni tipos de apego como entidades fijas, sino secuencias conductuales y redes verbales que se aprenden por observación, por contingencias directas y por el modelado implícito que ocurre en la co-regulación cotidiana. Un padre que, al recibir una llamada difícil del colegio, puede respirar antes de responder, escuchar sin defenderse y mantener la conversación orientada a entender al hijo en lugar de proteger su propia imagen, no está solo gestionando un conflicto: está mostrando, en tiempo real y sin palabras, que las situaciones difíciles pueden atravesarse sin desorganizarse. Esto es lo que la historia de co-regulación instala como repertorio en el hijo antes de que ninguna enseñanza explícita pueda hacer ese trabajo.</p>
+<p>Este nivel de análisis tiene consecuencias importantes para la comprensión de la transmisión intergeneracional. Lo que se transmite de padres a hijos no son rasgos ni tipos de apego como entidades fijas, sino secuencias conductuales y redes verbales que se aprenden por observación, por contingencias directas y por el modelado implícito que ocurre en la co-regulación cotidiana.</p>
+
+<div class="scenario-block">
+<span class="scenario-label">✦ Modelado en tiempo real</span>
+<p>Un padre que, al recibir una llamada difícil del colegio, puede respirar antes de responder, escuchar sin defenderse y mantener la conversación orientada a entender al hijo en lugar de proteger su propia imagen, no está solo gestionando un conflicto: está mostrando, en tiempo real y sin palabras, que las situaciones difíciles pueden atravesarse sin desorganizarse.</p>
+<p>Esto es lo que la historia de co-regulación instala como repertorio en el hijo antes de que ninguna enseñanza explícita pueda hacer ese trabajo.</p>
+</div>
 
 <h3>La asimetría funcional y su evolución</h3>
 
@@ -256,23 +296,36 @@
 
 <p>El error psicológico más frecuente en el acompañamiento psicológico a familias no es mantener la asimetría durante demasiado tiempo, sino confundir la asimetría con la unilateralidad del cuidado. El vínculo que no incorpora progresivamente la contribución del hijo —en formas acordes a su nivel de desarrollo— no produce independencia sino dependencia instrumental: el hijo aprende a extraer del vínculo sin desarrollar los recursos para sostenerlo. Esta distinción, que la CCF articula explícitamente, tiene implicaciones directas para la intervención con adolescentes y jóvenes adultos cuya relación con sus familias ha quedado atrapada en patrones de toma sin reciprocidad.</p>
 
-<p>Un ejemplo frecuente en consulta con familias de adolescentes: padres que han resuelto sistemáticamente todos los problemas de su hijo desde pequeño —los conflictos con los amigos, los deberes, las dificultades con los profesores— con la convicción de que estaban cuidando bien. Cuando ese hijo llega a los quince o dieciséis años y no sabe gestionar una discusión con un compañero sin llamar a su madre para que intervenga, o colapsa ante cualquier obstáculo académico sin haber desarrollado ninguna estrategia propia, los padres describen el resultado con perplejidad: «hemos estado siempre ahí para él y aun así...» La CCF permite nombrar lo que ocurrió: la asimetría no evolucionó. El vínculo siguió ofreciendo lo que ofrece un vínculo con un bebé —protección total, resolución externa de toda dificultad— a un joven que necesitaba, progresivamente, encontrar en sí mismo los recursos que el adulto le seguía prestando.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Cuando la asimetría no evoluciona</span>
+<p>Padres que han resuelto sistemáticamente todos los problemas de su hijo desde pequeño —los conflictos con los amigos, los deberes, las dificultades con los profesores— con la convicción de que estaban cuidando bien. Cuando ese hijo llega a los quince o dieciséis años y no sabe gestionar una discusión con un compañero sin llamar a su madre, o colapsa ante cualquier obstáculo académico sin haber desarrollado ninguna estrategia propia, los padres describen el resultado con perplejidad: «hemos estado siempre ahí para él y aun así...»</p>
+<p>La CCF permite nombrar lo que ocurrió: la asimetría no evolucionó. El vínculo siguió ofreciendo lo que ofrece un vínculo con un bebé —protección total, resolución externa de toda dificultad— a un joven que necesitaba, progresivamente, encontrar en sí mismo los recursos que el adulto le seguía prestando.</p>
+</div>
 
 <h3>La bidireccionalidad del aprendizaje: lo que el hijo enseña al adulto</h3>
 
 <p>El análisis de la relación padre-hijo como red de contingencias recíprocas tiene una consecuencia que rara vez se desarrolla en los modelos de crianza: si la conducta de cada participante es simultáneamente antecedente, respuesta y consecuencia para la conducta del otro, entonces el hijo no solo aprende del adulto —el adulto aprende del hijo.</p>
 
-<p>Este aprendizaje bidireccional no es metafórico. Tiene una función psicológica precisa y observable. Cuando un padre sostiene la presencia durante un episodio de malestar intenso del hijo y el hijo baja la activación y retoma el contacto, el padre recibe información funcional que modifica su repertorio: aprende, por experiencia directa, que puede sostener sin colapsar. Cada vez que el hijo elige la vulnerabilidad en lugar del silencio —cuando decide contar algo difícil en lugar de callarlo—, le está proporcionando al adulto la evidencia de que el vínculo que han construido puede sostener ese nivel de verdad. Esa evidencia no la puede generar el adulto por sí solo: la genera el hijo al atreverse. El padre que, años después, puede decirle a su hijo adolescente «ven, cuéntame» y esperar con genuina apertura, no ha adquirido esa capacidad solo por trabajo propio. La ha adquirido en parte porque su hijo, a lo largo de años, le ha enseñado que puede sostener.</p>
+<p>Este aprendizaje bidireccional no es metafórico. Tiene una función psicológica precisa y observable. Cuando un padre sostiene la presencia durante un episodio de malestar intenso del hijo y el hijo baja la activación y retoma el contacto, el padre recibe información funcional que modifica su repertorio: aprende, por experiencia directa, que puede sostener sin colapsar.</p>
 
-<p>Esta bidireccionalidad tiene implicaciones clínicas directas. Un adulto que ha criado en condiciones de alto aislamiento —sin pareja, sin red de apoyo, sin figuras que modelen el vínculo con presencia— puede haber desarrollado sus propios recursos relacionales de forma significativa a través de la relación con su hijo. El hijo ha sido, funcionalmente, el contexto en el que ese adulto aprendió que es capaz de estar presente, de reparar, de permanecer. Reconocer este proceso no invierte la asimetría funcional: el adulto sigue siendo responsable de crear las condiciones para el desarrollo del hijo. Pero sí introduce una perspectiva que el trabajo psicológico con familias no puede ignorar: la crianza transforma a quien cría.</p>
+<blockquote>
+<p>Cada vez que el hijo elige la vulnerabilidad en lugar del silencio —cuando decide contar algo difícil en lugar de callarlo—, le está proporcionando al adulto la evidencia de que el vínculo puede sostener ese nivel de verdad. Esa evidencia no la puede generar el adulto por sí solo: la genera el hijo al atreverse.</p>
+</blockquote>
 
-<p>Esta transformación opera en la dirección del desarrollo, no en la contraria. El padre que ha podido acompañar a su hijo a través de episodios de vergüenza, miedo o fracaso ha entrenado, en ese proceso, repertorios de tolerancia al malestar ajeno que difícilmente podría haber desarrollado de otro modo. El padre que ha sostenido la restauración vincular después de conflictos ha entrenado la capacidad de volver después del error. El padre que ha observado a su hijo encontrar un camino distinto al que él esperaba ha entrenado flexibilidad ante la incertidumbre. Ninguno de estos aprendizajes es un subproducto accidental de la crianza: son consecuencias funcionales de haber operado como contexto de desarrollo para otro ser humano.</p>
+<p>Esta bidireccionalidad tiene implicaciones clínicas directas. Un adulto que ha criado en condiciones de alto aislamiento —sin pareja, sin red de apoyo, sin figuras que modelen el vínculo con presencia— puede haber desarrollado sus propios recursos relacionales de forma significativa a través de la relación con su hijo. El hijo ha sido, funcionalmente, el contexto en el que ese adulto aprendió que es capaz de estar presente, de reparar, de permanecer. Reconocer este proceso no invierte la asimetría funcional: el adulto sigue siendo responsable de crear las condiciones para el desarrollo del hijo. Pero sí introduce una perspectiva que el trabajo psicológico con familias no puede ignorar.</p>
+
+<div class="emotional-block">
+<p>La crianza transforma a quien cría.</p>
+<p>El padre que ha podido acompañar a su hijo a través de episodios de vergüenza, miedo o fracaso ha entrenado repertorios de tolerancia al malestar ajeno que difícilmente podría haber desarrollado de otro modo. El padre que ha sostenido la restauración vincular después de conflictos ha entrenado la capacidad de volver después del error. El padre que ha observado a su hijo encontrar un camino distinto al que él esperaba ha entrenado flexibilidad ante la incertidumbre.</p>
+</div>
 
 <p>La implicación para la intervención psicológica es directa: no todas las dificultades del adulto en el sistema familiar deben analizarse como obstáculos que el adulto trae al vínculo. Algunas son ausencias en su repertorio que el trabajo conjunto con el hijo puede desarrollar, si el contexto de intervención crea las condiciones para ello.</p>
 
 <hr>
 
-<p><em>En el próximo artículo se analiza cómo el lenguaje —las palabras que usamos cada día con nuestros hijos— moldea la relación de formas que van mucho más allá de la comunicación: instala marcos que determinan cómo el hijo se relaciona consigo mismo, con sus emociones y con los demás.</em></p>
+<div class="closing-block">
+<p>En el próximo artículo se analiza cómo el lenguaje —las palabras que usamos cada día con nuestros hijos— moldea la relación de formas que van mucho más allá de la comunicación: instala marcos que determinan cómo el hijo se relaciona consigo mismo, con sus emociones y con los demás.</p>
+</div>
 
     </article>
 

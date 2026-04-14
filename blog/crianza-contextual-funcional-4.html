@@ -95,6 +95,33 @@
         .series-nav-label{font-size:.72rem;color:var(--text-light);letter-spacing:.05em;text-transform:uppercase;}
         .series-nav-title{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);line-height:1.3;}
         .reading-time{font-size:.82rem;color:var(--text-light);display:inline-flex;align-items:center;gap:.35rem;}.reading-time::before{content:'·';color:var(--warm);}
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block{background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.05) 100%);border-radius:12px;padding:1.5rem 1.8rem;margin:1.5rem 0;border-left:3px solid var(--warm);}
+        .emotional-block p{margin-bottom:1rem;color:var(--text-primary);font-size:1.02rem;line-height:1.85;}
+        .emotional-block p:last-child{margin-bottom:0;}
+        .closing-block{text-align:center;padding:2.5rem 2rem;margin:2rem 0;background:linear-gradient(135deg,var(--cream) 0%,var(--cream-dark) 100%);border-radius:16px;}
+        .closing-block p{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--text-primary);line-height:1.75;max-width:560px;margin:0 auto;}
+        .collapsible-note{margin:2.5rem 0;border:1px solid var(--cream-dark);border-radius:12px;overflow:hidden;}
+        .collapsible-note summary{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;cursor:pointer;background:var(--cream);list-style:none;user-select:none;transition:background .2s;}
+        .collapsible-note summary::-webkit-details-marker{display:none;}
+        .collapsible-note summary:hover{background:var(--cream-dark);}
+        .collapsible-note-label{display:flex;align-items:center;gap:.7rem;}
+        .collapsible-tag{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);background:rgba(107,127,94,.12);padding:.2rem .6rem;border-radius:100px;}
+        .collapsible-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--text-primary);}
+        .collapsible-chevron{color:var(--text-light);transition:transform .3s;flex-shrink:0;}
+        .collapsible-note[open] .collapsible-chevron{transform:rotate(180deg);}
+        .collapsible-content{padding:1.5rem;border-top:1px solid var(--cream-dark);}
+        .collapsible-content p{font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.2rem;}
+        .collapsible-content p:last-child{margin-bottom:0;}
+        .infobox{border-left:3px solid var(--warm);background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.04) 100%);border-radius:0 12px 12px 0;padding:1.2rem 1.6rem;margin:2rem 0;}
+        .infobox-label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.5rem;}
+        .infobox p{font-size:.98rem;color:var(--text-secondary);line-height:1.8;margin-bottom:.8rem;}
+        .infobox p:last-child{margin-bottom:0;}
+        .scenario-block{background:linear-gradient(135deg,rgba(196,168,130,.08) 0%,rgba(196,168,130,.03) 100%);border-left:3px solid var(--warm-light);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;}
+        .scenario-block p{font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:.9rem;font-style:italic;}
+        .scenario-block p:last-child{margin-bottom:0;}
+        .scenario-label{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.6rem;display:block;}
     </style>
 </head>
 <body>
@@ -150,9 +177,15 @@
 
 <p>El contacto con el momento presente interrumpe el control de marcos temporales extendidos (el SIEMPRE catastrófico, el NUNCA absolutizante) y reinstala la precisión de marcos deícticos de proximidad (AQUÍ, AHORA, ESTO). Esta distinción tiene consecuencias regulatorias directas: la activación asociada a «mi hijo siempre hace esto» es cualitativamente diferente de la activación asociada a «mi hijo está haciendo esto ahora», aunque el comportamiento observable sea idéntico.</p>
 
-<p>Un ejemplo frecuente: una madre que, cuando su hijo adolescente llega tarde sin avisar, entra directamente en «esto siempre pasa, nunca me escucha, esto va a ir a peor.» La activación fisiológica que produce esa cadena de marcos temporales es incompatible con la conversación que necesita tener. La misma situación, cuando el adulto puede quedarse en «llegó tarde esta noche y necesito entender qué pasó», permite una respuesta que aborda el hecho sin colapsar en el patrón.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Marcos temporales que distorsionan</span>
+<p>Una madre que, cuando su hijo adolescente llega tarde sin avisar, entra directamente en «esto siempre pasa, nunca me escucha, esto va a ir a peor.» La activación fisiológica que produce esa cadena de marcos temporales es incompatible con la conversación que necesita tener. La misma situación, cuando el adulto puede quedarse en «llegó tarde esta noche y necesito entender qué pasó», permite una respuesta que aborda el hecho sin colapsar en el patrón.</p>
+<p>Padres que describen a su hijo de ocho años como «imposible» o «siempre igual». Cuando se les pide que describan la última semana con detalle, aparecen inevitablemente momentos de conexión, momentos de juego, momentos en que el hijo cooperó. El marco temporal extendido («siempre») había borrado toda esa información.</p>
+</div>
 
-<p>Otro ejemplo frecuente en consulta: padres que describen a su hijo de ocho años como «imposible» o «siempre igual». Cuando se les pide que describan la última semana con detalle, aparecen inevitablemente momentos de conexión, momentos de juego, momentos en que el hijo cooperó. El marco temporal extendido («siempre») había borrado toda esa información y dejado solo los episodios difíciles como representativos de la relación. Recuperar el momento presente —este momento concreto, este hijo concreto hoy— no es optimismo: es precisión.</p>
+<blockquote>
+<p>Recuperar el momento presente —este momento concreto, este hijo concreto hoy— no es optimismo: es precisión.</p>
+</blockquote>
 
 <h3>Defusión cognitiva en el adulto cuidador</h3>
 
@@ -162,33 +195,51 @@
 
 <p>La investigación reciente ha mostrado que la defusión predice resultados psicológicos con independencia de los cambios en la frecuencia o el contenido del pensamiento. Esto tiene implicaciones directas para el trabajo de acompañamiento psicológico con padres: el objetivo no es que tengan menos pensamientos críticos sobre su crianza, sino que esos pensamientos pierdan su función de control sobre la conducta en el momento de la interacción.</p>
 
-<p>Muchos padres llegan a consulta convencidos de que si pudieran dejar de pensar que son malos padres, todo iría mejor. La CCF propone algo distinto: el problema no es el pensamiento, sino lo que hacen con él. Un padre que piensa «lo estoy haciendo fatal» y aun así puede sentarse a escuchar a su hijo, puede reparar una ruptura y puede sostener un límite incómodo, está ejerciendo flexibilidad psicológica aunque el pensamiento autocrítico siga presente. Ese padre está haciendo lo que importa. El pensamiento puede quedarse: no tiene que desaparecer para que la acción cambie.</p>
+<div class="emotional-block">
+<p>Muchos padres llegan a consulta convencidos de que si pudieran dejar de pensar que son malos padres, todo iría mejor. La CCF propone algo distinto: el problema no es el pensamiento, sino lo que hacen con él.</p>
+<p>Un padre que piensa «lo estoy haciendo fatal» y aun así puede sentarse a escuchar a su hijo, puede reparar una ruptura y puede sostener un límite incómodo, está ejerciendo flexibilidad psicológica aunque el pensamiento autocrítico siga presente. El pensamiento puede quedarse: no tiene que desaparecer para que la acción cambie.</p>
+</div>
 
-<p>En consulta, este es uno de los puntos de inflexión más importantes: cuando el padre o la madre deja de intentar eliminar ese pensamiento y empieza a observar qué ocurre justo después de que aparece. Porque ahí es donde se abre el margen de trabajo real. No sobre el pensamiento en sí, sino sobre lo que organiza en la conducta cuando aparece. Ese cambio —pequeño en apariencia— suele marcar la diferencia entre seguir atrapado en el mismo patrón o empezar a responder de otra manera en situaciones que hasta entonces parecían cerradas.</p>
+<p>En consulta, este es uno de los puntos de inflexión más importantes: cuando el padre o la madre deja de intentar eliminar ese pensamiento y empieza a observar qué ocurre justo después de que aparece. Ahí es donde se abre el margen de trabajo real: no sobre el pensamiento en sí, sino sobre lo que organiza en la conducta cuando aparece.</p>
 
 <h3>Aceptación experiencial: el adulto que puede estar con su propio malestar</h3>
 
 <p>La aceptación experiencial, como proceso ACT, no es resignación ni supresión. Es la disposición activa a contactar con la experiencia interna —incluyendo el malestar, el miedo, la culpa o la frustración— sin actuar para eliminarla. En el contexto de la CCF, este proceso tiene una relevancia especial porque la conducta parental de protección del hijo suele confundirse funcionalmente con evitación experiencial del propio malestar del adulto.</p>
 
-<p>Un padre dice: «no puedo verle llorar así». Cada vez que su hijo se frustra, interviene rápido: soluciona, distrae, suaviza. Desde fuera parece cuidado. Pero si se observa con precisión, ocurre otra cosa: en cuanto aparece el llanto, aparece también una urgencia en el padre. No responde al hijo. Responde a lo que se le activa a él. El problema no es que cuide demasiado. Es que no puede quedarse lo suficiente como para que el cuidado sea realmente para su hijo y no para aliviarse él.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Cuidado que alivia al adulto</span>
+<p>Un padre dice: «no puedo verle llorar así». Cada vez que su hijo se frustra, interviene rápido: soluciona, distrae, suaviza. Desde fuera parece cuidado. Pero si se observa con precisión, ocurre otra cosa: en cuanto aparece el llanto, aparece también una urgencia en el padre. No responde al hijo. Responde a lo que se le activa a él.</p>
+<p>El problema no es que cuide demasiado. Es que no puede quedarse lo suficiente como para que el cuidado sea realmente para su hijo y no para aliviarse él.</p>
+</div>
 
 <p>Aquí aparece uno de los patrones más frecuentes —y más difíciles de ver desde dentro— en las dificultades de crianza. Cuando una madre cede ante la protesta del hijo para que deje de llorar, la función real de esa conducta puede no ser el bienestar del hijo. Puede ser la reducción del propio malestar del adulto.</p>
 
-<p>No hay intención de daño. Es exactamente lo contrario: hay tanto amor que escuchar el sufrimiento del hijo se vuelve insoportable. Pero el problema es que lo que se alivia es el malestar del adulto, no la necesidad del hijo. Y con suficiente repetición, el hijo aprende algo que nadie le enseñó deliberadamente: que su malestar es una emergencia que hay que detener, no una experiencia que puede atravesarse.</p>
+<div class="emotional-block">
+<p>No hay intención de daño. Es exactamente lo contrario: hay tanto amor que escuchar el sufrimiento del hijo se vuelve insoportable. Pero lo que se alivia es el malestar del adulto, no la necesidad del hijo. Y con suficiente repetición, el hijo aprende algo que nadie le enseñó deliberadamente: que su malestar es una emergencia que hay que detener, no una experiencia que puede atravesarse.</p>
+</div>
 
-<p>Una forma de distinguir si la conducta parental está organizada por el bienestar del hijo o por la evitación del propio malestar es preguntarse: ¿haría esto aunque no me produjera ningún alivio? ¿Lo haría aunque nadie me estuviera mirando? Si la respuesta honesta es «probablemente no», el proceso que organiza esa conducta es la evitación experiencial. Si la respuesta es «sí, porque es lo que mi hijo necesita ahora», es acción desde valores.</p>
+<div class="infobox">
+<div class="infobox-label">¿Cómo distinguirlo?</div>
+<p>Una forma de distinguir si la conducta parental está organizada por el bienestar del hijo o por la evitación del propio malestar es preguntarse: ¿haría esto aunque no me produjera ningún alivio? ¿Lo haría aunque nadie me estuviera mirando?</p>
+<p>Si la respuesta honesta es «probablemente no», el proceso que organiza esa conducta es la evitación experiencial. Si la respuesta es «sí, porque es lo que mi hijo necesita ahora», es acción desde valores. Esto no es un juicio. Es información.</p>
+</div>
 
-<p>Esto no es un juicio. Es información. Y la información tiene un valor enorme: permite preguntarse qué necesita el hijo, no solo qué necesita la situación para que el llanto pare.</p>
-
-<p>Un caso habitual: un padre que no puede ver a su hijo de nueve años llorando sin entrar en pánico. Cada vez que el niño llora, el padre hace lo que sea para que pare: le da lo que pedía, lo distrae, le dice que no es para tanto. El padre describe esto como «no soportar ver a mi hijo sufrir.» Funcionalmente, lo que no puede soportar es su propio malestar ante el llanto del hijo. El hijo, que necesita aprender que puede llorar y que el mundo no se acaba, recibe en cambio el mensaje de que su llanto es una señal de emergencia que hay que detener. Con el tiempo, el niño aprende a no llorar —o a llorar estratégicamente cuando necesita conseguir algo.</p>
-
-<p>Este patrón se intensifica cuando el adulto arrastra una historia propia de escasa co-regulación: cuando de niño tampoco hubo un adulto que pudiese quedarse con su malestar sin apagarlo. En esos casos, el llanto del hijo no activa solo la preocupación por él: activa también algo antiguo en el adulto. Reconocerlo no es excusa ni destino: es el primer paso para que deje de operar en automático.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ En consulta</span>
+<p>Un padre que no puede ver a su hijo de nueve años llorando sin entrar en pánico. Cada vez que el niño llora, el padre hace lo que sea para que pare: le da lo que pedía, lo distrae, le dice que no es para tanto. Describe esto como «no soportar ver a mi hijo sufrir.» Funcionalmente, lo que no puede soportar es su propio malestar ante el llanto del hijo.</p>
+<p>El hijo, que necesita aprender que puede llorar y que el mundo no se acaba, recibe en cambio el mensaje de que su llanto es una señal de emergencia que hay que detener. Con el tiempo, aprende a no llorar —o a llorar estratégicamente cuando necesita conseguir algo.</p>
+<p>Este patrón se intensifica cuando el adulto arrastra una historia propia de escasa co-regulación: cuando de niño tampoco hubo un adulto que pudiese quedarse con su malestar sin apagarlo. Reconocerlo no es excusa ni destino: es el primer paso para que deje de operar en automático.</p>
+</div>
 
 <h3>El Yo como Contexto en el adulto y en el hijo</h3>
 
 <p>El Yo como Contexto —la perspectiva del observador que persiste a través del tiempo y del contenido cambiante de la experiencia— tiene en el contexto de la CCF una función relacional que trasciende el uso individual. Cuando un adulto puede mantener la perspectiva del observador durante un conflicto con su hijo, puede simultáneamente notar su propia activación, mantener contacto con la perspectiva del hijo y actuar desde sus valores de cuidado. Sin esa perspectiva, el adulto queda fusionado con su propia experiencia y pierde acceso a la información contextual necesaria para una respuesta parental flexible.</p>
 
-<p>Un ejemplo concreto: durante una discusión con su hija adolescente que ha llegado a casa oliendo a tabaco, una madre puede colapsar en su propia indignación («mentirosa, después de todo lo que hemos hablado») y perder completamente de vista lo que su hija está sintiendo en ese momento: probablemente miedo, vergüenza y la necesidad de saber si el vínculo sobrevive a lo que acaba de descubrirse. La madre que puede notar su propia indignación —«noto que estoy muy enfadada»— sin quedar capturada por ella, puede hacer ambas cosas: poner límites claros sobre el tabaco Y mantener contacto con su hija como persona. La que queda fusionada con su indignación solo puede hacer una de las dos.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Yo como Contexto en acción</span>
+<p>Durante una discusión con su hija adolescente que ha llegado a casa oliendo a tabaco, una madre puede colapsar en su propia indignación («mentirosa, después de todo lo que hemos hablado») y perder completamente de vista lo que su hija está sintiendo en ese momento: probablemente miedo, vergüenza y la necesidad de saber si el vínculo sobrevive a lo que acaba de descubrirse.</p>
+<p>La madre que puede notar su propia indignación —«noto que estoy muy enfadada»— sin quedar capturada por ella, puede hacer ambas cosas: poner límites claros sobre el tabaco Y mantener contacto con su hija como persona. La que queda fusionada con su indignación solo puede hacer una de las dos.</p>
+</div>
 
 <p>Para el hijo, el desarrollo del Yo como Contexto —que ocurre progresivamente a lo largo de la infancia y la adolescencia— está funcionalmente asociado a la historia de interacciones con adultos que mantienen esa distinción de forma consistente. Los episodios de restauración vincular después de conflictos son particularmente relevantes desde esta perspectiva: cada vez que la relación se rompe y se restaura sin que nadie quede definido por el error, el hijo experimenta que hay un Yo que persiste a través de los episodios de fallo, que no se reduce a lo que hizo mal ni a lo que sintió en ese momento. Esta es una forma de instalación experiencial del Yo como Contexto que ningún ejercicio de mindfulness puede reproducir de forma directa.</p>
 
@@ -200,11 +251,16 @@
 
 <p>La distinción entre valor y regla aprendida es crítica en el trabajo psicológico con padres. Un padre que evita poner límites «porque quiere que su hijo sea feliz» puede estar actuando desde un valor genuino (el bienestar del hijo) o desde una regla aprendida («los buenos padres no causan malestar a sus hijos») cuya función real es reducir la propia culpa. La distinción funcional —¿esta conducta seguiría ocurriendo si nadie la viera? ¿seguiría importando si no hubiera consecuencias sociales?— permite identificar el proceso que realmente organiza la conducta parental en ese momento.</p>
 
-<p>Una pregunta que resulta útil en el trabajo con padres: ¿qué tipo de adulto quieres que sea tu hijo dentro de veinte años? Cuando los padres responden a esa pregunta —«que sea capaz de enfrentarse a las dificultades», «que sepa pedir ayuda», «que sea honesto aunque sea incómodo»— y luego se preguntan si lo que están haciendo hoy contribuye a eso, a menudo aparece una brecha visible.</p>
+<div class="infobox">
+<div class="infobox-label">Pregunta clave</div>
+<p>¿Qué tipo de adulto quieres que sea tu hijo dentro de veinte años? Cuando los padres responden a esa pregunta —«que sea capaz de enfrentarse a las dificultades», «que sepa pedir ayuda», «que sea honesto aunque sea incómodo»— y luego se preguntan si lo que están haciendo hoy contribuye a eso, a menudo aparece una brecha visible.</p>
+</div>
 
-<p>Un padre dice que quiere que su hijo sea capaz de tolerar la frustración. Esa es su intención. Pero cuando su hijo empieza a frustrarse, interviene antes de que el malestar crezca: le ayuda más de lo necesario, cambia la situación o cede. No porque no crea en ese valor, sino porque en ese momento no puede sostener lo que implica. El resultado no es incoherencia moral. Es un desajuste entre lo que importa y lo que puede sostener bajo presión.</p>
-
-<p>El padre que quiere que su hijo sea capaz de tolerar la frustración pero que sistemáticamente le evita cualquier experiencia frustrante está actuando desde la regla («no puedo ver a mi hijo mal») más que desde el valor. Nombrar esa brecha no es juzgar al padre: es ofrecerle información sobre el proceso que está organizando su conducta.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Valor vs. regla aprendida</span>
+<p>Un padre dice que quiere que su hijo sea capaz de tolerar la frustración. Esa es su intención. Pero cuando su hijo empieza a frustrarse, interviene antes de que el malestar crezca: le ayuda más de lo necesario, cambia la situación o cede. No porque no crea en ese valor, sino porque en ese momento no puede sostener lo que implica.</p>
+<p>El padre que quiere que su hijo tolere la frustración pero que sistemáticamente le evita cualquier experiencia frustrante está actuando desde la regla («no puedo ver a mi hijo mal») más que desde el valor. Nombrar esa brecha no es juzgar al padre: es ofrecerle información sobre el proceso que está organizando su conducta.</p>
+</div>
 
 <h3>Acción comprometida en condiciones de alta activación</h3>
 
@@ -212,7 +268,11 @@
 
 <p>Lo que distingue la acción comprometida de la reacción impulsiva no es la ausencia de malestar sino la relación del adulto con ese malestar: si la conducta está organizada por el impulso de eliminar el malestar (evitación experiencial) o por la dirección que los valores proporcionan (aunque el malestar esté presente). Esta distinción es funcionalmente precisa y psicológicamente observable: produce patrones de conducta diferentes, consecuencias relacionales diferentes y, a lo largo del tiempo, historias de desarrollo diferentes para el hijo.</p>
 
-<p>Un padre puede tener un día agotador de trabajo, llegar a casa, y encontrarse a su hijo de doce años que ha ignorado por tercera vez el acuerdo sobre el uso del teléfono. La activación que siente es real. La acción comprometida no consiste en no sentirla: consiste en no dejar que esa activación dicte si aplica o no la consecuencia acordada. El hijo recibe el mensaje de que los acuerdos se sostienen incluso cuando el adulto está cansado; y recibe también, de forma implícita, el modelo de un adulto que actúa desde lo que le importa aunque la situación sea difícil.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Acción comprometida bajo presión</span>
+<p>Un padre puede tener un día agotador de trabajo, llegar a casa, y encontrarse a su hijo de doce años que ha ignorado por tercera vez el acuerdo sobre el uso del teléfono. La activación que siente es real. La acción comprometida no consiste en no sentirla: consiste en no dejar que esa activación dicte si aplica o no la consecuencia acordada.</p>
+<p>El hijo recibe el mensaje de que los acuerdos se sostienen incluso cuando el adulto está cansado; y recibe también, de forma implícita, el modelo de un adulto que actúa desde lo que le importa aunque la situación sea difícil.</p>
+</div>
 
 <h3>La autocompasión del adulto cuidador: un proceso diferenciado</h3>
 
@@ -224,21 +284,43 @@
 
 <p>Esta distinción tiene consecuencias funcionales directas. Un adulto que opera bajo autocrítica severa y alta exigencia ante el propio error tiende a reproducir, en la relación con el hijo, la misma estructura evaluativa: el error del hijo adquiere funciones de amenaza equivalentes a las que el propio error tiene para el adulto. El hijo que crece con un adulto que no puede tolerar sus propios errores aprende, implícitamente, que el error es peligroso: no porque nadie se lo diga, sino porque la función que el error tiene en el sistema relacional es inequívoca.</p>
 
-<p>Dicho de otro modo: la madre que no puede cometer un error sin colapsarse en culpa tendrá muchísima dificultad para estar tranquila cuando su hijo cometa el suyo. No porque no lo quiera. Sino porque su sistema nervioso ya tiene instalado que el error es peligroso, que merece condena, que hay que eliminarlo cuanto antes. Y esa señal le llega al hijo sin palabras.</p>
+<div class="emotional-block">
+<p>La madre que no puede cometer un error sin colapsarse en culpa tendrá muchísima dificultad para estar tranquila cuando su hijo cometa el suyo. No porque no lo quiera. Sino porque su sistema nervioso ya tiene instalado que el error es peligroso, que merece condena, que hay que eliminarlo cuanto antes. Y esa señal le llega al hijo sin palabras.</p>
+</div>
 
-<p>La autocompasión no es decirse que todo está bien cuando no lo está. No es minimizar los propios errores ni renunciar a mejorar. Es ser capaz de decirse: «me equivoqué, fue torpe, y eso no me define». Y luego seguir. La secuencia que eso produce —error → reconocimiento sin colapso → ajuste → continuidad— es exactamente la misma que el hijo necesita ver modelada para poder aplicarla en su propia vida.</p>
+<blockquote>
+<p>La autocompasión no es decirse que todo está bien cuando no lo está. Es ser capaz de decirse: «me equivoqué, fue torpe, y eso no me define». Y luego seguir. Esa secuencia es exactamente la misma que el hijo necesita ver modelada para poder aplicarla en su propia vida.</p>
+</blockquote>
 
-<p>Hay algo que merece decirse directamente: si llevas tiempo leyendo sobre crianza desde la culpa, probablemente has estado intentando mejorar como madre o padre desde el mismo lugar desde el que más te cuesta estarlo: la exigencia sin compasión. El mismo trabajo que este texto propone para la relación con el hijo —aceptar la experiencia sin huir, distinguir la conducta de la identidad, actuar desde valores aunque el malestar esté presente— es aplicable, primero, a la relación contigo mismo.</p>
+<div class="emotional-block">
+<p>Si llevas tiempo leyendo sobre crianza desde la culpa, probablemente has estado intentando mejorar como madre o padre desde el mismo lugar desde el que más te cuesta estarlo: la exigencia sin compasión. El mismo trabajo que este texto propone para la relación con el hijo —aceptar la experiencia sin huir, distinguir la conducta de la identidad, actuar desde valores aunque el malestar esté presente— es aplicable, primero, a la relación contigo mismo.</p>
+</div>
 
-<p>Cuando el adulto puede relacionarse con su propio agotamiento, su propia torpeza y sus propios errores de crianza desde la misma calidad de atención con que podría acompañar a un hijo en dificultad, produce un modelo relacional en vivo que ninguna instrucción verbal puede reemplazar. Este modelado es específico: no se trata de que el adulto nunca se equivoque, sino de cómo se relaciona con el error cuando ocurre. La secuencia observable —error → reconocimiento sin colapso → ajuste → continuidad del vínculo— es la misma que la restauración vincular instaló en la historia del hijo. Cuando el adulto la aplica a su propia experiencia, la coherencia entre lo que enseña y lo que vive deja de ser performativa y se convierte en funcional.</p>
+<details class="collapsible-note">
+    <summary>
+        <div class="collapsible-note-label">
+            <span class="collapsible-tag">Evidencia</span>
+            <span class="collapsible-title">Autocompasión parental: qué dice la investigación</span>
+        </div>
+        <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="collapsible-content">
+        <p>La investigación reciente sobre flexibilidad psicológica parental confirma que la autocompasión del adulto predice independientemente la calidad del vínculo parental, con mayor fuerza que la sensibilidad emocional general o el conocimiento del desarrollo infantil.</p>
+        <p>Un padre que puede decir «me equivoqué y lo que hice fue torpe, y no me define» tiene acceso a una regulación del sistema nervioso que el padre que oscila entre la justificación y la autocondena no puede sostener. Esta regulación es la condición fisiológica y psicológica para que la presencia, la validación y la restauración vincular no sean esfuerzos deliberados sino repertorios accesibles.</p>
+    </div>
+</details>
 
-<p>La investigación reciente sobre flexibilidad psicológica parental confirma que la autocompasión del adulto predice independientemente la calidad del vínculo parental, con mayor fuerza que la sensibilidad emocional general o el conocimiento del desarrollo infantil. Un padre que puede decir «me equivoqué y lo que hice fue torpe, y no me define» tiene acceso a una regulación del sistema nervioso que el padre que oscila entre la justificación y la autocondena no puede sostener. Esta regulación es la condición fisiológica y psicológica para que la presencia, la validación y la restauración vincular no sean esfuerzos deliberados sino repertorios accesibles.</p>
-
-<p>Una madre después de un día agotador grita a su hijo de nueve años por algo menor, se da cuenta, y durante las siguientes dos horas queda atrapada en el pensamiento «soy una madre horrible.» No hace la restauración vincular porque la culpa la paraliza. Su hijo se va a dormir sin que nadie repare lo que pasó. La autocompasión tierna habría podido producir otra secuencia: «me he pasado, estoy muy cansada, eso no justifica lo que hice pero tampoco me convierte en una mala madre —voy a arreglarlo.»</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ La culpa que paraliza la reparación</span>
+<p>Una madre después de un día agotador grita a su hijo de nueve años por algo menor, se da cuenta, y durante las siguientes dos horas queda atrapada en el pensamiento «soy una madre horrible.» No hace la restauración vincular porque la culpa la paraliza. Su hijo se va a dormir sin que nadie repare lo que pasó.</p>
+<p>La autocompasión tierna habría podido producir otra secuencia: «me he pasado, estoy muy cansada, eso no justifica lo que hice pero tampoco me convierte en una mala madre —voy a arreglarlo.»</p>
+</div>
 
 <hr>
 
-<p><em>En el próximo artículo se analiza cómo estos procesos del adulto se transfieren al hijo a través de la co-regulación cotidiana —antes de que ninguna palabra pueda hacer ese trabajo— y cómo adaptar esa co-regulación a perfiles de procesamiento diferentes.</em></p>
+<div class="closing-block">
+<p>En el próximo artículo se analiza cómo estos procesos del adulto se transfieren al hijo a través de la co-regulación cotidiana —antes de que ninguna palabra pueda hacer ese trabajo— y cómo adaptar esa co-regulación a perfiles de procesamiento diferentes.</p>
+</div>
 
     </article>
 

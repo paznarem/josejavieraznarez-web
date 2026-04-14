@@ -96,6 +96,12 @@
         .series-nav-title{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);line-height:1.3;}
         .reading-time{font-size:.82rem;color:var(--text-light);display:inline-flex;align-items:center;gap:.35rem;}.reading-time::before{content:'·';color:var(--warm);}
         .series-end-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(107,127,94,.08);border:1px solid rgba(107,127,94,.2);color:var(--sage-dark);padding:.5rem 1.2rem;border-radius:100px;font-size:.82rem;font-weight:500;margin-bottom:2rem;}
+        .emotional-block{background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.05) 100%);border-radius:12px;padding:1.5rem 1.8rem;margin:1.5rem 0;border-left:3px solid var(--warm);}.emotional-block p{margin-bottom:1rem;color:var(--text-primary);font-size:1.02rem;line-height:1.85;}.emotional-block p:last-child{margin-bottom:0;}
+        .closing-block{text-align:center;padding:2.5rem 2rem;margin:2rem 0;background:linear-gradient(135deg,var(--cream) 0%,var(--cream-dark) 100%);border-radius:16px;}.closing-block p{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--text-primary);line-height:1.75;max-width:560px;margin:0 auto;}
+        .collapsible-note{margin:2.5rem 0;border:1px solid var(--cream-dark);border-radius:12px;overflow:hidden;}.collapsible-note summary{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;cursor:pointer;background:var(--cream);list-style:none;user-select:none;}.collapsible-note summary::-webkit-details-marker{display:none;}.collapsible-note summary:hover{background:var(--cream-dark);}.collapsible-note-label{display:flex;align-items:center;gap:.7rem;}.collapsible-tag{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);background:rgba(107,127,94,.12);padding:.2rem .6rem;border-radius:100px;}.collapsible-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--text-primary);}.collapsible-chevron{color:var(--text-light);transition:transform .3s;flex-shrink:0;}.collapsible-note[open] .collapsible-chevron{transform:rotate(180deg);}.collapsible-content{padding:1.5rem;border-top:1px solid var(--cream-dark);}.collapsible-content p{font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.2rem;}
+        .infobox{border-left:3px solid var(--warm);background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.04) 100%);border-radius:0 12px 12px 0;padding:1.2rem 1.6rem;margin:2rem 0;}.infobox-label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.5rem;}.infobox p{font-size:.98rem;color:var(--text-secondary);line-height:1.8;margin-bottom:.8rem;}
+        .scenario-block{background:linear-gradient(135deg,rgba(196,168,130,.08) 0%,rgba(196,168,130,.03) 100%);border-left:3px solid var(--warm-light);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;}.scenario-block p{font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:.9rem;font-style:italic;}.scenario-label{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.6rem;display:block;}
+        .checklist{list-style:none;padding:0;margin:1.5rem 0;}.checklist li{padding:.6rem .8rem .6rem 2.2rem;position:relative;font-size:.98rem;line-height:1.7;color:var(--text-secondary);border-bottom:1px solid var(--cream-dark);}.checklist li:last-child{border-bottom:none;}.checklist li::before{content:"☐";position:absolute;left:.5rem;top:.6rem;color:var(--sage);font-size:1rem;}
     </style>
 </head>
 <body>
@@ -145,7 +151,9 @@
 
 <p>Uno de los aspectos más frecuentemente ignorados en los modelos de crianza es que el hijo no vive exclusivamente en el sistema familiar. Desde que entra en contacto con el entorno escolar, los grupos de iguales, los adultos de referencia fuera del hogar y la cultura digital, el hijo es simultáneamente participante de múltiples sistemas de contingencias, cada uno con sus propias reglas, sus propios valores implícitos y sus propios mecanismos de reforzamiento. Estos sistemas no son neutros: compiten activamente con el sistema familiar por organizar la conducta, la identidad y el repertorio emocional del hijo.</p>
 
+<div class="emotional-block">
 <p>La angustia que muchos padres expresan en consulta —«mi hijo es otra persona desde que empezó con esos amigos», «ya no me cuenta nada», «hace lo que le dice cualquiera menos lo que decimos nosotros»— es funcionalmente correcta. No es paranoia ni sobreprotección: es la percepción, a menudo muy precisa, de que otro sistema de contingencias ha adquirido más peso funcional que el familiar en la organización de la conducta del hijo. Nombrar esto con precisión es el primer paso para responder de forma útil.</p>
+</div>
 
 <h3>El hijo como nodo de múltiples sistemas de contingencias</h3>
 
@@ -175,13 +183,21 @@
 
 <p>Lo que el grupo ofrece que la familia no puede ofrecer de la misma manera es la pertenencia horizontal: ser uno entre iguales, ser elegido por quienes no tienen obligación de quererlo. Esta necesidad es legítima y su satisfacción es parte del desarrollo normal. El problema funcional no es que el hijo busque satisfacerla: es cuando el precio de la pertenencia al grupo es la adopción completa de marcos que contradicen valores que la familia ha construido durante años —honestidad, respeto, cuidado de sí mismo— y el hijo no tiene los recursos para negociar esa tensión.</p>
 
-<p>Un ejemplo que aparece con frecuencia en consulta: una chica de quince años que ha desarrollado con su familia una relación de comunicación abierta empieza a relacionarse con un grupo donde hablar de problemas se considera «cargante». En pocas semanas, los padres notan que «ya no cuenta nada.» Funcionalmente, lo que ha ocurrido es que el marco relacional del grupo («mostrar problemas = ser pesada = perder pertenencia») ha adquirido más peso que el marco familiar en el contexto de las interacciones sociales. La solución no es aislarla del grupo: es mantener el sistema familiar como un espacio donde ese coste no existe.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ En consulta: la chica de quince años que «ya no cuenta nada»</span>
+<p>Una chica de quince años que ha desarrollado con su familia una relación de comunicación abierta empieza a relacionarse con un grupo donde hablar de problemas se considera «cargante». En pocas semanas, los padres notan que «ya no cuenta nada.»</p>
+<p>Funcionalmente, lo que ha ocurrido es que el marco relacional del grupo («mostrar problemas = ser pesada = perder pertenencia») ha adquirido más peso que el marco familiar en el contexto de las interacciones sociales. La solución no es aislarla del grupo: es mantener el sistema familiar como un espacio donde ese coste no existe.</p>
+</div>
 
 <h3>La cultura digital como tercer sistema vincular</h3>
 
 <p>Las plataformas digitales, los creadores de contenido y las comunidades online operan como sistemas de contingencias con características únicas: están disponibles en cualquier momento, ofrecen reforzamiento extremadamente inmediato, y construyen marcos relacionales sobre prácticamente todos los dominios relevantes para el desarrollo —el cuerpo, el rendimiento académico, las relaciones, el género, la política, la identidad.</p>
 
-<p>Lo que diferencia a estos sistemas de los vínculos con iguales presenciales es su escala y su continuidad. Un influencer de fitness que ve una adolescente durante cuarenta minutos diarios le ofrece, en el transcurso de un año, más de doscientas horas de contenido instalando marcos sobre lo que debe pesar un cuerpo femenino, lo que constituye éxito físico y lo que merece admiración. Ningún mensaje parental sobre el cuerpo puede competir en términos de tiempo de exposición con ese sistema. Intentar hacerlo frontalmente —criticar al influencer, prohibir la plataforma— suele activar el efecto contrario: el marco familiar queda asociado a restricción y el marco digital queda asociado a libertad.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Doscientas horas al año instalando marcos</span>
+<p>Un influencer de fitness que ve una adolescente durante cuarenta minutos diarios le ofrece, en el transcurso de un año, más de doscientas horas de contenido instalando marcos sobre lo que debe pesar un cuerpo femenino, lo que constituye éxito físico y lo que merece admiración.</p>
+<p>Ningún mensaje parental sobre el cuerpo puede competir en términos de tiempo de exposición con ese sistema. Intentar hacerlo frontalmente —criticar al influencer, prohibir la plataforma— suele activar el efecto contrario: el marco familiar queda asociado a restricción y el marco digital queda asociado a libertad.</p>
+</div>
 
 <p>Un creador de contenido que normaliza el lenguaje agresivo, la burla como forma de humor o la desconfianza sistemática hacia cualquier figura de autoridad instala marcos que transforman la función de la misma figura parental. Un padre que antes era «el que pone límites» puede pasar a ser procesado como «el enemigo» a través de marcos derivados del consumo digital. Esto no es exageración: es el mecanismo de transformación de funciones descrito en el tercer artículo de esta serie, operando a través de un sistema de contingencias de altísima frecuencia e intensidad.</p>
 
@@ -191,11 +207,12 @@
 
 <p>La angustia de los padres ante la competencia de otros sistemas tiene una base real. Pero la respuesta más frecuente —intentar competir en el mismo terreno: siendo más divertidos que los amigos, más permisivos que el grupo, más presentes que el móvil— está condenada al fracaso porque el sistema familiar no puede ganar en ese terreno. Lo que el sistema familiar puede ofrecer es algo que ningún otro sistema ofrece, y que resulta ser, funcionalmente, lo más valioso.</p>
 
-<p>En primer lugar, aceptación incondicional. Ningún grupo de iguales, ninguna comunidad digital y ningún entorno escolar ofrece al hijo la certeza de que su lugar en la relación no depende de su rendimiento, de su aspecto, de su popularidad o de su conducta en el peor momento. Cuando esa certeza está bien instalada en el sistema familiar —cuando el hijo lo ha experimentado de forma repetida a través de la historia de contingencias— se convierte en un recurso que puede activarse incluso en ausencia del adulto.</p>
-
-<p>En segundo lugar, restauración sin coste vincular irreversible. En ningún otro sistema puede el hijo cometer un error grave, provocar una ruptura y encontrar el camino de vuelta sin perder su lugar. El grupo de iguales expulsa, excluye o redefine jerarquías. Las plataformas digitales no restauran: amplían el error. El sistema familiar, cuando funciona bien, ofrece la experiencia repetida de que el vínculo sobrevive a los peores momentos.</p>
-
-<p>En tercer lugar, perspectiva temporal. Los grupos de iguales y la cultura digital operan con un horizonte temporal muy corto. El sistema familiar es el único que puede ofrecer al hijo una perspectiva sobre quién es a lo largo del tiempo: que lo que siente hoy no define lo que será, que los errores tienen resolución y que hay un adulto que lleva años apostando por él.</p>
+<div class="infobox">
+<div class="infobox-label">Lo que ningún otro sistema puede ofrecer</div>
+<p><strong>Aceptación incondicional</strong> — ningún grupo de iguales, ninguna comunidad digital y ningún entorno escolar ofrece la certeza de que el lugar del hijo en la relación no depende de su rendimiento, su aspecto, su popularidad o su conducta en el peor momento.</p>
+<p><strong>Restauración sin coste vincular irreversible</strong> — el grupo expulsa, excluye o redefine jerarquías. Las plataformas digitales no restauran: amplían el error. El sistema familiar, cuando funciona bien, ofrece la experiencia repetida de que el vínculo sobrevive a los peores momentos.</p>
+<p><strong>Perspectiva temporal</strong> — el sistema familiar es el único que puede ofrecer al hijo una perspectiva sobre quién es a lo largo del tiempo: que lo que siente hoy no define lo que será, que los errores tienen resolución y que hay un adulto que lleva años apostando por él.</p>
+</div>
 
 <p>Cuando los padres entienden que esto es lo que pueden ofrecer —y que intentar competir en el terreno de la inmediatez, el entretenimiento o la ausencia de límites los aleja de esa función—, suele producirse un reordenamiento significativo de sus prioridades. La pregunta relevante no es «¿cómo consigo que mi hijo prefiera estar en casa que con sus amigos?» sino «¿es la familia el lugar al que mi hijo vuelve cuando las cosas se complican fuera?»</p>
 
@@ -205,7 +222,7 @@
 
 <p>La individuación —el proceso por el que el hijo construye una identidad diferenciada de la familiar— requiere, por definición, que el hijo pruebe marcos relacionales distintos de los del hogar, que cuestione reglas que antes aceptaba y que en algunos momentos actúe de formas que contradicen los valores familiares. Esto es incómodo. A veces es alarmante. Pero el hecho de que ocurra no significa que el vínculo familiar haya fracasado: significa que está haciendo lo que debe, que es sostener a un hijo que está explorando los límites de su identidad.</p>
 
-<p>La pregunta funcionalmente más relevante no es «¿cómo recupero la influencia que tenía?» sino «¿cuando mi hijo tiene un problema serio —con un amigo, con el alcohol, con algo que ha hecho y de lo que se arrepiente— a quién acude?» Si la respuesta es «a mí», el vínculo familiar sigue siendo el sistema de referencia, aunque la influencia cotidiana haya disminuido. Si la respuesta es «a cualquiera menos a mí», es el momento de examinar qué está ocurriendo en el sistema familiar que ha hecho que el coste de acudir sea demasiado alto.</p>
+<blockquote>La pregunta funcionalmente más relevante no es «¿cómo recupero la influencia que tenía?» sino «¿cuando mi hijo tiene un problema serio —con un amigo, con el alcohol, con algo que ha hecho y de lo que se arrepiente— a quién acude?» Si la respuesta es «a mí», el vínculo familiar sigue siendo el sistema de referencia. Si la respuesta es «a cualquiera menos a mí», es el momento de examinar qué está ocurriendo en el sistema familiar que ha hecho que el coste de acudir sea demasiado alto.</blockquote>
 
 <p>Esto tiene implicaciones directas para el trabajo con padres de adolescentes: antes de intervenir sobre las conductas del hijo, es útil examinar si el vínculo sigue siendo un espacio seguro para el hijo. Un adolescente que sabe que puede contar algo difícil a sus padres sin recibir una reacción de pánico, de juicio o de control inmediato, tiene un recurso que ningún grupo de iguales ni ninguna plataforma digital puede replicar. Construir y mantener ese espacio es, posiblemente, la tarea parental más importante durante la adolescencia.</p>
 
@@ -217,17 +234,30 @@
 
 <p>La popularización de la teoría del apego a través de redes sociales, plataformas de contenido digital y divulgación de baja precisión científica ha producido un conjunto de reglas verbales ampliamente compartidas que funcionan como marcos relacionales que transforman la función de conductas parentales cotidianas.</p>
 
+<details class="collapsible-note">
+<summary>
+<div class="collapsible-note-label">
+<span class="collapsible-tag">Análisis</span>
+<span class="collapsible-title">Reglas verbales rígidas que reducen la flexibilidad parental</span>
+</div>
+<svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</summary>
+<div class="collapsible-content">
 <p>La regla «si no respondes inmediatamente al llanto, dañas el apego» transforma la función de la demora de respuesta —que en condiciones normales es funcionalmente neutra o incluso positiva para el desarrollo de la tolerancia a la frustración— en señal de daño irreversible. Cuando una madre internaliza esta regla, el llanto del bebé adquiere funciones de urgencia extrema que no se corresponden con las contingencias reales de la situación: el resultado es un estado de hipervigilancia que agota al adulto, reduce su margen de respuesta flexible y, paradójicamente, puede deteriorar la calidad de la co-regulación que pretende proteger.</p>
-
 <p>La regla «todo trauma infantil viene de los padres» instala un marco causal que convierte cada dificultad del hijo en evidencia de daño parental, con independencia de la multiplicidad de factores que contribuyen al desarrollo. Esta regla tiene un efecto particularmente destructivo sobre los padres cuyos hijos presentan dificultades que no se originan en el vínculo parental —perfiles de procesamiento diferente, experiencias adversas fuera del hogar, condiciones médicas— porque les asigna una responsabilidad causal que no se corresponde con la realidad funcional.</p>
-
 <p>El efecto acumulativo de estas reglas es la instalación de un estado de vigilancia permanente sobre la propia conducta parental que tiene consecuencias psicológicas mensurables: aumento de la autocrítica, reducción del margen de respuesta espontánea, y evitación de conductas parentales necesarias (poner límites, sostener consecuencias, permitir que el hijo experimente malestar) por miedo a producir daño.</p>
+</div>
+</details>
 
 <h3>La confusión entre sensibilidad y ausencia de límites</h3>
 
 <p>Un desarrollo reciente del discurso cultural que merece análisis específico es la tendencia a equiparar la sensibilidad parental con la ausencia de límites. Esta confusión, que el análisis funcional puede articular con precisión, produce patrones de crianza en los que la evitación del conflicto se presenta como sintonía con el hijo.</p>
 
-<p>La sensibilidad parental, como la define la investigación sobre apego y como la reformula la CCF, es la capacidad de detectar las señales del hijo, interpretarlas correctamente en el contexto en que ocurren y responder a ellas de forma ajustada. La sensibilidad no excluye el límite: lo incluye como respuesta ajustada cuando el contexto lo requiere. Un padre sensible es aquel que pone un límite cuando el hijo lo necesita, no el que evita todo límite para no producir malestar.</p>
+<div class="infobox">
+<div class="infobox-label">Sensibilidad parental: definición funcional</div>
+<p>La sensibilidad parental es la capacidad de detectar las señales del hijo, interpretarlas correctamente en el contexto en que ocurren y responder a ellas de forma ajustada.</p>
+<p>La sensibilidad no excluye el límite: lo incluye como respuesta ajustada cuando el contexto lo requiere. Un padre sensible es aquel que pone un límite cuando el hijo lo necesita, no el que evita todo límite para no producir malestar.</p>
+</div>
 
 <p>La confusión entre ambos conceptos tiene consecuencias funcionales observables: produce sistemas familiares donde el hijo tiene acceso a abundante validación emocional pero escasa estructura conductual. El resultado es un niño que se siente escuchado pero que no ha desarrollado los recursos para tolerar la frustración que los límites producen. Esta combinación —alta validación sin estructura— es funcionalmente distinta de la parentalidad permisiva clásica, porque opera bajo una justificación verbal sofisticada que la hace más difícil de cuestionar.</p>
 
@@ -265,7 +295,12 @@
 
 <p>La distinción funcional central es esta: validar la experiencia no es validar la conducta. «Entiendo que estabas muy enfadado cuando te llamaron eso delante de todos» no equivale a «por eso está bien que hayas golpeado.» Esta distinción, que parece trivial enunciada así, resulta ser de difícil implementación para muchos adultos en situaciones de alta activación, porque la tendencia automática bajo estrés es equiparar comprender con justificar o con ceder.</p>
 
-<p>La validación eficaz cumple tres condiciones observables: es específica (nombra la experiencia concreta), es contextual (la conecta con la situación que la produce) y es separada del comentario sobre la conducta (no va mezclada con el límite en la misma frase). La secuencia funcional es siempre: primero la validación, después el límite o la orientación. El orden no es protocolo: es la condición fisiológica para que el límite pueda ser procesado como información y no como amenaza.</p>
+<div class="infobox">
+<div class="infobox-label">Tres condiciones de la validación eficaz</div>
+<p><strong>Específica</strong> — nombra la experiencia concreta, no la generaliza.</p>
+<p><strong>Contextual</strong> — la conecta con la situación que la produce.</p>
+<p><strong>Separada del límite</strong> — no va mezclada con la corrección en la misma frase. La secuencia funcional es siempre: primero la validación, después el límite. El orden no es protocolo: es la condición fisiológica para que el límite pueda ser procesado como información y no como amenaza.</p>
+</div>
 
 <h2>Conclusiones</h2>
 
@@ -273,21 +308,24 @@
 
 <p>Los principios centrales de la CCF pueden resumirse del siguiente modo:</p>
 
-<p>Primero, la crianza es funcionalmente un sistema de contingencias recíprocas que no puede analizarse separando al adulto del hijo ni al par de su contexto relacional, cultural y fisiológico.</p>
+<ul class="checklist">
+    <li><strong>La crianza como sistema recíproco</strong> — no puede analizarse separando al adulto del hijo ni al par de su contexto relacional, cultural y fisiológico.</li>
+    <li><strong>Los marcos relacionales transforman el desarrollo</strong> — la historia del vínculo padre-hijo transforma la función de estímulos, conductas y experiencias de forma más profunda que cualquier episodio aislado.</li>
+    <li><strong>La flexibilidad psicológica del adulto es condición contextual</strong> — el hijo puede heredarla a través de la historia de co-regulación antes de que el lenguaje formal pueda hacer ese trabajo directamente.</li>
+    <li><strong>El vínculo familiar ofrece lo que ningún otro sistema puede</strong> — aceptación incondicional, restauración después del error y perspectiva temporal, frente a los sistemas que compiten por organizar la conducta e identidad del hijo.</li>
+    <li><strong>La intervención efectiva identifica procesos, no categorías</strong> — requiere el perfil de procesos con mayor peso funcional en cada caso, no protocolos genéricos para diagnósticos.</li>
+    <li><strong>El discurso cultural puede reducir la flexibilidad parental</strong> — algunas reglas verbales rígidas sobre crianza producen hipervigilancia, autocrítica y evitación experiencial con consecuencias identificables.</li>
+</ul>
 
-<p>Segundo, los marcos relacionales que se instalan en la historia del vínculo padre-hijo transforman la función de estímulos, conductas y experiencias de forma que organiza el desarrollo socioemocional de forma más profunda que cualquier episodio aislado.</p>
+<blockquote>La Crianza Contextual Funcional no propone una nueva escuela ni un nuevo programa. Propone una forma más precisa de hacer la pregunta central de cualquier trabajo con familias: ¿qué está ocurriendo en esta relación, en este momento, y qué puede cambiarse a partir de ahora?</blockquote>
 
-<p>Tercero, la flexibilidad psicológica del adulto cuidador no es solo un recurso individual: es una condición contextual que el hijo puede heredar funcionalmente a través de la historia de co-regulación antes de que el lenguaje formal pueda hacer ese trabajo de forma directa.</p>
-
-<p>Cuarto, el hijo crece simultáneamente en múltiples sistemas de contingencias —familiar, escolar, entre iguales, digital— que compiten por organizar su conducta, su identidad y sus marcos relacionales. La función del vínculo familiar no es eliminar esa competencia sino ofrecer lo que ningún otro sistema puede: aceptación incondicional, restauración después del error y perspectiva temporal.</p>
-
-<p>Quinto, la intervención efectiva en sistemas familiares requiere identificación del perfil de procesos con mayor peso funcional en cada caso y no la aplicación de protocolos genéricos para categorías diagnósticas.</p>
-
-<p>Sexto, el discurso cultural contemporáneo sobre crianza puede, en algunos de sus desarrollos, operar como conjunto de reglas verbales rígidas que reducen la flexibilidad parental y producen patrones de evitación experiencial con consecuencias perjudiciales identificables.</p>
-
-<p>La Crianza Contextual Funcional no propone una nueva escuela ni un nuevo programa. Propone una forma más precisa de hacer la pregunta central de cualquier trabajo con familias: ¿qué está ocurriendo en esta relación, en este momento, y qué puede cambiarse a partir de ahora?</p>
-
+<div class="emotional-block">
 <p>Si al leer esta serie te has reconocido, es posible que no necesites más información ni más modelos. Probablemente ya has hecho ese esfuerzo. Lo que suele marcar la diferencia en este punto es poder mirar con precisión qué está ocurriendo en tu caso concreto: en qué momentos se pierde el margen, qué procesos están tomando el control y cómo intervenir ahí sin añadir más exigencia sobre ti. Ese es el trabajo que desarrollo en consulta: no evaluar cómo lo estás haciendo, sino entender contigo qué está pasando y recuperar una forma de estar con tu hijo que no dependa de que todo sea fácil para poder sostenerse.</p>
+</div>
+
+<div class="closing-block">
+<p>Criar no es competir con el mundo que rodea a tu hijo. Es ser el lugar al que vuelve cuando ese mundo se complica. Eso no lo ofrece ningún otro sistema. Solo el tuyo.</p>
+</div>
 
 <hr>
 

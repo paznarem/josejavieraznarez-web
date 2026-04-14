@@ -95,6 +95,37 @@
         .series-nav-label{font-size:.72rem;color:var(--text-light);letter-spacing:.05em;text-transform:uppercase;}
         .series-nav-title{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);line-height:1.3;}
         .reading-time{font-size:.82rem;color:var(--text-light);display:inline-flex;align-items:center;gap:.35rem;}.reading-time::before{content:'·';color:var(--warm);}
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block{background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.05) 100%);border-radius:12px;padding:1.5rem 1.8rem;margin:1.5rem 0;border-left:3px solid var(--warm);}
+        .emotional-block p{margin-bottom:1rem;color:var(--text-primary);font-size:1.02rem;line-height:1.85;}
+        .emotional-block p:last-child{margin-bottom:0;}
+        .closing-block{text-align:center;padding:2.5rem 2rem;margin:2rem 0;background:linear-gradient(135deg,var(--cream) 0%,var(--cream-dark) 100%);border-radius:16px;}
+        .closing-block p{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--text-primary);line-height:1.75;max-width:560px;margin:0 auto;}
+        .collapsible-note{margin:2.5rem 0;border:1px solid var(--cream-dark);border-radius:12px;overflow:hidden;}
+        .collapsible-note summary{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;cursor:pointer;background:var(--cream);list-style:none;user-select:none;transition:background .2s;}
+        .collapsible-note summary::-webkit-details-marker{display:none;}
+        .collapsible-note summary:hover{background:var(--cream-dark);}
+        .collapsible-note-label{display:flex;align-items:center;gap:.7rem;}
+        .collapsible-tag{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);background:rgba(107,127,94,.12);padding:.2rem .6rem;border-radius:100px;}
+        .collapsible-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--text-primary);}
+        .collapsible-chevron{color:var(--text-light);transition:transform .3s;flex-shrink:0;}
+        .collapsible-note[open] .collapsible-chevron{transform:rotate(180deg);}
+        .collapsible-content{padding:1.5rem;border-top:1px solid var(--cream-dark);}
+        .collapsible-content p{font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.2rem;}
+        .collapsible-content p:last-child{margin-bottom:0;}
+        .infobox{border-left:3px solid var(--warm);background:linear-gradient(135deg,rgba(196,168,130,.10) 0%,rgba(196,168,130,.04) 100%);border-radius:0 12px 12px 0;padding:1.2rem 1.6rem;margin:2rem 0;}
+        .infobox-label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.5rem;}
+        .infobox p{font-size:.98rem;color:var(--text-secondary);line-height:1.8;margin-bottom:.8rem;}
+        .infobox p:last-child{margin-bottom:0;}
+        .scenario-block{background:linear-gradient(135deg,rgba(196,168,130,.08) 0%,rgba(196,168,130,.03) 100%);border-left:3px solid var(--warm-light);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;}
+        .scenario-block p{font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:.9rem;font-style:italic;}
+        .scenario-block p:last-child{margin-bottom:0;}
+        .scenario-label{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:.6rem;display:block;}
+        .checklist{list-style:none;padding:0;margin:1.5rem 0;}
+        .checklist li{padding:.6rem .8rem .6rem 2.2rem;position:relative;font-size:.98rem;line-height:1.7;color:var(--text-secondary);border-bottom:1px solid var(--cream-dark);}
+        .checklist li:last-child{border-bottom:none;}
+        .checklist li::before{content:"☐";position:absolute;left:.5rem;top:.6rem;color:var(--sage);font-size:1rem;}
     </style>
 </head>
 <body>
@@ -148,25 +179,31 @@
 
 <p>El trabajo psicológico y psicoeducativo con familias desplaza la pregunta de «¿qué estilo de crianza tiene esta familia?» o «¿qué tipo de apego tiene este niño?» hacia «¿qué procesos psicológicos específicos están organizando la conducta parental y el desarrollo del hijo en este momento, y cuáles tienen mayor peso funcional?» Esta pregunta tiene implicaciones inmediatas para la evaluación y la intervención.</p>
 
-<p>Dos familias con el mismo patrón observable —por ejemplo, dificultades para sostener límites ante la protesta del hijo— pueden estar organizadas por procesos completamente diferentes. En una familia, el proceso dominante puede ser la fusión cognitiva del padre con la regla «si mi hijo sufre, he fallado». En otra, puede ser la evitación experiencial de la propia culpa que produce escuchar el llanto. En una tercera, puede ser un déficit de habilidades de regulación emocional en el adulto que hace que la escalada del conflicto lo desborde antes de poder sostener el límite. Y en una cuarta, puede ser la sobrecarga sistémica que deja al adulto sin margen de respuesta flexible por agotamiento fisiológico.</p>
+<div class="infobox">
+<div class="infobox-label">Mismo síntoma, procesos distintos</div>
+<p>Dos familias con dificultades para sostener límites pueden estar organizadas por procesos completamente diferentes, que requieren intervenciones distintas:</p>
+</div>
 
-<p>Estas cuatro situaciones requieren intervenciones funcionalmente diferentes. Aplicar el mismo protocolo a las cuatro producirá resultados inconsistentes, no porque el protocolo sea incorrecto sino porque no está dirigido al proceso con mayor peso funcional en cada caso.</p>
+<ul class="checklist">
+    <li><strong>Familia A — fusión cognitiva</strong> («si mi hijo sufre, he fallado»): necesita trabajo de defusión cognitiva</li>
+    <li><strong>Familia B — evitación experiencial</strong> (culpa ante el llanto): necesita trabajo de aceptación experiencial</li>
+    <li><strong>Familia C — déficit de regulación</strong> (escalada que desborda al adulto): necesita construcción de habilidades regulatorias antes que ningún otro trabajo</li>
+    <li><strong>Familia D — sobrecarga fisiológica</strong> (privación de sueño, aislamiento): necesita intervención en las condiciones de vida primero</li>
+</ul>
 
-<p>Para hacerlo concreto: la primera familia necesita trabajo de defusión cognitiva —ayudar al padre a relacionarse de otra manera con el pensamiento «si mi hijo sufre, he fallado». La segunda necesita trabajo de aceptación experiencial —ayudar al adulto a tolerar el malestar de escuchar el llanto sin actuar para eliminarlo. La tercera necesita construcción de habilidades de regulación emocional —el adulto que se desborda en la escalada necesita recursos fisiológicos y conductuales concretos antes de que ningún trabajo de valores sea posible. La cuarta necesita una intervención en las condiciones de vida del adulto —reducir la sobrecarga, construir red de apoyo, recuperar sueño— porque ningún proceso psicológico opera correctamente sobre un sistema nervioso en agotamiento crónico. Aplicar defusión cognitiva a la cuarta familia, o entrenamiento en regulación emocional a la primera, no es incorrecto en abstracto: es ineficiente porque no está dirigido al proceso que tiene mayor peso funcional en ese caso.</p>
+<p>Aplicar el mismo protocolo a las cuatro producirá resultados inconsistentes, no porque el protocolo sea incorrecto sino porque no está dirigido al proceso con mayor peso funcional en cada caso.</p>
 
 <h3>Los procesos transdiagnósticos en el sistema parental y las condiciones que los mantienen</h3>
 
 <p>Es posible identificar un conjunto de procesos transdiagnósticos que aparecen consistentemente en las dificultades de crianza con independencia de la categoría que el sistema de salud mental asigne al hijo o al adulto.</p>
 
-<p>Fusión cognitiva con reglas rígidas sobre el rol parental ideal: produce conducta parental organizada por la urgencia de cumplir el mandato («debo ser un padre perfecto») más que por las necesidades reales del hijo en ese momento. Una madre que ha internalizado la idea de que una buena madre nunca pierde la paciencia puede quedarse tan paralizada por la culpa después de un momento de dureza que le resulta imposible hacer la restauración vincular que su hijo necesita: el pensamiento «soy una mala madre» secuestra la conducta antes de que esta pueda orientarse de nuevo hacia el cuidado.</p>
-
-<p>Pérdida de contacto con valores parentales genuinos: cuando la conducta del adulto está gobernada por reglas sociales aprendidas sobre «buena crianza» en lugar de por sus propios valores de cuidado, la flexibilidad se reduce y la vulnerabilidad al agotamiento aumenta.</p>
-
-<p>Rigidez en la perspectiva del observador: incapacidad para mantener simultáneamente la propia perspectiva y la perspectiva del hijo, especialmente en momentos de alta activación emocional. Un padre que, durante un conflicto con su hijo adolescente, solo puede ver la situación desde su propia activación no puede acceder a la pregunta «¿qué está sintiendo mi hijo en este momento?» Esta pérdida de perspectiva es uno de los factores que convierte los conflictos normales del desarrollo en rupturas vinculares difíciles de reparar.</p>
-
-<p>Déficits en la red de apoyo: el aislamiento del cuidador principal como condición contextual que eleva crónicamente la activación fisiológica y reduce el umbral de respuesta flexible.</p>
-
-<p>Sobrecarga fisiológica crónica: la privación de sueño, el aislamiento, la ausencia de apoyo práctico y la acumulación de demandas sin recuperación estrecha el margen de respuesta flexible del adulto de forma fisiológica antes que psicológica. En estas condiciones, incluso adultos con alto nivel de flexibilidad psicológica basal pueden mostrar patrones de respuesta rígidos. La intervención psicológica en crianza que no atiende a estas condiciones materiales y contextuales del adulto cuidador tiene un alcance necesariamente limitado: no es posible trabajar la defusión cognitiva con un padre que lleva semanas durmiendo cuatro horas. El orden de prioridades importa.</p>
+<ul class="checklist">
+    <li><strong>Fusión cognitiva con reglas sobre el rol parental ideal</strong> — produce conducta organizada por la urgencia de cumplir el mandato («debo ser un padre perfecto») más que por las necesidades reales del hijo. Una madre paralizada por la culpa después de un momento de dureza puede ser incapaz de hacer la restauración vincular que su hijo necesita: el pensamiento «soy una mala madre» secuestra la conducta antes de que pueda orientarse de nuevo hacia el cuidado.</li>
+    <li><strong>Pérdida de contacto con valores parentales genuinos</strong> — cuando la conducta del adulto está gobernada por reglas sociales aprendidas sobre «buena crianza» en lugar de por sus propios valores de cuidado, la flexibilidad se reduce y la vulnerabilidad al agotamiento aumenta.</li>
+    <li><strong>Rigidez en la perspectiva del observador</strong> — incapacidad para mantener simultáneamente la propia perspectiva y la del hijo en momentos de alta activación. Un padre que solo puede ver el conflicto desde su propia activación no puede acceder a la pregunta «¿qué está sintiendo mi hijo en este momento?» Esta pérdida de perspectiva convierte los conflictos normales del desarrollo en rupturas vinculares difíciles de reparar.</li>
+    <li><strong>Déficits en la red de apoyo</strong> — el aislamiento del cuidador principal como condición contextual que eleva crónicamente la activación fisiológica y reduce el umbral de respuesta flexible.</li>
+    <li><strong>Sobrecarga fisiológica crónica</strong> — privación de sueño, aislamiento y acumulación de demandas sin recuperación estrechan el margen de respuesta flexible de forma fisiológica antes que psicológica. No es posible trabajar la defusión cognitiva con un padre que lleva semanas durmiendo cuatro horas. El orden de prioridades importa.</li>
+</ul>
 
 <h3>El peso relativo de los procesos como criterio de intervención</h3>
 
@@ -180,7 +217,7 @@
 
 <p>Desde CBS, este momento no es fracaso: es información funcional de primer orden. Cuando un padre ha intentado razonar, poner límites, ceder, estar más presente, estar menos encima, aplicar técnicas de disciplina positiva y ninguna ha producido un cambio estable en el patrón, el sistema está comunicando que el problema no está en el esfuerzo aplicado sino en la dirección hacia la que ese esfuerzo apunta. La inutilidad de estrategias basadas en el control del resultado —del comportamiento del hijo, de sus emociones, del vínculo tal como debería ser— comienza a hacerse evidente como experiencia vivida, no como conclusión intelectual.</p>
 
-<p>Este es el punto funcional que ACT denomina desesperanza creativa: no la desesperanza que cierra, sino la que libera. Cuando el adulto puede reconocer, sin juzgarse, que el problema no es que haya intentado poco sino que ha intentado en la dirección equivocada, se abre por primera vez un espacio para que la pregunta cambie: no «¿cómo lo hago mejor?» sino «¿hacia dónde está apuntando mi esfuerzo, y es esa la dirección en que quiero seguir?» La desesperanza creativa no produce pasividad: produce reorientación.</p>
+<blockquote>Este es el punto funcional que ACT denomina desesperanza creativa: no la desesperanza que cierra, sino la que libera. Cuando el adulto puede reconocer, sin juzgarse, que el problema no es que haya intentado poco sino que ha intentado en la dirección equivocada, se abre por primera vez un espacio para que la pregunta cambie: no «¿cómo lo hago mejor?» sino «¿hacia dónde está apuntando mi esfuerzo, y es esa la dirección en que quiero seguir?» La desesperanza creativa no produce pasividad: produce reorientación.</blockquote>
 
 <h2>Lo que el hijo aprende antes de que nadie le enseñe nada</h2>
 
@@ -208,7 +245,13 @@
 
 <p>En el caso de perfiles con divergencia atencional, la flexibilidad psicológica en niños predice resultados en funcionamiento emocional y relacional con mayor fuerza que la sintomatología atencional en sí misma. Esto sugiere que el objetivo de la intervención no es exclusivamente la reducción de síntomas sino el desarrollo de recursos de flexibilidad —contacto con el momento presente, defusión de los pensamientos sobre el propio rendimiento, acción desde valores— que dependen en gran medida de la historia de co-regulación con el adulto.</p>
 
-<p>Un niño con alta sensibilidad sensorial puede procesar como intrusiva la proximidad física que para otro sería reguladora: forzar el contacto en ese momento no es co-regulación, es una demanda sensorial adicional en un sistema ya sobrecargado. Un adolescente autista puede procesar el silencio compartido —estar juntos sin hablar, hacer algo en paralelo— como co-regulación más efectiva que cualquier verbalización. Un niño con divergencia atencional puede necesitar que la co-regulación venga acompañada de movimiento: caminar juntos, manipular algo con las manos, una conversación en el coche mirando hacia adelante en lugar de cara a cara. Estas no son adaptaciones menores o concesiones: son las formas en que la co-regulación se vuelve accesible para ese perfil específico, y su identificación requiere historia de observación y ajuste, no aplicación de protocolos genéricos.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ Co-regulación y perfil de procesamiento</span>
+<p>Un niño con alta sensibilidad sensorial puede procesar como intrusiva la proximidad física que para otro sería reguladora: forzar el contacto en ese momento no es co-regulación, es una demanda sensorial adicional en un sistema ya sobrecargado.</p>
+<p>Un adolescente autista puede procesar el silencio compartido —estar juntos sin hablar, hacer algo en paralelo— como co-regulación más efectiva que cualquier verbalización.</p>
+<p>Un niño con divergencia atencional puede necesitar que la co-regulación venga acompañada de movimiento: caminar juntos, manipular algo con las manos, una conversación en el coche mirando hacia adelante en lugar de cara a cara.</p>
+<p>Estas no son adaptaciones menores o concesiones: son las formas en que la co-regulación se vuelve accesible para ese perfil específico, y su identificación requiere historia de observación y ajuste, no aplicación de protocolos genéricos.</p>
+</div>
 
 <p>La implicación práctica más importante para los padres de hijos con perfiles de procesamiento diferente es esta: el adulto no necesita entender perfectamente el perfil de su hijo antes de poder co-regular con él. Necesita, en primer lugar, estar suficientemente regulado para poder observar sin la urgencia de corregir, sin el miedo de que lo que ve define el futuro y sin la culpa de que lo que ve es consecuencia de sus errores. Desde esa regulación, la sensibilidad a las señales específicas del hijo —qué lo activa, qué lo calma, qué forma de presencia le resulta accesible hoy— se desarrolla de forma progresiva. No hay protocolo que reemplace esa historia de observación ajustada. Pero esa historia no puede construirse si el adulto no tiene primero acceso a sus propios recursos de flexibilidad psicológica.</p>
 
@@ -216,17 +259,23 @@
 
 <p>La co-regulación no opera de forma idéntica a lo largo del ciclo vital del hijo. El principio es el mismo —la presencia regulada del adulto como condición contextual para la regulación del hijo— pero los mecanismos específicos que lo implementan, los canales que lo transmiten y los procesos del hijo que puede activar varían cualitativamente según el estadio del desarrollo.</p>
 
-<p>En los primeros dos años de vida, la co-regulación es exclusivamente corporal. Ocurre antes de que exista lenguaje que pueda mediarla, corregirla o compensarla. Lo que el cuerpo del bebé procesa como señal regulatoria no son palabras ni contenidos cognitivos: son el ritmo cardíaco del adulto transmitido a través del contacto, la cadencia de la respiración, la temperatura del cuerpo, la predictibilidad del movimiento. La sincronía biológica entre cuidador y bebé —medida mediante cortisol, frecuencia cardíaca y oxitocina— predice la regulación emocional del niño a los cinco años con mayor potencia que cualquier variable educativa o de estilo parental. La implicación práctica es precisa: en este período, la pregunta útil no es «¿qué le digo?» sino «¿cómo está mi cuerpo mientras estoy con él?»</p>
+<div class="infobox">
+<div class="infobox-label">Co-regulación a lo largo del desarrollo</div>
+<p>El principio es el mismo en cada etapa — la presencia regulada del adulto como condición para la regulación del hijo — pero los mecanismos, los canales y los procesos activados varían cualitativamente:</p>
+</div>
 
-<p>Esta es la razón por la que los errores de co-regulación en la etapa preverbal no pueden corregirse después con palabras. Lo que el bebé aprende antes de que exista el lenguaje no puede ser compensado por el lenguaje posterior, aunque sí puede ser competido por experiencias relacionales nuevas que instalen historias alternativas.</p>
-
-<p>Entre los dos y los cuatro años, el lenguaje emerge como nuevo organizador de la experiencia y la co-regulación adquiere una dimensión verbal que antes no existía. El adulto que dice «estás enfadado» mientras sostiene el contacto no solo calma: nombra un estado, lo distingue del yo que lo experimenta y lo sitúa en una relación de coordinación con una respuesta posible. Este etiquetado emocional temprano —nombrar lo que el cuerpo siente para que eso reciba un nombre relacional— instala la arquitectura básica de la defusión cognitiva antes de que el niño pueda practicarla deliberadamente. Las frases que en esta etapa separan conducta de identidad («estás enfadado» en lugar de «eres malo») no son cortesía lingüística: son intervenciones precisas sobre el proceso de fusión cognitiva que emerge con el lenguaje y que, si se consolida, producirá el tipo de rigidez que el adulto tendrá que gestionar años después.</p>
-
-<p>Entre los seis y los nueve años, la co-regulación deja de ocurrir exclusivamente en presencia del adulto. Las reglas relacionales instaladas en la historia del vínculo empiezan a operar en ausencia del adulto, organizando cómo el niño responde en el grupo de iguales, en el aula, en los contextos donde el adulto ya no puede intervenir en tiempo real. Aquí la co-regulación se convierte en modelado: lo que el adulto hace cuando está presente determina qué repertorio estará disponible cuando no esté. El padre que puede equivocarse y volver, sostener la vergüenza propia sin colapsar y poner límites sin humillar está instalando, repetición a repetición, un repertorio que el hijo podrá activar ante situaciones que ningún adulto habrá anticipado.</p>
-
-<p>En la adolescencia, la función de la co-regulación se transforma una vez más. El adolescente necesita menos regulación externa de la activación fisiológica y más modelado de cómo funcionar bajo presión social, cómo tomar perspectiva en situaciones de alta activación y cómo sostener valores cuando el grupo empuja en dirección contraria. La co-regulación aquí no opera sobre el cuerpo activado del hijo con el mismo peso que en la infancia: opera sobre la historia de marcos relacionales que determina si el adolescente puede acudir al adulto cuando las cosas se complican fuera. Un adolescente cuya historia de co-regulación ha sido suficientemente consistente lleva consigo algo que ningún grupo de iguales ni ninguna plataforma digital puede replicar: la expectativa experiencial de que el malestar puede atravesarse en relación.</p>
+<ul class="checklist">
+    <li><strong>0-2 años — co-regulación corporal</strong>: el ritmo cardíaco transmitido por el contacto, la cadencia de la respiración, la temperatura del cuerpo, la predictibilidad del movimiento. La sincronía biológica entre cuidador y bebé predice la regulación emocional del niño a los cinco años con mayor potencia que cualquier variable educativa. La pregunta útil en este período no es «¿qué le digo?» sino «¿cómo está mi cuerpo mientras estoy con él?»</li>
+    <li><strong>2-4 años — co-regulación verbal</strong>: el adulto que dice «estás enfadado» mientras sostiene el contacto nombra un estado y lo distingue del yo que lo experimenta. Las frases que separan conducta de identidad («estás enfadado» en lugar de «eres malo») no son cortesía lingüística: instalan la arquitectura básica de la defusión cognitiva antes de que el niño pueda practicarla deliberadamente.</li>
+    <li><strong>6-9 años — co-regulación por modelado</strong>: las reglas relacionales instaladas en la historia del vínculo empiezan a operar en ausencia del adulto. Lo que el adulto hace cuando está presente determina qué repertorio estará disponible cuando no esté. El padre que puede equivocarse y volver, sostener la vergüenza propia sin colapsar y poner límites sin humillar instala un repertorio que el hijo activará en contextos que ningún adulto habrá anticipado.</li>
+    <li><strong>Adolescencia — co-regulación histórica</strong>: el adolescente necesita menos regulación externa de la activación fisiológica y más modelado de cómo sostener valores cuando el grupo empuja en dirección contraria. Un adolescente cuya historia de co-regulación ha sido suficientemente consistente lleva consigo algo que ningún grupo de iguales ni ninguna plataforma digital puede replicar: la expectativa experiencial de que el malestar puede atravesarse en relación.</li>
+</ul>
 
 <hr>
+
+<div class="closing-block">
+<p>Lo que tu hijo aprende antes de que nadie le enseñe nada no se transmite con palabras ni intenciones: se transmite con la historia repetida de tu presencia regulada. Cada vez que puedes quedarte con su malestar sin urgencia de cerrarlo, le estás enseñando que el malestar puede atravesarse. Eso es lo que lleva consigo cuando ya no estás.</p>
+</div>
 
 <p><em>En el próximo artículo se analizan los procesos que sostienen el vínculo a largo plazo: la historia de aceptación estable, la restauración vincular como proceso activo, el reconocimiento sin comparación, la reciprocidad progresiva y el desarrollo de la empatía compasiva en el hijo.</em></p>
 

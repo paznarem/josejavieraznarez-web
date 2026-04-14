@@ -266,6 +266,93 @@
             content: '·';
             color: var(--warm);
         }
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag {
+            font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px;
+        }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.5rem;
+        }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .scenario-block p { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label {
+            font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.6rem; display: block;
+        }
     </style>
 </head>
 <body>
@@ -322,11 +409,14 @@
 
 <p class="article-intro">Este es el primer artículo de la serie Crianza Contextual Funcional, en la que se propone un marco diferente para entender la relación entre padres e hijos. No es un nuevo manual de instrucciones ni otro listado de lo que deberías hacer mejor. Es una forma más precisa —y más compasiva— de mirar lo que ya está ocurriendo en tu relación con tu hijo. A lo largo de siete artículos, se desarrollan los principios de este enfoque, desde la Ciencia Conductual Contextual, con ejemplos reales y aplicaciones concretas.</p>
 
-<p>Si llegas aquí con la sensación de que, hagas lo que hagas, no es suficiente; si cada libro sobre crianza te ha dejado más angustiada que antes; si reconoces en ti misma a la madre del ejemplo equivocado más veces de las que puedes soportar este texto es para ti. Pero no de la forma en que probablemente esperas.</p>
-
+<div class="emotional-block">
+<p>Si llegas aquí con la sensación de que, hagas lo que hagas, no es suficiente; si cada libro sobre crianza te ha dejado más angustiada que antes; si reconoces en ti misma a la madre del ejemplo equivocado más veces de las que puedes soportar: este texto es para ti. Pero no de la forma en que probablemente esperas.</p>
 <p>No viene a decirte lo que estás haciendo mal. Ya tienes demasiadas voces ocupadas en eso. Viene a hacer algo diferente: a cambiar la pregunta desde la que te estás juzgando.</p>
+</div>
 
-<p>Porque esa pregunta —¿soy buena madre?— no tiene respuesta útil. No porque la respuesta sea no, sino porque opera en el nivel equivocado. Convierte cada decisión en un veredicto sobre tu identidad, cada momento difícil en evidencia de fracaso, cada rabieta de tu hijo en una señal de daño irreversible. Y desde ese nivel, cualquier cosa que leas se convierte en munición para el acusador que ya llevas dentro.</p>
+<blockquote>
+<p>Esa pregunta —¿soy buena madre?— no tiene respuesta útil. No porque la respuesta sea no, sino porque opera en el nivel equivocado. Convierte cada decisión en un veredicto sobre tu identidad, cada momento difícil en evidencia de fracaso, cada rabieta de tu hijo en una señal de daño irreversible.</p>
+</blockquote>
 
 <p>Mientras lees este artículo, es posible que algo te remueva. Que te reconozcas en algún patrón y que una voz interna lo use, una vez más, para señalarte. Cuando eso ocurra, recuerda esto: lo que aquí se describe no son defectos de personas concretas. Son mecanismos que emergen de condiciones humanas universales, y nadie —ningún padre, ningún profesional, ningún autor de libros sobre crianza— está fuera de ellos.</p>
 
@@ -334,15 +424,14 @@
 
 <p>La pregunta que organiza todo lo que sigue no es qué tipo de madre eres. Es qué está ocurriendo en esta relación, en este momento, y qué puede cambiar a partir de ahora.</p>
 
-<p>Y antes de entenderlo en términos más precisos, conviene detenerse un momento más aquí, en la experiencia concreta. Porque el problema no suele ser que no sepas qué hacer. El problema es otro: hay momentos —siempre los mismos momentos— en los que lo que sabes desaparece. No se borra de la memoria; queda fuera de acceso. Y en su lugar aparecen respuestas que no elegiste, que no representan cómo quieres educar y que, cuando todo pasa, te dejan con la sensación de haberte fallado a ti mismo y a tu hijo. Si no se entiende qué ocurre exactamente en esos momentos, cualquier modelo —por bueno que sea— se convierte en otra exigencia más.</p>
+<p>Y antes de entenderlo en términos más precisos, conviene detenerse un momento más aquí, en la experiencia concreta. Porque el problema no suele ser que no sepas qué hacer. El problema es otro: hay momentos —siempre los mismos momentos— en los que lo que sabes desaparece. No se borra de la memoria; queda fuera de acceso. Y en su lugar aparecen respuestas que no elegiste, que no representan cómo quieres educar y que, cuando todo pasa, te dejan con la sensación de haberte fallado a ti mismo y a tu hijo.</p>
 
-<p>Puede que te suene algo como esto: estás con tu hijo y sabes que necesitas sostener un límite, pero empiezas a notar que se te acelera el cuerpo y acabas cediendo solo para que pare. O te escuchas diciendo justo las palabras que no querías decir, con un tono que no reconoces como tuyo. O consigues hacerlo «bien» durante varios días, pero en uno solo —el más difícil— todo se desordena y vuelves a empezar desde la culpa. Nada de esto ocurre por falta de información. Ocurre porque, en esos momentos, hay procesos tomando el control de tu conducta que operan con más fuerza que cualquier idea que hayas aprendido.</p>
-
+<div class="scenario-block">
+<span class="scenario-label">✦ Escena cotidiana</span>
 <p>Tu hijo llora en el parque porque no quiere apagar la pantalla. Sabes que tienes que sostener el límite. Notas cómo se te acelera el cuerpo. Aguantas unos segundos. Empieza a gritar más fuerte. Te miran. Sientes vergüenza. Y en un punto concreto —siempre parecido— cedes. No porque creas que es lo mejor, sino porque no puedes sostener lo que está pasando. Cuando todo termina, no sientes alivio. Sientes que algo no ha ido bien.</p>
-
 <p>Otro día haces lo contrario. No cedes. Mantienes el límite. Pero lo haces con un tono que no reconoces. Más duro, más rápido, más alto. Ves la cara de tu hijo cambiar. Y en ese mismo momento sabes que no es así como querías hacerlo. Pero ya ha ocurrido. Horas después sigues dándole vueltas.</p>
-
 <p>O consigues hacerlo «bien» durante días. Escuchas, validas, sostienes. Y entonces llega un momento pequeño —cansancio, prisa, acumulación— y respondes de una forma que no encaja con nada de lo que estás intentando construir. Y lo que más pesa no es el momento en sí, sino la sensación de incoherencia: saber lo que quieres hacer y no poder hacerlo cuando importa.</p>
+</div>
 
 <h2>Introducción</h2>
 
@@ -352,9 +441,19 @@
 
 <p>Este enfoque no está pensado para enseñarte a hacerlo todo bien. Está pensado para algo más concreto y más útil: entender qué te ocurre exactamente en los momentos en que más te cuesta responder como te gustaría, identificar qué está organizando tu conducta en ese punto —y recuperar margen de respuesta ahí, donde ahora parece que no lo hay. No se trata de añadir más cosas a tu forma de criar, sino de intervenir justo en el lugar donde tu capacidad de cuidar se bloquea.</p>
 
-<p><em>(Para lectores con formación en psicología: el marco integra los desarrollos de la Ciencia Conductual Contextual, la Teoría de los Marcos Relacionales, ACT y el Modelo Basado en Procesos. A lo largo del texto se señalan los puntos de conexión técnica.)</em></p>
-
-<p>Se describen los procesos nucleares que sostienen el vínculo madre/padre-hijo, el papel de la co-regulación como transferencia de flexibilidad psicológica, la función de los vínculos externos al sistema familiar y las implicaciones para la intervención psicológica y psicoeducativa. Se analiza también la tensión entre el discurso cultural contemporáneo sobre crianza y los principios funcionales que la evidencia contextual respalda.</p>
+<details class="collapsible-note">
+    <summary>
+        <div class="collapsible-note-label">
+            <span class="collapsible-tag">Nota técnica</span>
+            <span class="collapsible-title">Marco teórico: CBS, RFT y Modelo Basado en Procesos</span>
+        </div>
+        <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="collapsible-content">
+        <p>El marco integra los desarrollos de la Ciencia Conductual Contextual (CBS), la Teoría de los Marcos Relacionales (RFT), la Terapia de Aceptación y Compromiso (ACT) y el Modelo Basado en Procesos. A lo largo del texto se señalan los puntos de conexión técnica.</p>
+        <p>Se describen los procesos nucleares que sostienen el vínculo madre/padre-hijo, el papel de la co-regulación como transferencia de flexibilidad psicológica, la función de los vínculos externos al sistema familiar y las implicaciones para la intervención psicológica y psicoeducativa. Se analiza también la tensión entre el discurso cultural contemporáneo sobre crianza y los principios funcionales que la evidencia contextual respalda.</p>
+    </div>
+</details>
 
 <h2>El problema del nivel de análisis en la investigación sobre crianza</h2>
 
@@ -364,13 +463,17 @@
 
 <p>Cuando el análisis se detiene en la categoría, las preguntas que se abren son del tipo: ¿a qué estilo de crianza pertenece esta familia? ¿Qué tipo de apego tiene este niño? ¿Es este padre autoritativo o permisivo, consciente o presente, respetuoso o comprometido? La proliferación de etiquetas —incluyendo las más recientes y de apariencia positiva, como crianza consciente, crianza respetuosa o parentalidad positiva— no resuelve el problema de fondo: todas operan en el nivel de la categoría, describiendo qué tipo de padre es alguien en lugar de qué procesos organizan su conducta en cada momento concreto.</p>
 
-<p>Estas preguntas tienen respuestas estables en condiciones estándar pero resultan empobrecedoras ante la variabilidad contextual que caracteriza la crianza real: el mismo padre que se identifica con la crianza respetuosa puede actuar de forma radicalmente distinta con el mismo hijo según el nivel de fatiga, el contexto social, la historia reciente del vínculo o el tipo de demanda presente. La categoría no predice la conducta; el proceso, sí.</p>
+<blockquote>
+<p>La categoría no predice la conducta; el proceso, sí. El mismo padre que se identifica con la crianza respetuosa puede actuar de forma radicalmente distinta con el mismo hijo según el nivel de fatiga, el contexto social, o el tipo de demanda presente.</p>
+</blockquote>
 
 <p>Cuando el análisis se desplaza al nivel del proceso, las preguntas cambian: ¿qué contingencias organizan la conducta de este padre en este momento concreto? ¿Qué marcos relacionales están activos en esta interacción? ¿Qué función cumple esta respuesta parental en el sistema relacional? ¿Qué procesos psicológicos del adulto están facilitando o interfiriendo con su capacidad de responder desde sus valores de cuidado? Este nivel de análisis es más exigente pero también más preciso y más orientado hacia la acción.</p>
 
-<p>Una madre llega a consulta describiendo a su hijo de siete años como «imposible de manejar.» Ha leído sobre crianza respetuosa, ha hecho un curso de comunicación no violenta, conoce la teoría del apego. Sabe, en abstracto, lo que debería hacer. Pero cuando su hijo hace una rabieta en casa, algo se dispara en ella que borra todo ese conocimiento y actúa de formas que luego la llenan de culpa. El problema no es que no sepa qué estilo de crianza seguir: el problema es que en el momento de la interacción real, otros procesos —miedo, vergüenza, agotamiento, una historia propia de no haber sido co-regulada— organizan su conducta con más fuerza que cualquier principio aprendido. Ninguna categoría diagnóstica sobre su hijo ni ninguna etiqueta sobre su estilo parental llega a ese nivel. La CCF sí lo hace.</p>
-
-<p>Una madre describe algo que se repite casi igual cada semana: su hijo se bloquea con los deberes, ella intenta ayudar, él se frustra, empieza a llorar o a enfadarse, y en cuestión de minutos la situación escala. A veces termina haciendo ella la tarea para que acabe el conflicto. Otras veces discuten hasta que ambos están agotados. Cuando lo cuenta, dice: «sé lo que tendría que hacer, pero en ese momento no me sale.» No es falta de conocimiento. Es que, en ese momento concreto, lo que organiza su conducta no es lo que sabe, sino lo que siente y cómo intenta dejar de sentirlo.</p>
+<div class="scenario-block">
+<span class="scenario-label">✦ En consulta</span>
+<p>Una madre llega describiendo a su hijo de siete años como «imposible de manejar.» Ha leído sobre crianza respetuosa, ha hecho un curso de comunicación no violenta, conoce la teoría del apego. Sabe, en abstracto, lo que debería hacer. Pero cuando su hijo hace una rabieta en casa, algo se dispara en ella que borra todo ese conocimiento y actúa de formas que luego la llenan de culpa. El problema no es que no sepa qué estilo de crianza seguir: es que en el momento de la interacción real, otros procesos —miedo, vergüenza, agotamiento, una historia propia de no haber sido co-regulada— organizan su conducta con más fuerza que cualquier principio aprendido. Ninguna categoría diagnóstica llega a ese nivel. La CCF sí lo hace.</p>
+<p>Otra madre describe algo que se repite casi igual cada semana: su hijo se bloquea con los deberes, ella intenta ayudar, él se frustra, empieza a llorar o a enfadarse, y en cuestión de minutos la situación escala. A veces termina haciendo ella la tarea para que acabe el conflicto. Otras veces discuten hasta que ambos están agotados. Cuando lo cuenta, dice: «sé lo que tendría que hacer, pero en ese momento no me sale.» No es falta de conocimiento. Es que, en ese momento concreto, lo que organiza su conducta no es lo que sabe, sino lo que siente y cómo intenta dejar de sentirlo.</p>
+</div>
 
 <p>En el presente artículo la Crianza Contextual Funcional (CCF) se establece como marco organizador que opera en ese nivel. No es un estilo de crianza ni un programa de entrenamiento parental. Es un conjunto de principios funcionales, derivados de la Ciencia Conductual Contextual (CBS) y sus desarrollos más recientes, que permiten describir, analizar e intervenir sobre los procesos que organizan la relación madre/padre-hijo.</p>
 
@@ -380,7 +483,9 @@
 
 <hr>
 
-<p><em>En el próximo artículo se analiza por qué ninguna conducta de crianza puede evaluarse fuera del contexto en que ocurre, y cómo la relación padre-hijo funciona como un sistema donde lo que hace uno cambia lo que hace el otro.</em></p>
+<div class="closing-block">
+<p>En el próximo artículo se analiza por qué ninguna conducta de crianza puede evaluarse fuera del contexto en que ocurre, y cómo la relación padre-hijo funciona como un sistema donde lo que hace uno cambia lo que hace el otro.</p>
+</div>
 
     </article>
 
