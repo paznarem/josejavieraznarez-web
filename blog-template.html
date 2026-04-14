@@ -13,27 +13,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ============================================
-         INSTRUCCIONES PARA CLAUDE CODE:
+         INSTRUCCIONES PARA CLAUDE CODE
+         ============================================
 
-         Para crear un artículo nuevo a partir de esta plantilla:
-         1. Copia este archivo y renómbralo (ej: autocompasion.html)
-         2. Sustituye los textos marcados con {{PLACEHOLDER}}:
-            - {{TITULO}} → Título del artículo
-            - {{DESCRIPCION}} → 1-2 frases resumen para SEO (max 155 caracteres)
-            - {{CATEGORIA}} → Una de: "Vivir lo que vale" / "Criar con dirección" / "Estrés y ansiedad"
-            - {{CATEGORIA_SLUG}} → Una de: "vivir-lo-que-vale" / "crianza-consciente" / "estres-y-ansiedad"
-            - {{CONTENIDO}} → El cuerpo del artículo en HTML (párrafos con <p>, subtítulos con <h2>/<h3>, listas con <ul>, citas con <blockquote>)
-            - {{SLUG}} → URL-friendly del título (ej: "la-autocompasion-un-camino")
-            - {{TIEMPO_LECTURA}} → Minutos de lectura estimados (aprox. palabras / 150)
-         3. Guarda en la carpeta /blog/
-         4. Actualiza el listado del blog (blog/index.html) con el nuevo artículo
+         ARQUITECTURA
+         ─────────────────────────────────────────────
+         Cada artículo es un archivo HTML autónomo: todo su CSS está en el
+         <style> del propio archivo. No existe hoja CSS externa compartida.
+         Este template es la fuente de verdad del diseño. Al crear o corregir
+         un artículo, copia solo los bloques CSS que necesites — no pegues el
+         template entero encima del contenido.
 
          Estructura de carpetas:
-         /index.html (landing page)
-         /blog/index.html (listado de artículos)
-         /blog/autocompasion.html
-         /blog/procrastinacion.html
-         /blog/...
+           /index.html               landing page
+           /blog/index.html          listado de artículos
+           /blog/nombre-articulo.html
+           /blog-template.html       ← esta plantilla
+
+
+         CREAR UN ARTÍCULO NUEVO
+         ─────────────────────────────────────────────
+         1. Copia este archivo y renómbralo (ej: la-autocompasion.html)
+         2. Sustituye los {{PLACEHOLDER}}:
+            - {{TITULO}}         → Título del artículo
+            - {{DESCRIPCION}}    → 1-2 frases para SEO (máx. 155 caracteres)
+            - {{CATEGORIA}}      → "Vivir lo que vale" | "Criar con dirección" | "Estrés y ansiedad"
+            - {{CATEGORIA_SLUG}} → "vivir-lo-que-vale" | "crianza-consciente" | "estres-y-ansiedad"
+            - {{SLUG}}           → URL del artículo (ej: "la-autocompasion")
+            - {{TIEMPO_LECTURA}} → palabras ÷ 150, redondeado
+            - {{CONTENIDO}}      → cuerpo en HTML (ver bloques narrativos abajo)
+         3. Guarda en /blog/
+         4. Añade el artículo al listado en blog/index.html
+
+
+         CABECERA (HEADER) — diseño oficial
+         ─────────────────────────────────────────────
+         Fondo: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%)
+         Título: Playfair Display, font-weight 300, color var(--text-primary)
+         Categoría: píldora verde sobre fondo rgba(107,127,94,0.1)
+         Meta: color var(--text-light)
+
+         ⚠️  NUNCA uses el gradiente verde oscuro:
+             linear-gradient(135deg, var(--sage-dark)…) — ese es el diseño ANTIGUO abandonado.
+
+
+         ARTÍCULOS QUE FORMAN PARTE DE UNA SERIE
+         ─────────────────────────────────────────────
+         Un artículo de serie lleva en el header:
+           a) <span class="series-badge">Serie: Nombre · Artículo N de M</span>
+           b) <div class="series-index"> con botón desplegable y <ul class="series-index-list">
+              con un <li class="series-index-current"> para el artículo actual y <li><a>
+              para cada uno de los demás.
+
+         Al final del cuerpo, NO añadas series-nav-bar si el artículo ya tiene
+         article-nav (bloque prev/next). Usa uno u otro, nunca los dos.
+
+         Si el artículo usa series-badge o series-index en el HTML, debes incluir
+         el CSS de esas clases en el <style> del propio archivo. Las clases
+         necesarias son:
+           .series-badge, .series-end-badge
+           .series-index, .series-index-toggle, .series-index-arrow
+           .series-index-list, .series-index-current
+         Puedes copiar ese bloque CSS desde este template (sección SERIES BADGE
+         y SERIES INDEX en el <style>).
+
+
+         BLOQUES NARRATIVOS DISPONIBLES
+         ─────────────────────────────────────────────
+         Todos están definidos en el <style> de este template con comentarios
+         de cuándo usarlos. Resumen:
+
+         .article-intro        → párrafo de apertura destacado (itálica + borde crema)
+         .article-subtitle     → subtítulo bajo el h1 del header
+         .emotional-block      → párrafos dirigidos al lector, conexión personal (fondo warm suave)
+         .closing-block        → cierre final solemne (centrado, Playfair itálica, fondo crema)
+         .collapsible-note     → nota técnica o secundaria plegable (usar <details>)
+         .infobox              → definición, principio clave o pregunta central
+         .scenario-block       → escena cotidiana o ejemplo de consulta (itálica, fondo warm)
+         .case-box             → caso de ejemplo extendido
+         .checklist / .checklist-item → lista de verificación o proceso
+         .practice-block       → ejercicio práctico guiado
+         .process-note         → nota aclaratoria pequeña bajo un ejercicio
+         .dialog-block         → diálogo terapeuta/paciente (.dialog-jj, .dialog-m, .speaker)
+         .dialog-stage / .dialog-line → acotación dentro del diálogo
+         .dialog-note          → nota contextual dentro del diálogo
+         .dafo-block           → análisis DAFO funcional
+         .message-box          → mensaje bidireccional (.message-box--hijos, .message-box--padres)
+         .styles-grid          → comparativa 2 columnas (.style-card.positive / .negative)
+         .principles-box       → caja con principios clave en lista
+         .stages-grid          → rejilla de 3 etapas (.stage-card)
+         .act-tools            → herramientas ACT numeradas
+         .series-nav           → lista de capítulos de la serie dentro del cuerpo
+         .series-nav-bar       → barra prev/next al pie (solo si no hay article-nav)
+         .series-ref-block     → referencia inline a otro artículo de la serie
+         .series-end-badge     → badge de fin de serie
+         .img-float-right / .img-float-left → imágenes flotadas con texto alrededor
+         .article-signature    → firma final "José Javier" (Work Sans itálica, color light)
+
+
+         FIRMA FINAL
+         ─────────────────────────────────────────────
+         <p class="article-signature">José Javier</p>
+         Fuente: Work Sans itálica (NO Playfair). Color: var(--text-light).
+         No añadir style="" inline — la clase ya lo define.
+
          ============================================ -->
 
     <title>{{TITULO}} — José Javier Aznárez | Psicólogo Contextual</title>
