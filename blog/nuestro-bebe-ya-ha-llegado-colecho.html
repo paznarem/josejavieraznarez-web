@@ -342,74 +342,19 @@
             line-height: 1.3;
         }
 
-        /* ==================== NOTA EPISTEMOLÓGICA COLAPSABLE ==================== */
-        .epist-note {
-            margin: 2.5rem 0;
-            border: 1px solid var(--cream-dark);
-            border-radius: 12px;
-        }
-
-        .epist-note summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.1rem 1.5rem;
-            cursor: pointer;
-            background: var(--cream);
-            list-style: none;
-            user-select: none;
-            transition: background 0.2s;
-        }
-
-        .epist-note summary::-webkit-details-marker { display: none; }
-
-        .epist-note summary:hover { background: var(--cream-dark); }
-
-        .epist-note-label {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-        }
-
-        .epist-tag {
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--sage);
-            background: rgba(107,127,94,0.12);
-            padding: 0.2rem 0.6rem;
-            border-radius: 100px;
-        }
-
-        .epist-note-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-primary);
-        }
-
-        .epist-chevron {
-            color: var(--text-light);
-            transition: transform 0.3s;
-            flex-shrink: 0;
-        }
-
-        .epist-note[open] .epist-chevron { transform: rotate(180deg); }
-
-        .epist-content {
-            padding: 1.5rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .epist-content p {
-            font-size: 0.98rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1.2rem;
-        }
-
-        .epist-content p:last-child { margin-bottom: 0; }
+        /* ==================== NOTA COLAPSABLE ==================== */
+        .collapsible-note { margin: 2.5rem 0; border: 1px solid var(--cream-dark); border-radius: 12px; overflow: hidden; }
+        .collapsible-note summary { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.5rem; cursor: pointer; background: var(--cream); list-style: none; user-select: none; transition: background 0.2s; }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px; }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
 
         /* ==================== CIERRE ==================== */
         .closing-block {
@@ -770,7 +715,7 @@
             .article-nav { padding: 2rem 1.5rem 0; }
             .article-nav-prev, .article-nav-next { max-width: 100%; }
             .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
-            .epist-note-title { font-size: 0.9rem; }
+            .collapsible-title { font-size: 0.9rem; }
         }
 
         /* ==================== PRINT ==================== */
@@ -786,7 +731,7 @@
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
             .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             .emotional-block { background: none !important; border-left: 3px solid #ccc; }
-            .epist-note[open] .epist-content { display: block !important; }
+            .collapsible-note[open] .collapsible-content { display: block !important; }
             a { color: #000 !important; text-decoration: none; }
         }
     </style>
@@ -1043,15 +988,15 @@
         </div>
 
         <!-- NOTA EPISTEMOLÓGICA COLAPSABLE -->
-        <details class="epist-note">
+        <details class="collapsible-note">
             <summary>
-                <div class="epist-note-label">
-                    <span class="epist-tag">Nota técnica</span>
-                    <span class="epist-note-title">Para el lector familiarizado con la teoría clásica del apego</span>
+                <div class="collapsible-note-label">
+                    <span class="collapsible-tag">Nota técnica</span>
+                    <span class="collapsible-title">Para el lector familiarizado con la teoría clásica del apego</span>
                 </div>
-                <svg class="epist-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="epist-content">
+            <div class="collapsible-content">
                 <p>La teoría del apego de Bowlby y la clasificación de Ainsworth (apego seguro, ansioso-ambivalente, evitativo, desorganizado) han sido marcos de referencia dominantes en la psicología del desarrollo durante décadas. Sin embargo, desde la Ciencia Conductual Contextual (Contextual Behavioral Science, CBS) y en coherencia con la obra reciente de Hayes y colaboradores, estas categorías presentan un problema epistemológico fundamental: tratan el apego como un rasgo interno, relativamente estable y clasificable, situado dentro del individuo. Este enfoque mentalista es incompatible con el contextualismo funcional, que define la unidad de análisis como siempre el acto-en-contexto, nunca la propiedad del organismo aislado.</p>
                 <p>Desde CBS, el vínculo y el apego no se distinguen como fenómenos separados ni se clasifican en tipologías: son patrones funcionales de conducta relacional —tanto del niño como del cuidador— que emergen de una historia específica de contingencias y que solo tienen sentido en referencia al contexto que los moldea y los mantiene. Esta posición no implica descartar todo lo observado en la tradición del apego, sino reencuadrarlo: PBT puede incorporar los procesos funcionales que subyacen a esas descripciones —búsqueda de proximidad, señalización de malestar, respuesta sensible del cuidador— como unidades de intervención dentro del EEMM, sin asumir los supuestos mentalistas ni las tipologías clasificatorias que los acompañan en su formulación original.</p>
                 <p>Lo que la tradición clásica denomina "apego seguro" no es una categoría que el niño tiene, sino una descripción abreviada de ciertos procesos funcionales: una historia de reforzamiento contingente y consistente que produce un repertorio conductual flexible, capaz de reducir la función aversiva de la separación mediante regulación verbalmente mediada, sin necesidad de suprimirla ni de evitarla. En este artículo, el colecho se analiza como contexto de desarrollo de esos procesos, no como vía hacia un "tipo" de apego.</p>

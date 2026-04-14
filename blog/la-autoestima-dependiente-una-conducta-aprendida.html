@@ -149,64 +149,78 @@
             border-radius: 2px;
         }
 
+        /* ==================== ARTICLE HEADER (crema, template oficial) ==================== */
         .article-header {
-            background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, var(--sage-light) 100%);
-            padding: 8rem 2rem 4rem;
+            padding: 8rem 2rem 3rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%);
             text-align: center;
-            color: var(--white);
         }
 
         .article-header-inner {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
+        }
+
+        .article-category {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1.2rem;
+            background: rgba(107,127,94,0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
         }
 
         .article-series-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.9);
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 500;
             letter-spacing: 0.12em;
             text-transform: uppercase;
+            color: var(--sage-dark);
+            background: rgba(107,127,94,0.12);
+            border: 1px solid rgba(107,127,94,0.25);
             padding: 0.3rem 1rem;
             border-radius: 100px;
             margin-bottom: 0.6rem;
         }
 
-        .article-category {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: var(--white);
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-
         .article-header h1 {
             font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 300;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            line-height: 1.2;
+            line-height: 1.3;
+            color: var(--text-primary);
             letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
-            color: var(--white);
+            margin-bottom: 1.2rem;
         }
 
         .article-meta {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
-            color: rgba(255,255,255,0.9);
+            color: var(--sage);
             text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.4);
         }
+
+        .reading-time {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .reading-time::before { content: '·'; color: var(--warm); }
 
         .back-to-blog {
             max-width: 740px;
@@ -223,64 +237,80 @@
 
         .back-to-blog a:hover { color: var(--sage-dark); }
 
+        /* ==================== ARTICLE BODY (template oficial) ==================== */
         .article-body {
-            max-width: 740px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 3rem 2rem 5rem;
         }
 
         .article-body p {
             font-size: 1.05rem;
-            line-height: 1.85;
+            line-height: 1.9;
             color: var(--text-secondary);
             margin-bottom: 1.6rem;
+            font-weight: 300;
         }
 
         .article-body h2 {
             font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             font-weight: 400;
-            font-size: 1.6rem;
             color: var(--text-primary);
-            margin: 3rem 0 1.2rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
             letter-spacing: -0.02em;
             line-height: 1.3;
         }
 
         .article-body h3 {
             font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
             font-weight: 400;
-            font-size: 1.25rem;
             color: var(--sage-dark);
-            margin: 2.5rem 0 1rem;
-            letter-spacing: -0.01em;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            font-style: italic;
         }
 
         .article-body blockquote {
             border-left: 3px solid var(--warm);
-            padding: 1rem 1.5rem;
-            margin: 2.5rem 0;
-            background: var(--cream);
-            border-radius: 0 8px 8px 0;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-primary);
         }
 
         .article-body blockquote p {
             font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.15rem;
-            color: var(--text-primary);
-            margin-bottom: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
         .article-body ul, .article-body ol {
-            padding-left: 1.5rem;
             margin-bottom: 1.6rem;
+            padding-left: 1.5rem;
         }
 
         .article-body li {
             font-size: 1.05rem;
-            line-height: 1.85;
+            line-height: 1.9;
             color: var(--text-secondary);
             margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .article-body a {
+            color: var(--sage-dark);
+            border-bottom: 1px solid var(--sage-light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-body a:hover {
+            color: var(--sage);
+            border-color: var(--sage);
         }
 
         .article-body strong { color: var(--text-primary); font-weight: 500; }
@@ -290,6 +320,14 @@
             border: none;
             border-top: 1px solid var(--cream-dark);
             margin: 3rem 0;
+        }
+
+        .article-signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-light);
+            margin-top: 2.5rem;
         }
 
         /* Serie navigation box */
@@ -752,7 +790,15 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <div class="article-series-badge">Serie · Parte 1 de 3</div>
+            <span class="series-badge">Serie: Autoestima &middot; Artículo 1 de 3</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li class="series-index-current">1. La autoestima dependiente, una conducta aprendida</li>
+                    <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">2. De la autoestima dependiente a la autoestima genuina</a></li>
+                    <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">3. Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
+                </ul>
+            </div>
             <span class="article-category">Vivir lo que vale</span>
             <h1>La autoestima dependiente, una conducta aprendida</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
@@ -769,17 +815,7 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <!-- SERIE BOX -->
-        <div class="series-nav">
-            <div class="series-nav-label">Esta es una serie de 3 artículos</div>
-            <ul>
-                <li class="current">Parte 1 — La autoestima dependiente, una conducta aprendida</li>
-                <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">Parte 2 — De la autoestima dependiente a la autoestima genuina</a></li>
-                <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
-            </ul>
-        </div>
-
-        <p>La autoestima dependiente y contingente —ya sea alta, baja, estable o inestable—, vinculada a la aprobación de los demás, es una <strong>conducta aprendida por nuestra mente</strong>, principalmente en nuestra infancia y adolescencia. Dependiendo de nuestras respuestas a ella, puede convertirse en una barrera importante para nuestro desempeño familiar, social, académico y profesional, así como para nuestro autocuidado y la construcción de nuestro autoconcepto auténtico.</p>
+        <p class="article-intro">La autoestima dependiente y contingente —ya sea alta, baja, estable o inestable—, vinculada a la aprobación de los demás, es una conducta aprendida por nuestra mente, principalmente en nuestra infancia y adolescencia. Dependiendo de nuestras respuestas a ella, puede convertirse en una barrera importante para nuestro desempeño familiar, social, académico y profesional, así como para nuestro autocuidado y la construcción de nuestro autoconcepto auténtico.</p>
 
         <h2>Autoconcepto, resiliencia y autoeficacia: tres piezas del mismo puzzle</h2>
 
@@ -815,20 +851,20 @@
 
         <h2>La autoestima dependiente baja: cuando la mente nos paraliza</h2>
 
-        <p>Si hemos aprendido a vivir con una autoestima dependiente habitualmente baja, nuestro autoconcepto se habrá construido de forma negativa con pensamientos como:</p>
-
-        <ul>
-            <li><em>"No soy lo suficientemente bueno"</em> o <em>"No hago lo suficiente"</em></li>
-            <li><em>"Los demás son mejores, más capaces, más idóneos"</em></li>
-            <li><em>"No soy digno de ser amado"</em></li>
-            <li><em>"Siempre hago algo mal"</em>, <em>"No valgo para nada"</em></li>
-            <li><em>"Volveré a fracasar porque me equivocaré como siempre"</em></li>
-            <li><em>"Todos se reirán de mí y haré el ridículo"</em></li>
-            <li><em>"Se darán cuenta de que no soy lo que parezco y me rechazarán"</em></li>
-            <li><em>"No quiero volver a sufrir, a pasar por lo mismo"</em></li>
-        </ul>
-
-        <p>Son ejemplos del lenguaje de la autoestima dependiente que nos hacen sentir mal, nerviosos, incapaces, insatisfechos, miedosos e inseguros, condicionando nuestra capacidad para adaptarnos, tomar decisiones y avanzar hacia las cosas de la vida que nos importan. La historia de nuestra autoestima dependiente nos anima a estar quietos, a procrastinar, sin salir de la zona de confort.</p>
+        <div class="emotional-block">
+            <p>Si hemos aprendido a vivir con una autoestima dependiente habitualmente baja, nuestro autoconcepto se habrá construido de forma negativa con pensamientos como:</p>
+            <ul>
+                <li><em>"No soy lo suficientemente bueno"</em> o <em>"No hago lo suficiente"</em></li>
+                <li><em>"Los demás son mejores, más capaces, más idóneos"</em></li>
+                <li><em>"No soy digno de ser amado"</em></li>
+                <li><em>"Siempre hago algo mal"</em>, <em>"No valgo para nada"</em></li>
+                <li><em>"Volveré a fracasar porque me equivocaré como siempre"</em></li>
+                <li><em>"Todos se reirán de mí y haré el ridículo"</em></li>
+                <li><em>"Se darán cuenta de que no soy lo que parezco y me rechazarán"</em></li>
+                <li><em>"No quiero volver a sufrir, a pasar por lo mismo"</em></li>
+            </ul>
+            <p>Son ejemplos del lenguaje de la autoestima dependiente que nos hacen sentir mal, nerviosos, incapaces, insatisfechos, miedosos e inseguros, condicionando nuestra capacidad para adaptarnos, tomar decisiones y avanzar hacia las cosas de la vida que nos importan. La historia de nuestra autoestima dependiente nos anima a estar quietos, a procrastinar, sin salir de la zona de confort.</p>
+        </div>
 
         <h2>La autoestima dependiente alta: una trampa diferente pero igual de limitante</h2>
 
@@ -854,19 +890,18 @@
 
         <p>La autocompasión nos brinda la capacidad de ser amables con nosotros mismos en momentos difíciles, fortaleciendo nuestra resiliencia y una autoestima genuina no dependiente. La verdadera fortaleza radica en aceptar nuestras debilidades y fortalezas, nuestros éxitos y fracasos, y cultivar la humildad que nos permite afrontar los desafíos y construir la vida que deseamos vivir.</p>
 
-        <p>La autoestima es uno de los principales predictores de la satisfacción con la vida y del bienestar mental. La autoestima dependiente es insegura y varía en función de las circunstancias externas, conduciendo a tensión y presión constantes. Por el contrario, se espera que la mayor satisfacción con la vida coincida con una <strong>autoestima genuina y autocompasiva</strong>, óptima y segura.</p>
-
-        <!-- SERIE BOX CIERRE -->
-        <div class="series-nav" style="margin-top: 3rem;">
-            <div class="series-nav-label">Continúa leyendo la serie</div>
-            <ul>
-                <li class="current">Parte 1 — La autoestima dependiente, una conducta aprendida</li>
-                <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">Parte 2 — De la autoestima dependiente a la autoestima genuina</a></li>
-                <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
-            </ul>
+        <div class="closing-block">
+            <p>La autoestima es uno de los principales predictores de la satisfacción con la vida y del bienestar mental. La autoestima dependiente es insegura y varía en función de las circunstancias externas, conduciendo a tensión y presión constantes. Por el contrario, se espera que la mayor satisfacción con la vida coincida con una autoestima genuina y autocompasiva, óptima y segura.</p>
         </div>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <div class="series-nav-bar">
+            <a class="series-nav-link series-nav-next" href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">
+                <span class="series-nav-label">Siguiente en la serie →</span>
+                <span class="series-nav-title">De la autoestima dependiente a la autoestima genuina</span>
+            </a>
+        </div>
+
+        <p class="article-signature">José Javier</p>
 
     </article>
 

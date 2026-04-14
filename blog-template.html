@@ -430,6 +430,500 @@
             font-size: 1rem;
         }
 
+        /* Variante compacta: checklist-item suelto (sin <ul.checklist> contenedor) */
+        .checklist-item {
+            padding: 0.25rem 0 0.25rem 2rem;
+            position: relative;
+            font-size: 0.98rem !important;
+        }
+        .checklist-item::before {
+            content: "☐";
+            position: absolute;
+            left: 0.2rem;
+            color: var(--sage);
+            font-size: 1rem;
+        }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        /* Párrafo de apertura destacado (itálica + borde lateral crema) */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* ==================== ARTICLE SUBTITLE ==================== */
+        /* Subtítulo que va bajo el h1 del header */
+        .article-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* ==================== SERIES BADGE ==================== */
+        /* Insignia "Serie: X · Artículo N de M" sobre el título */
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+        .series-badge::before {
+            content: "♩";
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* Variante: badge al final de una serie */
+        .series-end-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(196,168,130,0.15);
+            color: var(--warm);
+            border: 1px solid rgba(196,168,130,0.3);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin: 2rem 0;
+        }
+
+        /* ==================== SERIES INDEX (desplegable en el header) ==================== */
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 500;
+            color: var(--sage-dark); padding: 0;
+            letter-spacing: 0.02em;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+        }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list {
+            display: none;
+            margin: 0.6rem 0 0 0;
+            padding: 0.75rem 1.2rem;
+            background: rgba(107,127,94,0.07);
+            border-radius: 8px;
+            border: 1px solid rgba(107,127,94,0.15);
+            list-style: none;
+            text-align: left;
+        }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
+        /* ==================== SERIES NAV BAR (pie de artículo con prev/next) ==================== */
+        .series-nav-bar {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+        .series-nav-link {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            text-decoration: none;
+            max-width: 45%;
+            transition: opacity 0.3s;
+        }
+        .series-nav-link:hover .series-nav-title { color: var(--sage-dark); }
+        .series-nav-next { text-align: right; margin-left: auto; }
+        .series-nav-label {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .series-nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        /* ==================== SERIES NAV (caja lateral en el cuerpo) ==================== */
+        /* Variante alternativa: lista de capítulos de la serie dentro del cuerpo */
+        .series-nav {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 3rem 0;
+            border-left: 3px solid var(--sage);
+        }
+        .series-nav ul { list-style: none; padding: 0; margin: 0; }
+        .series-nav li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            padding: 0.3rem 0;
+            margin: 0;
+        }
+        .series-nav li.current { color: var(--text-primary); font-weight: 500; }
+        .series-nav li.current::before { content: "→ "; color: var(--sage); }
+        .series-nav a {
+            color: var(--sage-dark);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-light);
+            transition: color 0.2s;
+        }
+        .series-nav a:hover { color: var(--sage); }
+
+        /* Referencia a otro artículo de la serie (inline) */
+        .series-ref-block {
+            background: var(--cream);
+            border-left: 3px solid var(--sage-light);
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.4rem;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ==================== DIALOG ==================== */
+        /* Diálogos terapeuta/paciente. Usar con .dialog-m o .dialog-jj en los <p> */
+        .dialog-block {
+            background: var(--cream);
+            border-left: 3px solid var(--sage-light);
+            border-radius: 0 10px 10px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+        .dialog-block p { margin-bottom: 0.6rem; font-size: 1rem; line-height: 1.65; }
+        .dialog-block p:last-child { margin-bottom: 0; }
+
+        .dialog-m { color: var(--text-secondary); }
+        .dialog-jj { color: var(--sage-dark); }
+
+        .speaker {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-right: 0.4rem;
+        }
+        .dialog-m .speaker { color: var(--terracotta); }
+        .dialog-jj .speaker { color: var(--sage-dark); }
+
+        /* Línea de acotación (itálica tenue) dentro del diálogo */
+        .dialog-stage,
+        .dialog-line {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 0.93rem !important;
+            margin: 0.4rem 0 !important;
+        }
+
+        /* Nota contextual dentro del diálogo */
+        .dialog-note {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: rgba(107,127,94,0.06);
+            border-radius: 6px;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.8rem !important;
+        }
+
+        /* ==================== PRACTICE BLOCK ==================== */
+        /* Ejercicio práctico guiado */
+        .practice-block {
+            background: linear-gradient(135deg, rgba(107,127,94,0.06) 0%, rgba(107,127,94,0.03) 100%);
+            border: 1px solid rgba(107,127,94,0.18);
+            border-radius: 12px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+        }
+        .practice-block p { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+        .practice-block p:last-child { margin-bottom: 0; }
+        .practice-instruction-key {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.08rem !important;
+            color: var(--sage-dark) !important;
+            margin-bottom: 0.8rem !important;
+        }
+        .practice-line { color: var(--text-secondary); }
+
+        /* ==================== PROCESS NOTE ==================== */
+        /* Nota aclaratoria pequeña, bajo una práctica o ejercicio */
+        .process-note {
+            font-size: 0.85rem !important;
+            color: var(--text-light) !important;
+            font-style: italic;
+            border-top: 1px solid var(--cream-dark);
+            padding-top: 0.5rem;
+            margin-top: -0.5rem !important;
+        }
+
+        /* ==================== CASE BOX ==================== */
+        /* Caso de ejemplo extendido (color terracotta/warm) */
+        .case-box {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2.5rem;
+            border-left: 4px solid var(--warm);
+        }
+        .case-box-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.8rem;
+        }
+        .case-box p {
+            font-size: 0.98rem !important;
+            line-height: 1.75 !important;
+        }
+
+        /* ==================== DAFO BLOCK ==================== */
+        /* Análisis DAFO funcional */
+        .dafo-block {
+            background: rgba(107,127,94,0.05);
+            border: 1px solid rgba(107,127,94,0.18);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .dafo-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--sage-dark);
+            margin: 0 0 0.75rem;
+        }
+        .dafo-block p { font-size: 1rem !important; color: var(--text-secondary) !important; margin-bottom: 0.75rem; }
+        .dafo-block p:last-child { margin-bottom: 0; }
+        .dafo-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.3rem !important;
+        }
+        .dafo-micro {
+            font-size: 0.9rem !important;
+            color: var(--text-light) !important;
+            font-style: italic;
+            border-top: 1px solid var(--cream-dark);
+            padding-top: 0.75rem;
+            margin-top: 0.75rem !important;
+        }
+
+        /* ==================== MESSAGE BOX ==================== */
+        /* Mensaje bidireccional (ej. padres/hijos) */
+        .message-box {
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+        }
+        .message-box--hijos {
+            background: rgba(107, 127, 94, 0.08);
+            border-left: 4px solid var(--sage);
+        }
+        .message-box--padres {
+            background: rgba(196, 168, 130, 0.12);
+            border-left: 4px solid var(--warm);
+        }
+        .message-box-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.9rem;
+        }
+        .message-box--hijos .message-box-label { color: var(--sage-dark); }
+        .message-box--padres .message-box-label { color: var(--warm); }
+        .message-box p {
+            font-size: 1rem !important;
+            line-height: 1.75 !important;
+            margin-bottom: 0.6rem !important;
+            color: var(--text-secondary) !important;
+        }
+        .message-box p:last-child { margin-bottom: 0 !important; }
+
+        /* ==================== STYLES GRID (comparativa 2 columnas) ==================== */
+        .styles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+        .style-card {
+            border-radius: 10px;
+            padding: 1.4rem 1.5rem;
+        }
+        .style-card.negative {
+            background: #f9f0ed;
+            border-left: 3px solid var(--terracotta);
+        }
+        .style-card.positive {
+            background: #f0f4ee;
+            border-left: 3px solid var(--sage);
+        }
+        .style-card-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+        .style-card.negative .style-card-label { color: var(--terracotta); }
+        .style-card.positive .style-card-label { color: var(--sage-dark); }
+        .style-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin: 0 0 0.5rem;
+        }
+        .style-card p {
+            font-size: 0.92rem !important;
+            line-height: 1.7 !important;
+            color: var(--text-secondary) !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* ==================== PRINCIPLES BOX ==================== */
+        /* Caja con principios clave en lista */
+        .principles-box {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 12px;
+            padding: 2rem 2rem 1.2rem;
+            margin: 2.5rem 0;
+        }
+        .principles-box-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+            margin-bottom: 1.2rem;
+        }
+        .principles-box ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+        .principles-box li {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+        }
+
+        /* ==================== STAGES GRID (3 columnas de etapas) ==================== */
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .stage-card {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.2rem 1.3rem;
+            border-top: 3px solid var(--sage-light);
+        }
+        .stage-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.4rem;
+        }
+        .stage-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        /* ==================== ACT TOOLS ==================== */
+        /* Caja de herramientas ACT numeradas */
+        .act-tools {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 12px;
+            padding: 2rem 2rem 1rem;
+            margin: 2.5rem 0;
+        }
+        .act-tools-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+            margin-bottom: 1.2rem;
+        }
+        .act-tools ol { padding-left: 1.5rem; margin-bottom: 0; }
+        .act-tools li {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .act-tools li strong {
+            color: var(--text-primary);
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        /* ==================== IMÁGENES FLOTADAS ==================== */
+        .img-float-right {
+            float: right;
+            clear: both;
+            width: 38%;
+            border-radius: 10px;
+            margin: 0.3rem 0 1.5rem 2rem;
+            display: block;
+            object-fit: cover;
+        }
+        .img-float-left {
+            float: left;
+            clear: both;
+            width: 38%;
+            border-radius: 10px;
+            margin: 0.3rem 2rem 1.5rem 0;
+            display: block;
+            object-fit: cover;
+        }
+        .clearfix::after { content: ''; display: table; clear: both; }
+        @media (max-width: 600px) {
+            .img-float-right, .img-float-left {
+                float: none;
+                width: 100%;
+                margin: 1.5rem 0;
+            }
+        }
+
         /* ==================== ARTICLE BODY ==================== */
         .article-body {
             max-width: 720px;
@@ -520,6 +1014,14 @@
             border: none;
             border-top: 1px solid var(--cream-dark);
             margin: 3rem 0;
+        }
+
+        .article-signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-light);
+            margin-top: 2.5rem;
         }
 
         /* ==================== ARTICLE FOOTER / CTA ==================== */
