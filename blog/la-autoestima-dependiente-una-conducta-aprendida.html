@@ -151,8 +151,8 @@
 
         /* ==================== ARTICLE HEADER (crema, template oficial) ==================== */
         .article-header {
-            padding: 8rem 2rem 3rem;
-            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%);
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
             text-align: center;
         }
 
@@ -174,19 +174,46 @@
             border-radius: 100px;
         }
 
-        .article-series-badge {
-            display: inline-block;
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--sage-dark);
+        .article-series-badge,
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
             background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
             border: 1px solid rgba(107,127,94,0.25);
-            padding: 0.3rem 1rem;
+            padding: 0.35rem 1rem;
             border-radius: 100px;
-            margin-bottom: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
         }
+
+        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index-toggle {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 500;
+            color: var(--sage-dark); padding: 0;
+            letter-spacing: 0.02em;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+        }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list {
+            display: none; margin: 0.6rem 0 0 0;
+            padding: 0.75rem 1.2rem;
+            background: rgba(107,127,94,0.07);
+            border-radius: 8px; border: 1px solid rgba(107,127,94,0.15);
+            list-style: none; text-align: left;
+        }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
 
         .article-header h1 {
             font-family: 'Playfair Display', serif;
@@ -323,9 +350,7 @@
         }
 
         .article-signature {
-            font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-weight: 300;
             color: var(--text-light);
             margin-top: 2.5rem;
         }
@@ -892,13 +917,6 @@
 
         <div class="closing-block">
             <p>La autoestima es uno de los principales predictores de la satisfacción con la vida y del bienestar mental. La autoestima dependiente es insegura y varía en función de las circunstancias externas, conduciendo a tensión y presión constantes. Por el contrario, se espera que la mayor satisfacción con la vida coincida con una autoestima genuina y autocompasiva, óptima y segura.</p>
-        </div>
-
-        <div class="series-nav-bar">
-            <a class="series-nav-link series-nav-next" href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">
-                <span class="series-nav-label">Siguiente en la serie →</span>
-                <span class="series-nav-title">De la autoestima dependiente a la autoestima genuina</span>
-            </a>
         </div>
 
         <p class="article-signature">José Javier</p>
