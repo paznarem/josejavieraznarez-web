@@ -337,6 +337,141 @@
             color: var(--sage) !important;
         }
 
+        /* ==================== SERIES SHOWCASE CARD (tarjeta "de serie") ==================== */
+        .series-showcase {
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, var(--cream-dark, #f0e9dc) 100%);
+            border-radius: 14px;
+            padding: 2rem 2rem 1.75rem;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--sage);
+            transition: box-shadow 0.3s, transform 0.3s;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+        .series-showcase::before,
+        .series-showcase::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: -1;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .series-showcase::before {
+            top: -6px;
+            right: -6px;
+            width: 45%;
+            height: 34px;
+            opacity: 0.7;
+            border-left: 4px solid rgba(107,127,94,0.35);
+        }
+        .series-showcase::after {
+            top: -12px;
+            right: -12px;
+            width: 32%;
+            height: 20px;
+            opacity: 0.4;
+            border-left: 4px solid rgba(107,127,94,0.2);
+        }
+        .series-showcase:hover,
+        .series-showcase:focus-within {
+            box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .series-showcase:hover::before,
+        .series-showcase:focus-within::before { transform: translate(-4px, -2px); }
+        .series-showcase:hover::after,
+        .series-showcase:focus-within::after { transform: translate(-8px, -4px); }
+
+        .series-showcase .series-label { margin-bottom: 0.7rem; }
+        .series-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.45rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin: 0 0 0.6rem;
+        }
+        .series-showcase > p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0 0 1rem;
+        }
+        .series-showcase-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, margin 0.3s;
+            border-top: 1px solid rgba(107,127,94,0.15);
+        }
+        .series-showcase:hover .series-showcase-list,
+        .series-showcase:focus-within .series-showcase-list,
+        .series-showcase.open .series-showcase-list {
+            max-height: 900px;
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+        }
+        .series-showcase-list li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(107,127,94,0.08);
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 0.8rem;
+            align-items: baseline;
+        }
+        .series-showcase-list li:last-child { border-bottom: none; }
+        .series-showcase-list a {
+            color: var(--text-primary);
+            text-decoration: none;
+            flex: 1;
+            line-height: 1.4;
+        }
+        .series-showcase-list a:hover { color: var(--sage-dark); }
+        .series-showcase-list .num {
+            color: var(--sage);
+            font-weight: 500;
+            font-size: 0.78rem;
+            min-width: 1.6rem;
+        }
+        .series-showcase-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--sage-dark);
+            font-weight: 500;
+            font-size: 0.88rem;
+            margin-top: 0.6rem;
+        }
+        .series-showcase-hint {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--text-light, #9a938c);
+            font-style: italic;
+            margin-top: 0.8rem;
+        }
+        .series-showcase:hover .series-showcase-hint,
+        .series-showcase:focus-within .series-showcase-hint,
+        .series-showcase.open .series-showcase-hint { display: none; }
+
+        /* Grid de dos series (Categoría 3) */
+        .series-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 860px) {
+            .series-showcase-grid { grid-template-columns: 1fr; }
+        }
+
         .blog-card {
             background: var(--white);
             border-radius: 1.2rem;
@@ -634,6 +769,13 @@
 
         /* Expanded: show all — !important needed to override the nth-child specificity */
         .blog-grid.expanded .blog-card { display: block !important; }
+
+        /* Preview-3: muestra solo 3 tarjetas antes del botón "ver todos" (anula la regla de 5 en desktop) */
+        .blog-grid.grid-preview-3 .blog-card:nth-child(n+4) { display: none; }
+        @media (min-width: 901px) {
+            .blog-grid.grid-preview-3 .blog-card:nth-child(5) { display: none; }
+        }
+        .blog-grid.grid-preview-3.expanded .blog-card { display: block !important; }
 
         /* Button lives inside .blog-grid as a grid item */
         .expand-btn {
@@ -933,82 +1075,49 @@
                 <h2>Acompañar con amor, criar lo que importa</h2>
                 <p class="category-desc">Claves para un acompañamiento responsable, comprometido y consciente en la crianza. Artículos sobre vínculos seguros, límites funcionales, crianza sin traumas generacionales y el equilibrio entre dar y recibir.</p>
             </div>
-            <div class="blog-grid">
-                <a href="crianza-contextual-funcional-1.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">01</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>No eres el problema: por qué la pregunta «¿soy buena madre?» no tiene respuesta útil</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-2.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">02</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-3.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">03</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-4.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">04</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Qué te ocurre cuando tu hijo llora: los procesos que organizan tus respuestas</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-5.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">05</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Lo que tu hijo aprende antes de que nadie le enseñe nada: la co-regulación como transferencia de flexibilidad</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-6.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">06</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Los procesos que sostienen el vínculo: de la restauración a la empatía compasiva</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
-                <a href="crianza-contextual-funcional-7.html" class="blog-card serie-card">
-                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
-                    <div class="card-number">07</div>
-                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
-                    <h3>Cuando otros vínculos compiten con el tuyo: el hijo entre la familia, los iguales y la pantalla</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
+            <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
+                <span class="series-label">♡ Serie completa · 7 artículos</span>
+                <h3>Crianza Contextual Funcional</h3>
+                <p>Una serie sobre por qué la conducta de nuestros hijos tiene sentido cuando miramos el contexto y la función. Del vínculo seguro a la adolescencia, un recorrido completo basado en la Ciencia Contextual del Comportamiento.</p>
+                <ul class="series-showcase-list">
+                    <li><span class="num">01</span><a href="crianza-contextual-funcional-1.html">No eres el problema: por qué la pregunta «¿soy buena madre?» no tiene respuesta útil</a></li>
+                    <li><span class="num">02</span><a href="crianza-contextual-funcional-2.html">Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo</a></li>
+                    <li><span class="num">03</span><a href="crianza-contextual-funcional-3.html">Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo</a></li>
+                    <li><span class="num">04</span><a href="crianza-contextual-funcional-4.html">Qué te ocurre cuando tu hijo llora: los procesos que organizan tus respuestas</a></li>
+                    <li><span class="num">05</span><a href="crianza-contextual-funcional-5.html">Lo que tu hijo aprende antes de que nadie le enseñe nada: la co-regulación como transferencia de flexibilidad</a></li>
+                    <li><span class="num">06</span><a href="crianza-contextual-funcional-6.html">Los procesos que sostienen el vínculo: de la restauración a la empatía compasiva</a></li>
+                    <li><span class="num">07</span><a href="crianza-contextual-funcional-7.html">Cuando otros vínculos compiten con el tuyo: el hijo entre la familia, los iguales y la pantalla</a></li>
+                </ul>
+                <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 7 artículos</span>
+            </div>
+
+            <div class="blog-grid grid-preview-3" style="margin-top:2.5rem">
                 <a href="nuestro-bebe-ya-ha-llegado-colecho.html" class="blog-card">
-                    <div class="card-number">08</div>
+                    <div class="card-number">01</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Nuestro bebé ya ha llegado. ¿Colecho?</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="una-crianza-sin-traumas-generacionales.html" class="blog-card">
-                    <div class="card-number">09</div>
+                    <div class="card-number">02</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Una crianza sin traumas generacionales</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-clave-de-una-crianza-saludable.html" class="blog-card">
-                    <div class="card-number">10</div>
+                    <div class="card-number">03</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card">
-                    <div class="card-number">11</div>
+                    <div class="card-number">04</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="crianza-narrativa-y-responsabilidad.html" class="blog-card">
-                    <div class="card-number">12</div>
+                    <div class="card-number">05</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
                     <span class="blog-card-arrow">Leer →</span>
@@ -1027,125 +1136,38 @@
                 <p class="category-desc">Más de 15 artículos basados en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos que conviven con la ansiedad escénica. No se trata de eliminar el miedo, sino de aprender a tocar con él presente.</p>
             </div>
 
-            <!-- SERIE: TOCA AUNQUE TIEMBLES -->
-            <div class="series-subsection">
-                <div class="series-subsection-header">
+            <div class="series-showcase-grid">
+                <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
                     <span class="series-label">♩ Serie completa · 9 artículos</span>
                     <h3>Toca aunque tiembles</h3>
                     <p>Un programa fundamentado en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos con ansiedad escénica. No reducir el miedo: aprender a tocar con él presente.</p>
+                    <ul class="series-showcase-list">
+                        <li><span class="num">01</span><a href="toca-aunque-tiembles-1.html">Por qué este programa es diferente</a></li>
+                        <li><span class="num">02</span><a href="toca-aunque-tiembles-2.html">Cómo el lenguaje crea el miedo escénico</a></li>
+                        <li><span class="num">03</span><a href="toca-aunque-tiembles-3.html">Las tres reglas que organizan tu miedo escénico</a></li>
+                        <li><span class="num">04</span><a href="toca-aunque-tiembles-4.html">La inflexibilidad psicológica y la puerta del cambio</a></li>
+                        <li><span class="num">05</span><a href="toca-aunque-tiembles-5.html">Los seis procesos del cambio para músicos</a></li>
+                        <li><span class="num">06</span><a href="toca-aunque-tiembles-6.html">El programa en acción: desesperanza creativa y defusión</a></li>
+                        <li><span class="num">07</span><a href="toca-aunque-tiembles-7.html">Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                        <li><span class="num">08</span><a href="toca-aunque-tiembles-8.html">Autocompasión, valores y acción comprometida</a></li>
+                        <li><span class="num">09</span><a href="toca-aunque-tiembles-9.html">Conclusiones, checklist de camerino y guía práctica</a></li>
+                    </ul>
+                    <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 9 artículos</span>
                 </div>
-                <div class="blog-grid series-grid">
-                    <a href="toca-aunque-tiembles-1.html" class="blog-card series-card">
-                        <div class="card-number series-num">01</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Por qué este programa es diferente</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-2.html" class="blog-card series-card">
-                        <div class="card-number series-num">02</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Cómo el lenguaje crea el miedo escénico</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-3.html" class="blog-card series-card">
-                        <div class="card-number series-num">03</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Las tres reglas que organizan tu miedo escénico</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                </div>
-                <div class="blog-grid series-grid series-extra" id="toca-extra" style="display:none">
-                    <a href="toca-aunque-tiembles-4.html" class="blog-card series-card">
-                        <div class="card-number series-num">04</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>La inflexibilidad psicológica y la puerta del cambio</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-5.html" class="blog-card series-card">
-                        <div class="card-number series-num">05</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Los seis procesos del cambio para músicos</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-6.html" class="blog-card series-card">
-                        <div class="card-number series-num">06</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>El programa en acción: desesperanza creativa y defusión</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-7.html" class="blog-card series-card">
-                        <div class="card-number series-num">07</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Aceptar el cuerpo, estar presente, observar sin reaccionar</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-8.html" class="blog-card series-card">
-                        <div class="card-number series-num">08</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Autocompasión, valores y acción comprometida</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="toca-aunque-tiembles-9.html" class="blog-card series-card">
-                        <div class="card-number series-num">09</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Conclusiones, checklist de camerino y guía práctica</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                </div>
-                <div class="series-show-more">
-                    <button class="btn-show-more" onclick="toggleSerie('toca-extra', this)">Ver todos los artículos de la serie ↓</button>
-                </div>
-            </div>
 
-            <!-- SERIE: CUANDO LA ANSIEDAD Y EL ESTRÉS ACOMPAÑAN -->
-            <div class="series-subsection">
-                <div class="series-subsection-header">
+                <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
                     <span class="series-label">♩ Serie completa · 6 artículos</span>
                     <h3>Cuando la ansiedad y el estrés acompañan</h3>
                     <p>Una serie para músicos que preparan audiciones o actuaciones con estrés y ansiedad presentes. Desde el reencuadre funcional hasta el cierre operativo, con herramientas basadas en la Ciencia Contextual del Comportamiento.</p>
-                </div>
-                <div class="blog-grid series-grid">
-                    <a href="ansiedad-audicion-1.html" class="blog-card series-card">
-                        <div class="card-number series-num">01</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Ansiedad, estrés y ejecución competente: un reencuadre funcional</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="ansiedad-audicion-2.html" class="blog-card series-card">
-                        <div class="card-number series-num">02</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>El lenguaje, los formatos y la autograbación como evitación</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="ansiedad-audicion-3.html" class="blog-card series-card">
-                        <div class="card-number series-num">03</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>DAFO funcional: de la amenaza a la dirección</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                </div>
-                <div class="blog-grid series-grid series-extra" id="ansiedad-extra" style="display:none">
-                    <a href="ansiedad-audicion-4.html" class="blog-card series-card">
-                        <div class="card-number series-num">04</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>El estrés como aliado y la respuesta flexible al error</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="ansiedad-audicion-5.html" class="blog-card series-card">
-                        <div class="card-number series-num">05</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>Valores en tres capas y acción comprometida</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                    <a href="ansiedad-audicion-6.html" class="blog-card series-card">
-                        <div class="card-number series-num">06</div>
-                        <div class="blog-card-category">Ansiedad escénica</div>
-                        <h3>El ensayo como laboratorio y cierre operativo</h3>
-                        <span class="blog-card-arrow">Leer →</span>
-                    </a>
-                </div>
-                <div class="series-show-more">
-                    <button class="btn-show-more" onclick="toggleSerie('ansiedad-extra', this)">Ver todos los artículos de la serie ↓</button>
+                    <ul class="series-showcase-list">
+                        <li><span class="num">01</span><a href="ansiedad-audicion-1.html">Ansiedad, estrés y ejecución competente: un reencuadre funcional</a></li>
+                        <li><span class="num">02</span><a href="ansiedad-audicion-2.html">El lenguaje, los formatos y la autograbación como evitación</a></li>
+                        <li><span class="num">03</span><a href="ansiedad-audicion-3.html">DAFO funcional: de la amenaza a la dirección</a></li>
+                        <li><span class="num">04</span><a href="ansiedad-audicion-4.html">El estrés como aliado y la respuesta flexible al error</a></li>
+                        <li><span class="num">05</span><a href="ansiedad-audicion-5.html">Valores en tres capas y acción comprometida</a></li>
+                        <li><span class="num">06</span><a href="ansiedad-audicion-6.html">El ensayo como laboratorio y cierre operativo</a></li>
+                    </ul>
+                    <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 6 artículos</span>
                 </div>
             </div>
         </div>
