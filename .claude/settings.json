@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(python3 generate_toca.py)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(ls -la /workspaces/josejavieraznarez-web/*.jpg)",
+      "Bash(python generate_sitemap.py)",
+      "Bash(find /workspaces/josejavieraznarez-web -name \"*.html\" -exec grep -l \"jose_javier_aznarez_psicologo\" {} \\\\;)",
+      "Bash(find /workspaces/josejavieraznarez-web -name \"*.html\" -exec sed -i 's|https://www.instagram.com/jose_javier_aznarez_psicologo/|https://www.instagram.com/jjaznarez.psicologo/|g' {} \\\\;)",
+      "Bash(python3 -c ':*)"
     ]
   },
   "hooks": {
