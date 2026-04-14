@@ -280,6 +280,7 @@
             margin: 2.5rem 0;
             border: 1px solid var(--cream-dark);
             border-radius: 12px;
+            overflow: hidden;
         }
 
         .collapsible-note summary {
@@ -342,6 +343,92 @@
         }
 
         .collapsible-content p:last-child { margin-bottom: 0; }
+
+        /* ==================== INFOBOX ==================== */
+        /* Usar para definiciones, principios clave, preguntas centrales o listas de condiciones */
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+
+        .infobox-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.5rem;
+        }
+
+        .infobox p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .infobox p:last-child { margin-bottom: 0; }
+
+        /* ==================== SCENARIO BLOCK ==================== */
+        /* Usar para escenas cotidianas, ejemplos de consulta y situaciones narradas */
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .scenario-block p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.85;
+            margin-bottom: 0.9rem;
+            font-style: italic;
+        }
+
+        .scenario-block p:last-child { margin-bottom: 0; }
+
+        .scenario-label {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        /* ==================== CHECKLIST ==================== */
+        /* Usar para listas de procesos, principios numerados o comparaciones */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .checklist li {
+            padding: 0.6rem 0.8rem 0.6rem 2.2rem;
+            position: relative;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .checklist li:last-child { border-bottom: none; }
+
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0.5rem;
+            top: 0.6rem;
+            color: var(--sage);
+            font-size: 1rem;
+        }
 
         /* ==================== ARTICLE BODY ==================== */
         .article-body {
@@ -928,6 +1015,25 @@
         <div class="closing-block">
             <p>Frase de cierre con tono cálido y personal, en estilo Playfair cursiva.</p>
         </div>
+
+        <!-- INFOBOX (definición, principio clave, pregunta central, lista de condiciones): -->
+        <div class="infobox">
+            <div class="infobox-label">Concepto clave / Principio central</div>
+            <p>Descripción del concepto o principio.</p>
+        </div>
+
+        <!-- SCENARIO BLOCK (escena cotidiana o caso de consulta narrado): -->
+        <div class="scenario-block">
+            <span class="scenario-label">✦ Escena cotidiana / En consulta</span>
+            <p>Descripción de la escena en cursiva. Texto narrativo que ilustra el concepto anterior.</p>
+        </div>
+
+        <!-- CHECKLIST (lista de procesos, principios o comparaciones): -->
+        <ul class="checklist">
+            <li><strong>Elemento A</strong> — descripción breve del elemento</li>
+            <li><strong>Elemento B</strong> — descripción breve del elemento</li>
+            <li><strong>Elemento C</strong> — descripción breve del elemento</li>
+        </ul>
 
         <!-- NOTA COLAPSABLE (contenido técnico o secundario): -->
         <details class="collapsible-note">
