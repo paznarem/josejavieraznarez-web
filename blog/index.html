@@ -444,9 +444,17 @@
         .series-showcase-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            align-items: start;
+            align-items: stretch;
             gap: 1.75rem;
             margin-top: 2rem;
+        }
+        /* Igual altura: la tarjeta ocupa toda la celda y la lista rellena */
+        .series-showcase-grid .series-showcase {
+            display: flex;
+            flex-direction: column;
+        }
+        .series-showcase-grid .series-showcase .series-showcase-list {
+            flex: 1;
         }
         @media (max-width: 860px) {
             .series-showcase-grid { grid-template-columns: 1fr; }
@@ -872,7 +880,9 @@
                 padding: 0.6rem 1rem;
             }
             .category-nav ul {
-                gap: 1rem;
+                gap: 0.6rem 1.2rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             .category-nav a {
                 font-size: 0.78rem;
