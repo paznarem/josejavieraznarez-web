@@ -444,13 +444,13 @@
         .series-showcase-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            align-items: stretch;
+            align-items: start;
             gap: 1.75rem;
             margin-top: 2rem;
         }
-        /* Igual altura: la tarjeta ocupa toda la celda */
+        /* Ambas tarjetas tienen la misma altura mínima (la del contenido mayor) */
         .series-showcase-grid .series-showcase {
-            height: 100%;
+            min-height: 220px;
         }
         @media (max-width: 860px) {
             .series-showcase-grid { grid-template-columns: 1fr; }
