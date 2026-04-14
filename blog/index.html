@@ -278,6 +278,19 @@
             gap: 1.5rem;
         }
 
+        /* ==================== SERIE CARD (crianza series) ==================== */
+        .blog-card.serie-card {
+            border-left: 3px solid var(--sage);
+        }
+
+        .serie-tag {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            color: var(--sage);
+            margin-bottom: 0.3rem;
+        }
+
         /* ==================== SERIES SUBSECTION ==================== */
         .series-subsection {
             margin-top: 3.5rem;
@@ -611,6 +624,9 @@
         /* Tablet + mobile: hide from card 5+ (not in series grids) */
         .blog-grid:not(.series-grid) .blog-card:nth-child(n+5) { display: none; }
 
+        /* Always show serie-cards (first 7 in cat 2) */
+        .blog-grid:not(.series-grid) .blog-card.serie-card { display: block; }
+
         /* Desktop (3 cols): show 5th card, button fills slot 3 of row 2 */
         @media (min-width: 901px) {
             .blog-grid:not(.series-grid) .blog-card:nth-child(5) { display: block; }
@@ -918,32 +934,81 @@
                 <p class="category-desc">Claves para un acompañamiento responsable, comprometido y consciente en la crianza. Artículos sobre vínculos seguros, límites funcionales, crianza sin traumas generacionales y el equilibrio entre dar y recibir.</p>
             </div>
             <div class="blog-grid">
-                <a href="nuestro-bebe-ya-ha-llegado-colecho.html" class="blog-card">
+                <a href="crianza-contextual-funcional-1.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
                     <div class="card-number">01</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>No eres el problema: por qué la pregunta «¿soy buena madre?» no tiene respuesta útil</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-2.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">02</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-3.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">03</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-4.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">04</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Qué te ocurre cuando tu hijo llora: los procesos que organizan tus respuestas</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-5.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">05</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Lo que tu hijo aprende antes de que nadie le enseñe nada: la co-regulación como transferencia de flexibilidad</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-6.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">06</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Los procesos que sostienen el vínculo: de la restauración a la empatía compasiva</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="crianza-contextual-funcional-7.html" class="blog-card serie-card">
+                    <div class="serie-tag">♡ Serie: Crianza Contextual Funcional</div>
+                    <div class="card-number">07</div>
+                    <div class="blog-card-category">Acompañar con amor, criar lo que importa</div>
+                    <h3>Cuando otros vínculos compiten con el tuyo: el hijo entre la familia, los iguales y la pantalla</h3>
+                    <span class="blog-card-arrow">Leer →</span>
+                </a>
+                <a href="nuestro-bebe-ya-ha-llegado-colecho.html" class="blog-card">
+                    <div class="card-number">08</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Nuestro bebé ya ha llegado. ¿Colecho?</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="una-crianza-sin-traumas-generacionales.html" class="blog-card">
-                    <div class="card-number">02</div>
+                    <div class="card-number">09</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Una crianza sin traumas generacionales</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-clave-de-una-crianza-saludable.html" class="blog-card">
-                    <div class="card-number">03</div>
+                    <div class="card-number">10</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card">
-                    <div class="card-number">04</div>
+                    <div class="card-number">11</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="crianza-narrativa-y-responsabilidad.html" class="blog-card">
-                    <div class="card-number">05</div>
+                    <div class="card-number">12</div>
                     <div class="blog-card-category">Crianza consciente</div>
                     <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
                     <span class="blog-card-arrow">Leer →</span>
