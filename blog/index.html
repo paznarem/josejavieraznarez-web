@@ -343,49 +343,22 @@
             background: linear-gradient(135deg, #ffffff 0%, var(--cream-dark, #f0e9dc) 100%);
             border-radius: 14px;
             padding: 2rem 2rem 1.75rem;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06), 6px -6px 0 -2px rgba(255,255,255,0.95), 6px -6px 14px -4px rgba(0,0,0,0.08), 12px -12px 0 -4px rgba(255,255,255,0.9), 12px -12px 14px -6px rgba(0,0,0,0.05);
             border-left: 4px solid var(--sage);
             transition: box-shadow 0.3s, transform 0.3s;
             display: block;
             color: inherit;
             text-decoration: none;
+            align-self: start;
+            cursor: pointer;
         }
-        .series-showcase::before,
-        .series-showcase::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: -1;
-            transition: transform 0.3s, opacity 0.3s;
+        /* Desktop: hover abre/cierra */
+        @media (hover: hover) and (pointer: fine) {
+            .series-showcase:hover {
+                box-shadow: 0 10px 28px rgba(0,0,0,0.1), 6px -6px 0 -2px rgba(255,255,255,0.95), 6px -6px 14px -4px rgba(0,0,0,0.08), 12px -12px 0 -4px rgba(255,255,255,0.9), 12px -12px 14px -6px rgba(0,0,0,0.05);
+                transform: translateY(-2px);
+            }
         }
-        .series-showcase::before {
-            top: -6px;
-            right: -6px;
-            width: 45%;
-            height: 34px;
-            opacity: 0.7;
-            border-left: 4px solid rgba(107,127,94,0.35);
-        }
-        .series-showcase::after {
-            top: -12px;
-            right: -12px;
-            width: 32%;
-            height: 20px;
-            opacity: 0.4;
-            border-left: 4px solid rgba(107,127,94,0.2);
-        }
-        .series-showcase:hover,
-        .series-showcase:focus-within {
-            box-shadow: 0 10px 28px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-        .series-showcase:hover::before,
-        .series-showcase:focus-within::before { transform: translate(-4px, -2px); }
-        .series-showcase:hover::after,
-        .series-showcase:focus-within::after { transform: translate(-8px, -4px); }
 
         .series-showcase .series-label { margin-bottom: 0.7rem; }
         .series-showcase h3 {
@@ -411,8 +384,13 @@
             transition: max-height 0.5s ease, margin 0.3s;
             border-top: 1px solid rgba(107,127,94,0.15);
         }
-        .series-showcase:hover .series-showcase-list,
-        .series-showcase:focus-within .series-showcase-list,
+        @media (hover: hover) and (pointer: fine) {
+            .series-showcase:hover .series-showcase-list {
+                max-height: 900px;
+                margin-top: 1rem;
+                padding-top: 0.5rem;
+            }
+        }
         .series-showcase.open .series-showcase-list {
             max-height: 900px;
             margin-top: 1rem;
@@ -457,14 +435,16 @@
             font-style: italic;
             margin-top: 0.8rem;
         }
-        .series-showcase:hover .series-showcase-hint,
-        .series-showcase:focus-within .series-showcase-hint,
+        @media (hover: hover) and (pointer: fine) {
+            .series-showcase:hover .series-showcase-hint { display: none; }
+        }
         .series-showcase.open .series-showcase-hint { display: none; }
 
         /* Grid de dos series (Categoría 3) */
         .series-showcase-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            align-items: start;
             gap: 1.75rem;
             margin-top: 2rem;
         }
@@ -906,6 +886,46 @@
             var expanded = grid.classList.toggle('expanded');
             btn.textContent = expanded ? 'Ver menos ↑' : 'Ver todos los artículos →';
         }
+
+        // Series showcase: solo aplica en dispositivos táctiles (sin hover fino)
+        document.addEventListener('DOMContentLoaded', function() {
+            var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+            var cards = document.querySelectorAll('.series-showcase');
+
+            cards.forEach(function(card) {
+                card.addEventListener('click', function(e) {
+                    // No interceptar clicks en enlaces internos
+                    if (e.target.closest('a')) return;
+                    if (!isTouch) return; // en desktop el hover se encarga
+                    e.preventDefault();
+                    var wasOpen = card.classList.contains('open');
+                    cards.forEach(function(c) { c.classList.remove('open'); });
+                    if (!wasOpen) card.classList.add('open');
+                });
+            });
+
+            // Cerrar al tocar/click fuera
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.series-showcase')) {
+                    cards.forEach(function(c) { c.classList.remove('open'); });
+                }
+            });
+
+            // Cerrar al hacer scroll fuera del área visible
+            var closeTimer = null;
+            window.addEventListener('scroll', function() {
+                if (closeTimer) return;
+                closeTimer = setTimeout(function() {
+                    cards.forEach(function(c) {
+                        if (!c.classList.contains('open')) return;
+                        var r = c.getBoundingClientRect();
+                        var vh = window.innerHeight || document.documentElement.clientHeight;
+                        if (r.bottom < 0 || r.top > vh) c.classList.remove('open');
+                    });
+                    closeTimer = null;
+                }, 120);
+            }, { passive: true });
+        });
     </script>
 </head>
 <body>
@@ -1075,7 +1095,7 @@
                 <h2>Acompañar con amor, criar lo que importa</h2>
                 <p class="category-desc">Claves para un acompañamiento responsable, comprometido y consciente en la crianza. Artículos sobre vínculos seguros, límites funcionales, crianza sin traumas generacionales y el equilibrio entre dar y recibir.</p>
             </div>
-            <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
+            <div class="series-showcase" tabindex="0">
                 <span class="series-label">♡ Serie completa · 7 artículos</span>
                 <h3>Crianza Contextual Funcional</h3>
                 <p>Una serie sobre por qué la conducta de nuestros hijos tiene sentido cuando miramos el contexto y la función. Del vínculo seguro a la adolescencia, un recorrido completo basado en la Ciencia Contextual del Comportamiento.</p>
@@ -1137,7 +1157,7 @@
             </div>
 
             <div class="series-showcase-grid">
-                <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
+                <div class="series-showcase" tabindex="0">
                     <span class="series-label">♩ Serie completa · 9 artículos</span>
                     <h3>Toca aunque tiembles</h3>
                     <p>Un programa fundamentado en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos con ansiedad escénica. No reducir el miedo: aprender a tocar con él presente.</p>
@@ -1155,7 +1175,7 @@
                     <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 9 artículos</span>
                 </div>
 
-                <div class="series-showcase" tabindex="0" onclick="if(event.target.tagName!=='A'){this.classList.toggle('open')}">
+                <div class="series-showcase" tabindex="0">
                     <span class="series-label">♩ Serie completa · 6 artículos</span>
                     <h3>Cuando la ansiedad y el estrés acompañan</h3>
                     <p>Una serie para músicos que preparan audiciones o actuaciones con estrés y ansiedad presentes. Desde el reencuadre funcional hasta el cierre operativo, con herramientas basadas en la Ciencia Contextual del Comportamiento.</p>
