@@ -448,13 +448,11 @@
             gap: 1.75rem;
             margin-top: 2rem;
         }
-        /* Igual altura: la tarjeta ocupa toda la celda y la lista rellena */
+        /* Igual altura: la tarjeta ocupa toda la celda */
         .series-showcase-grid .series-showcase {
             display: flex;
             flex-direction: column;
-        }
-        .series-showcase-grid .series-showcase .series-showcase-list {
-            flex: 1;
+            justify-content: space-between;
         }
         @media (max-width: 860px) {
             .series-showcase-grid { grid-template-columns: 1fr; }
