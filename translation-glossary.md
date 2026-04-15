@@ -40,6 +40,7 @@ Antes de traducir, usa este glosario obligatorio de terminología. Siempre que a
 
 | Español | English |
 |---|---|
+| Activación / Arousal | Activation (nunca 'arousal') |
 | Análisis funcional | Functional analysis |
 | Evaluación funcional | Functional assessment |
 | Procesos de cambio | Change processes |
