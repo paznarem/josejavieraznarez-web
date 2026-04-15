@@ -149,63 +149,94 @@
             border-radius: 2px;
         }
 
+        /* ==================== ARTICLE HEADER (crema, template oficial) ==================== */
         .article-header {
-            background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, var(--sage-light) 100%);
             padding: 8rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
             text-align: center;
-            color: var(--white);
         }
 
         .article-header-inner {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
-        }
-
-        .article-series-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.9);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 0.3rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 0.6rem;
         }
 
         .article-category {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: var(--white);
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 500;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1.2rem;
+            background: rgba(107,127,94,0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+        }
+
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
             padding: 0.35rem 1rem;
             border-radius: 100px;
-            margin-bottom: 1.5rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
         }
+
+        .series-index { margin-bottom: 1rem; text-align: center; }
+        .series-index-toggle {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 500;
+            color: var(--sage-dark); padding: 0;
+            letter-spacing: 0.02em;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+        }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list {
+            display: none; margin: 0.6rem 0 0 0;
+            padding: 0.75rem 1.2rem;
+            background: rgba(107,127,94,0.07);
+            border-radius: 8px; border: 1px solid rgba(107,127,94,0.15);
+            list-style: none; text-align: left;
+        }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
 
         .article-header h1 {
             font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 300;
-            font-size: clamp(1.8rem, 4.5vw, 3rem);
-            line-height: 1.2;
+            line-height: 1.3;
+            color: var(--text-primary);
             letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
-            color: var(--white);
+            margin-bottom: 1.2rem;
         }
 
         .article-meta {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
-            color: rgba(255,255,255,0.9);
+            color: var(--sage);
             text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.4);
         }
 
         .back-to-blog {
@@ -223,17 +254,19 @@
 
         .back-to-blog a:hover { color: var(--sage-dark); }
 
+        /* ==================== ARTICLE BODY (template oficial) ==================== */
         .article-body {
-            max-width: 740px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 3rem 2rem 5rem;
         }
 
         .article-body p {
             font-size: 1.05rem;
-            line-height: 1.85;
+            line-height: 1.9;
             color: var(--text-secondary);
             margin-bottom: 1.6rem;
+            font-weight: 300;
         }
 
         .article-body h2 {
@@ -694,6 +727,54 @@
         }
 
 
+        /* ==================== BLOQUES NARRATIVOS ==================== */
+        .article-intro {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .emotional-block {
+            background: rgba(196,168,130,0.08);
+            border-left: 3px solid var(--warm);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .reflection-block {
+            background: rgba(107,127,94,0.06);
+            border-left: 3px solid var(--sage-light);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+        }
+
+        .reflection-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(247,243,237,0.6) 100%);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .closing-block p { margin-bottom: 0; }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
+
         /* ==================== SHARE BAR ==================== */
         .share-bar {
             max-width: 720px;
@@ -831,9 +912,17 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <div class="article-series-badge">Serie · Parte 3 de 3</div>
-            <span class="article-category">Acompañar con amor, criar lo que importa</span>
-            <h1>Acompañar, validar, confiar:<br>la crianza que construye identidad y fortaleza emocional</h1>
+            <span class="article-category">Criar con dirección</span>
+            <span class="series-badge">Serie: Autoestima &middot; Artículo 3 de 3</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">1. La autoestima dependiente, una conducta aprendida</a></li>
+                    <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">2. De una autoestima dependiente a una autoestima genuina</a></li>
+                    <li class="series-index-current">3. Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</li>
+                </ul>
+            </div>
+            <h1>Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
                 <span class="reading-time">7 min de lectura</span>
             </p>
@@ -848,19 +937,11 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <!-- SERIE BOX -->
-        <div class="series-nav">
-            <div class="series-nav-label">Esta es una serie de 3 artículos</div>
-            <ul>
-                <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">Parte 1 — La autoestima dependiente, una conducta aprendida</a></li>
-                <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">Parte 2 — De una autoestima dependiente a una autoestima genuina</a></li>
-                <li class="current">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</li>
-            </ul>
+        <p class="article-intro">Los seres humanos tenemos una <strong>necesidad innata de formar vínculos emocionales</strong> con las figuras de apego, especialmente durante los primeros años de vida, la infancia y la adolescencia. El apego es un vínculo afectivo que se forma entre un niño desde que nace y su cuidador principal, formado por pensamientos, emociones, sentimientos, sensaciones… eventos privados que residen en nuestra mente.</p>
+
+        <div class="reflection-block">
+            <p>La calidad de estas relaciones tempranas dibuja un determinado estilo educativo parental que afecta la forma en que percibimos, comprendemos y aceptamos las dinámicas de nuestros contextos vitales: cómo enfrentamos el mundo, las vicisitudes de nuestra vida, nuestras alegrías, nuestras tristezas, nuestros logros, nuestros fracasos y nuestros desafíos.</p>
         </div>
-
-        <p>Los seres humanos tenemos una <strong>necesidad innata de formar vínculos emocionales</strong> con las figuras de apego, especialmente durante los primeros años de vida, la infancia y la adolescencia. El apego es un vínculo afectivo que se forma entre un niño desde que nace y su cuidador principal, formado por pensamientos, emociones, sentimientos, sensaciones… eventos privados que residen en nuestra mente.</p>
-
-        <p>La calidad de estas relaciones tempranas dibuja un determinado estilo educativo parental que afecta la forma en que percibimos, comprendemos y aceptamos las dinámicas de nuestros contextos vitales: cómo enfrentamos el mundo, las vicisitudes de nuestra vida, nuestras alegrías, nuestras tristezas, nuestros logros, nuestros fracasos y nuestros desafíos.</p>
 
         <h2>El apego seguro: cuando el mundo es un lugar en el que se puede confiar</h2>
 
@@ -886,7 +967,9 @@
             <li>Se siente seguro para explorar su entorno y afrontar desafíos, sabiendo que puede contar con el apoyo de sus cuidadores.</li>
         </ul>
 
-        <p>Los niños con apego seguro son más resilientes ante las dificultades de la vida. Mantienen una perspectiva realista y constructiva cuando se enfrentan a circunstancias desafiantes y desempeños evaluativos, desarrollando una autoestima genuina y compasiva, <strong>no dependiente de los demás</strong>, que les ayudará a regular sus emociones y establecer relaciones basadas en la igualdad, la confianza, el respeto y la intimidad.</p>
+        <div class="emotional-block">
+            <p>Los niños con apego seguro son más resilientes ante las dificultades de la vida. Mantienen una perspectiva realista y constructiva cuando se enfrentan a circunstancias desafiantes y desempeños evaluativos, desarrollando una autoestima genuina y compasiva, <strong>no dependiente de los demás</strong>, que les ayudará a regular sus emociones y establecer relaciones basadas en la igualdad, la confianza, el respeto y la intimidad.</p>
+        </div>
 
         <h2>Los estilos de crianza y su impacto en la autoestima</h2>
 
@@ -919,9 +1002,11 @@
 
         <h2>La consideración condicional: una trampa silenciosa</h2>
 
-        <p>La consideración académica condicional merece una atención especial porque es una de las estrategias parentales más frecuentes y, a la vez, más dañinas. Frustra las necesidades psicológicas básicas de autonomía, experiencia de competencia y pertenencia, que son esenciales para el crecimiento personal y el bienestar.</p>
+        <div class="emotional-block">
+            <p>La consideración académica condicional merece una atención especial porque es una de las estrategias parentales más frecuentes y, a la vez, más dañinas. Frustra las necesidades psicológicas básicas de autonomía, experiencia de competencia y pertenencia, que son esenciales para el crecimiento personal y el bienestar.</p>
 
-        <p>Sus efectos son profundos: los niños y adolescentes acaban actuando cada vez más en base a la presión externa, la vergüenza y la culpa, en lugar de su propia motivación intrínseca. Con el tiempo, <strong>comienzan a integrar las condiciones para la autoapreciación en su propio sistema de valores</strong>, percibiendo las presiones externas como presiones internas propias.</p>
+            <p>Sus efectos son profundos: los niños y adolescentes acaban actuando cada vez más en base a la presión externa, la vergüenza y la culpa, en lugar de su propia motivación intrínseca. Con el tiempo, <strong>comienzan a integrar las condiciones para la autoapreciación en su propio sistema de valores</strong>, percibiendo las presiones externas como presiones internas propias.</p>
+        </div>
 
         <blockquote>
             <p>La seguridad y el cariño que percibimos en nuestro apego con nuestros padres y allegados nos proporciona, conforme crecemos, una base desde la cual podemos explorar el mundo y desarrollar una imagen más positiva de nosotros mismos, acorde con nuestros propios valores.</p>
@@ -929,9 +1014,11 @@
 
         <h2>El apego seguro como base de la autoestima genuina</h2>
 
-        <p>La percepción de seguridad, validación y autonomía construye una autoestima genuina y autocompasiva gracias a una autoevaluación óptima caracterizada por la aceptación, el respeto y el aprecio. Esto ayuda al desarrollo de una identidad auténtica y de un autoconcepto basado en la confianza en uno mismo, con capacidad para hacer frente a los desafíos y las situaciones estresantes de la vida.</p>
+        <div class="reflection-block">
+            <p>La percepción de seguridad, validación y autonomía construye una autoestima genuina y autocompasiva gracias a una autoevaluación óptima caracterizada por la aceptación, el respeto y el aprecio. Esto ayuda al desarrollo de una identidad auténtica y de un autoconcepto basado en la confianza en uno mismo, con capacidad para hacer frente a los desafíos y las situaciones estresantes de la vida.</p>
 
-        <p>Una mayor capacidad para aceptar y experimentar el estrés de los desafíos y adversidades, sin convertirlo en una ansiedad o miedo incapacitante, surge de un apego positivo, seguro y compasivo, de experiencias de apoyo validante y cuidado incondicional en la infancia.</p>
+            <p>Una mayor capacidad para aceptar y experimentar el estrés de los desafíos y adversidades, sin convertirlo en una ansiedad o miedo incapacitante, surge de un apego positivo, seguro y compasivo, de experiencias de apoyo validante y cuidado incondicional en la infancia.</p>
+        </div>
 
         <h2>Principios que la investigación avala</h2>
 
@@ -948,19 +1035,11 @@
             </ul>
         </div>
 
-        <p>Puesto que los cuidadores democráticos se adaptan a las necesidades de sus hijos, estos pueden dominar distintas tareas de desarrollo a una edad temprana y, sobre esta base, crear capacidades diferentes y más complejas, haciendo frente con autoconfianza y autoeficacia a desafíos ambientales cada vez más exigentes.</p>
-
-        <!-- SERIE BOX CIERRE -->
-        <div class="series-nav" style="margin-top: 3rem;">
-            <div class="series-nav-label">Has completado la serie</div>
-            <ul>
-                <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">Parte 1 — La autoestima dependiente, una conducta aprendida</a></li>
-                <li><a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html">Parte 2 — De una autoestima dependiente a una autoestima genuina</a></li>
-                <li class="current">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</li>
-            </ul>
+        <div class="closing-block">
+            <p>Puesto que los cuidadores democráticos se adaptan a las necesidades de sus hijos, estos pueden dominar distintas tareas de desarrollo a una edad temprana y, sobre esta base, crear capacidades diferentes y más complejas, haciendo frente con autoconfianza y autoeficacia a desafíos ambientales cada vez más exigentes.</p>
         </div>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <p class="article-signature">José Javier</p>
 
     </article>
 
@@ -968,11 +1047,11 @@
     <div class="article-nav">
         <div class="article-nav-inner">
             <a href="la-clave-de-una-crianza-saludable.html" class="article-nav-prev">
-                <span class="article-nav-label">← Criar con dirección</span>
+                <span class="article-nav-label">← Anterior</span>
                 <span class="article-nav-title">La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir</span>
             </a>
             <a href="crianza-narrativa-y-responsabilidad.html" class="article-nav-next">
-                <span class="article-nav-label">Siguiente → Criar con dirección</span>
+                <span class="article-nav-label">Siguiente →</span>
                 <span class="article-nav-title">Crianza, narrativa y responsabilidad: un enfoque contextual</span>
             </a>
         </div>

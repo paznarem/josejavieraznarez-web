@@ -59,11 +59,14 @@
 
          ARTÍCULOS QUE FORMAN PARTE DE UNA SERIE
          ─────────────────────────────────────────────
-         Un artículo de serie lleva en el header:
-           a) <span class="series-badge">Serie: Nombre · Artículo N de M</span>
-           b) <div class="series-index"> con botón desplegable y <ul class="series-index-list">
+         Un artículo de serie lleva en el header, en este orden:
+           1) <span class="article-category">Categoría</span>
+           2) <span class="series-badge">Serie: Nombre · Artículo N de M</span>
+           3) <div class="series-index"> con botón desplegable (centrado) y <ul class="series-index-list">
               con un <li class="series-index-current"> para el artículo actual y <li><a>
               para cada uno de los demás.
+           4) <h1>Título</h1>
+           5) <p class="article-meta">…</p>
 
          Al final del cuerpo, NO añadas series-nav-bar si el artículo ya tiene
          article-nav (bloque prev/next). Usa uno u otro, nunca los dos.
@@ -589,7 +592,7 @@
         }
 
         /* ==================== SERIES INDEX (desplegable en el header) ==================== */
-        .series-index { margin-bottom: 1rem; text-align: left; }
+        .series-index { margin-bottom: 1rem; text-align: center; }
         .series-index-toggle {
             background: none; border: none; cursor: pointer;
             font-family: 'Work Sans', sans-serif;

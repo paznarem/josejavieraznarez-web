@@ -149,63 +149,94 @@
             border-radius: 2px;
         }
 
+        /* ==================== ARTICLE HEADER (crema, template oficial) ==================== */
         .article-header {
-            background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, var(--sage-light) 100%);
             padding: 8rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%);
             text-align: center;
-            color: var(--white);
         }
 
         .article-header-inner {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
-        }
-
-        .article-series-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.9);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 0.3rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 0.6rem;
         }
 
         .article-category {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: var(--white);
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 500;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1.2rem;
+            background: rgba(107,127,94,0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+        }
+
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
             padding: 0.35rem 1rem;
             border-radius: 100px;
-            margin-bottom: 1.5rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
         }
+
+        .series-index { margin-bottom: 1rem; text-align: center; }
+        .series-index-toggle {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 500;
+            color: var(--sage-dark); padding: 0;
+            letter-spacing: 0.02em;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+        }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list {
+            display: none; margin: 0.6rem 0 0 0;
+            padding: 0.75rem 1.2rem;
+            background: rgba(107,127,94,0.07);
+            border-radius: 8px; border: 1px solid rgba(107,127,94,0.15);
+            list-style: none; text-align: left;
+        }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
 
         .article-header h1 {
             font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 300;
-            font-size: clamp(1.8rem, 4.5vw, 3rem);
-            line-height: 1.2;
+            line-height: 1.3;
+            color: var(--text-primary);
             letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
-            color: var(--white);
+            margin-bottom: 1.2rem;
         }
 
         .article-meta {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
-            color: rgba(255,255,255,0.9);
+            color: var(--sage);
             text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.4);
         }
 
         .back-to-blog {
@@ -223,17 +254,19 @@
 
         .back-to-blog a:hover { color: var(--sage-dark); }
 
+        /* ==================== ARTICLE BODY (template oficial) ==================== */
         .article-body {
-            max-width: 740px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 3rem 2rem 5rem;
         }
 
         .article-body p {
             font-size: 1.05rem;
-            line-height: 1.85;
+            line-height: 1.9;
             color: var(--text-secondary);
             margin-bottom: 1.6rem;
+            font-weight: 300;
         }
 
         .article-body h2 {
@@ -650,6 +683,54 @@
         }
 
 
+        /* ==================== BLOQUES NARRATIVOS ==================== */
+        .article-intro {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .emotional-block {
+            background: rgba(196,168,130,0.08);
+            border-left: 3px solid var(--warm);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .reflection-block {
+            background: rgba(107,127,94,0.06);
+            border-left: 3px solid var(--sage-light);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+        }
+
+        .reflection-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(247,243,237,0.6) 100%);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .closing-block p { margin-bottom: 0; }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
+
         /* ==================== SHARE BAR ==================== */
         .share-bar {
             max-width: 720px;
@@ -787,8 +868,16 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <div class="article-series-badge">Serie · Parte 2 de 3</div>
             <span class="article-category">Vivir lo que vale</span>
+            <span class="series-badge">Serie: Autoestima &middot; Artículo 2 de 3</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">1. La autoestima dependiente, una conducta aprendida</a></li>
+                    <li class="series-index-current">2. De una autoestima dependiente a una autoestima genuina</li>
+                    <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">3. Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
+                </ul>
+            </div>
             <h1>De una autoestima dependiente e incapacitante a una autoestima genuina, libre de comparaciones con los demás</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
                 <span class="reading-time">8 min de lectura</span>
@@ -804,25 +893,17 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <!-- SERIE BOX -->
-        <div class="series-nav">
-            <div class="series-nav-label">Esta es una serie de 3 artículos</div>
-            <ul>
-                <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">Parte 1 — La autoestima dependiente, una conducta aprendida</a></li>
-                <li class="current">Parte 2 — De una autoestima dependiente a una autoestima genuina</li>
-                <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
-            </ul>
-        </div>
-
-        <p>El proceso de enseñanza y aprendizaje que nos lleva desde una autoestima dependiente e incapacitante hacia una singular, genuina y autocompasiva comienza con la <strong>autoaceptación de nuestra historia vital</strong>. Esta implica reconocer que somos personas únicas y completas, suficientemente buenas, con errores —como todos los seres humanos—, susceptibles de mejora y capaces de vivir conscientemente en el presente, sintiendo y a su vez distanciándonos de los pensamientos y sentimientos negativos de minusvalía.</p>
+        <p class="article-intro">El proceso de enseñanza y aprendizaje que nos lleva desde una autoestima dependiente e incapacitante hacia una singular, genuina y autocompasiva comienza con la <strong>autoaceptación de nuestra historia vital</strong>. Esta implica reconocer que somos personas únicas y completas, suficientemente buenas, con errores —como todos los seres humanos—, susceptibles de mejora y capaces de vivir conscientemente en el presente, sintiendo y a su vez distanciándonos de los pensamientos y sentimientos negativos de minusvalía.</p>
 
         <h2>La vida no es una batalla que ganar, sino un camino que recorrer</h2>
 
-        <p>La vida es una constante oportunidad de superación de retos que nos proyectan a nuestros propios valores. El estrés, la adversidad, la preocupación por no ser lo suficientemente bueno en algún aspecto de la vida, los éxitos, logros, errores y fracasos en el desempeño forman parte de cada día. No hay una forma saludable de inmunizarse contra la experiencia de pensamientos y sentimientos difíciles.</p>
+        <div class="emotional-block">
+            <p>La vida es una constante oportunidad de superación de retos que nos proyectan a nuestros propios valores. El estrés, la adversidad, la preocupación por no ser lo suficientemente bueno en algún aspecto de la vida, los éxitos, logros, errores y fracasos en el desempeño forman parte de cada día. No hay una forma saludable de inmunizarse contra la experiencia de pensamientos y sentimientos difíciles.</p>
 
-        <p>Los eventos nuevos, desafiantes y difíciles —en la familia, en el entorno social, en la vida académica y profesional— junto con nuestra historia vital que la mente nos recuerda, los pensamientos negativos y críticos, la preocupación, las sensaciones ansiosas de no ser suficientemente buenos, nuestras insuficiencias y nuestro dolor, son prácticamente inevitables.</p>
+            <p>Los eventos nuevos, desafiantes y difíciles —en la familia, en el entorno social, en la vida académica y profesional— junto con nuestra historia vital que la mente nos recuerda, los pensamientos negativos y críticos, la preocupación, las sensaciones ansiosas de no ser suficientemente buenos, nuestras insuficiencias y nuestro dolor, son prácticamente inevitables.</p>
 
-        <p>Son experiencias aprendidas —pensamientos, sentimientos, sensaciones, emociones, recuerdos— que forman parte de nosotros, con las que hemos sobrevivido y que <strong>no se pueden derrotar ni eliminar</strong>. Una historia de autoestima que, al intentar luchar con ella, al querer controlarla, en ocasiones nos ha frenado, nos ha hecho procrastinar y perder oportunidades.</p>
+            <p>Son experiencias aprendidas —pensamientos, sentimientos, sensaciones, emociones, recuerdos— que forman parte de nosotros, con las que hemos sobrevivido y que <strong>no se pueden derrotar ni eliminar</strong>. Una historia de autoestima que, al intentar luchar con ella, al querer controlarla, en ocasiones nos ha frenado, nos ha hecho procrastinar y perder oportunidades.</p>
+        </div>
 
         <blockquote>
             <p>Cada uno de nosotros somos más que nuestra historia personal. A lo largo de nuestra vida todo pasa, y nosotros lo observamos… y siempre estamos ahí.</p>
@@ -838,11 +919,13 @@
 
         <h2>Sortear la barrera: de la aprobación externa al valor propio</h2>
 
-        <p>Debilitar conscientemente el marco relacional de la autoestima dependiente de valoraciones externas se presenta como una oportunidad para vivir la vida que nos pertenece de manera única y fugaz. Nos requiere <strong>valentía y coraje</strong> para cambiar nuestra relación con las expectativas, juicios y comparaciones familiares, sociales, culturales y profesionales, y construir y potenciar la autoestima bondadosa basada en nuestro valor propio por ser humanos, porque existimos.</p>
+        <div class="reflection-block">
+            <p>Debilitar conscientemente el marco relacional de la autoestima dependiente de valoraciones externas se presenta como una oportunidad para vivir la vida que nos pertenece de manera única y fugaz. Nos requiere <strong>valentía y coraje</strong> para cambiar nuestra relación con las expectativas, juicios y comparaciones familiares, sociales, culturales y profesionales, y construir y potenciar la autoestima bondadosa basada en nuestro valor propio por ser humanos, porque existimos.</p>
 
-        <p>Sortear esa barrera en nuestro viaje vital significa liberarse poco a poco de la atadura de la aprobación externa y anclarnos en nuestro yo compasivo, fundamentalmente en los momentos difíciles, cuando nos sentimos amenazados, juzgados, cuando nos invade la impulsividad o nos llegan los pensamientos autocríticos.</p>
+            <p>Sortear esa barrera en nuestro viaje vital significa liberarse poco a poco de la atadura de la aprobación externa y anclarnos en nuestro yo compasivo, fundamentalmente en los momentos difíciles, cuando nos sentimos amenazados, juzgados, cuando nos invade la impulsividad o nos llegan los pensamientos autocríticos.</p>
 
-        <p>Aprender a mirarnos, a hablarnos, a darnos consejos, a animarnos a seguir acciones conforme a nuestros verdaderos valores, con calidez, como lo haríamos con las personas que más queremos cuando se encuentran en apuros, dándonos tranquilidad y seguridad.</p>
+            <p>Aprender a mirarnos, a hablarnos, a darnos consejos, a animarnos a seguir acciones conforme a nuestros verdaderos valores, con calidez, como lo haríamos con las personas que más queremos cuando se encuentran en apuros, dándonos tranquilidad y seguridad.</p>
+        </div>
 
         <blockquote>
             <p>No se trata de elevar la autoestima dependiente diciéndonos cosas "positivas" o resaltando logros. Ella siempre estará con nosotros. Forma parte de nuestra historia vital pasada, con la que vivimos en el presente, que no podemos cambiar.</p>
@@ -854,9 +937,11 @@
 
         <p>La experiencia de un resultado de fracaso en el proceso de aprendizaje no nos conducirá a una visión negativa de nosotros mismos. Podemos sentir el placer de nuestra superación personal e incluso en el fracaso podemos hacer una evaluación correcta y objetiva en la línea de una mejora de nuestra competencia.</p>
 
-        <p>Franquear esta barrera nos devuelve la libertad y la iniciativa para que nuestra conducta refleje nuestra singularidad y aspiraciones personales. Al compararnos sobre todo con nosotros mismos, dejamos de lado la competición con los demás y nos enfocamos en celebrar nuestras victorias y superar progresivamente, con curiosidad, creatividad e intencionalidad, nuestras propias limitaciones, valorando nuestro propio camino.</p>
+        <div class="reflection-block">
+            <p>Franquear esta barrera nos devuelve la libertad y la iniciativa para que nuestra conducta refleje nuestra singularidad y aspiraciones personales. Al compararnos sobre todo con nosotros mismos, dejamos de lado la competición con los demás y nos enfocamos en celebrar nuestras victorias y superar progresivamente, con curiosidad, creatividad e intencionalidad, nuestras propias limitaciones, valorando nuestro propio camino.</p>
 
-        <p>Esta nueva autoestima genuina surge de una profunda conexión con nuestro ser interior. Nos proporciona espacio, perspectiva, y se convierte en una <strong>brújula interna que nos guía hacia la autorrealización y la satisfacción personal</strong>. Nos permite vivir con autenticidad y libertad, sin la presión de ajustarnos a expectativas y modas sociales, liberándonos de la tiranía de los "debería" y "tendría que".</p>
+            <p>Esta nueva autoestima genuina surge de una profunda conexión con nuestro ser interior. Nos proporciona espacio, perspectiva, y se convierte en una <strong>brújula interna que nos guía hacia la autorrealización y la satisfacción personal</strong>. Nos permite vivir con autenticidad y libertad, sin la presión de ajustarnos a expectativas y modas sociales, liberándonos de la tiranía de los "debería" y "tendría que".</p>
+        </div>
 
         <blockquote>
             <p>El camino hacia nuestro autoempoderamiento mediante una autoestima genuina y compasiva es una carrera de fondo, una maratón. No es fácil, pero es un viaje que vale la pena emprender en la única vida que tenemos, sin importar edad ni condición.</p>
@@ -888,23 +973,17 @@
 
         <h2>La autocompasión: un faro, no un privilegio</h2>
 
-        <p>La autocompasión nos permite vernos con ojos comprensivos y de afecto, aceptando nuestras imperfecciones, limitaciones actuales y reconociendo nuestra humanidad compartida. No se basa en la comparación ni en el juicio. No se trata de ser "mejor" que nadie, sino de aceptarnos con bondad y comprensión tal como somos, con nuestra capacidad de aprender y crecer personal y profesionalmente.</p>
+        <div class="emotional-block">
+            <p>La autocompasión nos permite vernos con ojos comprensivos y de afecto, aceptando nuestras imperfecciones, limitaciones actuales y reconociendo nuestra humanidad compartida. No se basa en la comparación ni en el juicio. No se trata de ser "mejor" que nadie, sino de aceptarnos con bondad y comprensión tal como somos, con nuestra capacidad de aprender y crecer personal y profesionalmente.</p>
 
-        <p>No somos seres especiales, ni superiores, ni inferiores, sino <strong>parte integral de una humanidad con la que estamos irremediablemente conectados</strong>. Esta conexión nos permite desarrollar una actitud de amabilidad y aceptación hacia nosotros mismos y hacia los demás, sin compararnos ni caer en la autocrítica.</p>
-
-        <p>La autocompasión nos ofrece una estabilidad emocional más robusta que la autoestima. No depende de la aprobación externa ni de la autoevaluación constante con promedios o normas. Es un faro interno que nos ilumina en los momentos de dificultad y dolor. Nos permite ser auténticos y vivir sin máscaras, generando una mayor confianza en nosotros mismos y un mayor sentido con la vida.</p>
-
-        <!-- SERIE BOX CIERRE -->
-        <div class="series-nav" style="margin-top: 3rem;">
-            <div class="series-nav-label">Continúa leyendo la serie</div>
-            <ul>
-                <li><a href="la-autoestima-dependiente-una-conducta-aprendida.html">Parte 1 — La autoestima dependiente, una conducta aprendida</a></li>
-                <li class="current">Parte 2 — De una autoestima dependiente a una autoestima genuina</li>
-                <li><a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html">Parte 3 — Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</a></li>
-            </ul>
+            <p>No somos seres especiales, ni superiores, ni inferiores, sino <strong>parte integral de una humanidad con la que estamos irremediablemente conectados</strong>. Esta conexión nos permite desarrollar una actitud de amabilidad y aceptación hacia nosotros mismos y hacia los demás, sin compararnos ni caer en la autocrítica.</p>
         </div>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <div class="closing-block">
+            <p>La autocompasión nos ofrece una estabilidad emocional más robusta que la autoestima. No depende de la aprobación externa ni de la autoevaluación constante con promedios o normas. Es un faro interno que nos ilumina en los momentos de dificultad y dolor. Nos permite ser auténticos y vivir sin máscaras, generando una mayor confianza en nosotros mismos y un mayor sentido con la vida.</p>
+        </div>
+
+        <p class="article-signature">José Javier</p>
 
     </article>
 
