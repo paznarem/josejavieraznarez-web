@@ -82,6 +82,14 @@ Antes de traducir, usa este glosario obligatorio de terminología. Siempre que a
 | Fraseo | Phrasing |
 | Digitación | Fingering |
 
+## Nombres de series de artículos:
+
+| Español | English |
+|---|---|
+| Cuando la ansiedad y el estrés acompañan | When anxiety and stress come along |
+| Toca aunque tiembles | Play even if you tremble |
+| Flexibilidad psicológica | Psychological flexibility |
+
 ## No traducir nunca:
 
 - Nombres propios: José Javier Aznárez Barrio, ACBS, UNED, Universidad de Almería
