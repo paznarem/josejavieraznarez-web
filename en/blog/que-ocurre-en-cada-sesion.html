@@ -11,18 +11,18 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What happens in each session of contextual psychotherapy? — José Javier Aznárez | Contextual Psychologist</title>
-    <meta name="description" content="Find out how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.">
-    <meta property="og:title" content="What happens in each session of contextual psychotherapy? — José Javier Aznárez">
-    <meta property="og:description" content="Find out how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.">
+    <title>What happens in each contextual psychotherapy session? — José Javier Aznárez | Contextual Psychologist</title>
+    <meta name="description" content="Discover how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.">
+    <meta property="og:title" content="What happens in each contextual psychotherapy session? — José Javier Aznárez">
+    <meta property="og:description" content="Discover how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.">
     <meta property="og:type" content="article">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "What happens in each session of contextual psychotherapy?",
-      "description": "Find out how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.",
+      "headline": "What happens in each contextual psychotherapy session?",
+      "description": "Discover how contextual psychotherapy works, what sessions look like, and how you can start building a life more aligned with what truly matters.",
       "author": {
         "@type": "Person",
         "name": "José Javier Aznárez Barrio",
@@ -78,6 +78,74 @@
             box-shadow: 0 1px 20px rgba(0,0,0,0.06);
         }
 
+        /* ==================== BLOQUES EMOCIONALES ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        /* ==================== CIERRE DESTACADO ==================== */
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ==================== INFOBOX ==================== */
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.5rem;
+        }
+        .infobox p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
         .nav-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -116,12 +184,8 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--sage-dark); }
-
-        .nav-links a.active {
-            color: var(--sage-dark);
-            font-weight: 500;
-        }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--sage-dark); }
 
         .nav-cta {
             background: var(--sage);
@@ -187,6 +251,11 @@
         .article-meta {
             font-size: 0.88rem;
             color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
@@ -268,6 +337,12 @@
         }
 
         .article-body a:hover { text-decoration-color: var(--sage); }
+
+        .article-body img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
 
         .article-body hr {
             border: none;
@@ -567,6 +642,7 @@
             .article-nav-next { max-width: 100%; }
         }
 
+
         /* ==================== SHARE BAR ==================== */
         .share-bar {
             max-width: 720px;
@@ -679,20 +755,26 @@
             content: '·';
             color: var(--warm);
         }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
     </style>
 </head>
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand"><img src="../../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="../como-trabajo.html">How I work</a></li>
-                <li><a href="../sobre-mi.html">About Me</a></li>
+                <li><a href="../sobre-mi.html">About me</a></li>
                 <li><a href="../index.html#servicios">Services</a></li>
                 <li><a href="index.html" class="active">Blog</a></li>
-                <li><a href="https://www.instagram.com/jjaznarez.psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="https://www.instagram.com/jjaznarez.psychologist/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="../../blog/que-ocurre-en-cada-sesion.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">ES</a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contact</a></li>
             </ul>
@@ -706,7 +788,7 @@
     <header class="article-header">
         <div class="article-header-inner">
             <span class="article-category">Living what matters</span>
-            <h1>What happens in each session of contextual psychotherapy?</h1>
+            <h1>What happens in each contextual psychotherapy session?</h1>
             <p class="article-meta">By <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
                 <span class="reading-time">19 min read</span>
             </p>
@@ -721,43 +803,42 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>If you're reading this, it's very likely that you've been feeling for a while that something keeps repeating, that you aren't quite moving forward, or that the difficulties are wearing you out more than you'd like. Maybe you've tried strategies, advice, books, or even previous therapies, and still feel like you can't get unstuck. This page is written specifically for you: to help you understand how contextual psychotherapy works, what sessions with me look like, and how, from there, you can start building a life more aligned with what truly matters to you.</p>
+        <p class="article-intro">If you're reading this text, it's very likely that you've been feeling for a while that something keeps repeating. That you're not quite moving forward. That the difficulties wear you out more than you'd like. Maybe you've tried strategies, advice, readings, or even previous therapies, and you still feel like you can't get unstuck.</p>
 
-        <hr>
+        <p>This page is written for you: to help you understand how contextual psychotherapy works, what sessions with me look like, and how, from there, you can start building a life more aligned with what truly matters.</p>
 
         <h2>A place where what you feel is respected</h2>
 
-        <p>Contextual psychotherapy doesn't seek to "fix" you, or to "take away" your problems, or to turn you into a different person. What it does seek is to offer you a space where what you feel, think, and do makes sense — even when it hurts. You don't judge your exhaustion, your fear, your guilt, or your confusion; and here, the work isn't about judging them either. It's about understanding them and locating them in the moment they appear, and from there, choosing how you want to keep living.</p>
+        <p>Contextual psychotherapy doesn't try to "fix" you. It doesn't try to "take away" your problems, or turn you into another person. What it does try to do is offer you a space where what you feel, think, and do makes sense. Even when it hurts.</p>
 
-        <p>This way of working is grounded in Contextual Behavioral Science (CBS), a scientific framework that studies human behaviour in context, with the aim of understanding the functional processes that maintain distress and strengthening those that allow us to live with greater flexibility, autonomy, and alignment with our own values.</p>
+        <p>You don't judge your tiredness, your fear, your guilt, or your confusion; and here, it isn't about judging them either. It's about understanding them, locating them in the moment they appear, and, from there, choosing how you want to keep living.</p>
 
-        <p>In every session, the premise is simple:</p>
+        <p>This way of working is grounded in <strong>Contextual Behavioral Science</strong> (CBS): an approach within scientific psychology that studies human behaviour always in relation to the context in which it occurs. It doesn't just focus on what you feel, but on what function what you feel has in what you do. And from there, it aims to strengthen what allows you to live with more flexibility and more coherence with what matters to you.</p>
 
-        <ul>
-            <li>What happens inside you is real.</li>
-            <li>What happens in your environment also matters.</li>
-            <li>And you can always learn to respond differently when that shows up — even if you can't always control what occurs.</li>
-        </ul>
+        <div class="infobox">
+            <div class="infobox-label">The premise of each session</div>
+            <p>What happens inside you is real. What happens in your environment also matters. And you can always learn to respond differently when that appears, even if you can't always control what occurs.</p>
+        </div>
 
-        <p>Beyond that, in each session I work with something that goes further than symptoms: I work with the validation of your own experience. Before any analysis or tool, I acknowledge that what you've lived through has its own logic, that your exhaustion isn't weakness, that your blocks aren't failures. This compassionate acceptance — knowing the difference between feeling better and living better — is the starting point of any real change.</p>
-
-        <hr>
+        <p>Beyond that, in every session I work with something that goes further than symptoms: the validation of your own experience. Before any analysis or tool, I acknowledge that what you've lived through has its own logic. That your tiredness isn't weakness. That your blocks aren't failures. It isn't about feeling better in order to start living. It's about starting to live, even if you don't yet feel entirely well.</p>
 
         <h2>A session, step by step</h2>
 
-        <p>Imagine you come into a session. There are no expectations, and there's no need to make a good impression. You don't have to appear brave, nor justify your suffering. The point is to settle into that moment, just as you are, and start noticing what's happening. I guide the process, but you are the one at the centre of it.</p>
+        <div class="emotional-block">
+            <p>Imagine you walk into a session. There are no expectations, and there's no need to make a "good impression." It isn't about appearing brave, nor about justifying your suffering. It's about settling into that moment, just as you are, and starting to observe what's happening. I guide you, but you are the one at the centre.</p>
+        </div>
 
-        <h3>1. Observing what's happening, without judgement: self-knowledge as a tool</h3>
+        <h3>1. Observing what's happening, without judgement</h3>
 
-        <p>The first task isn't to "solve" — it's to observe. We look at three levels:</p>
+        <p>The first task isn't to "solve." It's to observe. We look at three levels:</p>
 
         <ul>
-            <li>What's happening inside (thoughts, emotions, impulses, physical sensations).</li>
-            <li>What's happening outside (contexts, relationships, demands, pressures).</li>
-            <li>What you do in each situation (visible and invisible behaviours).</li>
+            <li>What's happening inside: thoughts, emotions, impulses, physical sensations.</li>
+            <li>What's happening outside: contexts, relationships, demands, pressures.</li>
+            <li>What you do in each situation: visible and invisible behaviours.</li>
         </ul>
 
-        <p>Over time, many people discover that they don't really know themselves in the detail that would help. They feel they "always freeze," "always fall apart," "always give up" — but they never pause to see what happens one second before that freeze. In contextual psychotherapy, that second is expanded:</p>
+        <p>Over time, many people discover that they don't know themselves in the detail they'd need. They feel that they "always freeze," "always fall apart," "always give up" — but they don't stop to see what happens one second before that block. In contextual psychotherapy, that second gets expanded:</p>
 
         <ul>
             <li>What thought appears just before you stop trying?</li>
@@ -765,17 +846,19 @@
             <li>What context makes you feel most vulnerable?</li>
         </ul>
 
-        <p>I guide this process from what is called the deictic perspective: the capacity to position oneself as an observer of one's own experience, distinguishing the self that observes from the content being observed, without needing to identify with every thought, emotion, or sensation that arises.</p>
+        <p>What surfaces is identified, described in detail, and analysed in terms of how it influences what you do. This process allows you to recognise patterns that previously went unnoticed.</p>
 
-        <p>What surfaces is identified, described in detail, and analysed according to how it influences what you do. This process allows you to recognise patterns that previously went unnoticed and to understand what is organising your experience at each moment.</p>
+        <div class="emotional-block">
+            <p>There's a moment in this work when something shifts. You realise you can notice what you think, what you feel, what happens in your body, without getting trapped in it. Not because you're special. But because that distance can be trained.</p>
+        </div>
 
-        <p>Over time, this way of observing reveals something key: that you can notice thoughts, emotions, and sensations without being entirely defined by them. This isn't a special quality you either have or don't — it's a function that can be trained.</p>
+        <p>That — placing yourself as an observer of your own experience, distinguishing the you that observes from the content being observed — is called <strong>deictic perspective</strong>. It sounds technical, but it's something you already do sometimes without realising: when you say "a part of me knows this isn't so serious," you're taking distance from your own experience. What we do in sessions is train that deliberately.</p>
 
-        <p>Learning to recognise "I'm having this thought" or "this is happening now" opens a space where the experience can be present without automatically determining your behaviour. That shift — subtle, but decisive — is one of the pillars of therapeutic work.</p>
+        <blockquote>"I'm having this thought" is not the same as "I am this thought." That subtle but decisive difference is one of the pillars of therapeutic work.</blockquote>
 
-        <p>This training is informed by Relational Frame Theory (RFT), which explains how human language generates connections between experiences, rules, and meanings that sometimes expand our possibilities and, at other times, limit us without our realising it. By working from this perspective, you gradually learn to recognise how language organises your experience through relationships, labels, and judgements, and to respond to them in a more flexible and deliberate way — rather than automatically.</p>
+        <p>This training draws on <strong>Relational Frame Theory</strong> (RFT). The core idea is this: words aren't just words. Think about what happens when you hear the word "lemon." Your mouth may water, or you may remember a taste. No one has put a lemon in front of you, but your body responds almost as if it had. That happens because your mind has learned to connect the word with the experience. Those connections form networks of meaning that sometimes expand your possibilities and, other times, limit you without your realising it.</p>
 
-        <p>Observing all of this calmly, without judging it, is the first step towards real change. It isn't about "discovering the truth about yourself" — it's about detecting functional patterns you haven't been fully aware of until now.</p>
+        <p>Observing all of this calmly, without judging it, is the first step. It isn't about "discovering the truth about yourself." It's about detecting patterns you haven't been aware of until now.</p>
 
         <h3>2. Private events: thoughts, emotions, and sensations</h3>
 
@@ -784,148 +867,133 @@
         <ul>
             <li>Intrusive thoughts, self-criticism, fears, doubts.</li>
             <li>Intense emotions: fear, sadness, anger, shame.</li>
-            <li>Impulses: to shout, flee, cancel, withdraw, consume, punish yourself.</li>
-            <li>Physical sensations: a knot in your stomach, palpitations, tension, dizziness, extreme tiredness.</li>
+            <li>Impulses: to shout, flee, cancel, withdraw.</li>
+            <li>Physical sensations: a knot in the stomach, palpitations, tension, dizziness, extreme tiredness.</li>
         </ul>
 
-        <p>Very often, these experiences are perceived as internal enemies. There's a sense of "I shouldn't feel this," "I shouldn't think this," "if I feel this, I won't be able to do what I want to do." But in contextual psychotherapy, the question shifts focus:</p>
+        <p>Very often, these experiences are perceived as internal enemies. "I shouldn't feel this." "If I feel this, I won't be able to do what I set out to do." But in contextual psychotherapy, the question shifts focus:</p>
 
         <ul>
             <li>Not so much "how do I get rid of this?" but "what function does this serve?"</li>
             <li>What makes you stop?</li>
-            <li>What protects you, even if it takes you further from what you want in the long run?</li>
+            <li>What protects you, even if in the long run it takes you away from what you want?</li>
         </ul>
 
-        <p>The central idea is this: it isn't necessary to control or eliminate the thoughts, emotions, or sensations that arise in order to move forward. What can be learned is how to relate differently to those experiences: to hold them without fleeing from them, to observe their function rather than fighting against their presence, and to choose an action aligned with your own values even when distress is still there. Over time, the repertoire of responses expands — not because the inner state disappears, but because it stops being the only factor that determines what you do.</p>
+        <p>The central idea is this: you don't need to control or eliminate what you feel in order to move forward. What you can learn is to relate differently to those experiences. To hold them without fleeing. To observe their function. And to choose an action coherent with what matters to you, even if the distress is still there.</p>
 
-        <p>In sessions I teach acceptance and exploration of these phenomena without trying to control them, understanding how they influence daily life and how many avoidant or self-limiting behaviours originate in the struggle against them. We practise:</p>
+        <p>In sessions we practise:</p>
 
         <ul>
-            <li>Holding the distress without fighting against it.</li>
-            <li>Experimenting with small behaviours that you sustain even when distress is present.</li>
-            <li>Observing how avoidance provides momentary relief, but reinforces the fear of repeating the experience.</li>
+            <li>Holding the discomfort without fighting against it.</li>
+            <li>Experimenting with small behaviours that hold even when distress is present.</li>
+            <li>Observing how avoidance gives momentary relief, but reinforces fear.</li>
         </ul>
 
-        <p>Learning to make room for these events without fleeing allows you to transform your relationship with what's difficult and to move towards a life aligned with your own values. This isn't "stoicism," nor "just enduring more." It's training a psychological flexibility that lets you move forward even when what you think and feel isn't on your side: continuing to choose your life, even when you believe it isn't "ready" or "calm."</p>
+        <div class="infobox">
+            <div class="infobox-label">Psychological flexibility</div>
+            <p>The capacity to keep choosing what matters to you, even when what you think and feel isn't on your side. Not when you're ready. Now.</p>
+        </div>
 
         <h3>3. Language, mind, and self-criticism</h3>
 
-        <p>Language is one of the most powerful tools — and also one of the most dangerous. Thanks to it we can think, plan, imagine, remember. But we can also create stories that keep us trapped:</p>
+        <p>Language is one of the most powerful tools, and also one of the most dangerous. Thanks to it you can think, plan, imagine, remember. But you can also create stories that keep you trapped:</p>
 
         <ul>
             <li>"I'm never enough."</li>
             <li>"If I fail, I'm worthless."</li>
             <li>"If I feel this, it means I'm weak."</li>
-            <li>"If I think that, something must be wrong with me."</li>
+            <li>"If I think that, there's something wrong with me."</li>
         </ul>
 
-        <p>These phrases aren't just empty words; they are rules that, when taken literally, influence your behaviour and can end up directing what you do. In sessions I work with the verbal events that shape subjective experience: thoughts, reasoning, rumination, self-criticism, memories, beliefs, labels, interpretations of others, and perceptions of their judgement. I help you see these constructions as tools of language, not as absolute truths.</p>
+        <p>These phrases aren't just empty words. They are <strong>verbal rules</strong>: learned sentences that organise what you do, sometimes without you realising it. When taken literally, they work like commands. And they can end up directing your behaviour.</p>
+
+        <p>In sessions I work with what you say to yourself: thoughts, reasoning, rumination, self-criticism, memories, beliefs, labels. I help you see them as products of language. Not as absolute truths.</p>
 
         <p>What we work on is:</p>
 
         <ul>
-            <li>Distinguishing between the content of thoughts and their function.</li>
+            <li>Distinguishing between what a thought says and what that thought does in your behaviour.</li>
             <li>Seeing how certain self-criticisms protect you from shame, but take you away from action.</li>
-            <li>Learning defusion: observing thoughts as mental events, not as absolute "truths."</li>
+            <li>Learning to observe thoughts as events that happen, not as commands to be obeyed. This is called <strong>cognitive defusion</strong>.</li>
         </ul>
 
-        <p>For example, rather than forcing yourself to "think better" or "not think about that" or "convince yourself your thoughts are wrong," the session invites you to experiment:</p>
+        <p>For example, instead of forcing yourself to "think better" or "not think about that," the session invites you to experiment:</p>
 
         <ul>
-            <li>What difference does it make to hold the same self-criticism from the distance of "I'm having this thought" versus "I am this thought"?</li>
-            <li>What happens if you let the thought be there, and still choose a small action, even when you don't feel ready?</li>
+            <li>What difference does it make to hold the same self-criticism from "I'm having this thought" versus "I am this thought"?</li>
+            <li>What happens if you let the thought be there, but you keep choosing a small action, even when you don't feel ready?</li>
         </ul>
 
-        <p>Over time, this practice allows the conceptualized self — that rigid image of yourself built from judgements, labels, and external perceptions — to lose its hold over your behaviour. It isn't about tricking yourself or denying reality, but about expanding your repertoire of responses to what your mind tells you, and acting with freedom in relation to the past and the labels that, until now, have limited you.</p>
-
-        <p>From the process-based approach, we train verbal flexibility: the capacity to respond to thoughts according to their function and not according to their literal content. This process, known as cognitive defusion, generates variability in how you relate to self-criticism and internal rules, weakening rigid patterns and widening options for action more aligned with your values.</p>
+        <p>Over time, that rigid image of yourself that you've built up from judgements, labels, and what you believe others think of you — what in this approach is called the <strong>conceptualized self</strong> — loses its hold over what you do. It isn't about denying what you think. It's about expanding your options for responding.</p>
 
         <h3>4. The body and what is felt</h3>
 
-        <p>Your body isn't just a backdrop — it's an indicator. Emotions and thoughts are often connected to very specific physical sensations:</p>
+        <p>Your body isn't just a stage. It's an indicator. Often, emotions and thoughts are connected to specific physical sensations:</p>
 
         <ul>
             <li>Pressure in the chest, as if you can't quite breathe.</li>
             <li>A knot in the throat, difficulty speaking.</li>
-            <li>Lower-back tension, chronic headaches, stomach tightening.</li>
+            <li>Lower-back tension, chronic headaches, tightening of the stomach.</li>
             <li>Trembling limbs.</li>
             <li>Unexpected fatigue, insomnia, difficulty digesting.</li>
         </ul>
 
-        <p>Each sensation is recognised and validated as a real event, connected with emotions and thoughts. In many people, the physical sensation is experienced as "an internal danger signal." Fear of pressing on arises because the body seems to be saying "you can't," and that influences what you do.</p>
+        <p>Each sensation is real. It isn't "imagination." And in many people, that physical sensation is experienced as a signal of internal danger. The body seems to say "you can't," and that influences what you do.</p>
 
         <p>Contextual psychotherapy works with that sensation differently:</p>
 
         <ul>
-            <li>First, validating it: recognising that it is real, not "imagination."</li>
+            <li>First, validating it: recognising that it is real.</li>
             <li>Then, locating it: seeing what thoughts and emotions come with it.</li>
-            <li>And then, practising with it: what happens if you sit with that sensation, observe it, and still take a small step — even with the knot in your chest still there.</li>
+            <li>And then, practising with it: what happens if you sit with that sensation, observe it, and still take a small step?</li>
         </ul>
 
-        <p>I teach you to hold these bodily experiences with mindfulness and self-compassion. By learning to sit with somatic distress without fighting it, many people discover they can act even when they don't feel "good." This work neither denies nor trivialises physical or emotional pain. What it does is prevent the sensation from becoming an absolute command: "I can't do anything while I feel this way."</p>
+        <div class="emotional-block">
+            <p>By learning to hold bodily discomfort without fighting it, many people discover something: that they can act even when they don't feel "well." This doesn't deny or trivialise the pain. What it does is prevent the sensation from becoming an absolute command: "I can't do anything while I feel like this."</p>
+        </div>
 
         <h3>5. Context and external pressures</h3>
 
-        <p>What you feel doesn't happen in a vacuum. It happens in a context:</p>
+        <p>What you feel doesn't happen in a vacuum. It happens in a context: family, partner, children, work, studies, obligations, social norms, constant comparisons.</p>
+
+        <p>Many people discover that much of their distress comes from feeling trapped between what they want and what they believe they must do. In sessions we work by observing how that context influences your decisions:</p>
 
         <ul>
-            <li>Family, partner, children.</li>
-            <li>Work, studies, obligations.</li>
-            <li>Social norms, "should" ideas, constant comparisons.</li>
-        </ul>
-
-        <p>Many people discover that a great deal of their distress comes from feeling trapped between what they want and what they believe they must do. I help you map how external, social, and family circumstances affect your decisions and emotions, teaching you to identify contingencies, opportunities for action, and real barriers.</p>
-
-        <p>In sessions we work by observing how context influences your decisions:</p>
-
-        <ul>
-            <li>What reinforces you to avoid certain situations?</li>
-            <li>What punishments — real or imagined — hold you back?</li>
+            <li>What situations reinforce that you avoid certain things?</li>
+            <li>What consequences — real or anticipated — hold you back?</li>
             <li>What expectations lead you to pretend, to overload yourself, to not say what you feel?</li>
         </ul>
 
-        <p>With that perspective, we begin to distinguish between what you do out of habit or pressure, and what you choose because it aligns with your values. The goal isn't to break all the rules or to harm anyone — it's to learn to move through your context with flexibility and awareness, choosing responses coherent with your values, without passively submitting to rules derived from cultural context or the pressure of external expectations.</p>
+        <p>With that perspective, we start to distinguish between what you do out of habit or pressure, and what you choose because it aligns with what matters to you. It isn't about breaking all the rules or harming anyone. It's about learning to move through your context with more flexibility and more awareness.</p>
 
-        <p>Beyond that, in each session I also pay attention to what happens in our therapeutic relationship. From the contextual functional analysis perspective, the patterns that appear in the interaction between you and me are opportunities to observe your habitual ways of responding, to reinforce behaviours that bring you closer to your values, and to weaken those that keep you stuck. In this way, the session becomes a living space where you can practise new ways of relating.</p>
+        <p>Beyond that, I pay attention to what happens in our own therapeutic relationship. The patterns that appear between you and me — how you relate, what you avoid, what's hard for you — are opportunities to observe your usual ways of responding and to practise new ones. The session becomes a space where that happens in real time.</p>
 
         <h3>6. Values, not just goals</h3>
 
-        <p>In many cases, motivation runs out because only goals are worked with:</p>
+        <p>In many cases, motivation runs out because only goals are worked with: "I want to feel better." "I want the anxiety to pass." "I want everything to be sorted out."</p>
+
+        <p>But goals on their own don't sustain the effort when the path gets hard. In contextual psychotherapy, we work with <strong>values</strong>: not goals that are reached and completed, but directions you choose for your life that continue to make sense even if you don't obtain the outcome. They are what orients how you want to live.</p>
 
         <ul>
-            <li>"I want to feel better."</li>
-            <li>"I want the anxiety to go away."</li>
-            <li>"I want everything to be sorted out."</li>
-        </ul>
-
-        <p>But goals alone don't sustain the effort when the path gets hard. In contextual psychotherapy, we work with values as reference points: what truly matters, chosen freely and not imposed by social norms or others' expectations.</p>
-
-        <p>I guide you so that these values act as a compass, orienting decisions, behaviours, and objectives:</p>
-
-        <ul>
-            <li>What kind of relationship do you want to maintain with your family, even when there is conflict?</li>
+            <li>What kind of relationship do you want to maintain with your family, even when there's conflict?</li>
             <li>What kind of professional do you want to be, even when the work is demanding?</li>
             <li>What kind of person do you want to be for yourself, even when you feel vulnerable?</li>
         </ul>
 
-        <p>Values aren't "objectives" to be reached or completed; they are directions that orient how you want to live.</p>
-
-        <p>To move in that direction, we work with two types of objectives. <strong>Achievement goals</strong> are small, concrete actions you can take today, directly connected with what you value. <strong>Outcome goals</strong> are the longer-term consequences towards which those actions point. The distinction matters: waiting to have the outcome goal achieved before you start acting is one of the most common ways avoidance disguises itself as preparation.</p>
-
-        <p>You learn to differentiate between what has been learnt and what has been conditioned by the environment, recognising what gives life meaning in the present, in personal history, and in future projection. From there, we build small, coherent behaviours and sustainable habits that, over time, generate a life more aligned with what truly matters.</p>
+        <p>To move in that direction, we work with two kinds of objectives. <strong>Achievement goals</strong> are small, concrete actions you can take today, connected with what you value. <strong>Outcome goals</strong> are the long-term consequences those actions point towards. The distinction matters: waiting to have the outcome already achieved before starting to act is one of the most common ways avoidance disguises itself as preparation.</p>
 
         <p>In sessions we work with questions like:</p>
 
         <ul>
             <li>"If you had to describe your life in a few words, how would you want it to be?"</li>
-            <li>"What actions — even small ones — bring you closer to that description?"</li>
+            <li>"What actions, however small, bring you closer to that description?"</li>
         </ul>
 
-        <p>This grounding in values also feeds clarity when facing challenges. When distress is intense, when relapse seems inevitable, it's values — not the emotions of the moment — that allow you to maintain psychological flexibility and sustain long-term motivation.</p>
+        <p>When distress is intense, when relapse seems inevitable, it's values — not the emotions of the moment — that allow you to keep direction.</p>
 
-        <h3>7. Progressive learning, commitment, and persistence</h3>
+        <h3>7. Progressive learning and commitment</h3>
 
-        <p>Contextual therapy doesn't work like a switch. It works more like progressive, sequential, spiral learning, adapted to each person's resources and experiences. In each session, we observe:</p>
+        <p>Contextual therapy doesn't work like a switch. It works like learning: progressive, in spiral, adapted to your resources and your moment. In each session, we observe:</p>
 
         <ul>
             <li>What worked?</li>
@@ -934,19 +1002,24 @@
             <li>What can be adjusted?</li>
         </ul>
 
-        <p>We don't look for a "perfect response," but for a viable alternative. I set specific, achievable objectives together with you — achievement goals and longer-term outcome goals. Both are evaluated and adjusted in each session, ensuring coherence with values, accelerating behaviours that contribute to a valued life, and slowing down those that take you away from it.</p>
+        <p>We don't look for the perfect response. We look for a viable alternative. We set specific, achievable objectives that are evaluated and adjusted session by session, making sure they're connected with what matters to you.</p>
 
-        <p>This strategy is complemented by work on natural, meaningful reinforcers: the aim isn't to replace one set of rigid rules with another, but to facilitate exposure to experiences that generate real satisfaction and motivation, scaling progressively. The practice fosters the development of functional, sustainable habits aligned with values, which effectively compete with avoidance and reinforce committed action.</p>
+        <p>And when the process gets complicated — when there are relapses, difficulties, or moments of resistance — we work on conscious persistence: continuing to act without fighting against what you feel or exaggerating it. Learning from each fall.</p>
 
-        <p>And when the process gets complicated — when there are relapses, difficulties, or moments of resistance — we work on conscious persistence: the capacity to maintain effective action without fighting against negative reinforcers or exaggerating them. I support you in experiencing uncomfortable or aversive situations without suppressing or amplifying them, learning from each setback and getting back up with resilience. This work also includes developing functional self-compassion: the capacity to recognise one's own suffering without amplifying or suppressing it, and to treat oneself with the same open willingness with which one would treat someone one cares about. Far from being a soft concession, self-compassion within this framework is a trained behaviour, coherent with values, that competes directly with destructive self-criticism and avoidance. This conscious persistence fosters autonomy and the capacity to sustain behaviour coherent with values, even in the face of inevitable obstacles.</p>
+        <div class="infobox">
+            <div class="infobox-label">Self-compassion</div>
+            <p>Not self-compassion as a soft concession. But as a concrete way of treating yourself with the same disposition with which you'd treat someone you love. Recognising that you're suffering, without amplifying or suppressing it. In this approach, self-compassion competes directly with destructive self-criticism. It doesn't replace it with "everything is fine." It replaces it with "this is hard, and even so I can keep choosing."</p>
+        </div>
 
         <hr>
 
         <h2>And what happens in the first session?</h2>
 
-        <p>In the first session, the focus is on listening to you calmly, without judging, without rushing towards solutions. What happens in the session itself — how you relate, what you avoid, what's hard to say — also forms part of the shared analysis. It isn't about "analysing you" or "labelling you" or looking for someone to blame. It's about understanding your story from your own experience, from your memories, with a genuine interest in knowing what hurts, what's hard, and what truly matters to you.</p>
+        <p>In the first session, the focus is on listening to you. Calmly. Without judging. Without rushing towards solutions.</p>
 
-        <p>I usually start with very open questions:</p>
+        <p>What happens in the session itself — how you relate, what you avoid, what's hard for you to say — is also part of the work. It isn't about "analysing you," or "labelling you," or looking for someone to blame. It's about understanding your story from your own experience.</p>
+
+        <p>I usually begin with very open questions:</p>
 
         <ul>
             <li>How do you feel arriving at the session?</li>
@@ -955,79 +1028,44 @@
             <li>What has gone well in your life, however small?</li>
         </ul>
 
-        <p>With those questions, we start to draw a map: where you feel stuck, what patterns keep repeating, what desires, values, and goals are present — even if they're buried under exhaustion or criticism.</p>
+        <p>With those questions, we start to draw a map: where you feel stuck, what patterns keep repeating, what values are present even if they're hidden beneath tiredness or self-criticism.</p>
 
-        <p>From there, we build a functional hypothesis of your situation: not a "definitive truth," but a provisional way of understanding which processes are maintaining your difficulty. That hypothesis is revised and adjusted in each session, based on what you observe and experience between one session and the next.</p>
-
-        <hr>
-
-        <h2>What benefits might this have for you?</h2>
-
-        <p>This isn't about promising everything will disappear overnight. Contextual psychotherapy isn't a trick — it's a process of teaching and learning. But by working consistently, you can expect changes like these:</p>
-
-        <ul>
-            <li>Greater clarity about what truly matters to you, as opposed to what you do out of habit or pressure.</li>
-            <li>Greater flexibility to hold difficult emotions without being paralysed by them.</li>
-            <li>Greater presence in the moment, without being constantly caught in the past or the future.</li>
-            <li>Greater autonomy to make decisions aligned with your values, even when there is fear or distress.</li>
-            <li>Greater confidence in your capacity for learning and change, even when setbacks are part of the process.</li>
-        </ul>
-
-        <p>Contextual therapy is also very oriented towards everyday life: it isn't about "talking about childhood" or "exploring unresolvable conflicts," but about building practical skills you can use at work, in your family, in your relationships. Each session is designed so that, when you leave, you have something concrete to try, observe, and adjust.</p>
+        <p>From there, we build a first way of understanding which processes are maintaining your difficulty. It isn't a final truth. It's a hypothesis that's revised and adjusted in each session, based on what you observe and live between one and the next.</p>
 
         <hr>
 
         <h2>"What if I've already tried everything?"</h2>
 
-        <p>It's very common for people to arrive at a session feeling they've already tried everything: previous therapies, books, courses, workshops, emotion regulation strategies, mindfulness, relaxation techniques. And yet they feel the distress keeps coming back, or that the improvement isn't sustainable.</p>
+        <p>It's very common that, when arriving at consultation, a person feels they've already tried everything: previous therapies, readings, courses, workshops, emotion regulation strategies, mindfulness, relaxation techniques. And still, the distress returns.</p>
 
         <p>In contextual psychotherapy, that experience isn't interpreted as "you're not capable" or "you're not enough to change." It's interpreted as data:</p>
 
         <ul>
             <li>Which strategies have worked momentarily?</li>
             <li>Which patterns persist despite the intention to change?</li>
-            <li>What consequences — not always obvious — keep reinforcing the same behaviour?</li>
+            <li>Which consequences keep reinforcing the same behaviour, even when they aren't obvious?</li>
         </ul>
 
-        <p>Many times, the difficulty isn't in a lack of effort, but in the direction of that effort — in how one has tried to resolve what's happening, in the way change has been understood (for example, waiting to "not feel it" as a condition for acting), or in the lack of space to observe and adjust, beyond self-demand.</p>
+        <p>Many times, the difficulty isn't in a lack of effort. It's in the direction of that effort. In how one has tried to solve what's happening. In waiting to "not feel it" as a condition for acting.</p>
 
-        <p>With me, everything you've already tried is respected. We don't start from scratch; we start from your history, your effort, and your learning, and give it a new angle: more contextual, more functional, more aligned with your values.</p>
+        <p>With me, we work with respect for everything you've already tried. We don't start from scratch. We start from your story, your effort, and your learning, and we give them a new angle: more contextual, more oriented to function, more aligned with your values.</p>
 
         <hr>
 
-        <h2>Why take the step?</h2>
+        <h2>If you want to go further</h2>
 
-        <p>If you've read this far, it's very likely that you're tired of staying the same — but also that you have at least a small faith that something can change, even if you're not sure quite how. Getting in touch with me isn't "just another formality." It's a concrete step towards stopping the attempt to resolve this alone, and starting to build a path with support and accompaniment.</p>
+        <div class="emotional-block">
+            <p>If you've read this far, it's likely that you're tired of staying the same. But also that a part of you knows something can change, even if you don't quite know how.</p>
+            <p>Taking the step doesn't mean having everything clear. It means being willing to observe in more detail what's happening to you. To experiment with something different from the constant struggle. To let the discomfort be there, while you choose actions that bring you closer to what truly matters to you.</p>
+        </div>
 
-        <p>Taking that step means:</p>
+        <p>I don't offer a magic method. I offer a safe space where what you feel isn't judged, but examined. An approach with practical, observable, repeatable strategies. And active support, where your experience, your small steps, and your relapses are part of the path. Not a failure.</p>
 
-        <ul>
-            <li>You're willing to observe more closely what's happening to you.</li>
-            <li>You're willing to experience something different from the constant struggle.</li>
-            <li>You're willing to let the distress be there, while choosing actions that bring you closer to a life more aligned with what truly matters to you.</li>
-        </ul>
+        <div class="closing-block">
+            <p>You don't need to feel it "perfectly," nor to be entirely convinced. All it takes is one step. However small.</p>
+        </div>
 
-        <p>I don't offer miracles, but I do offer three clear things:</p>
-
-        <ul>
-            <li>A safe, respectful space where what you feel isn't judged, but examined in terms of what's happening with you.</li>
-            <li>An updated approach: practical, observable, repeatable strategies — not just theory.</li>
-            <li>Active support, where you aren't a "passive client" but a fundamental participant: your experience, your small steps, and your relapses are all part of the map — not a failure.</li>
-        </ul>
-
-        <hr>
-
-        <h2>A "yes" worth saying</h2>
-
-        <p>You're reading this text because one part of you has already said "yes" to change — even if another part keeps saying "no," that it's not worth it, that it won't work, that you've already tried.</p>
-
-        <p>Contextual psychotherapy doesn't ask you to get rid of that part. It asks that, alongside it, you begin to build a life where not everything revolves around suffering — where distress has its place, but doesn't take away your ability to choose.</p>
-
-        <p>If you want, you can start today. You don't need to feel "perfectly ready," nor be entirely convinced, nor have your life "in order." You only need to be willing to take one step — however small — and to let someone accompany you in doing it with more clarity, more compassion, and more meaning.</p>
-
-        <p>Getting in touch isn't resignation or losing control. It's an act of active responsibility: you recognise that what you've done until now hasn't taken you where you'd like to go, and that you need another way of looking at it, understanding it, and acting.</p>
-
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <p class="article-signature">José Javier</p>
 
     </article>
 
@@ -1038,6 +1076,11 @@
                 <span class="article-nav-label">← Previous</span>
                 <span class="article-nav-title">When you know it isn't dangerous… yet still can't do it</span>
             </a>
+            <!-- TODO: update link when EN version exists -->
+            <a href="../../blog/autocompasion-autoestima-genuina.html" class="article-nav-next">
+                <span class="article-nav-label">Next →</span>
+                <span class="article-nav-title">Self-compassion offers us a path, free of comparisons, towards calm and wholeness</span>
+            </a>
         </div>
     </div>
 
@@ -1045,15 +1088,19 @@
     <div class="share-bar">
         <span class="share-bar-label">Share</span>
         <div class="share-icons">
+            <!-- WhatsApp -->
             <a class="share-icon" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
+            <!-- Twitter/X -->
             <a class="share-icon" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter/X">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
+            <!-- Facebook -->
             <a class="share-icon" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
+            <!-- Copy link -->
             <button class="share-icon" id="share-copy" aria-label="Copy link">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </button>
@@ -1088,9 +1135,9 @@
     <!-- CTA BOX -->
     <div class="article-cta">
         <div class="article-cta-box">
-            <h3>Do you recognize something of this in your own experience?</h3>
-            <p>The next step isn't to read more. It's to do the work with someone who can support you. If you'd like to explore whether this approach fits you, write to me with no commitment.</p>
-            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank" rel="noopener">
+            <h3>Did this article resonate with you?</h3>
+            <p>If something of what you've read connects with what you're living, you can write to me with no commitment. A short message is enough.</p>
+            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Message me on WhatsApp
             </a>
@@ -1100,19 +1147,22 @@
     <!-- RELATED ARTICLES -->
     <section class="related">
         <div class="related-inner">
-            <h2>Related articles</h2>
+            <h2>Keep reading</h2>
             <div class="related-grid">
-                <a href="flexibilidad-psicologica-1.html" class="related-card">
+                <!-- TODO: update link when EN version exists -->
+                <a href="../../blog/sesgo-de-negatividad-narrativa-personal.html" class="related-card">
                     <div class="related-card-category">Living what matters</div>
-                    <h3>When giving up the struggle to feel better lets you start living better</h3>
+                    <h3>Negativity bias and the story we tell ourselves</h3>
                 </a>
-                <a href="flexibilidad-psicologica-2.html" class="related-card">
+                <!-- TODO: update link when EN version exists -->
+                <a href="../../blog/aceptamos-y-no-nos-resignamos.html" class="related-card">
                     <div class="related-card-category">Living what matters</div>
-                    <h3>When life shrinks and it feels like there's no way out</h3>
+                    <h3>We accept, we don't resign ourselves</h3>
                 </a>
-                <a href="flexibilidad-psicologica-3.html" class="related-card">
+                <!-- TODO: update link when EN version exists -->
+                <a href="../../blog/humanidad-compartida.html" class="related-card">
                     <div class="related-card-category">Living what matters</div>
-                    <h3>When you know it isn't dangerous… yet still can't do it</h3>
+                    <h3>Shared humanity</h3>
                 </a>
             </div>
         </div>
@@ -1123,43 +1173,45 @@
         <div class="footer-inner">
             <div class="footer-brand">José Javier Aznárez Barrio</div>
             <div class="footer-links">
-                <a href="../sobre-mi.html">About Me</a>
-                <a href="index.html">Blog</a>
-                <a href="../index.html#contacto">Contact</a>
+                <a href="../aviso-legal.html">Legal Notice</a>
+                <a href="../aviso-legal.html#politica-privacidad">Privacy Policy</a>
+                <a href="../consentimiento-tarifas.html">Consent and Fees</a>
             </div>
-            <p class="footer-legal">Contextual Psychologist. The information on this blog is for general educational purposes and does not constitute clinical advice or a therapeutic relationship. If you need psychological care, consult a professional.</p>
+            <div class="footer-legal">
+                My services do not constitute clinical or healthcare services, and do not include diagnosis or treatment of psychological disorders or pathologies, in accordance with Spanish Law 44/2003 on the Regulation of Healthcare Professions and the Code of Ethics of the Psychologist in Spain.
+            </div>
         </div>
     </footer>
 
     <!-- FLOATING INSTAGRAM -->
-    <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" rel="noopener" aria-label="Follow on Instagram">
-        <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    <a href="https://www.instagram.com/jjaznarez.psychologist/" class="instagram-float" target="_blank" aria-label="Follow on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var btn = document.getElementById("hamburger-btn");
-        var navLinks = document.getElementById("navLinks");
-        if (!btn || !navLinks) return;
-        btn.addEventListener("click", function(e) {
-            e.stopPropagation();
-            navLinks.classList.toggle("open");
-        });
-        document.addEventListener("click", function(e) {
-            if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
-                navLinks.classList.remove("open");
-            }
-        });
-        document.addEventListener("touchstart", function(e) {
-            if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
-                navLinks.classList.remove("open");
-            }
-        });
-    });
-    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var btn = document.getElementById("hamburger-btn");
+  var navLinks = document.querySelector(".nav-links");
+  if (!btn || !navLinks) return;
+  btn.addEventListener("click", function(e) {
+    e.stopPropagation();
+    navLinks.classList.toggle("open");
+  });
+  document.addEventListener("click", function(e) {
+    if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+      navLinks.classList.remove("open");
+    }
+  });
+  document.addEventListener("touchstart", function(e) {
+    if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+      navLinks.classList.remove("open");
+    }
+  });
+});
+</script>
 </body>
 </html>
