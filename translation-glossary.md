@@ -35,6 +35,12 @@ Antes de traducir, usa este glosario obligatorio de terminología. Siempre que a
 | Hexaflex | Hexaflex |
 | Marcos relacionales | Relational frames |
 | Transformación de funciones | Transformation of functions |
+| Perspectiva deíctica | Deictic perspective |
+| Reglas verbales | Verbal rules |
+| Eventos privados | Private events |
+| Metas de realización | Achievement goals |
+| Objetivos de resultado | Outcome goals |
+| Persistencia consciente | Conscious persistence |
 
 ## Conceptos clínicos:
 
@@ -69,6 +75,7 @@ Antes de traducir, usa este glosario obligatorio de terminología. Siempre que a
 | Malestar | Distress (nunca 'discomfort' en contexto clínico) |
 | Crianza | Parenting |
 | Pareja | Couples / Relationships |
+| Vivir lo que vale (categoría) | Living what matters |
 
 ## Términos musicales (serie MPA):
 
