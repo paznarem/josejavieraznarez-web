@@ -78,6 +78,74 @@
             box-shadow: 0 1px 20px rgba(0,0,0,0.06);
         }
 
+        /* ==================== BLOQUES EMOCIONALES ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        /* ==================== CIERRE DESTACADO ==================== */
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ==================== INFOBOX ==================== */
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.5rem;
+        }
+        .infobox p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
         .nav-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -116,12 +184,8 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--sage-dark); }
-
-        .nav-links a.active {
-            color: var(--sage-dark);
-            font-weight: 500;
-        }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--sage-dark); }
 
         .nav-cta {
             background: var(--sage);
@@ -186,7 +250,12 @@
 
         .article-meta {
             font-size: 0.88rem;
-            color: var(--sage);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .article-meta a {
@@ -268,6 +337,12 @@
         }
 
         .article-body a:hover { text-decoration-color: var(--sage); }
+
+        .article-body img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
 
         .article-body hr {
             border: none;
@@ -671,7 +746,7 @@
     
         .reading-time {
             font-size: 0.82rem;
-            color: var(--sage);
+            color: var(--text-light);
             display: inline-flex;
             align-items: center;
             gap: 0.35rem;
@@ -680,12 +755,18 @@
             content: '·';
             color: var(--warm);
         }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
     </style>
 </head>
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links">
@@ -722,43 +803,42 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>Si estás leyendo este texto, es muy probable que lleves un tiempo sintiendo que algo se repite, que no acabas de avanzar, o que las dificultades te agotan más de lo que te gustaría. Tal vez has probado estrategias, consejos, lecturas, o incluso terapias anteriores, y aun así sientes que no terminas de salir de tu sitio. Esta página está pensada justo para ti: para acompañarte a entender cómo funciona la psicoterapia contextual, cómo son las sesiones conmigo y cómo, desde ahí, puedes empezar a construir una vida más alineada con lo que realmente importa para ti.</p>
+        <p class="article-intro">Si estás leyendo este texto, es muy probable que lleves un tiempo sintiendo que algo se repite. Que no acabas de avanzar. Que las dificultades te agotan más de lo que te gustaría. Tal vez has probado estrategias, consejos, lecturas, o incluso terapias anteriores, y aun así sientes que no terminas de salir de tu sitio.</p>
 
-        <hr>
+        <p>Esta página está pensada para ti: para acompañarte a entender cómo funciona la psicoterapia contextual, cómo son las sesiones conmigo y cómo, desde ahí, puedes empezar a construir una vida más alineada con lo que realmente importa.</p>
 
         <h2>Un lugar donde lo que sientes se respeta</h2>
 
-        <p>La psicoterapia contextual no busca «arreglarte», ni «quitarte» tus problemas, ni convertirte en otra persona. Lo que sí busca es ofrecerte un espacio donde lo que sientes, lo que piensas y lo que haces tenga sentido, incluso cuando duela. No juzgas tu cansancio, tu miedo, tu culpa o tu confusión; aquí tampoco se trata de juzgarlos. Se trata de comprenderlos y ubicarlos en el momento en el que aparecen y, a partir de ahí, elegir cómo quieres seguir viviendo.</p>
+        <p>La psicoterapia contextual no busca «arreglarte». No busca «quitarte» tus problemas, ni convertirte en otra persona. Lo que sí busca es ofrecerte un espacio donde lo que sientes, lo que piensas y lo que haces tenga sentido. Incluso cuando duela.</p>
 
-        <p>Esta manera de trabajar se basa en la Ciencia Conductual Contextual (CBS), un marco científico que estudia la conducta humana en su contexto, con el objetivo de comprender los procesos funcionales que mantienen el malestar y fortalecer los que permiten vivir con mayor flexibilidad, autonomía y coherencia con los propios valores.</p>
+        <p>No juzgas tu cansancio, tu miedo, tu culpa o tu confusión; aquí tampoco se trata de juzgarlos. Se trata de comprenderlos, ubicarlos en el momento en el que aparecen y, a partir de ahí, elegir cómo quieres seguir viviendo.</p>
 
-        <p>En cada sesión, la premisa es simple:</p>
+        <p>Esta forma de trabajar se basa en la <strong>Ciencia Conductual Contextual</strong> (CBS): un enfoque dentro de la psicología científica que estudia el comportamiento humano siempre en relación con el contexto en que ocurre. No se fija solo en lo que sientes, sino en qué función cumple lo que sientes en lo que haces. Y desde ahí, busca fortalecer lo que te permite vivir con más flexibilidad y más coherencia con lo que te importa.</p>
 
-        <ul>
-            <li>Lo que pasa dentro de ti es real.</li>
-            <li>Lo que pasa en tu entorno también influye.</li>
-            <li>Y tú siempre puedes aprender a responder de forma distinta cuando eso aparece, aunque no siempre puedas controlar lo que ocurre.</li>
-        </ul>
+        <div class="infobox">
+            <div class="infobox-label">La premisa de cada sesión</div>
+            <p>Lo que pasa dentro de ti es real. Lo que pasa en tu entorno también influye. Y tú siempre puedes aprender a responder de forma distinta cuando eso aparece, aunque no siempre puedas controlar lo que ocurre.</p>
+        </div>
 
-        <p>Además, en cada sesión trabajo con algo que va más allá de los síntomas: trabajo con la validación de tu propia experiencia. Antes de cualquier análisis o herramienta, reconozco que lo que has vivido tiene su lógica, que tu cansancio no es debilidad, que tus bloqueos no son fracasos. Esta aceptación compasiva —saber distinguir entre sentirse mejor y vivir mejor— es el punto de partida de cualquier cambio real.</p>
-
-        <hr>
+        <p>Además, en cada sesión trabajo con algo que va más allá de los síntomas: la validación de tu propia experiencia. Antes de cualquier análisis o herramienta, reconozco que lo que has vivido tiene su lógica. Que tu cansancio no es debilidad. Que tus bloqueos no son fracasos. No se trata de sentirse mejor para empezar a vivir. Se trata de empezar a vivir, aunque todavía no te sientas del todo bien.</p>
 
         <h2>Una sesión, paso a paso</h2>
 
-        <p>Imagina que entras en sesión. No hay expectativas, ni debe haber «buena impresión». No se trata de parecer valiente, ni de justificar tu sufrimiento. Se trata de acomodarte en ese momento, tal como estás, y empezar a observar lo que ocurre. Yo te guío, pero el protagonista eres tú.</p>
+        <div class="emotional-block">
+            <p>Imagina que entras en sesión. No hay expectativas, ni debe haber «buena impresión». No se trata de parecer valiente, ni de justificar tu sufrimiento. Se trata de acomodarte en ese momento, tal como estás, y empezar a observar lo que ocurre. Yo te guío, pero el protagonista eres tú.</p>
+        </div>
 
-        <h3>1. Observar lo que pasa, sin juzgar: el autoconocimiento como herramienta</h3>
+        <h3>1. Observar lo que pasa, sin juzgar</h3>
 
-        <p>La primera tarea no es «solucionar», sino observar. Fijamos la mirada en tres niveles:</p>
+        <p>La primera tarea no es «solucionar». Es observar. Fijamos la mirada en tres niveles:</p>
 
         <ul>
-            <li>Lo que pasa dentro (pensamientos, emociones, impulsos, sensaciones físicas).</li>
-            <li>Lo que pasa fuera (contextos, relaciones, exigencias, presiones).</li>
-            <li>Lo que haces en cada situación (conductas visibles e invisibles).</li>
+            <li>Lo que pasa dentro: pensamientos, emociones, impulsos, sensaciones físicas.</li>
+            <li>Lo que pasa fuera: contextos, relaciones, exigencias, presiones.</li>
+            <li>Lo que haces en cada situación: conductas visibles e invisibles.</li>
         </ul>
 
-        <p>Con el tiempo, muchas personas descubren que no se conocen realmente a sí mismas en el detalle que les haría falta. Sienten que «siempre se bloquean», «siempre se hunden», «siempre se rinden», pero no se paran a ver qué ocurre un segundo antes de ese bloqueo. En la psicoterapia contextual, ese segundo se amplía:</p>
+        <p>Con el tiempo, muchas personas descubren que no se conocen a sí mismas en el detalle que les haría falta. Sienten que «siempre se bloquean», «siempre se hunden», «siempre se rinden», pero no se paran a ver qué ocurre un segundo antes de ese bloqueo. En la psicoterapia contextual, ese segundo se amplía:</p>
 
         <ul>
             <li>¿Qué pensamiento aparece justo antes de que dejes de intentarlo?</li>
@@ -766,17 +846,19 @@
             <li>¿Qué contexto hace que te sientas más vulnerable?</li>
         </ul>
 
-        <p>Guío este proceso desde lo que se llama perspectiva deíctica: la capacidad de situarse como observador de la propia experiencia, distinguiendo el yo que observa del contenido que observa, sin necesidad de identificarse con cada pensamiento, emoción o sensación que aparece.</p>
+        <p>Se identifica lo que surge, se describe con detalle y se analiza en función de cómo influye en lo que haces. Este proceso permite reconocer patrones que antes pasaban inadvertidos.</p>
 
-        <p>Se identifica lo que surge, se describe con detalle y se analiza en función de cómo influye en lo que haces. Este proceso permite reconocer patrones que antes pasaban inadvertidos y entender qué está organizando tu experiencia en cada momento.</p>
+        <div class="emotional-block">
+            <p>Hay un momento en este trabajo en el que algo cambia. Te das cuenta de que puedes notar lo que piensas, lo que sientes, lo que te pasa en el cuerpo, sin quedar atrapado en ello. No porque seas especial. Sino porque esa distancia se entrena.</p>
+        </div>
 
-        <p>Con el tiempo, esta forma de observar revela algo clave: que puedes notar pensamientos, emociones y sensaciones sin quedar completamente definido por ellos. No se trata de una cualidad especial ni de algo que tengas o no tengas, sino de una función que se entrena.</p>
+        <p>A eso —situarte como observador de tu propia experiencia, distinguiendo el tú que observa del contenido que observa— se le llama <strong>perspectiva deíctica</strong>. Suena técnico, pero es algo que ya haces a veces sin darte cuenta: cuando dices «una parte de mí sabe que esto no es tan grave» estás tomando distancia de tu propia experiencia. Lo que hacemos en sesión es entrenar eso de forma deliberada.</p>
 
-        <p>Aprender a reconocer «estoy teniendo este pensamiento» o «esto está ocurriendo ahora» abre un espacio donde la experiencia puede estar presente sin determinar automáticamente tu conducta. Ese cambio —sutil, pero decisivo— es uno de los pilares del trabajo terapéutico.</p>
+        <blockquote>«Estoy teniendo este pensamiento» no es lo mismo que «soy este pensamiento». Esa diferencia, sutil pero decisiva, es uno de los pilares del trabajo terapéutico.</blockquote>
 
-        <p>Este entrenamiento se apoya en la Teoría del Marco Relacional (RFT), que explica cómo el lenguaje humano genera conexiones entre experiencias, reglas y significados que a veces amplían nuestras posibilidades y, otras veces, nos limitan sin darnos cuenta. Al trabajar desde esta perspectiva, vas aprendiendo a reconocer cómo el lenguaje organiza tu experiencia a través de relaciones, etiquetas y juicios, y a responder a ellos de forma más flexible y deliberada, en lugar de hacerlo de manera automática.</p>
+        <p>Este entrenamiento se apoya en la <strong>Teoría del Marco Relacional</strong> (RFT). La idea central es esta: las palabras no son solo palabras. Piensa en lo que te ocurre al oír la palabra «limón». Puede que se te haga la boca agua, o que recuerdes un sabor. Nadie te ha puesto un limón delante, pero tu cuerpo responde casi como si lo tuviera. Eso ocurre porque tu mente ha aprendido a conectar la palabra con la experiencia. Esas conexiones forman redes de significado que a veces amplían tus posibilidades y, otras veces, te limitan sin que te des cuenta.</p>
 
-        <p>Observar todo esto con calma, sin juzgarlo, es el primer paso hacia un cambio real. No se trata de «descubrir la verdad sobre ti», sino de detectar patrones funcionales de los que hasta ahora no eras plenamente consciente.</p>
+        <p>Observar todo esto con calma, sin juzgarlo, es el primer paso. No se trata de «descubrir la verdad sobre ti». Se trata de detectar patrones de los que hasta ahora no eras consciente.</p>
 
         <h3>2. Eventos privados: pensamientos, emociones y sensaciones</h3>
 
@@ -785,11 +867,11 @@
         <ul>
             <li>Pensamientos intrusivos, autocríticas, miedos, dudas.</li>
             <li>Emociones intensas: miedo, tristeza, rabia, vergüenza.</li>
-            <li>Impulsos: gritar, huir, cancelar, aislarte, consumir, castigarte.</li>
+            <li>Impulsos: gritar, huir, cancelar, aislarte.</li>
             <li>Sensaciones físicas: nudo en el estómago, palpitaciones, tensión, mareos, cansancio extremo.</li>
         </ul>
 
-        <p>Muy a menudo, estas experiencias se perciben como enemigos internos. Hay una sensación de «no debería sentir esto», de «no debería pensar esto», de «si siento esto, no podré hacer lo que me propongo». Pero en la psicoterapia contextual, la pregunta cambia de foco:</p>
+        <p>Muy a menudo, estas experiencias se perciben como enemigos internos. «No debería sentir esto.» «Si siento esto, no podré hacer lo que me propongo.» Pero en la psicoterapia contextual, la pregunta cambia de foco:</p>
 
         <ul>
             <li>No tanto «¿cómo quito esto?», sino «¿qué función tiene esto?».</li>
@@ -797,53 +879,56 @@
             <li>¿Qué te protege, aunque a largo plazo te aleje de lo que quieres?</li>
         </ul>
 
-        <p>La idea central es esta: no es necesario controlar ni eliminar tus pensamientos, emociones o sensaciones que surgen para poder avanzar. Lo que sí es posible aprender es a relacionarse de forma distinta con esas experiencias: sostenerlas sin huir de ellas, observar su función en lugar de luchar contra su presencia, y elegir una acción coherente con los propios valores aunque el malestar siga ahí. Con el tiempo, el repertorio de respuesta se amplía: no porque el estado interno desaparezca, sino porque deja de ser el único factor que determina lo que haces.</p>
+        <p>La idea central es esta: no necesitas controlar ni eliminar lo que sientes para poder avanzar. Lo que sí puedes aprender es a relacionarte de otra forma con esas experiencias. Sostenerlas sin huir. Observar su función. Y elegir una acción coherente con lo que te importa, aunque el malestar siga ahí.</p>
 
-        <p>En la sesión enseño a aceptar y explorar estos fenómenos sin intentar controlarlos, entendiendo cómo influyen en la vida cotidiana y cómo muchas conductas de evasión o autolimitación se originan en la lucha contra ellos. Practicamos:</p>
+        <p>En la sesión practicamos:</p>
 
         <ul>
             <li>Sostener la incomodidad sin luchar contra ella.</li>
             <li>Experimentar con pequeñas conductas que se mantienen incluso cuando el malestar está presente.</li>
-            <li>Observar cómo la evitación da alivio momentáneo, pero refuerza el miedo a repetir la experiencia.</li>
+            <li>Observar cómo la evitación da alivio momentáneo, pero refuerza el miedo.</li>
         </ul>
 
-        <p>Aprender a dar espacio a estos eventos sin huir permite transformar la relación con lo difícil y avanzar hacia una vida coherente con los propios valores. Esto no es «estoicismo», ni «aguantar más». Es entrenar una flexibilidad psicológica que te permita avanzar incluso cuando lo que piensas y sientes no acompaña: seguir eligiendo tu vida, incluso cuando creas que no está «lista» o «en calma».</p>
+        <div class="infobox">
+            <div class="infobox-label">Flexibilidad psicológica</div>
+            <p>La capacidad de seguir eligiendo lo que te importa incluso cuando lo que piensas y sientes no acompaña. No cuando estés preparado. Ahora.</p>
+        </div>
 
         <h3>3. Lenguaje, mente y autocrítica</h3>
 
-        <p>El lenguaje es una de las herramientas más poderosas y también una de las más peligrosas. Gracias a él podemos pensar, planificar, imaginar, recordar. Pero también podemos crear historias que nos mantienen atrapados:</p>
+        <p>El lenguaje es una de las herramientas más poderosas y también una de las más peligrosas. Gracias a él puedes pensar, planificar, imaginar, recordar. Pero también puedes crear historias que te mantienen atrapado:</p>
 
         <ul>
-            <li>«Nunca soy suficiente».</li>
-            <li>«Si fallo, no valgo».</li>
-            <li>«Si siento esto, es que soy débil».</li>
-            <li>«Si pienso eso, es que hay algo mal en mí».</li>
+            <li>«Nunca soy suficiente.»</li>
+            <li>«Si fallo, no valgo.»</li>
+            <li>«Si siento esto, es que soy débil.»</li>
+            <li>«Si pienso eso, es que hay algo mal en mí.»</li>
         </ul>
 
-        <p>Estas frases no son solo palabras vacías; son reglas que, cuando se toman literalmente, influyen en tu conducta y pueden llegar a dirigir lo que haces. En la sesión trabajo con los eventos verbales que configuran la experiencia subjetiva: pensamientos, razonamientos, rumias, autocríticas, recuerdos, creencias, etiquetas, interpretaciones de los demás y percepciones de su juicio. Te ayudo a ver estas construcciones como herramientas del lenguaje, no como verdades absolutas.</p>
+        <p>Estas frases no son solo palabras vacías. Son <strong>reglas verbales</strong>: frases aprendidas que organizan lo que haces, a veces sin que te des cuenta. Cuando se toman literalmente, funcionan como órdenes. Y pueden llegar a dirigir tu conducta.</p>
+
+        <p>En la sesión trabajo con lo que te dices a ti mismo: pensamientos, razonamientos, rumias, autocríticas, recuerdos, creencias, etiquetas. Te ayudo a verlos como productos del lenguaje. No como verdades absolutas.</p>
 
         <p>Lo que trabajamos es:</p>
 
         <ul>
-            <li>Distinguir entre el contenido de los pensamientos y su función.</li>
+            <li>Distinguir entre lo que un pensamiento dice y lo que ese pensamiento hace en tu conducta.</li>
             <li>Ver cómo ciertas autocríticas te protegen de la vergüenza, pero te alejan de la acción.</li>
-            <li>Aprender la defusión: observar los pensamientos como eventos mentales, no como «verdades» absolutas.</li>
+            <li>Aprender a observar los pensamientos como eventos que ocurren, no como mandatos que obedecer. A esto se le llama <strong>defusión cognitiva</strong>.</li>
         </ul>
 
-        <p>Por ejemplo, en lugar de obligarte a «pensar mejor» o «no pensar en eso» o «convencerte del error de tus pensamientos», la sesión te invita a experimentar:</p>
+        <p>Por ejemplo, en lugar de obligarte a «pensar mejor» o «no pensar en eso», la sesión te invita a experimentar:</p>
 
         <ul>
-            <li>¿Qué diferencia hace sostener la misma autocrítica desde la distancia de «tengo este pensamiento» frente a «soy este pensamiento»?</li>
+            <li>¿Qué diferencia hace sostener la misma autocrítica desde «tengo este pensamiento» frente a «soy este pensamiento»?</li>
             <li>¿Qué ocurre si dejas que el pensamiento esté ahí, pero sigues eligiendo una acción pequeña, aunque no te sientas preparado?</li>
         </ul>
 
-        <p>Con el tiempo, esta práctica permite que el yo conceptualizado —esa imagen rígida de ti mismo construida de juicios, etiquetas y percepciones externas— pierda el control sobre tu conducta. No se trata de hacer trampas ni de negar la realidad, sino de ampliar tu repertorio de respuestas frente a lo que tu mente te dice, y de actuar con libertad frente al pasado y a las etiquetas que, hasta ahora, te han limitado.</p>
-
-        <p>Desde el enfoque basado en procesos, entrenamos la flexibilidad verbal: la capacidad de responder a los pensamientos según su función y no según su literalidad. Este proceso, conocido como defusión cognitiva, permite generar variabilidad en la forma de relacionarse con la autocrítica y con las reglas internas, debilitando patrones rígidos y ampliando opciones de acción más alineadas con tus valores.</p>
+        <p>Con el tiempo, esa imagen rígida de ti mismo que has ido construyendo a partir de juicios, etiquetas y lo que crees que los demás piensan de ti —lo que en este enfoque se llama <strong>yo conceptualizado</strong>— pierde el control sobre lo que haces. No se trata de negar lo que piensas. Se trata de ampliar tus opciones de respuesta.</p>
 
         <h3>4. El cuerpo y lo que se siente</h3>
 
-        <p>Tu cuerpo no es solo un escenario, es un indicador. A menudo, las emociones y los pensamientos se conectan con sensaciones físicas muy concretas:</p>
+        <p>Tu cuerpo no es solo un escenario. Es un indicador. A menudo, las emociones y los pensamientos se conectan con sensaciones físicas concretas:</p>
 
         <ul>
             <li>Presión en el pecho, como si te faltara el aire.</li>
@@ -853,55 +938,41 @@
             <li>Fatiga inesperada, insomnio, dificultad de digestión.</li>
         </ul>
 
-        <p>Cada sensación es reconocida y validada como un evento real, conectado con emociones y pensamientos. En muchas personas, la sensación física se experimenta como «una señal de peligro interno». Surge el miedo a seguir adelante, porque el cuerpo parece decir «no puedes», y eso influye en lo que haces.</p>
+        <p>Cada sensación es real. No es «imaginación». Y en muchas personas, esa sensación física se experimenta como una señal de peligro interno. El cuerpo parece decir «no puedes», y eso influye en lo que haces.</p>
 
         <p>La psicoterapia contextual trabaja esa sensación de forma distinta:</p>
 
         <ul>
-            <li>Primero, validarla: reconocer que es real, que no es «imaginación».</li>
+            <li>Primero, validarla: reconocer que es real.</li>
             <li>Después, ubicarla: ver qué pensamientos y emociones vienen con ella.</li>
-            <li>Y luego, practicar con ella: qué pasa si te sientas con esa sensación, la observas y, aun así, das un paso pequeño, aunque siga el nudo en el pecho.</li>
+            <li>Y luego, practicar con ella: ¿qué pasa si te sientas con esa sensación, la observas y, aun así, das un paso pequeño?</li>
         </ul>
 
-        <p>Enseño a sostener estas experiencias corporales con atención plena y autocompasión. Al aprender a sostener la incomodidad somática sin luchar contra ella, muchas personas descubren que pueden actuar incluso cuando no se sienten «bien». Este trabajo no niega ni banaliza el dolor físico o emocional. Lo que hace es evitar que la sensación se convierta en un mandato absoluto: «no puedo hacer nada si me siento así».</p>
+        <div class="emotional-block">
+            <p>Al aprender a sostener la incomodidad corporal sin luchar contra ella, muchas personas descubren algo: que pueden actuar incluso cuando no se sienten «bien». Esto no niega ni banaliza el dolor. Lo que hace es evitar que la sensación se convierta en un mandato absoluto: «no puedo hacer nada si me siento así».</p>
+        </div>
 
         <h3>5. Contexto y presiones externas</h3>
 
-        <p>Lo que sientes no ocurre en el vacío. Lo haces en un contexto:</p>
+        <p>Lo que sientes no ocurre en el vacío. Ocurre en un contexto: familia, pareja, hijos, trabajo, estudios, obligaciones, normas sociales, comparaciones constantes.</p>
+
+        <p>Muchas personas descubren que gran parte de su malestar viene de sentirse atrapadas entre lo que quieren y lo que creen que deben hacer. En la sesión trabajamos observando cómo ese contexto influye en tus decisiones:</p>
 
         <ul>
-            <li>Familia, pareja, hijos.</li>
-            <li>Trabajo, estudios, obligaciones.</li>
-            <li>Normas sociales, ideas de «debería», comparaciones constantes.</li>
-        </ul>
-
-        <p>Muchas personas descubren que gran parte de su malestar viene de sentirse atrapadas entre lo que quieren y lo que creen que deben hacer. Te ayudo a mapear cómo las circunstancias externas, sociales y familiares impactan en tus decisiones y emociones, enseñándote a identificar contingencias, oportunidades de acción y barreras reales.</p>
-
-        <p>En la sesión trabajamos observando cómo el contexto influye en tus decisiones:</p>
-
-        <ul>
-            <li>¿Qué te refuerza a evitar ciertas situaciones?</li>
-            <li>¿Qué castigos, reales o imaginados, te frenan?</li>
+            <li>¿Qué situaciones refuerzan que evites ciertas cosas?</li>
+            <li>¿Qué consecuencias —reales o anticipadas— te frenan?</li>
             <li>¿Qué expectativas te llevan a fingir, a sobrecargarte, a no decir lo que sientes?</li>
         </ul>
 
-        <p>Con esa mirada, empezamos a distinguir entre lo que haces por costumbre o por presión, y lo que eliges porque se alinea con tus valores. El objetivo no es romper todas las reglas ni hacer daño a nadie, sino aprender a moverte en tu contexto con flexibilidad y conciencia, eligiendo respuestas coherentes con tus valores, sin someterte pasivamente a las reglas derivadas del contexto cultural ni a la presión de expectativas externas.</p>
+        <p>Con esa mirada, empezamos a distinguir entre lo que haces por costumbre o por presión, y lo que eliges porque se alinea con lo que te importa. No se trata de romper todas las reglas ni de hacer daño a nadie. Se trata de aprender a moverte en tu contexto con más flexibilidad y más conciencia.</p>
 
-        <p>Además, en cada sesión presto atención también a lo que ocurre en nuestra relación terapéutica. Desde el análisis funcional contextual, los patrones que aparecen en la interacción entre tú y yo son oportunidades para observar tus modos habituales de responder, reforzar conductas que te acercan a tus valores y debilitar aquellas que te mantienen atrapado. De esta forma, la sesión se convierte en un espacio vivo donde puedes practicar nuevas formas de relacionarte.</p>
+        <p>Además, presto atención a lo que ocurre en nuestra propia relación terapéutica. Los patrones que aparecen entre tú y yo —cómo te relacionas, qué evitas, qué te cuesta— son oportunidades para observar tus formas habituales de responder y practicar otras nuevas. La sesión se convierte en un espacio donde eso ocurre en directo.</p>
 
         <h3>6. Valores, no solo metas</h3>
 
-        <p>En muchos casos, la motivación se agota porque solo se trabaja con metas:</p>
+        <p>En muchos casos, la motivación se agota porque solo se trabaja con metas: «Quiero sentirme mejor.» «Quiero que se me pase la ansiedad.» «Quiero que todo se solucione.»</p>
 
-        <ul>
-            <li>«Quiero sentirme mejor».</li>
-            <li>«Quiero que se me pase la ansiedad».</li>
-            <li>«Quiero que todo se solucione».</li>
-        </ul>
-
-        <p>Pero las metas por sí solas no sostienen el esfuerzo cuando el camino se vuelve difícil. En la psicoterapia contextual, trabajamos con valores como puntos de referencia: lo que realmente importa, elegido libremente y no impuesto por normas sociales o expectativas de otros.</p>
-
-        <p>Te guío para que estos valores actúen como brújula, orientando decisiones, comportamientos y objetivos:</p>
+        <p>Pero las metas por sí solas no sostienen el esfuerzo cuando el camino se vuelve difícil. En la psicoterapia contextual, trabajamos con <strong>valores</strong>: no metas que se alcanzan y se completan, sino direcciones que tú eliges para tu vida y que siguen teniendo sentido aunque no obtengas el resultado. Son lo que orienta cómo quieres vivir.</p>
 
         <ul>
             <li>¿Qué tipo de relación quieres mantener con tu familia, aunque a veces haya conflicto?</li>
@@ -909,11 +980,7 @@
             <li>¿Qué tipo de persona quieres ser para ti mismo, incluso cuando te sientas vulnerable?</li>
         </ul>
 
-        <p>Los valores no son «objetivos» que se alcanzan o completan; son direcciones que orientan cómo quieres vivir.</p>
-
-        <p>Para avanzar en esa dirección, trabajamos con dos tipos de objetivos. Las <strong>metas de realización</strong> son acciones pequeñas y concretas que puedes llevar a cabo hoy, conectadas directamente con lo que valoras. Los <strong>objetivos de resultado</strong> son las consecuencias a largo plazo hacia las que esas acciones apuntan. La diferencia importa: esperar a tener el objetivo de resultado conseguido para empezar a actuar es una de las formas más frecuentes en que la evitación se disfraza de preparación.</p>
-
-        <p>Aprendes a diferenciar entre lo aprendido y lo condicionado por el entorno, reconociendo lo que da sentido a la vida en el presente, en la historia personal y en la proyección futura. Desde ahí, construimos pequeñas conductas coherentes y hábitos sostenibles que, a lo largo del tiempo, van generando una vida más alineada con lo que realmente importa.</p>
+        <p>Para avanzar en esa dirección, trabajamos con dos tipos de objetivos. Las <strong>metas de realización</strong> son acciones pequeñas y concretas que puedes llevar a cabo hoy, conectadas con lo que valoras. Los <strong>objetivos de resultado</strong> son las consecuencias a largo plazo hacia las que esas acciones apuntan. La diferencia importa: esperar a tener el resultado conseguido para empezar a actuar es una de las formas más frecuentes en que la evitación se disfraza de preparación.</p>
 
         <p>En la sesión trabajamos con preguntas como:</p>
 
@@ -922,11 +989,11 @@
             <li>«¿Qué acciones, aunque sean pequeñas, te acercan a esa descripción?»</li>
         </ul>
 
-        <p>Este sustento en los valores también alimenta la claridad frente a los desafíos. Cuando el malestar es intenso, cuando la recaída parece inevitable, son los valores —no las emociones del momento— los que permiten mantener la flexibilidad psicológica y sostener la motivación a largo plazo.</p>
+        <p>Cuando el malestar es intenso, cuando la recaída parece inevitable, son los valores —no las emociones del momento— los que permiten mantener la dirección.</p>
 
-        <h3>7. Aprendizaje progresivo, compromiso y persistencia</h3>
+        <h3>7. Aprendizaje progresivo y compromiso</h3>
 
-        <p>La terapia contextual no funciona como un interruptor. Trabaja más bien como un aprendizaje progresivo, secuencial, en espiral, adaptado a los recursos y experiencias de cada persona. En cada sesión, observamos:</p>
+        <p>La terapia contextual no funciona como un interruptor. Funciona como un aprendizaje: progresivo, en espiral, adaptado a tus recursos y tu momento. En cada sesión, observamos:</p>
 
         <ul>
             <li>¿Qué funcionó?</li>
@@ -935,17 +1002,22 @@
             <li>¿Qué se puede ajustar?</li>
         </ul>
 
-        <p>No buscamos «respuesta perfecta», sino alternativa viable. Establezco, junto a ti, objetivos específicos y alcanzables, las metas de realización y objetivos de resultado a más largo plazo. Ambos se evalúan y ajustan en cada sesión, asegurando coherencia con los valores, acelerando conductas que suman a la vida valiosa y desacelerando aquellas que alejan de ella.</p>
+        <p>No buscamos la respuesta perfecta. Buscamos una alternativa viable. Establecemos objetivos específicos y alcanzables que se evalúan y ajustan sesión a sesión, asegurando que estén conectados con lo que te importa.</p>
 
-        <p>Esta estrategia se complementa con el trabajo sobre reforzadores naturales y valiosos: no se trata de reemplazar unas reglas rígidas por otras, sino de facilitar la exposición a experiencias que generan satisfacción y motivación real, escalando progresivamente. La práctica fomenta el desarrollo de hábitos funcionales y sostenibles, alineados con los valores, que compiten efectivamente con la evitación y refuerzan la acción comprometida.</p>
+        <p>Y cuando el proceso se complica —cuando hay recaídas, dificultades o momentos de resistencia—, trabajamos la persistencia consciente: seguir actuando sin luchar contra lo que sientes ni exagerarlo. Aprender de cada caída.</p>
 
-        <p>Y cuando el proceso se complica —cuando hay recaídas, dificultades o momentos de resistencia—, trabajamos la persistencia consciente: la capacidad de mantener la acción efectiva sin luchar contra los reforzadores negativos ni exagerarlos. Te acompaño a experimentar situaciones incómodas o aversivas sin suprimirlas ni amplificarlas, aprendiendo de cada caída y levantándose con resiliencia. Este trabajo incluye también el desarrollo de la autocompasión funcional: la capacidad de reconocer el propio sufrimiento sin amplificarlo ni suprimirlo, y de tratarse con la misma disposición abierta con la que se trataría a alguien a quien se quiere. Lejos de ser una concesión blanda, la autocompasión en este marco es una conducta entrenada, coherente con los valores, que compite directamente con la autocrítica destructiva y la evitación. Esta persistencia consciente fomenta la autonomía y la capacidad de sostener un comportamiento coherente con los valores, aún frente a obstáculos inevitables.</p>
+        <div class="infobox">
+            <div class="infobox-label">Autocompasión</div>
+            <p>No la autocompasión como concesión blanda. Sino como una forma concreta de tratarte con la misma disposición con la que tratarías a alguien a quien quieres. Reconocer que estás sufriendo, sin amplificarlo ni suprimirlo. En este enfoque, la autocompasión compite directamente con la autocrítica destructiva. No la sustituye con un «todo va bien». La sustituye con un «esto es difícil, y aun así puedo seguir eligiendo».</p>
+        </div>
 
         <hr>
 
         <h2>¿Y qué pasa en la primera sesión?</h2>
 
-        <p>En la primera sesión, el foco está en escucharte con calma, sin juzgar, sin apresurar soluciones. Lo que ocurre en la propia sesión —cómo te relacionas, qué evitas, qué te cuesta decir— también forma parte del análisis compartido. No se trata de «analizarte» ni de «ponerte etiquetas» ni de buscar culpables. Se trata de entender tu historia desde tu propia experiencia, desde tus recuerdos, con un interés genuino en saber qué te duele, qué te cuesta, y qué te importa de verdad.</p>
+        <p>En la primera sesión, el foco está en escucharte. Con calma. Sin juzgar. Sin apresurar soluciones.</p>
+
+        <p>Lo que ocurre en la propia sesión —cómo te relacionas, qué evitas, qué te cuesta decir— también forma parte del trabajo. No se trata de «analizarte» ni de «ponerte etiquetas» ni de buscar culpables. Se trata de entender tu historia desde tu propia experiencia.</p>
 
         <p>Suelo comenzar con preguntas muy abiertas:</p>
 
@@ -956,79 +1028,44 @@
             <li>¿Qué ha salido bien en tu vida, aunque haya sido pequeño?</li>
         </ul>
 
-        <p>Con esas preguntas, empezamos a dibujar un mapa: dónde te sientes atrapado, qué patrones se repiten, qué deseos, valores y metas están presentes, aunque estén ocultos bajo el cansancio o la crítica.</p>
+        <p>Con esas preguntas, empezamos a dibujar un mapa: dónde te sientes atrapado, qué patrones se repiten, qué valores están presentes aunque estén ocultos bajo el cansancio o la autocrítica.</p>
 
-        <p>A partir de ahí, construimos una hipótesis funcional de tu caso: no es una «verdad definitiva», sino una forma provisional de entender qué procesos mantienen tu dificultad. Esa hipótesis se revisa y ajusta en cada sesión, según lo que observes y vivas entre una y otra.</p>
-
-        <hr>
-
-        <h2>¿Qué beneficios puede tener para ti?</h2>
-
-        <p>No se trata de prometer que todo desaparecerá de la noche a la mañana. La psicoterapia contextual no es un truco, sino un proceso de enseñanza y aprendizaje. Pero, al trabajar con constancia, puedes esperar cambios como estos:</p>
-
-        <ul>
-            <li>Más claridad sobre lo que realmente te importa, frente a lo que haces por costumbre o por presión.</li>
-            <li>Más flexibilidad para sostener emociones difíciles sin que te paralicen.</li>
-            <li>Más presencia en el momento, sin estar constantemente atrapado en el pasado o en el futuro.</li>
-            <li>Más autonomía para tomar decisiones alineadas con tus valores, aunque haya miedo o incomodidad.</li>
-            <li>Más confianza en tu capacidad de aprendizaje y de cambio, incluso cuando las caídas formen parte del proceso.</li>
-        </ul>
-
-        <p>Además, la terapia contextual está muy orientada a la vida cotidiana: no se trata de «hablar de la niñez» o «explorar conflictos sin salida», sino de construir habilidades prácticas que puedas usar en tu trabajo, en tu familia, en tus relaciones. Cada sesión está pensada para que, al salir de la consulta, tengas algo concreto que probar, observar y ajustar.</p>
+        <p>A partir de ahí, construimos una primera forma de entender qué procesos mantienen tu dificultad. No es una verdad definitiva. Es una hipótesis que se revisa y ajusta en cada sesión, según lo que observes y vivas entre una y otra.</p>
 
         <hr>
 
         <h2>«¿Y si yo ya lo he intentado todo?»</h2>
 
-        <p>Es muy común que, al llegar a consulta, la persona sienta que ya ha probado de todo: terapias anteriores, lecturas, cursos, talleres, estrategias de gestión emocional, mindfulness, técnicas de relajación. Y aun así, siente que el malestar vuelve, o que la mejoría no es sostenible.</p>
+        <p>Es muy común que, al llegar a consulta, la persona sienta que ya ha probado de todo: terapias anteriores, lecturas, cursos, talleres, estrategias de gestión emocional, mindfulness, técnicas de relajación. Y aun así, el malestar vuelve.</p>
 
         <p>En la psicoterapia contextual, esa experiencia no se interpreta como «no sirves» o «no eres suficiente para cambiar». Se interpreta como un dato:</p>
 
         <ul>
             <li>¿Qué estrategias han funcionado momentáneamente?</li>
             <li>¿Qué patrones se mantienen pese a la intención de cambiar?</li>
-            <li>¿Qué consecuencias, aunque no sean obvias, siguen reforzando el mismo comportamiento?</li>
+            <li>¿Qué consecuencias siguen reforzando el mismo comportamiento, aunque no sean obvias?</li>
         </ul>
 
-        <p>Muchas veces, la dificultad no está en la falta de esfuerzo, sino en la dirección de ese esfuerzo, en cómo se ha intentado resolver lo que ocurre, en la forma de entender el cambio (por ejemplo, esperar «no sentirlo» como condición para actuar), o en la falta de espacio para observar y ajustar, más allá de la autoexigencia.</p>
+        <p>Muchas veces, la dificultad no está en la falta de esfuerzo. Está en la dirección de ese esfuerzo. En cómo se ha intentado resolver lo que ocurre. En esperar «no sentirlo» como condición para actuar.</p>
 
-        <p>Conmigo, se trabaja con respeto a todo lo que ya has intentado. No partimos de cero; partimos de tu historia, tu esfuerzo y tus aprendizajes, y les damos un nuevo enfoque: más contextual, más funcional, más alineado con tus valores.</p>
+        <p>Conmigo, se trabaja con respeto a todo lo que ya has intentado. No partimos de cero. Partimos de tu historia, tu esfuerzo y tus aprendizajes, y les damos un nuevo enfoque: más contextual, más orientado a la función, más alineado con tus valores.</p>
 
         <hr>
 
-        <h2>¿Por qué dar el paso?</h2>
+        <h2>Si quieres ir más lejos</h2>
 
-        <p>Si has llegado hasta aquí, es muy probable que estés cansado de seguir igual, pero también que tengas un mínimo de fe en que algo puede cambiar, aunque no sepas muy bien cómo. Contactarme no es «un trámite» más. Es un paso concreto para dejar de intentar resolverlo solo, y empezar a construir un camino con apoyo y acompañamiento.</p>
+        <div class="emotional-block">
+            <p>Si has llegado hasta aquí, es probable que estés cansado de seguir igual. Pero también que una parte de ti sepa que algo puede cambiar, aunque no sepas muy bien cómo.</p>
+            <p>Dar el paso no significa tenerlo todo claro. Significa estar dispuesto a observar con más detalle lo que te pasa. A experimentar algo distinto a la lucha constante. A dejar que la incomodidad esté ahí, mientras eliges acciones que te acercan a lo que de verdad te importa.</p>
+        </div>
 
-        <p>Dar el paso significa que:</p>
+        <p>No ofrezco un método mágico. Ofrezco un espacio seguro donde lo que sientes no se juzga, sino que se examina. Un enfoque con estrategias prácticas, observables y repetibles. Y un acompañamiento activo, donde tu experiencia, tus pequeños pasos y tus recaídas son parte del camino. No un fracaso.</p>
 
-        <ul>
-            <li>Estás dispuesto a observar con más detalle lo que te pasa.</li>
-            <li>Estás dispuesto a experimentar algo distinto a la lucha constante.</li>
-            <li>Estás dispuesto a dejar que la incomodidad esté ahí, mientras eliges acciones que te acercan a una vida más alineada con lo que de verdad te importa.</li>
-        </ul>
+        <div class="closing-block">
+            <p>No hace falta que lo sientas «perfecto», ni que estés totalmente convencido. Solo hace falta un paso. Aunque sea pequeño.</p>
+        </div>
 
-        <p>No ofrezco milagros, pero sí ofrezco tres cosas claras:</p>
-
-        <ul>
-            <li>Un espacio seguro y respetuoso donde lo que sientes no se juzga, sino que se examina en función de lo que te pasa.</li>
-            <li>Un enfoque actualizado: estrategias prácticas, observables y repetibles, no solo teoría.</li>
-            <li>Un acompañamiento activo, donde tú no eres un «paciente pasivo», sino un participante fundamental: tu experiencia, tus pequeños pasos y tus recaídas son parte del mapa, no un fracaso.</li>
-        </ul>
-
-        <hr>
-
-        <h2>Un «sí» que vale la pena</h2>
-
-        <p>Estás leyendo este texto porque una parte de ti ya ha dicho «sí» al cambio, aunque otra parte siga diciendo que «no», que no vale, que no sirve, que ya lo has intentado.</p>
-
-        <p>La psicoterapia contextual no te pide que te deshagas de esa parte. Te pide que, junto a ella, comiences a construir una vida donde no todo gira en torno al sufrimiento, donde la incomodidad tenga espacio, pero no te quite la posibilidad de elegir.</p>
-
-        <p>Si quieres, puedes empezar hoy. No hace falta que lo sientas «perfecto», ni que estés totalmente convencido, ni que tengas la vida «ordenada». Solo hace falta que estés dispuesto a dar un paso, aunque sea pequeño, y a que alguien te acompañe a hacerlo con más claridad, más compasión y más sentido.</p>
-
-        <p>Contactarme no es resignarse ni perder control. Es un acto de responsabilidad activa: reconoces que lo que has hecho hasta ahora no te ha llevado a donde te gustaría, y que necesitas otra forma de mirarlo, de entenderlo y de actuar.</p>
-
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <p class="article-signature">José Javier</p>
 
     </article>
 
@@ -1144,7 +1181,7 @@
 
     <!-- FLOATING INSTAGRAM -->
     <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
-        <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
     <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
