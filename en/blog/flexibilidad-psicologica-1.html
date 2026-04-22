@@ -11,9 +11,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>When giving up the struggle to feel better lets you start living better — José Javier Aznárez | Contextual Psychologist</title>
+    <title>When giving up trying to feel better lets you start living better — José Javier Aznárez | Contextual Psychologist</title>
     <meta name="description" content="Psychological flexibility isn't about eliminating distress, but about no longer organizing your life around avoiding it. An article on the shift of axis that makes this possible.">
-    <meta property="og:title" content="When giving up the struggle to feel better lets you start living better — José Javier Aznárez">
+    <meta property="og:title" content="When giving up trying to feel better lets you start living better — José Javier Aznárez">
     <meta property="og:description" content="Psychological flexibility isn't about eliminating distress, but about no longer organizing your life around avoiding it. An article on the shift of axis that makes this possible.">
     <meta property="og:type" content="article">
 
@@ -21,11 +21,11 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "When giving up the struggle to feel better lets you start living better",
+      "headline": "When giving up trying to feel better lets you start living better",
       "description": "Psychological flexibility isn't about eliminating distress, but about no longer organizing your life around avoiding it. An article on the shift of axis that makes this possible.",
       "isPartOf": {
         "@type": "PublicationVolume",
-        "name": "Psychological flexibility"
+        "name": "Flexibilidad psicológica (Psychological flexibility)"
       },
       "author": {
         "@type": "Person",
@@ -77,17 +77,18 @@
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
         .hamburger span { width: 24px; height: 2px; background: var(--text-primary); transition: 0.3s; }
 
-        .article-header { padding: 8rem 2rem 4rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%); text-align: center; }
-        .article-header-inner { max-width: 760px; margin: 0 auto; }
+        .article-header { padding: 8rem 2rem 3rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%); text-align: center; }
+        .article-header-inner { max-width: 720px; margin: 0 auto; }
         .article-category { display: inline-block; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); background: rgba(107,127,94,0.1); padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.2rem; }
         .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 300; line-height: 1.3; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 1.2rem; }
         .article-meta { font-size: 0.88rem; color: var(--text-light); display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .article-meta a { color: var(--sage); text-decoration: none; }
-        .reading-time::before { content: '·'; color: var(--warm); margin-right: 0.35rem; }
+        .reading-time { font-size: 0.82rem; color: var(--text-light); display: inline-flex; align-items: center; gap: 0.35rem; }
+        .reading-time::before { content: '·'; color: var(--warm); }
 
         /* SERIES BADGE */
         .series-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(107,127,94,0.12); color: var(--sage-dark); border: 1px solid rgba(107,127,94,0.25); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 1rem; }
-        .series-badge::before { content: "◈"; font-size: 0.9em; opacity: 0.7; }
+        .series-badge::before { content: "♩"; font-size: 0.9em; opacity: 0.7; }
 
         /* SERIES INDEX */
         .series-index { margin-bottom: 1rem; text-align: center; }
@@ -102,11 +103,11 @@
         .series-index-list li a:hover { text-decoration: underline; }
         .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
 
-        .back-to-blog { max-width: 760px; margin: 0 auto; padding: 2rem 2rem 0; }
+        .back-to-blog { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
         .back-to-blog a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sage); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: gap 0.3s; }
         .back-to-blog a:hover { gap: 0.8rem; }
 
-        .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+        .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .article-body p { font-size: 1.05rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 1.6rem; font-weight: 300; }
         .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-primary); margin-top: 3rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
         .article-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 0.8rem; }
@@ -117,11 +118,14 @@
         .article-body em { color: var(--sage-dark); }
         .article-body a { color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s; }
         .article-body a:hover { text-decoration-color: var(--sage); }
+        .article-body img { max-width: 100%; border-radius: 1rem; margin: 2rem 0; }
         .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
         .article-signature { font-style: italic; color: var(--text-light); margin-top: 2.5rem; }
 
         /* NARRATIVE BLOCKS */
         .article-intro { font-style: italic; color: var(--text-light) !important; font-size: 1rem !important; border-left: 3px solid var(--cream-dark); padding-left: 1.2rem; margin-bottom: 2.5rem !important; }
+        .article-intro p { font-style: italic; color: var(--text-light) !important; font-size: 1rem !important; margin-bottom: 1rem; }
+        .article-intro p:last-child { margin-bottom: 0; }
         .emotional-block { background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%); border-radius: 12px; padding: 1.5rem 1.8rem; margin: 1.5rem 0; border-left: 3px solid var(--warm); }
         .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
         .emotional-block p:last-child { margin-bottom: 0; }
@@ -135,13 +139,8 @@
         .scenario-block p { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
         .scenario-block p:last-child { margin-bottom: 0; }
         .scenario-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.6rem; display: block; }
-        .act-tools { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 12px; padding: 2rem 2rem 1rem; margin: 2.5rem 0; }
-        .act-tools-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 1.2rem; }
-        .act-tools ol { padding-left: 1.5rem; margin-bottom: 0; }
-        .act-tools li { font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem; }
-        .act-tools li strong { color: var(--text-primary); display: block; font-size: 0.95rem; }
 
-        .article-nav { max-width: 760px; margin: 0 auto; padding: 2.5rem 2rem 0; border-top: 1px solid var(--cream-dark); }
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 2.5rem 2rem 0; border-top: 1px solid var(--cream-dark); }
         .article-nav-inner { display: flex; justify-content: space-between; gap: 1.5rem; }
         .article-nav-prev, .article-nav-next { display: flex; flex-direction: column; gap: 0.3rem; text-decoration: none; max-width: 46%; }
         .article-nav-next { text-align: right; margin-left: auto; }
@@ -149,14 +148,14 @@
         .article-nav-title { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 400; color: var(--text-secondary); line-height: 1.4; transition: color 0.3s; }
         .article-nav-prev:hover .article-nav-title, .article-nav-next:hover .article-nav-title { color: var(--sage-dark); }
 
-        .article-cta { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
-        .article-cta-box { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 16px; padding: 2.5rem; text-align: center; }
+        .article-cta { max-width: 720px; margin: 0 auto; padding: 0 2rem 5rem; }
+        .article-cta-box { background: var(--cream); border-radius: 1.5rem; padding: 2.5rem; text-align: center; }
         .article-cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.8rem; }
-        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.75rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.7; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
 
-        .share-bar { max-width: 760px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
+        .share-bar { max-width: 720px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
         .share-bar-label { font-size: 0.68rem; font-weight: 500; color: var(--sage); text-transform: uppercase; letter-spacing: 0.13em; flex-shrink: 0; }
         .share-icons { display: flex; align-items: center; gap: 0.85rem; }
         .share-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--sage); text-decoration: none; transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
@@ -169,26 +168,26 @@
         .share-btn-pdf:hover { color: var(--sage-dark); }
 
         .related { background: var(--cream); padding: 4rem 2rem; }
-        .related-inner { max-width: 1000px; margin: 0 auto; }
-        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.8rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
+        .related-inner { max-width: 1100px; margin: 0 auto; }
+        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.5rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
         .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .related-card { background: var(--white); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
-        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
-        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); line-height: 1.4; }
+        .related-card { background: var(--white); border-radius: 1.2rem; padding: 2rem; text-decoration: none; color: inherit; display: block; border: 1px solid transparent; transition: all 0.3s; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: rgba(107,127,94,0.15); }
+        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; }
+        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 400; line-height: 1.4; }
 
         footer { background: var(--sage-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
-        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1rem; color: rgba(255,255,255,0.85); }
         .footer-links { display: flex; gap: 2rem; }
         .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
-        .footer-links a:hover { color: var(--white); }
-        .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.4); max-width: 680px; line-height: 1.6; }
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
+        .footer-legal { width: 100%; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.7; }
 
         .instagram-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 999; width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(188,24,136,0.35); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
         .instagram-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(188,24,136,0.5); }
         .instagram-float svg { width: 28px; height: 28px; stroke: white; fill: none; }
-        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 60px; height: 60px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
         .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
         .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
@@ -211,9 +210,11 @@
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
+            .article-header .article-meta, .article-header .article-category { color: #444 !important; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
+            .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             a { color: #000 !important; text-decoration: none; }
         }
     </style>
@@ -221,19 +222,19 @@
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand"><img src="../../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../como-trabajo.html">How I work</a></li>
-                <li><a href="../sobre-mi.html">About Me</a></li>
+                <li><a href="../sobre-mi.html">About me</a></li>
                 <li><a href="../index.html#servicios">Services</a></li>
-                <li><a href="../../blog/index.html">Blog</a></li>
-                <li><a href="https://www.instagram.com/jjaznarez.psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="https://www.instagram.com/jjaznarez.psychologist/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
                 <li><a href="../../blog/flexibilidad-psicologica-1.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">ES</a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" onclick="toggleNav()">
+            <div class="hamburger" id="hamburger-btn">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -244,19 +245,19 @@
         <div class="article-header-inner">
             <span class="article-category">Living what matters</span>
             <div>
-                <span class="series-badge">Series: Psychological flexibility · Article 1 of 3</span>
+                <span class="series-badge">Series: Flexibilidad psicológica (Psychological flexibility) · Article 1 of 3</span>
             </div>
             <div class="series-index" id="seriesIndex">
                 <button class="series-index-toggle" onclick="toggleSeriesIndex()" aria-expanded="false">
                     See all articles in the series <span class="series-index-arrow">▾</span>
                 </button>
                 <ul class="series-index-list" role="list">
-                    <li class="series-index-current">1. When giving up the struggle to feel better lets you start living better</li>
+                    <li class="series-index-current">1. When giving up trying to feel better lets you start living better</li>
                     <li><a href="flexibilidad-psicologica-2.html">2. When life shrinks and it feels like there's no way out</a></li>
                     <li><a href="flexibilidad-psicologica-3.html">3. When you know it isn't dangerous… yet still can't do it</a></li>
                 </ul>
             </div>
-            <h1>When giving up the struggle to feel better lets you start living better</h1>
+            <h1>When giving up trying to feel better lets you start living better</h1>
             <p class="article-meta">
                 By <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
                 <span class="reading-time">12 min read</span>
@@ -272,11 +273,15 @@
     <!-- BODY -->
     <article class="article-body">
 
-        <p class="article-intro">There is a very specific moment that happens many times a day. You're about to do something important. A conversation. A decision. A step you've been putting off for a while.</p>
-
-        <div class="emotional-block">
+        <div class="article-intro">
+            <p>There is a very specific moment that happens many times a day. You're about to do something important. A conversation. A decision. A step you've been putting off for some time.</p>
             <p>And something shows up inside: discomfort, doubt, a thought: "not now," "better tomorrow."</p>
-            <p>And without realizing it, you've already changed direction. Not because you don't know what to do, but because something inside you has taken over the deciding. That is the point where psychological flexibility is at stake.</p>
+            <p>And without realising it, you've already changed direction. Not because you don't know what to do. But because something inside you has taken over the deciding.</p>
+        </div>
+
+        <div class="infobox">
+            <div class="infobox-label">Central concept</div>
+            <p>That is the point where <strong>psychological flexibility</strong> is at stake: the capacity to sustain or change what you do in line with what matters to you, even when difficult thoughts, emotions or sensations show up.</p>
         </div>
 
         <h2>What you've already tried (and why it isn't enough)</h2>
@@ -288,22 +293,22 @@
         <p>But there's a more important question: what has been happening in the meantime? Not as a reproach. As observation. Are there decisions still waiting? Conversations you haven't had? Moments when relief arrived, but what you wanted to do stayed undone?</p>
 
         <div class="scenario-block">
-            <span class="scenario-label">How it shows up</span>
-            <p>This takes different forms in different people. For some it's work: they know what they have to do, but they put it off indefinitely. For others it's relational: they stay silent when they'd like to speak, or speak when they'd like to stay silent. For others it's the body: they read every physical signal as a threat and organize their day around not getting activated.</p>
-            <p>The content varies. The structure is the same. And recognizing which one is yours is the first real step.</p>
+            <span class="scenario-label">✦ How it shows up</span>
+            <p>This takes different forms in different people. For some it's work: they know what they have to do, but they put it off indefinitely. For others it's relational: they stay silent when they'd like to speak, or speak when they'd like to stay silent. For others it's the body: they read every physical signal as a threat and organise the day around not getting activated.</p>
+            <p>The content varies. The structure is the same. And recognising which one is yours is the first real step.</p>
         </div>
 
-        <p>Not because you lack the capacity. But because distress has become the criterion. And that has a clear consequence: your life starts organizing itself around not feeling bad.</p>
+        <p>This doesn't happen through lack of capacity. It happens because distress has become the criterion. And that has a clear consequence: your life starts organising itself around not feeling bad.</p>
 
         <h2>The point where this stops being a solution</h2>
 
-        <p>What you do to avoid feeling bad is limiting the life you want to live. What's difficult is that many of those strategies are reasonable. But that doesn't stop them, together, from shrinking your life.</p>
+        <p>What you do in order not to feel bad is limiting the life you want to live. What's difficult is that many of those strategies are reasonable. But that doesn't stop them, together, from shrinking your life.</p>
 
-        <p>The more you try not to feel something, the more it shapes what you do. The more you need to be okay before you can act, the less you act. And that leaves you stuck in constant waiting: waiting to be okay in order to start living. That is the turning point.</p>
+        <p>The more you try not to feel something, the more it shapes what you do. The more you need to be okay before you can act, the less you act. And that leaves you stuck in a constant wait: waiting to be okay in order to start living. That is the turning point.</p>
 
         <h2>The hopelessness that opens a path</h2>
 
-        <p>There is a moment when something becomes clear. It isn't pleasant. What you recognize is not that you haven't tried enough. It's that the whole system you've been using — controlling what you feel in order to live — can't give you what you're looking for. Not because you've done it wrong. Because that's not how it works: distress doesn't get controlled enough, and the more you try, the more ground it takes.</p>
+        <p>There is a moment when something becomes evident. It isn't pleasant. What you recognise is not that you haven't tried enough. It's that the whole system you've been using — controlling what you feel in order to live — can't give you what you're looking for. Not because you've done it wrong. But because that's not how it works: distress doesn't get controlled enough, and the more you try, the more ground it takes.</p>
 
         <div class="infobox">
             <div class="infobox-label">Key concept</div>
@@ -312,38 +317,40 @@
 
         <h2>The shift of axis</h2>
 
-        <p>Psychological flexibility isn't about eliminating distress. It's about something more demanding: no longer organizing your behaviour around what you feel and starting to organize it around what matters.</p>
+        <p>Psychological flexibility isn't about eliminating distress. It's about something more demanding: no longer organising your behaviour around what you feel and starting to organise it around what matters.</p>
 
         <p>This doesn't tidy up your mind. It doesn't automatically lower anxiety. But it changes something crucial: you no longer need all of that to disappear in order to act.</p>
 
         <h2>Letting what is there, be</h2>
 
-        <p>Before moving in another direction, there's something prior that many people skip: letting the experience be there.</p>
+        <p>Before you can move in another direction, there is something prior that many people skip: letting the experience be there.</p>
 
-        <p>Not resolving it. Not explaining it. Not rushing it away. Simply noticing that there is anxiety, or sadness, or doubt, and not immediately launching a campaign to make it go away.</p>
+        <p>Not resolving it. Not explaining it. Not rushing it away. Simply noticing that there is anxiety, or sadness, or doubt, and not immediately launching a campaign to make it disappear.</p>
 
-        <div class="emotional-block">
-            <p>This is not resignation, nor tolerance. Tolerating is gritting your teeth and waiting for it to pass. What happens here is different: it is actively making room for what is happening, without that space being a threat. Not because the experience is pleasant, but because fighting against it costs more than letting it affect you.</p>
-            <p>It is a choice, not a surrender. And like every choice, it has to be repeated.</p>
+        <p>This is not resignation, nor is it tolerance. Tolerating is gritting your teeth and waiting for it to pass. What happens here is different: it is actively making room for what is happening, without that space being a threat. Not because the experience is pleasant, but because fighting against it costs more than letting it affect you.</p>
+
+        <div class="infobox">
+            <div class="infobox-label">Key concept</div>
+            <p>In Acceptance and Commitment Therapy, this is what is called <strong>acceptance</strong>: not passivity, but an active choice to make room for what is there so that your energy can go to what matters. It is a choice, not a surrender. And like every choice, it has to be repeated.</p>
         </div>
 
         <p>When that happens — not always, not all at once, but when it happens — the inner experience loses part of its urgency. It doesn't disappear, but it no longer demands to be resolved before you can do anything.</p>
 
         <h2>Relating differently to what you think</h2>
 
-        <p>When a thought shows up like "I can't," "this will go badly," or "better not," you don't need to argue with it. You can notice something different: <em>"I'm having the thought that I can't."</em> The content doesn't change. But something important does: how it acts on you.</p>
+        <p>When a thought shows up like "I can't," "this will go badly" or "better not," you don't need to argue with it. You can notice something different: <em>"I'm having the thought that I can't."</em> The content doesn't change. But something important does: how it acts on you.</p>
 
         <p>Words have a curious property: they can move us even when we know they're only words. It's the same mechanism by which you can salivate thinking about a lemon, or feel vertigo imagining a height. It isn't irrationality. It's how language works in us.</p>
 
-        <p>Thoughts don't move us because they're true. They move us because they're there, active, and we follow them automatically. When you notice that you are <em>having</em> a thought, you introduce a small distance between the thought and what you do with it. It stops working as an automatic command and becomes something you can have without obeying. That space is small. But it's enough to choose.</p>
+        <p>Thoughts don't move us because they're true. They move us because they're there, active, and we follow them automatically. When we follow them this way, without any distance, they act as commands: that is what is called <strong>cognitive fusion</strong>. When you notice that you are <em>having</em> a thought, you introduce a small distance between the thought and what you do with it. It stops working as an automatic command and becomes something you can have without obeying. That movement — creating distance between the thought and the action — is what is called <strong>cognitive defusion</strong>. The space is small. But it's enough to choose.</p>
 
         <p>And if you look more closely, something else happens. Thoughts change. Emotions change. Sensations come and go. But the fact that you can notice all of that — that you're reading this now and being aware of what's happening inside — that doesn't change.</p>
 
-        <p>It isn't a separate entity. It isn't a "true self" hidden behind everything else. It's simply the perspective from which everything is happening: the place from which you can say "this is happening to me" instead of "this is who I am." When that perspective is available, what happens inside stops defining you and becomes something that is happening in you. And from there, choosing is possible even if the experience doesn't change.</p>
+        <p>It isn't a separate entity. It isn't a "true self" hidden behind everything else. It is simply the perspective from which everything is happening. The place from which you can say "this is happening to me" instead of "this is who I am." That perspective is what is called <strong>self-as-context</strong>: not an observer that judges, but the place from which you observe. When that perspective is available, what happens inside stops defining you and becomes something that is happening in you. And from there, choosing is possible even if the experience doesn't change.</p>
 
         <h2>Coming back to the present</h2>
 
-        <p>Without the constant struggle to control the inner world, something we usually avoid appears: the present moment. Not the ideal one. Not the one that should be. This one. With discomfort. With doubts. With activation. And even so, available. This is where you can act. Not when you're ready. Here.</p>
+        <p>Without the constant struggle to control the inner world, something we usually avoid appears: the present moment. Not the ideal one. Not the one that should be. This one. With discomfort. With doubts. With activation. And even so, available. That <strong>present-moment awareness</strong> — being here, with what there is, without needing it to be different — is where you can act. Not when you're ready. Now.</p>
 
         <h2>The question that changes everything</h2>
 
@@ -351,7 +358,7 @@
 
         <div class="infobox">
             <div class="infobox-label">Three levels that matter</div>
-            <p>For those questions to have a concrete answer, it helps to distinguish three things that are often confused. A <strong>value</strong> is a direction: "I want to be someone present in my relationships." A <strong>goal</strong> is a concrete outcome: "I'm going to call that person this week." A <strong>committed action</strong> is what you do right now: "I dial the number."</p>
+            <p>For those questions to have a concrete answer, it helps to distinguish three things that are often confused. A <strong>value</strong> is a chosen direction: "I want to live my relationship here and now." It isn't a preference or a wish: it is a direction that still makes sense even if you don't obtain the result. A <strong>goal</strong> is a concrete outcome: "I'm going to call that person this week." A <strong>committed action</strong> is what you do right now: "I dial the number."</p>
             <p>Without the direction, the action makes no sense. Without the action, the direction is just an idea. The three levels matter, and all three are yours.</p>
         </div>
 
@@ -364,29 +371,27 @@
         <h2>A minimal example</h2>
 
         <div class="scenario-block">
-            <span class="scenario-label">In practice</span>
-            <p>You have to make a decision you've been avoiding for a while. Anxiety shows up. Doubts. The urge to postpone.</p>
+            <span class="scenario-label">✦ In practice</span>
+            <p>You have to make a decision you've been avoiding for some time. Anxiety shows up. Doubts. The urge to postpone.</p>
             <p><strong>Before:</strong> you avoid, you wait.</p>
-            <p><strong>Now:</strong> you notice there is anxiety; you notice you are having the thought that this isn't the moment; you let that be, without turning it into an order; and you ask: "If this weren't deciding for me, what would I do now?" And you take a step.</p>
+            <p><strong>Now:</strong> you notice there is anxiety; you notice you are having the thought that this isn't the moment; you let that be without turning it into a command; and you ask: "If this weren't deciding for me, what would I do now?" And you take a step.</p>
         </div>
 
         <p>Small, yes. But not isolated. Because psychological flexibility is not defined by single decisions, but by the repetition of choices in a direction. Today you make that call. Tomorrow you hold that conversation. Another day you try again. Not because it's easy, but because it matters. That's what turns an action into commitment: not what you do once, but what you keep doing when it isn't easy.</p>
 
         <h2>Closing</h2>
 
-        <p>Psychological flexibility doesn't eliminate distress. Nor does it promise that it will stop showing up or lose all its intensity. What changes is its function: instead of acting as a stop sign, it can become a sign that you're doing something that matters. Distress is still there. But it's no longer the referee.</p>
+        <p>Psychological flexibility doesn't eliminate distress. Nor does it promise that it will stop showing up or lose all its intensity. What changes is its function: instead of acting as a stop sign, it can become a sign that you're doing something that matters. Distress is still there. But it is no longer the referee.</p>
 
-        <p>When distress stops being the referee, life stops organizing itself around avoiding what hurts and starts organizing itself around what matters.</p>
+        <p>When distress stops being the referee, life stops organising itself around avoiding what hurts and starts organising itself around what matters. And that is the point where change stops being an idea and starts being a way of living.</p>
 
         <div class="closing-block">
-            <p>It is built with these movements, again and again: <strong>notice · let be · return · choose · act</strong>.<br><br>Not always in that order. What matters isn't the sequence. It's that those movements keep appearing, in one form or another, in the direction of what matters. Not as perfection, but as practice. It isn't easier. But it is more livable.</p>
+            <p>It is built with these movements, again and again: <strong>notice · let be · return · choose · act</strong>.<br><br>Not always in that order. What matters isn't the sequence. It is that those movements keep appearing, in one form or another, in the direction of what matters. Not as perfection, but as practice. It isn't easier. But it is more livable.</p>
         </div>
-
-        <p>And that is the point where change stops being an idea and starts being a way of living.</p>
 
         <h2>If you want to go further</h2>
 
-        <p>This text describes the way of working of Acceptance and Commitment Therapy. If you recognize something of your own experience in what you've read, the next step isn't to read more. It's to do the work with someone who can support you through it.</p>
+        <p>This text describes the way of working of <strong>Acceptance and Commitment Therapy</strong> (ACT), an approach within contextual psychology. If you recognise something of your own experience in what you've read, the next step isn't to read more. It's to do the work with someone who can support you through it.</p>
 
         <p>Not to feel better before living. But to start living, even if you don't quite feel okay yet.</p>
 
@@ -429,9 +434,9 @@
     <!-- CTA -->
     <div class="article-cta">
         <div class="article-cta-box">
-            <h3>Do you recognize something of this in your own experience?</h3>
+            <h3>Do you recognise something of this in your own experience?</h3>
             <p>The next step isn't to read more. It's to do the work with someone who can support you. If you'd like to explore whether this approach fits you, write to me with no commitment.</p>
-            <a href="https://wa.me/34XXXXXXXXX?text=Hi%2C+I+read+the+article+on+psychological+flexibility+and+would+like+to+know+more." class="btn-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank" rel="noopener">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Message me on WhatsApp
             </a>
@@ -451,9 +456,10 @@
                     <div class="related-card-category">Living what matters</div>
                     <h3>When you know it isn't dangerous… yet still can't do it</h3>
                 </a>
-                <a href="aceptamos-y-no-nos-resignamos.html" class="related-card">
+                <!-- TODO: update link when EN version exists -->
+                <a href="../../blog/aceptamos-y-no-nos-resignamos.html" class="related-card">
                     <div class="related-card-category">Living what matters</div>
-                    <h3>We accept and we don't resign ourselves</h3>
+                    <h3>We accept, we don't resign ourselves</h3>
                 </a>
             </div>
         </div>
@@ -462,41 +468,53 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-inner">
-            <div class="footer-brand">José Javier Aznárez</div>
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
             <div class="footer-links">
-                <a href="../index.html#sobre-mi">About Me</a>
-                <a href="../../blog/index.html">Blog</a>
-                <a href="../index.html#contacto">Contact</a>
+                <a href="../aviso-legal.html">Legal Notice</a>
+                <a href="../aviso-legal.html#politica-privacidad">Privacy Policy</a>
+                <a href="../consentimiento-tarifas.html">Consent and Fees</a>
             </div>
-            <p class="footer-legal">Contextual Psychologist. The information on this blog is for general educational purposes and does not constitute clinical advice or a therapeutic relationship. If you need psychological care, consult a professional.</p>
+            <div class="footer-legal">
+                My services do not constitute clinical or healthcare services, and do not include diagnosis or treatment of psychological disorders or pathologies, in accordance with Spanish Law 44/2003 on the Regulation of Healthcare Professions and the Code of Ethics of the Psychologist in Spain.
+            </div>
         </div>
     </footer>
 
-    <!-- FLOATS -->
-    <a href="https://www.instagram.com/josejavieraznarez/" target="_blank" rel="noopener" class="instagram-float" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    <!-- FLOATING INSTAGRAM -->
+    <a href="https://www.instagram.com/jjaznarez.psychologist/" class="instagram-float" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
-    <a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        function toggleNav() {
-            document.getElementById('navLinks').classList.toggle('open');
-        }
-        document.addEventListener('click', function(e) {
-            const nav = document.getElementById('navLinks');
-            const hamburger = document.getElementById('hamburger');
-            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-                nav.classList.remove('open');
-            }
-        });
         function toggleSeriesIndex() {
             const idx = document.getElementById('seriesIndex');
             const btn = idx.querySelector('.series-index-toggle');
             idx.classList.toggle('open');
             btn.setAttribute('aria-expanded', idx.classList.contains('open'));
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('hamburger-btn');
+            var navLinks = document.getElementById('navLinks');
+            if (!btn || !navLinks) return;
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('open');
+            });
+            document.addEventListener('click', function(e) {
+                if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+            document.addEventListener('touchstart', function(e) {
+                if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
         (function(){
             var url = window.location.href;
             var title = document.title;
