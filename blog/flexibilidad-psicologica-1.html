@@ -77,17 +77,18 @@
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
         .hamburger span { width: 24px; height: 2px; background: var(--text-primary); transition: 0.3s; }
 
-        .article-header { padding: 8rem 2rem 4rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%); text-align: center; }
-        .article-header-inner { max-width: 760px; margin: 0 auto; }
+        .article-header { padding: 8rem 2rem 3rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%); text-align: center; }
+        .article-header-inner { max-width: 720px; margin: 0 auto; }
         .article-category { display: inline-block; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); background: rgba(107,127,94,0.1); padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.2rem; }
         .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 300; line-height: 1.3; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 1.2rem; }
         .article-meta { font-size: 0.88rem; color: var(--text-light); display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .article-meta a { color: var(--sage); text-decoration: none; }
-        .reading-time::before { content: '·'; color: var(--warm); margin-right: 0.35rem; }
+        .reading-time { font-size: 0.82rem; color: var(--text-light); display: inline-flex; align-items: center; gap: 0.35rem; }
+        .reading-time::before { content: '·'; color: var(--warm); }
 
         /* SERIES BADGE */
         .series-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(107,127,94,0.12); color: var(--sage-dark); border: 1px solid rgba(107,127,94,0.25); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 1rem; }
-        .series-badge::before { content: "◈"; font-size: 0.9em; opacity: 0.7; }
+        .series-badge::before { content: "♩"; font-size: 0.9em; opacity: 0.7; }
 
         /* SERIES INDEX */
         .series-index { margin-bottom: 1rem; text-align: center; }
@@ -102,11 +103,11 @@
         .series-index-list li a:hover { text-decoration: underline; }
         .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
 
-        .back-to-blog { max-width: 760px; margin: 0 auto; padding: 2rem 2rem 0; }
+        .back-to-blog { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
         .back-to-blog a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sage); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: gap 0.3s; }
         .back-to-blog a:hover { gap: 0.8rem; }
 
-        .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+        .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .article-body p { font-size: 1.05rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 1.6rem; font-weight: 300; }
         .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-primary); margin-top: 3rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
         .article-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 0.8rem; }
@@ -117,11 +118,14 @@
         .article-body em { color: var(--sage-dark); }
         .article-body a { color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s; }
         .article-body a:hover { text-decoration-color: var(--sage); }
+        .article-body img { max-width: 100%; border-radius: 1rem; margin: 2rem 0; }
         .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
         .article-signature { font-style: italic; color: var(--text-light); margin-top: 2.5rem; }
 
         /* BLOQUES NARRATIVOS */
         .article-intro { font-style: italic; color: var(--text-light) !important; font-size: 1rem !important; border-left: 3px solid var(--cream-dark); padding-left: 1.2rem; margin-bottom: 2.5rem !important; }
+        .article-intro p { font-style: italic; color: var(--text-light) !important; font-size: 1rem !important; margin-bottom: 1rem; }
+        .article-intro p:last-child { margin-bottom: 0; }
         .emotional-block { background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%); border-radius: 12px; padding: 1.5rem 1.8rem; margin: 1.5rem 0; border-left: 3px solid var(--warm); }
         .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
         .emotional-block p:last-child { margin-bottom: 0; }
@@ -135,13 +139,8 @@
         .scenario-block p { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
         .scenario-block p:last-child { margin-bottom: 0; }
         .scenario-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.6rem; display: block; }
-        .act-tools { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 12px; padding: 2rem 2rem 1rem; margin: 2.5rem 0; }
-        .act-tools-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 1.2rem; }
-        .act-tools ol { padding-left: 1.5rem; margin-bottom: 0; }
-        .act-tools li { font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem; }
-        .act-tools li strong { color: var(--text-primary); display: block; font-size: 0.95rem; }
 
-        .article-nav { max-width: 760px; margin: 0 auto; padding: 2.5rem 2rem 0; border-top: 1px solid var(--cream-dark); }
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 2.5rem 2rem 0; border-top: 1px solid var(--cream-dark); }
         .article-nav-inner { display: flex; justify-content: space-between; gap: 1.5rem; }
         .article-nav-prev, .article-nav-next { display: flex; flex-direction: column; gap: 0.3rem; text-decoration: none; max-width: 46%; }
         .article-nav-next { text-align: right; margin-left: auto; }
@@ -149,14 +148,14 @@
         .article-nav-title { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 400; color: var(--text-secondary); line-height: 1.4; transition: color 0.3s; }
         .article-nav-prev:hover .article-nav-title, .article-nav-next:hover .article-nav-title { color: var(--sage-dark); }
 
-        .article-cta { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
-        .article-cta-box { background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: 16px; padding: 2.5rem; text-align: center; }
+        .article-cta { max-width: 720px; margin: 0 auto; padding: 0 2rem 5rem; }
+        .article-cta-box { background: var(--cream); border-radius: 1.5rem; padding: 2.5rem; text-align: center; }
         .article-cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.8rem; }
-        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.75rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.7; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
 
-        .share-bar { max-width: 760px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
+        .share-bar { max-width: 720px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
         .share-bar-label { font-size: 0.68rem; font-weight: 500; color: var(--sage); text-transform: uppercase; letter-spacing: 0.13em; flex-shrink: 0; }
         .share-icons { display: flex; align-items: center; gap: 0.85rem; }
         .share-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--sage); text-decoration: none; transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
@@ -169,26 +168,26 @@
         .share-btn-pdf:hover { color: var(--sage-dark); }
 
         .related { background: var(--cream); padding: 4rem 2rem; }
-        .related-inner { max-width: 1000px; margin: 0 auto; }
-        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.8rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
+        .related-inner { max-width: 1100px; margin: 0 auto; }
+        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.5rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
         .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .related-card { background: var(--white); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
-        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
-        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); line-height: 1.4; }
+        .related-card { background: var(--white); border-radius: 1.2rem; padding: 2rem; text-decoration: none; color: inherit; display: block; border: 1px solid transparent; transition: all 0.3s; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: rgba(107,127,94,0.15); }
+        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; }
+        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 400; line-height: 1.4; }
 
         footer { background: var(--sage-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
-        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1rem; color: rgba(255,255,255,0.85); }
         .footer-links { display: flex; gap: 2rem; }
         .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
-        .footer-links a:hover { color: var(--white); }
-        .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.4); max-width: 680px; line-height: 1.6; }
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
+        .footer-legal { width: 100%; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.7; }
 
         .instagram-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 999; width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(188,24,136,0.35); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
         .instagram-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(188,24,136,0.5); }
         .instagram-float svg { width: 28px; height: 28px; stroke: white; fill: none; }
-        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 60px; height: 60px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
         .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
         .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
@@ -211,9 +210,11 @@
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
+            .article-header .article-meta, .article-header .article-category { color: #444 !important; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
+            .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             a { color: #000 !important; text-decoration: none; }
         }
     </style>
@@ -221,7 +222,7 @@
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links" id="navLinks">
@@ -233,7 +234,7 @@
                 <li><a href="../en/blog/flexibilidad-psicologica-1.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">EN</a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" onclick="toggleNav()">
+            <div class="hamburger" id="hamburger-btn">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -272,11 +273,15 @@
     <!-- BODY -->
     <article class="article-body">
 
-        <p class="article-intro">Hay un momento muy concreto que ocurre muchas veces al día. Estás a punto de hacer algo importante. Una conversación. Una decisión. Un paso que llevas tiempo evitando.</p>
-
-        <div class="emotional-block">
+        <div class="article-intro">
+            <p>Hay un momento muy concreto que ocurre muchas veces al día. Estás a punto de hacer algo importante. Una conversación. Una decisión. Un paso que llevas tiempo evitando.</p>
             <p>Y aparece algo dentro: incomodidad, duda, un pensamiento: «no es el momento», «mejor mañana».</p>
-            <p>Y sin darte cuenta, ya has cambiado de dirección. No porque no sepas qué hacer. Sino porque algo en tu interior ha pasado a decidir por ti. Ese es el punto donde se juega la flexibilidad psicológica.</p>
+            <p>Y sin darte cuenta, ya has cambiado de dirección. No porque no sepas qué hacer. Sino porque algo en tu interior ha pasado a decidir por ti.</p>
+        </div>
+
+        <div class="infobox">
+            <div class="infobox-label">Concepto central</div>
+            <p>Ese es el punto donde se juega la <strong>flexibilidad psicológica</strong>: la capacidad de mantener o cambiar lo que haces en función de lo que te importa, incluso cuando aparecen pensamientos, emociones o sensaciones difíciles.</p>
         </div>
 
         <h2>Lo que ya has intentado (y por qué no basta)</h2>
@@ -288,12 +293,12 @@
         <p>Pero hay una pregunta más importante: ¿qué ha ocurrido mientras tanto? No como reproche. Como observación. ¿Hay decisiones que siguen esperando? ¿Conversaciones que no has tenido? ¿Momentos en los que el alivio llegó, pero lo que querías hacer se quedó sin hacer?</p>
 
         <div class="scenario-block">
-            <span class="scenario-label">Cómo se manifiesta</span>
-            <p>Esto toma formas distintas en personas distintas. Para algunos es el trabajo: saben lo que tienen que hacer, pero lo posponen indefinidamente. Para otros es lo relacional: guardan silencio cuando querrían hablar, o hablan cuando querrían callarse. Para otros es el cuerpo: interpretan cada señal física como una amenaza y organizan el día en torno a no activarse.</p>
+            <span class="scenario-label">✦ Cómo se manifiesta</span>
+            <p>Esto toma formas distintas en personas distintas. Para algunos es en el trabajo: saben lo que tienen que hacer, pero lo posponen indefinidamente. Para otros es en lo relacional: guardan silencio cuando querrían hablar, o hablan cuando querrían callarse. Para otros es en el cuerpo: interpretan cada señal física como una amenaza y organizan el día en torno a no activarse.</p>
             <p>El contenido varía. La estructura es la misma. Y reconocer cuál es la tuya es el primer paso real.</p>
         </div>
 
-        <p>No por falta de capacidad. Sino porque el malestar ha pasado a ser el criterio. Y eso tiene una consecuencia clara: tu vida empieza a organizarse en torno a no sentirte mal.</p>
+        <p>Esto no ocurre por falta de capacidad. Ocurre porque el malestar ha pasado a ser el criterio. Y eso tiene una consecuencia clara: tu vida empieza a organizarse en torno a no sentirte mal.</p>
 
         <h2>El punto en el que esto deja de ser una solución</h2>
 
@@ -322,9 +327,11 @@
 
         <p>No resolverla. No explicarla. No acelerarla hacia fuera. Simplemente notar que hay ansiedad, o tristeza, o duda, y no emprender inmediatamente una campaña para que desaparezca.</p>
 
-        <div class="emotional-block">
-            <p>Esto no es resignación, ni tampoco tolerancia. Tolerar es aguantar esperando que pase. Lo que aquí ocurre es distinto: es hacer sitio de forma activa a lo que ocurre, sin que ese espacio sea una amenaza. No porque la experiencia sea agradable, sino porque luchar contra ella tiene un coste mayor que dejarte afectar por ella.</p>
-            <p>Es una elección, no una rendición. Y como toda elección, requiere repetirse.</p>
+        <p>Esto no es resignación, ni tampoco tolerancia. Tolerar es aguantar esperando que pase. Lo que aquí ocurre es distinto: es hacer sitio de forma activa a lo que ocurre, sin que ese espacio sea una amenaza. No porque la experiencia sea agradable, sino porque luchar contra ella tiene un coste mayor que dejarte afectar por ella.</p>
+
+        <div class="infobox">
+            <div class="infobox-label">Concepto clave</div>
+            <p>En la terapia de aceptación y compromiso, esto es lo que se llama <strong>aceptación</strong>: no pasividad, sino una elección activa de hacer sitio a lo que hay para poder dedicar la energía a lo que importa. Es una elección, no una rendición. Y como toda elección, requiere repetirse.</p>
         </div>
 
         <p>Cuando eso ocurre —no siempre, no de golpe, pero cuando ocurre— la experiencia interna pierde parte de su urgencia. No desaparece, pero ya no exige ser resuelta antes de que puedas hacer nada.</p>
@@ -335,15 +342,15 @@
 
         <p>Las palabras tienen una propiedad curiosa: pueden movernos aunque sepamos que son solo palabras. Es el mismo mecanismo por el que puedes salivar pensando en un limón, o sentir vértigo imaginando una altura. No es irracionalidad. Es cómo funciona el lenguaje en nosotros.</p>
 
-        <p>Los pensamientos no nos mueven porque sean verdad. Nos mueven porque están ahí, activos, y los seguimos de forma automática. Cuando notas que estás <em>teniendo</em> un pensamiento, introduces una pequeña distancia entre el pensamiento y lo que haces con él. Deja de funcionar como una orden automática y pasa a ser algo que puedes tener sin obedecer. Ese espacio es pequeño. Pero es suficiente para elegir.</p>
+        <p>Los pensamientos no nos mueven porque sean verdad. Nos mueven porque están ahí, activos, y los seguimos de forma automática. Cuando los seguimos así, sin distancia, actúan como órdenes: eso es lo que se llama <strong>fusión</strong>. Cuando notas que estás <em>teniendo</em> un pensamiento, introduces una pequeña distancia entre el pensamiento y lo que haces con él. Deja de funcionar como una orden automática y pasa a ser algo que puedes tener sin obedecer. Ese movimiento —crear distancia entre el pensamiento y la acción— es lo que se llama <strong>defusión</strong>. El espacio es pequeño. Pero es suficiente para elegir.</p>
 
         <p>Y si lo observas con más detalle, ocurre algo más. Los pensamientos cambian. Las emociones cambian. Las sensaciones van y vienen. Pero el hecho de que puedas notar todo eso —de que estés leyendo esto ahora y siendo consciente de lo que ocurre dentro— eso no cambia.</p>
 
-        <p>No es una entidad separada. No es un «yo verdadero» escondido detrás de todo lo demás. Es simplemente la perspectiva desde la que ocurre todo: el lugar desde el que puedes decir «esto me está pasando» en lugar de «esto soy yo». Cuando esa perspectiva está disponible, lo que ocurre dentro deja de definirte y pasa a ser algo que está ocurriendo en ti. Y desde ahí, elegir es posible aunque la experiencia no cambie.</p>
+        <p>No es una entidad separada. No es un «yo verdadero» escondido detrás de todo lo demás. Es simplemente la perspectiva desde la que ocurre todo. El lugar desde el que puedes decir «esto me está pasando» en lugar de «esto soy yo». Esa perspectiva es lo que se llama <strong>yo como contexto</strong>: no un observador que juzga, sino el lugar desde el que observas. Cuando esa perspectiva está disponible, lo que ocurre dentro deja de definirte y pasa a ser algo que está ocurriendo en ti. Y desde ahí, elegir es posible aunque la experiencia no cambie.</p>
 
         <h2>Volver al presente</h2>
 
-        <p>Sin la lucha constante por controlar lo interno, aparece algo que solemos evitar: el momento presente. No el ideal. No el que debería ser. Este. Con incomodidad. Con dudas. Con activación. Y aun así, disponible. Aquí es donde puedes actuar. No cuando estés preparado. Aquí.</p>
+        <p>Sin la lucha constante por controlar lo interno, aparece algo que solemos evitar: el momento presente. No el ideal. No el que debería ser. Este. Con incomodidad. Con dudas. Con activación. Y aun así, disponible. Ese <strong>contacto con el momento presente</strong> —estar aquí, en lo que hay, sin necesitar que sea distinto— es donde puedes actuar. No cuando estés preparado. Ahora.</p>
 
         <h2>La pregunta que cambia todo</h2>
 
@@ -351,7 +358,7 @@
 
         <div class="infobox">
             <div class="infobox-label">Tres niveles que importan</div>
-            <p>Para que esas preguntas tengan respuesta concreta, conviene distinguir tres cosas que a menudo se confunden. Un <strong>valor</strong> es una dirección: «quiero ser alguien presente en mis relaciones». Una <strong>meta</strong> es un resultado concreto: «voy a llamar a esa persona esta semana». Una <strong>acción comprometida</strong> es lo que haces ahora mismo: «marco el número».</p>
+            <p>Para que esas preguntas tengan respuesta concreta, conviene distinguir tres cosas que a menudo se confunden. Un <strong>valor</strong> es una dirección elegida: «quiero vivir aquí y ahora mi relación». No es una preferencia ni un deseo: es una dirección que sigue teniendo sentido aunque no obtengas el resultado. Una <strong>meta</strong> es un resultado concreto: «voy a llamar a esa persona esta semana». Una <strong>acción comprometida</strong> es lo que haces ahora mismo: «marco el número».</p>
             <p>Sin la dirección, la acción no tiene sentido. Sin la acción, la dirección es solo una idea. Los tres niveles importan, y los tres son tuyos.</p>
         </div>
 
@@ -364,7 +371,7 @@
         <h2>Un ejemplo mínimo</h2>
 
         <div class="scenario-block">
-            <span class="scenario-label">En la práctica</span>
+            <span class="scenario-label">✦ En la práctica</span>
             <p>Tienes que tomar una decisión que llevas tiempo evitando. Aparece ansiedad. Dudas. Ganas de posponer.</p>
             <p><strong>Antes:</strong> evitas, esperas.</p>
             <p><strong>Ahora:</strong> notas que hay ansiedad; notas que estás teniendo el pensamiento de que no es el momento; dejas que eso esté sin convertirlo en una orden; y preguntas: «Si esto no decidiera por mí, ¿qué haría ahora?». Y das un paso.</p>
@@ -376,17 +383,15 @@
 
         <p>La flexibilidad psicológica no elimina el malestar. Tampoco promete que deje de aparecer ni que pierda toda su intensidad. Lo que cambia es su función: en lugar de actuar como una señal de stop, puede convertirse en una señal de que estás haciendo algo que importa. El malestar sigue ahí. Pero ya no es el árbitro.</p>
 
-        <p>Cuando el malestar deja de ser el árbitro, la vida deja de organizarse en torno a evitar lo que duele y empieza a organizarse en torno a lo que importa.</p>
+        <p>Cuando el malestar deja de ser el árbitro, la vida deja de organizarse en torno a evitar lo que duele y empieza a organizarse en torno a lo que importa. Y ese es el punto en el que el cambio deja de ser una idea y empieza a ser una forma de vivir.</p>
 
         <div class="closing-block">
             <p>Se construye con estos movimientos, una y otra vez: <strong>notar · dejar estar · volver · elegir · actuar</strong>.<br><br>No siempre en ese orden. Lo que importa no es la secuencia. Es que esos movimientos vayan apareciendo, de una forma u otra, en la dirección de lo que importa. No como perfección, sino como práctica. No es más fácil. Pero es más vivible.</p>
         </div>
 
-        <p>Y ese es el punto en el que el cambio deja de ser una idea y empieza a ser una forma de vivir.</p>
-
         <h2>Si quieres ir más lejos</h2>
 
-        <p>Este texto describe la forma de trabajar de la terapia de aceptación y compromiso. Si reconoces en lo que has leído algo de tu propia experiencia, el siguiente paso no es leer más. Es hacer el trabajo con alguien que pueda acompañarte en él.</p>
+        <p>Este texto describe la forma de trabajar de la <strong>terapia de aceptación y compromiso</strong> (ACT), un enfoque dentro de la psicología contextual. Si reconoces en lo que has leído algo de tu propia experiencia, el siguiente paso no es leer más. Es hacer el trabajo con alguien que pueda acompañarte en él.</p>
 
         <p>No para sentirte mejor antes de vivir. Sino para empezar a vivir, aunque todavía no te sientas del todo bien.</p>
 
@@ -431,7 +436,7 @@
         <div class="article-cta-box">
             <h3>¿Reconoces algo de esto en tu propia experiencia?</h3>
             <p>El siguiente paso no es leer más. Es hacer el trabajo con alguien que pueda acompañarte. Si quieres explorar si este enfoque encaja contigo, escríbeme sin compromiso.</p>
-            <a href="https://wa.me/34XXXXXXXXX?text=Hola%2C+he+leído+el+artículo+sobre+flexibilidad+psicológica+y+me+gustaría+saber+más." class="btn-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank" rel="noopener">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Escríbeme por WhatsApp
             </a>
@@ -462,41 +467,52 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-inner">
-            <div class="footer-brand">José Javier Aznárez</div>
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
             <div class="footer-links">
-                <a href="../index.html#sobre-mi">Sobre mí</a>
-                <a href="index.html">Blog</a>
-                <a href="../index.html#contacto">Contacto</a>
+                <a href="../aviso-legal.html">Aviso Legal</a>
+                <a href="../aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="../consentimiento-tarifas.html">Consentimiento y Tarifas</a>
             </div>
-            <p class="footer-legal">Psicólogo Contextual. La información de este blog tiene finalidad divulgativa y no constituye consejo clínico ni relación terapéutica. Si necesitas atención psicológica, consulta con un profesional.</p>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
         </div>
     </footer>
 
     <!-- FLOATS -->
-    <a href="https://www.instagram.com/josejavieraznarez/" target="_blank" rel="noopener" class="instagram-float" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+    <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" rel="noopener" aria-label="Seguir en Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
-    <a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        function toggleNav() {
-            document.getElementById('navLinks').classList.toggle('open');
-        }
-        document.addEventListener('click', function(e) {
-            const nav = document.getElementById('navLinks');
-            const hamburger = document.getElementById('hamburger');
-            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-                nav.classList.remove('open');
-            }
-        });
         function toggleSeriesIndex() {
             const idx = document.getElementById('seriesIndex');
             const btn = idx.querySelector('.series-index-toggle');
             idx.classList.toggle('open');
             btn.setAttribute('aria-expanded', idx.classList.contains('open'));
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('hamburger-btn');
+            var navLinks = document.getElementById('navLinks');
+            if (!btn || !navLinks) return;
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('open');
+            });
+            document.addEventListener('click', function(e) {
+                if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+            document.addEventListener('touchstart', function(e) {
+                if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
         (function(){
             var url = window.location.href;
             var title = document.title;
