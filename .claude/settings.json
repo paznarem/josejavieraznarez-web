@@ -7,7 +7,33 @@
       "Bash(python generate_sitemap.py)",
       "Bash(find /workspaces/josejavieraznarez-web -name \"*.html\" -exec grep -l \"jose_javier_aznarez_psicologo\" {} \\\\;)",
       "Bash(find /workspaces/josejavieraznarez-web -name \"*.html\" -exec sed -i 's|https://www.instagram.com/jose_javier_aznarez_psicologo/|https://www.instagram.com/jjaznarez.psicologo/|g' {} \\\\;)",
-      "Bash(python3 -c ':*)"
+      "Bash(python3 -c ':*)",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C /workspaces/josejavieraznarez-web diff blog/flexibilidad-psicologica-2.html)",
+      "Bash(git -C /workspaces/josejavieraznarez-web add blog/flexibilidad-psicologica-2.html)",
+      "Bash(git -C /workspaces/josejavieraznarez-web commit -m ' *)",
+      "Bash(git -C /workspaces/josejavieraznarez-web status --short)",
+      "Bash(git -C /workspaces/josejavieraznarez-web status --short en/blog/flexibilidad-psicologica-2.html blog/flexibilidad-psicologica-2.html)",
+      "Bash(git -C /workspaces/josejavieraznarez-web add en/blog/flexibilidad-psicologica-2.html)",
+      "Bash(git -C /workspaces/josejavieraznarez-web push)",
+      "Bash(git -C /workspaces/josejavieraznarez-web log --oneline -5)",
+      "Bash(git -C /workspaces/josejavieraznarez-web status --short -b)",
+      "Bash(python3 /tmp/apply_legibility.py /tmp/test-article.html)",
+      "Bash(python3 /tmp/apply_legibility.py /tmp/test-article2.html)",
+      "Bash(python3 /tmp/apply_legibility.py /workspaces/josejavieraznarez-web/blog-template.html)",
+      "Bash(xargs python3 *)",
+      "Bash(tee /tmp/blog-output.log)",
+      "Bash(pkill -9 -f apply_legibility.py)",
+      "Bash(git checkout *)",
+      "Bash(timeout 10 python3 /tmp/apply_legibility.py /tmp/test1.html /tmp/test2.html /tmp/test3.html)",
+      "Bash(timeout 10 python3 /tmp/apply_legibility.py /tmp/test2.html)",
+      "Bash(timeout 30 python3 /tmp/apply_legibility.py /workspaces/josejavieraznarez-web/index.html /workspaces/josejavieraznarez-web/sobre-mi.html /workspaces/josejavieraznarez-web/como-trabajo.html /workspaces/josejavieraznarez-web/blog/index.html)",
+      "Bash(awk -F: '{print $3}')",
+      "Bash(awk '{print $2}')",
+      "Bash(awk '{print $1}')"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   },
   "hooks": {
