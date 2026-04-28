@@ -38,7 +38,7 @@
             --text-primary: #2C2C2C;
             --text-secondary: #5A5A5A;
             --text-light: #8A8A8A;
-            --white: #F9F5F1;
+            --white: #FDFBF7;
             --whatsapp: #25D366;
         }
 
@@ -247,11 +247,11 @@
         }
 
         .content-block p {
-            font-size: 1rem;
-            color: var(--text-secondary);
+            font-size: 1.05rem;
+            color: #3D3D3D;
             font-weight: 400;
             margin-bottom: 1.2rem;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .content-block p:last-child {
@@ -572,27 +572,15 @@
             clear: both;
         }
 
-        .img-float-right {
-            float: right;
-            max-width: 340px;
-            width: 100%;
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            display: block;
-            object-fit: cover;
-        }
-
+        .img-float-right,
         .img-float-left {
-            float: left;
-            max-width: 340px;
+            float: none;
+            display: block;
             width: 100%;
-            margin-right: 2rem;
-            margin-bottom: 1rem;
+            max-width: 100%;
+            margin: 2rem 0;
             border-radius: 1rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            display: block;
             object-fit: cover;
         }
 
@@ -638,18 +626,6 @@
 
             .trayectoria ul {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .img-float-right,
-            .img-float-left {
-                float: none;
-                max-width: 100% !important;
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-                margin-bottom: 1.5rem;
             }
         }
 
@@ -888,10 +864,11 @@
         });
 
         // Reveal on scroll
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
