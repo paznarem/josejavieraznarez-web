@@ -30,8 +30,8 @@
             --sage: #6B7F5E;
             --sage-light: #8A9E7C;
             --sage-dark: #4A5B3F;
-            --cream: #F7F3ED;
-            --cream-dark: #EDE7DD;
+            --cream: #F0EBE3;
+            --cream-dark: #E2D9CE;
             --warm: #C4A882;
             --warm-light: #D4BFA3;
             --terracotta: #B8705A;
@@ -219,7 +219,7 @@
             margin: 0 auto;
             padding: 5rem 2.5rem 4rem;
             background: var(--cream);
-            border-radius: 12px;
+            border-radius: 0 0 12px 12px;
         }
 
         .content-block {
@@ -936,10 +936,7 @@
             <p>Si tu situación requiere atención clínica o sanitaria, te lo diré con honestidad y te orientaré hacia el profesional adecuado.</p>
         </div>
 
-    </main>
-
-    <!-- EXPANDIBLE: QUÉ OCURRE EN SESIÓN -->
-    <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem 3rem;">
+        <!-- EXPANDIBLE: QUÉ OCURRE EN SESIÓN -->
         <div class="sesion-expand reveal">
             <button class="sesion-expand-btn" onclick="toggleSesion(this)" aria-expanded="false">
                 Ver en detalle qué ocurre en cada sesión
@@ -953,7 +950,8 @@
                 <a href="blog/que-ocurre-en-cada-sesion.html" class="sesion-expand-link">Lee el artículo completo →</a>
             </div>
         </div>
-    </div>
+
+    </main>
 
     <!-- CTA -->
     <section class="cta-section">
