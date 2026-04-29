@@ -138,9 +138,9 @@
         .nav-links a {
             text-decoration: none;
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: 0.93rem;
             font-weight: 400;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.02em;
             transition: color 0.3s;
         }
 
@@ -484,6 +484,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
+            align-items: stretch;
         }
 
         .identify-card {
@@ -493,6 +494,8 @@
             text-align: left;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
         }
 
         .identify-card:hover {
@@ -526,6 +529,7 @@
             color: var(--text-secondary);
             line-height: 1.7;
             font-weight: 300;
+            flex-grow: 1;
         }
 
         /* ==================== METHOD ==================== */
@@ -607,9 +611,9 @@
 
         .method-item h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             font-weight: 400;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.7rem;
         }
 
         .method-item p {

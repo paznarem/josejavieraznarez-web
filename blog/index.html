@@ -103,9 +103,9 @@
         .nav-links a {
             text-decoration: none;
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: 0.93rem;
             font-weight: 400;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.02em;
             transition: color 0.3s;
         }
 
@@ -903,22 +903,66 @@
             top: 4.5rem;
             right: 1.5rem;
             z-index: 1001;
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            border: 1px solid var(--cream-dark);
-            background: var(--white);
+            border: 1.5px solid var(--cream-dark);
+            background: var(--cream);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.3s, border-color 0.3s, opacity 0.3s;
-            opacity: 0.7;
+            transition: background 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s;
+            opacity: 0.85;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .dark-toggle:hover { opacity: 1; border-color: var(--sage-light); }
-        .dark-toggle .moon { display: none; }
-        .dark-toggle .sun { display: block; }
+        .dark-toggle:hover {
+            opacity: 1;
+            border-color: var(--sage);
+            transform: scale(1.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .dark-toggle .moon { display: none; color: var(--sage); }
+        .dark-toggle .sun { display: block; color: var(--sage); }
+
+        .dark-toggle-tooltip {
+            position: fixed;
+            top: 4.7rem;
+            right: 4.5rem;
+            background: var(--cream);
+            color: var(--text-secondary);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--cream-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            white-space: nowrap;
+            opacity: 0;
+            animation: tooltip-appear 0.4s ease 2s forwards, tooltip-disappear 0.4s ease 7s forwards;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        body.dark-mode .dark-toggle-tooltip {
+            display: none;
+        }
+
+        @keyframes tooltip-appear {
+            to { opacity: 0.9; }
+        }
+
+        @keyframes tooltip-disappear {
+            to { opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            .dark-toggle-tooltip { display: none; }
+            .dark-toggle { top: 4rem; right: 1rem; width: 38px; height: 38px; }
+        }
 
         /* ==================== DARK MODE ==================== */
         body.dark-mode {
@@ -939,9 +983,15 @@
 
         body.dark-mode .dark-toggle {
             background: #2a2a2a;
-            border-color: #3a3a3a;
+            border-color: #444;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        body.dark-mode .dark-toggle .moon { display: block; }
+
+        body.dark-mode .dark-toggle:hover {
+            border-color: var(--sage);
+        }
+
+        body.dark-mode .dark-toggle .moon { display: block; color: var(--sage-light); }
         body.dark-mode .dark-toggle .sun { display: none; }
 
         body.dark-mode nav,
@@ -1128,6 +1178,7 @@
         <svg class="dark-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="dark-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
+    <span class="dark-toggle-tooltip">Modo lectura nocturna</span>
 
     <!-- NAV -->
     <nav id="navbar">
@@ -1512,8 +1563,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var toggle = document.getElementById('dark-toggle');
     if (!toggle) return;
     var saved = localStorage.getItem('dark-mode');
-    var isDark = saved === 'true' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    if (isDark) {
+    if (saved === 'true') {
         document.body.classList.add('dark-mode');
         toggle.setAttribute('aria-checked', 'true');
     }
@@ -1522,16 +1572,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var nowDark = document.body.classList.contains('dark-mode');
         localStorage.setItem('dark-mode', nowDark);
         toggle.setAttribute('aria-checked', String(nowDark));
-    });
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-        if (localStorage.getItem('dark-mode') !== null) return;
-        if (e.matches) {
-            document.body.classList.add('dark-mode');
-            toggle.setAttribute('aria-checked', 'true');
-        } else {
-            document.body.classList.remove('dark-mode');
-            toggle.setAttribute('aria-checked', 'false');
-        }
+        var tip = document.querySelector('.dark-toggle-tooltip');
+        if (tip) tip.style.display = 'none';
     });
 })();
 </script>
