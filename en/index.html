@@ -482,8 +482,7 @@
 
         .identify-cards {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             align-items: stretch;
         }
@@ -725,6 +724,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             text-align: left;
+            align-items: stretch;
         }
 
         .service-card {
@@ -734,7 +734,8 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            align-self: start;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -778,6 +779,7 @@
             line-height: 1.7;
             font-weight: 400;
             margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
         .service-tags {
@@ -1212,7 +1214,6 @@
 
             .identify-cards {
                 grid-template-columns: 1fr;
-                grid-template-rows: auto;
                 max-width: 500px;
                 margin: 0 auto;
             }
