@@ -482,7 +482,8 @@
 
         .identify-cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
             gap: 1.5rem;
             align-items: stretch;
         }
@@ -1211,6 +1212,7 @@
 
             .identify-cards {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto;
                 max-width: 500px;
                 margin: 0 auto;
             }
@@ -1446,7 +1448,7 @@
             <h2>A veces el malestar no se mantiene porque falte esfuerzo, sino por lo que haces cuando aparece</h2>
             <p>Se mantiene porque las estrategias que usas funcionan a corto plazo, pero con el tiempo te bloquean. Si algo de esto te suena, quizá es momento de trabajar de otra manera.</p>
             
-            <div class="identify-cards mobile-collapsible">
+            <div class="identify-cards">
                 <div class="identify-card">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
@@ -1462,14 +1464,13 @@
                     <h3>El estrés o la ansiedad están influyendo en cómo respondes cada día de tu vida</h3>
                     <p>Las preocupaciones, el miedo, la inquietud constante… has probado muchas cosas. Algunas alivian en el momento, pero no cambian lo que ocurre a largo plazo.</p>
                 </div>
-                <div class="identify-card mobile-hidden">
+                <div class="identify-card">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h3>Quieres criar mejor, pero en el momento, a veces, no sabes cómo actuar</h3>
                     <p>No lo haces mal: amas a tu hijo y estás comprometida, aunque a veces no te sientas bien con cómo respondes. Lo que él hace y lo que haces tú tiene lógica y función en ese momento. Buscas un acompañamiento consciente que te ayude a responder distinto, no más recetas.</p>
                 </div>
-                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Leer más ↓</button>
             </div>
         </div>
     </section>

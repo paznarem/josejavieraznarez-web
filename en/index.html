@@ -482,7 +482,8 @@
 
         .identify-cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
             gap: 1.5rem;
             align-items: stretch;
         }
@@ -1211,6 +1212,7 @@
 
             .identify-cards {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto;
                 max-width: 500px;
                 margin: 0 auto;
             }
@@ -1446,7 +1448,7 @@
             <h2>Sometimes distress persists not from a lack of effort, but because of what you do when it appears</h2>
             <p>It persists because the strategies you use work in the short term, but block you over time. If any of this sounds familiar, it may be time to work differently.</p>
 
-            <div class="identify-cards mobile-collapsible">
+            <div class="identify-cards">
                 <div class="identify-card">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
@@ -1462,14 +1464,13 @@
                     <h3>Stress or anxiety is shaping how you respond every day of your life</h3>
                     <p>Worry, fear, constant unease… you have tried many things. Some bring relief in the moment, but they do not change what happens over the long run.</p>
                 </div>
-                <div class="identify-card mobile-hidden">
+                <div class="identify-card">
                     <div class="identify-card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h3>You want to parent better, but in the moment, sometimes, you don't know how to act</h3>
                     <p>You are not doing it wrong: you love your child and you are committed, even when you don't feel good about how you respond. What they do and what you do has logic and function in that moment. You are looking for conscious support that helps you respond differently — not more recipes.</p>
                 </div>
-                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Read more ↓</button>
             </div>
         </div>
     </section>
