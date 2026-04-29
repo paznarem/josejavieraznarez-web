@@ -17,6 +17,9 @@
     <meta property="og:title" content="La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir — José Javier Aznárez">
     <meta property="og:description" content="Una crianza sana no es sacrificio sin límites: es enseñar a dar y recibir con conciencia, gratitud y responsabilidad compartida.">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <script type="application/ld+json">
     {
@@ -39,6 +42,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="../logo-sage.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v19/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jpg.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtbK-F2rA.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
@@ -235,9 +240,18 @@
             font-size: 1.6rem;
             font-weight: 400;
             color: var(--text-primary);
-            margin: 2.5rem 0 1rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.2rem;
             letter-spacing: -0.02em;
             line-height: 1.3;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .article-body h2:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 2.5rem;
         }
 
         .article-body h3 {
@@ -551,6 +565,35 @@
             .article-nav { padding: 2rem 1.5rem 0; }
             .article-nav-prev,
             .article-nav-next { max-width: 100%; }
+            .article-body p {
+                line-height: 1.75;
+                font-size: 1rem;
+            }
+
+            .article-body li {
+                line-height: 1.7;
+                font-size: 0.98rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.3rem;
+                margin-top: 2.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.1rem;
+            }
+
+            .emotional-block p,
+            .scenario-block p,
+            .dialog-block p,
+            .practice-block p,
+            .infobox p,
+            .collapsible-content p,
+            .case-box p,
+            .message-box p {
+                line-height: 1.75;
+            }
         }
 
 
@@ -776,6 +819,10 @@
         body.dark-mode .article-body h2,
         body.dark-mode .article-body h3 {
             color: var(--text-primary);
+        }
+
+        body.dark-mode .article-body h2 {
+            border-top-color: #333;
         }
 
         body.dark-mode .article-body strong {
@@ -1047,7 +1094,7 @@
 </head>
 <body>
     <div class="reading-progress" id="reading-progress"></div>
-    <button class="dark-toggle" id="dark-toggle" aria-label="Cambiar modo oscuro">
+    <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Modo oscuro">
         <svg class="dark-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="dark-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
@@ -1336,16 +1383,27 @@ document.addEventListener("DOMContentLoaded", function() {
     (function() {
         var toggle = document.getElementById('dark-toggle');
         if (!toggle) return;
-
-        // Check saved preference or system preference
         var saved = localStorage.getItem('dark-mode');
-        if (saved === 'true' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        var isDark = saved === 'true' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
             document.body.classList.add('dark-mode');
+            toggle.setAttribute('aria-checked', 'true');
         }
-
         toggle.addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+            var nowDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('dark-mode', nowDark);
+            toggle.setAttribute('aria-checked', String(nowDark));
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (localStorage.getItem('dark-mode') !== null) return;
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+                toggle.setAttribute('aria-checked', 'true');
+            } else {
+                document.body.classList.remove('dark-mode');
+                toggle.setAttribute('aria-checked', 'false');
+            }
         });
     })();
     </script>
