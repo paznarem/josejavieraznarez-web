@@ -327,7 +327,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             white-space: nowrap;
             opacity: 0;
-            animation: tooltip-appear 0.4s ease 2s forwards, tooltip-disappear 0.4s ease 7s forwards;
+            animation: tooltip-appear 0.4s ease 2s forwards, tooltip-disappear 0.4s ease 6s forwards;
             pointer-events: none;
             z-index: 1001;
         }
@@ -341,7 +341,8 @@
         }
 
         @keyframes tooltip-disappear {
-            to { opacity: 0; }
+            from { opacity: 0.9; }
+            to { opacity: 0; visibility: hidden; }
         }
 
         @media (max-width: 600px) {
