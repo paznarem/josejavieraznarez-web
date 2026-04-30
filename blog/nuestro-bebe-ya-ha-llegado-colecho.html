@@ -851,10 +851,11 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             white-space: nowrap;
             opacity: 0;
-            animation: tooltip-appear 0.4s ease 2s forwards, tooltip-disappear 0.4s ease 6s forwards;
+            transition: opacity 0.4s ease;
             pointer-events: none;
             z-index: 1001;
         }
+        .dark-toggle-tooltip.visible { opacity: 0.9; }
 
         body.dark-mode .dark-toggle-tooltip {
             display: none;
@@ -870,7 +871,7 @@
         }
 
         @media (max-width: 600px) {
-            .dark-toggle-tooltip { top: 4.2rem; right: 4rem; }
+            .dark-toggle-tooltip { top: 4.2rem; right: 4rem; font-size: 0.7rem; padding: 0.3rem 0.6rem; }
             .dark-toggle { top: 4rem; right: 1rem; width: 38px; height: 38px; }
         }
 
@@ -1225,7 +1226,15 @@
         }
         html.dark-mode { background: #1a1a1a; }
 
-    </style>
+    
+        @keyframes toggle-pulse {
+            0%   { box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 0 rgba(107,127,94,0.45); }
+            60%  { box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 8px rgba(107,127,94,0); }
+            100% { box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 0 rgba(107,127,94,0); }
+        }
+        .dark-toggle.toggle-pulse,
+        .immersive-toggle.toggle-pulse { animation: toggle-pulse 1s ease-out 1.2s 1; }
+</style>
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
 
     <style>
@@ -1474,7 +1483,7 @@
 
         @media (max-width: 600px) {
             .immersive-toggle { top: 6.5rem; right: 1rem; width: 38px; height: 38px; }
-            .immersive-tooltip { top: 6.7rem; right: 4rem; }
+            .immersive-tooltip { top: 6.7rem; right: 4rem; font-size: 0.7rem; padding: 0.3rem 0.6rem; }
         }
     </style>
     <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Modo oscuro">
@@ -2030,8 +2039,33 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('dark-mode', nowDark);
             toggle.setAttribute('aria-checked', String(nowDark));
             var tip = document.querySelector('.dark-toggle-tooltip');
-            if (tip) tip.style.display = 'none';
+            if (tip) tip.classList.remove('visible');
         });
+        // Tooltip on first visit (per device)
+        var darkTip = document.querySelector('.dark-toggle-tooltip');
+        if (darkTip) {
+            var DARK_TIP_KEY = 'dark-tooltip-shown';
+            var darkShown = false;
+            try { darkShown = localStorage.getItem(DARK_TIP_KEY) === '1'; } catch (e) {}
+            if (!darkShown && !document.body.classList.contains('dark-mode')) {
+                var ddur = window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? 1500 : 4000;
+                setTimeout(function() {
+                    darkTip.classList.add('visible');
+                    try { localStorage.setItem(DARK_TIP_KEY, '1'); } catch (e) {}
+                    setTimeout(function() { darkTip.classList.remove('visible'); }, ddur);
+                }, 800);
+            }
+        }
+        // Subtle pulse once per page load on both toggles
+        setTimeout(function() {
+            toggle.classList.add('toggle-pulse');
+            var imm = document.getElementById('immersive-toggle');
+            if (imm) imm.classList.add('toggle-pulse');
+            setTimeout(function() {
+                toggle.classList.remove('toggle-pulse');
+                if (imm) imm.classList.remove('toggle-pulse');
+            }, 2400);
+        }, 600);
     })();
     </script>
 
@@ -2255,14 +2289,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (tooltip) {
             var shown = false;
-            try { shown = sessionStorage.getItem(TOOLTIP_SHOWN_KEY) === '1'; } catch (e) {}
+            try { shown = localStorage.getItem(TOOLTIP_SHOWN_KEY) === '1'; } catch (e) {}
             if (!shown) {
-                btn.addEventListener('mouseenter', function onEnter() {
+                var dur = window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? 1500 : 4000;
+                setTimeout(function() {
                     tooltip.classList.add('visible');
-                    try { sessionStorage.setItem(TOOLTIP_SHOWN_KEY, '1'); } catch (e) {}
-                    setTimeout(function() { tooltip.classList.remove('visible'); }, 2500);
-                    btn.removeEventListener('mouseenter', onEnter);
-                }, { once: true });
+                    try { localStorage.setItem(TOOLTIP_SHOWN_KEY, '1'); } catch (e) {}
+                    setTimeout(function() { tooltip.classList.remove('visible'); }, dur);
+                }, 800);
             }
         }
 
