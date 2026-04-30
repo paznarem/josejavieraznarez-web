@@ -1122,6 +1122,7 @@
 
         /* Footer */
         body.dark-mode footer { background: #111; }
+        html.dark-mode { background: #1a1a1a; }
     </style>
 
     <script>
@@ -1171,6 +1172,7 @@
             }, { passive: true });
         });
     </script>
+    <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
 </head>
 <body>
 

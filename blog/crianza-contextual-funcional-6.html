@@ -243,6 +243,10 @@
             background: var(--sage);
             color: #1a1a1a !important;
         }
+        body.dark-mode .nav-links a:hover,
+        body.dark-mode .nav-links a.active { color: var(--sage-light); }
+        body.dark-mode .nav-cta:hover { background: var(--sage-light); }
+        body.dark-mode .hamburger span { background: var(--text-primary); }
 
         /* Article header */
         body.dark-mode .article-header {
@@ -536,8 +540,10 @@
             border-radius: 1rem;
             opacity: 0.92;
         }
+        html.dark-mode { background: #1a1a1a; }
 
     </style>
+    <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
 </head>
 <body>
     <div class="reading-progress" id="reading-progress"></div>

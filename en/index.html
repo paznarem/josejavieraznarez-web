@@ -1357,9 +1357,251 @@
             .btn-read-more { display: none; }
             .mobile-hidden, .mobile-hidden-flex { display: revert !important; }
         }
+
+        /* ==================== DARK TOGGLE ==================== */
+        .dark-toggle {
+            position: fixed;
+            top: 4.5rem;
+            right: 1.5rem;
+            z-index: 1001;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1.5px solid var(--cream-dark);
+            background: var(--cream);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s;
+            opacity: 0.85;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .dark-toggle:hover {
+            opacity: 1;
+            border-color: var(--sage);
+            transform: scale(1.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+        .dark-toggle .moon { display: none; color: var(--sage); }
+        .dark-toggle .sun { display: block; color: var(--sage); }
+        .dark-toggle-tooltip {
+            position: fixed;
+            top: 4.7rem;
+            right: 4.5rem;
+            background: var(--cream);
+            color: var(--text-secondary);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--cream-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            white-space: nowrap;
+            opacity: 0;
+            animation: tooltip-appear 0.4s ease 2s forwards, tooltip-disappear 0.4s ease 7s forwards;
+            pointer-events: none;
+            z-index: 1001;
+        }
+        body.dark-mode .dark-toggle-tooltip { display: none; }
+        @keyframes tooltip-appear { to { opacity: 0.9; } }
+        @keyframes tooltip-disappear { to { opacity: 0; } }
+        @media (max-width: 600px) {
+            .dark-toggle-tooltip { display: none; }
+            .dark-toggle { top: 4rem; right: 1rem; width: 38px; height: 38px; }
+        }
+
+        /* ==================== DARK MODE ==================== */
+        body.dark-mode {
+            --white: #1a1a1a;
+            --cream: #222222;
+            --cream-dark: #2a2a2a;
+            --text-primary: #e0ddd8;
+            --text-secondary: #b0ada6;
+            --text-light: #787571;
+            --sage: #8A9E7C;
+            --sage-light: #9DB38F;
+            --sage-dark: #8A9E7C;
+            --warm: #C4A882;
+            --warm-light: #D4BFA3;
+            --terracotta: #D4886E;
+        }
+        body.dark-mode { background: #1a1a1a; }
+        body.dark-mode .dark-toggle {
+            background: #2a2a2a;
+            border-color: #444;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .dark-toggle:hover { border-color: var(--sage); }
+        body.dark-mode .dark-toggle .moon { display: block; color: var(--sage-light); }
+        body.dark-mode .dark-toggle .sun { display: none; }
+
+        body.dark-mode nav,
+        body.dark-mode nav.scrolled { background: rgba(26, 26, 26, 0.95); }
+        body.dark-mode .nav-brand { color: var(--sage); }
+        body.dark-mode .nav-links a { color: var(--text-secondary); }
+        body.dark-mode .nav-links a:hover,
+        body.dark-mode .nav-links a.active { color: var(--sage-light); }
+        body.dark-mode .nav-cta { background: var(--sage); color: #1a1a1a !important; }
+        body.dark-mode .nav-cta:hover { background: var(--sage-light); }
+        body.dark-mode .hamburger span { background: var(--text-primary); }
+        body.dark-mode footer { background: #111; }
+
+        /* Hero */
+        body.dark-mode .hero {
+            background: linear-gradient(165deg, #1e1e1e 0%, #1a1a1a 50%, #222 100%);
+        }
+        body.dark-mode .hero::before { opacity: 0.03; }
+        body.dark-mode .hero h1 { color: var(--text-primary); }
+        body.dark-mode .hero-subtitle { color: var(--text-secondary); }
+        body.dark-mode .hero-tag {
+            color: var(--sage-light);
+            border-color: var(--sage);
+        }
+        body.dark-mode .hero-float-card {
+            background: #2a2a2a;
+            border-color: #333;
+        }
+        body.dark-mode .hero-float-text { color: var(--text-secondary); }
+        body.dark-mode .hero-image-frame {
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Trust bar */
+        body.dark-mode .trust-bar {
+            background: #1e1e1e;
+            border-color: #333;
+        }
+        body.dark-mode .trust-item { color: var(--text-secondary); }
+        body.dark-mode .trust-link { color: var(--sage-light); }
+
+        /* Identify */
+        body.dark-mode .identify { background: #1a1a1a; }
+        body.dark-mode .identify h2 { color: var(--text-primary); }
+        body.dark-mode .identify p { color: var(--text-secondary); }
+        body.dark-mode .identify-card {
+            background: #2a2a2a;
+            border-color: #333;
+        }
+        body.dark-mode .identify-card:hover { border-color: var(--sage); }
+        body.dark-mode .identify-card h3 { color: var(--text-primary); }
+        body.dark-mode .identify-card p { color: var(--text-secondary); }
+
+        /* Services */
+        body.dark-mode .services { background: #1a1a1a; }
+        body.dark-mode .services h2 { color: var(--text-primary); }
+        body.dark-mode .service-card {
+            background: #222;
+            border-color: #333;
+        }
+        body.dark-mode .service-card:hover {
+            border-color: var(--sage);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .service-card h3 { color: var(--text-primary); }
+        body.dark-mode .service-card p { color: var(--text-secondary); }
+        body.dark-mode .service-tags span {
+            background: #2a2a2a;
+            color: var(--text-secondary);
+        }
+
+        /* Method */
+        body.dark-mode .method { background: #1a2a15; }
+        body.dark-mode .method-item {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.08);
+        }
+        body.dark-mode .method-note { color: var(--text-secondary); }
+
+        /* About */
+        body.dark-mode .about { background: #222; }
+        body.dark-mode .about h2 { color: var(--text-primary); }
+        body.dark-mode .about p { color: var(--text-secondary); }
+        body.dark-mode .about-photo img {
+            opacity: 0.92;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+        }
+        body.dark-mode .about-credentials { color: var(--text-light); }
+        body.dark-mode .credential-tag {
+            background: #2a2a2a;
+            color: var(--text-secondary);
+        }
+
+        /* Libro */
+        body.dark-mode .libro-section { background: #222; }
+        body.dark-mode .libro-section h2 { color: var(--text-primary); }
+        body.dark-mode .libro-subtitle { color: var(--text-secondary); }
+        body.dark-mode .libro-desc { color: var(--text-secondary); }
+        body.dark-mode .libro-badge {
+            background: #2a2a2a;
+            color: var(--sage-light);
+        }
+
+        /* Blog preview */
+        body.dark-mode .blog-preview { background: #1a1a1a; }
+        body.dark-mode .blog-preview h2 { color: var(--text-primary); }
+        body.dark-mode .blog-card {
+            background: #222;
+            border-color: #333;
+        }
+        body.dark-mode .blog-card:hover {
+            border-color: var(--sage);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .blog-card h3 { color: var(--text-primary); }
+        body.dark-mode .blog-card p { color: var(--text-secondary); }
+        body.dark-mode .blog-card-category { color: var(--sage-light); }
+        body.dark-mode .btn-read-more { color: var(--sage-light); }
+
+        /* Buttons */
+        body.dark-mode .btn-primary {
+            background: var(--sage);
+            color: #1a1a1a;
+        }
+        body.dark-mode .btn-secondary {
+            border-color: var(--text-secondary);
+            color: var(--text-secondary);
+        }
+        body.dark-mode .btn-secondary:hover {
+            border-color: var(--sage);
+            color: var(--sage-light);
+        }
+
+        body.dark-mode .section-label { color: var(--sage-light); }
+
+        /* CTA */
+        body.dark-mode .cta-section { background: #1a1a1a; }
+        body.dark-mode .cta-section h2 { color: var(--text-primary); }
+        body.dark-mode .cta-section p { color: var(--text-secondary); }
+        body.dark-mode .btn-email {
+            color: var(--text-secondary);
+            border-color: #444;
+        }
+        body.dark-mode .btn-email:hover {
+            border-color: var(--sage);
+            color: var(--sage-light);
+        }
+
+        body.dark-mode .whatsapp-float { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        body.dark-mode .instagram-float { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+
+        body.dark-mode img:not(.nav-brand img) { opacity: 0.92; }
+
+        @media (max-width: 600px) {
+            body.dark-mode .nav-links { background: rgba(26, 26, 26, 0.98); }
+        }
+        html.dark-mode { background: #1a1a1a; }
     </style>
+    <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
 </head>
 <body>
+    <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Dark mode">
+        <svg class="dark-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="dark-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <span class="dark-toggle-tooltip">Night reading mode</span>
+
     <!-- NAV -->
     <nav id="navbar">
         <div class="nav-inner">
@@ -1745,6 +1987,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+</script>
+<script>
+(function() {
+    var toggle = document.getElementById('dark-toggle');
+    if (!toggle) return;
+    var saved = localStorage.getItem('dark-mode');
+    if (saved === 'true') {
+        document.body.classList.add('dark-mode');
+        toggle.setAttribute('aria-checked', 'true');
+    }
+    toggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        var nowDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('dark-mode', nowDark);
+        toggle.setAttribute('aria-checked', String(nowDark));
+        var tip = document.querySelector('.dark-toggle-tooltip');
+        if (tip) tip.style.display = 'none';
+    });
+})();
 </script>
 </body>
 </html>
