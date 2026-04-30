@@ -233,6 +233,20 @@
 
         .content-block {
             margin-bottom: 4.5rem;
+            font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+            font-kerning: normal;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .content-block p,
+        .content-block li {
+            font-variant-numeric: oldstyle-nums;
+        }
+
+        .content-block h2 {
+            font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
 
         .content-block h2 {

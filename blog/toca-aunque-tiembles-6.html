@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v19/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jpg.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtbK-F2rA.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300..500;1,300..500&display=swap" rel="stylesheet">
 
     <style>
         /* ==================== VARIABLES ==================== */
@@ -101,6 +101,24 @@
         .back-to-blog a:hover { color: var(--sage-dark); }
 
         .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
+
+        .article-body {
+            font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+            font-kerning: normal;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .article-body p,
+        .article-body li {
+            font-variant-numeric: oldstyle-nums;
+        }
+
+        .article-body h2,
+        .article-body h3 {
+            font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+        }
         .article-body p { font-size: 1.05rem; line-height: 1.85; color: #3D3D3D; margin-bottom: 1.5rem; }
         .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark); }
         .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
@@ -868,14 +886,266 @@
 
     </style>
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
+
+    <style>
+        .article-body p, .article-body li,
+        .emotional-block p, .scenario-block p, .dialog-block p,
+        .practice-block p, .infobox p {
+            transition: line-height 0.5s ease, letter-spacing 0.5s ease, font-weight 0.5s ease;
+        }
+        body.night-reading .article-body p {
+            line-height: 1.95;
+            letter-spacing: 0.005em;
+        }
+        body.night-reading .article-body li {
+            line-height: 1.85;
+        }
+        body.night-reading.dark-mode .article-body p {
+            font-weight: 450;
+        }
+        body.night-reading.dark-mode .article-body li {
+            font-weight: 450;
+        }
+        body.night-reading .emotional-block p,
+        body.night-reading .scenario-block p,
+        body.night-reading .dialog-block p,
+        body.night-reading .practice-block p,
+        body.night-reading .infobox p {
+            line-height: 1.9;
+        }
+    </style>
+
+    <style>
+        .article-header--intense {
+            background: linear-gradient(165deg, var(--cream) 0%, rgba(196,168,130,0.15) 50%, var(--cream-dark) 100%);
+        }
+        body.dark-mode .article-header--intense {
+            background: linear-gradient(165deg, #1e1e1e 0%, rgba(196,168,130,0.06) 50%, #1a1a1a 100%);
+        }
+        .intensity-note {
+            max-width: 680px;
+            margin: 0 auto 0.5rem;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--warm);
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+        body.dark-mode .intensity-note {
+            color: var(--warm-light);
+            opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+            .intensity-note {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+
+    <style>
+        .series-transition {
+            max-width: 680px;
+            margin: 3rem auto;
+            padding: 2.5rem 2rem;
+        }
+        .series-transition-context {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+        .series-transition-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+        }
+        .series-transition-progress {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-light);
+        }
+        .series-transition-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .series-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            padding: 1.5rem;
+            background: var(--cream);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .series-card:hover {
+            background: var(--cream-dark);
+            transform: translateY(-2px);
+        }
+        .series-card-direction {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--sage);
+        }
+        .series-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+        .series-card-summary {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .series-card-prev { text-align: left; }
+        .series-card-next { text-align: right; }
+        .series-card:only-child {
+            grid-column: 1 / -1;
+            max-width: 50%;
+        }
+        .series-card-next:only-child {
+            margin-left: auto;
+        }
+        @media (max-width: 600px) {
+            .series-transition-cards {
+                grid-template-columns: 1fr;
+            }
+            .series-card:only-child {
+                max-width: 100%;
+            }
+        }
+        body.dark-mode .series-card {
+            background: #222;
+        }
+        body.dark-mode .series-card:hover {
+            background: #2a2a2a;
+        }
+        body.dark-mode .series-card-title {
+            color: var(--text-primary);
+        }
+    </style>
 </head>
 <body>
     <div class="reading-progress" id="reading-progress"></div>
+
+    <style>
+        .immersive-toggle {
+            position: fixed;
+            top: 7.5rem;
+            right: 1.5rem;
+            z-index: 1001;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1.5px solid var(--cream-dark);
+            background: var(--cream);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s;
+            opacity: 0.85;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 0;
+        }
+        .immersive-toggle:hover {
+            opacity: 1;
+            border-color: var(--sage);
+            transform: scale(1.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+        .immersive-toggle .icon-open { display: block; color: var(--sage); }
+        .immersive-toggle .icon-close { display: none; color: var(--sage); }
+        body.immersive-mode .immersive-toggle .icon-open { display: none; }
+        body.immersive-mode .immersive-toggle .icon-close { display: block; }
+        body.dark-mode .immersive-toggle {
+            background: #2a2a2a;
+            border-color: #444;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .immersive-toggle:hover { border-color: var(--sage); }
+        body.dark-mode .immersive-toggle .icon-open,
+        body.dark-mode .immersive-toggle .icon-close { color: var(--sage-light); }
+
+        .immersive-tooltip {
+            position: fixed;
+            top: 7.7rem;
+            right: 4.5rem;
+            background: var(--cream);
+            color: var(--text-secondary);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--cream-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1001;
+        }
+        .immersive-tooltip.visible { opacity: 0.9; }
+        body.dark-mode .immersive-tooltip {
+            background: #2a2a2a;
+            border-color: #444;
+            color: var(--text-secondary);
+        }
+
+        /* Immersive mode hides */
+        #navbar, .whatsapp-float, .instagram-float, .share-bar, .article-cta, .back-to-blog {
+            transition: opacity 0.4s ease;
+        }
+        body.immersive-mode #navbar,
+        body.immersive-mode .whatsapp-float,
+        body.immersive-mode .instagram-float,
+        body.immersive-mode .share-bar,
+        body.immersive-mode .article-cta,
+        body.immersive-mode .back-to-blog {
+            opacity: 0;
+            pointer-events: none;
+        }
+        body.immersive-mode.immersive-hidden #navbar,
+        body.immersive-mode.immersive-hidden .whatsapp-float,
+        body.immersive-mode.immersive-hidden .instagram-float,
+        body.immersive-mode.immersive-hidden .share-bar,
+        body.immersive-mode.immersive-hidden .article-cta,
+        body.immersive-mode.immersive-hidden .back-to-blog {
+            visibility: hidden;
+        }
+        body { transition: padding-top 0.4s ease; }
+        body.immersive-mode { padding-top: 1rem; }
+
+        @media (max-width: 600px) {
+            .immersive-toggle { top: 6.5rem; right: 1rem; width: 38px; height: 38px; }
+            .immersive-tooltip { display: none; }
+        }
+    </style>
     <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Modo oscuro">
         <svg class="dark-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="dark-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <span class="dark-toggle-tooltip">Modo lectura nocturna</span>
+    <button class="immersive-toggle" id="immersive-toggle" aria-pressed="false" aria-label="Lectura inmersiva">
+        <svg class="icon-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5C5.5 5 8.5 5 12 7c3.5-2 6.5-2 10-0.5v12c-3.5-1.5-6.5-1.5-10 0.5-3.5-2-6.5-2-10-0.5v-12z"/><path d="M12 7v12"/></svg>
+        <svg class="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5h18v15H3z"/><path d="M3 4.5l9 4 9-4"/></svg>
+    </button>
+    <span class="immersive-tooltip" id="immersive-tooltip">Lectura inmersiva</span>
 
 
     <!-- NAV -->
@@ -1026,6 +1296,7 @@
     </article>
 
     <!-- SERIES NAVIGATION -->
+    <!-- old nav (preserved for reference)
     <div class="series-nav-bar">
         <a href="toca-aunque-tiembles-5.html" class="series-nav-link series-nav-prev">
             <span class="series-nav-label">← Anterior</span>
@@ -1035,6 +1306,25 @@
             <span class="series-nav-label">Siguiente →</span>
             <span class="series-nav-title">Aceptar el cuerpo, estar presente, observar sin reaccionar</span>
         </a>
+    </div>
+    -->
+    <div class="article-nav series-transition">
+        <div class="series-transition-context">
+            <span class="series-transition-label">SERIE: Toca aunque tiembles</span>
+            <span class="series-transition-progress">Artículo 6 de 9</span>
+        </div>
+        <div class="series-transition-cards">
+        <a href="toca-aunque-tiembles-5.html" class="series-card series-card-prev">
+            <span class="series-card-direction">← Anterior</span>
+            <span class="series-card-title">Los seis procesos del cambio para músicos</span>
+            <span class="series-card-summary"></span>
+        </a>
+        <a href="toca-aunque-tiembles-7.html" class="series-card series-card-next">
+            <span class="series-card-direction">Siguiente →</span>
+            <span class="series-card-title">Aceptar el cuerpo, estar presente, observar sin reaccionar</span>
+            <span class="series-card-summary"></span>
+        </a>
+        </div>
     </div>
 
 
@@ -1161,18 +1451,126 @@ document.addEventListener("DOMContentLoaded", function() {
     <script>
     (function() {
         var bar = document.getElementById('reading-progress');
-        if (!bar) return;
         var article = document.querySelector('.article-body');
-        if (!article) return;
-        window.addEventListener('scroll', function() {
-            var articleTop = article.offsetTop;
-            var articleHeight = article.offsetHeight;
-            var scrolled = window.scrollY - articleTop;
-            var progress = Math.max(0, Math.min(100, (scrolled / articleHeight) * 100));
-            bar.style.width = progress + '%';
-        });
+        if (!bar || !article) return;
+
+        var WEIGHTS = {
+            'practice-block': 2.0,
+            'case-box': 1.5,
+            'infobox': 1.3,
+            'emotional-block': 1.2,
+            'scenario-block': 0.9,
+            'dialog-block': 0.7
+        };
+        var SECONDS_PER_UNIT = 15;
+
+        function weightOf(el) {
+            for (var cls in WEIGHTS) {
+                if (el.classList && el.classList.contains(cls)) return WEIGHTS[cls];
+            }
+            if (el.tagName === 'DETAILS' || (el.classList && el.classList.contains('collapsible-note'))) {
+                return el.open ? 1.0 : 0.0;
+            }
+            var tag = el.tagName;
+            if (tag === 'P') return 1.0;
+            if (tag === 'H2' || tag === 'H3') return 0.3;
+            if (tag === 'IMG') return 0.5;
+            if (tag === 'UL' || tag === 'OL') {
+                var lis = el.querySelectorAll(':scope > li').length;
+                return Math.max(0.5, lis * 0.3);
+            }
+            if (tag === 'BLOCKQUOTE') return 1.0;
+            if (tag === 'FIGURE') return 0.5;
+            return 0.5;
+        }
+
+        var blocks = [];
+        function rebuild() {
+            blocks = [];
+            var children = article.children;
+            for (var i = 0; i < children.length; i++) {
+                var c = children[i];
+                if (c.id === 'reading-progress') continue;
+                var w = weightOf(c);
+                if (w > 0) blocks.push({ el: c, weight: w });
+            }
+        }
+        rebuild();
+
+        function totalWeight() {
+            var t = 0;
+            for (var i = 0; i < blocks.length; i++) t += blocks[i].weight;
+            return t || 1;
+        }
+
+        function updateMeta() {
+            var meta = document.querySelector('.reading-time');
+            if (!meta) return;
+            var total = totalWeight();
+            var seconds = total * SECONDS_PER_UNIT;
+            var minutes = Math.max(1, Math.round(seconds / 60));
+            var hasPractice = false;
+            for (var i = 0; i < blocks.length; i++) {
+                if (blocks[i].el.classList && blocks[i].el.classList.contains('practice-block')) {
+                    hasPractice = true; break;
+                }
+            }
+            var isEnglish = /read/i.test(meta.textContent);
+            if (isEnglish) {
+                meta.textContent = '~' + minutes + (hasPractice ? ' min slow read' : ' min read');
+            } else {
+                meta.textContent = '~' + minutes + (hasPractice ? ' min de lectura pausada' : ' min de lectura');
+            }
+        }
+        updateMeta();
+
+        var ticking = false;
+        function update() {
+            ticking = false;
+            var vh = window.innerHeight;
+            var threshold = vh * 0.5;
+            var passed = 0;
+            var total = totalWeight();
+            for (var i = 0; i < blocks.length; i++) {
+                var b = blocks[i];
+                var rect = b.el.getBoundingClientRect();
+                var blockHeight = rect.height || 1;
+                var topRel = rect.top;
+                var bottomRel = rect.bottom;
+                if (bottomRel <= threshold) {
+                    passed += b.weight;
+                } else if (topRel < threshold) {
+                    var visiblePast = threshold - topRel;
+                    var frac = Math.max(0, Math.min(1, visiblePast / blockHeight));
+                    passed += b.weight * frac;
+                }
+            }
+            var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+            var docBottom = (window.scrollY + vh) >= (document.documentElement.scrollHeight - 2);
+            if (docBottom) pct = 100;
+            bar.style.width = pct + '%';
+        }
+
+        function onScroll() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+            }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+
+        article.addEventListener('toggle', function(e) {
+            if (e.target && (e.target.tagName === 'DETAILS' || e.target.classList.contains('collapsible-note'))) {
+                rebuild();
+                updateMeta();
+                update();
+            }
+        }, true);
     })();
     </script>
+
 
     <script>
     (function() {
@@ -1193,5 +1591,270 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     })();
     </script>
+
+    <style>
+        .reading-bookmark {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--cream-dark);
+            border-top: 1px solid var(--cream-dark);
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+        }
+        .reading-bookmark.visible { opacity: 1; }
+        .reading-bookmark-text {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.88rem;
+            color: var(--sage-dark);
+            margin: 0;
+        }
+        .reading-bookmark-continue {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--sage);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .reading-bookmark-continue:hover { background: var(--sage-dark); }
+        .reading-bookmark-close {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.3rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 0.3rem;
+        }
+        .reading-bookmark-close:hover { color: var(--text-secondary); }
+        .reading-section-highlight {
+            background: rgba(107,127,94,0.08);
+            transition: background 2s ease;
+        }
+        body.dark-mode .reading-bookmark {
+            background: #222;
+            border-top: 1px solid #333;
+        }
+        body.dark-mode .reading-bookmark-text { color: var(--text-secondary); }
+        body.dark-mode .reading-bookmark-continue {
+            background: var(--sage);
+            color: var(--white);
+        }
+        body.dark-mode .reading-bookmark-continue:hover { background: var(--sage-light, #8a9d7d); }
+        @media (max-width: 600px) {
+            .reading-bookmark {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.82rem;
+                flex-wrap: wrap;
+            }
+            .reading-bookmark-text { font-size: 0.82rem; flex: 1 1 100%; text-align: center; }
+            .reading-bookmark-continue { flex: 1 1 auto; width: 100%; }
+            .reading-bookmark-close { position: absolute; top: 0.4rem; right: 0.6rem; }
+        }
+    </style>
+    <script>
+    (function() {
+        var article = document.querySelector('.article-body');
+        if (!article || !('IntersectionObserver' in window)) return;
+        var slug = window.location.pathname;
+        var storageKey = 'reading-pos-' + slug;
+        var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+        var SCROLL_THRESHOLD_PCT = 0.10;
+        var END_SELECTOR = '.article-cta, .share-bar';
+        var heads = article.querySelectorAll('h2');
+        heads.forEach(function(h, i) {
+            if (!h.id) h.id = 'reading-section-' + i;
+        });
+        var stored = null;
+        try {
+            var raw = localStorage.getItem(storageKey);
+            if (raw) {
+                stored = JSON.parse(raw);
+                if (!stored || !stored.timestamp || (Date.now() - stored.timestamp) > THIRTY_DAYS) {
+                    localStorage.removeItem(storageKey);
+                    stored = null;
+                }
+            }
+        } catch (e) { stored = null; }
+        var dismissed = false;
+        var bannerShown = false;
+        var initialScrollY = window.scrollY;
+        function showBanner() {
+            if (dismissed || bannerShown || !stored) return;
+            var target = document.getElementById(stored.sectionId);
+            if (!target) return;
+            bannerShown = true;
+            var banner = document.createElement('div');
+            banner.className = 'reading-bookmark';
+            banner.setAttribute('role', 'dialog');
+            banner.setAttribute('aria-label', 'Retomar lectura');
+            banner.innerHTML = '<span class="reading-bookmark-text">Retomar donde lo dejaste</span>' +
+                '<button type="button" class="reading-bookmark-continue">Continuar</button>' +
+                '<button type="button" class="reading-bookmark-close" aria-label="Cerrar">&times;</button>';
+            document.body.appendChild(banner);
+            requestAnimationFrame(function() { banner.classList.add('visible'); });
+            banner.querySelector('.reading-bookmark-continue').addEventListener('click', function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.classList.add('reading-section-highlight');
+                setTimeout(function() {
+                    target.style.background = 'transparent';
+                    setTimeout(function() {
+                        target.classList.remove('reading-section-highlight');
+                        target.style.background = '';
+                    }, 2000);
+                }, 100);
+                dismissBanner();
+            });
+            banner.querySelector('.reading-bookmark-close').addEventListener('click', dismissBanner);
+            function dismissBanner() {
+                dismissed = true;
+                banner.classList.remove('visible');
+                setTimeout(function() {
+                    if (banner.parentNode) banner.parentNode.removeChild(banner);
+                }, 400);
+            }
+            window._dismissReadingBanner = dismissBanner;
+        }
+        if (stored) {
+            setTimeout(showBanner, 1000);
+            window.addEventListener('scroll', function onScroll() {
+                if (!bannerShown || dismissed) return;
+                if (Math.abs(window.scrollY - initialScrollY) > 200) {
+                    if (window._dismissReadingBanner) window._dismissReadingBanner();
+                    window.removeEventListener('scroll', onScroll);
+                }
+            });
+        }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                var articleHeight = article.offsetHeight;
+                var scrolled = window.scrollY - article.offsetTop;
+                if (articleHeight <= 0 || scrolled / articleHeight < SCROLL_THRESHOLD_PCT) return;
+                try {
+                    localStorage.setItem(storageKey, JSON.stringify({
+                        sectionId: entry.target.id,
+                        scrollY: window.scrollY,
+                        timestamp: Date.now()
+                    }));
+                } catch (e) {}
+            });
+        }, { threshold: 0.5 });
+        heads.forEach(function(h) { observer.observe(h); });
+        var endEls = document.querySelectorAll(END_SELECTOR);
+        if (endEls.length && 'IntersectionObserver' in window) {
+            var endObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        try { localStorage.removeItem(storageKey); } catch (e) {}
+                    }
+                });
+            }, { threshold: 0.1 });
+            endEls.forEach(function(el) { endObs.observe(el); });
+        }
+    })();
+    </script>
+
+
+    <script>
+    (function() {
+        var btn = document.getElementById('immersive-toggle');
+        if (!btn) return;
+        var tooltip = document.getElementById('immersive-tooltip');
+        var body = document.body;
+        var SESSION_KEY = 'immersive-mode';
+        var TOOLTIP_SHOWN_KEY = 'immersive-tooltip-shown';
+        var hideTimer = null;
+
+        function activate() {
+            body.classList.add('immersive-mode');
+            btn.setAttribute('aria-pressed', 'true');
+            if (hideTimer) clearTimeout(hideTimer);
+            hideTimer = setTimeout(function() {
+                body.classList.add('immersive-hidden');
+            }, 400);
+            try { sessionStorage.setItem(SESSION_KEY, '1'); } catch (e) {}
+        }
+        function deactivate() {
+            body.classList.remove('immersive-hidden');
+            requestAnimationFrame(function() {
+                body.classList.remove('immersive-mode');
+            });
+            btn.setAttribute('aria-pressed', 'false');
+            if (hideTimer) clearTimeout(hideTimer);
+            try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+        }
+        function toggle() {
+            if (body.classList.contains('immersive-mode')) deactivate();
+            else activate();
+        }
+
+        try {
+            if (sessionStorage.getItem(SESSION_KEY) === '1') activate();
+        } catch (e) {}
+
+        btn.addEventListener('click', toggle);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && body.classList.contains('immersive-mode')) deactivate();
+        });
+
+        if (tooltip) {
+            var shown = false;
+            try { shown = sessionStorage.getItem(TOOLTIP_SHOWN_KEY) === '1'; } catch (e) {}
+            if (!shown) {
+                btn.addEventListener('mouseenter', function onEnter() {
+                    tooltip.classList.add('visible');
+                    try { sessionStorage.setItem(TOOLTIP_SHOWN_KEY, '1'); } catch (e) {}
+                    setTimeout(function() { tooltip.classList.remove('visible'); }, 2500);
+                    btn.removeEventListener('mouseenter', onEnter);
+                }, { once: true });
+            }
+        }
+
+        var cta = document.querySelector('.article-cta');
+        if (cta && 'IntersectionObserver' in window) {
+            var endObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && body.classList.contains('immersive-mode')) {
+                        deactivate();
+                    }
+                });
+            }, { threshold: 0.1 });
+            endObs.observe(cta);
+        }
+    })();
+    </script>
+
+
+    <script>
+    (function() {
+        if (!document.querySelector('.article-body')) return;
+        var body = document.body;
+        var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+        function update() {
+            var h = new Date().getHours();
+            var night = (h >= 21 || h < 6);
+            var sysDark = mq && mq.matches;
+            if (sysDark && (h >= 19 || h < 8)) night = true;
+            body.classList.toggle('night-reading', night);
+        }
+        update();
+        setInterval(update, 30 * 60 * 1000);
+        if (mq && mq.addEventListener) mq.addEventListener('change', update);
+    })();
+    </script>
+
 </body>
 </html>
