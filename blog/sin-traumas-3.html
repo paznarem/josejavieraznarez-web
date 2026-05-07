@@ -11,11 +11,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Nuestra procrastinación, nuestra compañera — José Javier Aznárez | Psicólogo Contextual</title>
-    <meta name="description" content="La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.">
-    <meta property="og:title" content="Nuestra procrastinación, nuestra compañera — José Javier Aznárez">
-    <meta property="og:description" content="La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.">
+    <title>Lo que realmente se transmite entre generaciones — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="Tercer artículo de la serie sobre transmisión intergeneracional. No se transmite el daño como entidad: se transmiten patrones de respuesta. Cómo funcionan, los más frecuentes y dónde se interrumpe realmente la transmisión.">
+    <meta property="og:title" content="Lo que realmente se transmite entre generaciones — José Javier Aznárez">
+    <meta property="og:description" content="Tercer artículo de la serie sobre transmisión intergeneracional. No se transmite el daño como entidad: se transmiten patrones de respuesta. Cómo funcionan, los más frecuentes y dónde se interrumpe realmente la transmisión.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
     <meta property="og:image:width" content="1200">
@@ -25,8 +24,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Nuestra procrastinación, nuestra compañera",
-      "description": "La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.",
+      "headline": "Lo que realmente se transmite entre generaciones",
+      "description": "Tercer artículo de la serie sobre transmisión intergeneracional. No se transmite el daño: se transmiten patrones de respuesta, y dónde se interrumpe realmente la transmisión.",
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "name": "¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones?"
+      },
       "author": {
         "@type": "Person",
         "name": "José Javier Aznárez Barrio",
@@ -47,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300..500;1,300..500&display=swap" rel="stylesheet">
 
     <style>
-        /* ==================== VARIABLES (same as landing) ==================== */
+        /* ==================== VARIABLES ==================== */
         :root {
             --sage: #6B7F5E;
             --sage-light: #8A9E7C;
@@ -66,167 +69,35 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            color: var(--text-primary);
-            background: var(--white);
-            line-height: 1.7;
-        }
+        body { font-family: 'Work Sans', sans-serif; color: var(--text-primary); background: var(--white); line-height: 1.7; }
 
-        /* ==================== NAV (identical to landing) ==================== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 0.7rem 2rem;
-            background: rgba(254, 253, 251, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--sage-dark);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.93rem;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            transition: color 0.3s;
-        }
-
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.7rem 2rem; background: rgba(254,253,251,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.1rem; color: var(--sage-dark); text-decoration: none; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links li { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.93rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--sage-dark); }
+        .nav-links a.active { color: var(--sage-dark); font-weight: 500; }
+        .nav-cta { background: var(--sage); color: var(--white) !important; padding: 0.5rem 1.3rem; border-radius: 100px; font-weight: 500; transition: background 0.3s, transform 0.2s !important; }
+        .nav-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 24px; height: 2px; background: var(--text-primary); transition: 0.3s; }
 
-        .nav-cta {
-            background: var(--sage);
-            color: var(--white) !important;
-            padding: 0.5rem 1.3rem;
-            border-radius: 100px;
-            font-weight: 500;
-            transition: background 0.3s, transform 0.2s !important;
-        }
+        .article-header { padding: 8rem 2rem 4rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%); text-align: center; }
+        .article-header-inner { max-width: 680px; margin: 0 auto; }
+        .article-category { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(107,127,94,0.1); color: var(--sage-dark); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+        .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.5rem; color: var(--text-primary); }
+        .article-meta { font-size: 0.9rem; color: var(--text-light); font-weight: 300; }
+        .article-meta a { color: var(--sage); text-decoration: none; }
 
-        .nav-cta:hover {
-            background: var(--sage-dark);
-            transform: translateY(-1px);
-        }
+        .back-to-blog { max-width: 680px; margin: 0 auto; padding: 2rem 2rem 0; }
+        .back-to-blog a { font-size: 0.88rem; color: var(--sage); text-decoration: none; transition: color 0.3s; }
+        .back-to-blog a:hover { color: var(--sage-dark); }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-        }
+        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
 
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        /* ==================== ARTICLE HEADER ==================== */
-        .article-header {
-            padding-top: 5rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
-            text-align: center;
-        }
-
-        .article-header-inner {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 4rem 2rem 3rem;
-        }
-
-        .article-category {
-            display: inline-block;
-            background: var(--sage);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 400;
-            line-height: 1.2;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-meta {
-            font-size: 0.9rem;
-            color: var(--sage);
-        }
-
-        .article-meta a {
-            color: var(--sage);
-            text-decoration: none;
-        }
-
-        .article-meta a:hover { text-decoration: underline; }
-
-        /* ==================== BACK LINK ==================== */
-        .back-to-blog {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem 0;
-        }
-
-        .back-to-blog a {
-            font-size: 0.85rem;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .back-to-blog a:hover { color: var(--sage); }
-
-        /* ==================== ARTICLE BODY ==================== */
         .article-body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2.5rem 5rem;
-            background: #FDFBF7;
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             font-kerning: normal;
             text-rendering: optimizeLegibility;
@@ -243,119 +114,21 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-
-        .article-body p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: #3D3D3D;
-            margin-bottom: 1.6rem;
-        }
-
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-top: 3.5rem;
-            margin-bottom: 1.2rem;
-            letter-spacing: -0.02em;
-            padding-top: 2rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-body h2:first-of-type {
-            border-top: none;
-            padding-top: 0;
-            margin-top: 2.5rem;
-        }
-
-        .article-body h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin: 2rem 0 0.8rem;
-        }
-
-        .article-body blockquote {
-            border-left: 3px solid var(--sage);
-            margin: 2.5rem 0;
-            padding: 1rem 0 1rem 2rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--sage-dark);
-            line-height: 1.6;
-        }
-
-        .article-body ul, .article-body ol {
-            margin: 1.2rem 0 1.6rem 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .article-body li {
-            margin-bottom: 0.5rem;
-            line-height: 1.75;
-            font-size: 1.05rem;
-        }
-
+        .article-body p { font-size: 1.05rem; line-height: 1.85; color: #3D3D3D; margin-bottom: 1.5rem; }
+        .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark); }
+        .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
+        .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+        .article-body blockquote { border-left: 3px solid var(--sage-light); margin: 2.5rem 0; padding: 1rem 1.5rem; background: var(--cream); border-radius: 0 8px 8px 0; }
+        .article-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
+        .article-body ul, .article-body ol { margin: 1.5rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.7; }
         .article-body strong { color: var(--text-primary); font-weight: 500; }
         .article-body em { font-style: italic; }
+        .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
+        .article-body a { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 2px; }
+        .article-body a:hover { color: var(--sage); }
 
-        .article-body hr {
-            border: none;
-            border-top: 1px solid var(--cream-dark);
-            margin: 3rem 0;
-        }
-
-        /* ==================== ARTICLE NAV ==================== */
-        .article-nav {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 2rem 2.5rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-nav-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .article-nav-prev, .article-nav-next {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            text-decoration: none;
-            max-width: 45%;
-            transition: opacity 0.3s;
-        }
-
-        .article-nav-prev:hover, .article-nav-next:hover { opacity: 0.7; }
-
-        .article-nav-next { text-align: right; margin-left: auto; }
-
-        .article-nav-label {
-            font-size: 0.78rem;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .article-nav-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: var(--sage-dark);
-            line-height: 1.3;
-        }
-
-        /* ==================== CTA BOX ==================== */
-        .article-cta {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2rem 4rem;
-        }
-
+        .article-cta { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .article-cta-box {
             background: var(--cream);
             border-radius: 1.5rem;
@@ -363,229 +136,61 @@
             text-align: center;
             border: 1px solid var(--cream-dark);
         }
+        .article-cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.8rem; }
+        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.75rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
 
-        .article-cta-box h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-        }
+        .related { background: var(--cream); padding: 4rem 2rem; }
+        .related-inner { max-width: 1000px; margin: 0 auto; }
+        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.8rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .related-card { background: var(--white); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
+        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); line-height: 1.4; }
 
-        .article-cta-box p {
-            color: var(--text-secondary);
-            margin-bottom: 1.8rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--whatsapp);
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 100px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
-        }
-
-        /* ==================== RELATED ==================== */
-        .related {
-            background: var(--cream);
-            padding: 4rem 2rem;
-        }
-
-        .related-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .related h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .related-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .related-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-
-        .related-card-category {
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-            color: var(--sage);
-            margin-bottom: 0.6rem;
-        }
-
-        .related-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            line-height: 1.4;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            background: var(--sage-dark);
-            color: rgba(255,255,255,0.7);
-            padding: 3rem 2rem;
-        }
-
-        .footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-            text-align: center;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--white);
-            font-weight: 400;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.82rem;
-            transition: color 0.3s;
-        }
-
+        footer { background: var(--sage-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--white); }
+        .footer-legal { width: 100%; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.7; }
 
-        .footer-legal {
-            font-size: 0.75rem;
-            max-width: 680px;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.4);
-        }
+        .instagram-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 999; width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(188,24,136,0.35); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .instagram-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(188,24,136,0.5); }
+        .instagram-float svg { width: 28px; height: 28px; stroke: white; fill: none; }
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
-        /* ==================== FLOATING INSTAGRAM ==================== */
-        .instagram-float {
-            position: fixed;
-            bottom: 2rem;
-            left: 2rem;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-        .instagram-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
-        }
-        .instagram-float svg {
-            width: 28px;
-            height: 28px;
-            stroke: white;
-            fill: none;
-        }
+        .share-bar { max-width: 680px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
+        .share-bar-label { font-size: 0.68rem; font-weight: 500; color: var(--sage); text-transform: uppercase; letter-spacing: 0.13em; flex-shrink: 0; }
+        .share-icons { display: flex; align-items: center; gap: 0.85rem; }
+        .share-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--sage); text-decoration: none; transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
+        .share-icon:hover { color: var(--sage-dark); }
+        .share-icon svg { display: block; }
+        .share-copy-tooltip { font-size: 0.68rem; font-weight: 500; color: var(--sage); letter-spacing: 0.05em; opacity: 0; transition: opacity 0.25s; pointer-events: none; white-space: nowrap; }
+        .share-copy-tooltip.visible { opacity: 1; }
+        .share-bar-sep { width: 1px; height: 1.1rem; background: var(--cream-dark); flex-shrink: 0; }
+        .share-btn-pdf { font-family: 'Work Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--sage); background: none; border: none; cursor: pointer; padding: 0; text-decoration: none; transition: color 0.2s; flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .share-btn-pdf:hover { color: var(--sage-dark); }
 
-        /* ==================== WHATSAPP FLOAT ==================== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 999;
-            width: 56px;
-            height: 56px;
-            background: var(--whatsapp);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(254, 253, 251, 0.98);
-                flex-direction: column;
-                padding: 1.5rem 2rem;
-                gap: 1rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(254,253,251,0.98); flex-direction: column; padding: 1.5rem 2rem; gap: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
             .nav-links.open { display: flex; }
             .hamburger { display: flex; }
             .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
-
         @media (max-width: 600px) {
             .article-body { padding: 2rem 1.5rem 4rem; }
             .article-cta { padding: 2.5rem 1.5rem 4rem; }
             .back-to-blog { padding: 0 1.5rem 2rem; }
-            .article-nav { padding: 2rem 1.5rem 0; }
-            .article-nav-prev,
-            .article-nav-next { max-width: 100%; }
+            .series-nav-bar { padding: 2rem 1.5rem 0; flex-direction: column; }
+            .series-nav-link { max-width: 100%; }
+            .series-nav-next { text-align: left; margin-left: 0; }
+            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
             .article-body p {
                 line-height: 1.8;
                 font-size: 1rem;
@@ -616,109 +221,99 @@
                 line-height: 1.8;
             }
         }
-
-
-        /* ==================== SHARE BAR ==================== */
-        .share-bar {
-            max-width: 680px;
-            margin: 3rem auto 2rem;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .share-bar-label {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-            flex-shrink: 0;
-        }
-
-        .share-icons {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-        }
-
-        .share-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .share-icon:hover { color: var(--sage-dark); }
-        .share-icon svg { display: block; }
-
-        .share-copy-tooltip {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            opacity: 0;
-            transition: opacity 0.25s;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .share-copy-tooltip.visible { opacity: 1; }
-
-        .share-bar-sep {
-            width: 1px;
-            height: 1.1rem;
-            background: var(--cream-dark);
-            flex-shrink: 0;
-        }
-
-        .share-btn-pdf {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--sage);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            text-decoration: none;
-            transition: color 0.2s;
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .share-btn-pdf:hover { color: var(--sage-dark); }
-
-        @media (max-width: 600px) {
-            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
-        }
-
-        /* ==================== PRINT ==================== */
         @media print {
-            nav, footer, .share-bar, .whatsapp-float, .instagram-float,
-            .article-cta, .related, .back-to-blog, .article-nav { display: none !important; }
+            nav, footer, .share-bar, .whatsapp-float, .instagram-float, .article-cta, .related, .back-to-blog, .series-nav-bar { display: none !important; }
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
-            .article-header .article-meta,
-            .article-header .article-category { color: #444 !important; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
-            .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             a { color: #000 !important; text-decoration: none; }
         }
-    
+
+        /* ==================== SERIES BADGE ==================== */
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .series-badge::before {
+            content: "♡";
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: center; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-secondary) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* ==================== SERIES NAV ==================== */
+        .series-nav-bar {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 2rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .series-nav-link {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            text-decoration: none;
+            max-width: 45%;
+            transition: opacity 0.3s;
+        }
+
+        .series-nav-link:hover .series-nav-title { color: var(--sage-dark); }
+        .series-nav-next { text-align: right; margin-left: auto; }
+
+        .series-nav-label {
+            font-size: 0.72rem;
+            color: var(--sage);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .series-nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
         .reading-time {
             font-size: 0.82rem;
             color: var(--sage);
@@ -730,7 +325,132 @@
             content: '·';
             color: var(--warm);
         }
-    
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px;
+        }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.5rem;
+        }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .scenario-block p { font-size: 1rem; color: #4A4A4A; line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.6rem; display: block;
+        }
+
+        .case-box {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2.5rem;
+            border-left: 4px solid var(--warm);
+        }
+        .case-box-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.8rem;
+        }
+        .case-box p {
+            font-size: 0.98rem !important;
+            line-height: 1.75 !important;
+            color: var(--text-secondary) !important;
+            margin-bottom: 1rem !important;
+        }
+        .case-box p:last-child { margin-bottom: 0 !important; }
+        .case-box-attrib {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 0.9rem !important;
+            margin-top: 1rem !important;
+        }
+        @media (max-width: 600px) {
+            .case-box { padding: 1.3rem 1.4rem; }
+        }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
+
         .reading-progress {
             position: fixed;
             top: 0;
@@ -1457,10 +1177,20 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <span class="article-category">Vivir lo que vale</span>
-            <h1>Nuestra procrastinación, nuestra compañera</h1>
+            <span class="article-category">Criar con dirección</span>
+            <span class="series-badge">Serie: Lo que se transmite entre generaciones · Artículo 3 de 4</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="sin-traumas-1.html">1. ¿Desde qué marco estás leyendo la historia de tus padres?</a></li>
+                    <li><a href="sin-traumas-2.html">2. Lo que duele no siempre es lo que daña</a></li>
+                    <li class="series-index-current">3. Lo que realmente se transmite entre generaciones</li>
+                    <li><a href="sin-traumas-4.html">4. Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</a></li>
+                </ul>
+            </div>
+            <h1>Lo que realmente se transmite entre generaciones</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
-                <span class="reading-time">5 min de lectura</span>
+                <span class="reading-time">11 min de lectura</span>
             </p>
         </div>
     </header>
@@ -1473,71 +1203,112 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>La procrastinación es una respuesta normal que todos tenemos, en algún momento, a la incomodidad. Más allá de ser un simple problema de gestión del tiempo, la procrastinación es una <strong>conducta de evitación aprendida</strong> a lo largo de nuestra vida para sobrevivir, un refugio al que hemos aprendido poco a poco a acudir para escapar de pensamientos, emociones y sentimientos negativos de inferioridad, de inseguridad, de vulnerabilidad, que nos generan malestar.</p>
+<p class="article-intro">En el <a href="sin-traumas-2.html">artículo anterior</a> distinguimos lo que duele de lo que daña, y vimos por qué confundir la imperfección inevitable de cualquier crianza con un trauma real perjudica en ambas direcciones. Ahora toca mirar de cerca el mecanismo: qué es exactamente lo que se transmite entre generaciones, y dónde se interrumpe.</p>
 
-        <p>Con la procrastinación, que nos acecha silenciosamente en muchos momentos de nuestra vida cotidiana, escapamos para no hacer, no ser, no estar en un determinado contexto o hacemos, actuamos, obsesiva y compulsivamente para no hacer lo que podríamos hacer.</p>
+<p>Cuando se habla de transmisión intergeneracional, la imagen que circula con más frecuencia es la de una herida que pasa de padres a hijos como si fuera un objeto que se entrega. Una carga. Algo que se lleva dentro y que, si no se trabaja, inevitablemente acabará en manos de la siguiente generación.</p>
 
-        <h2>El origen: nuestra autoestima dependiente</h2>
+<p>Esa imagen es comprensible. Y contiene algo verdadero. Pero también distorsiona.</p>
 
-        <p>En la base de la procrastinación encontramos nuestra <strong>autoestima dependiente, aprendida y contingente</strong> de la aprobación de los demás. Buscamos evitar el fracaso, la crítica y el juicio, postergando aquellas tareas que nos confrontan con nuestras inseguridades y nos hacen vulnerables, todo aquello que nos preocupa y nos amenaza.</p>
+<div class="infobox">
+<span class="infobox-label">Lo que se transmite</span>
+<p>Lo que se transmite no es el daño como entidad. Lo que se transmite son <strong>patrones de respuesta</strong>: formas aprendidas de regular el malestar, de sostener o evitar la cercanía, de responder bajo presión, de interpretar lo que hacen los demás cuando uno es vulnerable. Formas que se aprendieron en contextos concretos porque en esos contextos funcionaban, porque resolvían algo, porque permitían seguir adelante.</p>
+<p>Eso es lo que se transmite. Y esa distinción cambia todo.</p>
+</div>
 
-        <p>La procrastinación se convierte en nuestro mecanismo de defensa para protegernos del miedo y amenaza al fracaso. Nos permite mantener el control y evitar la posibilidad de fallar. Postergar las tareas nos aleja del riesgo de cometer errores y de no alcanzar la perfección que deseamos para que los demás nos consideren valiosos.</p>
+<p>Porque un patrón de respuesta no es un destino. Es una historia de aprendizaje. Y las historias de aprendizaje pueden cambiar cuando cambian las condiciones en las que se responde.</p>
 
-        <blockquote>
-            Creemos que la procrastinación nos protege de la autocrítica y del juicio negativo de los demás. En realidad, solo nos anestesia temporalmente.
-        </blockquote>
+<h2>Cómo se transmite: el mecanismo real</h2>
 
-        <p>Postergar las tareas nos crea una falsa sensación de alivio al evitar sentirnos incapaces o incompetentes ante la mirada juzgadora de los demás. Pero esta tranquilidad es temporal y tiene un coste muy alto.</p>
+<p>Los patrones no se transmiten porque los padres quieran transmitirlos. Se transmiten porque funcionan a corto plazo en los momentos de mayor presión.</p>
 
-        <h2>Las consecuencias a largo plazo</h2>
+<p>Un padre que aprendió a regular su malestar retirándose emocionalmente cuando la situación se volvía intensa no elige hacerlo con su hijo. Lo hace porque en su historia esa respuesta redujo el malestar de manera efectiva. En términos de la psicología contextual, esa respuesta ha sido <strong>reforzada</strong> —es decir, ha tenido consecuencias que han hecho que se repita— de manera consistente bajo condiciones similares, y forma parte del <strong>repertorio</strong> que ese padre tiene disponible. Y bajo presión, el repertorio disponible se estrecha: aparece lo que ya sabe hacer.</p>
 
-        <p>Si bien la procrastinación puede ofrecer una tranquilidad temporal, a largo plazo nos genera consecuencias negativas que no nos permiten vivir la vida que, en nuestro interior más íntimo y sincero sabemos, anhelamos vivir.</p>
+<p>Una madre que aprendió que mostrar vulnerabilidad tenía consecuencias negativas decide ocultar sus emociones a su hijo. Lo hace porque aprendió, en algún contexto anterior, que la vulnerabilidad no era segura. Y esa <strong>regla verbal</strong> —esa frase aprendida que organiza lo que hacemos sin que nos demos cuenta— sigue operando aunque el contexto haya cambiado completamente.</p>
 
-        <p>La acumulación de tareas pendientes aumenta el estrés y la ansiedad, así como nuestros sentimientos de culpa y vergüenza por no cumplir con nuestras responsabilidades. En la realidad del día a día nos supone la pérdida de oportunidades: postergar las tareas nos limita y nos impide alcanzar nuestras metas.</p>
+<p>Esto tiene una implicación directa para el padre primerizo que llega a consulta con miedo a repetir lo que recibió: el problema no es haber aprendido esos patrones. El problema es no verlos operar. Porque lo que no se ve no puede cambiarse. Sigue funcionando en automático, sin que nadie lo haya elegido.</p>
 
-        <p>Y es la pescadilla que se muerde la cola, porque deteriora nuestra autoestima genuina y alimenta todavía más nuestra autoestima dependiente aprendida en nuestra infancia y adolescencia. En este momento, no son nuestros padres ni nuestros profesores los que nos guían. Somos nosotros los responsables de elegir y decidir, de actuar con nuestras propias manos y pies. La procrastinación reincidente y cotidiana erosiona la confianza en nuestras capacidades y nuestra autoestima genuina se diluye.</p>
+<p>Y aquí aparece la paradoja que más frecuentemente se observa en consulta: el padre que más conscientemente intenta no repetir un patrón, si ese intento está organizado por el miedo y la vigilancia constante, está paradójicamente más activado —con el cuerpo más tenso, la atención más estrecha, la respuesta más rígida— y menos disponible para su hijo que aquel que simplemente está presente.</p>
 
-        <h2>La trampa de la evitación</h2>
+<p>La intención de no dañar, cuando se convierte en el organizador principal de la crianza, puede producir más tensión inter e intrafamiliar que la que intenta evitar.</p>
 
-        <p>Para lidiar con la adversidad que presentan los pensamientos y sentimientos difíciles, muchas personas luchamos inconscientemente con ellos procrastinando para hacerlos desaparecer o simplemente tratando de evitarlos. Estas estrategias pueden tener algunos beneficios a corto plazo, aunque <strong>no suelen funcionar bien a largo plazo</strong>.</p>
+<h2>Los patrones más frecuentes y su función</h2>
 
-        <p>Si priorizamos no actuar, no hacer lo que deseamos hacer, renunciar a lo que verdaderamente queremos, evitando nuestras historias personales, terminamos construyendo nuestras vidas en torno a no sentirnos mal, en lugar de vivir bien.</p>
+<p>Hay formas de respuesta que se repiten con más frecuencia en las familias que llegan a consulta. No porque sean patológicas en sí mismas, sino porque bajo ciertas condiciones de presión se activan de manera automática y pueden limitar la disponibilidad del padre o de la madre.</p>
 
-        <h2>La alternativa: aceptación radical</h2>
+<p><strong>Evitación emocional.</strong> No hablar de lo que duele, cambiar de tema cuando la emoción sube, responder con soluciones cuando el hijo necesita presencia. Con esta respuesta aprendió, en algún contexto anterior, que sostener la emoción propia o ajena era peligroso o inútil. En el corto plazo reduce la incomodidad. En el largo plazo deja al hijo sin modelo de cómo estar con el malestar sin huir de él.</p>
 
-        <p>¡Tenemos una alternativa! La <strong>aceptación radical</strong> (desde la raíz). A través de ella, podemos aprender a reconocer y aceptar las emociones y pensamientos que nos llevan a procrastinar, sin juzgarlos ni intentar cambiarlos.</p>
+<p><strong>Control como regulación.</strong> Anticipar, organizar, supervisar en exceso. Con esta respuesta aprendió que la incertidumbre tiene consecuencias. En el corto plazo genera sensación de seguridad. En el largo plazo priva al hijo de los contextos donde aprende que puede manejarse solo.</p>
 
-        <p>Las investigaciones han descubierto que adoptar una actitud de aceptación, de exposición mirando a nuestros deseos en lugar de procrastinar, puede ser una estrategia más eficaz. Debido a que las cosas que más nos importan a menudo son también las que causan más dolor, evitar el malestar también tiende a significar evitar aquellos aspectos de la vida que más nos importan.</p>
+<p><strong>Búsqueda de validación externa.</strong> Necesitar que el hijo esté bien para sentir que se está haciendo bien. Con esta respuesta aprendió que el propio valor depende de la respuesta del otro. En el corto plazo calma la ansiedad del padre. En el largo plazo transfiere al hijo una responsabilidad que no le corresponde: la de regular el estado emocional de sus padres.</p>
 
-        <p>Superar nuestra barrera de la procrastinación no se trata solo de gestionar el tiempo, sino de <strong>transformar la relación con nosotros mismos</strong>, con nuestra autoestima. Al dejar de lado la evitación y aceptar nuestras emociones, podemos construir una autoestima más sólida y resiliente, capaz de afrontar los desafíos de la vida sin necesidad de recurrir a la procrastinación.</p>
+<p><strong>Respuesta de urgencia ante la señal de malestar del hijo.</strong> Responder con urgencia desproporcionada cada vez que el hijo muestra frustración, tristeza o conflicto. Esta respuesta está gobernada por una regla verbal implícita: <em>el malestar de mi hijo es una señal de que estoy fallando</em>. Esa regla se mantiene porque seguirla reduce el malestar del adulto a corto plazo, independientemente de lo que produzca a largo plazo. En el corto plazo alivia la incomodidad del adulto. En el largo plazo impide que el hijo aprenda que el malestar es tolerable y pasajero.</p>
 
-        <h2>Aprender a aceptar actuando</h2>
+<p><strong>Desconexión bajo carga emocional.</strong> Apagarse, distanciarse, volverse mecánico cuando la situación emocional se intensifica. Con esta respuesta aprendió que en los momentos de mayor carga era necesario protegerse. En el corto plazo evita el desbordamiento. En el largo plazo deja al hijo solo precisamente cuando más necesita que el adulto permanezca.</p>
 
-        <p>Aprender a aceptar actuando, en lugar de procrastinar o huir, se mejora con la práctica. Si dedicamos progresivamente menos energía a controlar lo que pensamos y más a vivir el presente con amabilidad y consideración a nosotros mismos, tendremos más energía para invertir en vivir la vida que deseamos. Es normal que al principio nos cueste aceptar nuestras emociones y actuar.</p>
+<p>Ninguno de estos patrones es una condena ni un trauma. Son respuestas aprendidas que tienen historia y que tienen función. Y todas pueden modificarse, no eliminándolas por voluntad, sino ampliando el repertorio disponible para que bajo esas mismas condiciones sea posible responder de otra manera.</p>
 
-        <blockquote>
-            Si podemos aceptar que la incomodidad es solo parte del cuadro de una vida bien vivida y que nosotros somos los pintores, podremos actuar de acuerdo con lo que realmente nos importa.
-        </blockquote>
+<p>Ninguno de estos patrones tiene el mismo peso ni la misma función en todas las familias. La pregunta psicológica relevante no es si el patrón existe, sino qué función cumple en esta persona, en este contexto, bajo estas condiciones concretas. Esa pregunta —qué hace, en qué condiciones, y para qué— es exactamente lo que distingue un <strong>análisis funcional</strong> de un diagnóstico de categoría.</p>
 
-        <p>Las historias personales negativas generalizadas del pasado pueden ser un obstáculo para vivir bien en el presente, especialmente si nos dejamos atrapar por la idea de que la historia necesita cambiar antes de que podamos empezar a vivir.</p>
+<h2>Lo que los padres que «estuvieron» transmitieron sin saberlo</h2>
 
-        <p>¡Podemos empezar a vivir ahora mismo y llevar a nuestro monstruo de la autoestima dependiente a dar un paseo, a correr nuestra maratón, en lugar de intentar controlarlo o evitarlo!</p>
+<p>Hay algo que conviene nombrar aquí con claridad, porque afecta directamente al lector al que va dirigido este texto.</p>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+<p>Muchos de los padres que hoy son descritos por sus hijos adultos como emocionalmente ausentes, fríos o distantes, dictadores o críticos transmitieron al mismo tiempo algo que raramente aparece en ese relato: presencia sostenida, responsabilidad, compromiso, constancia.</p>
+
+<div class="emotional-block">
+<p>Estuvieron. No siempre de la manera que sus hijos hubieran necesitado. No siempre con las palabras o los gestos que el momento pedía. Pero estuvieron. Trabajaron para que no faltara nada. Aparecieron cuando hubo enfermedad, cuando hubo miedo, cuando hubo crisis. Tomaron decisiones difíciles pensando en sus hijos, aunque sus hijos no siempre lo supieran o lo recordaran así.</p>
+<p>Eso también se transmite. Y tiene un nombre funcional: es el modelo de que el vínculo se sostiene aunque la emoción no siempre se exprese de la manera esperada. De que el compromiso no requiere perfección. De que se puede amar sin saber siempre cómo mostrarlo.</p>
+<p>Ese modelo, aunque invisible en la narrativa del trauma, forma parte de lo que esos hijos llevan. Y negarlo, o no verlo, empobrece tanto la relación con los propios padres como la crianza que se está construyendo.</p>
+</div>
+
+<h2>Dónde ocurre el cambio real</h2>
+
+<p>El cambio no ocurre comprendiendo el recuerdo de la historia. Tampoco ocurre consiguiendo que los propios padres respondan de otra manera, o construyendo una narrativa más completa sobre lo que ocurrió.</p>
+
+<p>Ocurre en el momento concreto en que, bajo las mismas condiciones que antes activaban el patrón automático, aparece una respuesta diferente.</p>
+
+<div class="scenario-block">
+<span class="scenario-label">Tres escenas</span>
+<p>El hijo llora y el padre siente el impulso de resolverlo rápido. Nota ese impulso. Y en lugar de actuar desde él, se sienta al lado y permanece.</p>
+<p>El niño se frustra y la madre siente la urgencia de intervenir. Nota esa urgencia. Y en lugar de actuar desde ella, espera y observa cómo el niño encuentra su camino.</p>
+<p>El adolescente se cierra y el padre siente la tentación de retirarse también. Nota esa tentación. Y en lugar de actuar desde ella, dice: aquí estoy, cuando quieras.</p>
+</div>
+
+<p>Esos momentos no requieren haber resuelto el pasado. No requieren haber perdonado, ni haber entendido todo, ni haber llegado a ningún lugar definitivo con la propia historia.</p>
+
+<p>Requieren haber visto el patrón operar. Y haber elegido, en ese momento, una respuesta diferente.</p>
+
+<p>Eso es lo que interrumpe la transmisión.</p>
+
+<p>No la historia. La conducta.</p>
+
+<hr>
+
+<div class="closing-block">
+<p>En el último artículo de esta serie hablaremos de algo que afecta directamente a esa conducta: cómo la manera en que miras a tus propios padres se convierte, sin que lo planees, en parte de lo que tus hijos aprenden sobre los vínculos.</p>
+</div>
+
+        <p class="article-signature">José Javier</p>
 
     </article>
 
-    <!-- ARTICLE NAVIGATION -->
-    <div class="article-nav">
-        <div class="article-nav-inner">
-            <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="article-nav-prev">
-                <span class="article-nav-label">← Anterior</span>
-                <span class="article-nav-title">Mi orgullo aprendido, la danza con el fuego</span>
-            </a>
-            <a href="la-tristeza-y-la-inactividad.html" class="article-nav-next">
-                <span class="article-nav-label">Siguiente →</span>
-                <span class="article-nav-title">La tristeza y la inactividad</span>
-            </a>
+    <!-- SERIES NAVIGATION -->
+    <div class="article-nav series-transition">
+        <div class="series-transition-context">
+            <span class="series-transition-label">SERIE: Lo que se transmite entre generaciones</span>
+            <span class="series-transition-progress">Artículo 3 de 4</span>
+        </div>
+        <div class="series-transition-cards">
+        <a href="sin-traumas-2.html" class="series-card series-card-prev">
+            <span class="series-card-direction">← Anterior</span>
+            <span class="series-card-title">Lo que duele no siempre es lo que daña</span>
+            <span class="series-card-summary"></span>
+        </a>
+        <a href="sin-traumas-4.html" class="series-card series-card-next">
+            <span class="series-card-direction">Siguiente →</span>
+            <span class="series-card-title">Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</span>
+            <span class="series-card-summary"></span>
+        </a>
         </div>
     </div>
 
@@ -1545,19 +1316,15 @@
     <div class="share-bar">
         <span class="share-bar-label">Compartir</span>
         <div class="share-icons">
-            <!-- WhatsApp -->
             <a class="share-icon" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
-            <!-- Twitter/X -->
             <a class="share-icon" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Compartir en Twitter/X">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <!-- Facebook -->
             <a class="share-icon" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <!-- Copiar enlace -->
             <button class="share-icon" id="share-copy" aria-label="Copiar enlace">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </button>
@@ -1593,7 +1360,7 @@
     <div class="article-cta">
         <div class="article-cta-box">
             <h3>¿Te ha resonado este artículo?</h3>
-            <p>Si algo de lo que has leído conecta con lo que estás viviendo, puedes escribirme sin compromiso. Un mensaje corto es suficiente.</p>
+            <p>Si reconoces alguno de estos patrones operando en tu crianza —y la sola idea de verlo te activa el miedo a estar fallando— puedes escribirme. No para añadir más teoría, sino para mirar juntos qué patrón está apareciendo, en qué condiciones, y qué respuesta diferente es posible.</p>
             <a href="https://wa.me/34628301511" target="_blank" style="color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; font-weight: 500; font-size: 0.95rem; transition: text-decoration-color 0.3s; display: inline-flex; align-items: center; gap: 0.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--sage)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
         </div>
     </div>
@@ -1601,19 +1368,19 @@
     <!-- RELATED ARTICLES -->
     <section class="related">
         <div class="related-inner">
-            <h2>Sigue leyendo</h2>
+            <h2>Más artículos de la serie</h2>
             <div class="related-grid">
-                <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>Mi orgullo aprendido, la danza con el fuego</h3>
-                </a>
-                <a href="la-tristeza-y-la-inactividad.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>La tristeza y la inactividad</h3>
-                </a>
                 <a href="sin-traumas-1.html" class="related-card">
-                    <div class="related-card-category">Criar con dirección</div>
-                    <h3>¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones? (serie de 4)</h3>
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>¿Desde qué marco estás leyendo la historia de tus padres?</h3>
+                </a>
+                <a href="sin-traumas-2.html" class="related-card">
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>Lo que duele no siempre es lo que daña</h3>
+                </a>
+                <a href="sin-traumas-4.html" class="related-card">
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</h3>
                 </a>
             </div>
         </div>
@@ -1634,7 +1401,6 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
     <!-- FLOATING INSTAGRAM -->
     <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
@@ -1910,6 +1676,13 @@ document.addEventListener("DOMContentLoaded", function() {
     (function() {
         var article = document.querySelector('.article-body');
         if (!article || !('IntersectionObserver' in window)) return;
+        var isEN = document.documentElement.lang === 'en';
+        var i18n = {
+            bookmarkAria: isEN ? 'Resume reading' : 'Retomar lectura',
+            bookmarkText: isEN ? 'Resume where you left off' : 'Retomar donde lo dejaste',
+            bookmarkBtn: isEN ? 'Continue' : 'Continuar',
+            bookmarkClose: isEN ? 'Close' : 'Cerrar'
+        };
         var slug = window.location.pathname;
         var storageKey = 'reading-pos-' + slug;
         var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
@@ -1941,10 +1714,10 @@ document.addEventListener("DOMContentLoaded", function() {
             var banner = document.createElement('div');
             banner.className = 'reading-bookmark';
             banner.setAttribute('role', 'dialog');
-            banner.setAttribute('aria-label', 'Retomar lectura');
-            banner.innerHTML = '<span class="reading-bookmark-text">Retomar donde lo dejaste</span>' +
-                '<button type="button" class="reading-bookmark-continue">Continuar</button>' +
-                '<button type="button" class="reading-bookmark-close" aria-label="Cerrar">&times;</button>';
+            banner.setAttribute('aria-label', i18n.bookmarkAria);
+            banner.innerHTML = '<span class="reading-bookmark-text">' + i18n.bookmarkText + '</span>' +
+                '<button type="button" class="reading-bookmark-continue">' + i18n.bookmarkBtn + '</button>' +
+                '<button type="button" class="reading-bookmark-close" aria-label="' + i18n.bookmarkClose + '">&times;</button>';
             document.body.appendChild(banner);
             requestAnimationFrame(function() { banner.classList.add('visible'); });
             banner.querySelector('.reading-bookmark-continue').addEventListener('click', function() {

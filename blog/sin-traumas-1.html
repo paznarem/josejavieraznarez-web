@@ -11,11 +11,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Nuestra procrastinación, nuestra compañera — José Javier Aznárez | Psicólogo Contextual</title>
-    <meta name="description" content="La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.">
-    <meta property="og:title" content="Nuestra procrastinación, nuestra compañera — José Javier Aznárez">
-    <meta property="og:description" content="La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.">
+    <title>¿Desde qué marco estás leyendo la historia de tus padres? — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="Primer artículo de la serie sobre transmisión intergeneracional. Cómo el marco desde el que leemos nuestra historia familiar organiza lo que recordamos y lo que hacemos hoy con nuestros hijos. Una mirada desde la Ciencia Conductual Contextual y ACT.">
+    <meta property="og:title" content="¿Desde qué marco estás leyendo la historia de tus padres? — José Javier Aznárez">
+    <meta property="og:description" content="Primer artículo de la serie sobre transmisión intergeneracional. Cómo el marco desde el que leemos nuestra historia familiar organiza lo que recordamos y lo que hacemos hoy con nuestros hijos. Una mirada desde la Ciencia Conductual Contextual y ACT.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
     <meta property="og:image:width" content="1200">
@@ -25,8 +24,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Nuestra procrastinación, nuestra compañera",
-      "description": "La procrastinación no es un defecto de carácter, sino una respuesta aprendida al malestar. Descubre cómo la aceptación radical puede transformarla.",
+      "headline": "¿Desde qué marco estás leyendo la historia de tus padres?",
+      "description": "Primer artículo de la serie sobre transmisión intergeneracional. Cómo el marco desde el que leemos nuestra historia familiar organiza lo que recordamos y lo que hacemos hoy con nuestros hijos.",
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "name": "¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones?"
+      },
       "author": {
         "@type": "Person",
         "name": "José Javier Aznárez Barrio",
@@ -47,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300..500;1,300..500&display=swap" rel="stylesheet">
 
     <style>
-        /* ==================== VARIABLES (same as landing) ==================== */
+        /* ==================== VARIABLES ==================== */
         :root {
             --sage: #6B7F5E;
             --sage-light: #8A9E7C;
@@ -66,167 +69,35 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            color: var(--text-primary);
-            background: var(--white);
-            line-height: 1.7;
-        }
+        body { font-family: 'Work Sans', sans-serif; color: var(--text-primary); background: var(--white); line-height: 1.7; }
 
-        /* ==================== NAV (identical to landing) ==================== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 0.7rem 2rem;
-            background: rgba(254, 253, 251, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--sage-dark);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.93rem;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            transition: color 0.3s;
-        }
-
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.7rem 2rem; background: rgba(254,253,251,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.1rem; color: var(--sage-dark); text-decoration: none; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links li { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.93rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--sage-dark); }
+        .nav-links a.active { color: var(--sage-dark); font-weight: 500; }
+        .nav-cta { background: var(--sage); color: var(--white) !important; padding: 0.5rem 1.3rem; border-radius: 100px; font-weight: 500; transition: background 0.3s, transform 0.2s !important; }
+        .nav-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 24px; height: 2px; background: var(--text-primary); transition: 0.3s; }
 
-        .nav-cta {
-            background: var(--sage);
-            color: var(--white) !important;
-            padding: 0.5rem 1.3rem;
-            border-radius: 100px;
-            font-weight: 500;
-            transition: background 0.3s, transform 0.2s !important;
-        }
+        .article-header { padding: 8rem 2rem 4rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%); text-align: center; }
+        .article-header-inner { max-width: 680px; margin: 0 auto; }
+        .article-category { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(107,127,94,0.1); color: var(--sage-dark); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+        .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.5rem; color: var(--text-primary); }
+        .article-meta { font-size: 0.9rem; color: var(--text-light); font-weight: 300; }
+        .article-meta a { color: var(--sage); text-decoration: none; }
 
-        .nav-cta:hover {
-            background: var(--sage-dark);
-            transform: translateY(-1px);
-        }
+        .back-to-blog { max-width: 680px; margin: 0 auto; padding: 2rem 2rem 0; }
+        .back-to-blog a { font-size: 0.88rem; color: var(--sage); text-decoration: none; transition: color 0.3s; }
+        .back-to-blog a:hover { color: var(--sage-dark); }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-        }
+        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
 
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        /* ==================== ARTICLE HEADER ==================== */
-        .article-header {
-            padding-top: 5rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
-            text-align: center;
-        }
-
-        .article-header-inner {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 4rem 2rem 3rem;
-        }
-
-        .article-category {
-            display: inline-block;
-            background: var(--sage);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 400;
-            line-height: 1.2;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-meta {
-            font-size: 0.9rem;
-            color: var(--sage);
-        }
-
-        .article-meta a {
-            color: var(--sage);
-            text-decoration: none;
-        }
-
-        .article-meta a:hover { text-decoration: underline; }
-
-        /* ==================== BACK LINK ==================== */
-        .back-to-blog {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem 0;
-        }
-
-        .back-to-blog a {
-            font-size: 0.85rem;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .back-to-blog a:hover { color: var(--sage); }
-
-        /* ==================== ARTICLE BODY ==================== */
         .article-body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2.5rem 5rem;
-            background: #FDFBF7;
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             font-kerning: normal;
             text-rendering: optimizeLegibility;
@@ -243,119 +114,21 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-
-        .article-body p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: #3D3D3D;
-            margin-bottom: 1.6rem;
-        }
-
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-top: 3.5rem;
-            margin-bottom: 1.2rem;
-            letter-spacing: -0.02em;
-            padding-top: 2rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-body h2:first-of-type {
-            border-top: none;
-            padding-top: 0;
-            margin-top: 2.5rem;
-        }
-
-        .article-body h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin: 2rem 0 0.8rem;
-        }
-
-        .article-body blockquote {
-            border-left: 3px solid var(--sage);
-            margin: 2.5rem 0;
-            padding: 1rem 0 1rem 2rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--sage-dark);
-            line-height: 1.6;
-        }
-
-        .article-body ul, .article-body ol {
-            margin: 1.2rem 0 1.6rem 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .article-body li {
-            margin-bottom: 0.5rem;
-            line-height: 1.75;
-            font-size: 1.05rem;
-        }
-
+        .article-body p { font-size: 1.05rem; line-height: 1.85; color: #3D3D3D; margin-bottom: 1.5rem; }
+        .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark); }
+        .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
+        .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+        .article-body blockquote { border-left: 3px solid var(--sage-light); margin: 2.5rem 0; padding: 1rem 1.5rem; background: var(--cream); border-radius: 0 8px 8px 0; }
+        .article-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
+        .article-body ul, .article-body ol { margin: 1.5rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.7; }
         .article-body strong { color: var(--text-primary); font-weight: 500; }
         .article-body em { font-style: italic; }
+        .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
+        .article-body a { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 2px; }
+        .article-body a:hover { color: var(--sage); }
 
-        .article-body hr {
-            border: none;
-            border-top: 1px solid var(--cream-dark);
-            margin: 3rem 0;
-        }
-
-        /* ==================== ARTICLE NAV ==================== */
-        .article-nav {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 2rem 2.5rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-nav-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .article-nav-prev, .article-nav-next {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            text-decoration: none;
-            max-width: 45%;
-            transition: opacity 0.3s;
-        }
-
-        .article-nav-prev:hover, .article-nav-next:hover { opacity: 0.7; }
-
-        .article-nav-next { text-align: right; margin-left: auto; }
-
-        .article-nav-label {
-            font-size: 0.78rem;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .article-nav-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: var(--sage-dark);
-            line-height: 1.3;
-        }
-
-        /* ==================== CTA BOX ==================== */
-        .article-cta {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2rem 4rem;
-        }
-
+        .article-cta { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .article-cta-box {
             background: var(--cream);
             border-radius: 1.5rem;
@@ -363,229 +136,61 @@
             text-align: center;
             border: 1px solid var(--cream-dark);
         }
+        .article-cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.8rem; }
+        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.75rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
 
-        .article-cta-box h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-        }
+        .related { background: var(--cream); padding: 4rem 2rem; }
+        .related-inner { max-width: 1000px; margin: 0 auto; }
+        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.8rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .related-card { background: var(--white); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
+        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); line-height: 1.4; }
 
-        .article-cta-box p {
-            color: var(--text-secondary);
-            margin-bottom: 1.8rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--whatsapp);
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 100px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
-        }
-
-        /* ==================== RELATED ==================== */
-        .related {
-            background: var(--cream);
-            padding: 4rem 2rem;
-        }
-
-        .related-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .related h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .related-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .related-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-
-        .related-card-category {
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-            color: var(--sage);
-            margin-bottom: 0.6rem;
-        }
-
-        .related-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            line-height: 1.4;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            background: var(--sage-dark);
-            color: rgba(255,255,255,0.7);
-            padding: 3rem 2rem;
-        }
-
-        .footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-            text-align: center;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--white);
-            font-weight: 400;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.82rem;
-            transition: color 0.3s;
-        }
-
+        footer { background: var(--sage-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--white); }
+        .footer-legal { width: 100%; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.7; }
 
-        .footer-legal {
-            font-size: 0.75rem;
-            max-width: 680px;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.4);
-        }
+        .instagram-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 999; width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(188,24,136,0.35); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .instagram-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(188,24,136,0.5); }
+        .instagram-float svg { width: 28px; height: 28px; stroke: white; fill: none; }
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
-        /* ==================== FLOATING INSTAGRAM ==================== */
-        .instagram-float {
-            position: fixed;
-            bottom: 2rem;
-            left: 2rem;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-        .instagram-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
-        }
-        .instagram-float svg {
-            width: 28px;
-            height: 28px;
-            stroke: white;
-            fill: none;
-        }
+        .share-bar { max-width: 680px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
+        .share-bar-label { font-size: 0.68rem; font-weight: 500; color: var(--sage); text-transform: uppercase; letter-spacing: 0.13em; flex-shrink: 0; }
+        .share-icons { display: flex; align-items: center; gap: 0.85rem; }
+        .share-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--sage); text-decoration: none; transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
+        .share-icon:hover { color: var(--sage-dark); }
+        .share-icon svg { display: block; }
+        .share-copy-tooltip { font-size: 0.68rem; font-weight: 500; color: var(--sage); letter-spacing: 0.05em; opacity: 0; transition: opacity 0.25s; pointer-events: none; white-space: nowrap; }
+        .share-copy-tooltip.visible { opacity: 1; }
+        .share-bar-sep { width: 1px; height: 1.1rem; background: var(--cream-dark); flex-shrink: 0; }
+        .share-btn-pdf { font-family: 'Work Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--sage); background: none; border: none; cursor: pointer; padding: 0; text-decoration: none; transition: color 0.2s; flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .share-btn-pdf:hover { color: var(--sage-dark); }
 
-        /* ==================== WHATSAPP FLOAT ==================== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 999;
-            width: 56px;
-            height: 56px;
-            background: var(--whatsapp);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(254, 253, 251, 0.98);
-                flex-direction: column;
-                padding: 1.5rem 2rem;
-                gap: 1rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(254,253,251,0.98); flex-direction: column; padding: 1.5rem 2rem; gap: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
             .nav-links.open { display: flex; }
             .hamburger { display: flex; }
             .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
-
         @media (max-width: 600px) {
             .article-body { padding: 2rem 1.5rem 4rem; }
             .article-cta { padding: 2.5rem 1.5rem 4rem; }
             .back-to-blog { padding: 0 1.5rem 2rem; }
-            .article-nav { padding: 2rem 1.5rem 0; }
-            .article-nav-prev,
-            .article-nav-next { max-width: 100%; }
+            .series-nav-bar { padding: 2rem 1.5rem 0; flex-direction: column; }
+            .series-nav-link { max-width: 100%; }
+            .series-nav-next { text-align: left; margin-left: 0; }
+            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
             .article-body p {
                 line-height: 1.8;
                 font-size: 1rem;
@@ -616,109 +221,99 @@
                 line-height: 1.8;
             }
         }
-
-
-        /* ==================== SHARE BAR ==================== */
-        .share-bar {
-            max-width: 680px;
-            margin: 3rem auto 2rem;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .share-bar-label {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-            flex-shrink: 0;
-        }
-
-        .share-icons {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-        }
-
-        .share-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .share-icon:hover { color: var(--sage-dark); }
-        .share-icon svg { display: block; }
-
-        .share-copy-tooltip {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            opacity: 0;
-            transition: opacity 0.25s;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .share-copy-tooltip.visible { opacity: 1; }
-
-        .share-bar-sep {
-            width: 1px;
-            height: 1.1rem;
-            background: var(--cream-dark);
-            flex-shrink: 0;
-        }
-
-        .share-btn-pdf {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--sage);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            text-decoration: none;
-            transition: color 0.2s;
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .share-btn-pdf:hover { color: var(--sage-dark); }
-
-        @media (max-width: 600px) {
-            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
-        }
-
-        /* ==================== PRINT ==================== */
         @media print {
-            nav, footer, .share-bar, .whatsapp-float, .instagram-float,
-            .article-cta, .related, .back-to-blog, .article-nav { display: none !important; }
+            nav, footer, .share-bar, .whatsapp-float, .instagram-float, .article-cta, .related, .back-to-blog, .series-nav-bar { display: none !important; }
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
-            .article-header .article-meta,
-            .article-header .article-category { color: #444 !important; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
-            .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             a { color: #000 !important; text-decoration: none; }
         }
-    
+
+        /* ==================== SERIES BADGE ==================== */
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .series-badge::before {
+            content: "♡";
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: center; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-secondary) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* ==================== SERIES NAV ==================== */
+        .series-nav-bar {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 2rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .series-nav-link {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            text-decoration: none;
+            max-width: 45%;
+            transition: opacity 0.3s;
+        }
+
+        .series-nav-link:hover .series-nav-title { color: var(--sage-dark); }
+        .series-nav-next { text-align: right; margin-left: auto; }
+
+        .series-nav-label {
+            font-size: 0.72rem;
+            color: var(--sage);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .series-nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
         .reading-time {
             font-size: 0.82rem;
             color: var(--sage);
@@ -730,7 +325,132 @@
             content: '·';
             color: var(--warm);
         }
-    
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px;
+        }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.5rem;
+        }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .scenario-block p { font-size: 1rem; color: #4A4A4A; line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.6rem; display: block;
+        }
+
+        .case-box {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2.5rem;
+            border-left: 4px solid var(--warm);
+        }
+        .case-box-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.8rem;
+        }
+        .case-box p {
+            font-size: 0.98rem !important;
+            line-height: 1.75 !important;
+            color: var(--text-secondary) !important;
+            margin-bottom: 1rem !important;
+        }
+        .case-box p:last-child { margin-bottom: 0 !important; }
+        .case-box-attrib {
+            font-style: italic;
+            color: var(--text-light) !important;
+            font-size: 0.9rem !important;
+            margin-top: 1rem !important;
+        }
+        @media (max-width: 600px) {
+            .case-box { padding: 1.3rem 1.4rem; }
+        }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
+
         .reading-progress {
             position: fixed;
             top: 0;
@@ -1457,10 +1177,20 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <span class="article-category">Vivir lo que vale</span>
-            <h1>Nuestra procrastinación, nuestra compañera</h1>
+            <span class="article-category">Criar con dirección</span>
+            <span class="series-badge">Serie: Lo que se transmite entre generaciones · Artículo 1 de 4</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li class="series-index-current">1. ¿Desde qué marco estás leyendo la historia de tus padres?</li>
+                    <li><a href="sin-traumas-2.html">2. Lo que duele no siempre es lo que daña</a></li>
+                    <li><a href="sin-traumas-3.html">3. Lo que realmente se transmite entre generaciones</a></li>
+                    <li><a href="sin-traumas-4.html">4. Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</a></li>
+                </ul>
+            </div>
+            <h1>¿Desde qué marco estás leyendo la historia de tus padres?</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
-                <span class="reading-time">5 min de lectura</span>
+                <span class="reading-time">12 min de lectura</span>
             </p>
         </div>
     </header>
@@ -1473,71 +1203,155 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>La procrastinación es una respuesta normal que todos tenemos, en algún momento, a la incomodidad. Más allá de ser un simple problema de gestión del tiempo, la procrastinación es una <strong>conducta de evitación aprendida</strong> a lo largo de nuestra vida para sobrevivir, un refugio al que hemos aprendido poco a poco a acudir para escapar de pensamientos, emociones y sentimientos negativos de inferioridad, de inseguridad, de vulnerabilidad, que nos generan malestar.</p>
+<p class="article-intro">El cambio comienza cuando los padres pueden preguntarse: ¿estoy respondiendo desde la dirección que quiero dar a mi vida?</p>
 
-        <p>Con la procrastinación, que nos acecha silenciosamente en muchos momentos de nuestra vida cotidiana, escapamos para no hacer, no ser, no estar en un determinado contexto o hacemos, actuamos, obsesiva y compulsivamente para no hacer lo que podríamos hacer.</p>
+<p>Muchos padres primerizos llegan a consulta con una historia parecida.</p>
 
-        <h2>El origen: nuestra autoestima dependiente</h2>
+<p>Han pasado por terapia, han leído libros de crianza, han seguido cuentas en redes sociales que hablan de apego seguro, de heridas de infancia, de patrones familiares que se repiten. Y en algún momento de ese recorrido, algo encajó, descubrieron una herida: empezaron a ver su propia historia de crianza con ojos nuevos y encontraron culpables a sus problemas, barreras, dificultades. A recordar momentos en los que sus padres no respondieron como hubieran necesitado. A identificar silencios, exigencias, distancias o límites que ahora, a la luz de lo que han aprendido, parecen tener nombre: trauma.</p>
 
-        <p>En la base de la procrastinación encontramos nuestra <strong>autoestima dependiente, aprendida y contingente</strong> de la aprobación de los demás. Buscamos evitar el fracaso, la crítica y el juicio, postergando aquellas tareas que nos confrontan con nuestras inseguridades y nos hacen vulnerables, todo aquello que nos preocupa y nos amenaza.</p>
+<p>Esas narrativas tienen utilidad real en determinados contextos. El problema no es que existan, sino lo que ocurre cuando se convierten en el único marco desde el que se lee cualquier recuerdo de la historia familiar.</p>
 
-        <p>La procrastinación se convierte en nuestro mecanismo de defensa para protegernos del miedo y amenaza al fracaso. Nos permite mantener el control y evitar la posibilidad de fallar. Postergar las tareas nos aleja del riesgo de cometer errores y de no alcanzar la perfección que deseamos para que los demás nos consideren valiosos.</p>
+<p>Con ese diagnóstico encima, llegaron a la paternidad con una certeza y con un miedo.</p>
 
-        <blockquote>
-            Creemos que la procrastinación nos protege de la autocrítica y del juicio negativo de los demás. En realidad, solo nos anestesia temporalmente.
-        </blockquote>
+<p>La certeza: su familia de origen fue disfuncional.</p>
 
-        <p>Postergar las tareas nos crea una falsa sensación de alivio al evitar sentirnos incapaces o incompetentes ante la mirada juzgadora de los demás. Pero esta tranquilidad es temporal y tiene un coste muy alto.</p>
+<p>El miedo: van a repetirlo.</p>
 
-        <h2>Las consecuencias a largo plazo</h2>
+<p>Ese miedo es real. Merece respeto. Y también merece ser examinado con honestidad.</p>
 
-        <p>Si bien la procrastinación puede ofrecer una tranquilidad temporal, a largo plazo nos genera consecuencias negativas que no nos permiten vivir la vida que, en nuestro interior más íntimo y sincero sabemos, anhelamos vivir.</p>
+<p>Porque existe una pregunta que pocas veces se hace en esos mismos espacios donde se aprendió a nombrar el daño: ¿desde qué marco estoy leyendo ahora la historia de mis padres?</p>
 
-        <p>La acumulación de tareas pendientes aumenta el estrés y la ansiedad, así como nuestros sentimientos de culpa y vergüenza por no cumplir con nuestras responsabilidades. En la realidad del día a día nos supone la pérdida de oportunidades: postergar las tareas nos limita y nos impide alcanzar nuestras metas.</p>
+<p>No es una pregunta para defender a nadie, ni para minimizar ningún dolor. Es una pregunta funcional: los marcos desde los que interpretamos nuestra historia no son neutros. Organizan lo que recordamos, lo que sentimos al recordarlo y, sobre todo, cómo nos relacionamos con ello en el presente.</p>
 
-        <p>Y es la pescadilla que se muerde la cola, porque deteriora nuestra autoestima genuina y alimenta todavía más nuestra autoestima dependiente aprendida en nuestra infancia y adolescencia. En este momento, no son nuestros padres ni nuestros profesores los que nos guían. Somos nosotros los responsables de elegir y decidir, de actuar con nuestras propias manos y pies. La procrastinación reincidente y cotidiana erosiona la confianza en nuestras capacidades y nuestra autoestima genuina se diluye.</p>
+<p>Un padre que dedicó veinte años a estar presente, a trabajar para que no faltara nada, a aparecer en cada momento importante aunque no supiera siempre cómo hacerlo, puede quedar reducido, en esa lectura, a sus ausencias. No porque las ausencias no existieran, sino porque el marco con el que ahora se mira esa historia tiene un foco muy concreto: detectar lo que falló.</p>
 
-        <h2>La trampa de la evitación</h2>
+<p>Y lo que falló, cuando se busca, siempre se encuentra.</p>
 
-        <p>Para lidiar con la adversidad que presentan los pensamientos y sentimientos difíciles, muchas personas luchamos inconscientemente con ellos procrastinando para hacerlos desaparecer o simplemente tratando de evitarlos. Estas estrategias pueden tener algunos beneficios a corto plazo, aunque <strong>no suelen funcionar bien a largo plazo</strong>.</p>
+<div class="emotional-block">
+<p>Esto no ocurre porque esos padres y madres primerizos tengan mala intención. Ocurre porque han aprendido a mirar su historia con herramientas que son útiles en determinados contextos psicológicos —contextos de adversidad real, de abuso, de abandono sostenido— pero que aplicadas de manera indiscriminada pueden transformar la imperfección inevitable de cualquier crianza en evidencia de disfunción.</p>
+<p>El resultado es una paradoja que tiene consecuencias directas: mientras más trabajan para «no repetir los patrones», más atentos están a sus propios errores, más exigentes se vuelven consigo mismos y menos disponibles emocionalmente para sus hijos. El miedo al daño se convierte, él mismo, en una fuente de rigidez.</p>
+</div>
 
-        <p>Si priorizamos no actuar, no hacer lo que deseamos hacer, renunciar a lo que verdaderamente queremos, evitando nuestras historias personales, terminamos construyendo nuestras vidas en torno a no sentirnos mal, en lugar de vivir bien.</p>
+<div class="infobox">
+<span class="infobox-label">Lo que se transmite</span>
+<p>Lo que se transmite entre generaciones no es el trauma como entidad. Lo que se transmite son <strong>patrones de respuesta</strong>: formas aprendidas de regular el malestar, de sostener o evitar la cercanía, de responder bajo presión. Y esos patrones no se interrumpen comprendiendo la historia ni señalando a quienes nos precedieron. Se interrumpen en el momento concreto en que, bajo las mismas condiciones de siempre, aparece una respuesta diferente.</p>
+</div>
 
-        <h2>La alternativa: aceptación radical</h2>
+<p>Para llegar a ese momento, a veces es necesario antes hacer algo más difícil que analizar el pasado: mirar a los propios padres como personas. Con sus recursos y sus límites. Con su amor y su torpeza. Con lo que dieron —que en muchos casos fue todo lo que tenían— y con lo que no pudieron dar porque nadie se lo dio a ellos.</p>
 
-        <p>¡Tenemos una alternativa! La <strong>aceptación radical</strong> (desde la raíz). A través de ella, podemos aprender a reconocer y aceptar las emociones y pensamientos que nos llevan a procrastinar, sin juzgarlos ni intentar cambiarlos.</p>
+<p>Ese cambio de mirada no es resignación. Es el primer movimiento real hacia una crianza que no esté organizada por la reacción, sino por la dirección que cada padre y cada madre quiere dar a su vida y a la de sus hijos.</p>
 
-        <p>Las investigaciones han descubierto que adoptar una actitud de aceptación, de exposición mirando a nuestros deseos en lugar de procrastinar, puede ser una estrategia más eficaz. Debido a que las cosas que más nos importan a menudo son también las que causan más dolor, evitar el malestar también tiende a significar evitar aquellos aspectos de la vida que más nos importan.</p>
+<h2>Lo que dice la psicología contextual sobre la transmisión intergeneracional</h2>
 
-        <p>Superar nuestra barrera de la procrastinación no se trata solo de gestionar el tiempo, sino de <strong>transformar la relación con nosotros mismos</strong>, con nuestra autoestima. Al dejar de lado la evitación y aceptar nuestras emociones, podemos construir una autoestima más sólida y resiliente, capaz de afrontar los desafíos de la vida sin necesidad de recurrir a la procrastinación.</p>
+<p>El llamado «trauma intergeneracional» no es un destino inamovible. Pero para entender por qué, hace falta un marco que vaya más allá de las explicaciones habituales.</p>
 
-        <h2>Aprender a aceptar actuando</h2>
+<p>La <strong>Ciencia Conductual Contextual (CBS)</strong> —el enfoque científico desde el que trabaja este blog— estudia el comportamiento humano siempre en relación con el contexto en que ocurre. No busca entidades dentro de la persona («tiene un trauma», «tiene un apego inseguro») sino que analiza qué hace la persona, en qué condiciones lo hace, y qué función cumple esa respuesta. Esa forma de mirar produce conclusiones muy distintas a las de otros enfoques.</p>
 
-        <p>Aprender a aceptar actuando, en lugar de procrastinar o huir, se mejora con la práctica. Si dedicamos progresivamente menos energía a controlar lo que pensamos y más a vivir el presente con amabilidad y consideración a nosotros mismos, tendremos más energía para invertir en vivir la vida que deseamos. Es normal que al principio nos cueste aceptar nuestras emociones y actuar.</p>
+<p>Desde este marco, lo que se transmite entre generaciones no es un daño como entidad cerrada. Son patrones de respuesta que se han aprendido en contextos concretos y que siguen funcionando en el presente. Las experiencias dolorosas del pasado pueden influir en la crianza y en las relaciones familiares, pero es posible reducir esa influencia cuando se identifican las funciones que mantienen esos patrones —es decir, para qué sirven, qué consiguen a corto plazo— y se amplía el <strong>repertorio</strong> de respuesta disponible. Repertorio, en este enfoque, significa el conjunto de respuestas que una persona tiene realmente a su disposición en un momento dado. No lo que sabe hacer en abstracto, sino lo que de verdad puede hacer cuando la situación aprieta.</p>
 
-        <blockquote>
-            Si podemos aceptar que la incomodidad es solo parte del cuadro de una vida bien vivida y que nosotros somos los pintores, podremos actuar de acuerdo con lo que realmente nos importa.
-        </blockquote>
+<p>Hay otro concepto que va a aparecer varias veces en esta serie de artículos: las <strong>redes verbales</strong>. Piensa en lo que te ocurre cuando alguien dice «tu padre nunca estuvo». Esas tres palabras pueden activar de golpe recuerdos, emociones, sensaciones físicas y conclusiones que organizan cómo te relacionas con tu padre ahora mismo. No porque las hayas elegido, sino porque tu mente ha aprendido a conectar esas palabras con toda esa red de experiencias. A esas conexiones aprendidas entre palabras, ideas y experiencias se las llama redes verbales. Son invisibles, pero organizan buena parte de lo que hacemos.</p>
 
-        <p>Las historias personales negativas generalizadas del pasado pueden ser un obstáculo para vivir bien en el presente, especialmente si nos dejamos atrapar por la idea de que la historia necesita cambiar antes de que podamos empezar a vivir.</p>
+<p>Esas redes no desaparecen. Pero pueden dejar de gobernar la acción cuando se introducen nuevas formas de responder. A esa capacidad de mantener o cambiar lo que hacemos en función de lo que nos importa —incluso cuando aparecen pensamientos, emociones o sensaciones difíciles— se le llama <strong>flexibilidad psicológica</strong>. Es el concepto central de la <strong>Terapia de Aceptación y Compromiso (ACT)</strong>, el modelo psicológico que se utiliza en este blog.</p>
 
-        <p>¡Podemos empezar a vivir ahora mismo y llevar a nuestro monstruo de la autoestima dependiente a dar un paseo, a correr nuestra maratón, en lugar de intentar controlarlo o evitarlo!</p>
+<h2>Un caso real</h2>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+<p>El siguiente testimonio fue publicado en redes sociales en 2023. Se reproduce con nombre ficticio.</p>
+
+<div class="case-box">
+<span class="case-box-label">Testimonio</span>
+<p>«Ayer me confirmaron que voy a empezar un nuevo trabajo dentro de la misma empresa, pero en un centro distinto y con más responsabilidad. Estaba muy orgullosa de mí misma y tenía muchas ganas de contarlo, hasta que llamé a mis padres.</p>
+<p>Cuando les di la noticia, mi madre sonrió y me dijo "enhorabuena". Mi padre, en cambio, apenas reaccionó. Ni siquiera me felicitó. Se limitó a hacer preguntas con gesto serio, sin un atisbo de entusiasmo.</p>
+<p>No es la primera vez ni será la última. Jamás olvidaré el día en que terminé la universidad: ni sonrió, ni me felicitó, ni me dijo nada. Simplemente se quedó ahí, mirándome, mientras mi madre me abrazaba.</p>
+<p>Una vez más, mi padre me ha arruinado un momento que debería haber sido feliz. Y, por mucho que sea adulta, que haya sanado, que esté en paz con mi pasado, sus desplantes siguen doliendo. Me duele que esta persona sea mi padre.</p>
+<p>¿Qué quiero decir con esto? Que el trauma generacional existe. A los futuros padres y madres: no seáis como mi padre. Los hijos no olvidamos. A veces, tampoco perdonamos.»</p>
+<p class="case-box-attrib">— Isabel (nombre ficticio)</p>
+</div>
+
+<p>El dolor de Isabel es real. No hay ninguna razón para ponerlo en duda. Y sin embargo, el relato que hace de ese dolor merece ser leído con cuidado, porque contiene algo más que una experiencia personal: contiene una interpretación. Y esa interpretación es la que organiza su conducta ahora, no solo el momento que vivió.</p>
+
+<p>Fíjate en lo que Isabel no dice.</p>
+
+<p>No dice que su padre no estuviera. No dice que no trabajara para que ella pudiera estudiar. No dice que no apareciera cuando enfermó, cuando tuvo miedo, cuando necesitó que alguien respondiera. No dice que la abandonara, que la humillara, que no le importara lo que le pasaba.</p>
+
+<p>Dice que no sonrió el día de su graduación. Que hizo preguntas en lugar de abrazarla. Que su entusiasmo no fue visible.</p>
+
+<p>Eso es lo que ocurrió. Y para Isabel, en el marco desde el que lo está leyendo, eso equivale a un desplante, a arruinar un momento, a un trauma generacional que sus futuros hijos deben evitar.</p>
+
+<p>¿Cómo se produce ese salto?</p>
+
+<h2>El marco que interpreta la historia</h2>
+
+<p>No es suficiente con lo que ocurrió. Para entender por qué produce ese efecto, hay que entender desde dónde se está mirando.</p>
+
+<p>Isabel no interpreta la conducta de su padre en el vacío. Lo hace desde un conjunto de aprendizajes acumulados en otros contextos: lo que ha visto en otras familias, lo que ha recibido de su pareja, lo que ha procesado en terapia, y muy probablemente lo que ha leído o escuchado en los espacios donde hoy se habla de crianza, de apego y de trauma.</p>
+
+<p>En esos espacios hay un modelo implícito de cómo debe expresarse el amor. Un modelo que incluye validación emocional explícita, entusiasmo visible, reconocimiento verbal en los momentos importantes. Es un modelo útil en muchos sentidos. Pero cuando se convierte en el único criterio desde el que se evalúan todas las relaciones, empieza a producir un problema: cualquier forma de presencia que no encaje en ese modelo queda clasificada como ausencia.</p>
+
+<p>Y entonces, un padre que pregunta con gesto serio el día de la promoción de su hija no es un hombre que procesa la emoción de una manera distinta, que no aprendió a expresarla, que quizás en ese momento estaba regulando su propio orgullo desde dentro. Es un padre que falla. Que daña. Que transmite trauma.</p>
+
+<p>Esto no es una crítica a Isabel. Es una descripción del mecanismo que opera en muchas personas que llegan a consulta con una historia parecida: el marco aprendido recientemente está reorganizando la función de memorias antiguas. Y esa reorganización tiene consecuencias reales en el presente.</p>
+
+<p>En términos de la psicología contextual, lo que está ocurriendo es que un conjunto de ideas aprendidas en un contexto nuevo —libros, redes, terapia— ha cambiado la función que tienen los recuerdos antiguos. Un recuerdo que antes era «mi padre es así, poco expresivo» pasa a funcionar como «mi padre me dañó». No porque el recuerdo haya cambiado, sino porque la red verbal desde la que se lee ahora es distinta. Y esa red nueva dicta una expectativa concreta de cómo debe verse el amor. Cualquier forma de presencia que no encaje en esa expectativa queda clasificada como fallo.</p>
+
+<h2>Lo que el análisis funcional abre</h2>
+
+<p>Si nos situamos fuera de ese marco y miramos funcionalmente lo que describe Isabel, aparece un cuadro diferente.</p>
+
+<p>El <strong>análisis funcional</strong> es la herramienta central de la psicología contextual. En lugar de preguntar «¿qué le pasa a esta persona?», pregunta: ¿qué hace esta persona, en qué contexto lo hace, y qué función cumple esa conducta? Es una mirada que no juzga ni diagnostica: describe cómo funciona lo que está ocurriendo.</p>
+
+<p>Aplicado al padre de Isabel: estuvo. Preguntó. Mantuvo el interés con su propio repertorio. Probablemente no tenía otro. Quizás creció en un entorno donde la emoción no se nombraba, donde el amor se demostraba con presencia y responsabilidad, no con entusiasmo verbal. Quizás el día de la graduación de su hija sintió un orgullo que no sabía cómo sacar.</p>
+
+<p>Eso no es lo mismo que indiferencia. Aunque produzca el mismo efecto en quien lo recibe con la expectativa de otra cosa.</p>
+
+<p>El dolor de Isabel no proviene únicamente de la conducta de su padre. Proviene de la distancia entre lo que su padre hizo y lo que ella, desde los marcos que ha incorporado, esperaba que hiciera. Y esa distancia es real, y duele. Pero atribuirla exclusivamente a la conducta del padre es perder de vista la mitad del proceso.</p>
+
+<p>Aquí aparece algo especialmente importante para los padres primerizos que leen este texto.</p>
+
+<p>Isabel anuncia al final de su relato que no quiere que sus futuros hijos vivan lo que ella vivió. Esa intención es legítima. Pero si la crianza que construya parte de esa lectura —mi padre me dañó porque no mostró entusiasmo visible en los momentos importantes—, hay un riesgo concreto: que el foco quede puesto en la expresión emocional como forma de evitar el daño, y no en la presencia, la responsabilidad y el compromiso que, como hemos visto, su padre sí sostuvo.</p>
+
+<p>Y que sus hijos, algún día, tampoco lo vean.</p>
+
+<h2>La pregunta que abre posibilidades</h2>
+
+<p>Desde las terapias contextuales, la cuestión no es si el padre de Isabel lo hizo bien o mal, ni si ella tiene razón en lo que siente. La cuestión es qué función está cumpliendo esa lectura en su conducta actual y hacia dónde la está llevando.</p>
+
+<p>Si Isabel, cada vez que busca reconocimiento y no lo obtiene en la forma esperada, interpreta esa ausencia como rechazo, y esa interpretación organiza su respuesta emocional y sus decisiones relacionales, el trabajo no está en conseguir que su padre cambie, ni en resolver el pasado. Está en identificar qué <strong>regla verbal</strong> está gobernando su conducta y si esa regla la acerca o la aleja de la vida que quiere vivir.</p>
+
+<p>Las reglas verbales son frases que hemos aprendido y que organizan lo que hacemos, a veces sin que nos demos cuenta. «Si no estoy seguro, mejor no lo intento». «Los hombres no lloran». «Si me equivoco con mi hijo, le estoy causando el mismo daño que a mí me causaron». Unas reglas nos facilitan la vida. Otras la limitan. Y lo más importante: a menudo no sabemos que están ahí hasta que alguien nos ayuda a verlas.</p>
+
+<p>Una de las reglas de Isabel podría ser: <em>si no me reconoce de la manera que espero, significa que no valgo lo suficiente</em>. Esa regla no describe a su padre. Describe cómo Isabel ha aprendido a relacionarse con la ausencia de validación. Y esa relación puede cambiar, no borrando la historia, sino respondiendo de manera diferente bajo las mismas condiciones.</p>
+
+<p>Para muchos padres primerizos que llegan a consulta, la versión equivalente de esa regla es: <em>si me equivoco con mi hijo, le estoy causando el mismo daño que a mí me causaron</em>. Y esa regla, cuando gobierna la crianza, produce exactamente lo que intenta evitar: un padre ansioso, hipervigilante, que no puede estar presente porque está demasiado ocupado monitorizando —observando con lupa— sus propios errores.</p>
+
+<p>El cambio no está en la historia. Está en la conducta. Y empieza cuando es posible mirarse a uno mismo —y mirar a quienes nos precedieron— con algo más de amplitud.</p>
+
+<hr>
+
+<div class="closing-block">
+<p>En el próximo artículo de esta serie veremos una distinción que a menudo se pierde en estos relatos: la diferencia entre lo que duele y lo que daña. Porque no todo límite que generó malestar dejó una herida.</p>
+</div>
+
+        <p class="article-signature">José Javier</p>
 
     </article>
 
-    <!-- ARTICLE NAVIGATION -->
-    <div class="article-nav">
-        <div class="article-nav-inner">
-            <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="article-nav-prev">
-                <span class="article-nav-label">← Anterior</span>
-                <span class="article-nav-title">Mi orgullo aprendido, la danza con el fuego</span>
-            </a>
-            <a href="la-tristeza-y-la-inactividad.html" class="article-nav-next">
-                <span class="article-nav-label">Siguiente →</span>
-                <span class="article-nav-title">La tristeza y la inactividad</span>
-            </a>
+    <!-- SERIES NAVIGATION -->
+    <div class="article-nav series-transition">
+        <div class="series-transition-context">
+            <span class="series-transition-label">SERIE: Lo que se transmite entre generaciones</span>
+            <span class="series-transition-progress">Artículo 1 de 4</span>
+        </div>
+        <div class="series-transition-cards">
+        <a href="cuando-el-estres-se-convierte-en-barrera.html" class="series-card series-card-prev">
+            <span class="series-card-direction">← Anterior</span>
+            <span class="series-card-title">Cuando el estrés y la ansiedad se convierten en una barrera</span>
+            <span class="series-card-summary"></span>
+        </a>
+        <a href="sin-traumas-2.html" class="series-card series-card-next">
+            <span class="series-card-direction">Siguiente →</span>
+            <span class="series-card-title">Lo que duele no siempre es lo que daña</span>
+            <span class="series-card-summary"></span>
+        </a>
         </div>
     </div>
 
@@ -1545,19 +1359,15 @@
     <div class="share-bar">
         <span class="share-bar-label">Compartir</span>
         <div class="share-icons">
-            <!-- WhatsApp -->
             <a class="share-icon" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
-            <!-- Twitter/X -->
             <a class="share-icon" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Compartir en Twitter/X">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <!-- Facebook -->
             <a class="share-icon" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <!-- Copiar enlace -->
             <button class="share-icon" id="share-copy" aria-label="Copiar enlace">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </button>
@@ -1593,7 +1403,7 @@
     <div class="article-cta">
         <div class="article-cta-box">
             <h3>¿Te ha resonado este artículo?</h3>
-            <p>Si algo de lo que has leído conecta con lo que estás viviendo, puedes escribirme sin compromiso. Un mensaje corto es suficiente.</p>
+            <p>Si te has reconocido en el miedo a repetir patrones, o si la lectura de tu propia historia familiar te está pesando más de lo que esperabas, puedes escribirme. No para añadir más teoría, sino para mirar juntos qué está ocurriendo en tu caso concreto.</p>
             <a href="https://wa.me/34628301511" target="_blank" style="color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; font-weight: 500; font-size: 0.95rem; transition: text-decoration-color 0.3s; display: inline-flex; align-items: center; gap: 0.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--sage)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
         </div>
     </div>
@@ -1601,19 +1411,19 @@
     <!-- RELATED ARTICLES -->
     <section class="related">
         <div class="related-inner">
-            <h2>Sigue leyendo</h2>
+            <h2>Más artículos de la serie</h2>
             <div class="related-grid">
-                <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>Mi orgullo aprendido, la danza con el fuego</h3>
+                <a href="sin-traumas-2.html" class="related-card">
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>Lo que duele no siempre es lo que daña</h3>
                 </a>
-                <a href="la-tristeza-y-la-inactividad.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>La tristeza y la inactividad</h3>
+                <a href="sin-traumas-3.html" class="related-card">
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>Lo que realmente se transmite entre generaciones</h3>
                 </a>
-                <a href="sin-traumas-1.html" class="related-card">
-                    <div class="related-card-category">Criar con dirección</div>
-                    <h3>¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones? (serie de 4)</h3>
+                <a href="sin-traumas-4.html" class="related-card">
+                    <div class="related-card-category">Serie: Transmisión intergeneracional</div>
+                    <h3>Artículo 4 — próximamente</h3>
                 </a>
             </div>
         </div>
@@ -1634,7 +1444,6 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
     <!-- FLOATING INSTAGRAM -->
     <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
@@ -1910,6 +1719,13 @@ document.addEventListener("DOMContentLoaded", function() {
     (function() {
         var article = document.querySelector('.article-body');
         if (!article || !('IntersectionObserver' in window)) return;
+        var isEN = document.documentElement.lang === 'en';
+        var i18n = {
+            bookmarkAria: isEN ? 'Resume reading' : 'Retomar lectura',
+            bookmarkText: isEN ? 'Resume where you left off' : 'Retomar donde lo dejaste',
+            bookmarkBtn: isEN ? 'Continue' : 'Continuar',
+            bookmarkClose: isEN ? 'Close' : 'Cerrar'
+        };
         var slug = window.location.pathname;
         var storageKey = 'reading-pos-' + slug;
         var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
@@ -1941,10 +1757,10 @@ document.addEventListener("DOMContentLoaded", function() {
             var banner = document.createElement('div');
             banner.className = 'reading-bookmark';
             banner.setAttribute('role', 'dialog');
-            banner.setAttribute('aria-label', 'Retomar lectura');
-            banner.innerHTML = '<span class="reading-bookmark-text">Retomar donde lo dejaste</span>' +
-                '<button type="button" class="reading-bookmark-continue">Continuar</button>' +
-                '<button type="button" class="reading-bookmark-close" aria-label="Cerrar">&times;</button>';
+            banner.setAttribute('aria-label', i18n.bookmarkAria);
+            banner.innerHTML = '<span class="reading-bookmark-text">' + i18n.bookmarkText + '</span>' +
+                '<button type="button" class="reading-bookmark-continue">' + i18n.bookmarkBtn + '</button>' +
+                '<button type="button" class="reading-bookmark-close" aria-label="' + i18n.bookmarkClose + '">&times;</button>';
             document.body.appendChild(banner);
             requestAnimationFrame(function() { banner.classList.add('visible'); });
             banner.querySelector('.reading-bookmark-continue').addEventListener('click', function() {
