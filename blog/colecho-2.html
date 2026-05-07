@@ -11,11 +11,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>El maratón de nuestra vida — José Javier Aznárez | Psicólogo Contextual</title>
-    <meta name="description" content="Correr una maratón es una metáfora de la vida: esfuerzo, autocompasión, valores y crecimiento personal en cada kilómetro recorrido.">
-    <meta property="og:title" content="El maratón de nuestra vida — José Javier Aznárez">
-    <meta property="og:description" content="Correr una maratón es una metáfora de la vida: esfuerzo, autocompasión, valores y crecimiento personal en cada kilómetro recorrido.">
+    <title>Las tres etapas: de la cercanía a la autonomía — José Javier Aznárez | Psicólogo Contextual</title>
+    <meta name="description" content="Segundo artículo de la serie sobre colecho. Recorrido por las tres etapas del colecho —0-6 meses, 6-18 meses y 18-36 meses— y lo que ocurre en cada una: regulación fisiológica, aparición del lenguaje, transición progresiva hacia la autonomía.">
+    <meta property="og:title" content="Las tres etapas: de la cercanía a la autonomía — José Javier Aznárez">
+    <meta property="og:description" content="Segundo artículo de la serie sobre colecho. Recorrido por las tres etapas del colecho —0-6 meses, 6-18 meses y 18-36 meses— y lo que ocurre en cada una: regulación fisiológica, aparición del lenguaje, transición progresiva hacia la autonomía.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
     <meta property="og:image:width" content="1200">
@@ -25,8 +24,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "El maratón de nuestra vida",
-      "description": "Correr una maratón es una metáfora de la vida: esfuerzo, autocompasión, valores y crecimiento personal en cada kilómetro recorrido.",
+      "headline": "Las tres etapas: de la cercanía a la autonomía",
+      "description": "Segundo artículo de la serie sobre colecho. Recorrido por las tres etapas del colecho —0-6 meses, 6-18 meses y 18-36 meses— y lo que ocurre en cada una: regulación fisiológica, aparición del lenguaje, transición progresiva hacia la autonomía.",
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "name": "Colecho — Criar con dirección"
+      },
       "author": {
         "@type": "Person",
         "name": "José Javier Aznárez Barrio",
@@ -47,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300..500;1,300..500&display=swap" rel="stylesheet">
 
     <style>
-        /* ==================== VARIABLES (same as landing) ==================== */
+        /* ==================== VARIABLES ==================== */
         :root {
             --sage: #6B7F5E;
             --sage-light: #8A9E7C;
@@ -66,163 +69,35 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            color: var(--text-primary);
-            background: var(--white);
-            line-height: 1.7;
-        }
+        body { font-family: 'Work Sans', sans-serif; color: var(--text-primary); background: var(--white); line-height: 1.7; }
 
-        /* ==================== NAV (identical to landing) ==================== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 0.7rem 2rem;
-            background: rgba(254, 253, 251, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--sage-dark);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.93rem;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            transition: color 0.3s;
-        }
-
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.7rem 2rem; background: rgba(254,253,251,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.1rem; color: var(--sage-dark); text-decoration: none; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links li { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.93rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--sage-dark); }
+        .nav-links a.active { color: var(--sage-dark); font-weight: 500; }
+        .nav-cta { background: var(--sage); color: var(--white) !important; padding: 0.5rem 1.3rem; border-radius: 100px; font-weight: 500; transition: background 0.3s, transform 0.2s !important; }
+        .nav-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 24px; height: 2px; background: var(--text-primary); transition: 0.3s; }
 
-        .nav-cta {
-            background: var(--sage);
-            color: var(--white) !important;
-            padding: 0.5rem 1.3rem;
-            border-radius: 100px;
-            font-weight: 500;
-            transition: background 0.3s, transform 0.2s !important;
-        }
+        .article-header { padding: 8rem 2rem 4rem; background: linear-gradient(165deg, var(--cream) 0%, var(--white) 60%, var(--cream-dark) 100%); text-align: center; }
+        .article-header-inner { max-width: 680px; margin: 0 auto; }
+        .article-category { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(107,127,94,0.1); color: var(--sage-dark); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+        .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.5rem; color: var(--text-primary); }
+        .article-meta { font-size: 0.9rem; color: var(--text-light); font-weight: 300; }
+        .article-meta a { color: var(--sage); text-decoration: none; }
 
-        .nav-cta:hover {
-            background: var(--sage-dark);
-            transform: translateY(-1px);
-        }
+        .back-to-blog { max-width: 680px; margin: 0 auto; padding: 2rem 2rem 0; }
+        .back-to-blog a { font-size: 0.88rem; color: var(--sage); text-decoration: none; transition: color 0.3s; }
+        .back-to-blog a:hover { color: var(--sage-dark); }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-        }
+        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
 
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        /* ==================== ARTICLE HEADER ==================== */
-        .article-header {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
-            padding: 9rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .article-header-inner {
-            max-width: 680px;
-            margin: 0 auto;
-        }
-
-        .article-category {
-            display: inline-block;
-            background: var(--sage);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-header h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 300;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            line-height: 1.2;
-            color: var(--text-primary);
-            letter-spacing: -0.03em;
-            margin-bottom: 1.2rem;
-        }
-
-        .article-meta {
-            font-size: 0.9rem;
-            color: var(--sage);
-        }
-
-        .article-meta a {
-            color: var(--sage);
-            text-decoration: none;
-        }
-
-        /* ==================== BACK LINK ==================== */
-        .back-to-blog {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 2rem 2rem 0;
-        }
-
-        .back-to-blog a {
-            font-size: 0.85rem;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .back-to-blog a:hover { color: var(--sage); }
-
-        /* ==================== ARTICLE BODY ==================== */
         .article-body {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 3rem 2.5rem 5rem;
-            background: #FDFBF7;
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             font-kerning: normal;
             text-rendering: optimizeLegibility;
@@ -239,126 +114,21 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-
-        .article-body p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: #3D3D3D;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.6rem;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin-top: 3.5rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.3;
-            padding-top: 2rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-body h2:first-of-type {
-            border-top: none;
-            padding-top: 0;
-            margin-top: 2.5rem;
-        }
-
-        .article-body h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            margin: 2rem 0 0.75rem;
-        }
-
-        .article-body blockquote {
-            border-left: 3px solid var(--sage-light);
-            margin: 2.5rem 0;
-            padding: 1rem 1.5rem;
-            background: var(--cream);
-            border-radius: 0 8px 8px 0;
-        }
-
-        .article-body blockquote p {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.15rem;
-            color: var(--text-primary);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .article-body ul, .article-body ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .article-body li {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
+        .article-body p { font-size: 1.05rem; line-height: 1.85; color: #3D3D3D; margin-bottom: 1.5rem; }
+        .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark); }
+        .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
+        .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+        .article-body blockquote { border-left: 3px solid var(--sage-light); margin: 2.5rem 0; padding: 1rem 1.5rem; background: var(--cream); border-radius: 0 8px 8px 0; }
+        .article-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
+        .article-body ul, .article-body ol { margin: 1.5rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.7; }
         .article-body strong { color: var(--text-primary); font-weight: 500; }
         .article-body em { font-style: italic; }
+        .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
+        .article-body a { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 2px; }
+        .article-body a:hover { color: var(--sage); }
 
-        .article-body hr {
-            border: none;
-            border-top: 1px solid var(--cream-dark);
-            margin: 3rem 0;
-        }
-
-        /* ==================== ARTICLE NAV ==================== */
-        .article-nav {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 3rem 2rem 2.5rem;
-            border-top: 1px solid var(--cream-dark);
-        }
-
-        .article-nav-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .article-nav-prev, .article-nav-next {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            text-decoration: none;
-            max-width: 45%;
-            transition: opacity 0.3s;
-        }
-
-        .article-nav-prev:hover, .article-nav-next:hover { opacity: 0.7; }
-
-        .article-nav-next { text-align: right; margin-left: auto; }
-
-        .article-nav-label {
-            font-size: 0.78rem;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .article-nav-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: var(--text-primary);
-            line-height: 1.3;
-        }
-
-        /* ==================== CTA BOX ==================== */
-        .article-cta {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 3rem 2rem 5rem;
-        }
-
+        .article-cta { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .article-cta-box {
             background: var(--cream);
             border-radius: 1.5rem;
@@ -366,228 +136,61 @@
             text-align: center;
             border: 1px solid var(--cream-dark);
         }
+        .article-cta-box h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.8rem; }
+        .article-cta-box p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--whatsapp); color: white; text-decoration: none; padding: 0.75rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
 
-        .article-cta-box h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.4rem;
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-        }
+        .related { background: var(--cream); padding: 4rem 2rem; }
+        .related-inner { max-width: 1000px; margin: 0 auto; }
+        .related h2 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 1.8rem; color: var(--text-primary); margin-bottom: 2rem; text-align: center; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .related-card { background: var(--white); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .related-card-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
+        .related-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); line-height: 1.4; }
 
-        .article-cta-box p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--whatsapp);
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.8rem;
-            border-radius: 100px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37,211,102,0.35);
-        }
-
-        /* ==================== RELATED ==================== */
-        .related {
-            background: var(--cream);
-            padding: 4rem 2rem;
-        }
-
-        .related-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .related h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 300;
-            font-size: 1.8rem;
-            color: var(--text-primary);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .related-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .related-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-        }
-
-        .related-card-category {
-            font-size: 0.72rem;
-            color: var(--sage);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 500;
-            margin-bottom: 0.7rem;
-        }
-
-        .related-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1rem;
-            color: var(--text-primary);
-            line-height: 1.4;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            background: var(--sage-dark);
-            color: rgba(255,255,255,0.7);
-            padding: 3rem 2rem;
-        }
-
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--white);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.82rem;
-            transition: color 0.3s;
-        }
-
+        footer { background: var(--sage-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--white); }
+        .footer-legal { width: 100%; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.7; }
 
-        .footer-legal {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.4);
-            max-width: 680px;
-            line-height: 1.6;
-        }
+        .instagram-float { position: fixed; bottom: 2rem; left: 2rem; z-index: 999; width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(188,24,136,0.35); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .instagram-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(188,24,136,0.5); }
+        .instagram-float svg { width: 28px; height: 28px; stroke: white; fill: none; }
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
-        /* ==================== FLOATING INSTAGRAM ==================== */
-        .instagram-float {
-            position: fixed;
-            bottom: 2rem;
-            left: 2rem;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(188,24,136,0.35);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-        .instagram-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(188,24,136,0.5);
-        }
-        .instagram-float svg {
-            width: 28px;
-            height: 28px;
-            stroke: white;
-            fill: none;
-        }
+        .share-bar { max-width: 680px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; }
+        .share-bar-label { font-size: 0.68rem; font-weight: 500; color: var(--sage); text-transform: uppercase; letter-spacing: 0.13em; flex-shrink: 0; }
+        .share-icons { display: flex; align-items: center; gap: 0.85rem; }
+        .share-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--sage); text-decoration: none; transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
+        .share-icon:hover { color: var(--sage-dark); }
+        .share-icon svg { display: block; }
+        .share-copy-tooltip { font-size: 0.68rem; font-weight: 500; color: var(--sage); letter-spacing: 0.05em; opacity: 0; transition: opacity 0.25s; pointer-events: none; white-space: nowrap; }
+        .share-copy-tooltip.visible { opacity: 1; }
+        .share-bar-sep { width: 1px; height: 1.1rem; background: var(--cream-dark); flex-shrink: 0; }
+        .share-btn-pdf { font-family: 'Work Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--sage); background: none; border: none; cursor: pointer; padding: 0; text-decoration: none; transition: color 0.2s; flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .share-btn-pdf:hover { color: var(--sage-dark); }
 
-        /* ==================== WHATSAPP FLOAT ==================== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 999;
-            width: 56px;
-            height: 56px;
-            background: var(--whatsapp);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37,211,102,0.5);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(254, 253, 251, 0.98);
-                flex-direction: column;
-                padding: 1.5rem 2rem;
-                gap: 1rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(254,253,251,0.98); flex-direction: column; padding: 1.5rem 2rem; gap: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
             .nav-links.open { display: flex; }
             .hamburger { display: flex; }
             .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
-
         @media (max-width: 600px) {
             .article-body { padding: 2rem 1.5rem 4rem; }
             .article-cta { padding: 2.5rem 1.5rem 4rem; }
             .back-to-blog { padding: 0 1.5rem 2rem; }
-            .article-nav { padding: 2rem 1.5rem 0; }
-            .article-nav-prev,
-            .article-nav-next { max-width: 100%; }
+            .series-nav-bar { padding: 2rem 1.5rem 0; flex-direction: column; }
+            .series-nav-link { max-width: 100%; }
+            .series-nav-next { text-align: left; margin-left: 0; }
+            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
             .article-body p {
                 line-height: 1.8;
                 font-size: 1rem;
@@ -618,109 +221,99 @@
                 line-height: 1.8;
             }
         }
-
-
-        /* ==================== SHARE BAR ==================== */
-        .share-bar {
-            max-width: 680px;
-            margin: 3rem auto 2rem;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .share-bar-label {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-            flex-shrink: 0;
-        }
-
-        .share-icons {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-        }
-
-        .share-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--sage);
-            text-decoration: none;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .share-icon:hover { color: var(--sage-dark); }
-        .share-icon svg { display: block; }
-
-        .share-copy-tooltip {
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            opacity: 0;
-            transition: opacity 0.25s;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .share-copy-tooltip.visible { opacity: 1; }
-
-        .share-bar-sep {
-            width: 1px;
-            height: 1.1rem;
-            background: var(--cream-dark);
-            flex-shrink: 0;
-        }
-
-        .share-btn-pdf {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--sage);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            text-decoration: none;
-            transition: color 0.2s;
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .share-btn-pdf:hover { color: var(--sage-dark); }
-
-        @media (max-width: 600px) {
-            .share-bar { padding: 0 1.5rem; flex-wrap: wrap; gap: 0.9rem; }
-        }
-
-        /* ==================== PRINT ==================== */
         @media print {
-            nav, footer, .share-bar, .whatsapp-float, .instagram-float,
-            .article-cta, .related, .back-to-blog, .article-nav { display: none !important; }
+            nav, footer, .share-bar, .whatsapp-float, .instagram-float, .article-cta, .related, .back-to-blog, .series-nav-bar { display: none !important; }
             body { background: white !important; color: #000 !important; font-size: 12pt; line-height: 1.6; }
             .article-header { background: none !important; padding: 2rem 0 1rem !important; }
             .article-header h1 { color: #000 !important; font-size: 22pt; }
-            .article-header .article-meta,
-            .article-header .article-category { color: #444 !important; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
             .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
-            .article-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #333 !important; }
             a { color: #000 !important; text-decoration: none; }
         }
-    
+
+        /* ==================== SERIES BADGE ==================== */
+        .series-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(107,127,94,0.12);
+            color: var(--sage-dark);
+            border: 1px solid rgba(107,127,94,0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .series-badge::before {
+            content: "♡";
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* ==================== SERIES INDEX ==================== */
+        .series-index { margin-bottom: 1rem; text-align: center; }
+        .series-index-toggle { background: none; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--sage-dark); padding: 0; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .series-index-toggle:hover { text-decoration: underline; }
+        .series-index-arrow { transition: transform 0.2s; display: inline-block; }
+        .series-index.open .series-index-arrow { transform: rotate(180deg); }
+        .series-index-list { display: none; margin: 0.6rem 0 0 0; padding: 0.75rem 1.2rem; background: rgba(107,127,94,0.07); border-radius: 8px; border: 1px solid rgba(107,127,94,0.15); list-style: none; text-align: left; }
+        .series-index.open .series-index-list { display: block; }
+        .series-index-list li { padding: 0.25rem 0; font-size: 0.84rem; line-height: 1.4; }
+        .series-index-list li a { color: var(--sage-dark); text-decoration: none; }
+        .series-index-list li a:hover { text-decoration: underline; }
+        .series-index-list li.series-index-current { font-weight: 600; color: var(--text-primary); }
+
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-secondary) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* ==================== SERIES NAV ==================== */
+        .series-nav-bar {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 2rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .series-nav-link {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            text-decoration: none;
+            max-width: 45%;
+            transition: opacity 0.3s;
+        }
+
+        .series-nav-link:hover .series-nav-title { color: var(--sage-dark); }
+        .series-nav-next { text-align: right; margin-left: auto; }
+
+        .series-nav-label {
+            font-size: 0.72rem;
+            color: var(--sage);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .series-nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
         .reading-time {
             font-size: 0.82rem;
             color: var(--sage);
@@ -732,7 +325,100 @@
             content: '·';
             color: var(--warm);
         }
-    
+
+        /* ==================== RICH COMPONENTS ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.02rem; line-height: 1.85; }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label { display: flex; align-items: center; gap: 0.7rem; }
+        .collapsible-tag {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--sage); background: rgba(107,127,94,0.12); padding: 0.2rem 0.6rem; border-radius: 100px;
+        }
+        .collapsible-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--text-primary); }
+        .collapsible-chevron { color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content { padding: 1.5rem; border-top: 1px solid var(--cream-dark); }
+        .collapsible-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.5rem;
+        }
+        .infobox p { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem; }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .scenario-block p { font-size: 1rem; color: #4A4A4A; line-height: 1.85; margin-bottom: 0.9rem; font-style: italic; }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--warm); margin-bottom: 0.6rem; display: block;
+        }
+
+        .article-signature {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+        }
+
         .reading-progress {
             position: fixed;
             top: 0;
@@ -1448,6 +1134,7 @@
                 <li><a href="../index.html#servicios">Servicios</a></li>
                 <li><a href="index.html" class="active">Blog</a></li>
                 <li><a href="https://www.instagram.com/jjaznarez.psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="../en/blog/index.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">EN</a></li>
                 <li><a href="../index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
             <div class="hamburger" id="hamburger-btn">
@@ -1459,10 +1146,20 @@
     <!-- ARTICLE HEADER -->
     <header class="article-header">
         <div class="article-header-inner">
-            <span class="article-category">Vivir lo que vale</span>
-            <h1>El maratón de nuestra vida</h1>
+            <span class="article-category">Criar con dirección</span>
+            <span class="series-badge">Serie: Colecho · Artículo 2 de 4</span>
+            <div class="series-index">
+                <button class="series-index-toggle" onclick="this.parentElement.classList.toggle('open')">Ver todos los artículos de la serie <span class="series-index-arrow">▼</span></button>
+                <ul class="series-index-list">
+                    <li><a href="colecho-1.html">1. Nuestro bebé ya ha llegado. ¿Colecho?</a></li>
+                    <li class="series-index-current">2. Las tres etapas: de la cercanía a la autonomía</li>
+                    <li><a href="colecho-3.html">3. No estás fallando: el entorno, el malestar y lo que nadie pregunta</a></li>
+                    <li><a href="colecho-4.html">4. Ni tiranos ni dependientes: empatía, límites y reciprocidad</a></li>
+                </ul>
+            </div>
+            <h1>Las tres etapas: de la cercanía a la autonomía</h1>
             <p class="article-meta">Por <a href="../sobre-mi.html">José Javier Aznárez Barrio</a>
-                <span class="reading-time">9 min de lectura</span>
+                <span class="reading-time">12 min de lectura</span>
             </p>
         </div>
     </header>
@@ -1475,109 +1172,109 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <p>¿Sientes el cosquilleo de un sueño en tu interior, y la duda que te susurra es que no eres suficiente? En la vida transitamos en un continuo de deseos, sueños, retos y desafíos, como en una maratón.</p>
+<p class="article-intro">Este es el segundo artículo de la serie <em>Colecho — Criar con dirección</em>. En el <a href="colecho-1.html">artículo anterior</a> explicamos qué es el colecho consciente desde la psicología contextual y por qué tiene sentido. Aquí recorremos lo que ocurre en cada etapa de los primeros tres años.</p>
 
-        <p>Participar en una carrera, en una maratón, es más que un simple evento deportivo; es un desafío, un reto, un sueño para vivir. Es una historia sobre la conquista de un objetivo vital a través de nuestro esfuerzo, la aceptación de nuestras fortalezas y debilidades, y la conexión con nuestro yo más valioso: aquel que siempre está presente, observando el transcurrir de nuestra vida desde nuestra infancia hasta cada paso de la carrera.</p>
+<p>Los primeros tres años de vida de un bebé son un periodo crucial para el desarrollo del vínculo, la regulación emocional y el bienestar del niño. Muchos cuidadores, especialmente los primerizos, se enfrentan a una gran presión por hacerlo «bien» o de manera «perfecta», lo que genera inseguridades sobre la mejor manera de criar a su hijo. Durante estos años, uno de los temas que más dudas despierta es el colecho: dormir junto al bebé.</p>
 
-        <p>Correr una maratón como corredor amateur, como cualquier otro en nuestra vida, es más que una simple carrera; a lo largo de todas las horas de disfrute y dolor, puede llegar a ser una lección de vida que nos lleva a explorar los rincones más profundos de nuestra mente y espíritu.</p>
+<p>No hay dos familias iguales ni dos bebés iguales. Pero hay un recorrido que, con variaciones, se repite: el niño que al principio necesita el cuerpo del cuidador para calmarse va ganando, poco a poco, la capacidad de calmarse con menos. No porque le abandonen, sino porque lo que ha vivido noche a noche le ha ido dando recursos. Ese recorrido tiene tres etapas reconocibles.</p>
 
-        <h2>El viaje interior de cada kilómetro</h2>
+<h2>0–6 meses: cercanía como cuidado esencial</h2>
 
-        <p>Cada entrenamiento, cada kilómetro recorrido, es parte de un viaje interior que nos lleva a descubrir nuevas dimensiones de nosotros mismos. En cada zancada, confrontamos nuestros límites y nos desafiamos a superarlos. Aceptamos el dolor y la fatiga como compañeros de ruta, sabiendo que son parte integral del proceso de crecimiento y superación.</p>
+<div class="emotional-block">
+<p>Estos primeros meses son agotadores de una manera que pocas palabras describen bien. No estás fallando si estás exhausta. No estás fallando si a veces no sabes si lo estás haciendo bien. Lo que estás haciendo —estar ahí, responder, sostener— es exactamente lo que tu bebé necesita, aunque a ti no te lo parezca.</p>
+</div>
 
-        <p>Desde el momento en que decidimos participar en la carrera, nos comprometemos durante al menos tres meses con un objetivo claro y nos sumergimos en un proceso de crecimiento personal y autodescubrimiento, donde no tiene cabida la procrastinación.</p>
+<p>Durante los primeros seis meses de vida, el colecho es una extensión natural del cuidado materno. El recién nacido depende de sus cuidadores para todo, desde la alimentación hasta la regulación de su temperatura corporal. En este contexto, el colecho cumple funciones concretas.</p>
 
-        <p>Cuidamos nuestro cuerpo mediante la alimentación, el ejercicio, la meditación y el descanso para rendir al máximo en la maratón y disfrutar de una vida saludable. Encontramos un balance entre el entrenamiento, la vida familiar, el trabajo y el ocio para cuidar nuestra salud física y mental. Establecemos metas progresivamente desafiantes y nos esforzamos día tras día para alcanzarlas, enfrentando los desafíos con voluntad y perseverancia.</p>
+<p>Facilita la lactancia nocturna, reduciendo el estrés del bebé y asegurando un mejor descanso para la madre.</p>
 
-        <blockquote>
-            <p>Una maratón es una carrera épica de fondo, como todos los desafíos de nuestra vida, que nos requiere paciencia, dedicación, esfuerzo constante y determinación.</p>
-        </blockquote>
+<p>Promueve la regulación fisiológica: cuando un recién nacido duerme junto al cuerpo del cuidador, su temperatura se estabiliza, su respiración se regula, su ritmo cardíaco se acompasa al de quien está a su lado. El cuerpo del adulto actúa literalmente como entorno regulador del cuerpo del bebé —antes de que el lenguaje exista, antes de que nada pueda explicarse. Y esta regulación fisiológica directa no desaparece cuando el bebé crece y el lenguaje emerge: coexiste con ella, y cuando algo la perturba, requiere intervención en ese mismo nivel corporal, no solo en el simbólico.</p>
 
-        <h2>La línea de salida: abrazar la incertidumbre</h2>
+<p>Fortalece el vínculo, proporcionando al bebé un ambiente de protección y estabilidad emocional. La historia de respuesta consistente del cuidador ante cada señal del bebé —lo que en el <a href="colecho-1.html">artículo anterior</a> describíamos como <strong>contingencias de reforzamiento</strong>— genera los primeros patrones de conducta relacional. Es aquí donde empiezan a formarse esos <strong>marcos de coordinación</strong> entre «cuidador» y «seguridad»: el primer núcleo de lo que más adelante permitirá al niño derivar esa seguridad de forma simbólica, en ausencia física del cuidador.</p>
 
-        <p>Compartimos en la salida con cientos o miles de personas conocidas y desconocidas, cada una con su propia historia y motivación y con un mismo objetivo: desafiar nuestros límites, salir de la zona de confort. Algunos son rápidos y experimentados, otros somos lentos y principiantes. Pero todos compartimos la misma ilusión: cruzar la meta.</p>
+<h2>6–18 meses: equilibrio entre cercanía y autonomía</h2>
 
-        <p>Es un buen momento para aceptar nuestra realidad, aceptar nuestras emociones y pensamientos, incluso aquellos difíciles como la ansiedad, sin intentar cambiarlos o evitarlos, dándoles el significado de ser una parte natural de nuestra experiencia humana. En ese momento, nos conectamos con una fuerza interior, con nuestra autoestima genuina, no dependiente de los demás, que nos impulsa hacia adelante, más allá de nuestras dudas y temores.</p>
+<p>A medida que el bebé crece y se vuelve más móvil, las dinámicas del colecho cambian. El niño está en un proceso intenso de desarrollo cognitivo y emocional, y muchos bebés experimentan miedo a la separación durante la noche, lo que les lleva a despertarse con mayor frecuencia en busca del consuelo de sus cuidadores. El colecho ayuda a mitigar estos despertares, proporcionando una sensación constante de seguridad.</p>
 
-        <p>Los pensamientos son solo palabras, y en los distintos momentos de la carrera podremos experimentar que es posible reducir su poder sobre nosotros. En la línea de salida, las preocupaciones, los nervios… los síntomas del estrés nos invaden.</p>
+<p>En algún momento de esta etapa —difícil de señalar con precisión porque ocurre de forma gradual— algo cambia: el bebé empieza a calmarse no solo porque el cuidador está físicamente presente, sino porque ha aprendido que el cuidador <em>vuelve</em>. Esa diferencia, aparentemente pequeña, es en realidad enorme. Significa que el niño ha comenzado a distinguir entre el <em>ahora</em> y el <em>después</em>, entre la separación presente y el reencuentro futuro. Es exactamente lo que la Teoría de los Marcos Relacionales (RFT) describe como <strong>marcos deícticos temporales</strong> —las distinciones entre yo y tú, aquí y allí, ahora y entonces que introducíamos en el artículo anterior—, aplicadas al tiempo. El trabajo del cuidador en esta fase consiste en reforzar esa capacidad mediante palabras que la sostengan —«estaré aquí cuando me necesites»—, haciendo que la regulación emocional del bebé transite progresivamente de lo exclusivamente corporal a lo verbal.</p>
 
-        <p>Y desde el acompañamiento de todos los corredores que nos rodean y desde nuestra soledad, abrazamos nuestra inseguridad, nuestra vulnerabilidad, nuestra propia incertidumbre. No hay marcha atrás, damos la mano a "nuestros monstruos" y esperamos la cuenta atrás y el pistoletazo de salida.</p>
+<div class="infobox">
+<span class="infobox-label">Ventana de tolerancia</span>
+<p>El desafío en esta fase radica en equilibrar la necesidad de cercanía del niño con la calidad del sueño de los cuidadores. El colecho consciente permite la cercanía cuando el bebé la necesita y ofrece pequeñas oportunidades para el distanciamiento. Estas oportunidades son también momentos de <strong>exposición</strong> —ponerse en contacto gradual con lo que se evita— practicados con <strong>flexibilidad psicológica</strong>: la capacidad de mantener o cambiar lo que hacemos en función de lo que nos importa, incluso cuando aparecen emociones difíciles. El cuidador modela ante el niño la capacidad de tolerar el malestar sin que este sea una señal de amenaza, ampliando lo que se llama <strong>ventana de tolerancia</strong>: el rango de activación emocional dentro del cual uno puede seguir pensando, sintiendo y actuando con claridad. Algunos cuidadores optan por comenzar la transición del colecho físico en la misma cama a una cuna dentro de la misma habitación, un primer paso natural hacia la regulación más autónoma del sueño.</p>
+</div>
 
-        <h2>Mindfulness en cada zancada</h2>
+<h2>18–36 meses: independencia progresiva</h2>
 
-        <p>Es una estupenda oportunidad para aprender a desapegarnos del lenguaje de nuestra mente, a desengancharnos de nuestros pensamientos rumiativos que nos juzgan o critican. Al observarlos como simples eventos mentales, sin darles valor de verdad absoluta en el momento presente —cuando estamos saltando, brincando, haciendo sentadillas, flexionando, dando el último trago de agua, despidiéndonos de nuestros acompañantes, posando en la última foto—, podemos estar presentes, en <em>mindfulness</em>, reduciendo su impacto en nuestro bienestar.</p>
+<p>A partir de los dieciocho meses, los niños desarrollan mayor autonomía tanto de día como de noche. El deseo de cercanía física puede intensificarse ante cambios como el destete o la entrada en guardería. Los niños buscan el colecho para lidiar con esos cambios: la accesibilidad de los cuidadores durante la noche les brinda un contexto estable para procesar nuevas experiencias, reforzando su capacidad de regulación flexible mientras se avanza hacia una mayor autonomía en el sueño.</p>
 
-        <p>Identificamos nuestros valores personales y a la maratón como una acción comprometida en base a ellos, independientemente de la aprobación o el rechazo de los demás. Esta congruencia entre nuestras acciones y valores fortalece nuestra autoestima genuina. No existe un camino único para terminar la maratón, cada uno tenemos nuestro objetivo, cada corredor ha seguido el suyo, con sus circunstancias. Aceptar el nuestro como exclusivo nos permite tener confianza en nosotros mismos.</p>
+<p>No existe un calendario universal para esta transición. Cada familia tiene su propio ritmo, y ese ritmo emerge de la historia particular de cada vínculo: de cómo ha respondido el cuidador, de cómo ha ido desarrollando el niño su capacidad de regularse, de qué cambios han ocurrido en la vida familiar. Cuando la transición se estanca o genera un malestar sostenido que no cede, puede ser útil contar con acompañamiento de un psicólogo contextual que ayude a identificar qué está manteniendo la dificultad en ese caso concreto —no en general, sino en esa familia, con ese niño, en ese momento.</p>
 
-        <p>Nos comparamos con los demás que tenemos a nuestro lado, cómo van vestidos, sus camisetas, sus zapatillas… Nuestra mente construye historias sobre ellos, ¿más fuertes, más veloces? La duda nos susurra en nuestro oído: <em>«¿Y si no lo logras?»</em>. Pero en ese momento, recordamos que no se trata de compararnos con los demás, sino con nosotros mismos, con autocompasión.</p>
+<details class="collapsible-note">
+    <summary>
+        <div class="collapsible-note-label">
+            <span class="collapsible-tag">Nota técnica</span>
+            <span class="collapsible-title">Terapia Basada en Procesos (PBT): qué evaluar cuando la transición se atasca</span>
+        </div>
+        <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="collapsible-content">
+        <p>Una evaluación basada en procesos —lo que en este enfoque se llama <strong>Terapia Basada en Procesos (PBT)</strong>: intervenir sobre los procesos psicológicos concretos que mantienen el problema en esta persona y en este momento, en lugar de aplicar un protocolo general según el diagnóstico— permite identificar qué está sosteniendo la dificultad. ¿El niño busca la proximidad nocturna porque el alivio inmediato del malestar es lo que mantiene esa conducta? ¿Porque todavía no ha desarrollado suficientes recursos de autorregulación? ¿Porque algo en la respuesta del cuidador dificulta que lo aprendido en un contexto se traslade a contextos nuevos? Identificar qué proceso está actuando permite diseñar una intervención ajustada a esa familia.</p>
+    </div>
+</details>
 
-        <h2>Durante la carrera: presencia y conexión</h2>
+<p>A partir de los dos años, muchas familias comienzan la transición hacia una habitación separada, de forma gradual y adaptada a las necesidades de cada niño: la «cama de transición», el colecho parcial en la misma habitación pero en camas separadas.</p>
 
-        <p>Durante la carrera, experimentamos una profunda sensación de presencia y conexión con el momento presente. Nos sumergimos en el ritmo de nuestra respiración, en el sonido de nuestros pasos y en la vista del camino que se extiende ante nosotros. Nos sentimos vivos, en sintonía con nuestro cuerpo y nuestra mente.</p>
+<h2>La señal de una transición bien acompañada</h2>
 
-        <p>En muchos momentos de la carrera observamos nuestros pensamientos que van y vienen, sin juzgarlos, sin distraernos de nuestro objetivo, como nubes que pasan por el cielo. Aceptamos las emociones y sentimientos que nos acompañan, sin intentar cambiarlos ni reprimirlos.</p>
+<p>Una transición bien acompañada en esta etapa tiene una señal reconocible: el niño puede quedarse en su cama, en su habitación, sin que la separación se viva como amenaza. No porque haya aprendido a suprimir la necesidad de conexión, sino porque ha construido, noche a noche, la certeza de que el cuidador existe aunque no esté a la vista. Todo lo que se ha hecho antes —responder de forma consistente, nombrar las emociones, tolerar el malestar sin eliminarlo— ha ido construyendo exactamente eso: la capacidad de llevar al cuidador dentro, sin necesidad de tenerle al lado.</p>
 
-        <p>Nos conectamos con nuestro yo observador, el que tiene toda la perspectiva, el testigo de nuestra experiencia actual, de cada paso, que nos mira desde el cielo y el que nos acompañó en nuestras experiencias pasadas, en cada uno de nuestros entrenamientos, sin juicios, sin comparaciones.</p>
+<p>En términos más técnicos: el niño ha desarrollado la capacidad de sentirse seguro y acompañado gracias a la red de experiencias compartidas durante esa historia de noches compartidas, sin necesidad del contacto físico. Y algo más: su sentido de sí mismo —lo que en ACT se llama <strong>yo como contexto</strong>, la perspectiva desde la que ocurre todo— empieza a organizarse como un lugar interior que puede contener experiencias difíciles, incluidas las de malestar, sin que esas experiencias definan quién es ni pongan en duda su seguridad.</p>
 
-        <blockquote>
-            <p>Nuestro yo observador nos enseña a distanciarnos de nuestros pensamientos y emociones, observándolos como objetos mentales que pasan.</p>
-        </blockquote>
+<h2>Vínculo e historia funcional</h2>
 
-        <h2>Los momentos difíciles: voluntad y autocompasión</h2>
+<p>Hay cuidadores que dejan el colecho y se preguntan si lo hicieron demasiado pronto o demasiado tarde. Hay otros que lo mantienen más tiempo del que habían planeado y se preguntan si habrán creado una dependencia. Esa preocupación tiene un supuesto implícito que vale la pena examinar: que el vínculo se construye o se deteriora por decisiones puntuales. Desde la Ciencia Conductual Contextual (CBS), no es así. El desarrollo del vínculo no puede comprenderse a partir de momentos aislados, sino únicamente en su contexto funcional: lo que moldea al niño no es ninguna decisión concreta, sino los patrones que se repiten a lo largo del tiempo.</p>
 
-        <p>La carrera no siempre es fácil. Hay momentos de euforia en el pistoletazo de salida, pero después, poco a poco, cuando pasan 10 km y pensamos lo que queda para llegar a nuestro objetivo, nos llega el cansancio, el dolor, la incomodidad física y nuestra mente nos inunda con pensamientos, sentimientos y emociones, y surgen las ganas de rendirse y abandonar.</p>
+<p>La unidad de análisis en este enfoque es siempre el <strong>acto-en-contexto</strong>: no la conducta aislada ni una cualidad interna del niño, sino lo que el niño hace en relación con lo que ocurre a su alrededor. Desde muy temprano, el niño aprende a conectar —a través de esas redes de marcos relacionales— la presencia de los cuidadores con experiencias de seguridad o de amenaza, configurando patrones que guiarán su conducta a lo largo de la vida.</p>
 
-        <p>Y en esos momentos, tenemos que reconocer nuestro proceso, y recordar nuestra fuerza interior y actuar con compasión hacia nosotros mismos, hablándonos con palabras amables y comprensivas, validando nuestro esfuerzo, independientemente del resultado.</p>
+<blockquote>
+<p>No es ninguna decisión concreta la que construye o rompe a tu hijo. Es la dirección general de tu presencia. Y si estás aquí, esa dirección ya existe.</p>
+</blockquote>
 
-        <p>No importa si no somos los más rápidos, ni los más fuertes, ni si nos quedamos solos. Lo que importa es nuestra fuerza de voluntad y nuestra motivación; que sigamos adelante, con paso firme y constante. Cada paso nos acerca a la meta, a la conquista de nuestro sueño, sin importarnos los corredores que nos pasan.</p>
+<p>Lo que habitualmente se describe como capacidad para «desapegarse con seguridad» es la expresión de un <strong>repertorio</strong> —un conjunto de respuestas que la persona tiene a su disposición— flexible, construido sobre una historia de contingencias consistentes. El niño puede explorar el mundo porque la separación ha dejado de funcionar como amenaza: no porque se haya eliminado la incomodidad de separarse, sino porque el niño ha aprendido que el cuidador sigue disponible aunque no esté delante. Esa confianza actúa como un contexto desde el que el niño puede hacer sitio a lo que siente —lo que en ACT se llama <strong>aceptación</strong>: no resignarse, sino dejar espacio a la experiencia interna sin gastar energía en eliminarla— sin necesidad de conductas de control que le alejen de lo que le importa.</p>
 
-        <p>Celebramos cada kilómetro como un logro, cada vez más satisfactorio, sobre todo a partir de los 30.</p>
+<p>La privación real de afecto, tanto en forma de contacto físico como emocional, tiene un impacto duradero. Un niño que no tiene acceso a un entorno afectivamente equilibrado —sin amor, sin presencia y sin seguridad, incluido también el displacer— puede desarrollar patrones de <strong>evitación experiencial</strong> —la tendencia a organizar la vida alrededor de no sentir lo que duele— que limitarán su capacidad de enfrentar experiencias difíciles en el futuro, bloqueando el proceso de flexibilidad psicológica antes de que llegue a consolidarse.</p>
 
-        <p>Miramos hacia atrás para avanzar. Parar, caminar, bajar el ritmo, no significa rendirse, sino tomar perspectiva. Observar nuestro camino recorrido nos permite apreciar nuestro progreso. Aunque a veces el camino nos parece imperceptible, al mirar atrás podemos ver lo lejos que hemos llegado.</p>
+<div class="emotional-block">
+<p>Si en algún momento de estas páginas has sentido que esto te supera, detente un momento aquí. El hecho de que te importe tanto —de que estés buscando, leyendo, preguntándote— ya dice algo muy concreto sobre quién eres como madre. No una madre perfecta. Algo más útil que eso: una madre que no ha dejado de importarle.</p>
+</div>
 
-        <h2>Las rozaduras del camino</h2>
+<hr>
 
-        <p>Con el transcurrir de los kilómetros podemos reconocer errores y aciertos en la preparación, en los entrenamientos y descansos, en la alimentación, en el calzado o vestimenta elegidos… Las rozaduras nos acecharán a lo largo del camino a pesar de la vaselina y dejarán marcas en nuestro cuerpo en zonas insospechadas.</p>
+<div class="closing-block">
+<p>En el próximo artículo de esta serie hablamos de algo que casi nadie nombra: qué pasa con el cuidador. El entorno emocional, el malestar del niño, y por qué fallar una noche no rompe nada.</p>
+</div>
 
-        <p>Mirando al frente aceptamos las rozaduras como parte de nuestro proceso, como señales de que estamos luchando por lo que queremos. Ya terminaremos y cuidaremos con compasión y cariño de nosotros mismos, atendiendo a nuestras heridas y aprendiendo con satisfacción a sanar.</p>
-
-        <p>La autocompasión se convierte en nuestro aliado más fiel, permitiéndonos tratarnos con amabilidad y comprensión en cada paso, en cada kilómetro, en cada pendiente, cuando el viento nos sopla de cara. Reconocemos nuestras fortalezas y debilidades sin juzgarnos duramente por nuestros errores o limitaciones, y aprendemos a cultivar una actitud compasiva hacia nosotros mismos y hacia los demás.</p>
-
-        <h2>Cruzar la meta: el comienzo de un nuevo capítulo</h2>
-
-        <p>A medida que nos acercamos a la línea de meta, experimentamos la gratificación de lograr algo significativo a través del trabajo duro y la determinación. Sentimos una oleada de emoción y gratitud. Un viaje que solo nosotros, sin compararnos con los demás, en sus críticas, en sus comparaciones, hemos recorrido, con nuestro propio ritmo y nuestra propia determinación, no importa si nos hemos caído o parado; lo importante es que nos hemos levantado y hemos seguido adelante.</p>
-
-        <p>Nos hemos conectado con una comunidad de corredores que comparten nuestra pasión y nos apoyan en nuestro viaje. A lo largo del desafío hemos podido encontrar compañerismo, solidaridad y aliento mutuo mientras compartimos experiencias y superamos obstáculos juntos.</p>
-
-        <p>Cruzar esa línea exhausto, sin fuerzas, dolorido, con ampollas, con rozaduras, sediento, hambriento… no solo representa el final de una carrera, sino el comienzo de un nuevo capítulo en nuestro viaje personal de autodescubrimiento y crecimiento.</p>
-
-        <p>Nos damos cuenta de todo lo que hemos superado para llegar hasta aquí y nos sentimos llenos de orgullo por nuestro logro. En ese momento, nos convertimos en protagonistas de nuestra propia historia, una historia de determinación, coraje y perseverancia.</p>
-
-        <blockquote>
-            <p>Al cruzar la línea de meta sabemos que esta no es solo una victoria deportiva, sino una victoria personal. Es la culminación de un viaje emocionante y transformador.</p>
-        </blockquote>
-
-        <p>Y en ese momento comprendemos que no solo hemos conquistado una carrera física, sino también nos hemos demostrado que somos capaces de lograr los objetivos que nos proponemos si verdaderamente tienen valor para nosotros.</p>
-
-        <p>Vivir conforme a objetivos, con acciones comprometidas en línea con nuestros valores es una experiencia transformadora que nos fortalece física, mental y emocionalmente, y nos inspira a vivir nuestras vidas con pasión, determinación y propósito. Un viaje, nuestro viaje, lleno de desafíos, pero también de oportunidades para crecer y superarnos. La maratón de nuestra vida es una carrera de resistencia, una prueba de nuestro temple y tu capacidad para superar los obstáculos. Aprendemos a confiar en la fuerza que llevamos dentro, en la sabiduría que hemos adquirido a lo largo del camino.</p>
-
-        <p>Y al terminar tenemos nuestra medalla. Hemos sido capaces de vivir la vida que deseábamos vivir, recorriendo y disfrutando <strong>42,195 km</strong>.</p>
-
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <p class="article-signature">José Javier</p>
 
     </article>
 
-    <!-- ARTICLE NAVIGATION -->
-    <div class="article-nav">
-        <div class="article-nav-inner">
-            <a href="la-tristeza-y-la-inactividad.html" class="article-nav-prev">
-                <span class="article-nav-label">← Anterior</span>
-                <span class="article-nav-title">La tristeza y la inactividad</span>
-            </a>
-            <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="article-nav-next">
-                <span class="article-nav-label">Siguiente →</span>
-                <span class="article-nav-title">Mi familia no es, no ha sido y no será perfecta</span>
-            </a>
+    <!-- SERIES NAVIGATION -->
+    <div class="article-nav series-transition">
+        <div class="series-transition-context">
+            <span class="series-transition-label">SERIE: Colecho — Criar con dirección</span>
+            <span class="series-transition-progress">Artículo 2 de 4</span>
+        </div>
+        <div class="series-transition-cards">
+        <a href="colecho-1.html" class="series-card series-card-prev">
+            <span class="series-card-direction">← Anterior</span>
+            <span class="series-card-title">Nuestro bebé ya ha llegado. ¿Colecho?</span>
+            <span class="series-card-summary"></span>
+        </a>
+        <a href="colecho-3.html" class="series-card series-card-next">
+            <span class="series-card-direction">Siguiente →</span>
+            <span class="series-card-title">No estás fallando: el entorno, el malestar y lo que nadie pregunta</span>
+            <span class="series-card-summary"></span>
+        </a>
         </div>
     </div>
 
@@ -1585,19 +1282,15 @@
     <div class="share-bar">
         <span class="share-bar-label">Compartir</span>
         <div class="share-icons">
-            <!-- WhatsApp -->
             <a class="share-icon" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
-            <!-- Twitter/X -->
             <a class="share-icon" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Compartir en Twitter/X">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <!-- Facebook -->
             <a class="share-icon" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <!-- Copiar enlace -->
             <button class="share-icon" id="share-copy" aria-label="Copiar enlace">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </button>
@@ -1633,7 +1326,7 @@
     <div class="article-cta">
         <div class="article-cta-box">
             <h3>¿Te ha resonado este artículo?</h3>
-            <p>Si algo de lo que has leído conecta con lo que estás viviendo, puedes escribirme sin compromiso. Un mensaje corto es suficiente.</p>
+            <p>Si la transición está cerca, o se ha estancado, o simplemente no sabes en qué etapa estáis: puedes escribirme. No para añadir más teoría, sino para mirar juntos qué está ocurriendo en tu caso concreto.</p>
             <a href="https://wa.me/34628301511" target="_blank" style="color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; font-weight: 500; font-size: 0.95rem; transition: text-decoration-color 0.3s; display: inline-flex; align-items: center; gap: 0.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--sage)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
         </div>
     </div>
@@ -1641,19 +1334,19 @@
     <!-- RELATED ARTICLES -->
     <section class="related">
         <div class="related-inner">
-            <h2>Sigue leyendo</h2>
+            <h2>Más artículos de la serie</h2>
             <div class="related-grid">
-                <a href="la-tristeza-y-la-inactividad.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>La tristeza y la inactividad</h3>
-                </a>
-                <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="related-card">
-                    <div class="related-card-category">Vivir lo que vale</div>
-                    <h3>Mi familia no es, no ha sido y no será perfecta</h3>
-                </a>
                 <a href="colecho-1.html" class="related-card">
                     <div class="related-card-category">Serie: Colecho</div>
                     <h3>Nuestro bebé ya ha llegado. ¿Colecho?</h3>
+                </a>
+                <a href="colecho-3.html" class="related-card">
+                    <div class="related-card-category">Serie: Colecho</div>
+                    <h3>No estás fallando: el entorno, el malestar y lo que nadie pregunta</h3>
+                </a>
+                <a href="colecho-4.html" class="related-card">
+                    <div class="related-card-category">Serie: Colecho</div>
+                    <h3>Ni tiranos ni dependientes: empatía, límites y reciprocidad</h3>
                 </a>
             </div>
         </div>
@@ -1674,7 +1367,6 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
     <!-- FLOATING INSTAGRAM -->
     <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
@@ -1950,6 +1642,13 @@ document.addEventListener("DOMContentLoaded", function() {
     (function() {
         var article = document.querySelector('.article-body');
         if (!article || !('IntersectionObserver' in window)) return;
+        var isEN = document.documentElement.lang === 'en';
+        var i18n = {
+            bookmarkAria: isEN ? 'Resume reading' : 'Retomar lectura',
+            bookmarkText: isEN ? 'Resume where you left off' : 'Retomar donde lo dejaste',
+            bookmarkBtn: isEN ? 'Continue' : 'Continuar',
+            bookmarkClose: isEN ? 'Close' : 'Cerrar'
+        };
         var slug = window.location.pathname;
         var storageKey = 'reading-pos-' + slug;
         var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
@@ -1981,10 +1680,10 @@ document.addEventListener("DOMContentLoaded", function() {
             var banner = document.createElement('div');
             banner.className = 'reading-bookmark';
             banner.setAttribute('role', 'dialog');
-            banner.setAttribute('aria-label', 'Retomar lectura');
-            banner.innerHTML = '<span class="reading-bookmark-text">Retomar donde lo dejaste</span>' +
-                '<button type="button" class="reading-bookmark-continue">Continuar</button>' +
-                '<button type="button" class="reading-bookmark-close" aria-label="Cerrar">&times;</button>';
+            banner.setAttribute('aria-label', i18n.bookmarkAria);
+            banner.innerHTML = '<span class="reading-bookmark-text">' + i18n.bookmarkText + '</span>' +
+                '<button type="button" class="reading-bookmark-continue">' + i18n.bookmarkBtn + '</button>' +
+                '<button type="button" class="reading-bookmark-close" aria-label="' + i18n.bookmarkClose + '">&times;</button>';
             document.body.appendChild(banner);
             requestAnimationFrame(function() { banner.classList.add('visible'); });
             banner.querySelector('.reading-bookmark-continue').addEventListener('click', function() {
