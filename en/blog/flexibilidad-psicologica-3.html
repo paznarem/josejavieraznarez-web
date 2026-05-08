@@ -1382,7 +1382,7 @@
                     hasPractice = true; break;
                 }
             }
-            var isEnglish = /read/i.test(meta.textContent);
+            var isEnglish = document.documentElement.lang === 'en';
             if (isEnglish) {
                 meta.textContent = '~' + minutes + (hasPractice ? ' min slow read' : ' min read');
             } else {
