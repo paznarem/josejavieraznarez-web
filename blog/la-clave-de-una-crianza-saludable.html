@@ -554,6 +554,248 @@
             fill: white;
         }
 
+        /* ==================== ARTICLE INTRO ==================== */
+        .article-intro {
+            font-style: italic;
+            color: var(--text-secondary) !important;
+            font-size: 1rem !important;
+            border-left: 3px solid var(--cream-dark);
+            padding-left: 1.2rem;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* ==================== EMOTIONAL BLOCK ==================== */
+        .emotional-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.05) 100%);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--warm);
+        }
+        .emotional-block p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+        .emotional-block p:last-child { margin-bottom: 0; }
+
+        /* ==================== CLOSING BLOCK ==================== */
+        .closing-block {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            border-radius: 16px;
+        }
+        .closing-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ==================== INFOBOX ==================== */
+        .infobox {
+            border-left: 3px solid var(--warm);
+            background: linear-gradient(135deg, rgba(196,168,130,0.10) 0%, rgba(196,168,130,0.04) 100%);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+        }
+        .infobox-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.5rem;
+        }
+        .infobox p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+        .infobox p:last-child { margin-bottom: 0; }
+
+        /* ==================== SCENARIO BLOCK ==================== */
+        .scenario-block {
+            background: linear-gradient(135deg, rgba(196,168,130,0.08) 0%, rgba(196,168,130,0.03) 100%);
+            border-left: 3px solid var(--warm-light);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .scenario-block p {
+            font-size: 1rem;
+            color: #4A4A4A;
+            line-height: 1.85;
+            margin-bottom: 0.9rem;
+            font-style: italic;
+        }
+        .scenario-block p:last-child { margin-bottom: 0; }
+        .scenario-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        /* ==================== DIALOG BLOCK ==================== */
+        .dialog-block {
+            background: var(--cream);
+            border-left: 3px solid var(--sage-light);
+            border-radius: 0 10px 10px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+        }
+        .dialog-block p { margin-bottom: 0.6rem; font-size: 1rem; line-height: 1.65; }
+        .dialog-block p:last-child { margin-bottom: 0; }
+        .dialog-m { color: var(--text-secondary); }
+        .dialog-jj { color: var(--sage-dark); }
+        .dialog-h { color: var(--text-secondary); }
+        .speaker {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-right: 0.4rem;
+        }
+        .dialog-m .speaker { color: var(--terracotta); }
+        .dialog-jj .speaker { color: var(--sage-dark); }
+        .dialog-h .speaker { color: var(--warm); }
+        .dialog-stage,
+        .dialog-line {
+            font-style: italic;
+            color: var(--text-secondary) !important;
+            font-size: 0.93rem !important;
+            margin: 0.4rem 0 !important;
+        }
+        .dialog-note {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: rgba(107,127,94,0.06);
+            border-radius: 6px;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.8rem !important;
+        }
+
+        /* ==================== PRACTICE BLOCK ==================== */
+        .practice-block {
+            background: linear-gradient(135deg, rgba(107,127,94,0.06) 0%, rgba(107,127,94,0.03) 100%);
+            border: 1px solid rgba(107,127,94,0.18);
+            border-radius: 12px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+        }
+        .practice-block p { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+        .practice-block p:last-child { margin-bottom: 0; }
+        .practice-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+        .practice-instruction-key {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.08rem !important;
+            color: var(--sage-dark) !important;
+            margin-bottom: 0.8rem !important;
+        }
+        .practice-line { color: var(--text-secondary); }
+
+        /* ==================== CASE BOX ==================== */
+        .case-box {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2.5rem;
+            border-left: 4px solid var(--warm);
+        }
+        .case-box-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 0.8rem;
+        }
+        .case-box p {
+            font-size: 0.98rem !important;
+            line-height: 1.75 !important;
+        }
+
+        /* ==================== COLLAPSIBLE NOTE ==================== */
+        .collapsible-note {
+            margin: 2.5rem 0;
+            border: 1px solid var(--cream-dark);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .collapsible-note summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .collapsible-note summary::-webkit-details-marker { display: none; }
+        .collapsible-note summary:hover { background: var(--cream-dark); }
+        .collapsible-note-label {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .collapsible-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sage);
+            background: rgba(107,127,94,0.12);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+        }
+        .collapsible-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-primary);
+        }
+        .collapsible-chevron {
+            color: var(--text-light);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .collapsible-note[open] .collapsible-chevron { transform: rotate(180deg); }
+        .collapsible-content {
+            padding: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+        .collapsible-content p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+        .collapsible-content p:last-child { margin-bottom: 0; }
+
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 900px) {
             .nav-links {
@@ -966,6 +1208,10 @@
 
         body.dark-mode .dialog-m {
             color: var(--text-secondary);
+        }
+
+        body.dark-mode .dialog-h {
+            color: var(--warm-light);
         }
 
         body.dark-mode .dialog-note {
@@ -1467,91 +1713,232 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
 
-        <blockquote>
-            El verdadero legado de los padres no debería ser el sacrificio silencioso, sino la enseñanza activa de una ética del cuidado mutuo responsable, donde dar y recibir sean principios fundamentales de la convivencia familiar.
-        </blockquote>
+        <div class="scenario-block">
+            <span class="scenario-label">Escena</span>
+            <p>Una hija llega a casa. No saluda. Pasa por delante de su madre y se encierra en su habitación.</p>
+            <p>La madre duda unos segundos. Siente un nudo en el pecho. Piensa: "Si no le digo nada, no le importo".</p>
+            <p>Sube. Llama. Pregunta. Insiste.</p>
+            <p>La hija responde desde dentro: "Déjame en paz. Siempre es lo mismo. Solo sabes controlar".</p>
+            <p>Ninguna de las dos sabe todavía que no están luchando una contra la otra. Ninguna de las dos está intentando hacer daño. Están luchando, cada una a su manera, contra el miedo que se activa dentro del vínculo. Y, sin embargo, el vínculo se deteriora en ese mismo momento.</p>
+        </div>
 
-        <p>El modelo de crianza basado en el sacrificio incondicional y la protección sin acciones de empatía compasiva ha generado un ciclo de relaciones familiares cada vez más frágiles. La ausencia de reciprocidad en la infancia se traduce en un contexto relacional familiar de rebeldía sin estructura en la adolescencia, victimización y reproche en la adultez, y abandono en la vejez.</p>
+        <p class="article-intro">El verdadero legado de los padres no debería ser el sacrificio silencioso, sino la enseñanza activa de una ética del cuidado mutuo responsable, donde dar y recibir sean principios fundamentales de la convivencia familiar.<br>— José Javier</p>
 
-        <p>Para romper este ciclo, es fundamental redefinir la crianza sobre la base del equilibrio entre dar y recibir, promoviendo una educación consciente y compasiva en la que los niños comprendan la importancia de la corresponsabilidad familiar desde temprana edad, la frustración y el esfuerzo se normalicen como parte del desarrollo emocional, y se fortalezcan los valores de gratitud y reciprocidad intergeneracional.</p>
+        <p>El modelo de crianza basado en el sacrificio incondicional y la protección sin práctica real de cuidado mutuo puede contribuir, en interacción con otras muchas variables, a relaciones familiares cada vez más frágiles. Esto no ocurre de golpe; no es una ruptura visible. Ocurre en pequeños momentos repetidos: cuando uno da sin límite y el otro recibe sin práctica de devolver. Lo que se rompe no es el amor, sino la dirección del vínculo.</p>
 
-        <h2>Reciprocidad a lo largo de la historia: el origen y la evolución del equilibrio entre dar y recibir</h2>
+        <p>Cuando esa reciprocidad no se practica de forma consistente durante la infancia, las consecuencias aparecen después en cada etapa: en la adolescencia, en forma de exigencia sin estructura; en la adultez, en forma de reproche; en etapas posteriores, en dificultades para cuidarse mutuamente.</p>
 
-        <p>El principio <em>"Honrarás a tu padre y a tu madre"</em> ha sido central en muchas culturas, religiones y civilizaciones a lo largo de la historia, aunque con variaciones en su interpretación y aplicación. Honrar no significa obedecer, sino reconocer el esfuerzo y el amor de los padres, incluso cuando no se está de acuerdo con sus decisiones. Es una relación de respeto profundo, donde el hijo o hija valora a los progenitores como personas.</p>
+        <p>Estos patrones no emergen de una única variable ni pueden explicarse exclusivamente por la historia de crianza. El comportamiento de los hijos —especialmente en la adolescencia— está influido al mismo tiempo por muchos factores distintos, en múltiples contextos simultáneos: grupo de iguales, entorno digital, modelos culturales, características individuales y aprendizaje verbal acumulado. La familia es un contexto clave, pero no único.</p>
 
-        <p>En el judaísmo, el mandamiento incluye respetar la voluntad de los padres y cuidar de ellos en la vejez, permitiendo desobedecer solo ante peticiones inmorales. En el islam, se ordena la bondad y la compasión hacia ellos, aunque se permite desobedecerles con respeto si intentan desviar a la persona de sus valores. En el hinduismo, los padres son considerados como dioses en la tierra, y la tradición védica subraya la responsabilidad de los hijos de cuidarlos en la vejez. En el budismo, el Sigalovada Sutta destaca la gratitud y el respeto sin obediencia ciega. En el confucianismo, la piedad filial es uno de los valores centrales, con la expectativa de respetar, obedecer y cuidar a los padres.</p>
+        <p>Ese desgaste no pertenece solo a una familia ni a una época. La tensión entre cuidado, autoridad, gratitud y reciprocidad atraviesa la historia de las relaciones entre generaciones.</p>
 
-        <p>En las civilizaciones antiguas, el respeto a los padres era un punto en común: en Egipto estaba ligado al concepto de Ma'at (orden cósmico y moral); en Grecia, la <em>Eusebeia</em> era un valor fundamental; en Roma, la <em>Pietas</em> incluía la devoción a padres y antepasados. En muchas sociedades indígenas de América, África y Oceanía, los ancianos son considerados sabios y su consejo es esencial para la comunidad.</p>
+        <h2>Un espejo que viene de lejos</h2>
+
+        <p>A veces pensamos que este nudo en el estómago es un invento del siglo XXI, pero la humanidad lleva milenios intentando resolver la misma ecuación: ¿cómo nos cuidamos unos a otros sin asfixiarnos?</p>
+
+        <p>Si miramos hacia atrás, el famoso <em>"Honrarás a tu padre y a tu madre"</em> no nació como un castigo, sino como el primer "seguro de vida" de la historia. En Egipto se llamaba Ma'at; en Roma, Pietas; en las culturas indígenas, era el respeto a los sabios. No era obediencia ciega, sino funcionalidad pura: la reciprocidad era el pegamento que evitaba que la tribu se desmoronara.</p>
+
+        <p>Desde el judaísmo hasta el budismo, pasando por el confucianismo, todas las culturas han insistido en lo mismo por una razón práctica: la relación de cuidado mutuo es la única que sostiene al grupo a largo plazo. No es un valor abstracto; es lo que permite que el ciclo no se rompa cuando los padres envejecen y los hijos crecen.</p>
+
+        <p>Sin embargo, algo cambió en Occidente. Pasamos de ese "pegamento" histórico a un modelo nuevo: el del sacrificio total.</p>
 
         <h2>La transformación occidental: del honor al sacrificio sin límites</h2>
 
-        <p>A partir del último tercio del siglo XX, la relación entre padres e hijos experimentó una transformación radical. Los cambios socioculturales, la revolución de los derechos individuales y el auge del bienestar económico desplazaron progresivamente el eje de la crianza desde la fusión entre obediencia y amor hacia un modelo centrado exclusivamente en el bienestar emocional del niño.</p>
+        <p>A partir del último tercio del siglo XX, la relación entre padres e hijos experimentó un giro radical. Pasamos de un modelo basado en la autoridad y el respeto a uno centrado casi exclusivamente en el bienestar emocional del niño.</p>
 
-        <p>Hacia mediados del siglo XX, la crianza en Occidente se basaba en una estructura jerárquica donde los padres cuidaban, se responsabilizaban y amaban a sus hijos al mismo tiempo que ejercían una autoridad natural. Sin embargo, a partir de los años 60 y 70, con la influencia de los movimientos contraculturales, se produjo un cuestionamiento generalizado de las figuras de autoridad, incluida la parental.</p>
+        <p>Hasta los años 50, la familia era una jerarquía: los padres mandaban y los hijos obedecían. Era un sistema rígido, a veces demasiado, pero los roles estaban claros. Sin embargo, con las revoluciones sociales de los años 60 y 70, cuestionamos toda autoridad, incluida la de los padres. Queríamos familias más democráticas, más afectivas, más horizontales. Y eso fue un gran avance... pero trajo una trampa invisible.</p>
 
-        <p>La obediencia dejó de ser un valor central y surgió una familia pretendidamente más democrática, donde los deseos de los hijos adquirieron mayor peso progresivo. Aunque este cambio favoreció una crianza más afectiva y participativa, también <strong>debilitó la transmisión de la responsabilidad y la reciprocidad</strong>, incorporando la validación externa como eje central.</p>
+        <p>Al intentar ser los padres "perfectos" que validan cada emoción de sus hijos, muchos cayeron en el error de borrar sus propios límites. La televisión, las redes sociales y miles de libros sobre crianza reforzaron una idea peligrosa: que el amor verdadero es un sacrificio absoluto y sin condiciones.</p>
 
-        <p>Los medios de comunicación, las redes sociales, la proliferación de libros sobre crianza y los expertos que enfatizan la responsabilidad exclusiva de los cuidadores han reforzado la imagen del sacrificio parental sin límites. Relatos de padres y madres dispuestos a hacer todo por sus hijos promueven la idea de que el amor verdadero implica una entrega absoluta, en muchas ocasiones a costa de la salud, la carrera o los valores personales.</p>
+        <p>Se empezó a premiar la idea de que los padres deben entregarse hasta el agotamiento, renunciando a su salud o a su identidad, sin pedir nada a cambio. Pero esto no es una cuestión de generosidad, es lógica pura: cuando una relación deja de funcionar en dos direcciones, empieza a desgastarse, aunque el cariño siga ahí.</p>
 
-        <h2>Crianza sin reciprocidad: el alimento del sentimiento de derecho automático</h2>
+        <h2>Crianza sin reciprocidad: el aprendizaje del derecho automático</h2>
 
-        <p>El proceso de crianza establece las bases fundamentales para las relaciones intergeneracionales. En las últimas décadas, un cambio estructural significativo ha desplazado el eje de la reciprocidad hacia un enfoque centrado en la sobreprotección y el sacrificio parental, generando una erosión progresiva de los principios de mutualidad en las familias.</p>
+        <p>Al eliminar cualquier exigencia de retorno, no estamos haciendo la vida más fácil a los hijos; les estamos enseñando una regla falsa para el mundo real.</p>
 
-        <blockquote>
-            La paradoja final es que los mismos padres que sacrificaron su bienestar personal por sus hijos se encuentran con una generación que no percibe ese cuidado como una deuda emocional, sino como una imposición no deseada, incluso traumática.
-        </blockquote>
+        <p>Si un adolescente crece viendo que sus deseos se cumplen de manera consistente y sin condición de reciprocidad, no se vuelve "malo", simplemente aprende que tiene un derecho automático a recibir. Aprende que su bienestar ocupa el centro del espacio relacional y que la responsabilidad de que él esté bien siempre es del otro.</p>
 
-        <p>Cuando los padres se enfocan principalmente en satisfacer todas las necesidades y deseos de sus hijos, con frecuencia a costa de su propio bienestar, los hijos pueden llegar a internalizar la idea de que el mundo entero debe girar en torno a ellos. Este fenómeno puede llevar a los niños a adoptar actitudes de exigencia y un sentido de derecho automático, en lugar de aprender valores esenciales como la amabilidad, la gratitud y el sacrificio mutuo.</p>
+        <p>Es un aprendizaje silencioso que, años después, se convierte en un muro insalvable dentro de la propia familia: un patrón donde exigir ha sido <strong>reforzado</strong> —es decir, ha funcionado tantas veces que se repite casi solo— y contribuir nunca ha sido requerido.</p>
+
+        <div class="emotional-block">
+            <p>La paradoja final es que muchos padres que sacrificaron su bienestar personal por sus hijos se encuentran después con hijos que no perciben ese cuidado como una referencia de vínculo, sino como una imposición no deseada, una fuente de malestar o algo vivido posteriormente en términos traumáticos.</p>
+            <p>Muchos padres reconocen este momento con una sensación muy concreta: <em>"He estado para todo… y ahora parece que no cuenta"</em>. No porque sus hijos no tengan valores, sino porque no han tenido suficientes ocasiones para practicarlos dentro del vínculo.</p>
+        </div>
+
+        <p>Un padre recoge, resuelve, paga, organiza, recuerda, anticipa y amortigua. Lo hace por amor, por protección, por facilitar la vida presente y futura. Pero, sin darse cuenta, va retirando del camino casi todas las ocasiones en las que su hijo podría esperar, frustrarse, colaborar, apoyar, consolar, restaurar o cuidar. Años después, ese mismo padre se pregunta por qué su hijo se muestra incapaz de percibir y atender las necesidades ajenas. La respuesta no siempre está en la falta de amor. A veces está en la falta de práctica.</p>
+
+        <p>No estamos hablando de que el hijo sea egoísta por naturaleza. No es algo que "sea", como quien tiene los ojos marrones. Estamos hablando de un patrón aprendido: una forma de relacionarse que se ha ido consolidando poco a poco, sin que nadie se lo propusiera. Una forma en la que, sin que nadie lo haya dicho explícitamente, el hijo ha aprendido que puede recibir afecto, atención y recursos sin necesidad de dar nada a cambio.</p>
+
+        <div class="infobox">
+            <span class="infobox-label">Marco conceptual</span>
+            <p>La <strong>Ciencia Conductual Contextual</strong> —CBS, por sus siglas en inglés: un enfoque dentro de la psicología científica que estudia el comportamiento humano siempre en relación con el contexto en que ocurre— lo explica así: lo que ha ocurrido aquí no es que el hijo "sea" de una manera. Es que ciertas respuestas han sido reforzadas de manera consistente y otras no han tenido oportunidad de desarrollarse.</p>
+            <p>El resultado es un <strong>repertorio</strong> limitado —es decir, el conjunto de respuestas que esa persona tiene realmente disponibles para relacionarse—, en el que exigir ha sido reforzado de manera consistente y contribuir no ha sido requerido, lo que desplaza el aprendizaje de valores como la amabilidad, la gratitud y el cuidado mutuo.</p>
+            <p>Este patrón no implica intención ni falta de valores. Implica una historia de aprendizaje concreta.</p>
+        </div>
 
         <h3>El énfasis en recibir más que en dar</h3>
 
-        <p>Los hijos acostumbrados a recibir constantemente todo lo que desean pueden llegar a sentir que su bienestar debe ser la prioridad absoluta. La cultura de la gratificación inmediata, exacerbada por los avances tecnológicos y la sobreabundancia de bienes y servicios, refuerza la idea de que sus deseos deben ser satisfechos de manera inmediata. En lugar de aprender a dar y contribuir, muchos hijos crecen con una visión egocéntrica en la que exigir se convierte en un comportamiento normalizado.</p>
+        <p>La cultura de la gratificación inmediata, exacerbada por los avances tecnológicos y la sobreabundancia de bienes y servicios, refuerza esa pauta: las consecuencias de las propias acciones se producen de manera inmediata y sin esfuerzo previo. Lo que no se practica es dar y contribuir. Y lo que no se practica bajo las condiciones cotidianas del vínculo familiar no estará disponible cuando ese vínculo lo requiera.</p>
+
+        <p>Cuando esta pauta se repite durante años, deja de afectar solo a conductas concretas y empieza a reorganizar la posición que cada miembro ocupa dentro del vínculo familiar. Es ahí donde la dificultad ya no se limita a recibir más de lo que se da, sino que altera la propia estructura relacional.</p>
+
+        <p>En el contexto actual, este proceso se ve amplificado por entornos digitales donde la validación es inmediata, visible y constante. El adolescente compara su experiencia familiar con modelos externos que presentan ciertas formas de relación como estándar, lo que puede intensificar la percepción de injusticia o insuficiencia en el vínculo con los padres.</p>
 
         <h3>La confusión de roles</h3>
 
-        <p>En las familias donde los padres están demasiado centrados en satisfacer los deseos de los hijos sin establecer límites claros, puede producirse una inversión de roles. Los hijos, en lugar de ser guiados, comienzan a "dirigir" las decisiones familiares. Este desequilibrio lleva a los padres a sentirse atrapados en un ciclo de complacencia para evitar conflictos, mientras que los hijos refuerzan su sensación de autoridad. Este comportamiento contribuye a una falta de empatía emocional y compasiva, en la que el hijo exige sin sentirse responsable del bienestar familiar.</p>
+        <p>En las familias donde los padres están centrados en satisfacer los deseos de los hijos sin establecer límites claros, puede producirse una inversión funcional de roles. Los hijos, en lugar de ser guiados, comienzan a organizar las decisiones familiares. Los padres entran en un ciclo de complacencia para evitar el conflicto a corto plazo. Los hijos, a su vez, consolidan una forma de funcionar en la que su demanda produce efecto sin necesidad de considerar el impacto en los demás. Y lo que apenas se practica en todo ese proceso es ponerse en el lugar del otro de verdad: la <strong>empatía compasiva</strong> —no solo entender lo que el otro siente, sino que eso te importe y te mueva a actuar—.</p>
 
-        <h3>Cuando la ausencia de reciprocidad deviene en victimización</h3>
+        <p>En algunos casos, este proceso evoluciona hacia una forma de distanciamiento especialmente frecuente en la actualidad: la cancelación silenciosa. El adolescente no confronta de manera abierta, pero retira el acceso emocional, limita la información que comparte, reduce la interacción a lo imprescindible y reorganiza su vida relacional fuera del sistema familiar.</p>
 
-        <p>En muchos casos, los hijos aprenden a victimizarse para obtener lo que desean, utilizando tácticas de manipulación emocional como la culpa, el llanto o los reclamos. El resultado de esta dinámica de "recibir" y "exigir" sin aprender a dar ni a valorar lo que se recibe es que muchos hijos desarrollan una visión distorsionada de las relaciones humanas, en la que sus deseos y necesidades se consideran prioritarios y no sienten la necesidad de trabajar por ellos.</p>
+        <p>No aparece siempre ni responde a una única historia de aprendizaje, pero puede consolidarse cuando el adolescente encuentra en la retirada relacional una forma eficaz de reducir malestar, proteger su imagen o recuperar sensación de control.</p>
 
-        <h2>El impacto intergeneracional de la crianza desequilibrada</h2>
+        <p>Este patrón de alejamiento no es simplemente rebeldía ni rechazo. Tiene una lógica interna con funciones claras: alejarse es la forma que ha encontrado el adolescente de protegerse de lo que vive como crítica, control o sensación de no ser suficiente frente a contextos que se viven como evaluativos o invalidantes.</p>
 
-        <p>La crianza desequilibrada genera un ciclo intergeneracional con consecuencias perjudiciales en tres etapas críticas: la adolescencia, la adultez de los hijos y la vejez de los padres.</p>
+        <h3>Cuando la ausencia de reciprocidad empieza a organizar el relato del daño</h3>
 
-        <h3>Adolescencia rebelde: exigencia sin estructura</h3>
+        <p>En muchos casos, los hijos desarrollan conductas de apelación al malestar propio —el llanto, el reproche, la expresión de sufrimiento— que en su historia de aprendizaje han resultado efectivas para conseguir lo que buscaban, independientemente del coste relacional a largo plazo. Y por eso las repiten, no necesariamente de forma consciente o manipuladora.</p>
 
-        <p>El cerebro adolescente está en pleno desarrollo, especialmente en las áreas responsables de la regulación emocional y la planificación a largo plazo. Sin embargo, en contextos donde se ha priorizado la satisfacción inmediata sin exigir reciprocidad, se refuerzan esquemas mentales en los que el hijo siente que tiene derechos sin deberes.</p>
+        <p>En este punto es clave introducir otra variable: el adolescente no responde solo a lo que ocurre, sino a cómo lo interpreta. Aquí entra en juego lo que en psicología contextual se llaman <strong>reglas verbales</strong>: frases que uno ha ido construyendo a partir de su experiencia, sin que nadie se las haya dicho explícitamente, y que organizan lo que hace. <em>"Mis padres no me respetan". "Me controlan". "Nunca es suficiente"</em>. No son simples ideas sueltas. Son reglas que funcionan como instrucciones automáticas: cuando aparecen, dirigen la conducta casi sin que la persona lo decida.</p>
 
-        <p>La ausencia de límites claros produce adolescentes con baja tolerancia a la frustración y un sentido exagerado de derecho. En ausencia de normas basadas en valores sólidos, desafían a las figuras de autoridad como forma de probar límites y obtener control, sin considerar las consecuencias emocionales sobre los demás.</p>
+        <p>Lo que acabas de leer no ocurre solo en la cabeza del adolescente. Ocurre en la relación, en tiempo real.</p>
+
+        <div class="dialog-block">
+            <p class="dialog-note">JJ: Psicólogo contextual; H: hija; M: madre.</p>
+            <p class="dialog-h"><span class="speaker">H</span>— No me preguntes más. Siempre es lo mismo.</p>
+            <p class="dialog-m"><span class="speaker">M</span>— Es que necesito saber dónde estás, es normal. No puedes desaparecer así.</p>
+            <p class="dialog-h"><span class="speaker">H</span>— ¿Ves? Control. Siempre control. Solo sabes controlar.</p>
+            <p class="dialog-m"><span class="speaker">M</span>— No es control, es preocupación. Si no te digo nada, luego parece que no me importa.</p>
+            <p class="dialog-h"><span class="speaker">H</span>— Me da igual lo que parezca. No entiendes nada. Nunca te importa cómo me siento.</p>
+            <p class="dialog-stage">La escena no empieza con falta de amor. Empieza con dos respuestas que funcionan a corto plazo. Ella se aleja y reduce lo que siente. La madre insiste y reduce su incertidumbre. Y ambas, sin saberlo, refuerzan exactamente lo que les duele.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Parad.</p>
+            <p class="dialog-stage">No explica. No corrige. Interrumpe el patrón.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— No me expliquéis nada. Solo notad qué está pasando ahora mismo aquí.</p>
+            <p class="dialog-stage">(Mira a la madre)</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— ¿Qué hay en tu cuerpo ahora?</p>
+            <p class="dialog-m"><span class="speaker">M</span>— …cansancio. Y algo en el pecho.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Quédate ahí.</p>
+            <p class="dialog-stage">(Mira a la hija)</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— ¿Y tú?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— Rara.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— ¿Rara incómoda o distinta?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— …distinta.</p>
+            <p class="dialog-stage">Por primera vez, no están discutiendo. Están notando.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Cuando dices "control"… ¿lo estás notando o lo estás creyendo?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— Es que es verdad.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Ahora mismo tu mente no te deja verlo de otra manera. Y cuando aparece… ¿qué te pide hacer?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— Pasar. No decir nada.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Cerrarte. Y tú, cuando ella se cierra… ¿qué aparece?</p>
+            <p class="dialog-m"><span class="speaker">M</span>— Que la estoy perdiendo.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— ¿Y qué haces?</p>
+            <p class="dialog-m"><span class="speaker">M</span>— Insistir más.</p>
+            <p class="dialog-stage">Aquí está el bucle. No es teórico. Es visible. Cuanto más aparece "no le importo", más se aleja. Cuanto más aparece "la pierdo", más se insiste.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Mira esto. <em>(A la madre)</em> Pon una mano en el pecho.</p>
+            <p class="dialog-stage">No es una técnica. Es hacer visible la función.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— <em>(A la hija)</em> Mira esa mano. ¿Qué está intentando proteger?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— …su miedo.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Exacto. <em>(A la madre)</em> Y cuando ella se calla… ¿qué protege?</p>
+            <p class="dialog-m"><span class="speaker">M</span>— …su libertad.</p>
+            <p class="dialog-stage">En este punto ocurre algo clave. No cambia la conducta todavía. Cambia lo que cada una ve en la otra.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— No queréis cosas opuestas. Queréis cosas importantes. Pero las estáis defendiendo de una forma que las rompe.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Tu mente te dice: "Si no pregunto, soy mala madre". Y cuando aparece… obedeces.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Y tu mente te dice: "Si me controla, no me respeta". Y cuando aparece… te vas.</p>
+            <p class="dialog-stage">Esto es lo que en muchos hogares se vive como carácter, rebeldía o falta de respeto. Pero funcionalmente es otra cosa: respuestas que se han ido aprendiendo y que se activan casi automáticamente en ciertas situaciones, bajo determinadas condiciones, sin que lo decidamos conscientemente. Es lo que en este enfoque se llama un <strong>patrón de respuesta</strong>: no una decisión consciente cada vez, sino una reacción aprendida que se dispara ante ciertas condiciones.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Mírala. <em>(A la hija)</em> ¿Qué le pasa cuando no sabe de ti?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— …miedo.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Ese miedo no se va a ir. Porque viene de algo importante.</p>
+            <p class="dialog-stage">Aquí aparece el límite que muchas veces se evita nombrar.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Tu madre es responsable de tu seguridad. Y eso no es negociable. Pero sí podéis cambiar cómo respondéis a eso.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— ¿Qué necesitas en esta relación?</p>
+            <p class="dialog-h"><span class="speaker">H</span>— …aire.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Espacio.</p>
+            <p class="dialog-m"><span class="speaker">M</span>— No perderla.</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Conexión. Autonomía y vínculo no son opuestos. Se rompen cuando uno intenta sostenerlos solo.</p>
+            <p class="dialog-stage">(Silencio)</p>
+            <p class="dialog-jj"><span class="speaker">JJ</span>— Ahora viene lo difícil. No entender. Hacer.</p>
+            <p class="dialog-m"><span class="speaker">M</span>— …esperar antes de preguntar.</p>
+            <p class="dialog-h"><span class="speaker">H</span>— …decir algo y no desaparecer.</p>
+            <p class="dialog-stage">No son grandes cambios. Son movimientos pequeños bajo emociones intensas. Ahí es donde se aprende la reciprocidad. La escena no termina con acuerdo. Termina con algo más importante: dos personas viendo por primera vez qué están haciendo… mientras lo hacen.</p>
+        </div>
+
+        <p>Este tipo de interacción no es una excepción. Es representativa de un patrón funcional que, cuando se repite, organiza el vínculo a lo largo del tiempo.</p>
+
+        <p>Cuando una regla verbal como "me controlan" se consolida, deja de funcionar solo como una idea y empieza a organizar la percepción del vínculo. Todo lo que hace el padre pasa por esa lente, y lo que no encaja con ella tiende a dejar de verse.</p>
+
+        <p>Estas reglas, una vez establecidas, organizan la conducta futura: filtran lo que se escucha, estrechan lo que el hijo está dispuesto a mostrar, aumentan la probabilidad de ocultación, confrontación o retirada, y pueden mantenerse incluso cuando las condiciones actuales hayan cambiado.</p>
+
+        <p>El resultado de esta dinámica es que muchos hijos construyen una lectura de las relaciones humanas en la que sus deseos y necesidades se perciben como prioritarios y la responsabilidad sobre su consecución recae siempre en el otro.</p>
+
+        <h2>El impacto en las distintas etapas del desarrollo</h2>
+
+        <p>La crianza desequilibrada genera un ciclo con consecuencias funcionales en tres etapas críticas: la adolescencia, la adultez de los hijos y la vejez de los padres.</p>
+
+        <h3>Adolescencia: exigencia sin estructura</h3>
+
+        <p>El adolescente está todavía construyendo su repertorio —el conjunto de respuestas que tiene disponibles para manejarse en la vida—, especialmente en lo que tiene que ver con regular el malestar y con actuar pensando en lo que vendrá después, no solo en el alivio inmediato.</p>
+
+        <p>En contextos donde se ha priorizado la satisfacción inmediata sin requerir reciprocidad, se consolidan reglas verbales del tipo <em>"tengo derecho a recibir sin necesidad de comprometerme con nada"</em>. Su derecho no está condicionado al deber. La ausencia de límites coherentes produce adolescentes con baja tolerancia a la frustración y un patrón de exigencia automática.</p>
+
+        <p>Muchas de las conductas que los padres describen como rebeldía —ocultar, mentir, responder con hostilidad o retirarse— pueden entenderse funcionalmente como intentos de regular malestar inmediato. No son únicamente conductas contra los padres, sino conductas orientadas a reducir la sensación de evaluación, control o insuficiencia percibida.</p>
+
+        <p>Muchos adolescentes no sienten que estén dañando su vínculo con sus padres. Sienten que están intentando respirar dentro de él. El problema es que, cuando respirar solo parece posible alejándose, ocultando o atacando, el alivio de un momento puede convertirse en la herida de muchos meses.</p>
+
+        <p>Incluso con normas basadas en valores sólidos, pueden desafiar a las figuras de autoridad, que les aman y protegen, como forma de poner a prueba los límites y obtener control, sin que su repertorio incluya la consideración de las consecuencias emocionales sobre los demás.</p>
 
         <h3>Adultez: narrativas de victimización y resentimiento</h3>
 
-        <p>La crianza sin reciprocidad moldea la percepción distorsionada que el individuo tiene sobre su propia historia y su lugar en el mundo. La transición hacia la adultez implica asumir la responsabilidad de la propia vida. Sin embargo, cuando el desarrollo ha estado marcado por la evitación de la frustración y la externalización de los problemas, surgen dinámicas en las que el individuo se percibe a sí mismo como víctima de su entorno.</p>
+        <p>Este análisis no implica que los padres no hayan estado presentes, comprometidos o disponibles. Muchos padres en estas situaciones han sostenido el vínculo durante años, han cuidado, protegido y ofrecido recursos de manera constante. Sin embargo, eso no garantiza que el hijo interprete ese vínculo de la misma manera.</p>
 
-        <ul>
-            <li><strong>Culpar a los padres por carencias percibidas.</strong> Incluso cuando los padres han brindado amor y recursos en abundancia, la falta de formación en reciprocidad genera la sensación de que la deuda emocional no ha sido saldada.</li>
-            <li><strong>Repetición prolongada de patrones de dependencia.</strong> Al no haber internalizado la autonomía, muchos adultos buscan en sus relaciones un sustituto del rol parental, esperando ser cuidados sin asumir responsabilidades equitativas.</li>
-            <li><strong>Mentalidad de víctima crónica.</strong> Los fracasos y dificultades son atribuidos a fallos en la crianza o a injusticias externas, en lugar de ser vistos como desafíos personales a superar. Esta mentalidad dificulta el desarrollo de estrategias resilientes.</li>
-        </ul>
+        <p>La crianza sin reciprocidad organiza la manera en que el individuo lee su propia historia y su lugar en las relaciones. La transición hacia la adultez implica asumir la responsabilidad de la propia vida. Sin embargo, cuando el desarrollo ha estado marcado por la evitación de la frustración y la externalización de los problemas, surgen dinámicas en las que el individuo se percibe sistemáticamente como resultado de lo que otros hicieron o dejaron de hacer.</p>
+
+        <p><strong>Culpar a los padres por carencias percibidas.</strong> Incluso cuando los padres han brindado amor y recursos en abundancia, la ausencia de práctica en reciprocidad genera una regla verbal del tipo <em>"lo que recibí no fue suficiente"</em>, que organiza la conducta presente con independencia de lo que realmente ocurrió.</p>
+
+        <p>Hay frases que, una vez repetidas muchas veces por dentro, acompañadas por voces que las validan, dejan de describir la historia y empiezan a organizarla. <em>"No fue suficiente", "nunca me entendieron", "siempre me exigieron", "me controlaban"</em>. A veces contienen parte de verdad. Pero también pueden convertirse en marcos rígidos que ya no permiten ver ni matices, ni esfuerzo, ni ambivalencia, ni responsabilidad propia.</p>
+
+        <p><strong>Repetición prolongada de patrones de dependencia.</strong> Al no haber desarrollado la autonomía como respuesta practicada en contexto, muchos adultos buscan en sus relaciones un sustituto del rol parental, esperando ser cuidados sin asumir responsabilidades equitativas.</p>
+
+        <p>Así el recuerdo de su historia en la infancia y adolescencia se transforma en una <strong>narrativa de victimización</strong> que cumple una función concreta: alivia el malestar a corto plazo, porque si la culpa siempre es de otros, no hay nada que yo tenga que cambiar. Pero a largo plazo estrecha el repertorio disponible y aleja al individuo de los contextos donde podría aprender que sus acciones tienen consecuencias y que esas consecuencias pueden cambiar.</p>
+
+        <details class="collapsible-note">
+            <summary>
+                <span class="collapsible-note-label">
+                    <span class="collapsible-tag">Marco</span>
+                    <span class="collapsible-title">¿Qué hace distinta a la psicología contextual aquí?</span>
+                </span>
+                <svg class="collapsible-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="collapsible-content">
+                <p>Aquí es donde la mirada de la psicología contextual se diferencia de otros enfoques. No dice: "ese pensamiento es distorsionado, cámbialo" —eso sería un enfoque cognitivo—. No dice: "la causa está en un conflicto inconsciente de tu infancia" —eso sería un enfoque dinámico—.</p>
+                <p>Dice: esa narrativa tiene una <strong>función</strong> en tu vida ahora. ¿Qué estás consiguiendo con ella? ¿Y qué te está costando? La pregunta no es si la narrativa es verdadera o falsa, sino qué efecto tiene en lo que haces y en la dirección que toma tu vida.</p>
+            </div>
+        </details>
 
         <h3>Vejez parental: abandono y conflictos filiales</h3>
 
-        <p>Cuando los padres ya no pueden sostener el rol de proveedores incondicionales, se encuentran con hijos que, lejos de asumir la reciprocidad natural, priorizan su bienestar personal y desatienden el vínculo familiar. Los hijos que han crecido recibiendo sin dar pueden interpretar el cuidado de los padres mayores como una "obligación no correspondida" y resistirse a asumir esa responsabilidad.</p>
+        <p>Cuando los padres ya no pueden sostener el rol de proveedores incondicionales, se encuentran con hijos que, lejos de incorporar la reciprocidad como pauta relacional aprendida, priorizan su bienestar personal y desatienden el vínculo familiar. Los hijos que han crecido en un contexto donde recibir no requería dar pueden leer el cuidado de los padres mayores como una "obligación no correspondida" y resistirse a asumir esa responsabilidad, precisamente porque ese movimiento —dar sin recibir de manera inmediata— no forma parte de su repertorio practicado.</p>
 
-        <p>Los hermanos pueden entrar en conflicto por la distribución de las responsabilidades, agravando aún más la fragmentación familiar. Los hijos pueden sentir que sus padres "ya hicieron su vida" y que ahora deben "disfrutar" de la suya sin cargas adicionales.</p>
+        <p>Los hermanos pueden entrar en conflicto por la distribución de las responsabilidades, agravando la fragmentación familiar. Los hijos pueden sostener la regla verbal de que sus padres "ya hicieron su vida" y que ahora les corresponde "disfrutar de la suya" sin cargas adicionales.</p>
 
         <h2>Hacia una crianza consciente y compasiva</h2>
 
-        <p>Romper este ciclo requiere redefinir la crianza sobre la base del equilibrio entre dar y recibir. Ello implica que los niños comprendan la corresponsabilidad familiar desde temprana edad, que la frustración y el esfuerzo se normalicen como parte del desarrollo, y que se transmitan activamente los valores de gratitud y reciprocidad intergeneracional.</p>
+        <p>Romper este ciclo no requiere un modelo de crianza prescrito ni una forma única de organizar la familia. Requiere identificar qué condiciones producen qué consecuencias, y tomar decisiones desde los <strong>valores</strong> —en el sentido de direcciones elegidas que dan sentido a lo que haces, no simples preferencias— de cada padre y cada madre sobre la clase de vínculo que quieren construir y transmitir.</p>
 
-        <p>Para contrarrestar la dinámica del derecho automático, es fundamental que los padres, dentro de su rol protector, también enseñen el valor de dar, la importancia de la gratitud y el significado de honrar a quienes nos cuidan. Todo ello debe ir acompañado de límites claros y respetuosos que ofrezcan un modelo de responsabilidad compartida en la familia.</p>
+        <p>Lo que la investigación en ciencia del comportamiento contextual muestra es que los patrones de respuesta se consolidan a través de la práctica repetida bajo condiciones cotidianas, no a través de las grandes declaraciones de intención. Un niño aprende reciprocidad cuando la reciprocidad es requerida de manera consistente en el contexto familiar ordinario: cuando contribuir es una condición del vínculo, cuando la frustración no se elimina de manera inmediata, cuando el límite no es una amenaza sino una parte esperable de la convivencia.</p>
 
-        <blockquote>
-            El verdadero legado de los padres no es el sacrificio silencioso, sino la enseñanza activa de una ética del cuidado mutuo responsable, donde dar y recibir sean principios fundamentales de la convivencia familiar.
-        </blockquote>
+        <div class="infobox">
+            <span class="infobox-label">Principio</span>
+            <p>La reciprocidad no se transmite como una obligación moral, sino como una <strong>experiencia funcional</strong>: el hijo aprende a contribuir cuando contribuir tiene efectos reales dentro del vínculo.</p>
+        </div>
 
-        <p class="article-signature" style="font-style:italic; color: var(--text-light); margin-top: 2.5rem;">José Javier</p>
+        <p>Para que eso ocurra, los padres necesitan poder diferenciar entre dos movimientos que a veces se confunden: proteger y privar de la oportunidad de aprender. Dar es parte esencial de la crianza. Pero dar sin requerir nunca la reciprocidad que el niño o el adolescente ya puede ofrecer no es generosidad: es la eliminación de los contextos donde se aprende que el vínculo funciona en las dos direcciones.</p>
+
+        <div class="closing-block">
+            <p>El verdadero legado de los padres no es el sacrificio silencioso, sino la enseñanza activa —practicada, repetida, encarnada en los momentos ordinarios— de una ética del cuidado mutuo responsable, donde dar y recibir sean principios fundamentales de la convivencia familiar.</p>
+            <p>Eso no se transmite con palabras. Se transmite en cómo funciona el vínculo día a día. Y cuando ese funcionamiento incluye reciprocidad desde temprano, el hijo no solo la entiende: la practica, la incorpora a su manera de estar con los demás y la lleva consigo al construir sus propias relaciones.</p>
+        </div>
+
+        <p>Tal vez la pregunta no sea solo cuánto has dado por tu hijo, sino también si le has dejado suficientes ocasiones para aprender a dar. Y tal vez la pregunta para el hijo no sea solo cuánto ha recibido, sino en qué momento empezó a considerar normal recibir sin mirar el coste que eso tenía en los demás.</p>
+
+        <p class="article-signature">José Javier</p>
 
     </article>
 
@@ -1938,6 +2325,13 @@ document.addEventListener("DOMContentLoaded", function() {
     (function() {
         var article = document.querySelector('.article-body');
         if (!article || !('IntersectionObserver' in window)) return;
+        var isEN = document.documentElement.lang === 'en';
+        var i18n = {
+            bookmarkAria: isEN ? 'Resume reading' : 'Retomar lectura',
+            bookmarkText: isEN ? 'Resume where you left off' : 'Retomar donde lo dejaste',
+            bookmarkBtn: isEN ? 'Continue' : 'Continuar',
+            bookmarkClose: isEN ? 'Close' : 'Cerrar'
+        };
         var slug = window.location.pathname;
         var storageKey = 'reading-pos-' + slug;
         var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
@@ -1969,10 +2363,10 @@ document.addEventListener("DOMContentLoaded", function() {
             var banner = document.createElement('div');
             banner.className = 'reading-bookmark';
             banner.setAttribute('role', 'dialog');
-            banner.setAttribute('aria-label', 'Retomar lectura');
-            banner.innerHTML = '<span class="reading-bookmark-text">Retomar donde lo dejaste</span>' +
-                '<button type="button" class="reading-bookmark-continue">Continuar</button>' +
-                '<button type="button" class="reading-bookmark-close" aria-label="Cerrar">&times;</button>';
+            banner.setAttribute('aria-label', i18n.bookmarkAria);
+            banner.innerHTML = '<span class="reading-bookmark-text">' + i18n.bookmarkText + '</span>' +
+                '<button type="button" class="reading-bookmark-continue">' + i18n.bookmarkBtn + '</button>' +
+                '<button type="button" class="reading-bookmark-close" aria-label="' + i18n.bookmarkClose + '">&times;</button>';
             document.body.appendChild(banner);
             requestAnimationFrame(function() { banner.classList.add('visible'); });
             banner.querySelector('.reading-bookmark-continue').addEventListener('click', function() {
