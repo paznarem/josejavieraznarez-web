@@ -285,6 +285,46 @@
             box-shadow: 0 8px 30px rgba(107,127,94,0.35);
         }
 
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: transparent;
+            color: var(--sage-dark);
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: 1.5px solid var(--sage);
+        }
+
+        .btn-outline:hover {
+            background: var(--sage);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(107,127,94,0.2);
+        }
+
+        .hero-actions-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-left: 0.3rem;
+        }
+
+        .hero-actions-meta a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(107,127,94,0.25);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .hero-actions-meta a:hover {
+            color: var(--sage-dark);
+            border-color: var(--sage);
+        }
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -939,6 +979,59 @@
             color: var(--text-secondary);
             line-height: 1.6;
             font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            gap: 0.6rem;
+        }
+
+        .blog-card-header .blog-card-category {
+            margin-bottom: 0;
+        }
+
+        .blog-card-badge {
+            display: inline-block;
+            background: var(--terracotta);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.18rem 0.55rem;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .blog-card-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-top: auto;
+        }
+
+        .blog-card-meta svg {
+            width: 13px;
+            height: 13px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-grid {
+            grid-template-rows: 1fr 1fr;
         }
 
         /* ==================== CTA SECTION ==================== */
@@ -1573,6 +1666,22 @@
             border-color: var(--sage);
             color: var(--sage-light);
         }
+        body.dark-mode .btn-outline {
+            color: var(--sage-light);
+            border-color: var(--sage);
+        }
+        body.dark-mode .btn-outline:hover {
+            background: var(--sage);
+            color: #1a1a1a;
+        }
+        body.dark-mode .hero-actions-meta { color: var(--text-light); }
+        body.dark-mode .hero-actions-meta a { color: var(--text-secondary); }
+        body.dark-mode .hero-actions-meta a:hover { color: var(--sage-light); }
+        body.dark-mode .blog-card-badge {
+            background: var(--terracotta);
+            color: #fff;
+        }
+        body.dark-mode .blog-card-meta { color: var(--text-light); }
 
         body.dark-mode .section-label { color: var(--sage-light); }
 
@@ -1664,12 +1773,11 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Escríbeme por WhatsApp
                 </a>
-                <a href="como-trabajo.html" class="btn-secondary">
-                    Descubre cómo trabajo →
+                <a href="blog/index.html" class="btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Leer artículos
                 </a>
-                <a href="blog/index.html" class="btn-secondary">
-                    Leer artículos del blog →
-                </a>
+                <span class="hero-actions-meta">o conoce <a href="como-trabajo.html">cómo trabajo →</a></span>
             </div>
         </div>
     </section>
@@ -1876,22 +1984,46 @@
             </div>
             
             <div class="blog-grid mobile-collapsible">
-                <a href="blog/index.html#vivir-lo-que-vale" class="blog-card">
+                <a href="blog/la-tirania-de-la-comparacion-social.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Vivir lo que vale</div>
+                        <span class="blog-card-badge">Más leído</span>
+                    </div>
+                    <h3>La tiranía de la comparación social</h3>
+                    <p>Cuando medirte con los demás se convierte en el filtro por el que vives, deja de haber suficiente.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min de lectura</span>
+                </a>
+                <a href="blog/flexibilidad-psicologica-1.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
-                    <h3>Estar presente, vivir lo que vale</h3>
-                    <p>Autocompasión, autoestima, procrastinación, comparación social... Claves para relacionarte de otra manera con lo que piensas y sientes.</p>
+                    <h3>Cuando dejar de intentar sentirte mejor te permite empezar a vivir mejor</h3>
+                    <p>Por qué luchar contra el malestar suele alimentarlo, y qué cambia cuando dejas de hacerlo.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min de lectura</span>
                 </a>
-                <a href="blog/index.html#crianza-consciente" class="blog-card">
+                <a href="blog/nuestra-procrastinacion-nuestra-companera.html" class="blog-card">
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Nuestra procrastinación, nuestra compañera</h3>
+                    <p>No procrastinas por falta de disciplina. Procrastinas porque, a corto plazo, funciona.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8 min de lectura</span>
+                </a>
+                <a href="blog/crianza-contextual-funcional-4.html" class="blog-card mobile-hidden">
                     <div class="blog-card-category">Criar con dirección</div>
-                    <h3>Acompañar con amor, criar lo que importa</h3>
-                    <p>Procesos que organizan el vínculo entre adultos e hijos: co-regulación, flexibilidad psicológica, límites como contexto de aprendizaje y reciprocidad funcional en la familia.</p>
+                    <h3>Qué te ocurre cuando tu hijo llora</h3>
+                    <p>Los procesos que organizan tu respuesta antes de que llegues a pensar qué hacer.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min de lectura</span>
                 </a>
-                <a href="blog/index.html#ansiedad-escenica" class="blog-card mobile-hidden">
-                    <div class="blog-card-category">Ansiedad escénica</div>
-                    <h3>Toca aunque tiembles: rendimiento musical bajo presión</h3>
-                    <p>Más de 15 artículos basados en ACT/CBS para músicos que conviven con la ansiedad escénica. Aprender a tocar con el miedo presente.</p>
+                <a href="blog/acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card mobile-hidden">
+                    <div class="blog-card-category">Criar con dirección</div>
+                    <h3>Acompañar, validar, confiar</h3>
+                    <p>Las tres acciones que construyen identidad y fortaleza emocional en tu hijo.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>9 min de lectura</span>
                 </a>
-                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Leer más ↓</button>
+                <a href="blog/sanar-la-traicion.html" class="blog-card mobile-hidden">
+                    <div class="blog-card-category">Vivir lo que vale</div>
+                    <h3>Sanar la traición</h3>
+                    <p>Una guía de autocompasión para cuando lo que te hicieron sigue marcando lo que haces hoy.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 min de lectura</span>
+                </a>
+                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Ver 3 artículos más ↓</button>
             </div>
         </div>
     </section>

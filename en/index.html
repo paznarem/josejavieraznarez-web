@@ -285,6 +285,46 @@
             box-shadow: 0 8px 30px rgba(107,127,94,0.35);
         }
 
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: transparent;
+            color: var(--sage-dark);
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: 1.5px solid var(--sage);
+        }
+
+        .btn-outline:hover {
+            background: var(--sage);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(107,127,94,0.2);
+        }
+
+        .hero-actions-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-left: 0.3rem;
+        }
+
+        .hero-actions-meta a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(107,127,94,0.25);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .hero-actions-meta a:hover {
+            color: var(--sage-dark);
+            border-color: var(--sage);
+        }
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -939,6 +979,59 @@
             color: var(--text-secondary);
             line-height: 1.6;
             font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            gap: 0.6rem;
+        }
+
+        .blog-card-header .blog-card-category {
+            margin-bottom: 0;
+        }
+
+        .blog-card-badge {
+            display: inline-block;
+            background: var(--terracotta);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.18rem 0.55rem;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .blog-card-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-top: auto;
+        }
+
+        .blog-card-meta svg {
+            width: 13px;
+            height: 13px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-grid {
+            grid-template-rows: 1fr 1fr;
         }
 
         /* ==================== CTA SECTION ==================== */
@@ -1573,6 +1666,22 @@
             border-color: var(--sage);
             color: var(--sage-light);
         }
+        body.dark-mode .btn-outline {
+            color: var(--sage-light);
+            border-color: var(--sage);
+        }
+        body.dark-mode .btn-outline:hover {
+            background: var(--sage);
+            color: #1a1a1a;
+        }
+        body.dark-mode .hero-actions-meta { color: var(--text-light); }
+        body.dark-mode .hero-actions-meta a { color: var(--text-secondary); }
+        body.dark-mode .hero-actions-meta a:hover { color: var(--sage-light); }
+        body.dark-mode .blog-card-badge {
+            background: var(--terracotta);
+            color: #fff;
+        }
+        body.dark-mode .blog-card-meta { color: var(--text-light); }
 
         body.dark-mode .section-label { color: var(--sage-light); }
 
@@ -1664,12 +1773,11 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Write me on WhatsApp
                 </a>
-                <a href="como-trabajo.html" class="btn-secondary">
-                    Discover how I work →
+                <a href="blog/index.html" class="btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Read articles
                 </a>
-                <a href="blog/index.html" class="btn-secondary">
-                    Read blog articles →
-                </a>
+                <span class="hero-actions-meta">or learn <a href="como-trabajo.html">how I work →</a></span>
             </div>
         </div>
     </section>
@@ -1876,22 +1984,46 @@
             </div>
 
             <div class="blog-grid mobile-collapsible">
-                <a href="blog/index.html#vivir-lo-que-vale" class="blog-card">
+                <a href="blog/crianza-contextual-funcional-1.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Parenting with direction</div>
+                        <span class="blog-card-badge">Most read</span>
+                    </div>
+                    <h3>You are not the problem: why "am I a good mother?" has no useful answer</h3>
+                    <p>The question itself traps you. What if the better one is "what am I doing that I want to keep doing?"</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min read</span>
+                </a>
+                <a href="blog/flexibilidad-psicologica-1.html" class="blog-card">
                     <div class="blog-card-category">Living what matters</div>
-                    <h3>Being present, living what matters</h3>
-                    <p>Self-compassion, self-esteem, procrastination, social comparison… Keys to relating differently to what you think and feel.</p>
+                    <h3>When giving up trying to feel better lets you start living better</h3>
+                    <p>Why fighting your distress tends to feed it, and what changes when you stop.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min read</span>
                 </a>
-                <a href="blog/index.html#crianza-consciente" class="blog-card">
+                <a href="blog/flexibilidad-psicologica-3.html" class="blog-card">
+                    <div class="blog-card-category">Living what matters</div>
+                    <h3>When you know it isn't dangerous… yet still can't do it</h3>
+                    <p>Understanding why insight alone doesn't change behavior — and what does.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8 min read</span>
+                </a>
+                <a href="blog/crianza-contextual-funcional-4.html" class="blog-card mobile-hidden">
                     <div class="blog-card-category">Parenting with direction</div>
-                    <h3>Being there with love, parenting what matters</h3>
-                    <p>Processes that shape the bond between adults and children: co-regulation, psychological flexibility, boundaries as a learning context, and functional reciprocity in the family.</p>
+                    <h3>What happens to you when your child cries</h3>
+                    <p>The processes that organize your response before you have time to think.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min read</span>
                 </a>
-                <a href="blog/index.html#ansiedad-escenica" class="blog-card mobile-hidden">
-                    <div class="blog-card-category">Music performance anxiety</div>
-                    <h3>Play, even if you're shaking: musical performance under pressure</h3>
-                    <p>More than 15 ACT/CBS-based articles for musicians living with performance anxiety. Learning to play with fear present.</p>
+                <a href="blog/crianza-contextual-funcional-7.html" class="blog-card mobile-hidden">
+                    <div class="blog-card-category">Parenting with direction</div>
+                    <h3>When other bonds compete with yours</h3>
+                    <p>Your child between family, peers, and the screen — and how to stay relevant.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>9 min read</span>
                 </a>
-                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Read more ↓</button>
+                <a href="blog/sin-traumas-2.html" class="blog-card mobile-hidden">
+                    <div class="blog-card-category">Living what matters</div>
+                    <h3>What hurts isn't always what harms</h3>
+                    <p>Distinguishing painful experiences from harmful ones — and why this changes how you carry your story.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+                </a>
+                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">See 3 more articles ↓</button>
             </div>
         </div>
     </section>
