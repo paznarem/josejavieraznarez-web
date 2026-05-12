@@ -387,6 +387,7 @@
             padding: 2rem;
             position: relative;
             flex: 1;
+            border-bottom: 1px solid transparent;
         }
 
         .series-card-top {
@@ -459,7 +460,7 @@
         }
 
         .series-card.open .series-card-summary {
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom-color: var(--cream-dark);
         }
 
         .series-card.open .series-card-hint { opacity: 0; }
@@ -1210,15 +1211,12 @@
             var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
             var cards = document.querySelectorAll('.series-card');
             var currentOpen = null;
-            var locked = false;
 
             function openCard(card) {
-                if (locked || currentOpen === card) return;
-                locked = true;
+                if (currentOpen === card) return;
                 if (currentOpen) currentOpen.classList.remove('open');
                 card.classList.add('open');
                 currentOpen = card;
-                setTimeout(function() { locked = false; }, 900);
             }
 
             function closeCard(card) {
@@ -1228,51 +1226,27 @@
             }
 
             if (!isTouch) {
-                var style = document.createElement('style');
-                style.textContent = '.series-card.siblings-disabled { pointer-events: none !important; }';
-                document.head.appendChild(style);
-
-                function disableSiblings(activeCard) {
-                    cards.forEach(function(c) {
-                        if (c !== activeCard) c.classList.add('siblings-disabled');
-                    });
-                }
-
-                function enableSiblings() {
-                    cards.forEach(function(c) {
-                        c.classList.remove('siblings-disabled');
-                    });
-                }
-
                 cards.forEach(function(card) {
                     var closeTimer = null;
 
                     card.addEventListener('mouseenter', function() {
                         if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-                        if (locked) return;
-                        disableSiblings(card);
                         openCard(card);
-                        setTimeout(enableSiblings, 950);
                     });
 
                     card.addEventListener('mouseleave', function() {
                         closeTimer = setTimeout(function() {
                             closeCard(card);
-                            enableSiblings();
-                        }, 300);
+                        }, 250);
                     });
 
                     card.querySelector('.series-card-summary').addEventListener('click', function(e) {
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
-                        locked = false;
-                        enableSiblings();
                         if (card.classList.contains('open')) {
                             closeCard(card);
                         } else {
-                            disableSiblings(card);
                             openCard(card);
-                            setTimeout(enableSiblings, 950);
                         }
                     });
                 });
