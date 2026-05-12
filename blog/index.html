@@ -328,9 +328,20 @@
             align-items: start;
         }
 
-        .blog-grid > .blog-card,
+        .blog-grid > .blog-card {
+            height: 320px;
+        }
+
         .blog-grid > .series-card {
-            min-height: 220px;
+            height: 320px;
+        }
+
+        .blog-grid > .series-card.open {
+            height: auto;
+        }
+
+        .blog-grid > .series-card .series-card-summary {
+            height: 320px;
         }
 
         .blog-grid > * {
@@ -431,12 +442,13 @@
 
         .series-card-hint {
             display: inline-block;
-            font-size: 0.72rem;
+            font-size: 0.82rem;
             color: var(--sage);
             font-weight: 500;
             margin-top: auto;
-            padding-top: 0.8rem;
+            padding-top: 1rem;
             letter-spacing: 0.03em;
+            line-height: 1;
             transition: opacity 0.3s;
         }
 
@@ -456,19 +468,19 @@
         .series-card-body {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .series-card.open .series-card-body {
             max-height: 800px;
-            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.85s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .series-card-body-inner {
             padding: 1.25rem 2rem 1.5rem;
             opacity: 0;
             transform: translateY(-8px);
-            transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+            transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
         }
 
         .series-card.open .series-card-body-inner {
@@ -578,6 +590,7 @@
             font-size: 0.82rem;
             color: var(--sage);
             font-weight: 500;
+            line-height: 1;
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
@@ -833,6 +846,9 @@
             align-self: center;
             justify-self: start;
             width: fit-content;
+            grid-column: 1 / -1;
+            position: relative;
+            z-index: 2;
         }
         .expand-btn:hover {
             background: var(--sage);
@@ -1202,7 +1218,7 @@
                 if (currentOpen) currentOpen.classList.remove('open');
                 card.classList.add('open');
                 currentOpen = card;
-                setTimeout(function() { locked = false; }, 700);
+                setTimeout(function() { locked = false; }, 900);
             }
 
             function closeCard(card) {
@@ -1236,7 +1252,7 @@
                         if (locked) return;
                         disableSiblings(card);
                         openCard(card);
-                        setTimeout(enableSiblings, 750);
+                        setTimeout(enableSiblings, 950);
                     });
 
                     card.addEventListener('mouseleave', function() {
@@ -1256,7 +1272,7 @@
                         } else {
                             disableSiblings(card);
                             openCard(card);
-                            setTimeout(enableSiblings, 750);
+                            setTimeout(enableSiblings, 950);
                         }
                     });
                 });
@@ -1556,8 +1572,8 @@
                             <span class="series-card-label">♡ Serie · 4 artículos</span>
                             <span class="series-card-arrow">▾</span>
                         </div>
-                        <div class="series-card-title">¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones?</div>
-                        <div class="series-card-desc">Una serie sobre lo que realmente se transmite entre generaciones —patrones de respuesta, no daño como entidad— y sobre cómo el marco con el que leemos la historia de nuestros padres organiza, sin que lo planeemos, lo que nuestros hijos aprenden de los vínculos.</div>
+                        <div class="series-card-title">Criar sin repetir patrones rígidos</div>
+                        <div class="series-card-desc">Lo que realmente se transmite entre generaciones son patrones de respuesta, no daño como entidad. Cómo el marco con el que leemos la historia de nuestros padres organiza lo que aprenden nuestros hijos.</div>
                         <span class="series-card-hint">Ver artículos ▾</span>
                     </div>
                     <div class="series-card-body">
