@@ -374,7 +374,6 @@
             border: 1px solid var(--cream-dark);
             border-left: 3.5px solid var(--sage);
             border-radius: 1.2rem;
-            overflow: hidden;
             transition: border-color 0.3s, box-shadow 0.3s;
             cursor: pointer;
             display: flex;
@@ -469,24 +468,29 @@
             transition: opacity 0.15s ease;
         }
 
-        /* --- Expandable body (animated) --- */
+        /* --- Expandable body (animated con CSS Grid 0fr → 1fr) --- */
         .series-card-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s ease;
+        }
+
+        .series-card.open .series-card-body {
+            grid-template-rows: 1fr;
         }
 
         .series-card-body-inner {
-            padding: 1.25rem 2rem 1.5rem;
+            overflow: hidden;
+            min-height: 0;
+            padding: 0 2rem;
             opacity: 0;
-            transform: translateY(-8px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.25s ease, padding 0.4s ease;
         }
 
         .series-card.open .series-card-body-inner {
+            padding: 1.25rem 2rem 1.5rem;
             opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+            transition: opacity 0.3s ease 0.15s, padding 0.4s ease;
         }
 
         .series-card-list {
@@ -815,6 +819,28 @@
 
             .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .series-card-summary {
+                padding: 1.5rem;
+            }
+            .series-card-body-inner {
+                padding: 0 1.5rem;
+            }
+            .series-card.open .series-card-body-inner {
+                padding: 1rem 1.5rem 1.25rem;
+            }
+            .blog-card {
+                padding: 1.5rem;
+            }
+            .series-card-title {
+                font-size: 1rem;
+            }
+            .series-card-desc {
+                font-size: 0.82rem;
+            }
+            .blog-card-excerpt {
+                font-size: 0.82rem;
             }
         }
 
@@ -1211,42 +1237,42 @@
             var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
             var cards = document.querySelectorAll('.series-card');
             var currentOpen = null;
+            var locked = false;
+
+            if (!isTouch) {
+                var style = document.createElement('style');
+                style.textContent = '.series-card.siblings-disabled { pointer-events: none !important; }';
+                document.head.appendChild(style);
+            }
+
+            function disableSiblings(activeCard) {
+                cards.forEach(function(c) {
+                    if (c !== activeCard) c.classList.add('siblings-disabled');
+                });
+            }
+
+            function enableSiblings() {
+                cards.forEach(function(c) {
+                    c.classList.remove('siblings-disabled');
+                });
+            }
 
             function openCard(card) {
-                if (currentOpen === card) return;
-                if (currentOpen) closeCardImmediate(currentOpen);
+                if (locked || currentOpen === card) return;
+                locked = true;
 
-                var body = card.querySelector('.series-card-body');
-                body.style.transition = 'none';
-                body.style.maxHeight = 'none';
-                var realHeight = body.scrollHeight;
-                body.style.maxHeight = '0px';
-                body.offsetHeight;
-                body.style.transition = '';
-                body.style.maxHeight = realHeight + 'px';
+                if (currentOpen) {
+                    currentOpen.classList.remove('open');
+                }
 
                 card.classList.add('open');
                 currentOpen = card;
+
+                setTimeout(function() { locked = false; }, 500);
             }
 
             function closeCard(card) {
                 if (!card || !card.classList.contains('open')) return;
-                var body = card.querySelector('.series-card-body');
-                body.style.maxHeight = body.scrollHeight + 'px';
-                body.offsetHeight;
-                body.style.maxHeight = '0px';
-
-                card.classList.remove('open');
-                if (currentOpen === card) currentOpen = null;
-            }
-
-            function closeCardImmediate(card) {
-                if (!card || !card.classList.contains('open')) return;
-                var body = card.querySelector('.series-card-body');
-                body.style.transition = 'none';
-                body.style.maxHeight = '0px';
-                setTimeout(function() { body.style.transition = ''; }, 10);
-
                 card.classList.remove('open');
                 if (currentOpen === card) currentOpen = null;
             }
@@ -1257,22 +1283,30 @@
 
                     card.addEventListener('mouseenter', function() {
                         if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+                        if (locked) return;
+                        disableSiblings(card);
                         openCard(card);
+                        setTimeout(enableSiblings, 550);
                     });
 
                     card.addEventListener('mouseleave', function() {
                         closeTimer = setTimeout(function() {
                             closeCard(card);
-                        }, 250);
+                            enableSiblings();
+                        }, 300);
                     });
 
                     card.querySelector('.series-card-summary').addEventListener('click', function(e) {
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
+                        locked = false;
+                        enableSiblings();
                         if (card.classList.contains('open')) {
                             closeCard(card);
                         } else {
+                            disableSiblings(card);
                             openCard(card);
+                            setTimeout(enableSiblings, 550);
                         }
                     });
                 });
@@ -1283,10 +1317,10 @@
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
                         var wasOpen = card.classList.contains('open');
-                        if (wasOpen) {
-                            closeCard(card);
-                        } else {
-                            openCard(card);
+                        if (currentOpen) closeCard(currentOpen);
+                        if (!wasOpen) {
+                            card.classList.add('open');
+                            currentOpen = card;
                         }
                     });
                 });
@@ -1297,18 +1331,8 @@
                     }
                 });
 
-                var scrollTimer = null;
-                window.addEventListener('scroll', function() {
-                    if (scrollTimer || !currentOpen) return;
-                    scrollTimer = setTimeout(function() {
-                        if (currentOpen) {
-                            var r = currentOpen.getBoundingClientRect();
-                            var vh = window.innerHeight || document.documentElement.clientHeight;
-                            if (r.bottom < 0 || r.top > vh) closeCard(currentOpen);
-                        }
-                        scrollTimer = null;
-                    }, 120);
-                }, { passive: true });
+                // NO hay cierre automático por scroll — eliminado intencionalmente
+                // para evitar saltos de página y respetar la intención del usuario
             }
         });
     </script>
