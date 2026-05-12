@@ -450,7 +450,8 @@
             padding-top: 1rem;
             letter-spacing: 0.03em;
             line-height: 1;
-            transition: opacity 0.3s;
+            opacity: 1;
+            transition: opacity 0.3s ease 0.4s;
         }
 
         /* --- Open state --- */
@@ -463,30 +464,29 @@
             border-bottom-color: var(--cream-dark);
         }
 
-        .series-card.open .series-card-hint { opacity: 0; }
+        .series-card.open .series-card-hint {
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
 
         /* --- Expandable body (animated) --- */
         .series-card-body {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .series-card.open .series-card-body {
-            max-height: 800px;
-            transition: max-height 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .series-card-body-inner {
             padding: 1.25rem 2rem 1.5rem;
             opacity: 0;
             transform: translateY(-8px);
-            transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         .series-card.open .series-card-body-inner {
             opacity: 1;
             transform: translateY(0);
+            transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
         }
 
         .series-card-list {
@@ -1214,13 +1214,39 @@
 
             function openCard(card) {
                 if (currentOpen === card) return;
-                if (currentOpen) currentOpen.classList.remove('open');
+                if (currentOpen) closeCardImmediate(currentOpen);
+
+                var body = card.querySelector('.series-card-body');
+                body.style.transition = 'none';
+                body.style.maxHeight = 'none';
+                var realHeight = body.scrollHeight;
+                body.style.maxHeight = '0px';
+                body.offsetHeight;
+                body.style.transition = '';
+                body.style.maxHeight = realHeight + 'px';
+
                 card.classList.add('open');
                 currentOpen = card;
             }
 
             function closeCard(card) {
                 if (!card || !card.classList.contains('open')) return;
+                var body = card.querySelector('.series-card-body');
+                body.style.maxHeight = body.scrollHeight + 'px';
+                body.offsetHeight;
+                body.style.maxHeight = '0px';
+
+                card.classList.remove('open');
+                if (currentOpen === card) currentOpen = null;
+            }
+
+            function closeCardImmediate(card) {
+                if (!card || !card.classList.contains('open')) return;
+                var body = card.querySelector('.series-card-body');
+                body.style.transition = 'none';
+                body.style.maxHeight = '0px';
+                setTimeout(function() { body.style.transition = ''; }, 10);
+
                 card.classList.remove('open');
                 if (currentOpen === card) currentOpen = null;
             }
@@ -1257,10 +1283,10 @@
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
                         var wasOpen = card.classList.contains('open');
-                        if (currentOpen) closeCard(currentOpen);
-                        if (!wasOpen) {
-                            card.classList.add('open');
-                            currentOpen = card;
+                        if (wasOpen) {
+                            closeCard(card);
+                        } else {
+                            openCard(card);
                         }
                     });
                 });
