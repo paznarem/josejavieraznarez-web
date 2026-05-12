@@ -1192,85 +1192,101 @@
             });
         });
 
-        // Series-card: hover en desktop, tap en mobile.
+        // Series-card: hover en desktop, tap en mobile
         document.addEventListener('DOMContentLoaded', function() {
             var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
             var cards = document.querySelectorAll('.series-card');
             var currentOpen = null;
-            var lastMouseX = 0, lastMouseY = 0;
+            var isAnimating = false;
+
+            function openCard(card) {
+                if (isAnimating) return;
+                if (currentOpen === card) return;
+
+                isAnimating = true;
+
+                if (currentOpen) {
+                    currentOpen.classList.remove('open');
+                }
+
+                card.classList.add('open');
+                currentOpen = card;
+
+                setTimeout(function() {
+                    isAnimating = false;
+                }, 700);
+            }
+
+            function closeCard(card) {
+                if (isAnimating) return;
+                if (!card.classList.contains('open')) return;
+
+                isAnimating = true;
+                card.classList.remove('open');
+                if (currentOpen === card) currentOpen = null;
+
+                setTimeout(function() {
+                    isAnimating = false;
+                }, 500);
+            }
+
+            function closeAll() {
+                if (currentOpen) {
+                    currentOpen.classList.remove('open');
+                    currentOpen = null;
+                }
+            }
 
             if (!isTouch) {
-                // Track mouse position for bounding rect verification
-                document.addEventListener('mousemove', function(e) {
-                    lastMouseX = e.clientX;
-                    lastMouseY = e.clientY;
-                }, { passive: true });
-
                 cards.forEach(function(card) {
-                    var openTimer = null;
                     var closeTimer = null;
 
                     card.addEventListener('mouseenter', function() {
                         if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-
-                        openTimer = setTimeout(function() {
-                            var rect = card.getBoundingClientRect();
-                            if (lastMouseX >= rect.left && lastMouseX <= rect.right &&
-                                lastMouseY >= rect.top && lastMouseY <= rect.bottom) {
-                                if (currentOpen && currentOpen !== card) {
-                                    currentOpen.classList.remove('open');
-                                }
-                                card.classList.add('open');
-                                currentOpen = card;
-                            }
-                        }, 120);
+                        if (isAnimating) return;
+                        openCard(card);
                     });
 
                     card.addEventListener('mouseleave', function() {
-                        if (openTimer) { clearTimeout(openTimer); openTimer = null; }
+                        if (isAnimating) return;
                         closeTimer = setTimeout(function() {
-                            card.classList.remove('open');
-                            if (currentOpen === card) currentOpen = null;
-                        }, 250);
+                            closeCard(card);
+                        }, 300);
                     });
 
                     card.querySelector('.series-card-summary').addEventListener('click', function(e) {
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
-                        var wasOpen = card.classList.contains('open');
-                        if (currentOpen && currentOpen !== card) {
-                            currentOpen.classList.remove('open');
+                        if (card.classList.contains('open')) {
+                            isAnimating = false;
+                            closeCard(card);
+                        } else {
+                            isAnimating = false;
+                            openCard(card);
                         }
-                        card.classList.toggle('open');
-                        currentOpen = wasOpen ? null : card;
                     });
                 });
+
             } else {
-                // Mobile/tablet: tap to toggle, una sola abierta a la vez
                 cards.forEach(function(card) {
                     card.querySelector('.series-card-summary').addEventListener('click', function(e) {
                         if (e.target.closest('a')) return;
                         e.stopPropagation();
                         var wasOpen = card.classList.contains('open');
-                        if (currentOpen) currentOpen.classList.remove('open');
+                        closeAll();
                         if (!wasOpen) {
                             card.classList.add('open');
                             currentOpen = card;
-                        } else {
-                            currentOpen = null;
                         }
                     });
                 });
 
-                // Cerrar al tocar fuera
                 document.addEventListener('click', function(e) {
-                    if (!e.target.closest('.series-card') && currentOpen) {
-                        currentOpen.classList.remove('open');
-                        currentOpen = null;
+                    if (!e.target.closest('.series-card')) {
+                        closeAll();
                     }
                 });
 
-                // Cerrar al salir de la vista (scroll)
                 var scrollTimer = null;
                 window.addEventListener('scroll', function() {
                     if (scrollTimer || !currentOpen) return;
@@ -1279,8 +1295,7 @@
                             var r = currentOpen.getBoundingClientRect();
                             var vh = window.innerHeight || document.documentElement.clientHeight;
                             if (r.bottom < 0 || r.top > vh) {
-                                currentOpen.classList.remove('open');
-                                currentOpen = null;
+                                closeAll();
                             }
                         }
                         scrollTimer = null;
