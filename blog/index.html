@@ -356,6 +356,7 @@
         /* ==================== SERIES CARD (expandible) ==================== */
         .series-card {
             border: 1px solid var(--cream-dark);
+            border-left: 3.5px solid var(--sage);
             border-radius: 1.2rem;
             overflow: hidden;
             transition: border-color 0.3s, box-shadow 0.3s;
@@ -565,6 +566,15 @@
             font-weight: 400;
             line-height: 1.45;
             color: var(--text-primary);
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-weight: 300;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
         }
 
         .blog-card-arrow {
@@ -1069,6 +1079,7 @@
         /* Series card */
         body.dark-mode .series-card {
             border-color: #333;
+            border-left-color: var(--sage);
         }
         body.dark-mode .category-section:nth-child(odd) .series-card {
             background: #222;
@@ -1188,9 +1199,10 @@
             var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
             var cards = document.querySelectorAll('.series-card');
             var currentOpen = null;
+            var lastMouseX = 0, lastMouseY = 0;
 
             if (!isTouch) {
-                var lastMouseX = 0, lastMouseY = 0;
+                // Track mouse position for bounding rect verification
                 document.addEventListener('mousemove', function(e) {
                     lastMouseX = e.clientX;
                     lastMouseY = e.clientY;
@@ -1367,86 +1379,103 @@
                 <a href="que-ocurre-en-cada-sesion.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>¿Qué ocurre en cada sesión de psicoterapia contextual?</h3>
+                    <p class="blog-card-excerpt">Si sientes que algo se repite y nada termina de avanzar, conoce desde dentro cómo es una sesión de psicoterapia contextual y qué puedes esperar del proceso.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="autocompasion-autoestima-genuina.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud</h3>
+                    <p class="blog-card-excerpt">En el mar tempestuoso de la vida, la autocompasión es una brújula que nos lleva, sin comparaciones ni autocrítica, hacia una calma genuina.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="humanidad-compartida.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Humanidad compartida</h3>
+                    <p class="blog-card-excerpt">Compartimos la misma tela: alegrías, miedos, errores e incertidumbres. Reconocernos parte de algo más amplio alivia el peso de sentirnos solos en lo que sentimos.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="aceptamos-y-no-nos-resignamos.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Aceptamos y no nos resignamos</h3>
+                    <p class="blog-card-excerpt">Aceptar no es resignarse ni esperar a que escampe. Es escalar nuestra propia montaña respirando la dificultad, sin posponer la vida hasta que las emociones cambien.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="sesgo-de-negatividad-narrativa-personal.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>El sesgo de negatividad y la historia que nos contamos</h3>
+                    <p class="blog-card-excerpt">Cuando los recuerdos dolorosos eclipsan los momentos buenos, construimos una historia sesgada de quienes somos. Aceptación y defusión cognitiva ayudan a reescribirla.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-autoestima-dependiente-una-conducta-aprendida.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La autoestima dependiente, una conducta aprendida</h3>
+                    <p class="blog-card-excerpt">La autoestima atada a la aprobación ajena no es un defecto: es una conducta que aprendimos pronto. Mirarla así abre la puerta a desaprenderla.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>De una autoestima dependiente e incapacitante a una autoestima genuina, libre de comparaciones con los demás</h3>
+                    <p class="blog-card-excerpt">La vida no es una batalla que ganar, sino un camino que recorrer. Aceptar tu historia es el primer paso hacia una autoestima singular y libre.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-tirania-de-la-comparacion-social.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La tiranía de la comparación social</h3>
+                    <p class="blog-card-excerpt">Compararnos es inevitable, pero puede convertirse en tiranía. Cómo influye en nuestra valía personal y por qué condiciona que la autoestima sea dependiente o libre.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-humildad-barrera-autoestima.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi humildad, ¿barrera para mi autoestima genuina y autocompasiva?</h3>
+                    <p class="blog-card-excerpt">Orgullo y humildad no son opuestos: se entrelazan. Pero cuando la humildad aprendida se vuelve un escudo, puede frenar la autoestima genuina y autocompasiva.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi orgullo aprendido, la danza con el fuego</h3>
+                    <p class="blog-card-excerpt">Hay un orgullo auténtico que abriga y otro aprendido que quema. Reconocer la diferencia es aprender a danzar con el fuego sin perdernos en él.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="nuestra-procrastinacion-nuestra-companera.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Nuestra procrastinación, nuestra compañera</h3>
+                    <p class="blog-card-excerpt">Procrastinar no es pereza ni mala gestión del tiempo: es un refugio aprendido para escapar de lo que duele. Tratarla como compañera cambia la conversación.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-tristeza-y-la-inactividad.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La tristeza y la inactividad</h3>
+                    <p class="blog-card-excerpt">La tristeza y la inactividad son respuestas humanas naturales, pero a veces se instalan y se vuelven barrera. Distinguir cuándo escuchan y cuándo paralizan.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="el-maraton-de-nuestra-vida.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>El maratón de nuestra vida</h3>
+                    <p class="blog-card-excerpt">La vida como una maratón: kilómetros de dudas, sueños y esfuerzo donde aprendes a aceptar tus fortalezas y debilidades sin esperar a sentirte suficiente para empezar.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi familia no es, no ha sido y no será perfecta</h3>
+                    <p class="blog-card-excerpt">La familia ideal es una ilusión: todos cargamos monstruos que ocultamos bien. Soltar esa imagen perfecta abre espacio para una mirada más amable y honesta.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="sanar-la-traicion.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Sanar la traición. Guía de autocompasión</h3>
+                    <p class="blog-card-excerpt">Cuando alguien cercano te traiciona, el dolor se enreda con culpa y recuerdos antiguos. Una guía para sostener esa herida con reconocimiento, aceptación y amabilidad.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-metafora-del-rosal.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La metáfora del rosal: tu vida en constante crecimiento</h3>
+                    <p class="blog-card-excerpt">Nacida observando un rosal familiar, esta metáfora te invita a mirar tu vida como un jardín donde conviven espinas, brotes y flores, sin elegir solo unos.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="cuando-el-estres-se-convierte-en-barrera.html" class="blog-card">
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Cuando el estrés y la ansiedad se convierten en una barrera</h3>
+                    <p class="blog-card-excerpt">Estrés y ansiedad son respuestas naturales que nos preparan para vivir. El problema empieza cuando dejan de servirnos y se convierten en muro entre tú y tu vida.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
@@ -1543,16 +1572,19 @@
                 <a href="la-clave-de-una-crianza-saludable.html" class="blog-card">
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir</h3>
+                    <p class="blog-card-excerpt">Una hija que no saluda, una madre con un nudo en el pecho. Criar sano pasa por encontrar el equilibrio compasivo entre dar, recibir y no perderse a uno mismo.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card">
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</h3>
+                    <p class="blog-card-excerpt">Acompañar, validar y confiar tejen el apego seguro desde los primeros años. Así se construyen la identidad y la fortaleza emocional con las que un hijo mirará el mundo.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="crianza-narrativa-y-responsabilidad.html" class="blog-card">
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
+                    <p class="blog-card-excerpt">No todo lo difícil de adulto fue culpa de tus padres. Una mirada contextual a la crianza, al recuerdo y a la responsabilidad, lejos de las simplificaciones de moda.</p>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <button class="expand-btn" onclick="toggleBlogSection(this)">Ver todos los artículos →</button>
