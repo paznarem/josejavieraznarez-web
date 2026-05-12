@@ -325,7 +325,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.75rem;
-            align-items: stretch;
+            align-items: start;
         }
 
         .blog-grid > .blog-card {
@@ -1199,6 +1199,7 @@
             var grid = btn.closest('.blog-grid');
             var expanded = grid.classList.toggle('expanded');
             btn.textContent = expanded ? 'Ver menos ↑' : 'Ver todos los artículos →';
+            if (window.equalizeBlogRows) window.equalizeBlogRows();
         }
 
         // Colapso inicial de blog-cards: 5 visibles desktop, 3 mobile/tablet.
@@ -1226,6 +1227,40 @@
                     btn.style.display = 'none';
                 }
             });
+
+            // Igualar la altura de las cards por row (solo las cerradas).
+            // Cuando se abre una, mantiene su min-height previo y crece sola.
+            function equalizeRows() {
+                document.querySelectorAll('.blog-grid').forEach(function(grid) {
+                    var items = Array.from(grid.querySelectorAll('.series-card, .blog-card'))
+                        .filter(function(c) { return c.offsetParent !== null && !c.classList.contains('open'); });
+                    items.forEach(function(c) { c.style.minHeight = ''; });
+                    requestAnimationFrame(function() {
+                        var rows = {};
+                        items.forEach(function(c) {
+                            var top = Math.round(c.offsetTop);
+                            (rows[top] = rows[top] || []).push(c);
+                        });
+                        Object.keys(rows).forEach(function(top) {
+                            var row = rows[top];
+                            var max = 0;
+                            row.forEach(function(c) {
+                                if (c.offsetHeight > max) max = c.offsetHeight;
+                            });
+                            row.forEach(function(c) { c.style.minHeight = max + 'px'; });
+                        });
+                    });
+                });
+            }
+
+            equalizeRows();
+            window.addEventListener('load', equalizeRows);
+            var resizeTimer = null;
+            window.addEventListener('resize', function() {
+                if (resizeTimer) clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(equalizeRows, 150);
+            });
+            window.equalizeBlogRows = equalizeRows;
         });
 
         // Series-card: hover en desktop, tap en mobile
