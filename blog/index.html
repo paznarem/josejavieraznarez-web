@@ -226,6 +226,7 @@
         /* ==================== CATEGORY SECTIONS ==================== */
         .category-section {
             padding: 5rem 2rem;
+            position: relative;
         }
 
         .category-section:nth-child(even) {
@@ -236,9 +237,36 @@
             background: var(--white);
         }
 
+        .category-section:nth-child(even)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            pointer-events: none;
+        }
+
+        .category-section:nth-child(odd)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--cream), var(--white));
+            pointer-events: none;
+        }
+
+        .category-section:first-of-type::before {
+            display: none;
+        }
+
         .category-inner {
             max-width: 1100px;
             margin: 0 auto;
+            position: relative;
         }
 
         .category-header {
@@ -251,16 +279,28 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--sage);
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .category-label::after {
+            content: '';
+            height: 1px;
+            width: 3rem;
+            background: var(--sage);
+            opacity: 0.4;
         }
 
         .category-header h2 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
             font-weight: 300;
             color: var(--text-primary);
             letter-spacing: -0.02em;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            position: relative;
         }
 
         .category-desc {
@@ -269,208 +309,235 @@
             font-weight: 300;
             max-width: 680px;
             line-height: 1.75;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+        }
+
+        .category-section.visible .category-desc,
+        .category-section.reveal.visible .category-desc {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* ==================== BLOG GRID ==================== */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1.75rem;
+            align-items: start;
         }
 
-        /* ==================== SERIE CARD (crianza series) ==================== */
-        .blog-card.serie-card {
-            border-left: 3px solid var(--sage);
+        .blog-grid > * {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-        .serie-tag {
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            color: var(--sage);
-            margin-bottom: 0.3rem;
+        .blog-grid.cards-visible > *:nth-child(1) { transition-delay: 0s; }
+        .blog-grid.cards-visible > *:nth-child(2) { transition-delay: 0.08s; }
+        .blog-grid.cards-visible > *:nth-child(3) { transition-delay: 0.16s; }
+        .blog-grid.cards-visible > *:nth-child(4) { transition-delay: 0.24s; }
+        .blog-grid.cards-visible > *:nth-child(5) { transition-delay: 0.32s; }
+        .blog-grid.cards-visible > *:nth-child(6) { transition-delay: 0.4s; }
+        .blog-grid.cards-visible > *:nth-child(n+7) { transition-delay: 0.45s; }
+
+        .blog-grid.cards-visible > * {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* ==================== SERIES SUBSECTION ==================== */
-        .series-subsection {
-            margin-top: 3.5rem;
-            border-top: 2px solid rgba(107,127,94,0.2);
-            padding-top: 2.5rem;
+        .blog-grid.expanded .blog-card[data-collapsible] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition-delay: 0s !important;
         }
 
-        .series-subsection-header {
-            margin-bottom: 2rem;
+        /* ==================== SERIES CARD (expandible) ==================== */
+        .series-card {
+            border: 1px solid var(--cream-dark);
+            border-radius: 1.2rem;
+            overflow: hidden;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
-        .series-label {
+        .series-card-summary {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .series-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .series-card-label {
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
             background: rgba(107,127,94,0.1);
             color: var(--sage-dark);
-            border: 1px solid rgba(107,127,94,0.2);
-            padding: 0.3rem 0.9rem;
+            border: 1px solid rgba(107,127,94,0.18);
+            padding: 0.22rem 0.7rem;
             border-radius: 100px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.8rem;
+            letter-spacing: 0.04em;
         }
 
-        .series-subsection-header h3 {
+        .series-card-arrow {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .series-card.open .series-card-arrow {
+            transform: rotate(180deg);
+        }
+
+        .series-card-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.5rem;
+            font-size: 1.12rem;
+            font-weight: 500;
             color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-        }
-
-        .series-subsection-header p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            max-width: 640px;
-            line-height: 1.6;
-        }
-
-        .series-num {
-            color: var(--sage) !important;
-        }
-
-        /* ==================== SERIES SHOWCASE CARD (tarjeta "de serie") ==================== */
-        .series-showcase {
-            position: relative;
-            background: linear-gradient(135deg, #ffffff 0%, var(--cream-dark, #f0e9dc) 100%);
-            border-radius: 14px;
-            padding: 2rem 2rem 1.75rem;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.06), 6px -6px 0 -2px rgba(255,255,255,0.95), 6px -6px 14px -4px rgba(0,0,0,0.08), 12px -12px 0 -4px rgba(255,255,255,0.9), 12px -12px 14px -6px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--sage);
-            transition: box-shadow 0.3s, transform 0.3s;
-            display: block;
-            color: inherit;
-            text-decoration: none;
-            align-self: start;
-            cursor: pointer;
-        }
-        /* Desktop: hover abre/cierra */
-        @media (hover: hover) and (pointer: fine) {
-            .series-showcase:hover {
-                box-shadow: 0 10px 28px rgba(0,0,0,0.1), 6px -6px 0 -2px rgba(255,255,255,0.95), 6px -6px 14px -4px rgba(0,0,0,0.08), 12px -12px 0 -4px rgba(255,255,255,0.9), 12px -12px 14px -6px rgba(0,0,0,0.05);
-                transform: translateY(-2px);
-            }
-        }
-
-        .series-showcase .series-label { margin-bottom: 0.7rem; }
-        .series-showcase h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.45rem;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin: 0 0 0.6rem;
-        }
-        .series-showcase > p {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            line-height: 1.6;
-            margin: 0 0 1rem;
-        }
-        .series-showcase-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease, margin 0.3s;
-            border-top: 1px solid rgba(107,127,94,0.15);
-        }
-        @media (hover: hover) and (pointer: fine) {
-            .series-showcase:hover .series-showcase-list {
-                max-height: 900px;
-                margin-top: 1rem;
-                padding-top: 0.5rem;
-            }
-        }
-        .series-showcase.open .series-showcase-list {
-            max-height: 900px;
-            margin-top: 1rem;
-            padding-top: 0.5rem;
-        }
-        .series-showcase-list li {
-            padding: 0.55rem 0;
-            border-bottom: 1px solid rgba(107,127,94,0.08);
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            display: flex;
-            gap: 0.8rem;
-            align-items: baseline;
-        }
-        .series-showcase-list li:last-child { border-bottom: none; }
-        .series-showcase-list a {
-            color: var(--text-primary);
-            text-decoration: none;
-            flex: 1;
             line-height: 1.4;
+            margin-bottom: 0.6rem;
         }
-        .series-showcase-list a:hover { color: var(--sage-dark); }
-        .series-showcase-list .num {
+
+        @media (min-width: 901px) {
+            .series-card-title {
+                min-height: 3.2em;
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+
+        .series-card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-weight: 300;
+            opacity: 0.85;
+            /* Sin line-clamp — descripción completa siempre visible */
+        }
+
+        .series-card-hint {
+            display: inline-block;
+            font-size: 0.72rem;
             color: var(--sage);
             font-weight: 500;
-            font-size: 0.78rem;
-            min-width: 1.6rem;
-        }
-        .series-showcase-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            color: var(--sage-dark);
-            font-weight: 500;
-            font-size: 0.88rem;
-            margin-top: 0.6rem;
-        }
-        .series-showcase-hint {
-            display: block;
-            font-size: 0.72rem;
-            color: var(--text-light, #9a938c);
-            font-style: italic;
             margin-top: 0.8rem;
+            letter-spacing: 0.03em;
+            transition: opacity 0.3s;
         }
-        @media (hover: hover) and (pointer: fine) {
-            .series-showcase:hover .series-showcase-hint { display: none; }
-        }
-        .series-showcase.open .series-showcase-hint { display: none; }
 
-        /* Grid de dos series (Categoría 3) */
-        .series-showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: start;
-            gap: 1.75rem;
-            margin-top: 2rem;
+        /* --- Hover (desktop only) --- */
+        @media (hover: hover) and (pointer: fine) {
+            .series-card:hover {
+                border-color: rgba(107,127,94,0.35);
+                box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+            }
+            .series-card:hover .series-card-hint { opacity: 0; }
         }
-        /* Ambas tarjetas tienen la misma altura mínima (la del contenido mayor) */
-        .series-showcase-grid .series-showcase {
-            min-height: 340px;
+
+        /* --- Open state --- */
+        .series-card.open {
+            border-color: var(--sage);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
         }
-        @media (max-width: 1100px) {
-            .series-showcase-grid .series-showcase { min-height: 380px; }
+
+        .series-card.open .series-card-summary {
+            border-bottom: 1px solid var(--cream-dark);
         }
-        @media (max-width: 860px) {
-            .series-showcase-grid .series-showcase { min-height: 0; }
+
+        .series-card.open .series-card-hint { opacity: 0; }
+
+        /* --- Expandable body (animated) --- */
+        .series-card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        @media (max-width: 860px) {
-            .series-showcase-grid { grid-template-columns: 1fr; }
+
+        .series-card.open .series-card-body {
+            max-height: 800px;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .series-card-body-inner {
+            padding: 1.25rem 2rem 1.5rem;
+            opacity: 0;
+            transform: translateY(-8px);
+            transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+        }
+
+        .series-card.open .series-card-body-inner {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .series-card-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: series-item;
+        }
+
+        .series-card-list li {
+            counter-increment: series-item;
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .series-card-list li:last-child { border-bottom: none; }
+
+        .series-card-list li::before {
+            content: counter(series-item, decimal-leading-zero);
+            color: var(--sage);
+            font-size: 0.78rem;
+            font-weight: 500;
+            min-width: 1.4rem;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .series-card-list a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            transition: color 0.2s;
+        }
+
+        .series-card-list a:hover { color: var(--sage); }
+
+        /* En secciones con fondo blanco (odd), las cards usan cream */
+        .category-section:nth-child(odd) .series-card {
+            background: var(--cream);
+        }
+
+        /* En secciones con fondo cream (even), las cards usan white */
+        .category-section:nth-child(even) .series-card {
+            background: var(--white);
         }
 
         .blog-card {
             background: var(--white);
             border-radius: 1.2rem;
             padding: 2rem;
-            transition: all 0.3s;
             text-decoration: none;
             color: inherit;
             display: block;
             border: 1px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .category-section:nth-child(odd) .blog-card {
@@ -478,9 +545,9 @@
         }
 
         .blog-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-            border-color: rgba(107,127,94,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 14px 40px rgba(0,0,0,0.07);
+            border-color: rgba(107,127,94,0.2);
         }
 
         .blog-card-category {
@@ -506,25 +573,12 @@
             font-size: 0.82rem;
             color: var(--sage);
             font-weight: 500;
-            transition: transform 0.2s;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .blog-card:hover .blog-card-arrow {
-            transform: translateX(4px);
-        }
-
-        /* ==================== CARD NUMBER (for numbered series) ==================== */
-        .card-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: var(--cream-dark);
-            line-height: 1;
-            margin-bottom: 0.6rem;
-        }
-
-        .category-section:nth-child(odd) .card-number {
-            color: var(--warm-light);
+            transform: translateX(6px);
+            color: var(--sage-dark);
         }
 
         /* ==================== ESCENAS SECTION ==================== */
@@ -746,26 +800,14 @@
         }
 
         /* ==================== EXPAND BUTTON ==================== */
-        /* Tablet + mobile: hide from card 5+ (not in series grids) */
-        .blog-grid:not(.series-grid) .blog-card:nth-child(n+5) { display: none; }
+        /* Las series-cards nunca se ocultan */
+        .blog-grid .series-card { display: block; }
 
-        /* Always show serie-cards (first 7 in cat 2) */
-        .blog-grid:not(.series-grid) .blog-card.serie-card { display: block; }
+        /* Blog-cards marcadas como colapsables se ocultan por defecto */
+        .blog-grid .blog-card[data-collapsible] { display: none; }
 
-        /* Desktop (3 cols): show 5th card, button fills slot 3 of row 2 */
-        @media (min-width: 901px) {
-            .blog-grid:not(.series-grid) .blog-card:nth-child(5) { display: block; }
-        }
-
-        /* Expanded: show all — !important needed to override the nth-child specificity */
-        .blog-grid.expanded .blog-card { display: block !important; }
-
-        /* Preview-3: muestra solo 3 tarjetas antes del botón "ver todos" (anula la regla de 5 en desktop) */
-        .blog-grid.grid-preview-3 .blog-card:nth-child(n+4) { display: none; }
-        @media (min-width: 901px) {
-            .blog-grid.grid-preview-3 .blog-card:nth-child(5) { display: none; }
-        }
-        .blog-grid.grid-preview-3.expanded .blog-card { display: block !important; }
+        /* Expandido: mostrar todas (override del inline style.display='none') */
+        .blog-grid.expanded .blog-card[data-collapsible] { display: block !important; }
 
         /* Button lives inside .blog-grid as a grid item */
         .expand-btn {
@@ -788,28 +830,6 @@
             width: fit-content;
         }
         .expand-btn:hover {
-            background: var(--sage);
-            color: var(--white);
-        }
-
-        .series-show-more {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.25rem;
-        }
-        .btn-show-more {
-            padding: 0.65rem 1.5rem;
-            background: transparent;
-            border: 1.5px solid var(--sage);
-            border-radius: 2rem;
-            color: var(--sage-dark);
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }
-        .btn-show-more:hover {
             background: var(--sage);
             color: var(--white);
         }
@@ -1036,43 +1056,43 @@
         /* Category sections */
         body.dark-mode .category-section:nth-child(even) { background: #222; }
         body.dark-mode .category-section:nth-child(odd) { background: #1a1a1a; }
+        body.dark-mode .category-section:nth-child(even)::before {
+            background: linear-gradient(to bottom, #1a1a1a, #222);
+        }
+        body.dark-mode .category-section:nth-child(odd)::before {
+            background: linear-gradient(to bottom, #222, #1a1a1a);
+        }
         body.dark-mode .category-header h2 { color: var(--text-primary); }
         body.dark-mode .category-desc { color: var(--text-secondary); }
         body.dark-mode .category-label { color: var(--sage-light); }
 
-        /* Series subsection */
-        body.dark-mode .series-subsection {
-            border-top-color: rgba(138, 158, 124, 0.25);
+        /* Series card */
+        body.dark-mode .series-card {
+            border-color: #333;
         }
-        body.dark-mode .series-subsection-header h3 { color: var(--text-primary); }
-        body.dark-mode .series-subsection-header p { color: var(--text-secondary); }
-
-        body.dark-mode .series-label {
+        body.dark-mode .category-section:nth-child(odd) .series-card {
+            background: #222;
+        }
+        body.dark-mode .category-section:nth-child(even) .series-card {
+            background: #252525;
+        }
+        body.dark-mode .series-card.open {
+            border-color: var(--sage);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        body.dark-mode .series-card.open .series-card-summary {
+            border-bottom-color: #333;
+        }
+        body.dark-mode .series-card-label {
             background: rgba(138, 158, 124, 0.15);
             color: var(--sage-light);
             border-color: rgba(138, 158, 124, 0.25);
         }
-        body.dark-mode .series-num { color: var(--sage-light) !important; }
-
-        /* Series showcase card */
-        body.dark-mode .series-showcase {
-            background: linear-gradient(135deg, #2a2a2a 0%, #222 100%);
-            box-shadow: 0 4px 18px rgba(0,0,0,0.4), 6px -6px 0 -2px rgba(40,40,40,0.95), 6px -6px 14px -4px rgba(0,0,0,0.5), 12px -12px 0 -4px rgba(40,40,40,0.9), 12px -12px 14px -6px rgba(0,0,0,0.4);
-            border-left-color: var(--sage);
-            color: inherit;
+        body.dark-mode .series-card-list li {
+            border-bottom-color: #333;
         }
-        body.dark-mode .series-showcase h3 { color: var(--text-primary); }
-        body.dark-mode .series-showcase > p { color: var(--text-secondary); }
-        body.dark-mode .series-showcase-list { border-top-color: rgba(138, 158, 124, 0.2); }
-        body.dark-mode .series-showcase-list li {
-            border-bottom-color: rgba(138, 158, 124, 0.12);
-            color: var(--text-secondary);
-        }
-        body.dark-mode .series-showcase-list a { color: var(--text-primary); }
-        body.dark-mode .series-showcase-list a:hover { color: var(--sage-light); }
-        body.dark-mode .series-showcase-list .num { color: var(--sage-light); }
-        body.dark-mode .series-showcase-cta { color: var(--sage-light); }
-        body.dark-mode .series-showcase-hint { color: var(--text-light); }
+        body.dark-mode .series-card-list a { color: var(--text-primary); }
+        body.dark-mode .series-card-list a:hover { color: var(--sage-light); }
 
         /* Blog cards */
         body.dark-mode .blog-card {
@@ -1089,20 +1109,14 @@
         body.dark-mode .blog-card h3 { color: var(--text-primary); }
         body.dark-mode .blog-card-category { color: var(--sage-light); }
         body.dark-mode .blog-card-arrow { color: var(--sage-light); }
-        body.dark-mode .blog-card.serie-card { border-left-color: var(--sage); }
-        body.dark-mode .serie-tag { color: var(--sage-light); }
-        body.dark-mode .card-number { color: #444; }
-        body.dark-mode .category-section:nth-child(odd) .card-number { color: #3a3a3a; }
 
-        /* Expand / show-more buttons */
-        body.dark-mode .expand-btn,
-        body.dark-mode .btn-show-more {
+        /* Expand button */
+        body.dark-mode .expand-btn {
             border-color: var(--sage);
             color: var(--sage-light);
             background: transparent;
         }
-        body.dark-mode .expand-btn:hover,
-        body.dark-mode .btn-show-more:hover {
+        body.dark-mode .expand-btn:hover {
             background: var(--sage);
             color: #1a1a1a;
         }
@@ -1142,44 +1156,127 @@
             btn.textContent = expanded ? 'Ver menos ↑' : 'Ver todos los artículos →';
         }
 
-        // Series showcase: solo aplica en dispositivos táctiles (sin hover fino)
+        // Colapso inicial de blog-cards: 5 visibles desktop, 3 mobile/tablet.
         document.addEventListener('DOMContentLoaded', function() {
-            var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-            var cards = document.querySelectorAll('.series-showcase');
+            var VISIBLE_MOBILE = 3;
+            var VISIBLE_DESKTOP = 5;
+            var isDesktop = window.matchMedia('(min-width: 901px)').matches;
+            var maxVisible = isDesktop ? VISIBLE_DESKTOP : VISIBLE_MOBILE;
 
-            cards.forEach(function(card) {
-                card.addEventListener('click', function(e) {
-                    // No interceptar clicks en enlaces internos
-                    if (e.target.closest('a')) return;
-                    if (!isTouch) return; // en desktop el hover se encarga
-                    e.preventDefault();
-                    var wasOpen = card.classList.contains('open');
-                    cards.forEach(function(c) { c.classList.remove('open'); });
-                    if (!wasOpen) card.classList.add('open');
+            document.querySelectorAll('.blog-grid').forEach(function(grid) {
+                var blogCards = grid.querySelectorAll('.blog-card');
+                var hasHidden = false;
+
+                blogCards.forEach(function(card, i) {
+                    if (i >= maxVisible) {
+                        card.setAttribute('data-collapsible', '');
+                        card.style.display = 'none';
+                        hasHidden = true;
+                    }
                 });
-            });
 
-            // Cerrar al tocar/click fuera
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.series-showcase')) {
-                    cards.forEach(function(c) { c.classList.remove('open'); });
+                // Solo mostrar el botón si hay cards ocultas
+                var btn = grid.querySelector('.expand-btn');
+                if (btn && !hasHidden) {
+                    btn.style.display = 'none';
                 }
             });
+        });
 
-            // Cerrar al hacer scroll fuera del área visible
-            var closeTimer = null;
-            window.addEventListener('scroll', function() {
-                if (closeTimer) return;
-                closeTimer = setTimeout(function() {
-                    cards.forEach(function(c) {
-                        if (!c.classList.contains('open')) return;
-                        var r = c.getBoundingClientRect();
-                        var vh = window.innerHeight || document.documentElement.clientHeight;
-                        if (r.bottom < 0 || r.top > vh) c.classList.remove('open');
+        // Series-card: hover en desktop, tap en mobile.
+        document.addEventListener('DOMContentLoaded', function() {
+            var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+            var cards = document.querySelectorAll('.series-card');
+            var currentOpen = null;
+
+            if (!isTouch) {
+                var lastMouseX = 0, lastMouseY = 0;
+                document.addEventListener('mousemove', function(e) {
+                    lastMouseX = e.clientX;
+                    lastMouseY = e.clientY;
+                }, { passive: true });
+
+                cards.forEach(function(card) {
+                    var openTimer = null;
+                    var closeTimer = null;
+
+                    card.addEventListener('mouseenter', function() {
+                        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+
+                        openTimer = setTimeout(function() {
+                            var rect = card.getBoundingClientRect();
+                            if (lastMouseX >= rect.left && lastMouseX <= rect.right &&
+                                lastMouseY >= rect.top && lastMouseY <= rect.bottom) {
+                                if (currentOpen && currentOpen !== card) {
+                                    currentOpen.classList.remove('open');
+                                }
+                                card.classList.add('open');
+                                currentOpen = card;
+                            }
+                        }, 120);
                     });
-                    closeTimer = null;
-                }, 120);
-            }, { passive: true });
+
+                    card.addEventListener('mouseleave', function() {
+                        if (openTimer) { clearTimeout(openTimer); openTimer = null; }
+                        closeTimer = setTimeout(function() {
+                            card.classList.remove('open');
+                            if (currentOpen === card) currentOpen = null;
+                        }, 250);
+                    });
+
+                    card.querySelector('.series-card-summary').addEventListener('click', function(e) {
+                        if (e.target.closest('a')) return;
+                        e.stopPropagation();
+                        var wasOpen = card.classList.contains('open');
+                        if (currentOpen && currentOpen !== card) {
+                            currentOpen.classList.remove('open');
+                        }
+                        card.classList.toggle('open');
+                        currentOpen = wasOpen ? null : card;
+                    });
+                });
+            } else {
+                // Mobile/tablet: tap to toggle, una sola abierta a la vez
+                cards.forEach(function(card) {
+                    card.querySelector('.series-card-summary').addEventListener('click', function(e) {
+                        if (e.target.closest('a')) return;
+                        e.stopPropagation();
+                        var wasOpen = card.classList.contains('open');
+                        if (currentOpen) currentOpen.classList.remove('open');
+                        if (!wasOpen) {
+                            card.classList.add('open');
+                            currentOpen = card;
+                        } else {
+                            currentOpen = null;
+                        }
+                    });
+                });
+
+                // Cerrar al tocar fuera
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.series-card') && currentOpen) {
+                        currentOpen.classList.remove('open');
+                        currentOpen = null;
+                    }
+                });
+
+                // Cerrar al salir de la vista (scroll)
+                var scrollTimer = null;
+                window.addEventListener('scroll', function() {
+                    if (scrollTimer || !currentOpen) return;
+                    scrollTimer = setTimeout(function() {
+                        if (currentOpen) {
+                            var r = currentOpen.getBoundingClientRect();
+                            var vh = window.innerHeight || document.documentElement.clientHeight;
+                            if (r.bottom < 0 || r.top > vh) {
+                                currentOpen.classList.remove('open');
+                                currentOpen = null;
+                            }
+                        }
+                        scrollTimer = null;
+                    }, 120);
+                }, { passive: true });
+            }
         });
     </script>
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
@@ -1241,119 +1338,113 @@
                 <h2>Estar presente, vivir lo que vale</h2>
                 <p class="category-desc">Claves para aprender a vivir la vida que deseamos vivir. Artículos sobre flexibilidad psicológica y aceptación, autocompasión, autoestima, procrastinación, la comparación social, el orgullo, la humildad y cómo relacionarnos con nuestros pensamientos y emociones difíciles.</p>
             </div>
-            <div class="series-showcase" tabindex="0">
-                <span class="series-label">◈ Serie completa · 3 artículos</span>
-                <h3>Flexibilidad psicológica</h3>
-                <p>Una trilogía sobre el patrón que nos impide vivir la vida que queremos: organizar nuestra conducta en torno a evitar el malestar. Tres formas en que ese patrón aparece, y cómo relacionarse con él de otra manera. Desde la terapia de aceptación y compromiso (ACT).</p>
-                <ul class="series-showcase-list">
-                    <li><span class="num">01</span><a href="flexibilidad-psicologica-1.html">Cuando dejar de intentar sentirte mejor te permite empezar a vivir mejor</a></li>
-                    <li><span class="num">02</span><a href="flexibilidad-psicologica-2.html">Cuando la vida se reduce y parece que no puedes salir</a></li>
-                    <li><span class="num">03</span><a href="flexibilidad-psicologica-3.html">Cuando sabes que no es peligroso… pero aun así no puedes hacerlo</a></li>
-                </ul>
-                <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 3 artículos</span>
-            </div>
-            <div class="blog-grid" style="margin-top:2.5rem">
-                <a href="flexibilidad-psicologica-1.html" class="blog-card" style="display:none" aria-hidden="true"></a>
-                <a href="flexibilidad-psicologica-2.html" class="blog-card" style="display:none" aria-hidden="true"></a>
-                <a href="flexibilidad-psicologica-3.html" class="blog-card" style="display:none" aria-hidden="true"></a>
+            <div class="blog-grid">
+                <!-- Series primero -->
+                <!-- BEGIN series-card: Flexibilidad psicológica -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">◈ Serie · 3 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">Flexibilidad psicológica</div>
+                        <div class="series-card-desc">Una trilogía sobre el patrón que nos impide vivir la vida que queremos: organizar nuestra conducta en torno a evitar el malestar. Tres formas en que ese patrón aparece, y cómo relacionarse con él de otra manera. Desde la terapia de aceptación y compromiso (ACT).</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="flexibilidad-psicologica-1.html">Cuando dejar de intentar sentirte mejor te permite empezar a vivir mejor</a></li>
+                                <li><a href="flexibilidad-psicologica-2.html">Cuando la vida se reduce y parece que no puedes salir</a></li>
+                                <li><a href="flexibilidad-psicologica-3.html">Cuando sabes que no es peligroso… pero aun así no puedes hacerlo</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END series-card: Flexibilidad psicológica -->
+
+                <!-- Artículos individuales después -->
                 <a href="que-ocurre-en-cada-sesion.html" class="blog-card">
-                    <div class="card-number">04</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>¿Qué ocurre en cada sesión de psicoterapia contextual?</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="autocompasion-autoestima-genuina.html" class="blog-card">
-                    <div class="card-number">05</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="humanidad-compartida.html" class="blog-card">
-                    <div class="card-number">06</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Humanidad compartida</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="aceptamos-y-no-nos-resignamos.html" class="blog-card">
-                    <div class="card-number">07</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Aceptamos y no nos resignamos</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="sesgo-de-negatividad-narrativa-personal.html" class="blog-card">
-                    <div class="card-number">08</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>El sesgo de negatividad y la historia que nos contamos</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-autoestima-dependiente-una-conducta-aprendida.html" class="blog-card">
-                    <div class="card-number">09</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La autoestima dependiente, una conducta aprendida</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="de-una-autoestima-dependiente-a-una-autoestima-genuina.html" class="blog-card">
-                    <div class="card-number">10</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>De una autoestima dependiente e incapacitante a una autoestima genuina, libre de comparaciones con los demás</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-tirania-de-la-comparacion-social.html" class="blog-card">
-                    <div class="card-number">11</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La tiranía de la comparación social</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-humildad-barrera-autoestima.html" class="blog-card">
-                    <div class="card-number">12</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi humildad, ¿barrera para mi autoestima genuina y autocompasiva?</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-orgullo-aprendido-la-danza-con-el-fuego.html" class="blog-card">
-                    <div class="card-number">13</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi orgullo aprendido, la danza con el fuego</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="nuestra-procrastinacion-nuestra-companera.html" class="blog-card">
-                    <div class="card-number">14</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Nuestra procrastinación, nuestra compañera</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-tristeza-y-la-inactividad.html" class="blog-card">
-                    <div class="card-number">15</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La tristeza y la inactividad</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="el-maraton-de-nuestra-vida.html" class="blog-card">
-                    <div class="card-number">16</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>El maratón de nuestra vida</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="mi-familia-no-es-no-ha-sido-y-no-sera-perfecta.html" class="blog-card">
-                    <div class="card-number">17</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Mi familia no es, no ha sido y no será perfecta</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="sanar-la-traicion.html" class="blog-card">
-                    <div class="card-number">18</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Sanar la traición. Guía de autocompasión</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="la-metafora-del-rosal.html" class="blog-card">
-                    <div class="card-number">19</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>La metáfora del rosal: tu vida en constante crecimiento</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="cuando-el-estres-se-convierte-en-barrera.html" class="blog-card">
-                    <div class="card-number">20</div>
                     <div class="blog-card-category">Vivir lo que vale</div>
                     <h3>Cuando el estrés y la ansiedad se convierten en una barrera</h3>
                     <span class="blog-card-arrow">Leer →</span>
@@ -1371,69 +1462,95 @@
                 <h2>Acompañar con amor, criar lo que importa</h2>
                 <p class="category-desc">Procesos que organizan el vínculo entre adultos e hijos. Artículos sobre co-regulación y flexibilidad psicológica, límites como contexto de aprendizaje, reglas verbales aprendidas en distintos contextos y reciprocidad funcional en el sistema familiar.</p>
             </div>
-            <div class="series-showcase" tabindex="0">
-                <span class="series-label">♡ Serie completa · 7 artículos</span>
-                <h3>Crianza Contextual Funcional</h3>
-                <p>Una serie sobre por qué la conducta de nuestros hijos tiene sentido cuando miramos el contexto y la función. Del vínculo seguro a la adolescencia, un recorrido completo basado en la Ciencia Contextual del Comportamiento.</p>
-                <ul class="series-showcase-list">
-                    <li><span class="num">01</span><a href="crianza-contextual-funcional-1.html">No eres el problema: por qué la pregunta «¿soy buena madre?» no tiene respuesta útil</a></li>
-                    <li><span class="num">02</span><a href="crianza-contextual-funcional-2.html">Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo</a></li>
-                    <li><span class="num">03</span><a href="crianza-contextual-funcional-3.html">Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo</a></li>
-                    <li><span class="num">04</span><a href="crianza-contextual-funcional-4.html">Qué te ocurre cuando tu hijo llora: los procesos que organizan tus respuestas</a></li>
-                    <li><span class="num">05</span><a href="crianza-contextual-funcional-5.html">Lo que tu hijo aprende antes de que nadie le enseñe nada: la co-regulación como transferencia de flexibilidad</a></li>
-                    <li><span class="num">06</span><a href="crianza-contextual-funcional-6.html">Los procesos que sostienen el vínculo: de la restauración a la empatía compasiva</a></li>
-                    <li><span class="num">07</span><a href="crianza-contextual-funcional-7.html">Cuando otros vínculos compiten con el tuyo: el hijo entre la familia, los iguales y la pantalla</a></li>
-                </ul>
-                <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 7 artículos</span>
-            </div>
+            <div class="blog-grid">
+                <!-- Series primero -->
+                <!-- BEGIN series-card: Crianza Contextual Funcional -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">♡ Serie · 7 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">Crianza Contextual Funcional</div>
+                        <div class="series-card-desc">Una serie sobre por qué la conducta de nuestros hijos tiene sentido cuando miramos el contexto y la función. Del vínculo seguro a la adolescencia, un recorrido completo basado en la Ciencia Contextual del Comportamiento.</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="crianza-contextual-funcional-1.html">No eres el problema: por qué la pregunta «¿soy buena madre?» no tiene respuesta útil</a></li>
+                                <li><a href="crianza-contextual-funcional-2.html">Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo</a></li>
+                                <li><a href="crianza-contextual-funcional-3.html">Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo</a></li>
+                                <li><a href="crianza-contextual-funcional-4.html">Qué te ocurre cuando tu hijo llora: los procesos que organizan tus respuestas</a></li>
+                                <li><a href="crianza-contextual-funcional-5.html">Lo que tu hijo aprende antes de que nadie le enseñe nada: la co-regulación como transferencia de flexibilidad</a></li>
+                                <li><a href="crianza-contextual-funcional-6.html">Los procesos que sostienen el vínculo: de la restauración a la empatía compasiva</a></li>
+                                <li><a href="crianza-contextual-funcional-7.html">Cuando otros vínculos compiten con el tuyo: el hijo entre la familia, los iguales y la pantalla</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END series-card: Crianza Contextual Funcional -->
 
-            <div class="series-showcase" tabindex="0" style="margin-top:2.5rem">
-                <span class="series-label">♡ Serie completa · 4 artículos</span>
-                <h3>Colecho — Criar con dirección</h3>
-                <p>Una serie corta sobre dormir junto al bebé en los primeros tres años. Del vínculo y la regulación fisiológica a los mitos sobre dependencia y límites, mirado desde la Ciencia Conductual Contextual y con honestidad sobre lo que vive el cuidador.</p>
-                <ul class="series-showcase-list">
-                    <li><span class="num">01</span><a href="colecho-1.html">Nuestro bebé ya ha llegado. ¿Colecho?</a></li>
-                    <li><span class="num">02</span><a href="colecho-2.html">Las tres etapas: de la cercanía a la autonomía</a></li>
-                    <li><span class="num">03</span><a href="colecho-3.html">No estás fallando: el entorno, el malestar y lo que nadie pregunta</a></li>
-                    <li><span class="num">04</span><a href="colecho-4.html">Ni tiranos ni dependientes: empatía, límites y reciprocidad</a></li>
-                </ul>
-                <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 4 artículos</span>
-            </div>
+                <!-- BEGIN series-card: Colecho -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">♡ Serie · 4 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">Colecho — Criar con dirección</div>
+                        <div class="series-card-desc">Una serie corta sobre dormir junto al bebé en los primeros tres años. Del vínculo y la regulación fisiológica a los mitos sobre dependencia y límites, mirado desde la Ciencia Conductual Contextual y con honestidad sobre lo que vive el cuidador.</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="colecho-1.html">Nuestro bebé ya ha llegado. ¿Colecho?</a></li>
+                                <li><a href="colecho-2.html">Las tres etapas: de la cercanía a la autonomía</a></li>
+                                <li><a href="colecho-3.html">No estás fallando: el entorno, el malestar y lo que nadie pregunta</a></li>
+                                <li><a href="colecho-4.html">Ni tiranos ni dependientes: empatía, límites y reciprocidad</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END series-card: Colecho -->
 
-            <div class="series-showcase" tabindex="0" style="margin-top:2.5rem">
-                <span class="series-label">♡ Serie completa · 4 artículos</span>
-                <h3>¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones?</h3>
-                <p>Una serie sobre lo que realmente se transmite entre generaciones —patrones de respuesta, no daño como entidad— y sobre cómo el marco con el que leemos la historia de nuestros padres organiza, sin que lo planeemos, lo que nuestros hijos aprenden de los vínculos.</p>
-                <ul class="series-showcase-list">
-                    <li><span class="num">01</span><a href="sin-traumas-1.html">¿Desde qué marco estás leyendo la historia de tus padres?</a></li>
-                    <li><span class="num">02</span><a href="sin-traumas-2.html">Lo que duele no siempre es lo que daña</a></li>
-                    <li><span class="num">03</span><a href="sin-traumas-3.html">Lo que realmente se transmite entre generaciones</a></li>
-                    <li><span class="num">04</span><a href="sin-traumas-4.html">Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</a></li>
-                </ul>
-                <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 4 artículos</span>
-            </div>
+                <!-- BEGIN series-card: Sin traumas -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">♡ Serie · 4 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones?</div>
+                        <div class="series-card-desc">Una serie sobre lo que realmente se transmite entre generaciones —patrones de respuesta, no daño como entidad— y sobre cómo el marco con el que leemos la historia de nuestros padres organiza, sin que lo planeemos, lo que nuestros hijos aprenden de los vínculos.</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="sin-traumas-1.html">¿Desde qué marco estás leyendo la historia de tus padres?</a></li>
+                                <li><a href="sin-traumas-2.html">Lo que duele no siempre es lo que daña</a></li>
+                                <li><a href="sin-traumas-3.html">Lo que realmente se transmite entre generaciones</a></li>
+                                <li><a href="sin-traumas-4.html">Reciprocidad emocional: lo que tus hijos aprenden de cómo miras a tus padres</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END series-card: Sin traumas -->
 
-            <div class="blog-grid grid-preview-3" style="margin-top:2.5rem">
-                <a href="sin-traumas-1.html" class="blog-card">
-                    <div class="card-number">08</div>
-                    <div class="blog-card-category">Criar con dirección</div>
-                    <h3>¿Una crianza sin traumas generacionales o una crianza sin transmisión rígida de patrones? (serie de 4)</h3>
-                    <span class="blog-card-arrow">Leer →</span>
-                </a>
+                <!-- Artículos individuales después -->
                 <a href="la-clave-de-una-crianza-saludable.html" class="blog-card">
-                    <div class="card-number">09</div>
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>La clave de una crianza saludable: el equilibrio compasivo entre dar y recibir</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card">
-                    <div class="card-number">10</div>
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>Acompañar, validar, confiar: la crianza que construye identidad y fortaleza emocional</h3>
                     <span class="blog-card-arrow">Leer →</span>
                 </a>
                 <a href="crianza-narrativa-y-responsabilidad.html" class="blog-card">
-                    <div class="card-number">11</div>
                     <div class="blog-card-category">Criar con dirección</div>
                     <h3>Crianza, narrativa y responsabilidad: un enfoque contextual</h3>
                     <span class="blog-card-arrow">Leer →</span>
@@ -1452,39 +1569,62 @@
                 <p class="category-desc">Más de 15 artículos basados en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos que conviven con la ansiedad escénica. No se trata de eliminar el miedo, sino de aprender a tocar con él presente.</p>
             </div>
 
-            <div class="series-showcase-grid">
-                <div class="series-showcase" tabindex="0">
-                    <span class="series-label">♩ Serie completa · 9 artículos</span>
-                    <h3>Toca aunque tiembles</h3>
-                    <p>Un programa fundamentado en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos con ansiedad escénica. No reducir el miedo: aprender a tocar con él presente.</p>
-                    <ul class="series-showcase-list">
-                        <li><span class="num">01</span><a href="toca-aunque-tiembles-1.html">Por qué este programa es diferente</a></li>
-                        <li><span class="num">02</span><a href="toca-aunque-tiembles-2.html">Cómo el lenguaje crea el miedo escénico</a></li>
-                        <li><span class="num">03</span><a href="toca-aunque-tiembles-3.html">Las tres reglas que organizan tu miedo escénico</a></li>
-                        <li><span class="num">04</span><a href="toca-aunque-tiembles-4.html">La inflexibilidad psicológica y la puerta del cambio</a></li>
-                        <li><span class="num">05</span><a href="toca-aunque-tiembles-5.html">Los seis procesos del cambio para músicos</a></li>
-                        <li><span class="num">06</span><a href="toca-aunque-tiembles-6.html">El programa en acción: desesperanza creativa y defusión</a></li>
-                        <li><span class="num">07</span><a href="toca-aunque-tiembles-7.html">Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
-                        <li><span class="num">08</span><a href="toca-aunque-tiembles-8.html">Autocompasión, valores y acción comprometida</a></li>
-                        <li><span class="num">09</span><a href="toca-aunque-tiembles-9.html">Conclusiones, checklist de camerino y guía práctica</a></li>
-                    </ul>
-                    <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 9 artículos</span>
+            <div class="blog-grid">
+                <!-- Series primero -->
+                <!-- BEGIN series-card: Toca aunque tiembles -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">♩ Serie · 9 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">Toca aunque tiembles</div>
+                        <div class="series-card-desc">Un programa fundamentado en la Ciencia Contextual del Comportamiento (ACT/CBS) para músicos con ansiedad escénica. No reducir el miedo: aprender a tocar con él presente.</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="toca-aunque-tiembles-1.html">Por qué este programa es diferente</a></li>
+                                <li><a href="toca-aunque-tiembles-2.html">Cómo el lenguaje crea el miedo escénico</a></li>
+                                <li><a href="toca-aunque-tiembles-3.html">Las tres reglas que organizan tu miedo escénico</a></li>
+                                <li><a href="toca-aunque-tiembles-4.html">La inflexibilidad psicológica y la puerta del cambio</a></li>
+                                <li><a href="toca-aunque-tiembles-5.html">Los seis procesos del cambio para músicos</a></li>
+                                <li><a href="toca-aunque-tiembles-6.html">El programa en acción: desesperanza creativa y defusión</a></li>
+                                <li><a href="toca-aunque-tiembles-7.html">Aceptar el cuerpo, estar presente, observar sin reaccionar</a></li>
+                                <li><a href="toca-aunque-tiembles-8.html">Autocompasión, valores y acción comprometida</a></li>
+                                <li><a href="toca-aunque-tiembles-9.html">Conclusiones, checklist de camerino y guía práctica</a></li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
+                <!-- END series-card: Toca aunque tiembles -->
 
-                <div class="series-showcase" tabindex="0">
-                    <span class="series-label">♩ Serie completa · 6 artículos</span>
-                    <h3>Cuando la ansiedad y el estrés acompañan</h3>
-                    <p>Una serie para músicos que preparan audiciones o actuaciones con estrés y ansiedad presentes. Desde el reencuadre funcional hasta el cierre operativo, con herramientas basadas en la Ciencia Contextual del Comportamiento.</p>
-                    <ul class="series-showcase-list">
-                        <li><span class="num">01</span><a href="ansiedad-audicion-1.html">Ansiedad, estrés y ejecución competente: un reencuadre funcional</a></li>
-                        <li><span class="num">02</span><a href="ansiedad-audicion-2.html">El lenguaje, los formatos y la autograbación como evitación</a></li>
-                        <li><span class="num">03</span><a href="ansiedad-audicion-3.html">DAFO funcional: de la amenaza a la dirección</a></li>
-                        <li><span class="num">04</span><a href="ansiedad-audicion-4.html">El estrés como aliado y la respuesta flexible al error</a></li>
-                        <li><span class="num">05</span><a href="ansiedad-audicion-5.html">Valores en tres capas y acción comprometida</a></li>
-                        <li><span class="num">06</span><a href="ansiedad-audicion-6.html">El ensayo como laboratorio y cierre operativo</a></li>
-                    </ul>
-                    <span class="series-showcase-hint">↑ pasa el ratón o toca para ver los 6 artículos</span>
+                <!-- BEGIN series-card: Ansiedad y estrés audición -->
+                <div class="series-card" tabindex="0">
+                    <div class="series-card-summary">
+                        <div class="series-card-top">
+                            <span class="series-card-label">♩ Serie · 6 artículos</span>
+                            <span class="series-card-arrow">▾</span>
+                        </div>
+                        <div class="series-card-title">Cuando la ansiedad y el estrés acompañan</div>
+                        <div class="series-card-desc">Una serie para músicos que preparan audiciones o actuaciones con estrés y ansiedad presentes. Desde el reencuadre funcional hasta el cierre operativo, con herramientas basadas en la Ciencia Contextual del Comportamiento.</div>
+                        <span class="series-card-hint">Ver artículos ▾</span>
+                    </div>
+                    <div class="series-card-body">
+                        <div class="series-card-body-inner">
+                            <ol class="series-card-list">
+                                <li><a href="ansiedad-audicion-1.html">Ansiedad, estrés y ejecución competente: un reencuadre funcional</a></li>
+                                <li><a href="ansiedad-audicion-2.html">El lenguaje, los formatos y la autograbación como evitación</a></li>
+                                <li><a href="ansiedad-audicion-3.html">DAFO funcional: de la amenaza a la dirección</a></li>
+                                <li><a href="ansiedad-audicion-4.html">El estrés como aliado y la respuesta flexible al error</a></li>
+                                <li><a href="ansiedad-audicion-5.html">Valores en tres capas y acción comprometida</a></li>
+                                <li><a href="ansiedad-audicion-6.html">El ensayo como laboratorio y cierre operativo</a></li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
+                <!-- END series-card: Ansiedad y estrés audición -->
             </div>
         </div>
     </section>
@@ -1546,12 +1686,17 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        function toggleSerie(id, btn) {
-            const extra = document.getElementById(id);
-            const expanded = extra.style.display !== 'none';
-            extra.style.display = expanded ? 'none' : 'grid';
-            btn.textContent = expanded ? 'Ver todos los artículos de la serie ↓' : 'Ocultar artículos ↑';
-        }
+        // Stagger reveal for blog-grid cards
+        const gridObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('cards-visible');
+                    gridObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.blog-grid').forEach(grid => gridObserver.observe(grid));
 
         // Category nav active state
         const categoryLinks = document.querySelectorAll('.category-nav a[data-section]');
