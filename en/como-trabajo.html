@@ -269,7 +269,8 @@
             transition: border-color 0.3s;
         }
 
-        .area-item:hover {
+        .area-item:hover,
+        .area-item.in-view {
             border-left-color: var(--sage-light);
         }
 
@@ -890,7 +891,8 @@
         body.dark-mode .principio-item p { color: var(--text-secondary); }
 
         body.dark-mode .area-item { border-left-color: #444; }
-        body.dark-mode .area-item:hover { border-left-color: var(--sage); }
+        body.dark-mode .area-item:hover,
+        body.dark-mode .area-item.in-view { border-left-color: var(--sage); }
         body.dark-mode .area-item strong { color: var(--text-primary); }
 
         body.dark-mode .sesion-expand { border-color: #333; }
@@ -1214,6 +1216,14 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const areaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle('in-view', entry.isIntersecting);
+            });
+        }, { rootMargin: '-25% 0px -25% 0px' });
+
+        document.querySelectorAll('.area-item').forEach(el => areaObserver.observe(el));
 
         function toggleSesion(btn) {
             const body = document.getElementById('sesion-detail');
