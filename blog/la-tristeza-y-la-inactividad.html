@@ -181,7 +181,7 @@
         /* ==================== ARTICLE HEADER ==================== */
         .article-header {
             padding: 8rem 2rem 4rem;
-            background: #FFFDF8;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 100%);
             border-bottom: 1px solid var(--cream-dark);
         }
 
@@ -898,7 +898,7 @@
 
         /* Article header */
         body.dark-mode .article-header {
-            background: #1c1c1c;
+            background: linear-gradient(165deg, #1e1e1e 0%, #1a1a1a 100%);
         }
 
         body.dark-mode .article-category {
@@ -1551,31 +1551,6 @@ body::after {
         body.dark-mode .article-figure img {
             opacity: 0.92;
         }
-    </style>
-    <!-- Papel del artículo: hoja blanca cálida sobre el body manila (continua sin escalón) -->
-    <style>
-        .article-body {
-            background: #FFFDF8;
-        }
-        .back-to-blog {
-            max-width: 680px;
-            margin: 0 auto;
-            background: #FFFDF8;
-            padding-top: 2rem;
-        }
-        .back-to-blog a {
-            padding-left: 2.5rem;
-        }
-        @media (max-width: 600px) {
-            .back-to-blog {
-                padding-top: 1.5rem;
-            }
-            .back-to-blog a {
-                padding-left: 1.5rem;
-            }
-        }
-        body.dark-mode .article-body { background: #1c1c1c; }
-        body.dark-mode .back-to-blog { background: #1c1c1c; }
     </style>
 </head>
 <body>
