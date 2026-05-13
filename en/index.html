@@ -50,7 +50,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -64,7 +64,7 @@
             --terracotta: #B8705A;
             --text-primary: #2C2C2C;
             --text-secondary: #5A5A5A;
-            --text-light: #8A8A8A;
+            --text-light: #6E6E6E;
             --white: #FDFBF7;
             --whatsapp: #25D366;
         }
@@ -1536,7 +1536,7 @@
             --cream-dark: #2a2a2a;
             --text-primary: #e0ddd8;
             --text-secondary: #b0ada6;
-            --text-light: #787571;
+            --text-light: #9B9893;
             --sage: #8A9E7C;
             --sage-light: #9DB38F;
             --sage-dark: #8A9E7C;
@@ -1738,6 +1738,31 @@
         .immersive-toggle.toggle-pulse { animation: toggle-pulse 1s ease-out 1.2s 1; }
 </style>
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
+    <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
+    <style>
+        :root {
+            --white: #FBF6EC;
+            --cream: #F4EEDF;
+            --cream-dark: #E8E0CF;
+        }
+
+        .article-body {
+            background: var(--white);
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+        }
+
+        body.dark-mode::after {
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.25) 100%);
+        }
+    </style>
 </head>
 <body>
     <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Dark mode">
@@ -1792,7 +1817,7 @@
                 </div>
             </div>
             <div class="hero-actions">
-                <a href="https://wa.me/34628301511" class="btn-primary" target="_blank">
+                <a href="https://wa.me/34628301511?text=Hi%20Jos%C3%A9%20Javier%2C%20I%27m%20reaching%20out%20from%20your%20website%20and%20would%20like%20to%20ask%20you%20something." class="btn-primary" target="_blank">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Write me on WhatsApp
                 </a>
@@ -1862,7 +1887,7 @@
     </section>
 
     <!-- METHOD -->
-    <section class="method" id="como-trabajo">
+    <section class="method" id="metodologia">
         <div class="method-inner reveal">
             <span class="section-label">How I work</span>
             <h2>Science-based support,<br>focused on what you do</h2>
@@ -1899,7 +1924,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about" id="sobre-mi">
+    <section class="about" id="mi-historia">
         <div class="about-inner reveal">
             <div class="about-photo">
                 <img src="../sobre-mi.jpg" alt="Photo of José Javier Aznárez, contextual psychologist" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit;display:block;">
@@ -1934,7 +1959,7 @@
             <span class="section-label">Services</span>
             <h2>How can I support you?</h2>
 
-            <div class="services-grid mobile-collapsible">
+            <div class="services-grid">
                 <div class="service-card">
                     <span class="service-emoji">🧭</span>
                     <h3>Individual contextual psychotherapy</h3>
@@ -1958,7 +1983,7 @@
                     </div>
                     <a href="blog/crianza-contextual-funcional-1.html" style="display: inline-block; margin-top: 0.8rem; font-size: 0.88rem; color: var(--sage); font-weight: 500; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--sage-dark)'" onmouseout="this.style.color='var(--sage)'">Explore the Functional Contextual Parenting series →</a>
                 </div>
-                <div class="service-card mobile-hidden">
+                <div class="service-card">
                     <span class="service-emoji">💞</span>
                     <h3>Couples consulting</h3>
                     <p>For couples who feel they have become trapped in ways of relating — such as avoiding difficult conversations, reacting defensively, or repeating the same argument loops — that bring relief in the moment but keep the distance over time.</p>
@@ -1968,7 +1993,7 @@
                         <span>Reconnection</span>
                     </div>
                 </div>
-                <div class="service-card mobile-hidden">
+                <div class="service-card">
                     <span class="service-emoji">🎵</span>
                     <h3>Music Performance Anxiety (MPA)</h3>
                     <p>For musicians and artists who struggle with stage fright or performance anxiety. A contextual approach that goes beyond relaxation techniques.</p>
@@ -1979,7 +2004,6 @@
                     </div>
                     <a href="blog/index.html#ansiedad-escenica" style="display: inline-block; margin-top: 0.8rem; font-size: 0.88rem; color: var(--sage); font-weight: 500; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--sage-dark)'" onmouseout="this.style.color='var(--sage)'">Explore the Play, even if you're shaking series →</a>
                 </div>
-                <button class="btn-read-more" onclick="this.closest('.mobile-collapsible').classList.add('expanded')">Read more ↓</button>
             </div>
         </div>
     </section>
@@ -2060,7 +2084,7 @@
             <p class="note">Writing does not mean starting therapy. It is just a first conversation.</p>
             
             <div class="cta-buttons">
-                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                <a href="https://wa.me/34628301511?text=Hi%20Jos%C3%A9%20Javier%2C%20I%27m%20reaching%20out%20from%20your%20website%20and%20would%20like%20to%20ask%20you%20something." class="btn-whatsapp" target="_blank">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Write me on WhatsApp
                 </a>
@@ -2095,7 +2119,7 @@
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
+    <a href="https://wa.me/34628301511?text=Hi%20Jos%C3%A9%20Javier%2C%20I%27m%20reaching%20out%20from%20your%20website%20and%20would%20like%20to%20ask%20you%20something." class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 

@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v19/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jpg.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtbK-F2rA.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300..500;1,300..500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* ==================== VARIABLES ==================== */
@@ -62,7 +62,7 @@
             --terracotta: #B8705A;
             --text-primary: #2C2C2C;
             --text-secondary: #5A5A5A;
-            --text-light: #8A8A8A;
+            --text-light: #6E6E6E;
             --white: #FDFBF7;
             --whatsapp: #25D366;
         }
@@ -70,6 +70,28 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
         body { font-family: 'Work Sans', sans-serif; color: var(--text-primary); background: var(--white); line-height: 1.7; }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.045;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+            background-size: 220px 220px;
+        }
+
+        body.dark-mode::before {
+            opacity: 0.05;
+            mix-blend-mode: screen;
+        }
+
+        section, footer, .article-header, .article-body, .article-cta, .related, .page-header, .category-section, .cta-section, .trust-bar {
+            position: relative;
+            z-index: 2;
+        }
+
 
         nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.7rem 2rem; background: rgba(254,253,251,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
         .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
@@ -114,15 +136,15 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-        .article-body p { font-size: 1.05rem; line-height: 1.85; color: #3D3D3D; margin-bottom: 1.5rem; }
-        .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark); }
+        .article-body p {font-size:1.05rem;line-height:1.9;color:#3D3D3D;margin-bottom:1.6rem;font-weight:400;}
+        .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.5rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark);scroll-margin-top:80px;}
         .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
-        .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+        .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem;scroll-margin-top:80px;}
         .article-body blockquote { border-left: 3px solid var(--sage-light); margin: 2.5rem 0; padding: 1rem 1.5rem; background: var(--cream); border-radius: 0 8px 8px 0; }
         .article-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
         .article-body ul, .article-body ol { margin: 1.5rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
-        .article-body li { margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.7; }
-        .article-body strong { color: var(--text-primary); font-weight: 500; }
+        .article-body li {font-size:1.02rem;line-height:1.8;color:#3D3D3D;margin-bottom:0.5rem;font-weight:400;}
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
         .article-body em { font-style: italic; }
         .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
         .article-body a { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 2px; }
@@ -183,6 +205,11 @@
             .hamburger { display: flex; }
             .related-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         }
+        @media (max-width: 900px) and (min-width: 601px) {
+            .article-body p { font-size: 1.02rem; line-height: 1.85; }
+            .article-body li { font-size: 1rem; line-height: 1.75; }
+        }
+
         @media (max-width: 600px) {
             .article-body { padding: 2rem 1.5rem 4rem; }
             .article-cta { padding: 2.5rem 1.5rem 4rem; }
@@ -228,7 +255,7 @@
             .article-header h1 { color: #000 !important; font-size: 22pt; }
             .article-body { padding: 0 !important; max-width: 100% !important; }
             .article-body p, .article-body li { color: #000 !important; }
-            .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid; }
+            .article-body h2, .article-body h3 { color: #000 !important; page-break-after: avoid;}
             a { color: #000 !important; text-decoration: none; }
         }
 
@@ -508,7 +535,7 @@
             --cream-dark: #2a2a2a;
             --text-primary: #e0ddd8;
             --text-secondary: #b0ada6;
-            --text-light: #787571;
+            --text-light: #9B9893;
             --sage: #8A9E7C;
             --sage-light: #9DB38F;
             --sage-dark: #8A9E7C;
@@ -570,7 +597,7 @@
 
         /* Article body */
         body.dark-mode .article-body {
-            background: #1c1c1c;
+            background: #1a1a1a;
         }
 
         body.dark-mode .article-body p {
@@ -837,7 +864,7 @@
 
         /* Reading progress */
         body.dark-mode .reading-progress {
-            background: var(--sage);
+            background: rgba(138, 158, 124, 0.55);
         }
 
         /* Back link */
@@ -1012,6 +1039,210 @@
         }
         body.dark-mode .series-card-title {
             color: var(--text-primary);
+        }
+    </style>
+    <!-- Tipografia editorial: Lora como cuerpo + escala jerarquica recalibrada -->
+    <style>
+        .article-body p,
+        .article-body li,
+        .article-body blockquote,
+        .article-body blockquote p,
+        .article-intro,
+        .emotional-block p,
+        .scenario-block p,
+        .closing-block p,
+        .infobox p,
+        .practice-block p,
+        .case-box p {
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-body li {
+            font-size: 1.08rem;
+            line-height: 1.72;
+        }
+
+        .article-body blockquote {
+            font-size: 1.12rem;
+            line-height: 1.7;
+        }
+
+        .article-intro {
+            font-size: 1.08rem !important;
+            line-height: 1.7 !important;
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            line-height: 1.25;
+            margin-top: 4rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-body h2:first-of-type {
+            margin-top: 2.5rem;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            line-height: 1.3;
+            margin-top: 2.8rem;
+            letter-spacing: -0.015em;
+        }
+
+        @media (max-width: 600px) {
+            .article-body p { font-size: 1.06rem; line-height: 1.75; }
+            .article-body li { font-size: 1.04rem; line-height: 1.68; }
+            .article-body h2 { font-size: 1.5rem; margin-top: 3rem; }
+            .article-body h3 { font-size: 1.22rem; margin-top: 2.2rem; }
+        }
+    </style>
+    <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
+    <style>
+        :root {
+            --white: #FBF6EC;
+            --cream: #F4EEDF;
+            --cream-dark: #E8E0CF;
+        }
+
+        .article-body {
+            background: var(--white);
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+        }
+
+        body.dark-mode::after {
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.25) 100%);
+        }
+    </style>
+    <!-- Sistema de figuras con captions consistentes -->
+    <style>
+        .article-figure {
+            margin: 2.5rem 0;
+        }
+
+        .article-figure img {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            margin: 0;
+        }
+
+        .article-figure figcaption {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.55;
+            color: var(--text-light);
+            margin-top: 0.7rem;
+            text-align: center;
+            font-style: italic;
+            letter-spacing: 0.01em;
+        }
+
+        .article-figure .figure-credit {
+            display: block;
+            margin-top: 0.25rem;
+            font-size: 0.74rem;
+            font-style: normal;
+            opacity: 0.75;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* Variante: full-bleed (sale de la columna 680px hasta 880px en desktop) */
+        .article-figure--wide img {
+            max-width: 880px;
+            width: 880px;
+            margin-left: calc(50% - 440px);
+        }
+
+        .article-figure--wide figcaption {
+            max-width: 880px;
+            margin-left: calc(50% - 440px);
+        }
+
+        /* Variantes flotadas (reemplazan .img-float-*) */
+        .article-figure--float-right,
+        .article-figure--float-left {
+            width: 32%;
+            max-width: 200px;
+            clear: both;
+            margin: 0.3rem 0 1.5rem 0;
+        }
+
+        .article-figure--float-right {
+            float: right;
+            margin-left: 2rem;
+        }
+
+        .article-figure--float-left {
+            float: left;
+            margin-right: 2rem;
+        }
+
+        .article-figure--float-right img,
+        .article-figure--float-left img {
+            max-height: 320px;
+            object-fit: cover;
+        }
+
+        .article-figure--float-right figcaption,
+        .article-figure--float-left figcaption {
+            text-align: left;
+            font-size: 0.78rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Alias retro-compatibilidad: .img-float-* se comporta como antes pero
+           se recomienda migrar a <figure class="article-figure article-figure--float-*"> */
+        .img-float-right + figcaption,
+        .img-float-left + figcaption {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .article-figure--float-right,
+            .article-figure--float-left {
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin: 2rem 0;
+            }
+            .article-figure--float-right img,
+            .article-figure--float-left img {
+                max-height: none;
+            }
+            .article-figure--float-right figcaption,
+            .article-figure--float-left figcaption {
+                text-align: center;
+            }
+            .article-figure--wide img,
+            .article-figure--wide figcaption {
+                max-width: 100%;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        body.dark-mode .article-figure img {
+            opacity: 0.92;
         }
     </style>
 </head>
@@ -1344,7 +1575,7 @@
         <div class="article-cta-box">
             <h3>¿Te ha resonado este artículo?</h3>
             <p>Si algo de lo que has leído conecta con lo que estás viviendo en tu crianza, puedes escribirme. No para añadir más teoría, sino para mirar juntos qué está ocurriendo en tu caso concreto.</p>
-            <a href="https://wa.me/34628301511" target="_blank" class="btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
+            <a href="https://wa.me/34628301511?text=Hola%20Jos%C3%A9%20Javier%2C%20vengo%20desde%20tu%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta." target="_blank" class="btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
         </div>
     </div>
 
@@ -1389,7 +1620,7 @@
         <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
     </a>
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/34628301511?text=Hola%20Jos%C3%A9%20Javier%2C%20vengo%20desde%20tu%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
