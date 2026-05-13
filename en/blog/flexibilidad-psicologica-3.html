@@ -1096,6 +1096,36 @@ body::after {
             opacity: 0.92;
         }
     </style>
+    <!-- Efecto página: hoja continua de 680px desde el header hasta el final -->
+    <style>
+        .article-header,
+        .back-to-blog,
+        .article-body,
+        .article-nav,
+        .share-bar,
+        .article-cta {
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .article-header {
+            background: linear-gradient(165deg, var(--cream) 0%, #FFFDF8 100%);
+        }
+        .back-to-blog {
+            background: #FFFDF8;
+            padding-top: 1.5rem;
+        }
+        .article-body {
+            background: #FFFDF8;
+        }
+        body.dark-mode .article-header {
+            background: linear-gradient(165deg, #222 0%, #1c1c1c 100%);
+        }
+        body.dark-mode .back-to-blog,
+        body.dark-mode .article-body {
+            background: #1c1c1c;
+        }
+    </style>
 </head>
 <body>
     <div class="reading-progress" id="reading-progress"></div>
