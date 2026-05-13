@@ -284,7 +284,7 @@
 
         .content-block p {
             font-size: 1.05rem;
-            color: #3D3D3D;
+            color: #2C2C2C;
             font-weight: 400;
             margin-bottom: 1.2rem;
             line-height: 1.9;
@@ -319,7 +319,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             font-weight: 400;
-            color: var(--sage-dark);
+            color: var(--sage);
             display: block;
             margin-bottom: 0.8rem;
         }
@@ -873,9 +873,9 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
         .article-body {
@@ -888,50 +888,51 @@
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {
             background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.25) 100%);
         }
     </style>
-    <!-- Mid-page CTA: bloque inline de contacto -->
+    <!-- Mid-page CTA: alineado visualmente al article-cta-box, jerarquía sutil -->
     <style>
         .mid-cta {
             max-width: 540px;
             margin: 3.5rem auto;
-            padding: 1.6rem 1.8rem;
+            padding: 2rem 2.5rem;
             background: var(--cream);
-            border-left: 3px solid var(--sage);
-            border-radius: 0 12px 12px 0;
+            border-radius: 1.5rem;
+            border: 1px solid var(--cream-dark);
             text-align: center;
         }
         .mid-cta p {
             font-family: 'Work Sans', sans-serif;
             font-size: 0.95rem;
             color: var(--text-secondary);
-            margin: 0 0 1rem;
-            line-height: 1.6;
+            margin: 0 0 1.2rem;
+            line-height: 1.65;
         }
         .mid-cta a {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
             color: var(--sage-dark);
             text-decoration: none;
-            font-size: 0.92rem;
+            font-size: 0.93rem;
             font-weight: 500;
             border-bottom: 1.5px solid var(--sage);
-            padding-bottom: 0.15rem;
-            transition: color 0.3s, border-color 0.3s;
+            padding-bottom: 0.18rem;
+            transition: color 0.3s, border-color 0.3s, gap 0.25s;
         }
         .mid-cta a:hover {
             color: var(--sage);
             border-bottom-color: var(--sage-dark);
+            gap: 0.65rem;
         }
         body.dark-mode .mid-cta {
             background: #222;
-            border-left-color: var(--sage);
+            border-color: #333;
         }
         body.dark-mode .mid-cta p { color: var(--text-secondary); }
         body.dark-mode .mid-cta a { color: var(--sage-light); border-bottom-color: var(--sage); }

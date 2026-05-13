@@ -1741,9 +1741,9 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
         .article-body {
@@ -1756,7 +1756,7 @@
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {
@@ -2221,6 +2221,40 @@ document.addEventListener("DOMContentLoaded", function() {
             if (imm) imm.classList.remove('toggle-pulse');
         }, 2400);
     }, 600);
+})();
+</script>
+
+<!-- Hover-en-táctil: replicar efectos de :hover por intersección en dispositivos sin hover -->
+<style>
+    @media (hover: none) {
+        .service-card.in-view::before { transform: scaleX(1); }
+        .service-card.in-view {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+        .identify-card.in-view {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-color: rgba(107,127,94,0.12);
+            transform: translateY(-2px);
+        }
+        body.dark-mode .service-card.in-view,
+        body.dark-mode .identify-card.in-view {
+            border-color: rgba(138,158,124,0.25);
+        }
+    }
+</style>
+<script>
+(function() {
+    if (!window.matchMedia || !window.matchMedia('(hover: none)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var cards = document.querySelectorAll('.service-card, .identify-card');
+    if (!cards.length) return;
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            e.target.classList.toggle('in-view', e.isIntersecting && e.intersectionRatio > 0.5);
+        });
+    }, { threshold: [0, 0.5, 1] });
+    cards.forEach(function(c) { obs.observe(c); });
 })();
 </script>
 </body>

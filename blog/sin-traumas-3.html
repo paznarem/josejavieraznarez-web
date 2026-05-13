@@ -117,7 +117,7 @@
         .back-to-blog a { font-size: 0.88rem; color: var(--sage); text-decoration: none; transition: color 0.3s; }
         .back-to-blog a:hover { color: var(--sage-dark); }
 
-        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
+        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
 
         .article-body {
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
@@ -136,14 +136,14 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-        .article-body p {font-size:1.05rem;line-height:1.9;color:#3D3D3D;margin-bottom:1.6rem;font-weight:400;}
+        .article-body p {font-size:1.05rem;line-height:1.9;color:#2C2C2C;margin-bottom:1.6rem;font-weight:400;}
         .article-body h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.5rem; color: var(--text-primary); letter-spacing: -0.02em; margin-top: 3.5rem; margin-bottom: 1.2rem; line-height: 1.3; padding-top: 2rem; border-top: 1px solid var(--cream-dark);scroll-margin-top:80px;}
         .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
         .article-body h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; color: var(--text-primary); margin: 2rem 0 0.75rem;scroll-margin-top:80px;}
         .article-body blockquote { border-left: 3px solid var(--sage-light); margin: 2.5rem 0; padding: 1rem 1.5rem; background: var(--cream); border-radius: 0 8px 8px 0; }
         .article-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
         .article-body ul, .article-body ol { margin: 1.5rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
-        .article-body li {font-size:1.02rem;line-height:1.8;color:#3D3D3D;margin-bottom:0.5rem;font-weight:400;}
+        .article-body li {font-size:1.02rem;line-height:1.8;color:#2C2C2C;margin-bottom:0.5rem;font-weight:400;}
         .article-body strong { color: var(--text-primary); font-weight: 600; }
         .article-body em { font-style: italic; }
         .article-body hr { border: none; border-top: 1px solid var(--cream-dark); margin: 3rem 0; }
@@ -1137,22 +1137,18 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
-        .article-body {
-            background: var(--white);
-        }
-
-        body::after {
+body::after {
             content: '';
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {

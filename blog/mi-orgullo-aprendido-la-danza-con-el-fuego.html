@@ -245,7 +245,6 @@
             max-width: 680px;
             margin: 0 auto;
             padding: 3rem 2.5rem 5rem;
-            background: #FDFBF7;
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             font-kerning: normal;
             text-rendering: optimizeLegibility;
@@ -266,7 +265,7 @@
         .article-body p {
             font-size: 1.05rem;
             line-height: 1.9;
-            color: #3D3D3D;
+            color: #2C2C2C;
             margin-bottom: 1.6rem;
             font-weight: 400;
         }
@@ -307,7 +306,7 @@
             background: var(--cream);
             border-radius: 0 8px 8px 0;
             font-style: italic;
-            color: #3D3D3D;
+            color: #2C2C2C;
             font-size: 1.05rem;
             line-height: 1.75;
         }
@@ -1417,22 +1416,18 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
-        .article-body {
-            background: var(--white);
-        }
-
-        body::after {
+body::after {
             content: '';
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {

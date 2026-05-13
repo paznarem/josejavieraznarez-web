@@ -296,7 +296,6 @@
             max-width: 680px;
             margin: 0 auto;
             padding: 3rem 2.5rem 5rem;
-            background: #FDFBF7;
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             font-kerning: normal;
             text-rendering: optimizeLegibility;
@@ -317,7 +316,7 @@
         .article-body p {
             font-size: 1.05rem;
             line-height: 1.9;
-            color: #3D3D3D;
+            color: #2C2C2C;
             margin-bottom: 1.6rem;
             font-weight: 400;
         }
@@ -376,7 +375,7 @@
         .article-body li {
             font-size: 1.05rem;
             line-height: 1.9;
-            color: #3D3D3D;
+            color: #2C2C2C;
             margin-bottom: 0.5rem;
             font-weight: 400;
         }
@@ -606,46 +605,46 @@
 
         footer {
             background: var(--sage-dark);
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.6);
             padding: 3rem 2rem;
         }
 
         .footer-inner {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         .footer-brand {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
+        .footer-links { display: flex; gap: 2rem; }
 
         .footer-links a {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.5);
             text-decoration: none;
             font-size: 0.82rem;
             transition: color 0.3s;
         }
 
-        .footer-links a:hover { color: var(--white); }
+        .footer-links a:hover { color: rgba(255,255,255,0.85); }
 
         .footer-legal {
+            width: 100%;
+            text-align: center;
             font-size: 0.75rem;
-            color: rgba(255,255,255,0.4);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+            color: rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            line-height: 1.7;
         }
 
         /* ==================== FLOATING INSTAGRAM ==================== */
@@ -1538,22 +1537,18 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
-        .article-body {
-            background: var(--white);
-        }
-
-        body::after {
+body::after {
             content: '';
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {

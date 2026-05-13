@@ -134,7 +134,7 @@
         .back-to-blog a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sage); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: gap 0.3s; }
         .back-to-blog a:hover { gap: 0.8rem; }
 
-        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; background: #FDFBF7; }
+        .article-body { max-width: 680px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
 
         .article-body {
             font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
@@ -153,13 +153,13 @@
         .article-body h3 {
             font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
         }
-        .article-body p { font-size: 1.05rem; line-height: 1.9; color: #3D3D3D; margin-bottom: 1.6rem; font-weight: 400; }
+        .article-body p { font-size: 1.05rem; line-height: 1.9; color: #2C2C2C; margin-bottom: 1.6rem; font-weight: 400; }
         .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-primary); margin-top: 3.5rem; margin-bottom: 1.2rem; letter-spacing: -0.01em; padding-top: 2rem; border-top: 1px solid var(--cream-dark);scroll-margin-top:80px;}
         .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
         .article-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 0.8rem;scroll-margin-top:80px;}
         .article-body ul, .article-body ol { margin-bottom: 1.6rem; padding-left: 1.5rem; }
-        .article-body li {font-size:1.02rem;line-height:1.8;color:#3D3D3D;margin-bottom:0.5rem;font-weight:400;}
-        .article-body blockquote { border-left: 3px solid var(--sage-light); padding: 1.2rem 1.8rem; margin: 2rem 0; background: var(--cream); border-radius: 0 1rem 1rem 0; font-style: italic; color: #3D3D3D; font-size: 1.05rem; line-height: 1.8; }
+        .article-body li {font-size:1.02rem;line-height:1.8;color:#2C2C2C;margin-bottom:0.5rem;font-weight:400;}
+        .article-body blockquote { border-left: 3px solid var(--sage-light); padding: 1.2rem 1.8rem; margin: 2rem 0; background: var(--cream); border-radius: 0 1rem 1rem 0; font-style: italic; color: #2C2C2C; font-size: 1.05rem; line-height: 1.8; }
         .article-body strong { font-weight: 600; color: var(--text-primary); }
         .article-body em { color: inherit; }
         .article-body a { color: var(--sage); text-decoration: underline; text-decoration-color: rgba(107,127,94,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s; }
@@ -962,22 +962,18 @@
     <!-- Papel calido + vignette sutil (atmosfera de lectura) -->
     <style>
         :root {
-            --white: #FBF6EC;
-            --cream: #F4EEDF;
-            --cream-dark: #E8E0CF;
+            --white: #FCF8F2;
+            --cream: #F5EFE2;
+            --cream-dark: #EAE2D2;
         }
 
-        .article-body {
-            background: var(--white);
-        }
-
-        body::after {
+body::after {
             content: '';
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.06) 100%);
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(196,168,130,0.04) 100%);
         }
 
         body.dark-mode::after {
