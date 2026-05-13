@@ -1644,6 +1644,31 @@ body::after {
             opacity: 0.92;
         }
     </style>
+    <!-- Papel del artículo: hoja blanca cálida sobre el body manila (continua sin escalón) -->
+    <style>
+        .article-body {
+            background: #FFFDF8;
+        }
+        .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #FFFDF8;
+            padding-top: 2rem;
+        }
+        .back-to-blog a {
+            padding-left: 2.5rem;
+        }
+        @media (max-width: 600px) {
+            .back-to-blog {
+                padding-top: 1.5rem;
+            }
+            .back-to-blog a {
+                padding-left: 1.5rem;
+            }
+        }
+        body.dark-mode .article-body { background: #1c1c1c; }
+        body.dark-mode .back-to-blog { background: #1c1c1c; }
+    </style>
 </head>
 <body>
     <div class="reading-progress" id="reading-progress"></div>
