@@ -1602,7 +1602,7 @@ body::after {
     <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
     <style>
         .article-header {
-            background: linear-gradient(165deg, var(--cream) 0%, #FFFDF8 100%) !important;
+            background: linear-gradient(to bottom, var(--cream) 0%, #FFFDF8 100%) !important;
         }
         .back-to-blog,
         .article-body {
@@ -1612,7 +1612,7 @@ body::after {
             background: #FFFDF8;
         }
         body.dark-mode .article-header {
-            background: linear-gradient(165deg, #222 0%, #1c1c1c 100%) !important;
+            background: linear-gradient(to bottom, #222 0%, #1c1c1c 100%) !important;
         }
         body.dark-mode .back-to-blog,
         body.dark-mode .article-body {
@@ -1810,7 +1810,10 @@ body::after {
         <h2>Todo convive en tu rosal</h2>
 
         <figure class="article-figure article-figure--float-right">
-            <img src="../rosa4.jpg" alt="El rosal entero: capullos, rosas florecidas y ramas secas conviviendo">
+            <picture>
+                <source type="image/webp" srcset="../rosa4.webp">
+                <img src="../rosa4.jpg" alt="El rosal entero: capullos, rosas florecidas y ramas secas conviviendo" width="1036" height="1400" loading="lazy" decoding="async">
+            </picture>
             <figcaption>El rosal entero: capullos, rosas florecidas y ramas secas conviviendo.</figcaption>
         </figure>
 
@@ -1844,7 +1847,10 @@ body::after {
         <h2>Cada parte tiene su significado</h2>
 
         <figure class="article-figure article-figure--float-left">
-            <img src="../rosa1.jpg" alt="Capullo de rosa, lleno de potencial por desarrollarse">
+            <picture>
+                <source type="image/webp" srcset="../rosa1.webp">
+                <img src="../rosa1.jpg" alt="Capullo de rosa, lleno de potencial por desarrollarse" width="1400" height="1050" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Capullo de rosa, lleno de potencial por desarrollarse.</figcaption>
         </figure>
 
@@ -1856,7 +1862,10 @@ body::after {
 
         <!-- rosa2: rosa abierta y bonita → "Las rosas en pleno esplendor" -->
         <figure class="article-figure article-figure--float-right">
-            <img src="../rosa2.jpg" alt="Rosa abierta en pleno esplendor y fragancia">
+            <picture>
+                <source type="image/webp" srcset="../rosa2.webp">
+                <img src="../rosa2.jpg" alt="Rosa abierta en pleno esplendor y fragancia" width="1400" height="1050" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Rosa abierta en pleno esplendor y fragancia.</figcaption>
         </figure>
 
@@ -1872,7 +1881,10 @@ body::after {
 
         <!-- rosa3: rosa marchitándose → "Las rosas marchitas" -->
         <figure class="article-figure article-figure--float-left">
-            <img src="../rosa3.jpg" alt="Rosa marchitándose, dejando caer sus pétalos">
+            <picture>
+                <source type="image/webp" srcset="../rosa3.webp">
+                <img src="../rosa3.jpg" alt="Rosa marchitándose, dejando caer sus pétalos" width="1400" height="1050" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Rosa marchitándose, dejando caer sus pétalos.</figcaption>
         </figure>
 
