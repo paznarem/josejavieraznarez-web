@@ -1567,12 +1567,12 @@ body::after {
         body {
             background: var(--cream) !important;
         }
+        body::before, body::after { display: none !important; }
         .article-header {
             background: linear-gradient(to bottom, var(--white) 0%, var(--cream) 60%, var(--cream) 100%) !important;
             padding-top: 7rem !important;
             position: relative;
             overflow: hidden;
-            z-index: 0 !important;
         }
         .article-header .back-to-blog {
             max-width: 680px;
