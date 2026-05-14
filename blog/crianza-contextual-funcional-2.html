@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo — José Javier Aznárez | Psicólogo Contextual</title>
     <meta name="description" content="Ninguna conducta de crianza puede evaluarse fuera de su contexto. La relación padre-hijo es un sistema donde ambos aprenden del otro, y esa bidireccionalidad transforma a quien cría tanto como a quien es criado.">
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-2.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-2.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/blog/crianza-contextual-funcional-2.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-2.html">
+
     <meta property="og:title" content="Lo que tu hijo te enseña sin saberlo: la crianza como sistema de aprendizaje mutuo — José Javier Aznárez">
     <meta property="og:description" content="Ninguna conducta de crianza puede evaluarse fuera de su contexto. La relación padre-hijo es un sistema donde ambos aprenden del otro, y esa bidireccionalidad transforma a quien cría tanto como a quien es criado.">
     <meta property="og:type" content="article">
@@ -1084,12 +1090,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1099,7 +1114,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1233,6 +1250,9 @@ body::after {
     </nav>
 
     <header class="article-header">
+        <div class="back-to-blog">
+        <a href="index.html">← Volver al blog</a>
+    </div>
         <div class="article-header-inner">
             <span class="article-category">Criar con dirección</span>
             <span class="series-badge">Serie: Crianza Contextual Funcional &middot; Artículo 2 de 7</span>
@@ -1254,10 +1274,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <div class="back-to-blog">
-        <a href="index.html">← Volver al blog</a>
-    </div>
 
     <article class="article-body">
 

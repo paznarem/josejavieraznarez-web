@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Desde qué marco estás leyendo la historia de tus padres? — José Javier Aznárez | Psicólogo Contextual</title>
     <meta name="description" content="Primer artículo de la serie sobre transmisión intergeneracional. Cómo el marco desde el que leemos nuestra historia familiar organiza lo que recordamos y lo que hacemos hoy con nuestros hijos. Una mirada desde la Ciencia Conductual Contextual y ACT.">
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/blog/sin-traumas-1.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/blog/sin-traumas-1.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/blog/sin-traumas-1.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/blog/sin-traumas-1.html">
+
     <meta property="og:title" content="¿Desde qué marco estás leyendo la historia de tus padres? — José Javier Aznárez">
     <meta property="og:description" content="Primer artículo de la serie sobre transmisión intergeneracional. Cómo el marco desde el que leemos nuestra historia familiar organiza lo que recordamos y lo que hacemos hoy con nuestros hijos. Una mirada desde la Ciencia Conductual Contextual y ACT.">
     <meta property="og:type" content="article">
@@ -1284,12 +1290,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1299,7 +1314,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1435,6 +1452,9 @@ body::after {
 
     <!-- ARTICLE HEADER -->
     <header class="article-header">
+        <div class="back-to-blog">
+        <a href="index.html">← Volver al blog</a>
+    </div>
         <div class="article-header-inner">
             <span class="article-category">Criar con dirección</span>
             <span class="series-badge">Serie: Lo que se transmite entre generaciones · Artículo 1 de 4</span>
@@ -1454,11 +1474,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <!-- BACK LINK -->
-    <div class="back-to-blog">
-        <a href="index.html">← Volver al blog</a>
-    </div>
 
     <!-- ARTICLE BODY -->
     <article class="article-body">

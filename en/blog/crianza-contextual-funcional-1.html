@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You are not the problem: why the question "am I a good mother?" has no useful answer — José Javier Aznárez | Contextual Psychologist</title>
     <meta name="description" content="Contextual Functional Parenting proposes changing the question from which you judge yourself as a mother or father. It doesn't evaluate parenting styles: it analyzes the processes that organize your behavior when responding the way you'd like is hardest.">
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/en/blog/crianza-contextual-funcional-1.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-1.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/blog/crianza-contextual-funcional-1.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-1.html">
+
     <meta property="og:title" content="You are not the problem: why the question «am I a good mother?» has no useful answer — José Javier Aznárez">
     <meta property="og:description" content="Contextual Functional Parenting proposes changing the question from which you judge yourself as a mother or father. It doesn't evaluate parenting styles: it analyzes the processes that organize your behavior when responding the way you'd like is hardest.">
     <meta property="og:type" content="article">
@@ -1241,12 +1247,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1256,7 +1271,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1392,6 +1409,9 @@ body::after {
 
     <!-- ARTICLE HEADER -->
     <header class="article-header">
+        <div class="back-to-blog">
+        <a href="index.html">← Back to blog</a>
+    </div>
         <div class="article-header-inner">
             <span class="article-category">Parenting with direction</span>
             <span class="series-badge">Series: Contextual Functional Parenting &middot; Article 1 of 7</span>
@@ -1413,11 +1433,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <!-- BACK LINK -->
-    <div class="back-to-blog">
-        <a href="index.html">← Back to blog</a>
-    </div>
 
     <!-- ARTICLE BODY -->
     <article class="article-body">

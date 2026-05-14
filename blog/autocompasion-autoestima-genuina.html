@@ -13,6 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud — José Javier Aznárez | Psicólogo Contextual</title>
     <meta name="description" content="La autoestima dependiente puede ser una embarcación frágil. La autocompasión nos ofrece una alternativa genuina: ser amables con nosotros mismos en la tormenta.">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/blog/autocompasion-autoestima-genuina.html">
+
     <meta property="og:title" content="La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud — José Javier Aznárez">
     <meta property="og:description" content="La autoestima dependiente puede ser una embarcación frágil. La autocompasión nos ofrece una alternativa genuina: ser amables con nosotros mismos en la tormenta.">
     <meta property="og:type" content="article">
@@ -1575,12 +1578,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1590,7 +1602,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1725,6 +1739,9 @@ body::after {
 
     <!-- ARTICLE HEADER -->
     <header class="article-header">
+        <div class="back-to-blog">
+        <a href="index.html">← Volver al blog</a>
+    </div>
         <div class="article-header-inner">
             <span class="article-category">Vivir lo que vale</span>
             <h1>La autocompasión nos ofrece un camino, libre de comparaciones, hacia la calma y la plenitud</h1>
@@ -1733,11 +1750,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <!-- BACK LINK -->
-    <div class="back-to-blog">
-        <a href="index.html">← Volver al blog</a>
-    </div>
 
     <!-- ARTICLE BODY -->
     <article class="article-body">

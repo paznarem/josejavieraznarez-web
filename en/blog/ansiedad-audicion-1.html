@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anxiety, stress and competent performance: a functional reframe — José Javier Aznárez | Contextual Psychologist</title>
     <meta name="description" content="Anxiety and stress are fully compatible with a competent musical audition. This article proposes a shift of direction: not to reduce activation, but to keep the repertoire available when it matters most. From Contextual Behavioral Science (CBS).">
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/en/blog/ansiedad-audicion-1.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/blog/ansiedad-audicion-1.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/blog/ansiedad-audicion-1.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/blog/ansiedad-audicion-1.html">
+
     <meta property="og:title" content="Anxiety, stress and competent performance: a functional reframe — José Javier Aznárez">
     <meta property="og:description" content="Anxiety and stress are fully compatible with a competent musical audition. This article proposes a shift of direction: not to reduce activation, but to keep the repertoire available when it matters most. From Contextual Behavioral Science (CBS).">
     <meta property="og:type" content="article">
@@ -1269,12 +1275,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1284,7 +1299,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1420,6 +1437,9 @@ body::after {
 
     <!-- ARTICLE HEADER -->
     <header class="article-header">
+        <div class="back-to-blog">
+        <a href="index.html">← Back to blog</a>
+    </div>
         <div class="article-header-inner">
             <span class="article-category">Stress and anxiety</span>
             <span class="series-badge">Series: When anxiety and stress come along &middot; Article 1 of 6</span>
@@ -1440,11 +1460,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <!-- BACK LINK -->
-    <div class="back-to-blog">
-        <a href="index.html">← Back to blog</a>
-    </div>
 
     <!-- ARTICLE BODY -->
     <article class="article-body">

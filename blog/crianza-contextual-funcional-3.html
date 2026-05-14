@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo — José Javier Aznárez | Psicólogo Contextual</title>
     <meta name="description" content="La diferencia entre «eres un desastre» y «has dejado la habitación sin recoger» no es de tono: son dos operaciones psicológicas distintas. Cómo el lenguaje cotidiano instala en tu hijo la forma en que se relacionará consigo mismo.">
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-3.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-3.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/blog/crianza-contextual-funcional-3.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/blog/crianza-contextual-funcional-3.html">
+
     <meta property="og:title" content="Las palabras que construyen a tu hijo: cómo el lenguaje moldea el vínculo — José Javier Aznárez">
     <meta property="og:description" content="La diferencia entre «eres un desastre» y «has dejado la habitación sin recoger» no es de tono: son dos operaciones psicológicas distintas. Cómo el lenguaje cotidiano instala en tu hijo la forma en que se relacionará consigo mismo.">
     <meta property="og:type" content="article">
@@ -986,12 +992,21 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Efecto página: header full-width termina en color hoja, después hoja 680px -->
+    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
             background: var(--cream) !important;
+            padding-top: 7rem !important;
         }
-        .back-to-blog,
+        .article-header .back-to-blog {
+            max-width: 680px;
+            margin: 0 auto 2rem !important;
+            padding: 0 !important;
+            text-align: left;
+        }
+        .article-header .back-to-blog a {
+            color: var(--sage-dark);
+        }
         .article-body {
             max-width: 680px;
             margin-left: auto;
@@ -1001,7 +1016,9 @@ body::after {
         body.dark-mode .article-header {
             background: #222 !important;
         }
-        body.dark-mode .back-to-blog,
+        body.dark-mode .article-header .back-to-blog a {
+            color: var(--sage);
+        }
         body.dark-mode .article-body {
             background: #1c1c1c;
         }
@@ -1130,6 +1147,7 @@ body::after {
     </nav>
 
     <header class="article-header">
+        <div class="back-to-blog"><a href="index.html">← Volver al blog</a></div>
         <div class="article-header-inner">
             <span class="article-category">Criar con dirección</span>
             <span class="series-badge">Serie: Crianza Contextual Funcional &middot; Artículo 3 de 7</span>
@@ -1151,8 +1169,6 @@ body::after {
             </p>
         </div>
     </header>
-
-    <div class="back-to-blog"><a href="index.html">← Volver al blog</a></div>
 
     <article class="article-body">
 
