@@ -956,17 +956,27 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Header sage pastel con back-to-blog integrado, después hoja 680px -->
+    <!-- Header cream-warm con acento decorativo + back-to-blog integrado -->
     <style>
         .article-header {
-            background: #E5EBE0 !important;
+            background:
+                radial-gradient(circle at top right, rgba(196,168,130,0.18) 0%, transparent 55%),
+                linear-gradient(to bottom, var(--cream) 0%, #EDE2CE 100%) !important;
             padding-top: 7rem !important;
+            position: relative;
+            overflow: hidden;
         }
         .article-header .back-to-blog {
             max-width: 680px;
             margin: 0 auto 2rem !important;
             padding: 0 !important;
             text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+        .article-header-inner {
+            position: relative;
+            z-index: 2;
         }
         .article-header .back-to-blog a,
         .article-header .article-category,
@@ -982,7 +992,9 @@ body::after {
             background: #FFFDF8;
         }
         body.dark-mode .article-header {
-            background: #1f2520 !important;
+            background:
+                radial-gradient(circle at top right, rgba(196,168,130,0.10) 0%, transparent 55%),
+                linear-gradient(to bottom, #232220 0%, #1c1a18 100%) !important;
         }
         body.dark-mode .article-header .back-to-blog a,
         body.dark-mode .article-header .article-category,
