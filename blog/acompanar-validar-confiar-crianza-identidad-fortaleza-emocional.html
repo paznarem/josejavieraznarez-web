@@ -1774,10 +1774,10 @@ body::after {
             opacity: 0.92;
         }
     </style>
-    <!-- Header cream con back-to-blog integrado, después hoja 680px -->
+    <!-- Header sage pastel con back-to-blog integrado, después hoja 680px -->
     <style>
         .article-header {
-            background: var(--cream) !important;
+            background: #E5EBE0 !important;
             padding-top: 7rem !important;
         }
         .article-header .back-to-blog {
@@ -1786,8 +1786,12 @@ body::after {
             padding: 0 !important;
             text-align: left;
         }
-        .article-header .back-to-blog a {
-            color: var(--sage-dark);
+        .article-header .back-to-blog a,
+        .article-header .article-category,
+        .article-header .article-meta,
+        .article-header .article-meta a,
+        .article-header .reading-time {
+            color: var(--sage-dark) !important;
         }
         .article-body {
             max-width: 680px;
@@ -1796,10 +1800,14 @@ body::after {
             background: #FFFDF8;
         }
         body.dark-mode .article-header {
-            background: #222 !important;
+            background: #1f2520 !important;
         }
-        body.dark-mode .article-header .back-to-blog a {
-            color: var(--sage);
+        body.dark-mode .article-header .back-to-blog a,
+        body.dark-mode .article-header .article-category,
+        body.dark-mode .article-header .article-meta,
+        body.dark-mode .article-header .article-meta a,
+        body.dark-mode .article-header .reading-time {
+            color: var(--sage-light) !important;
         }
         body.dark-mode .article-body {
             background: #1c1c1c;

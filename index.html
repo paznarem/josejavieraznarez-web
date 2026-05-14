@@ -54,6 +54,56 @@
     }
     </script>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta una sesión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primera sesión (60 min): 45€. Sesión individual (50 min): 45€. Sesión de pareja (50 min): 65€. Todos los precios + impuestos. Puedes consultar las condiciones completas en la página de consentimiento y tarifas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo es la primera sesión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dura 60 minutos y es una conversación abierta donde me cuentas qué te ocurre, qué has intentado y qué esperas. No hay formularios previos ni etiquetas diagnósticas. Si vemos que el trabajo encaja, planificamos los siguientes pasos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la terapia contextual (ACT)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La terapia de aceptación y compromiso (ACT) es un enfoque basado en más de 1.400 ensayos clínicos. A diferencia de las terapias centradas en eliminar síntomas, trabaja para que puedas relacionarte de otra manera con lo que piensas y sientes, y actuar en dirección a lo que te importa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las sesiones son online y confidenciales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajo 100% por videollamada, en español y sin fronteras geográficas. Toda la información compartida está protegida por el RGPD y la LOPDGDD, con compromiso profesional de confidencialidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura un proceso de terapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de tu situación. No hay un número fijo de sesiones. Trabajamos por objetivos concretos y revisamos el progreso periódicamente. Las sesiones suelen ser semanales (una o dos) de unos 50 minutos. Mi objetivo es que recuperes autonomía, no generar dependencia."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -1062,6 +1112,88 @@
         .blog-grid {
             grid-template-rows: 1fr 1fr;
         }
+
+        /* ==================== FAQ SECTION ==================== */
+        .faq-section {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+        .faq-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .faq-inner > h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin: 0.5rem 0 2.5rem;
+            letter-spacing: -0.01em;
+        }
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid rgba(107,127,94,0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+        .faq-item[open] {
+            border-color: rgba(107,127,94,0.35);
+            box-shadow: 0 4px 14px rgba(74,91,63,0.06);
+        }
+        .faq-item > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.15rem 1.4rem;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 500;
+            font-size: 1.02rem;
+            color: var(--sage-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .faq-item > summary::-webkit-details-marker { display: none; }
+        .faq-item > summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--sage);
+            transition: transform 0.25s;
+            line-height: 1;
+        }
+        .faq-item[open] > summary::after {
+            content: '\2013';
+        }
+        .faq-answer {
+            padding: 0 1.4rem 1.3rem;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.7;
+        }
+        .faq-answer p { margin: 0; }
+        .faq-answer a {
+            color: var(--sage-dark);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        @media (max-width: 768px) {
+            .faq-section { padding: 4rem 1.2rem; }
+            .faq-inner > h2 { font-size: 1.7rem; margin-bottom: 1.8rem; }
+            .faq-item > summary { padding: 1rem 1.1rem; font-size: 0.97rem; }
+            .faq-answer { padding: 0 1.1rem 1.1rem; font-size: 0.93rem; }
+        }
+        body.dark-mode .faq-section { background: #1d1d1d; }
+        body.dark-mode .faq-item { background: #252525; border-color: rgba(255,255,255,0.08); }
+        body.dark-mode .faq-item > summary { color: var(--sage-light); }
+        body.dark-mode .faq-answer { color: #c8c8c8; }
 
         /* ==================== CTA SECTION ==================== */
         .cta-section {
@@ -2084,6 +2216,51 @@
             <h2>Lo que siente tu hijo: cómo acompañarle en el momento en que más te necesita</h2>
             <p class="libro-subtitle"><em>Guía práctica de educación emocional para padres y abuelos basada en la ciencia conductual contextual</em></p>
             <p class="libro-desc">Un nuevo libro de José Javier Aznárez donde la ciencia contextual se convierte en herramienta práctica para familias, educadores y profesionales. Disponible próximamente.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="faq-inner reveal">
+            <span class="section-label">Preguntas frecuentes</span>
+            <h2>Lo que la gente suele preguntarme antes de empezar</h2>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta una sesión?</summary>
+                    <div class="faq-answer">
+                        <p>Primera sesión (60 min): 45€. Sesión individual (50 min): 45€. Sesión de pareja (50 min): 65€. Todos los precios + impuestos. Puedes consultar las condiciones completas en la <a href="consentimiento-tarifas.html">página de consentimiento y tarifas</a>.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo es la primera sesión?</summary>
+                    <div class="faq-answer">
+                        <p>Dura 60 minutos y es una conversación abierta donde me cuentas qué te ocurre, qué has intentado y qué esperas. No hay formularios previos ni etiquetas diagnósticas. Si vemos que el trabajo encaja, planificamos los siguientes pasos.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué es la terapia contextual (ACT)?</summary>
+                    <div class="faq-answer">
+                        <p>La terapia de aceptación y compromiso (ACT) es un enfoque basado en más de 1.400 ensayos clínicos. A diferencia de las terapias centradas en eliminar síntomas, trabaja para que puedas relacionarte de otra manera con lo que piensas y sientes, y actuar en dirección a lo que te importa.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Las sesiones son online y confidenciales?</summary>
+                    <div class="faq-answer">
+                        <p>Sí. Trabajo 100% por videollamada, en español y sin fronteras geográficas. Toda la información compartida está protegida por el RGPD y la LOPDGDD, con compromiso profesional de confidencialidad.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cuánto dura un proceso de terapia?</summary>
+                    <div class="faq-answer">
+                        <p>Depende de tu situación. No hay un número fijo de sesiones. Trabajamos por objetivos concretos y revisamos el progreso periódicamente. Las sesiones suelen ser semanales (una o dos) de unos 50 minutos. Mi objetivo es que recuperes autonomía, no generar dependencia.</p>
+                    </div>
+                </details>
+            </div>
         </div>
     </section>
 

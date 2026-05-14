@@ -54,6 +54,57 @@
     }
     </script>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a session cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First session (60 min): €45. Individual session (50 min): €45. Couples session (50 min): €65. All prices + VAT. You can read the full terms on the consent and fees page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the first session like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It lasts 60 minutes and is an open conversation where you tell me what is happening to you, what you have tried, and what you expect. There are no prior forms or diagnostic labels. If we see that the work fits, we plan the next steps together."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is contextual therapy (ACT)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acceptance and Commitment Therapy (ACT) is an evidence-based approach backed by more than 1,400 clinical trials. Unlike therapies focused on eliminating symptoms, it works so that you can relate differently to what you think and feel, and act in the direction of what matters to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are sessions online and confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. I work 100% by video call, with no geographic borders. All shared information is protected by GDPR and LOPDGDD, with professional confidentiality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a therapy process last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your situation. There is no fixed number of sessions. We work towards concrete goals and review progress periodically. Sessions are usually weekly (one or two) and last about 50 minutes. My aim is for you to regain autonomy, not to create dependence."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -1062,6 +1113,88 @@
         .blog-grid {
             grid-template-rows: 1fr 1fr;
         }
+
+        /* ==================== FAQ SECTION ==================== */
+        .faq-section {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+        .faq-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .faq-inner > h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin: 0.5rem 0 2.5rem;
+            letter-spacing: -0.01em;
+        }
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid rgba(107,127,94,0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+        .faq-item[open] {
+            border-color: rgba(107,127,94,0.35);
+            box-shadow: 0 4px 14px rgba(74,91,63,0.06);
+        }
+        .faq-item > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.15rem 1.4rem;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 500;
+            font-size: 1.02rem;
+            color: var(--sage-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .faq-item > summary::-webkit-details-marker { display: none; }
+        .faq-item > summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--sage);
+            transition: transform 0.25s;
+            line-height: 1;
+        }
+        .faq-item[open] > summary::after {
+            content: '\2013';
+        }
+        .faq-answer {
+            padding: 0 1.4rem 1.3rem;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.7;
+        }
+        .faq-answer p { margin: 0; }
+        .faq-answer a {
+            color: var(--sage-dark);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        @media (max-width: 768px) {
+            .faq-section { padding: 4rem 1.2rem; }
+            .faq-inner > h2 { font-size: 1.7rem; margin-bottom: 1.8rem; }
+            .faq-item > summary { padding: 1rem 1.1rem; font-size: 0.97rem; }
+            .faq-answer { padding: 0 1.1rem 1.1rem; font-size: 0.93rem; }
+        }
+        body.dark-mode .faq-section { background: #1d1d1d; }
+        body.dark-mode .faq-item { background: #252525; border-color: rgba(255,255,255,0.08); }
+        body.dark-mode .faq-item > summary { color: var(--sage-light); }
+        body.dark-mode .faq-answer { color: #c8c8c8; }
 
         /* ==================== CTA SECTION ==================== */
         .cta-section {
@@ -2078,6 +2211,51 @@
             <h2>What your child feels: how to be there in the moment they need you most</h2>
             <p class="libro-subtitle"><em>A practical guide to emotional education for parents and grandparents, grounded in Contextual Behavioral Science</em></p>
             <p class="libro-desc">A new book by José Javier Aznárez where contextual science becomes a practical tool for families, educators, and professionals. Coming soon.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="faq-inner reveal">
+            <span class="section-label">Frequently asked questions</span>
+            <h2>What people usually ask me before starting</h2>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How much does a session cost?</summary>
+                    <div class="faq-answer">
+                        <p>First session (60 min): €45. Individual session (50 min): €45. Couples session (50 min): €65. All prices + VAT. You can read the full terms on the <a href="consentimiento-tarifas.html">consent and fees page</a>.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is the first session like?</summary>
+                    <div class="faq-answer">
+                        <p>It lasts 60 minutes and is an open conversation where you tell me what is happening to you, what you have tried, and what you expect. There are no prior forms or diagnostic labels. If we see that the work fits, we plan the next steps together.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is contextual therapy (ACT)?</summary>
+                    <div class="faq-answer">
+                        <p>Acceptance and Commitment Therapy (ACT) is an evidence-based approach backed by more than 1,400 clinical trials. Unlike therapies focused on eliminating symptoms, it works so that you can relate differently to what you think and feel, and act in the direction of what matters to you.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Are sessions online and confidential?</summary>
+                    <div class="faq-answer">
+                        <p>Yes. I work 100% by video call, with no geographic borders. All shared information is protected by GDPR and LOPDGDD, with professional confidentiality.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How long does a therapy process last?</summary>
+                    <div class="faq-answer">
+                        <p>It depends on your situation. There is no fixed number of sessions. We work towards concrete goals and review progress periodically. Sessions are usually weekly (one or two) and last about 50 minutes. My aim is for you to regain autonomy, not to create dependence.</p>
+                    </div>
+                </details>
+            </div>
         </div>
     </section>
 
