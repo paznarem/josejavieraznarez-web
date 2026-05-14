@@ -987,6 +987,23 @@ body::after {
             background: var(--cream) !important;
         }
         body::before, body::after { display: none !important; }
+        .article-body { overflow: hidden; }
+        .article-body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.045;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+            background-size: 220px 220px;
+        }
+        .article-body > * { position: relative; z-index: 1; }
+        body.dark-mode .article-body::before {
+            opacity: 0.05;
+            mix-blend-mode: screen;
+        }
         .article-header {
             background: linear-gradient(to bottom, var(--white) 0%, var(--cream) 60%, var(--cream) 100%) !important;
             padding-top: 7rem !important;
