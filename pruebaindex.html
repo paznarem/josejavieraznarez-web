@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B6YNTT8HL4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Javier Aznárez — Psicólogo Contextual Online | Terapia ACT, Crianza Consciente</title>
+    <meta name="description" content="Psicoterapia contextual online. Acompaño a personas y familias a comprender sus barreras y recuperar el rumbo hacia una vida con sentido. Terapia ACT, CFT, FAP. Sesiones online.">
+    <meta name="keywords" content="psicólogo online, terapia contextual, ACT, terapia aceptación compromiso, crianza consciente, psicólogo crianza, terapia online español">
+    <link rel="icon" type="image/png" href="logo-sage.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="José Javier Aznárez — Psicólogo Contextual Online">
+    <meta property="og:description" content="Acompaño a personas y familias a comprender sus barreras y recuperar el rumbo. Sesiones online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josejavieraznarez.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==================== JAPANDI PALETTE ==================== */
+        :root {
+            --paper:        #F5F0E6;   /* washi paper */
+            --paper-deep:   #EDE5D5;   /* deeper washi */
+            --oat:          #E5DCC8;   /* oat linen */
+            --bone:         #FAF6EE;   /* bone white */
+            --ink:          #2A2824;   /* sumi ink */
+            --ink-soft:     #4A463E;
+            --ink-light:    #8A8478;
+            --ink-faint:    #B5AE9F;
+            --sage:         #7B8B6E;   /* moss */
+            --sage-deep:    #5C6B53;   /* deep moss */
+            --sage-pale:    #A8B19A;
+            --clay:         #B89172;   /* warm clay */
+            --clay-pale:    #D9C4A8;
+            --ochre:        #C8985A;   /* single quiet accent */
+            --whatsapp:     #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--ink);
+            background: var(--bone);
+            line-height: 1.85;
+            font-weight: 300;
+            overflow-x: hidden;
+            position: relative;
+            font-feature-settings: "kern" 1, "liga" 1;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Washi paper grain */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.06;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.14  0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+            background-size: 240px 240px;
+        }
+
+        body.dark-mode::before { opacity: 0.04; mix-blend-mode: screen; }
+
+        section, footer, .trust-bar { position: relative; z-index: 2; }
+
+        ::selection { background: var(--sage-pale); color: var(--ink); }
+
+        /* ==================== TYPOGRAPHIC RHYTHM ==================== */
+        .eyebrow {
+            display: inline-block;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+            margin-bottom: 1.6rem;
+        }
+        .eyebrow::before {
+            content: '— ';
+            color: var(--clay);
+            letter-spacing: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', serif;
+            font-weight: 300;
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+            color: var(--ink);
+        }
+
+        /* ==================== NAV ==================== */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            z-index: 1000;
+            padding: 1.4rem 2.5rem;
+            transition: all 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+            background: transparent;
+        }
+        nav.scrolled {
+            background: rgba(250, 246, 238, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 0.9rem 2.5rem;
+            border-bottom: 1px solid rgba(42,40,36,0.06);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .nav-brand img { width: 28px; height: 28px; border-radius: 2px; opacity: 0.92; }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink-soft);
+            font-size: 0.88rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            transition: color 0.5s ease;
+            position: relative;
+        }
+        .nav-links a:not(.nav-cta):not(.nav-lang)::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0; right: 0;
+            height: 1px;
+            background: var(--sage);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .nav-links a:not(.nav-cta):not(.nav-lang):hover::after { transform: scaleX(1); }
+        .nav-links a:hover { color: var(--ink); }
+
+        .nav-lang {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            color: var(--ink-light) !important;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid var(--ink-faint);
+            border-radius: 2px;
+            transition: all 0.5s ease;
+        }
+        .nav-lang:hover { color: var(--ink) !important; border-color: var(--sage); }
+
+        .nav-cta {
+            background: var(--ink);
+            color: var(--bone) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 2px;
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            transition: background 0.5s ease, transform 0.5s ease !important;
+        }
+        .nav-cta:hover { background: var(--sage-deep); transform: none; }
+        .nav-cta::after { display: none !important; }
+
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 22px; height: 1px; background: var(--ink); transition: 0.4s; }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--bone);
+            padding: 8rem 2.5rem 6rem;
+        }
+
+        /* Subtle enso-like brush mark */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 14%;
+            right: 6%;
+            width: 18vw;
+            max-width: 220px;
+            aspect-ratio: 1;
+            border: 1.5px solid var(--sage-pale);
+            border-radius: 50%;
+            opacity: 0.4;
+            transform: rotate(-12deg);
+            border-top-color: transparent;
+            border-right-color: transparent;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 5rem;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content { padding-right: 1rem; }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+            font-weight: 300;
+            line-height: 1.08;
+            margin-bottom: 2rem;
+            color: var(--ink);
+            animation: rise 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+        }
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--sage-deep);
+        }
+
+        .hero-subtitle {
+            font-size: 1.08rem;
+            color: var(--ink-soft);
+            line-height: 1.85;
+            max-width: 480px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            animation: rise 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            animation: rise 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--ink);
+            color: var(--bone);
+            padding: 1.05rem 2rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border: 1px solid var(--ink);
+        }
+        .btn-primary:hover {
+            background: var(--sage-deep);
+            border-color: var(--sage-deep);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: transparent;
+            color: var(--ink);
+            padding: 1.05rem 2rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border: 1px solid var(--ink-faint);
+        }
+        .btn-outline:hover {
+            border-color: var(--ink);
+            transform: translateY(-1px);
+        }
+
+        .hero-meta {
+            font-size: 0.85rem;
+            color: var(--ink-light);
+            margin-left: 0.5rem;
+        }
+        .hero-meta a {
+            color: var(--ink-soft);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-pale);
+            transition: all 0.4s ease;
+        }
+        .hero-meta a:hover { color: var(--sage-deep); border-color: var(--sage); }
+
+        /* Hero visual */
+        .hero-visual { position: relative; }
+
+        .hero-image-frame {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background: var(--oat);
+            overflow: hidden;
+            position: relative;
+            border-radius: 2px;
+        }
+        .hero-image-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(42,40,36,0.08));
+            pointer-events: none;
+        }
+        .hero-image-frame img {
+            display: block;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            filter: saturate(0.85) contrast(0.96);
+        }
+
+        /* Off-frame caption */
+        .hero-float-card {
+            position: absolute;
+            bottom: -1.2rem;
+            left: -1.5rem;
+            background: var(--bone);
+            padding: 1rem 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            border: 1px solid var(--ink-faint);
+            border-radius: 2px;
+            max-width: 240px;
+        }
+        .hero-float-icon {
+            width: 28px; height: 28px;
+            color: var(--sage);
+            flex-shrink: 0;
+        }
+        .hero-float-text span {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--ink-light);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.1rem;
+        }
+        .hero-float-text strong {
+            font-family: 'Fraunces', serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+            font-weight: 400;
+        }
+        .hero-float-text a { color: inherit; text-decoration: none; }
+
+        /* ==================== SECTION DIVIDER ==================== */
+        .divider {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+            background: var(--bone);
+        }
+        .divider-mark {
+            width: 28px; height: 28px;
+            color: var(--ink-faint);
+        }
+
+        /* ==================== TRUST ==================== */
+        .trust-bar {
+            background: var(--bone);
+            padding: 3rem 2.5rem;
+            border-top: 1px solid rgba(42,40,36,0.08);
+            border-bottom: 1px solid rgba(42,40,36,0.08);
+        }
+        .trust-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        .trust-item svg {
+            width: 16px; height: 16px;
+            color: var(--sage);
+            flex-shrink: 0;
+        }
+        .trust-link {
+            color: var(--ink);
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage);
+        }
+        .trust-link:hover { color: var(--sage-deep); }
+
+        /* ==================== IDENTIFY ==================== */
+        .identify {
+            padding: 9rem 2.5rem;
+            background: var(--bone);
+        }
+        .identify-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .identify-header {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+        .identify h2,
+        .method h2,
+        .about h2,
+        .services h2,
+        .libro-section h2,
+        .blog-preview h2,
+        .cta-section h2 {
+            font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.4rem;
+        }
+        .identify-header p {
+            color: var(--ink-soft);
+            font-size: 1.05rem;
+            font-weight: 300;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .identify-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid rgba(42,40,36,0.08);
+        }
+        .identify-card {
+            padding: 3rem 2rem;
+            border-right: 1px solid rgba(42,40,36,0.08);
+            border-bottom: 1px solid rgba(42,40,36,0.08);
+            transition: background 0.6s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .identify-card:last-child { border-right: none; }
+        .identify-card:hover { background: var(--paper); }
+
+        .identify-card-num {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: var(--clay);
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .identify-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--ink);
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.005em;
+        }
+        .identify-card p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 0.9rem;
+        }
+        .identify-card p:last-child { margin-bottom: 0; }
+
+        /* ==================== METHOD ==================== */
+        .method {
+            padding: 9rem 2.5rem;
+            background: var(--paper);
+            position: relative;
+        }
+        .method-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .method-header {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 5rem;
+            margin-bottom: 5rem;
+            align-items: end;
+        }
+        .method-header h2 { margin-bottom: 0; }
+        .method-header p {
+            color: var(--ink-soft);
+            font-size: 1.02rem;
+            line-height: 1.85;
+            font-weight: 300;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            border-top: 1px solid rgba(42,40,36,0.1);
+            border-left: 1px solid rgba(42,40,36,0.1);
+        }
+        .method-item {
+            padding: 3rem 2.5rem;
+            border-right: 1px solid rgba(42,40,36,0.1);
+            border-bottom: 1px solid rgba(42,40,36,0.1);
+            transition: background 0.6s ease;
+        }
+        .method-item:hover { background: var(--paper-deep); }
+
+        .method-number {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--clay);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--ink-faint);
+            min-width: 2.5rem;
+        }
+        .method-item h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.35;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+        .method-item p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            line-height: 1.85;
+            font-weight: 300;
+        }
+
+        .method-note {
+            margin-top: 4rem;
+            max-width: 720px;
+            color: var(--ink-soft);
+            font-size: 0.98rem;
+            line-height: 1.85;
+            font-weight: 300;
+            font-style: italic;
+        }
+        .method-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 400;
+            border-bottom: 1px solid var(--sage);
+            padding-bottom: 0.3rem;
+            transition: gap 0.5s ease, color 0.5s ease;
+        }
+        .method-link:hover { gap: 0.9rem; color: var(--sage-deep); }
+
+        /* ==================== ABOUT ==================== */
+        .about {
+            padding: 9rem 2.5rem;
+            background: var(--bone);
+        }
+        .about-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .about-photo {
+            aspect-ratio: 3 / 4;
+            background: var(--oat);
+            overflow: hidden;
+            border-radius: 2px;
+            position: relative;
+        }
+        .about-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: saturate(0.85) contrast(0.96);
+            display: block;
+        }
+        .about-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 70%, rgba(42,40,36,0.06));
+            pointer-events: none;
+        }
+
+        .about-text { padding-top: 1rem; }
+        .about-text p {
+            color: var(--ink-soft);
+            margin-bottom: 1.4rem;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+        .about-text p em {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            color: var(--ink);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            display: block;
+            padding: 1.2rem 0 1.2rem 1.4rem;
+            border-left: 2px solid var(--clay);
+            margin: 0.4rem 0 1.4rem;
+        }
+        .about-text a {
+            color: var(--sage-deep);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-pale);
+            transition: border-color 0.4s ease;
+        }
+        .about-text a:hover { border-color: var(--sage-deep); }
+
+        .about-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        .credential-tag {
+            background: transparent;
+            color: var(--ink-soft);
+            padding: 0.4rem 0.9rem;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border: 1px solid var(--ink-faint);
+            border-radius: 2px;
+        }
+        .credential-tag a { color: inherit; text-decoration: none; }
+
+        .about-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 400;
+            border-bottom: 1px solid var(--sage);
+            padding-bottom: 0.3rem;
+            transition: gap 0.5s ease;
+        }
+        .about-link:hover { gap: 0.9rem; }
+
+        /* ==================== SERVICES ==================== */
+        .services {
+            padding: 9rem 2.5rem;
+            background: var(--paper);
+        }
+        .services-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .services-header {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--bone);
+            padding: 3rem 2.5rem;
+            border-radius: 2px;
+            transition: all 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .service-card:hover {
+            border-color: var(--ink-faint);
+            transform: translateY(-3px);
+        }
+
+        .service-mark {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.8rem;
+            color: var(--sage-deep);
+        }
+        .service-mark svg { width: 100%; height: 100%; }
+
+        .service-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+        .service-card > p {
+            font-size: 0.96rem;
+            color: var(--ink-soft);
+            line-height: 1.85;
+            font-weight: 300;
+            margin-bottom: 1.8rem;
+            flex-grow: 1;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.4rem;
+        }
+        .service-tags span {
+            background: transparent;
+            color: var(--ink-light);
+            padding: 0.3rem 0.8rem;
+            font-size: 0.74rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border: 1px solid var(--ink-faint);
+            border-radius: 2px;
+        }
+
+        .service-link {
+            color: var(--sage-deep);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border-bottom: 1px solid var(--sage-pale);
+            padding-bottom: 0.2rem;
+            align-self: flex-start;
+            transition: gap 0.5s ease, border-color 0.5s ease;
+        }
+        .service-link:hover { gap: 0.7rem; border-color: var(--sage); }
+
+        /* ==================== LIBRO ==================== */
+        .libro-section {
+            padding: 9rem 2.5rem;
+            background: var(--bone);
+            text-align: center;
+        }
+        .libro-inner { max-width: 680px; margin: 0 auto; }
+        .libro-badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--ochre);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--ochre);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+        .libro-section h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 300;
+            line-height: 1.35;
+            color: var(--ink);
+            margin-bottom: 1.4rem;
+        }
+        .libro-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--ink-soft);
+            font-weight: 300;
+            margin-bottom: 1.4rem;
+            line-height: 1.6;
+        }
+        .libro-desc {
+            font-size: 0.98rem;
+            color: var(--ink-soft);
+            font-weight: 300;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.85;
+        }
+
+        /* ==================== BLOG PREVIEW ==================== */
+        .blog-preview {
+            padding: 9rem 2.5rem;
+            background: var(--paper);
+        }
+        .blog-inner { max-width: 1180px; margin: 0 auto; }
+
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 4rem;
+            gap: 2rem;
+        }
+        .blog-header h2 { margin-bottom: 0; }
+        .blog-link {
+            color: var(--ink);
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border-bottom: 1px solid var(--sage);
+            padding-bottom: 0.3rem;
+            transition: gap 0.5s ease;
+            white-space: nowrap;
+        }
+        .blog-link:hover { gap: 0.8rem; }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid rgba(42,40,36,0.1);
+            border-left: 1px solid rgba(42,40,36,0.1);
+        }
+        .blog-card {
+            background: transparent;
+            padding: 2.5rem 2rem;
+            border-right: 1px solid rgba(42,40,36,0.1);
+            border-bottom: 1px solid rgba(42,40,36,0.1);
+            transition: background 0.6s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover { background: var(--bone); }
+
+        .blog-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 0.6rem;
+        }
+        .blog-card-category {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+        }
+        .blog-card-header .blog-card-category { margin-bottom: 0; }
+        .blog-card-badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--ochre);
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.55rem;
+            border: 1px solid var(--ochre);
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        .blog-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            line-height: 1.35;
+            margin-bottom: 0.9rem;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+        }
+        .blog-card p {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .blog-card-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.76rem;
+            color: var(--ink-light);
+            font-weight: 300;
+            margin-top: auto;
+            letter-spacing: 0.02em;
+        }
+        .blog-card-meta svg {
+            width: 12px; height: 12px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 10rem 2.5rem;
+            background: var(--bone);
+            text-align: center;
+            position: relative;
+        }
+        .cta-inner { max-width: 640px; margin: 0 auto; }
+        .cta-section h2 {
+            font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+            font-weight: 300;
+            line-height: 1.25;
+            margin-bottom: 1.4rem;
+        }
+        .cta-section > .cta-inner > p {
+            color: var(--ink-soft);
+            font-size: 1.05rem;
+            margin-bottom: 0.9rem;
+            font-weight: 300;
+            line-height: 1.85;
+        }
+        .cta-section .note {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--ink-light);
+            margin-bottom: 3rem;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .btn-whatsapp:hover { transform: translateY(-2px); }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--ink-soft);
+            padding: 1.1rem 2.2rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            border: 1px solid var(--ink-faint);
+            transition: all 0.6s ease;
+        }
+        .btn-email:hover { border-color: var(--ink); color: var(--ink); }
+
+        .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--clay);
+            padding: 1.1rem 2.2rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            border: 1px solid var(--clay-pale);
+            transition: all 0.6s ease;
+        }
+        .btn-instagram:hover { border-color: var(--clay); }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--ink);
+            color: rgba(245,240,230,0.55);
+            padding: 4rem 2.5rem 3rem;
+        }
+        .footer-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .footer-brand {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(245,240,230,0.9);
+            letter-spacing: 0.01em;
+        }
+        .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .footer-links a {
+            color: rgba(245,240,230,0.5);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 300;
+            transition: color 0.4s ease;
+            letter-spacing: 0.02em;
+        }
+        .footer-links a:hover { color: rgba(245,240,230,0.95); }
+        .footer-legal {
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(245,240,230,0.3);
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(245,240,230,0.08);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ==================== FLOATING ==================== */
+        .instagram-float, .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            z-index: 999;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 1px solid var(--ink-faint);
+            background: var(--bone);
+            transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .instagram-float { left: 2rem; color: var(--clay); }
+        .whatsapp-float { right: 2rem; color: var(--sage-deep); }
+        .instagram-float:hover, .whatsapp-float:hover {
+            transform: translateY(-3px);
+            border-color: var(--ink);
+        }
+        .instagram-float svg, .whatsapp-float svg {
+            width: 22px; height: 22px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.6;
+        }
+        .whatsapp-float svg { fill: currentColor; stroke: none; }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 1.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 980px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+                text-align: center;
+            }
+            .hero-content { padding-right: 0; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-visual { max-width: 460px; margin: 0 auto; }
+            .hero-float-card { left: 0; right: 0; bottom: -1rem; margin: 0 auto; }
+            .hero::before { display: none; }
+
+            .method-header {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .method-grid { grid-template-columns: 1fr; }
+            .method-item { border-right: none; }
+
+            .identify-cards { grid-template-columns: 1fr; }
+            .identify-card { border-right: none; }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            .about-photo { max-width: 320px; margin: 0 auto; }
+            .about-text p em { text-align: left; max-width: 480px; margin-left: auto; margin-right: auto; }
+            .about-credentials { justify-content: center; }
+
+            .services-grid { grid-template-columns: 1fr; }
+
+            .blog-header {
+                flex-direction: column;
+                align-items: start;
+                gap: 1rem;
+            }
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-card { border-right: none; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(250, 246, 238, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem 2.5rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid rgba(42,40,36,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+
+            .trust-inner { justify-content: flex-start; gap: 1.5rem; }
+        }
+
+        @media (max-width: 600px) {
+            nav, nav.scrolled { padding: 0.9rem 1.4rem; }
+            .hero { padding: 7rem 1.4rem 4rem; }
+            .identify, .method, .about, .services, .libro-section, .blog-preview, .cta-section {
+                padding-left: 1.4rem; padding-right: 1.4rem;
+            }
+            .identify, .method, .about, .services, .libro-section, .blog-preview { padding-top: 6rem; padding-bottom: 6rem; }
+            .cta-section { padding-top: 7rem; padding-bottom: 7rem; }
+            .trust-bar { padding: 2rem 1.4rem; }
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .instagram-float { left: 1.2rem; bottom: 1.2rem; }
+            .whatsapp-float { right: 1.2rem; bottom: 1.2rem; }
+        }
+
+        /* ==================== DARK TOGGLE ==================== */
+        .dark-toggle {
+            position: fixed;
+            top: 5rem; right: 1.8rem;
+            z-index: 1001;
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--ink-faint);
+            background: var(--bone);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.6s ease;
+            opacity: 0.7;
+        }
+        .dark-toggle:hover {
+            opacity: 1;
+            border-color: var(--ink);
+            transform: scale(1.05);
+        }
+        .dark-toggle .moon { display: none; color: var(--ink-soft); }
+        .dark-toggle .sun { display: block; color: var(--ink-soft); }
+
+        @media (max-width: 600px) {
+            .dark-toggle { top: 4.2rem; right: 1.2rem; width: 34px; height: 34px; }
+        }
+
+        /* ==================== DARK MODE ==================== */
+        body.dark-mode {
+            --paper: #232020;
+            --paper-deep: #1c1a1a;
+            --oat: #2a2724;
+            --bone: #1a1818;
+            --ink: #E8E2D6;
+            --ink-soft: #B5AE9F;
+            --ink-light: #807A6E;
+            --ink-faint: #4A463E;
+            --sage: #9DAE8E;
+            --sage-deep: #B5C0A6;
+            --sage-pale: #5C6B53;
+            --clay: #C8A07A;
+            --clay-pale: #6B5A48;
+            --ochre: #D9B070;
+        }
+        body.dark-mode { background: var(--bone); }
+        html.dark-mode { background: #1a1818; }
+        body.dark-mode footer { background: #0e0d0d; }
+        body.dark-mode .dark-toggle { background: var(--paper); border-color: var(--ink-faint); }
+        body.dark-mode .dark-toggle .moon { display: block; }
+        body.dark-mode .dark-toggle .sun { display: none; }
+        body.dark-mode nav.scrolled { background: rgba(26,24,24,0.9); border-bottom-color: rgba(232,226,214,0.08); }
+        body.dark-mode .nav-links { background: rgba(26,24,24,0.98); border-bottom-color: rgba(232,226,214,0.08); }
+        body.dark-mode .nav-cta { background: var(--ink); color: var(--bone) !important; }
+        body.dark-mode .btn-primary { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+        body.dark-mode .btn-primary:hover { background: var(--sage-deep); color: var(--bone); border-color: var(--sage-deep); }
+        body.dark-mode img { filter: saturate(0.8) contrast(0.92) brightness(0.92); }
+        body.dark-mode .hero-image-frame img,
+        body.dark-mode .about-photo img { filter: saturate(0.75) contrast(0.95) brightness(0.88); }
+        body.dark-mode .instagram-float,
+        body.dark-mode .whatsapp-float { background: var(--paper); border-color: var(--ink-faint); }
+
+        @keyframes toggle-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(123,139,110,0.4); }
+            60%  { box-shadow: 0 0 0 10px rgba(123,139,110,0); }
+            100% { box-shadow: 0 0 0 0 rgba(123,139,110,0); }
+        }
+        .dark-toggle.toggle-pulse { animation: toggle-pulse 1.4s ease-out 1.5s 1; }
+    </style>
+    <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark-mode');</script>
+</head>
+<body>
+
+    <button class="dark-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Modo oscuro">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <img src="logo-sage-transparent.png" alt="">
+                <span>José Javier Aznárez</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="como-trabajo.html">Cómo trabajo</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="https://www.instagram.com/jjaznarez.psicologo/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+                <li><a href="en/index.html" class="nav-lang">EN</a></li>
+                <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <span class="eyebrow">Sesiones online · En español</span>
+                <h1>Cuando comprender no basta, hace falta un <em>acompañamiento que transforme cómo respondes</em></h1>
+                <p class="hero-subtitle">Soy psicólogo contextual. Acompaño a personas y familias a identificar qué mantiene su malestar y a intervenir sobre ello en su vida real.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/34628301511" class="btn-primary" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Escríbeme por WhatsApp
+                    </a>
+                    <a href="blog/index.html" class="btn-outline">Leer artículos</a>
+                    <span class="hero-meta">o conoce <a href="como-trabajo.html">cómo trabajo →</a></span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-frame">
+                    <img src="hero.jpg" alt="José Javier Aznárez, psicólogo contextual online">
+                </div>
+                <div class="hero-float-card">
+                    <svg class="hero-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <div class="hero-float-text">
+                        <span>Miembro de</span>
+                        <strong><a href="https://contextualscience.org/" target="_blank" rel="noopener">ACBS Internacional</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust-bar">
+        <div class="trust-inner">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Terapia basada en evidencia
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                +1.400 ensayos clínicos
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Sesiones 100% online
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <a href="blog/index.html" class="trust-link">35+ artículos abiertos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- IDENTIFY -->
+    <section class="identify" id="te-identificas">
+        <div class="identify-inner">
+            <div class="identify-header reveal">
+                <span class="eyebrow">¿Te identificas?</span>
+                <h2>A veces el malestar no se mantiene porque falte esfuerzo, sino por lo que haces cuando aparece</h2>
+                <p>Se mantiene porque las estrategias que usas funcionan a corto plazo, pero con el tiempo te bloquean. Si algo de esto te suena, quizá es momento de trabajar de otra manera.</p>
+            </div>
+
+            <div class="identify-cards reveal">
+                <div class="identify-card">
+                    <div class="identify-card-num">I</div>
+                    <h3>Entiendes lo que te sucede, pero sigues haciendo lo mismo cuando te pasa</h3>
+                    <p>Has leído, reflexionado, incluso has ido a terapia antes. Pero cuando aparece el malestar, vuelves a responder de la misma manera. El patrón no cambia.</p>
+                    <p>El problema no es de comprensión. Es un patrón que se repite porque, en el corto plazo, funciona.</p>
+                </div>
+                <div class="identify-card">
+                    <div class="identify-card-num">II</div>
+                    <h3>El estrés o la ansiedad están influyendo en cómo respondes cada día</h3>
+                    <p>Las preocupaciones, el miedo, la inquietud constante… has probado muchas cosas. Algunas alivian en el momento, pero no cambian lo que ocurre a largo plazo.</p>
+                </div>
+                <div class="identify-card">
+                    <div class="identify-card-num">III</div>
+                    <h3>Quieres criar mejor, pero a veces no sabes cómo actuar</h3>
+                    <p>No lo haces mal: amas a tu hijo y estás comprometida, aunque a veces no te sientas bien con cómo respondes. Lo que él hace y lo que haces tú tiene lógica y función en ese momento. Buscas un acompañamiento consciente que te ayude a responder distinto, no más recetas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHOD -->
+    <section class="method" id="como-trabajo">
+        <div class="method-inner reveal">
+            <div class="method-header">
+                <div>
+                    <span class="eyebrow">Cómo trabajo</span>
+                    <h2>Un acompañamiento basado en ciencia, centrado en lo que haces</h2>
+                </div>
+                <p>No hay diagnósticos ni etiquetas. Trabajo con tu experiencia real para que puedas relacionarte de otra manera con lo que sientes, tomar distancia de lo que te atrapa, recuperar dirección en lo que importa y actuar de forma más flexible y sostenida en tu vida diaria.</p>
+            </div>
+
+            <div class="method-grid">
+                <div class="method-item">
+                    <div class="method-number">01</div>
+                    <h3>Escucho el recuerdo de tu historia, sin juicio</h3>
+                    <p>Empezamos con una conversación honesta. Me cuentas qué haces cuando aparece el malestar, qué te dices en esos momentos, lo que has intentado para aliviarlo y lo que esperas. Comenzamos a ver los patrones que se repiten. Sin prisas, sin formularios previos.</p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">02</div>
+                    <h3>Observamos qué mantiene el malestar</h3>
+                    <p>No busco causas en el pasado. Analizamos cómo tus respuestas actuales y la forma en que te relacionas con lo que piensas y sientes alivian a corto plazo, pero restringen lo que puedes hacer con el tiempo.</p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">03</div>
+                    <h3>Practicamos nuevas formas de responder</h3>
+                    <p>Cada sesión es un espacio activo donde ensayamos respuestas distintas ante pensamientos, emociones, sensaciones y situaciones concretas, ampliando tu capacidad de actuar incluso cuando el malestar está presente. No hay teoría sin práctica.</p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">04</div>
+                    <h3>Recuperas dirección hacia lo que importa</h3>
+                    <p>El objetivo no es eliminar el malestar, sino que deje de limitar tus decisiones. Recuperas dirección y construyes una vida guiada por lo que valoras, no por lo que intentas evitar.</p>
+                </div>
+            </div>
+
+            <p class="method-note">No necesitas saber qué terapia es para ti, porque no trabajamos con etiquetas, sino con los procesos que están organizando lo que haces. Mi trabajo es diseñar un proceso personalizado ajustado a tu situación para que puedas relacionarte de otra manera con lo que piensas y sientes, dejar de quedar atrapado en la lucha con el malestar y avanzar hacia una vida más coherente con lo que te importa.</p>
+            <a href="como-trabajo.html" class="method-link">Conoce mi metodología en detalle →</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre-mi">
+        <div class="about-inner reveal">
+            <div class="about-photo">
+                <img src="sobre-mi.jpg" alt="Foto de José Javier Aznárez, psicólogo contextual">
+            </div>
+            <div class="about-text">
+                <span class="eyebrow">Sobre mí</span>
+                <h2>Soy José Javier Aznárez Barrio</h2>
+                <p>Trabajo con personas y familias desde la ciencia conductual contextual. Analizo cómo se organizan los patrones que generan malestar —especialmente cómo lo que te dices influye en lo que haces— y te acompaño a desarrollar formas más flexibles de responder cuando aparece lo difícil, sin necesidad de eliminarlo.</p>
+                <p>Soy licenciado en Psicología, con Máster en Terapias Contextuales y en Procesos de Enseñanza y Aprendizaje Conductual. Miembro de la <a href="https://contextualscience.org/" target="_blank" rel="noopener">Association for Contextual Behavioral Science (ACBS)</a>, la comunidad internacional de referencia en este enfoque.</p>
+                <p>Ofrezco consultoría psicológica y acompañamiento en el ámbito personal, de pareja y en crianza, orientados a que puedas dejar de quedar atrapado en la lucha con tu experiencia interna y empezar a actuar, de forma sostenida, en dirección a lo que realmente importa en tu vida.</p>
+                <p><em>No trabajo para que te sientas mejor. Trabajo para que puedas vivir mejor, incluso cuando no te sientes bien.</em></p>
+                <div class="about-credentials">
+                    <span class="credential-tag">Lic. Psicología</span>
+                    <span class="credential-tag">Máster Terapias Contextuales</span>
+                    <span class="credential-tag"><a href="https://contextualscience.org/" target="_blank" rel="noopener">Miembro ACBS</a></span>
+                    <span class="credential-tag">RFT · ACT · PBT · FAP · DBT · MSC · CFT · BA · TIP</span>
+                </div>
+                <a href="sobre-mi.html" class="about-link">Conoce mi historia completa →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicios">
+        <div class="services-inner">
+            <div class="services-header reveal">
+                <span class="eyebrow">Servicios</span>
+                <h2>¿En qué puedo acompañarte?</h2>
+            </div>
+
+            <div class="services-grid reveal">
+                <div class="service-card">
+                    <div class="service-mark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3>Psicoterapia contextual individual</h3>
+                    <p>Para personas adultas que sienten que han quedado atrapadas en formas de responder —como la evitación, el bloqueo emocional, el sobrecontrol o la desconexión— que alivian en el momento, pero limitan su vida con el tiempo, y quieren aprender a actuar de forma distinta, incluso cuando el malestar sigue presente.</p>
+                    <div class="service-tags">
+                        <span>Ansiedad incapacitante</span>
+                        <span>Distrés</span>
+                        <span>Desregulación emocional</span>
+                        <span>Autoestima dependiente</span>
+                    </div>
+                    <a href="blog/flexibilidad-psicologica-1.html" class="service-link">Explora la serie Flexibilidad psicológica →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-mark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 8 10 12 14C16 10 16 6 12 2Z"/><path d="M12 14v8"/><path d="M8 22h8"/></svg>
+                    </div>
+                    <h3>Acompañamiento en crianza</h3>
+                    <p>Para madres y padres que quieren responder de forma distinta en la relación con sus hijos —en los momentos difíciles, pero también en el día a día— y que, a pesar de su responsabilidad, presencia y compromiso, sienten que a veces reaccionan sin poder sostener lo que está ocurriendo.</p>
+                    <div class="service-tags">
+                        <span>Restauración del vínculo</span>
+                        <span>Límites que protegen</span>
+                        <span>Co-regulación</span>
+                    </div>
+                    <a href="blog/crianza-contextual-funcional-1.html" class="service-link">Explora la serie Crianza Contextual Funcional →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-mark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg>
+                    </div>
+                    <h3>Consultoría de pareja</h3>
+                    <p>Para parejas que sienten que han quedado atrapadas en formas de relacionarse —como evitar conversaciones difíciles, reaccionar a la defensiva o repetir los mismos bucles de discusión— que alivian en el momento, pero mantienen la distancia con el tiempo.</p>
+                    <div class="service-tags">
+                        <span>Comunicación sin evitar ni atacar</span>
+                        <span>Conflictos sin escalar</span>
+                        <span>Reconexión</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-mark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h3>Ansiedad escénica (MPA)</h3>
+                    <p>Para músicos y artistas que sufren miedo escénico o ansiedad de rendimiento. Un abordaje contextual que va más allá de las técnicas de relajación.</p>
+                    <div class="service-tags">
+                        <span>Miedo escénico</span>
+                        <span>Músicos</span>
+                        <span>Rendimiento</span>
+                    </div>
+                    <a href="blog/index.html#ansiedad-escenica" class="service-link">Explora la serie Toca aunque tiembles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIBRO -->
+    <section class="libro-section">
+        <div class="libro-inner reveal">
+            <div class="libro-badge">Próximamente</div>
+            <h2>Lo que siente tu hijo: cómo acompañarle en el momento en que más te necesita</h2>
+            <p class="libro-subtitle">Guía práctica de educación emocional para padres y abuelos basada en la ciencia conductual contextual</p>
+            <p class="libro-desc">Un nuevo libro de José Javier Aznárez donde la ciencia contextual se convierte en herramienta práctica para familias, educadores y profesionales. Disponible próximamente.</p>
+        </div>
+    </section>
+
+    <!-- BLOG PREVIEW -->
+    <section class="blog-preview" id="blog">
+        <div class="blog-inner reveal">
+            <div class="blog-header">
+                <div>
+                    <span class="eyebrow">Psicoeducación</span>
+                    <h2>Artículos para comprenderte mejor</h2>
+                </div>
+                <a href="blog/index.html" class="blog-link">Ver todos los artículos →</a>
+            </div>
+
+            <div class="blog-grid">
+                <a href="blog/la-tirania-de-la-comparacion-social.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Vivir lo que vale</div>
+                        <span class="blog-card-badge">Más leído</span>
+                    </div>
+                    <h3>La tiranía de la comparación social</h3>
+                    <p>Cuando medirte con los demás se convierte en el filtro por el que vives, deja de haber suficiente.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min de lectura</span>
+                </a>
+                <a href="blog/flexibilidad-psicologica-1.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Vivir lo que vale</div>
+                    </div>
+                    <h3>Cuando dejar de intentar sentirte mejor te permite empezar a vivir mejor</h3>
+                    <p>Por qué luchar contra el malestar suele alimentarlo, y qué cambia cuando dejas de hacerlo.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min de lectura</span>
+                </a>
+                <a href="blog/nuestra-procrastinacion-nuestra-companera.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Vivir lo que vale</div>
+                    </div>
+                    <h3>Nuestra procrastinación, nuestra compañera</h3>
+                    <p>No procrastinas por falta de disciplina. Procrastinas porque, a corto plazo, funciona.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8 min de lectura</span>
+                </a>
+                <a href="blog/crianza-contextual-funcional-4.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Criar con dirección</div>
+                    </div>
+                    <h3>Qué te ocurre cuando tu hijo llora</h3>
+                    <p>Los procesos que organizan tu respuesta antes de que llegues a pensar qué hacer.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min de lectura</span>
+                </a>
+                <a href="blog/acompanar-validar-confiar-crianza-identidad-fortaleza-emocional.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Criar con dirección</div>
+                    </div>
+                    <h3>Acompañar, validar, confiar</h3>
+                    <p>Las tres acciones que construyen identidad y fortaleza emocional en tu hijo.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>9 min de lectura</span>
+                </a>
+                <a href="blog/sanar-la-traicion.html" class="blog-card">
+                    <div class="blog-card-header">
+                        <div class="blog-card-category">Vivir lo que vale</div>
+                    </div>
+                    <h3>Sanar la traición</h3>
+                    <p>Una guía de autocompasión para cuando lo que te hicieron sigue marcando lo que haces hoy.</p>
+                    <span class="blog-card-meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 min de lectura</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contacto">
+        <div class="cta-inner reveal">
+            <span class="eyebrow">Da el primer paso</span>
+            <h2>No necesitas tenerlo claro para escribirme</h2>
+            <p>Un mensaje corto es suficiente. Hablamos, exploramos si este tipo de trabajo encaja contigo, y si no es así, te lo diré con honestidad.</p>
+            <p class="note">Escribir no implica iniciar terapia. Es solo una primera conversación.</p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/34628301511" class="btn-whatsapp" target="_blank">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Escríbeme por WhatsApp
+                </a>
+                <a href="mailto:psicologo_terapiacontextual@josejavieraznarez.com" class="btn-email">✉ Enviar email</a>
+                <a href="https://www.instagram.com/jjaznarez.psicologo/" class="btn-instagram" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                    Seguir en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">José Javier Aznárez Barrio</div>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="aviso-legal.html#politica-privacidad">Política de Privacidad</a>
+                <a href="consentimiento-tarifas.html">Consentimiento y Tarifas</a>
+            </div>
+            <div class="footer-legal">
+                Mis servicios no constituyen atención clínica ni sanitaria, y no incluyen diagnóstico ni tratamiento de trastornos o patologías psicológicas, conforme a la Ley 44/2003 de Ordenación de las Profesiones Sanitarias y al Código Deontológico del Psicólogo en España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING -->
+    <a href="https://www.instagram.com/jjaznarez.psicologo/" class="instagram-float" target="_blank" aria-label="Seguir en Instagram">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://wa.me/34628301511" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var btn = document.getElementById("hamburger-btn");
+      var navLinks = document.querySelector(".nav-links");
+      if (!btn || !navLinks) return;
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle("open");
+      });
+      document.addEventListener("click", function(e) {
+        if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
+          navLinks.classList.remove("open");
+        }
+      });
+    });
+    </script>
+    <script>
+    (function() {
+        var toggle = document.getElementById('dark-toggle');
+        if (!toggle) return;
+        var saved = localStorage.getItem('dark-mode');
+        if (saved === 'true') {
+            document.body.classList.add('dark-mode');
+            toggle.setAttribute('aria-checked', 'true');
+        }
+        toggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            var nowDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('dark-mode', nowDark);
+            toggle.setAttribute('aria-checked', String(nowDark));
+        });
+        setTimeout(function() {
+            toggle.classList.add('toggle-pulse');
+            setTimeout(function() { toggle.classList.remove('toggle-pulse'); }, 2400);
+        }, 600);
+    })();
+    </script>
+</body>
+</html>
