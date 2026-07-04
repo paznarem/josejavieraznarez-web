@@ -1,2 +1,7 @@
+# Local de la máquina (no versionar)
 .claude/scheduled_tasks.lock
-.claude/skills/
+.claude/settings.local.json
+
+# IMPORTANTE: .claude/skills/ SÍ se versiona a propósito.
+# Las skills del pipeline del blog viven aquí y GitHub es lo único que
+# sobrevive si se borra el Codespace. NO volver a ignorar esta carpeta.
