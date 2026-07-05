@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4"></script>
+    <!-- Google tag (gtag.js) — solo se carga si el usuario acepta las cookies de análisis -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B6YNTT8HL4');
+    window.loadGA = function() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-B6YNTT8HL4');
+    };
+    try { if (localStorage.getItem('cookie-consent') === 'accepted') window.loadGA(); } catch (e) {}
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +32,14 @@
     <meta property="og:title" content="About Me — Online Psychologist with 35+ years of experience">
     <meta property="og:description" content="Contextual psychologist with 35+ years supporting adults with anxiety, self-compassion and parenting. ACT, CFT and FAP therapy online.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="https://www.josejavieraznarez.com/en/sobre-mi.html">
 
-    <link rel="icon" type="image/png" href="../logo-sage.png">
+    <link rel="icon" type="image/png" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -943,6 +956,27 @@
         body.dark-mode .mid-cta p { color: var(--text-secondary); }
         body.dark-mode .mid-cta a { color: var(--sage-light); border-bottom-color: var(--sage); }
     </style>
+    <!-- Ajustes de accesibilidad y contraste -->
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+        .section-label { color: var(--sage-dark); }
+        body.dark-mode .section-label { color: var(--sage-light); }
+        .method .section-label { color: #E8DCC6; }
+        .footer-links a { color: rgba(255,255,255,0.75); }
+        .footer-legal { color: rgba(255,255,255,0.75); }
+        .blog-card-badge, .libro-badge { background: #9C5540; }
+        body.dark-mode .blog-card-badge, body.dark-mode .libro-badge { background: var(--terracotta); color: #1a1a1a; }
+        button.hamburger { background: none; border: 0; padding: 0; }
+        @media (max-width: 768px) { .instagram-float { display: none; } }
+    </style>
 </head>
 <body>
 
@@ -955,7 +989,7 @@
     <!-- NAV -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <a href="index.html" class="nav-brand"><img src="../logo-nav.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links">
                 <li><a href="como-trabajo.html">How I Work</a></li>
                 <li><a href="sobre-mi.html" class="active">About Me</a></li>
@@ -965,9 +999,9 @@
                 <li><a href="../sobre-mi.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">ES</a></li>
                 <li><a href="index.html#contacto" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger-btn">
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -995,7 +1029,7 @@
             <p>Balancing music with academic studies placed me, from an early age, in a situation I now recognise as central to my work: doing what mattered while errors, doubts, activation, and moments of paralysis kept appearing.</p>
             <p>That process was training me — without me realising it at the time — in a very specific direction: not depending on how I felt in order to act, and sustaining my behaviour even when my inner experience was pushing in the opposite direction.</p>
             <p>I did not just learn responsibility or perseverance there. I learned something more precise: to keep acting even when I did not feel ready, to deal with frustration without abandoning what I was doing, and not to wait until everything felt right inside before taking the next step.</p>
-            <img src="../camino.jpg" alt="Path between trees" class="img-float-right">
+            <picture><source srcset="../camino.webp" type="image/webp"><img src="../camino.jpg" alt="Path between trees" class="img-float-right"></picture>
             <p>Over time, I have recognised that same pattern in many of the people I support: moments when anxiety, insecurity, or self-criticism begin to organise what they do and limit their lives.</p>
             <p>And that is precisely where I work today: not in eliminating that inner experience, but in helping the person respond differently when it appears, expanding their room for action in the areas that matter to them.</p>
             <p>That learning — moving forward with difficulty present, without letting what is inside set the limits of action — remains the core of my work today.</p>
@@ -1022,7 +1056,7 @@
 
         <!-- Block 4 -->
         <div class="content-block reveal">
-            <img src="../lago.jpg" alt="Lake among mountains" class="img-float-left">
+            <picture><source srcset="../lago.webp" type="image/webp"><img src="../lago.jpg" alt="Lake among mountains" class="img-float-left"></picture>
             <h2>My work as a psychologist</h2>
             <p>As a contextual psychologist, my approach moves away from the idea that there is something to "fix" or "cure" in the person.</p>
             <p>I do not work from labels, but from the analysis of what is happening in your life.</p>
@@ -1061,7 +1095,7 @@
 
         <!-- Block 6 -->
         <div class="content-block reveal">
-            <img src="../montañaslago.jpg" alt="Mountains and lake" class="img-float-right">
+            <picture><source srcset="../montañaslago.webp" type="image/webp"><img src="../montañaslago.jpg" alt="Mountains and lake" class="img-float-right"></picture>
             <h2>My experience as a father</h2>
             <p>Raising a child is one of the most exciting and, at the same time, most demanding tasks there is.</p>
             <p>I have been there too.</p>
@@ -1187,15 +1221,18 @@ document.addEventListener("DOMContentLoaded", function() {
   btn.addEventListener("click", function(e) {
     e.stopPropagation();
     navLinks.classList.toggle("open");
+    btn.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
   });
   document.addEventListener("click", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
   document.addEventListener("touchstart", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
 });
@@ -1244,5 +1281,53 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 600);
 })();
 </script>
+    <style>
+        .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1002; background: var(--cream, #F9F4EB); border-top: 1px solid rgba(107,127,94,0.25); box-shadow: 0 -4px 20px rgba(0,0,0,0.08); padding: 1rem 1.5rem; display: none; font-family: 'Work Sans', sans-serif; }
+        .cookie-banner.visible { display: block; }
+        .cookie-banner-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .cookie-banner p { margin: 0; flex: 1 1 300px; font-size: 0.88rem; color: var(--text-secondary, #5A5A5A); line-height: 1.5; }
+        .cookie-banner a { color: var(--sage-dark, #4A5B3F); text-decoration: underline; }
+        .cookie-banner-actions { display: flex; gap: 0.6rem; }
+        .cookie-banner button { font-family: 'Work Sans', sans-serif; font-size: 0.88rem; padding: 0.55rem 1.3rem; border-radius: 100px; cursor: pointer; }
+        .cookie-accept { background: var(--sage, #6B7F5E); color: #fff; border: 1.5px solid var(--sage, #6B7F5E); }
+        .cookie-accept:hover { background: var(--sage-dark, #4A5B3F); border-color: var(--sage-dark, #4A5B3F); }
+        .cookie-reject { background: transparent; color: var(--text-secondary, #5A5A5A); border: 1.5px solid rgba(0,0,0,0.25); }
+        .cookie-reject:hover { border-color: var(--sage, #6B7F5E); color: var(--sage-dark, #4A5B3F); }
+        body.dark-mode .cookie-banner { background: #222; border-top-color: rgba(255,255,255,0.12); }
+        body.dark-mode .cookie-banner p { color: #b0ada6; }
+        body.dark-mode .cookie-banner a { color: #9DB38F; }
+        body.dark-mode .cookie-reject { color: #b0ada6; border-color: #555; }
+        @media (max-width: 600px) {
+            .cookie-banner-inner { flex-direction: column; align-items: stretch; text-align: center; }
+            .cookie-banner-actions { justify-content: center; }
+        }
+    </style>
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+        <div class="cookie-banner-inner">
+            <p>I use analytics cookies (Google Analytics) to understand which content is most helpful. They are only set if you accept; if you decline, the site works exactly the same. <a href="/en/aviso-legal.html#cookies">More information</a></p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-reject" id="cookie-reject">Decline</button>
+                <button type="button" class="cookie-accept" id="cookie-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var KEY = 'cookie-consent';
+        var banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        var choice = null;
+        try { choice = localStorage.getItem(KEY); } catch (e) {}
+        if (choice === 'accepted' || choice === 'rejected') return;
+        banner.classList.add('visible');
+        function close(value) {
+            try { localStorage.setItem(KEY, value); } catch (e) {}
+            banner.classList.remove('visible');
+            if (value === 'accepted' && window.loadGA) window.loadGA();
+        }
+        document.getElementById('cookie-accept').addEventListener('click', function() { close('accepted'); });
+        document.getElementById('cookie-reject').addEventListener('click', function() { close('rejected'); });
+    })();
+    </script>
 </body>
 </html>

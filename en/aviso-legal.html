@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4"></script>
+    <!-- Google tag (gtag.js) — solo se carga si el usuario acepta las cookies de análisis -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B6YNTT8HL4');
+    window.loadGA = function() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-B6YNTT8HL4');
+    };
+    try { if (localStorage.getItem('cookie-consent') === 'accepted') window.loadGA(); } catch (e) {}
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +23,21 @@
     <meta name="description" content="Legal notice, privacy policy and cookies policy for the website of José Javier Aznárez, contextual psychologist.">
 
     <!-- Open Graph -->
+    <link rel="canonical" href="https://www.josejavieraznarez.com/en/aviso-legal.html">
+    <link rel="alternate" hreflang="es" href="https://www.josejavieraznarez.com/aviso-legal.html">
+    <link rel="alternate" hreflang="en" href="https://www.josejavieraznarez.com/en/aviso-legal.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.josejavieraznarez.com/aviso-legal.html">
     <meta property="og:title" content="Legal Notice and Privacy Policy — José Javier Aznárez">
     <meta property="og:description" content="Legal notice, privacy policy and cookies policy for the website of José Javier Aznárez, contextual psychologist.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="https://www.josejavieraznarez.com/en/aviso-legal.html">
 
-    <link rel="icon" type="image/png" href="../logo-sage.png">
+    <link rel="icon" type="image/png" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -647,6 +664,27 @@
             background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.25) 100%);
         }
     </style>
+    <!-- Ajustes de accesibilidad y contraste -->
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+        .section-label { color: var(--sage-dark); }
+        body.dark-mode .section-label { color: var(--sage-light); }
+        .method .section-label { color: #E8DCC6; }
+        .footer-links a { color: rgba(255,255,255,0.75); }
+        .footer-legal { color: rgba(255,255,255,0.75); }
+        .blog-card-badge, .libro-badge { background: #9C5540; }
+        body.dark-mode .blog-card-badge, body.dark-mode .libro-badge { background: var(--terracotta); color: #1a1a1a; }
+        button.hamburger { background: none; border: 0; padding: 0; }
+        @media (max-width: 768px) { .instagram-float { display: none; } }
+    </style>
 </head>
 <body>
 
@@ -659,7 +697,7 @@
     <!-- NAV -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-brand"><img src="../logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <a href="index.html" class="nav-brand"><img src="../logo-nav.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links">
                 <li><a href="como-trabajo.html">How I Work</a></li>
                 <li><a href="sobre-mi.html">About Me</a></li>
@@ -669,9 +707,9 @@
                 <li><a href="../aviso-legal.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">ES</a></li>
                 <li><a href="index.html#contacto" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger-btn">
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -792,11 +830,15 @@
 
         <!-- V -->
         <div class="content-block reveal">
-            <h2>V. Cookies policy</h2>
+            <h2 id="cookies">V. Cookies policy</h2>
             <p>Accessing this Website may involve the use of cookies. Cookies are small amounts of information stored in the browser used by each User so that the server can remember certain information that will subsequently and exclusively be read by the server that implemented it. Cookies facilitate browsing, make it more user-friendly, and do not damage the browsing device.</p>
             <p>The information collected through cookies may include the date and time of visits to the Website, the pages viewed, the time spent on the Website and the sites visited immediately before and after it. However, no cookie can contact the User's telephone number or any other personal means of contact. No cookie can extract information from the User's hard drive or steal personal information.</p>
             <h3>First-party cookies</h3>
             <p>These are cookies sent to the User's computer or device and managed exclusively by José Javier Aznárez Consulting Psychologist for the proper functioning of the Website. The information collected is used to improve the quality of the Website and its Content, and the User's experience.</p>
+            <h3>Analytics cookies (Google Analytics)</h3>
+            <p>This Website uses Google Analytics 4, a web analytics service provided by Google Ireland Limited ("Google"), which uses cookies to produce aggregate statistics about the use of the Website (pages visited, visit duration and traffic source). These cookies are <strong>only set if the User expressly accepts them</strong> via the cookie notice shown on their first visit. If the User declines them, no analytics cookies are set and the Website can be used completely normally. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+            <p>The User can change their choice at any time:</p>
+            <p><button type="button" style="font-family:'Work Sans',sans-serif;font-size:0.9rem;padding:0.55rem 1.3rem;border-radius:100px;cursor:pointer;background:var(--sage,#6B7F5E);color:#fff;border:1.5px solid var(--sage,#6B7F5E);" onclick="try{localStorage.removeItem('cookie-consent');}catch(e){};location.reload();">Change my cookie choice</button></p>
             <h3>Social media cookies</h3>
             <p>José Javier Aznárez Consulting Psychologist incorporates social media plugins that allow access to social media from the Website. For this reason, social media cookies may be stored in the User's browser. The owners of those social media platforms have their own data protection and cookies policies, and they themselves are responsible, in each case, for their own files and their own privacy practices.</p>
             <h3>Disabling, rejecting and deleting cookies</h3>
@@ -891,15 +933,18 @@ document.addEventListener("DOMContentLoaded", function() {
   btn.addEventListener("click", function(e) {
     e.stopPropagation();
     navLinks.classList.toggle("open");
+    btn.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
   });
   document.addEventListener("click", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
   document.addEventListener("touchstart", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
 });
@@ -948,5 +993,53 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 600);
 })();
 </script>
+    <style>
+        .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1002; background: var(--cream, #F9F4EB); border-top: 1px solid rgba(107,127,94,0.25); box-shadow: 0 -4px 20px rgba(0,0,0,0.08); padding: 1rem 1.5rem; display: none; font-family: 'Work Sans', sans-serif; }
+        .cookie-banner.visible { display: block; }
+        .cookie-banner-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .cookie-banner p { margin: 0; flex: 1 1 300px; font-size: 0.88rem; color: var(--text-secondary, #5A5A5A); line-height: 1.5; }
+        .cookie-banner a { color: var(--sage-dark, #4A5B3F); text-decoration: underline; }
+        .cookie-banner-actions { display: flex; gap: 0.6rem; }
+        .cookie-banner button { font-family: 'Work Sans', sans-serif; font-size: 0.88rem; padding: 0.55rem 1.3rem; border-radius: 100px; cursor: pointer; }
+        .cookie-accept { background: var(--sage, #6B7F5E); color: #fff; border: 1.5px solid var(--sage, #6B7F5E); }
+        .cookie-accept:hover { background: var(--sage-dark, #4A5B3F); border-color: var(--sage-dark, #4A5B3F); }
+        .cookie-reject { background: transparent; color: var(--text-secondary, #5A5A5A); border: 1.5px solid rgba(0,0,0,0.25); }
+        .cookie-reject:hover { border-color: var(--sage, #6B7F5E); color: var(--sage-dark, #4A5B3F); }
+        body.dark-mode .cookie-banner { background: #222; border-top-color: rgba(255,255,255,0.12); }
+        body.dark-mode .cookie-banner p { color: #b0ada6; }
+        body.dark-mode .cookie-banner a { color: #9DB38F; }
+        body.dark-mode .cookie-reject { color: #b0ada6; border-color: #555; }
+        @media (max-width: 600px) {
+            .cookie-banner-inner { flex-direction: column; align-items: stretch; text-align: center; }
+            .cookie-banner-actions { justify-content: center; }
+        }
+    </style>
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+        <div class="cookie-banner-inner">
+            <p>I use analytics cookies (Google Analytics) to understand which content is most helpful. They are only set if you accept; if you decline, the site works exactly the same. <a href="/en/aviso-legal.html#cookies">More information</a></p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-reject" id="cookie-reject">Decline</button>
+                <button type="button" class="cookie-accept" id="cookie-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var KEY = 'cookie-consent';
+        var banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        var choice = null;
+        try { choice = localStorage.getItem(KEY); } catch (e) {}
+        if (choice === 'accepted' || choice === 'rejected') return;
+        banner.classList.add('visible');
+        function close(value) {
+            try { localStorage.setItem(KEY, value); } catch (e) {}
+            banner.classList.remove('visible');
+            if (value === 'accepted' && window.loadGA) window.loadGA();
+        }
+        document.getElementById('cookie-accept').addEventListener('click', function() { close('accepted'); });
+        document.getElementById('cookie-reject').addEventListener('click', function() { close('rejected'); });
+    })();
+    </script>
 </body>
 </html>

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4"></script>
+    <!-- Google tag (gtag.js) — solo se carga si el usuario acepta las cookies de análisis -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B6YNTT8HL4');
+    window.loadGA = function() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6YNTT8HL4';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-B6YNTT8HL4');
+    };
+    try { if (localStorage.getItem('cookie-consent') === 'accepted') window.loadGA(); } catch (e) {}
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +32,14 @@
     <meta property="og:title" content="Sobre mí — Psicólogo Online con +35 años de experiencia">
     <meta property="og:description" content="Psicólogo contextual con +35 años acompañando a adultos en ansiedad, autoestima y crianza. Terapia ACT, CFT y FAP online.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.josejavieraznarez.com/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="https://www.josejavieraznarez.com/sobre-mi.html">
 
-    <link rel="icon" type="image/png" href="logo-sage.png">
+    <link rel="icon" type="image/png" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -943,6 +956,27 @@
         body.dark-mode .mid-cta p { color: var(--text-secondary); }
         body.dark-mode .mid-cta a { color: var(--sage-light); border-bottom-color: var(--sage); }
     </style>
+    <!-- Ajustes de accesibilidad y contraste -->
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+        .section-label { color: var(--sage-dark); }
+        body.dark-mode .section-label { color: var(--sage-light); }
+        .method .section-label { color: #E8DCC6; }
+        .footer-links a { color: rgba(255,255,255,0.75); }
+        .footer-legal { color: rgba(255,255,255,0.75); }
+        .blog-card-badge, .libro-badge { background: #9C5540; }
+        body.dark-mode .blog-card-badge, body.dark-mode .libro-badge { background: var(--terracotta); color: #1a1a1a; }
+        button.hamburger { background: none; border: 0; padding: 0; }
+        @media (max-width: 768px) { .instagram-float { display: none; } }
+    </style>
 </head>
 <body>
 
@@ -955,7 +989,7 @@
     <!-- NAV -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-brand"><img src="logo-sage-transparent.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
+            <a href="index.html" class="nav-brand"><img src="logo-nav.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:0.5rem;border-radius:4px;">José Javier Aznárez</a>
             <ul class="nav-links">
                 <li><a href="como-trabajo.html">Cómo trabajo</a></li>
                 <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
@@ -965,9 +999,9 @@
                 <li><a href="en/sobre-mi.html" style="border:1px solid rgba(107,127,94,0.3);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--sage-dark);">EN</a></li>
                 <li><a href="index.html#contacto" class="nav-cta">Contactar</a></li>
             </ul>
-            <div class="hamburger" id="hamburger-btn">
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -995,7 +1029,7 @@
             <p>Compatibilizar la música con los estudios me colocó desde muy pronto en una situación que hoy reconozco como central en mi trabajo: hacer lo que era importante mientras aparecían errores, dudas, activación y momentos de bloqueo.</p>
             <p>Ese proceso me fue entrenando —sin saberlo entonces— en una dirección muy específica: no depender de cómo me sentía para poder actuar, y sostener la conducta incluso cuando la experiencia interna empujaba en otra dirección.</p>
             <p>Ahí no aprendí solo responsabilidad o perseverancia. Aprendí algo más preciso: a seguir actuando aunque no me sintiera preparado, a sostener la frustración sin abandonar lo que estaba haciendo y a no esperar a que todo estuviera en orden por dentro para dar el siguiente paso.</p>
-            <img src="camino.jpg" alt="Camino entre árboles" class="img-float-right" width="1066" height="1599" loading="lazy" decoding="async">
+            <picture><source srcset="camino.webp" type="image/webp"><img src="camino.jpg" alt="Camino entre árboles" class="img-float-right" width="1066" height="1599" loading="lazy" decoding="async"></picture>
             <p>Con el tiempo he reconocido ese mismo patrón en muchas de las personas a las que acompaño: momentos en los que la ansiedad, la inseguridad o la autocrítica empiezan a organizar lo que hacen y limitan su vida.</p>
             <p>Y es precisamente ahí donde trabajo hoy: no en eliminar esa experiencia interna, sino en que la persona pueda responder de otra manera cuando aparece, ampliando su margen de acción a situaciones que le importan.</p>
             <p>Ese aprendizaje —avanzar con dificultad presente sin que lo interno marque el límite de la acción— sigue siendo hoy el núcleo de mi trabajo.</p>
@@ -1022,7 +1056,7 @@
 
         <!-- Bloque 4 -->
         <div class="content-block reveal">
-            <img src="lago.jpg" alt="Lago entre montañas" class="img-float-left" width="1280" height="1600" loading="lazy" decoding="async">
+            <picture><source srcset="lago.webp" type="image/webp"><img src="lago.jpg" alt="Lago entre montañas" class="img-float-left" width="1280" height="1600" loading="lazy" decoding="async"></picture>
             <h2>Mi trabajo como psicólogo</h2>
             <p>Como psicólogo contextual, mi enfoque se aleja de la idea de que haya algo que «arreglar» o «curar» en la persona.</p>
             <p>No trabajo desde etiquetas, sino desde el análisis de lo que está ocurriendo en tu vida.</p>
@@ -1061,7 +1095,7 @@
 
         <!-- Bloque 6 (ex Bloque 5) -->
         <div class="content-block reveal">
-            <img src="montañaslago.jpg" alt="Montañas y lago" class="img-float-right" width="1066" height="1600" loading="lazy" decoding="async">
+            <picture><source srcset="montañaslago.webp" type="image/webp"><img src="montañaslago.jpg" alt="Montañas y lago" class="img-float-right" width="1066" height="1600" loading="lazy" decoding="async"></picture>
             <h2>Mi experiencia como padre</h2>
             <p>Criar a un hijo es una de las tareas más ilusionantes y, a la vez, más exigentes.</p>
             <p>Yo también he estado ahí.</p>
@@ -1187,15 +1221,18 @@ document.addEventListener("DOMContentLoaded", function() {
   btn.addEventListener("click", function(e) {
     e.stopPropagation();
     navLinks.classList.toggle("open");
+    btn.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
   });
   document.addEventListener("click", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
   document.addEventListener("touchstart", function(e) {
     if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !btn.contains(e.target)) {
       navLinks.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
 });
@@ -1244,5 +1281,53 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 600);
 })();
 </script>
+    <style>
+        .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1002; background: var(--cream, #F9F4EB); border-top: 1px solid rgba(107,127,94,0.25); box-shadow: 0 -4px 20px rgba(0,0,0,0.08); padding: 1rem 1.5rem; display: none; font-family: 'Work Sans', sans-serif; }
+        .cookie-banner.visible { display: block; }
+        .cookie-banner-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .cookie-banner p { margin: 0; flex: 1 1 300px; font-size: 0.88rem; color: var(--text-secondary, #5A5A5A); line-height: 1.5; }
+        .cookie-banner a { color: var(--sage-dark, #4A5B3F); text-decoration: underline; }
+        .cookie-banner-actions { display: flex; gap: 0.6rem; }
+        .cookie-banner button { font-family: 'Work Sans', sans-serif; font-size: 0.88rem; padding: 0.55rem 1.3rem; border-radius: 100px; cursor: pointer; }
+        .cookie-accept { background: var(--sage, #6B7F5E); color: #fff; border: 1.5px solid var(--sage, #6B7F5E); }
+        .cookie-accept:hover { background: var(--sage-dark, #4A5B3F); border-color: var(--sage-dark, #4A5B3F); }
+        .cookie-reject { background: transparent; color: var(--text-secondary, #5A5A5A); border: 1.5px solid rgba(0,0,0,0.25); }
+        .cookie-reject:hover { border-color: var(--sage, #6B7F5E); color: var(--sage-dark, #4A5B3F); }
+        body.dark-mode .cookie-banner { background: #222; border-top-color: rgba(255,255,255,0.12); }
+        body.dark-mode .cookie-banner p { color: #b0ada6; }
+        body.dark-mode .cookie-banner a { color: #9DB38F; }
+        body.dark-mode .cookie-reject { color: #b0ada6; border-color: #555; }
+        @media (max-width: 600px) {
+            .cookie-banner-inner { flex-direction: column; align-items: stretch; text-align: center; }
+            .cookie-banner-actions { justify-content: center; }
+        }
+    </style>
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+        <div class="cookie-banner-inner">
+            <p>Uso cookies de análisis (Google Analytics) para entender qué contenidos resultan más útiles. Solo se activan si las aceptas; si las rechazas, la web funciona exactamente igual. <a href="/aviso-legal.html#cookies">Más información</a></p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-reject" id="cookie-reject">Rechazar</button>
+                <button type="button" class="cookie-accept" id="cookie-accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var KEY = 'cookie-consent';
+        var banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        var choice = null;
+        try { choice = localStorage.getItem(KEY); } catch (e) {}
+        if (choice === 'accepted' || choice === 'rejected') return;
+        banner.classList.add('visible');
+        function close(value) {
+            try { localStorage.setItem(KEY, value); } catch (e) {}
+            banner.classList.remove('visible');
+            if (value === 'accepted' && window.loadGA) window.loadGA();
+        }
+        document.getElementById('cookie-accept').addEventListener('click', function() { close('accepted'); });
+        document.getElementById('cookie-reject').addEventListener('click', function() { close('rejected'); });
+    })();
+    </script>
 </body>
 </html>

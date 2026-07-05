@@ -24,22 +24,25 @@ EXCLUDE_PATTERNS = [
     "articulos sin publicar*",          # draft articles
     "serie toca aunque tiembles/*",     # source files (not the blog output)
     "blog-template.html",
-    "consentimiento-tarifas.html",
-    "aviso-legal.html",                 # low-value legal pages (optional: remove to include)
-    "autocompasion-autoestima-genuina.html",  # duplicate of blog/ version (root draft)
+    "musica.html",                      # versión antigua sin publicar (noindex)
+    "404.html",                         # error page
 ]
 
 # Directories that contain published content
 INCLUDE_DIRS = [
     ROOT,           # root HTML files (index, sobre-mi, etc.)
     ROOT / "blog",
+    ROOT / "en",
+    ROOT / "en" / "blog",
 ]
 
 # Priority and changefreq by path pattern (first match wins)
 PRIORITY_RULES = [
     (r"^/$",              "1.0", "weekly"),
+    (r"^/en/$",           "0.9", "weekly"),
     (r"^/blog/$",         "0.9", "weekly"),
     (r"^/blog/",          "0.8", "monthly"),
+    (r"^/en/blog/",       "0.7", "monthly"),
     (r".*",               "0.6", "monthly"),
 ]
 
@@ -59,6 +62,26 @@ LANGUAGE_ALTERNATES: dict[str, dict[str, str]] = {}
 
 # Default language for pages not listed in LANGUAGE_ALTERNATES
 DEFAULT_LANG = "es"
+
+
+def _shorten(rel_path: str) -> str:
+    """/dir/index.html → /dir/ (same rule as path_to_url)."""
+    if rel_path.endswith("/index.html"):
+        return rel_path[: -len("index.html")]
+    return rel_path
+
+
+def get_auto_alternates(rel_path: str) -> dict[str, str] | None:
+    """Detect ES/EN counterpart pages automatically (en/<path> convention)."""
+    if rel_path.startswith("/en/"):
+        es_rel = rel_path[len("/en"):]
+        if (ROOT / es_rel.lstrip("/")).exists():
+            return {"es": _shorten(es_rel), "en": _shorten(rel_path), "x-default": _shorten(es_rel)}
+    else:
+        en_rel = "/en" + rel_path
+        if (ROOT / en_rel.lstrip("/")).exists():
+            return {"es": _shorten(rel_path), "en": _shorten(en_rel), "x-default": _shorten(rel_path)}
+    return None
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -138,7 +161,7 @@ def build_sitemap(files: list[pathlib.Path]) -> ET.Element:
         ET.SubElement(url_el, f"{{{SITEMAP_NS}}}priority").text = priority
 
         # hreflang alternates (multi-language support)
-        alternates = LANGUAGE_ALTERNATES.get(rel_path)
+        alternates = LANGUAGE_ALTERNATES.get(rel_path) or get_auto_alternates(rel_path)
         if alternates:
             for lang, lang_path in alternates.items():
                 ET.SubElement(

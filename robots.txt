@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /blog-template.html
+Disallow: /FLUJO-DE-TRABAJO.md
+Disallow: /translation-glossary.md
+Disallow: /generate_sitemap.py
+Disallow: /update-nav.js
+Disallow: /README.md
 
 Sitemap: https://www.josejavieraznarez.com/sitemap.xml

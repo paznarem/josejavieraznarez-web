@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Página no encontrada — José Javier Aznárez</title>
+    <link rel="icon" type="image/png" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #6B7F5E;
+            --sage-dark: #4A5B3F;
+            --cream: #F9F4EB;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FDFBF7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: linear-gradient(165deg, var(--white) 0%, var(--cream) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .box { max-width: 560px; }
+        .code {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 300;
+            color: var(--sage);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.6rem; }
+        .en { font-size: 0.9rem; font-style: italic; margin-bottom: 2rem; }
+        .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 1.8rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .btn-primary { background: var(--sage); color: #fff; }
+        .btn-primary:hover { background: var(--sage-dark); }
+        .btn-outline { color: var(--sage-dark); border: 1.5px solid var(--sage); }
+        .btn-outline:hover { background: var(--sage); color: #fff; }
+        @media (prefers-color-scheme: dark) {
+            :root { --cream: #222; --white: #1a1a1a; --text-primary: #e0ddd8; --text-secondary: #b0ada6; --sage: #8A9E7C; --sage-dark: #9DB38F; }
+            .btn-primary { color: #1a1a1a; }
+            .btn-outline:hover { color: #1a1a1a; }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="code">404</div>
+        <h1>Esta página no existe</h1>
+        <p>Puede que el enlace haya cambiado o que la página se haya movido. Lo que buscas probablemente está en el blog o en la página de inicio.</p>
+        <p class="en" lang="en">This page doesn't exist. It may have moved — try the home page or the blog.</p>
+        <div class="actions">
+            <a class="btn btn-primary" href="/">Ir al inicio</a>
+            <a class="btn btn-outline" href="/blog/index.html">Ver el blog</a>
+        </div>
+    </div>
+</body>
+</html>
